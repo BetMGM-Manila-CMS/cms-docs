@@ -20,6 +20,12 @@ const sidebars = {
 
   buildsSidebar: [
     {
+      type: "html",
+      value:
+        "<div class='divider'><span class='divider__inner'>Prerequisites</div>",
+      defaultStyle: true,
+    },
+    {
       type: "category",
       label: "Preparing your Assets",
       items: [
@@ -37,6 +43,35 @@ const sidebars = {
       link: {
         type: "generated-index",
       },
+    },
+    {
+      type: "html",
+      value:
+        "<div class='divider'><span class='divider__inner'>All Products</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "category",
+      label: "Rest ID",
+      items: [
+        "builds/restId-inbox",
+        "builds/restId-overlay",
+        "builds/restId-toaster",
+      ],
+      link: {
+        type: "doc",
+        id: "builds/restId-introduction",
+      },
+    },
+    {
+      type: "doc",
+      id: "builds/staticTile",
+    },
+    {
+      type: "html",
+      value:
+        "<div class='divider'><span class='divider__inner'>Product Cateogries</div>",
+      defaultStyle: true,
     },
     {
       type: "category",
@@ -97,23 +132,6 @@ const sidebars = {
       link: {
         type: "generated-index",
       },
-    },
-    {
-      type: "category",
-      label: "Rest ID",
-      items: [
-        "builds/restId-inbox",
-        "builds/restId-overlay",
-        "builds/restId-toaster",
-      ],
-      link: {
-        type: "doc",
-        id: "builds/restId-introduction",
-      },
-    },
-    {
-      type: "doc",
-      id: "builds/staticTile",
     },
   ],
   ticketsSidebar: [
