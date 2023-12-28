@@ -2,7 +2,7 @@
 
 Assets are media files that are provided by the designers which then we upload to be used for our tickets.
 
-To get the ticket's assets, check the [updates](./) tab from the Workfront ticket.
+To get the ticket's assets, check the [updates](#static-assets) tab from the Workfront ticket.
 
 Currently the team is using [Box](https://www.box.com/) links to share assets between each other. Check the updates section for any Box links as it contains the assets needed for your ticket.
 
@@ -36,4 +36,4 @@ Similar to static assets it is also required to be less than `95kb` in size. als
 
 ## Exceeded Required File Size
 
-If you encounter assets exceeding the required minimum size, either [compress the images](./) or [request for new assets](./)
+If you encounter assets exceeding the required minimum size, either [compress the images](./assets-compressing.md) or [request for new assets](./assets-request.md)
