@@ -1,5 +1,39 @@
 # Assets Introduction
 
+Assets are media files that are provided by the designers which then we upload to be used for our tickets.
+
+To get the ticket's assets, check the [updates](./) tab from the Workfront ticket.
+
+Currently the team is using [Box](https://www.box.com/) links to share assets between each other. Check the updates section for any Box links as it contains the assets needed for your ticket.
+
+:::info
+
+Box links has a domain name of `https://app.box.com`
+
+:::
+
+There may be multiple Box links and this is because this are the different versions designers are working on. So generally, the one you will select is the latest uploaded Box link.
+
+There are 2 types of assets that you are going to encounter: [Static](#static-assets) and [Animated](#animated-assets) assets.
+
 ## Static Assets
 
+Static assets are usually media files that consists of images in .jpg or .png format that are made by graphic designers. These are the more common assets that is used in tickets.
+
+Static assets is required to be less than `95kb` in size, therefore inspecting each subfolder to check each images' size is necessary to confirm this.
+
+:::info
+
+Usually designers will provide the Box link with two folders: `100kb` or `95kb` folder and `500kb` folder. Always download the lower size folder and inspect again each images to confirm the sizes.
+
+:::
+
 ## Animated Assets
+
+Animated assets are media files in .gif format and is provided by motion designers.
+
+Similar to static assets it is also required to be less than `95kb` in size. also inspect each files to confirm if each files met the required minimum.
+
+## Exceeded Required File Size
+
+If you encounter assets exceeding the required minimum size, either [compress the images](./) or [request for new assets](./)
