@@ -136,6 +136,7 @@ const sidebars = {
   ],
   ticketsSidebar: [
     "tickets/monday",
+    "tickets/workfront",
     {
       type: "category",
       label: "Ticket Details",
