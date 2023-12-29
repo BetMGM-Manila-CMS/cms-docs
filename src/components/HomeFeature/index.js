@@ -1,6 +1,6 @@
 export const HomeFeature = function ({ icon, label, description }) {
   return (
-    <div class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:-translate-y-[10%] transition">
+    <div class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
       {/* <svg
         class="w-7 h-7 text-gray-500 dark:text-gray-400 mb-3"
         aria-hidden="true"
