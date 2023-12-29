@@ -105,14 +105,15 @@ const config = {
             position: "left",
             label: "Team",
           },
+           */
+          { to: "/blog", label: "Team", position: "left" }, // temporary
           {
             type: "docSidebar",
             sidebarId: "toolsSidebar",
             position: "left",
             label: "Tools",
-          }, */
-          { to: "/blog", label: "Team", position: "left" }, // temporary
-          { to: "/blog", label: "Tools", position: "left" }, // temporary
+          },
+          // { to: "/blog", label: "Tools", position: "left" }, // temporary
           // { to: "/blog", label: "Blog", position: "left" },
           // {
           //   href: "https://github.com/facebook/docusaurus",

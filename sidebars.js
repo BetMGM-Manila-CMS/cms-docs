@@ -146,6 +146,7 @@ const sidebars = {
       },
     },
   ],
+  toolsSidebar: ["tools/htmlTidy", "tools/textCompare", "tools/restIdQaTool"],
   /* teamSidebar: [],
   toolsSidebar: [], */
 };
