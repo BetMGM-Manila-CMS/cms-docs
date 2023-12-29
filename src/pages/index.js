@@ -4,6 +4,9 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
+// import Hero from "@site/src/components/Hero";
+import { Hero, HomeFeatures } from "@site/src/components";
+
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 
@@ -36,9 +39,9 @@ export default function Home() {
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <HomepageHeader />
+      <Hero />
       <main>
-        <HomepageFeatures />
+        <HomeFeatures />
       </main>
     </Layout>
   );
