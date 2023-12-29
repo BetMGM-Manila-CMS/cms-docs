@@ -8,8 +8,9 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title:
+    "Welcome to the Official Documentation of BetMGM Creatives Manila CMS Team",
+  tagline: "What do you want to learn today",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -65,6 +66,11 @@ const config = {
     ({
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       docs: {
         sidebar: {
           hideable: true,
@@ -109,6 +115,10 @@ const config = {
           //   label: "GitHub",
           //   position: "right",
           // },
+          {
+            type: "search",
+            position: "right",
+          },
         ],
       },
       footer: {
