@@ -81,7 +81,7 @@ const config = {
         },
       },
       navbar: {
-        title: "CMS Documentation",
+        title: "CMS Knowledge Hub",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",
