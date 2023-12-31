@@ -136,22 +136,38 @@ const config = {
                 label: "Builds",
                 to: "/docs/builds/assets-introduction",
               },
+              {
+                label: "Tickets",
+                to: "/docs/tickets/monday",
+              },
+              {
+                label: "Team",
+                to: "/",
+              },
+              {
+                label: "Tools",
+                to: "/docs/tools/htmlTidy",
+              },
             ],
           },
           {
             title: "Community",
             items: [
               {
-                label: "Stack Overflow",
+                label: "Teams",
                 href: "https://stackoverflow.com/questions/tagged/docusaurus",
               },
               {
-                label: "Discord",
+                label: "Skype",
                 href: "https://discordapp.com/invite/docusaurus",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "Facebook",
+                href: "https://web.facebook.com/BetMGMcreativesPH",
+              },
+              {
+                label: "YouTube",
+                href: "https://www.youtube.com/@betmgmcreativesmanila256",
               },
             ],
           },
@@ -159,8 +175,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
+                label: "BetMGM",
+                href: "https://www.betmgminc.com/who-we-are",
               },
               {
                 label: "GitHub",
@@ -169,7 +185,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} CMS Knowledge Hub. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,

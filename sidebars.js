@@ -70,7 +70,7 @@ const sidebars = {
     {
       type: "html",
       value:
-        "<div class='divider'><span class='divider__inner'>Product Cateogries</div>",
+        "<div class='divider'><span class='divider__inner'>Product Categories</div>",
       defaultStyle: true,
     },
     {
