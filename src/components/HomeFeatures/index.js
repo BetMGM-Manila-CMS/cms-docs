@@ -1,4 +1,5 @@
 import { HomeFeature } from "../HomeFeature";
+import Link from "@docusaurus/Link";
 
 const FeatureList = [
   {
@@ -91,9 +92,18 @@ const FeatureList = [
 
 export const HomeFeatures = function () {
   return (
-    <section className="py-12">
-      <div className="container">
-        <div className="grid md:grid-cols-2 gap-4">
+    <section className="container">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        {/* <div className="max-w-screen-md mb-8 lg:mb-16">
+          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+            Explore 
+          </h2>
+          <p className="text-gray-500 sm:text-xl dark:text-gray-400">
+            Here at Flowbite we focus on markets where technology, innovation,
+            and capital can unlock long-term value and drive economic growth.
+          </p>
+        </div> */}
+        <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:space-y-0">
           {FeatureList.map((feature, index) => {
             return (
               <HomeFeature
