@@ -1,4 +1,6 @@
-export const HomeFeature = function ({ icon, label, description }) {
+import Link from "@docusaurus/Link";
+
+export const HomeFeature = function ({ icon, label, description, url }) {
   return (
     <div class="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
       {/* <svg
@@ -19,8 +21,8 @@ export const HomeFeature = function ({ icon, label, description }) {
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
         {description}
       </p>
-      <a
-        href="#"
+      <Link
+        to={url}
         class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white rounded-lg focus:outline-none bg-blue-700  hover:bg-blue-800 focus:ring-4  focus:ring-blue-300 dark:bg-primary dark:hover:bg-white dark:focus:ring-primary-lightest"
       >
         Read more
@@ -39,7 +41,7 @@ export const HomeFeature = function ({ icon, label, description }) {
             d="M1 5h12m0 0L9 1m4 4L9 9"
           />
         </svg>
-      </a>
+      </Link>
     </div>
   );
 };

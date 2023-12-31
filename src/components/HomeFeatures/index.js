@@ -21,7 +21,7 @@ const FeatureList = [
     ),
     label: "Get Building Your Builds",
     description: "Know how to create the different needs for your tickets.",
-    url: "",
+    url: "docs/builds/assets-introduction",
   },
   {
     icon: (
@@ -44,7 +44,7 @@ const FeatureList = [
     label: "Know Your Tickets",
     description:
       "Understand how to effectively indentify parts of your ticket and handle working on it from start to finish.",
-    url: "",
+    url: "docs/tickets/monday",
   },
   {
     icon: (
@@ -62,7 +62,7 @@ const FeatureList = [
     label: "Get to Know the Team",
     description:
       "Stay informed with our team structure and familiarize yourself with everyone on board.",
-    url: "",
+    url: "/",
   },
   {
     icon: (
@@ -85,7 +85,7 @@ const FeatureList = [
     label: "Arsenal of Tools",
     description:
       "Explore the array of tools designed to streamline and accelerate our team's workflow.",
-    url: "",
+    url: "docs/tools/htmlTidy",
   },
 ];
 
@@ -94,12 +94,13 @@ export const HomeFeatures = function () {
     <section className="py-12">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-4">
-          {FeatureList.map((feaature, index) => {
+          {FeatureList.map((feature, index) => {
             return (
               <HomeFeature
-                icon={feaature.icon}
-                label={feaature.label}
-                description={feaature.description}
+                icon={feature.icon}
+                label={feature.label}
+                description={feature.description}
+                url={feature.url}
                 key={index}
               />
             );
