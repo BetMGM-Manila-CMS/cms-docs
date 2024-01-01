@@ -106,7 +106,7 @@ const config = {
             label: "Team",
           },
            */
-          { to: "/blog", label: "Team", position: "left" }, // temporary
+          { to: "/team", label: "Team", position: "left" }, // temporary
           {
             type: "docSidebar",
             sidebarId: "toolsSidebar",
