@@ -72,7 +72,7 @@ const config = {
       image: "img/docusaurus-social-card.jpg",
       colorMode: {
         defaultMode: "dark",
-        disableSwitch: true,
+        disableSwitch: false,
         respectPrefersColorScheme: false,
       },
       docs: {
@@ -128,7 +128,7 @@ const config = {
       },
       footer: {
         style: "dark",
-        links: [
+        /* links: [
           {
             title: "Docs",
             items: [
@@ -184,7 +184,7 @@ const config = {
               },
             ],
           },
-        ],
+        ], */
         copyright: `Copyright © ${new Date().getFullYear()} CMS Knowledge Hub. Built with Docusaurus.`,
       },
       prism: {
