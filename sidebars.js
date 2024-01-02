@@ -29,8 +29,6 @@ const sidebars = {
       type: "category",
       label: "Preparing your Assets",
       items: [
-        /* "builds/assets-static",
-        "builds/assets-animated", */
         "builds/assets-request",
         "builds/assets-compressing",
       ],
@@ -68,6 +66,14 @@ const sidebars = {
       id: "builds/staticTile",
     },
     {
+      type: "category",
+      label: "Engagements",
+      link: {
+        type: "generated-index",
+      },
+      items: ["builds/engagements-stw", "builds/engagements-pab"],
+    },
+    {
       type: "html",
       value:
         "<div class='divider'><span class='divider__inner'>Product Categories</div>",
@@ -81,14 +87,6 @@ const sidebars = {
         "builds/casino-carousel",
         "builds/casino-odrBanner",
         "builds/casino-mpp",
-        {
-          type: "category",
-          label: "Engagements",
-          link: {
-            type: "generated-index",
-          },
-          items: ["builds/engagements-stw", "builds/engagements-pab"],
-        },
       ],
       link: {
         type: "generated-index",
@@ -112,14 +110,7 @@ const sidebars = {
           },
         },
         "builds/poker-clientOverlay",
-        {
-          type: "category",
-          label: "Banners",
-          items: ["builds/poker-banner-default", "builds/poker-banner-mobile"],
-          link: {
-            type: "generated-index",
-          },
-        },
+        "builds/poker-banners",
       ],
       link: {
         type: "generated-index",
