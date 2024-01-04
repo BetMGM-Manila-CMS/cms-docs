@@ -62,6 +62,10 @@ const sidebars = {
     },
     {
       type: "doc",
+      id: "builds/landing-page",
+    },
+    {
+      type: "doc",
       id: "builds/staticTile",
     },
     {
