@@ -27,7 +27,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Preparing your Assets",
+      label: "Assets",
       items: [
         "builds/assets-request",
         "builds/assets-compressing",
@@ -60,6 +60,10 @@ const sidebars = {
         type: "doc",
         id: "builds/restId-introduction",
       },
+    },
+    {
+      type: "doc",
+      id: "builds/landing-page",
     },
     {
       type: "doc",
