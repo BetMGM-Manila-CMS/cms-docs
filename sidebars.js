@@ -28,19 +28,14 @@ const sidebars = {
     {
       type: "category",
       label: "Assets",
-      items: [
-        "builds/assets-request",
-        "builds/assets-compressing",
-      ],
+      items: ["builds/assets-request", "builds/assets-compressing"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
     {
       type: "category",
       label: "Documents",
       items: ["builds/documents-get", "builds/documents-cleaning"],
-      link: {
-        type: "generated-index",
-      },
+      link: { type: "doc", id: "builds/documents" },
     },
     {
       type: "html",
