@@ -32,10 +32,8 @@ const sidebars = {
       link: { type: "doc", id: "builds/assets-introduction" },
     },
     {
-      type: "category",
-      label: "Documents",
-      items: ["builds/documents-get", "builds/documents-cleaning"],
-      link: { type: "doc", id: "builds/documents" },
+      type: "doc",
+      id: "builds/documents",
     },
     {
       type: "html",

@@ -1,13 +1,43 @@
+import documentsTab from "../../static/img/builds/documents/documents-wf.png"
+import requiredTerms from "../../static/img/builds/documents/documents-terms-required.png"
+import projDetailsTerms from "../../static/img/builds/documents/documents-terms-in-proj-details.png"
+
 # Documents
 
-Documents is accessed within the Documents tab of your Workfront ticket.
+The documents are accessible within the Documents tab of your Workfront tickets. The 2 document files that we need to get is the `General Copy` or just `Copy` and the `Terms and Conditions` document.
 
 :::info
 
 The documents tab contains 3 folders, `Terms and Conditions`, `Design`, and `Copy` folders. Most of the time we only need to access the Terms and Conditions and Copy Folders.
 
+<img className="w-full mt-3" src={documentsTab} alt="Documents Tab" />
+
 :::
 
-## Getting General Copy
+### Downloading the Files
 
-## Getting Terms Copy
+The subfolders may contain files named `Final` or folders named `Final` or prefixed with `CHR`, this are the versions of the document as changes are requested along the way. To avoid confusion, the general rule is to get the copy that is **uploaded on the latest date**.
+
+:::warning
+
+There are instances that older versions may still be used. Please check if it is mentioned on the `Updates` tab or mentioned by your sub-lead in your ticket assignment. 
+
+:::
+
+## Copy
+
+## Terms and Conditions
+
+The Project Details tab under the Promotion section contains if the Terms and Conditions copy is required in your builds.
+
+<img className="w-1/3 mx-auto mt-3 mb-5" src={requiredTerms} alt="Documents Tab" />
+
+:::note
+
+Sometimes the Project Details tab under the `Terms & Conditions` section of your ticket contains the Terms and Conditions copy if there is none located in the Documents Tab.
+
+<img className="w-full mt-3" src={projDetailsTerms} alt="Documents Tab" />
+
+:::
+
+This copy often times needs to be _sanitized_ as it will be converted to be in HTML format to be placed in the CMS. In order to do this see this [guide](./). 
