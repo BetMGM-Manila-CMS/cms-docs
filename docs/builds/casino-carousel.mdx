@@ -38,6 +38,22 @@ Fill the required fields below.
 | URLs | slug |
 | CTA Title | LEARN MORE |
 | Background: Image | Media URL |
+| teaserAlignments | actor-left title-big text-center actor no-cta |
 | Filter: Condition | (Request.Query MATCHES "[your name]")  |
+
+
+Duplicate the Carousel you just created, and then name them Desktop & Mobile accordingly.
+
+:::note[Versions]
+**Desktop**:
+
+Filter: Condition - add "AND (NOT Device.IsMobile AND NOT Device.IsTablet)"
+
+**Mobile**:
+
+Filter: Condition - add "AND (Device.IsMobile OR Device.IsTablet)"
+
+teaserAlignments - change to "disable-actor title-big text-center"
+:::
 
 ## Pushing Carousel
