@@ -121,6 +121,10 @@ const sidebars = {
       },
       items: ["builds/engagements-stw", "builds/engagements-pab"],
     },
+    {
+      type: "doc",
+      id: "builds/landing-page",
+    },
   ],
   ticketsSidebar: [
     "tickets/monday",
