@@ -59,7 +59,7 @@
   background: var(--ifm-color-primary);
   opacity: 0.5;
   height: 1px;
-  width: 300px;
+  width: 100vw;
 }
 
 .divider__inner::after {
