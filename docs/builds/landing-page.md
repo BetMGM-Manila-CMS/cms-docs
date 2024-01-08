@@ -34,8 +34,8 @@ Here, you'll insert the Steps [ACQ 1-2-3] from the Copy.
 ## Terms
 This section is where you'll insert the Terms & Condition of the Promotion. Please mind that in the Landing Page, Titles are in **UPPERCASE, No Colon**, and if its under sports **instead of bullet it should be numbers**.
 
-#### Casino
+### Casino
 ![Landing Page Sample](<../../static/img/builds/landing-page/terms.png>)
 
-#### Sports
+### Sports
 ![Landing Page Sample](<../../static/img/builds/landing-page/sports.png>)
