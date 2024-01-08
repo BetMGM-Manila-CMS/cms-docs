@@ -28,7 +28,7 @@ const sidebars = {
     {
       type: "category",
       label: "Assets",
-      items: ["builds/assets-request", "builds/assets-compressing"],
+      items: ["builds/assets-request", "builds/assets-uploading"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
     {
@@ -49,7 +49,6 @@ const sidebars = {
       type: "category",
       label: "Casino",
       items: [
-        "builds/casino-creatives",
         "builds/casino-carousel",
         "builds/casino-odrBanner",
         "builds/casino-mpp",
@@ -62,7 +61,6 @@ const sidebars = {
       type: "category",
       label: "Poker",
       items: [
-        "builds/poker-creatives",
         "builds/poker-carousel",
         {
           type: "category",
