@@ -28,47 +28,16 @@ const sidebars = {
     {
       type: "category",
       label: "Assets",
-      items: ["builds/assets-request", "builds/assets-compressing"],
+      items: ["builds/assets-request", "builds/assets-uploading"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
     {
-      type: "doc",
-      id: "builds/documents",
-    },
-    {
-      type: "html",
-      value:
-        "<div class='divider'><span class='divider__inner'>All Products</div>",
-      defaultStyle: true,
-    },
-    {
       type: "category",
-      label: "Rest ID",
-      items: [
-        "builds/restId-inbox",
-        "builds/restId-overlay",
-        "builds/restId-toaster",
-      ],
-      link: {
-        type: "doc",
-        id: "builds/restId-introduction",
-      },
-    },
-    {
-      type: "doc",
-      id: "builds/landing-page",
-    },
-    {
-      type: "doc",
-      id: "builds/staticTile",
-    },
-    {
-      type: "category",
-      label: "Engagements",
+      label: "Documents",
+      items: ["builds/documents-get", "builds/documents-cleaning"],
       link: {
         type: "generated-index",
       },
-      items: ["builds/engagements-stw", "builds/engagements-pab"],
     },
     {
       type: "html",
@@ -80,7 +49,6 @@ const sidebars = {
       type: "category",
       label: "Casino",
       items: [
-        "builds/casino-creatives",
         "builds/casino-carousel",
         "builds/casino-odrBanner",
         "builds/casino-mpp",
@@ -93,7 +61,6 @@ const sidebars = {
       type: "category",
       label: "Poker",
       items: [
-        "builds/poker-creatives",
         "builds/poker-carousel",
         {
           type: "category",
@@ -120,6 +87,41 @@ const sidebars = {
       link: {
         type: "generated-index",
       },
+    },
+    {
+      type: "html",
+      value:
+        "<div class='divider'><span class='divider__inner'>Common Components</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "category",
+      label: "Rest ID",
+      items: [
+        "builds/restId-inbox",
+        "builds/restId-overlay",
+        "builds/restId-toaster",
+      ],
+      link: {
+        type: "doc",
+        id: "builds/restId-introduction",
+      },
+    },
+    {
+      type: "doc",
+      id: "builds/staticTile",
+    },
+    {
+      type: "category",
+      label: "Engagements",
+      link: {
+        type: "generated-index",
+      },
+      items: ["builds/engagements-stw", "builds/engagements-pab"],
+    },
+    {
+      type: "doc",
+      id: "builds/landing-page",
     },
   ],
   ticketsSidebar: [
