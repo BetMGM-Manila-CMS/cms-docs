@@ -63,7 +63,7 @@ const sidebars = {
     },
     {
       type: "doc",
-      id: "builds/staticTile",
+      id: "builds/static-tile",
     },
     {
       type: "category",
