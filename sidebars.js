@@ -28,10 +28,7 @@ const sidebars = {
     {
       type: "category",
       label: "Assets",
-      items: [
-        "builds/assets-request",
-        "builds/assets-compressing",
-      ],
+      items: ["builds/assets-request", "builds/assets-compressing"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
     {
