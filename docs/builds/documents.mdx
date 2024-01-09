@@ -61,4 +61,32 @@ There are instances that older versions may still be used. Please check if it is
 
 :::
 
+## Cleaning the Copy
+
+Whenever a copy will be converted to HTML it needs to be *cleaned*, this is because when copying something from a document to a parsing tool like [HTMLTidy](#) there will be some unwanted elements that needs to be remove to ensure that the content will render properly when it is displayed on the website.
+
+Here are the list of characters and symbols that needs to be removed:
+
+### Unwanted Characters
+
+| Name | Character |
+| --- | ----------- |
+| narrow no-break space | ```   ``` |
+| zero width space | ```​ ```|
+| no-break space | ```&nbsp;``` |
+
+### Unwanted HTML Tags
+
+| Name | Tags |
+| --- | ----------- |
+| break line | ``` <br /> ``` |
+| emphasis | ``` <em></em> ``` |
+
+:::note
+
+There are still instances that these html elements still needs to be used, only remove out of place elements.
+
+:::
+
+
  
