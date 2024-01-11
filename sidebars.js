@@ -94,13 +94,13 @@ const sidebars = {
       type: "category",
       label: "Rest ID",
       items: [
+        "builds/restId-promohub",
         "builds/restId-inbox",
         "builds/restId-overlay",
         "builds/restId-toaster",
       ],
       link: {
-        type: "doc",
-        id: "builds/restId-introduction",
+        type: "generated-index",
       },
     },
     {
