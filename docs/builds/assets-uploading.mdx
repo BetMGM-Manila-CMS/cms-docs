@@ -1,3 +1,6 @@
+import uploadBtn from "../../static/img/builds/assets/upload-upload-btn.png"
+import uploadDialog from "../../static/img/builds/assets/upload-dialog.png"
+
 # Uploading Creatives
 
 :::warning
@@ -8,20 +11,31 @@ Ensure that all files are below required [minimum size](./assets-introduction#ex
 
 ## Sitecore Path
 
-The parent path for uploading assets is located on:
+All of the media folders will be found in `Media Library > Vanilla.Mobile > Brand State Domain`.
 
-```
-Media Library > Vanilla.Mobile > Product State Domain
-```
-After getting on your Product State Domain Check guide below for the specific folders for each product
+After going inside through the appropriate Brand State Domain there are specific folder to place your assets depending on the brand on you ticket, see guide below:
 
-| Product | Path |
-| --- | --- |
-| Casino | `Year > Month` |
-| Poker | `Poker Folder > Year > Month` |
-| Sports | `Sports Folder > Year > Month` |
+|  | BetMGM | Borgata | PartyCasino | partypoker | 
+| --- | --- | --- | --- | --- |
+| Casino | `Year > Month` | `Year > Month` | `Year > Month` |  |
+| Poker | `BetMGM-Poker > Year > Month` | `BorgataPoker > Year > Month` |  | `Year > Month` |
+| Sports | `BetMGM-Sports > Year > Month` | `BorgataSports > Year > Month` |  |  |
 
 ## Uploading the Folder
 
-::
+Make sure that you are inside the appropriate folder, and click on `Upload files (advanced)` and the top of the [content area](https://doc.sitecore.com/xp/en/users/100/sitecore-experience-platform/the-content-editor.html#:~:text=contains%20no%20subitems.-,The%20content%20area,-The%20content%20area)
+
+<img className="my-3" src={uploadBtn} />
+
+It will display a popup where you can drag and drop the compressed folder to the `Choose File` input or click the same button and navigate to the respoective folder.
+
+Remember to check `Unpack ZIP Archives` checkbox so it will be automatically unzipped the folder is uploaded.
+
+<img className="my-3 w-1/2 max-w-lg" src={uploadDialog} />
+
+Click upload and wait for your document to finish uploading.
+
+Copy the direct link and paste it to your reference for your ticket.
+
+## Share Media
 
