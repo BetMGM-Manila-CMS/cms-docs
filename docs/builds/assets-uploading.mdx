@@ -1,5 +1,10 @@
 import uploadBtn from "../../static/img/builds/assets/upload-upload-btn.png"
 import uploadDialog from "../../static/img/builds/assets/upload-dialog.png"
+import assetIsSiteMedia from "../../static/img/builds/assets/asset-shared.png"
+import uploadShared from "../../static/img/builds/assets/asset-upload-shared.png"
+import selectState from "../../static/img/builds/assets/shared-select-state.png"
+import sharedToUpload from "../../static/img/builds/assets/shared-to-upload.png"
+import sharedUploaded from "../../static/img/builds/assets/shared-uploaded.png"
 
 # Uploading Creatives
 
@@ -31,11 +36,34 @@ It will display a popup where you can drag and drop the compressed folder to the
 
 Remember to check `Unpack ZIP Archives` checkbox so it will be automatically unzipped the folder is uploaded.
 
-<img className="my-3 w-1/2 max-w-lg" src={uploadDialog} />
+<img className="my-3 w-1/2 max-w-md" src={uploadDialog} />
 
 Click upload and wait for your document to finish uploading.
 
 Copy the direct link and paste it to your reference for your ticket.
 
-## Share Media
+## Shared Assets
 
+If your ticket is a [Shared Leaderboard](#) ticket, there will be assets for the [PAT](#) that will be used for 2 different states but will direct to a single path.
+
+There are additional steps in order to do this.
+
+Select the asset and check its `Is SiteMedia Item` Checkbox
+
+<img className="my-3 max-w-lg" src={assetIsSiteMedia} />
+
+Right click the image on the [Content Tree](https://doc.sitecore.com/xp/en/users/100/sitecore-experience-platform/the-content-editor.html#:~:text=something%20like%20this%3A-,The%20content%20tree,-One%20of%20the) and select `Insert > Upload SiteMedia (Label) File`.
+
+<img className="my-3 max-w-lg" src={uploadShared} />
+
+A popup will open and will allow you to select the `Brand State Domain` for the shared image. Click the OK Button to confirm.
+
+<img className="my-3 max-w-lg" src={selectState} />
+
+Another popup will open that allows you to upload the other asset that will be used for the shared state. Click Upload to start uploading.
+
+<img className="my-3 max-w-lg" src={sharedToUpload} />
+
+It will display a new item as a child but the parent's direct link can be used for the shared PAT. It will automatically change the asset depending on which state it is being viewed on.
+
+<img className="my-3 w-1/2 max-w-sm" src={sharedUploaded} />
