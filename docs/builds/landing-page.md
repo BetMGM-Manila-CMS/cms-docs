@@ -1,10 +1,17 @@
 # Landing Page
 
-> :memo:**Sitecore Path:** Content > Vanilla.Mobile > state/brand > Promo > casino or sports or poker
+:::info[SiteCore Path]
+sitecore > content > Vanilla.Mobile > state/brand > Promo > casino or sports or poker
+:::
 
-#### Sample Landing Page
+There are two (2) types of Landing Page: Static or Normal Landing Page, and Motion Landing Page. The Latter requires video assets which needs to be uploaded in vimeo, as sitecore only needs the URL of the motion asset.
+
+#### Sample Normal/Static Landing Page
 
 ![Landing Page Sample](<../../static/img/builds/landing-page/Landing Page Page.png>)
+
+#### Sample Motion Landing Page
+![Motion Landing Page Sample](<../../static/img/builds/landing-page/motion 1.png>)
 
 ## Hero
 
