@@ -28,12 +28,16 @@ const sidebars = {
     {
       type: "category",
       label: "Assets",
-      items: ["builds/assets-request", "builds/assets-uploading"],
+      items: ["builds/assets-request", "builds/assets-compressing"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
     {
-      type: "doc",
-      id: "builds/documents",
+      type: "category",
+      label: "Documents",
+      items: ["builds/documents-get", "builds/documents-cleaning"],
+      link: {
+        type: "generated-index",
+      },
     },
     {
       type: "html",
@@ -45,6 +49,7 @@ const sidebars = {
       type: "category",
       label: "Casino",
       items: [
+        "builds/casino-creatives",
         "builds/casino-carousel",
         "builds/casino-odrBanner",
         "builds/casino-mpp",
@@ -57,6 +62,7 @@ const sidebars = {
       type: "category",
       label: "Poker",
       items: [
+        "builds/poker-creatives",
         "builds/poker-carousel",
         {
           type: "category",
