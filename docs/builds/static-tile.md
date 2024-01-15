@@ -23,21 +23,21 @@ following:
 
 |Label | Desciption | Sample |
 |---- |----| ---- |
-|1. Duplicate OffersTeaser | Duplicate any existing OffersTeaser file, and rename it to your Ticket Name. | |
-|2. EligibilityCriteriaInfo | Paste this on the HTML `EligibilityCriteriaInfo` | |
-|3. Title | Insert the Promo Hub Key Terms H1 | |
-|4. KeyTermsAndConditions | Insert here the Promo Hub Key Terms Short Summary | |
-|5. TeaserImage | Insert the Promohub Tiles-800x360 asset uploaded in your Creatives DL | |
-|6. Produt | Make sure the right category is selected if your Tile is under Casino - Casino should be selected. ||
-|7. IsHighPriority | Ticked this ✅||
-|8. TeaserClass | Input `make-me-look-awesome` ||
-|9. PrimaryCTA | Put the CTA if it is **Opt  In**, leave blank if not OPT IN. ||
-|10. MoreInfoCTA | Put the CTA if it is not OPT IN, like Learn More, Play Now, Claim Now ||
-|11. ManualTermsAndCondition | Should only contain `<p>Manual Terms and Conditions....</p>` ||
-|12. OfferBadge | Depends on your Promo Type. If its about Deposit Match then the OfferBadge will be **Deposit Match**||
-|13. Filter > Condition | Make sure to put your filter for newly build Static Tile. Sample Filter: `QueryString.Get('qa') = 'yourname'`||
-|14. Publishing Section | Clear the Publishing Date, and make sure the **Never Publish** is unticked. | ![Alt text](../../static/img/builds/static-tile/publishing.png)|
-|15. Screenshot Output | To check your output go to your State's Promotion Page and insert `qa=yourname` at the end of the URL. Sample: `https://promo.nj.betmgm.com/en/promo/offers?qa=yourname` |
+|1. Duplicate OffersTeaser | Duplicate any existing OffersTeaser file, and rename it to your Ticket Name. |![Alt text](../../static/img/builds/static-tile/duplicate.png) |
+|2. EligibilityCriteriaInfo | Paste this on the HTML `EligibilityCriteriaInfo` |![Alt text](<../../static/img/builds/static-tile/2 EligibilityCriteriaInfo.png>) |
+|3. Title | Insert the Promo Hub Key Terms H1 |![Alt text](<../../static/img/builds/static-tile/3 Title.png>) |
+|4. KeyTermsAndConditions | Insert here the Promo Hub Key Terms Short Summary |![Alt text](<../../static/img/builds/static-tile/4 KeyTermsAndConditions.png>) |
+|5. TeaserImage | Insert the Promohub Tiles-800x360 asset uploaded in your Creatives DL |![Alt text](<../../static/img/builds/static-tile/5 TeaserImage.png>) |
+|6. Produt | Make sure the right category is selected if your Tile is under Casino - Casino should be selected. And, IsHighPriority is Ticked ✅ |![Alt text](<../../static/img/builds/static-tile/6 Produt.png>)|
+|7. TeaserClass | Input `make-me-look-awesome` |![Alt text](<../../static/img/builds/static-tile/7 TeaserClass.png>)|
+|8. CTAs | In the PrimaryCTA, put the CTA if it is **Opt  In**, otherwise put in the MoreInfoCTA like Learn More, Play Now, Claim Now. For the Target, if its opening a different site other than BetMGM choose _blank, else leave it blank.|![Alt text](<../../static/img/builds/static-tile/8 CTA 2.png>)|
+|9. ManualTermsAndCondition | Should only contain `<p>Manual Terms and Conditions....</p>` |![Alt text](<../../static/img/builds/static-tile/9 ManualTermsAndCondition.png>)|
+|10. Order & OfferBadge | Order, simple type 0. For the OfferBadge, this Depends on your Promo Type. If its about Deposit Match then the OfferBadge will be **Deposit Match**|![Alt text](<../../static/img/builds/static-tile/10 OfferBadge.png>)|
+|11. Filter > Condition | Make sure to put your filter for newly build Static Tile. Sample Filter: `QueryString.Get('qa') = 'yourname'`|![Alt text](<../../static/img/builds/static-tile/11 Filter.png>)|
+|12. Publishing Section | Clear the Publishing Date, and make sure the **Never Publish** is unticked. |![Alt text](<../../static/img/builds/static-tile/publishing x.png>) |
+|13. Screenshot Output | To check your output go to your State's Promotion Page and insert `qa=yourname` at the end of the URL. Sample: `https://promo.nj.betmgm.com/en/promo/offers?qa=yourname` |![Screenshot](<../../static/img/builds/static-tile/13 ss.png>)|
+
+Then you're done. Get your Build's Direct Link and Paste it on Monday. 
 
 
 
