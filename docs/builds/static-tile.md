@@ -1,3 +1,11 @@
+---
+last_update:
+  date: 1/15/2024
+  author: Emmanuel Borromeo
+  description: Added Sample Images 
+authors: Kyle Atienza, Emmanuel Borromeo
+---
+
 # Static Tile
 
 :::info[SiteCore Path]
