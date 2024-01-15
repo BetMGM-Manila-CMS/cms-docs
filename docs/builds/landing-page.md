@@ -1,3 +1,11 @@
+---
+last_update:
+  date: 1/15/2024
+  author: Emmanuel Borromeo
+  description: Added Motion LP Details
+authors: Kyle Atienza, Emmanuel Borromeo
+---
+
 # Landing Page
 
 :::info[SiteCore Path]
