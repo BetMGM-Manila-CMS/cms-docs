@@ -104,7 +104,6 @@ const sidebars = {
         "builds/restId-inbox",
         "builds/restId-overlay",
         "builds/restId-toaster",
-        "builds/restId-cta",
       ],
       link: {
         type: "generated-index",
