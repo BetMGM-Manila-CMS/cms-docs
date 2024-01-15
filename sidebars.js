@@ -28,10 +28,7 @@ const sidebars = {
     {
       type: "category",
       label: "Assets",
-      items: [
-        "builds/assets-request",
-        "builds/assets-compressing",
-      ],
+      items: ["builds/assets-request", "builds/assets-compressing"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
     {
@@ -41,41 +38,6 @@ const sidebars = {
       link: {
         type: "generated-index",
       },
-    },
-    {
-      type: "html",
-      value:
-        "<div class='divider'><span class='divider__inner'>All Products</div>",
-      defaultStyle: true,
-    },
-    {
-      type: "category",
-      label: "Rest ID",
-      items: [
-        "builds/restId-inbox",
-        "builds/restId-overlay",
-        "builds/restId-toaster",
-      ],
-      link: {
-        type: "doc",
-        id: "builds/restId-introduction",
-      },
-    },
-    {
-      type: "doc",
-      id: "builds/landing-page",
-    },
-    {
-      type: "doc",
-      id: "builds/staticTile",
-    },
-    {
-      type: "category",
-      label: "Engagements",
-      link: {
-        type: "generated-index",
-      },
-      items: ["builds/engagements-stw", "builds/engagements-pab"],
     },
     {
       type: "html",
@@ -127,6 +89,41 @@ const sidebars = {
       link: {
         type: "generated-index",
       },
+    },
+    {
+      type: "html",
+      value:
+        "<div class='divider'><span class='divider__inner'>Common Components</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "category",
+      label: "Rest ID",
+      items: [
+        "builds/restId-promohub",
+        "builds/restId-inbox",
+        "builds/restId-overlay",
+        "builds/restId-toaster",
+      ],
+      link: {
+        type: "generated-index",
+      },
+    },
+    {
+      type: "doc",
+      id: "builds/static-tile",
+    },
+    {
+      type: "category",
+      label: "Engagements",
+      link: {
+        type: "generated-index",
+      },
+      items: ["builds/engagements-stw", "builds/engagements-pab"],
+    },
+    {
+      type: "doc",
+      id: "builds/landing-page",
     },
   ],
   ticketsSidebar: [
