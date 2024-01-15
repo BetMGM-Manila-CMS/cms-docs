@@ -28,16 +28,12 @@ const sidebars = {
     {
       type: "category",
       label: "Assets",
-      items: ["builds/assets-request", "builds/assets-compressing"],
+      items: ["builds/assets-request", "builds/assets-uploading"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
     {
-      type: "category",
-      label: "Documents",
-      items: ["builds/documents-get", "builds/documents-cleaning"],
-      link: {
-        type: "generated-index",
-      },
+      type: "doc",
+      id: "builds/documents",
     },
     {
       type: "html",
@@ -49,7 +45,6 @@ const sidebars = {
       type: "category",
       label: "Casino",
       items: [
-        "builds/casino-creatives",
         "builds/casino-carousel",
         "builds/casino-odrBanner",
         "builds/casino-mpp",
@@ -62,7 +57,6 @@ const sidebars = {
       type: "category",
       label: "Poker",
       items: [
-        "builds/poker-creatives",
         "builds/poker-carousel",
         {
           type: "category",
@@ -100,13 +94,14 @@ const sidebars = {
       type: "category",
       label: "Rest ID",
       items: [
+        "builds/restId-promohub",
         "builds/restId-inbox",
         "builds/restId-overlay",
         "builds/restId-toaster",
+        "builds/restId-cta",
       ],
       link: {
-        type: "doc",
-        id: "builds/restId-introduction",
+        type: "generated-index",
       },
     },
     {
