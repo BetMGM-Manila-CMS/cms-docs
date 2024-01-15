@@ -20,7 +20,6 @@ export default function DocItem(props) {
 
   const { last_update, authors } = props.content.frontMatter;
 
-  console.log(props.content.frontMatter);
   return (
     <DocProvider content={props.content}>
       <HtmlClassNameProvider className={docHtmlClassName}>
