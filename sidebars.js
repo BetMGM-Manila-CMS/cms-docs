@@ -121,6 +121,42 @@ const sidebars = {
         type: "generated-index",
       },
     },
+    {
+      type: "html",
+      value:
+        "<div class='divider'><span class='divider__inner'>Common Components</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "category",
+      label: "Rest ID",
+      items: [
+        "builds/restId-promohub",
+        "builds/restId-inbox",
+        "builds/restId-overlay",
+        "builds/restId-toaster",
+        "builds/restId-cta",
+      ],
+      link: {
+        type: "generated-index",
+      },
+    },
+    {
+      type: "doc",
+      id: "builds/staticTile",
+    },
+    {
+      type: "category",
+      label: "Engagements",
+      link: {
+        type: "generated-index",
+      },
+      items: ["builds/engagements-stw", "builds/engagements-pab"],
+    },
+    {
+      type: "doc",
+      id: "builds/landing-page",
+    },
   ],
   ticketsSidebar: [
     "tickets/monday",
