@@ -9,12 +9,12 @@ In the previous section, check if the asset "Casino Carousel-1920x560" is availa
 // *insert image here*
 
 :::tip
-Remove texts before "/Vanilla.Mobile" and after the filename, i.e. Casino Carousel-1920x560.
+Remove texts before "/Vanilla.Mobile" and after the filename, i.e. Casino **Carousel-1920x560**.
 :::
 
-In the Copy, look for **CAROUSEL** H1 & H2.
+In the Copy, look for **CAROUSEL H1 & H2**.
 
-## Creating the Carousel
+## Creating The Carousel
 To create your Carousel, navigate to it's directory:
 
 :::info[SiteCore Path]
@@ -28,32 +28,49 @@ Name the new Carousel object with the Ticket name.
 
 // *insert image here*
 
-Fill the required fields below.
+### Required Fields
 
 | Field | Value |
 | --- | ----------- |
 | Title | H1 |
 | Subtitle | H2 |
 | Image | blank Media URL |
-| URLs | slug |
+| URLs | !!M2.Portal/mobileportal/promotions/casino/URL |
 | CTA Title | LEARN MORE |
 | Background: Image | Media URL |
-| teaserAlignments | actor-left title-big text-center actor no-cta |
-| Filter: Condition | (Request.Query MATCHES "[your name]")  |
 
-
-Duplicate the Carousel you just created, and then name them Desktop & Mobile accordingly.
-
-:::note[Versions]
-**Desktop**:
-
-Filter: Condition - add "AND (NOT Device.IsMobile AND NOT Device.IsTablet)"
-
-**Mobile**:
-
-Filter: Condition - add "AND (Device.IsMobile OR Device.IsTablet)"
-
-teaserAlignments - change to "disable-actor title-big text-center"
+:::tip
+Duplicate the Carousel you just created, and then name them **Desktop** & **Mobile** accordingly.
 :::
 
-## Pushing Carousel
+### Teaser Alignments
+| Device | Value |
+| --- | ----------- |
+| Desktop | actor-left title-big text-center actor no-cta |
+| Mobile | disable-actor title-big text-center |
+
+### Filters
+| Device | Value |
+| --- | ----------- |
+| Desktop | (Request.Query MATCHES "[your name]") AND (NOT Device.IsMobile AND NOT Device.IsTablet) |
+| Mobile |(Request.Query MATCHES "[your name]") AND (Device.IsMobile OR Device.IsTablet)  |
+
+Save and Finalize.
+
+## Pushing The Carousel
+To push your newly created Carousel, navigate to this directory:
+:::info[SiteCore Path]
+Content > Vanilla.Mobile > State/Brand > MobileCasino-v1.0 > LMTCategories > featured/lobbyhome
+:::
+// insert image
+
+Find your Carousels in the left box then select and click the right arrow button. Do this for both Desktop and Mobile carousels. Then save and finalize.
+
+## Previewing The Carousel
+
+To preview your Carousel go to your `Product and State Website` and then add your `filter`. 
+
+See example below:
+```
+https://casino.nj.betmgm.com/en/games?qa=manila
+```
