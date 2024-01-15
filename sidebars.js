@@ -42,37 +42,6 @@ const sidebars = {
     {
       type: "html",
       value:
-        "<div class='divider'><span class='divider__inner'>All Products</div>",
-      defaultStyle: true,
-    },
-    {
-      type: "category",
-      label: "Rest ID",
-      items: [
-        "builds/restId-inbox",
-        "builds/restId-overlay",
-        "builds/restId-toaster",
-      ],
-      link: {
-        type: "doc",
-        id: "builds/restId-introduction",
-      },
-    },
-    {
-      type: "doc",
-      id: "builds/static-tile",
-    },
-    {
-      type: "category",
-      label: "Engagements",
-      link: {
-        type: "generated-index",
-      },
-      items: ["builds/engagements-stw", "builds/engagements-pab"],
-    },
-    {
-      type: "html",
-      value:
         "<div class='divider'><span class='divider__inner'>Product Categories</div>",
       defaultStyle: true,
     },
