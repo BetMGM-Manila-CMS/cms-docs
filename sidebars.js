@@ -97,17 +97,8 @@ const sidebars = {
       defaultStyle: true,
     },
     {
-      type: "category",
-      label: "Rest ID",
-      items: [
-        "builds/restId-promohub",
-        "builds/restId-inbox",
-        "builds/restId-overlay",
-        "builds/restId-toaster",
-      ],
-      link: {
-        type: "generated-index",
-      },
+      type: "doc",
+      id: "builds/restId",
     },
     {
       type: "doc",
