@@ -1,0 +1,380 @@
+---
+last_update:
+  date: 1/16/2023
+  author: Kyle Atienza
+  description: Added Opt In Section
+authors: Kyle Atienza
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Call To Action
+
+This page serves as a guide for what CTA and CTA links to use depending on the ticket type you are working on. There are many components uses a CTA, and this to be able to diretly redirect the user to a desired page.
+
+<table className="whitespace-nowrap">
+	<thead>
+		<tr>
+			<th>Promotion Type</th>
+			<th>MPP CTA</th>
+			<th>MPP CTA Link</th>
+			<th>Rest ID CTA</th>
+			<th>Rest ID CTA Link</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Bet & Get</td>
+			<td className="text-center" colspan="1" rowspan="2">
+				<p>`Opt In`</p>
+				<p>`See My Progress`</p>
+			 </td>
+			<td colspan="1" rowspan="4">
+			```
+			!!M2.Promo/offers/grouped?filter=cp
+			```
+			</td>
+			<td className="text-center" colspan="1" rowspan="10">
+				<p>`Learn More`</p>
+			</td>
+			<td className="text-center" colspan="1" rowspan="10">Link to MPP (Smartlink)</td>
+		</tr>
+		<tr>
+			<td>Leaderboard</td>
+		</tr>
+		<tr>
+			<td>Sweepstakes</td>
+			<td className="text-center">
+				<p>`Opt In`</p> 
+				<p>`Check My Entries`</p>
+			</td>
+		</tr>
+		<tr>
+			<td>Click Card</td>
+			<td className="text-center">
+				<p>`Opt In`</p> 
+				<p>`Opt In`</p> 
+				<p>`Click Now`</p>
+			</td>
+		</tr>
+		<tr>
+			<td>Spin The Wheel</td>
+			<td className="text-center">
+				<p>`Spin Now`</p>
+			</td>
+			<td>
+			```
+			!!M2.Promo/bspin/{PAT ID}
+			```
+			</td>
+		</tr>
+		<tr>
+			<td>Pick A Box</td>
+			<td className="text-center">
+				<p>`Pick Now`</p>
+			</td>
+			<td>
+			```
+			!!M2.Promo/pickabox/{PAT ID}
+			```
+			</td>
+		</tr>
+		<tr>
+			<td>Coin Flip</td>
+			<td className="text-center">
+				<p>`Play Now`</p>
+			</td>
+			<td>
+			```
+			!!M2.Promo/ep/c/your-url?id={PAT ID}
+			```
+			</td>
+		</tr>
+		<tr>
+			<td>Claw Machine</td>
+			<td className="text-center">
+				<p>`Grab Now`</p>
+			</td>
+			<td>
+			```
+			!!M2.Promo/ep/r/claw-machine?id={PAT ID}
+			```
+			</td>
+		</tr>
+		<tr>
+			<td>Reload Bonus (Deposit Match)</td>
+			<td className="text-center">
+				<p>`Opt In`</p> 
+				<p>`Deposit Now`</p>
+			</td>
+			<td>
+			```
+			!!M2.Portal/mobileportal/cashier/deposit
+			```
+			</td>
+		</tr>
+		<tr>
+			<td>Reload Bonus</td>
+			<td className="text-center">
+				<p>`Opt In`</p> 
+				<p>`Deposit Now`</p> 
+				<p>`See Reward`</p>
+			</td>
+			<td>
+			```
+			!!M2.Portal/mobileportal/cashier/deposit
+			```
+			<div className="mt-2" />
+			```
+			!!M2.Promo/offers/grouped?filter=cb
+			```
+			</td>
+		</tr>
+		<tr>
+			<td>Deposit Match</td>
+			<td></td>
+			<td></td>
+			<td className="text-center">
+				<p>`Deposit Now`</p>
+			</td>
+			<td>
+			```
+			!!M2.Portal/mobileportal/cashier/deposit
+			```
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+## Bonus Drops
+
+<Tabs>
+  <TabItem value="withMPP" label="With MPP" default>
+    <table className="whitespace-nowrap">
+		<thead>
+			<tr>
+				<th>Promotion Type</th>
+				<th>MPP CTA</th>
+				<th>MPP CTA Link</th>
+				<th>REST ID CTA</th>
+				<th>REST ID CTA Link</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Casino Bonus</td>
+				<td>
+				```
+				!!M2.Promo/offers/grouped?filter=cb
+				```
+				</td>
+				<td colspan="1" rowspan="3">Claim Now</td>
+				<td colspan="1" rowspan="3">Learn More</td>
+				<td colspan="1" rowspan="3">Link to MPP (Smartlink)</td>
+			</tr>
+			<tr>
+				<td>Bonus Spins</td>
+				<td>
+				```
+				!!M2.Promo/offers/grouped?filter=cfs
+				```
+				</td>
+			</tr>
+			<tr>
+				<td>Poker Bonus</td>
+				<td>
+				```
+				!!M2.Promo/offers/grouped?filter=pb
+				```
+				</td>
+			</tr>
+		</tbody>
+	</table>
+  </TabItem>
+  <TabItem value="witoutMPP" label="Without MPP">
+    <table className="whitespace-nowrap">
+		<thead>
+			<tr>
+				<th>Promotion Type</th>
+				<th>REST ID CTA</th>
+				<th>REST ID CTA Link</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Casino Bonus</td>
+				<td colspan="1" rowspan="3">
+					Claim Now
+				</td>
+				<td>
+				```
+				!!M2.Promo/offers/grouped?filter=cb
+				```
+				</td>
+			</tr>
+			<tr>
+				<td>Bonus Spins</td>
+				<td>
+				```
+				!!M2.Promo/offers/grouped?filter=cfs
+				```
+				</td>
+			</tr>
+			<tr>
+				<td>Poker Bonus</td>
+				<td>
+				```
+				!!M2.Promo/offers/grouped?filter=pb
+				```
+				</td>
+			</tr>
+		</tbody>
+	</table>
+  </TabItem>
+</Tabs>
+
+## EDS and PAT Promo w/o MPP
+
+<table className="whitespace-nowrap">
+	<thead>
+		<tr>
+			<th>Promotion Type</th>
+			<th>Product</th>
+			<th>Opt In</th>
+			<th>Promo Length</th>
+			<th>CTA Label</th>
+			<th>CTA Link</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td className="text-center" colspan="1" rowspan="4">EDS</td>
+			<td className="text-center" colspan="1" rowspan="3">Casino</td>
+			<td>Required</td>
+			<td colspan="1" rowspan="2">Short and Reasonable</td>
+			<td>Enter Now</td>
+			<td rowspan="2">
+			```
+			!!M2.Promo/eds/{EDS ID}
+			```
+			</td>
+		</tr>
+		<tr>
+			<td>Not Required</td>
+			<td>See My Progress</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Safe</td>
+			<td rowspan="2">Long</td>
+			<td>
+				any of the following:
+				<p>`Claim Now `</p>
+				<p>`See Casino Offers`</p>
+				<p>`See My Progress`</p>
+			</td>
+			<td>
+			```
+			!!M2.Promo/offers/p/casino
+			```
+			</td>
+		</tr>
+		<tr>
+			<td className="text-center">Poker</td>
+			<td>
+				any of the following:
+				<p>`Claim Now `</p>
+				<p>`See Poker Offers`</p>
+			</td>
+			<td>
+			```
+			!!M2.Promo/offers/p/poker
+			```
+			</td>
+		</tr>
+		<tr>
+			<td className="text-center" colspan="1" rowspan="4">PAT</td>
+			<td className="text-center" colspan="1" rowspan="3">Casino</td>
+			<td>Required</td>
+			<td colspan="1" rowspan="2">Short and Reasonable</td>
+			<td>Enter Now</td>
+			<td rowspan="2">
+			```
+			!!M2.Promo/eds/{PAT ID}
+			```
+			</td>
+		</tr>
+		<tr>
+			<td>Not Required</td>
+			<td>See My Progress</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Safe</td>
+			<td rowspan="2">Long</td>
+			<td>
+				any of the following:
+				<p>`Claim Now `</p>
+				<p>`See Casino Offers`</p>
+				<p>`See My Progress`</p>
+			</td>
+			<td>
+			```
+			!!M2.Promo/offers/grouped?filter=cp
+			```
+			</td>
+		</tr>
+		<tr>
+			<td className="text-center">Poker</td>
+			<td>
+				any of the following:
+				<p>`Claim Now `</p>
+				<p>`See Poker Offers`</p>
+			</td>
+			<td>
+			```
+			!!M2.Promo/offers/grouped?filter=pp
+			```
+			</td>
+		</tr>
+		<tr>
+			<td className="text-center" colspan="1" rowspan="2">Leaderboard and<br/>Unlimited Entries</td>
+			<td rowspan="2">Casino</td>
+			<td>Required</td>
+			<td></td>
+			<td>Enter Now</td>
+			<td>
+			```
+			!!M2.Promo/lb/{PAT ID}
+			```
+			</td>
+		</tr>
+		<tr>
+			<td>Safe</td>
+			<td></td>
+			<td>
+				any of the following:
+				<p>`Claim Now `</p>
+				<p>`See Casino Offers`</p>
+			</td>
+			<td>
+			```
+			!!M2.Promo/offers/grouped?filter=cp
+			```
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+## Opt In
+
+The Opt In CTA is a button or link that allows the user to join a specific promotion, its HTML element consists of different attributes and where we also place the `PAT ID`. It is often used for the [MPP](#).
+
+```
+<a data-offer-id="{PAT ID}" class="btn" style="background-color:{Promo and Brand Color};" data-offer-message-error="Technical Error" data-offer-message-expired="Expired" data-offer-message-invalid="Invalid" data-offer-message-not-offered="Not Offered" data-offer-message-offered="Opt In" data-offer-message-opted-in="You opted in" data-offer-message-opted-out="You opted out" data-offer-type="promos">Opt In</a>
+```
+
+:::note
+
+Throughout this page whenever the **Opt In** CTA is mentioned it should be always on the mentioned HTML structure above.
+
+:::

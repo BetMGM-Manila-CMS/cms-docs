@@ -116,6 +116,15 @@ const sidebars = {
       type: "doc",
       id: "builds/landing-page",
     },
+    {
+      type: "html",
+      value: "<div class='divider'><span class='divider__inner'>Guides</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "doc",
+      id: "builds/cta",
+    },
   ],
   ticketsSidebar: [
     "tickets/monday",
