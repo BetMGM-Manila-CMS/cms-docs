@@ -51,7 +51,7 @@ const sidebars = {
       items: [
         "builds/casino-creatives",
         "builds/casino-carousel",
-        "builds/casino-odrBanner",
+        "builds/casino-odr-banner",
         "builds/casino-mpp",
       ],
       link: {

@@ -1,0 +1,43 @@
+---
+last_update:
+  date: 2024-01-16
+  author: Josh Javier
+  description: Initial content
+authors: Josh Javier
+---
+
+import odrBannerLinks from '../../static/img/builds/odr-banner/odr-banner-links.png'
+
+# ODR Banner
+
+:::info[Sitecore Path]
+
+Content Editor > Clients > m2.`state`.`label` > Casino > Teasers > Repository
+
+:::
+
+The ODR banner is usually (but not always) needed for casino builds that include a carousel component. Aside from carousels (and more recently, InstaStories), ODR banners are the only other components that have to be scheduled.
+
+## How to build
+
+1. Go to the Sitecore path for your respective state and label.
+2. Find the component named `ODRBanner-ImageOnlyTitleEmptySpaceTEMPLATE` and duplicate it. For the name, use "ODRBanner-" followed by your ticket name.
+   <br />
+   :::tip
+
+   Press <kbd>Ctrl</kbd>+<kbd>F</kbd> then type "imageonly" to find the template component faster.
+
+   :::
+
+3. Under the Links section, update the four links with the MPP smartlink OR the URL provided with your ticket.
+   <img src={odrBannerLinks} alt="" className="my-4" />
+
+4. In the Background section, update the background image, usually with a file named "ODR Teaser BG Image - 900x450". Make sure "Show background image" is checked.
+
+5. Under Publishing tab, clear Publish and Unpublish fields, and make sure "Never publish" is checked. No need to add a QA filter.
+
+:::note
+
+Make sure TeaserProperties > IsEmbeddedTeaser is **NOT** checked! This is only used for *embedded* ODR banners.
+
+:::
