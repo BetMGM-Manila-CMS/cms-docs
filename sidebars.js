@@ -96,7 +96,7 @@ const sidebars = {
         "<div class='divider'><span class='divider__inner'>Common Components</div>",
       defaultStyle: true,
     },
-    {
+    /* {
       type: "category",
       label: "Rest ID",
       items: [
@@ -108,6 +108,10 @@ const sidebars = {
       link: {
         type: "generated-index",
       },
+    }, */
+    {
+      type: "doc",
+      id: "builds/restId",
     },
     {
       type: "doc",
