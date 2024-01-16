@@ -1,8 +1,8 @@
 ---
 last_update:
-  date: 1/15/2023
+  date: 1/16/2023
   author: Kyle Atienza
-  description: Initial Content for CTA Page
+  description: Added Opt In Section
 authors: Kyle Atienza
 ---
 
@@ -38,7 +38,7 @@ This page serves as a guide for what CTA and CTA links to use depending on the t
 			<td className="text-center" colspan="1" rowspan="10">
 				<p>`Learn More`</p>
 			</td>
-			<td className="text-center" colspan="1" rowspan="10">link to MPP (Smartlink)</td>
+			<td className="text-center" colspan="1" rowspan="10">Link to MPP (Smartlink)</td>
 		</tr>
 		<tr>
 			<td>Leaderboard</td>
@@ -65,7 +65,7 @@ This page serves as a guide for what CTA and CTA links to use depending on the t
 			</td>
 			<td>
 			```
-			!!M2.Promo/bspin/PAT ID
+			!!M2.Promo/bspin/{PAT ID}
 			```
 			</td>
 		</tr>
@@ -76,7 +76,7 @@ This page serves as a guide for what CTA and CTA links to use depending on the t
 			</td>
 			<td>
 			```
-			!!M2.Promo/pickabox/PAT ID
+			!!M2.Promo/pickabox/{PAT ID}
 			```
 			</td>
 		</tr>
@@ -87,7 +87,7 @@ This page serves as a guide for what CTA and CTA links to use depending on the t
 			</td>
 			<td>
 			```
-			!!M2.Promo/ep/c/your-url?id=PAT ID
+			!!M2.Promo/ep/c/your-url?id={PAT ID}
 			```
 			</td>
 		</tr>
@@ -98,7 +98,7 @@ This page serves as a guide for what CTA and CTA links to use depending on the t
 			</td>
 			<td>
 			```
-			!!M2.Promo/ep/r/claw-machine?id=PAT ID
+			!!M2.Promo/ep/r/claw-machine?id={PAT ID}
 			```
 			</td>
 		</tr>
@@ -256,7 +256,7 @@ This page serves as a guide for what CTA and CTA links to use depending on the t
 			<td>Enter Now</td>
 			<td rowspan="2">
 			```
-			!!M2.Promo/eds/EDS ID
+			!!M2.Promo/eds/{EDS ID}
 			```
 			</td>
 		</tr>
@@ -300,7 +300,7 @@ This page serves as a guide for what CTA and CTA links to use depending on the t
 			<td>Enter Now</td>
 			<td rowspan="2">
 			```
-			!!M2.Promo/eds/PAT ID
+			!!M2.Promo/eds/{PAT ID}
 			```
 			</td>
 		</tr>
@@ -344,7 +344,7 @@ This page serves as a guide for what CTA and CTA links to use depending on the t
 			<td>Enter Now</td>
 			<td>
 			```
-			!!M2.Promo/lb/PAT ID
+			!!M2.Promo/lb/{PAT ID}
 			```
 			</td>
 		</tr>
@@ -364,3 +364,17 @@ This page serves as a guide for what CTA and CTA links to use depending on the t
 		</tr>
 	</tbody>
 </table>
+
+## Opt In
+
+The Opt In CTA is a button or link that allows the user to join a specific promotion, its HTML element consists of different attributes and where we also place the `PAT ID`. It is often used for the [MPP](#).
+
+```
+<a data-offer-id="{PAT ID}" class="btn" style="background-color:{Promo and Brand Color};" data-offer-message-error="Technical Error" data-offer-message-expired="Expired" data-offer-message-invalid="Invalid" data-offer-message-not-offered="Not Offered" data-offer-message-offered="Opt In" data-offer-message-opted-in="You opted in" data-offer-message-opted-out="You opted out" data-offer-type="promos">Opt In</a>
+```
+
+:::note
+
+Throughout this page whenever the **Opt In** CTA is mentioned it should be always on the mentioned HTML structure above.
+
+:::
