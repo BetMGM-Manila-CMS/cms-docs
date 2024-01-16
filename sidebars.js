@@ -96,19 +96,6 @@ const sidebars = {
         "<div class='divider'><span class='divider__inner'>Common Components</div>",
       defaultStyle: true,
     },
-    /* {
-      type: "category",
-      label: "Rest ID",
-      items: [
-        "builds/restId-promohub",
-        "builds/restId-inbox",
-        "builds/restId-overlay",
-        "builds/restId-toaster",
-      ],
-      link: {
-        type: "generated-index",
-      },
-    }, */
     {
       type: "doc",
       id: "builds/restId",
