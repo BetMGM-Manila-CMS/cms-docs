@@ -6,6 +6,14 @@ last_update:
 authors: Kyle Atienza, Emil Borromeo
 ---
 
+import tourneyPage0 from "../../static/img/builds/tourney-page/sitecore tourney - 0.png";
+import tourneyPage2 from "../../static/img/builds/tourney-page/sitecore tourney - 2.png";
+import tourneyPage3 from "../../static/img/builds/tourney-page/sitecore tourney - 3.png";
+import tourneyPage4 from "../../static/img/builds/tourney-page/sitecore tourney - 4.png";
+import tourneyPage41 from "../../static/img/builds/tourney-page/sitecore tourney - 4 1.png";
+import tourneyPage5 from "../../static/img/builds/tourney-page/sitecore tourney - 5.png";
+import tourneyPage51 from "../../static/img/builds/tourney-page/sitecore tourney - 5 1.png";
+
 # Tournament Page
 
 :::info[SiteCore Path]
@@ -21,12 +29,64 @@ If Casino has Marketing Promotional Page (MPP), Poker has Tournament Page. Compa
 
 ## Start Building...
 
-| Process | Description | Image/s |
-| --- | --- | --- |
-| 1. Duplicate File | It's always better to duplicate the file with same promo you'll build. Like if it's Leaderboard, look for file that's build for Leaderboad; Champoinship for Champoinship; and the like. |![](<../../static/img/builds/tourney-page/sitecore tourney - 0.png>)|
-| 2. Update SEO | Fill this out using the **PROMO HUB KEY TERMS** <br/> H1 ➡ Title, and <br/>Subtitle ➡ Description  |![Alt text](<../../static/img/builds/tourney-page/sitecore tourney - 2.png>)|
-| 3. Update Synopsis | SypnosisImage ➡ Poker Tiles-640x320 Asset <br/><br/> Fill this out using the **Poker Tile** <br/> H1 ➡ SypnosisTitle, and <br/>Subtitle ➡ SypnosisDescription|![Alt text](<../../static/img/builds/tourney-page/sitecore tourney - 3.png>)|
-| 4. Update MainContent1 | This Content should follow this format: <br/><br/> \<h1> \<strong>**PROMOTIONAL TITLE** \</strong> \</h1> <br/> \<h1> \<strong>**Subtitle** \</strong> \</h1> <br/> \<h2 style="color: #(State Hex Color);"> \<strong>**Promotional Date** \</strong>\</h2> <br/> \<p> Promotional Details, which most of the time has Table/s \</p><br/> <br/> \<p>\<em> *Please make sure to read...* \</em>\</p><br/> CTA <br/><br/> \**The Promotional Details usually have Table/s, you need to add those. See Table Details after this Table.*|![Alt text](<../../static/img/builds/tourney-page/sitecore tourney - 4.png>)![Alt text](<../../static/img/builds/tourney-page/sitecore tourney - 4 1.png>)|
-| 5. Update Terms ||![Alt text](<../../static/img/builds/tourney-page/sitecore tourney - 5.png>)![Alt text](<../../static/img/builds/tourney-page/sitecore tourney - 5 1.png>)|
-| 6. Filter |||
-| 7. Publishing Date |||
+### Step 1: Duplicate File
+
+It's always better to duplicate the file with same promo you'll build. Like if it's Leaderboard, look for file that's build for Leaderboad; Champoinship for Champoinship; and the like.  
+
+<img width="50%" src={tourneyPage0} alt="This is " />
+
+### Step 2: Update SEO
+
+Fill the following field using the **PROMO HUB KEY TERMS** from the copy.
+
+Title ➡ H1  
+Description ➡ Subtitle
+
+<img src={tourneyPage2} width="50%" alt="SEO Preview " />
+{/* className="mx-auto" */}
+
+### Step 3: Update Synopsis
+
+Fill the followng fields using the **Poker Tile** from the copy.
+
+SypnosisImage ➡ Poker Tiles-640x320 Asset  
+SypnosisTitle ➡ H1  
+SypnosisDescription ➡ Subtitle  
+
+<img src={tourneyPage3} width="50%" alt="Synopsis Preview " />
+
+### Step 4: Update MainContent1
+
+This Content should follow this format:
+
+```html
+<h1><strong>UPPERCASE PROMO NAME</strong> </h1>
+<h2><strong>Camel Case Subtitle</strong><h2>
+<h2 style="color: #(State Hex Color);"> <strong>Promo Date</strong>\</h2>
+<p>Sentence case. Promotional description</p>
+<p>Most of the time this contains Table, follow Table formatting on the link provided below.</p>
+<p><em>Please make sure to read our full Terms and Conditions before participating in this promotion.</em></p>
+<p><a class="btn" style="background: #{State Hex Color); color: #ffffff;" href="{SmartLink}">{CTA}</a></p>
+```
+
+Fill this content using the following:
+
+PROMO NAME ➡ Text found on PROMO LANDING PAGE's Main Image [MPP 1080x486]  
+Subtitle ➡ PROMO LANDING PAGE's Subtitle  
+Promo Date ➡ PROMO LANDING PAGE's Promotional Dates  
+Promo description ➡ PROMO LANDING PAGE's Promotional Description  
+CTA ➡ Depends on the Promo. Check [CTA Docs Page](../builds/cta) for an exhaustive list of CTAs.  
+
+<div className="flex gap-2" >
+<img src={tourneyPage4} width="50%" alt="MainContent1 Preview " />
+<img src={tourneyPage41} width="50%" alt="MainContent1 Preview " />
+</div>  
+
+<br />
+:::info
+Check [Table Docs Page](../builds/cta) for an exhaustive list of tables.
+:::
+
+### Step 5: Update Terms
+
+<img src={tourneyPage5} width="50%" alt="Terms Preview " />
