@@ -45,8 +45,9 @@ const sidebars = {
       type: "category",
       label: "Casino",
       items: [
+        "builds/casino-creatives",
         "builds/casino-carousel",
-        "builds/casino-odrBanner",
+        "builds/casino-odr-banner",
         "builds/casino-mpp",
       ],
       link: {
@@ -57,6 +58,7 @@ const sidebars = {
       type: "category",
       label: "Poker",
       items: [
+        "builds/poker-creatives",
         "builds/poker-carousel",
         {
           type: "category",
@@ -91,22 +93,12 @@ const sidebars = {
       defaultStyle: true,
     },
     {
-      type: "category",
-      label: "Rest ID",
-      items: [
-        "builds/restId-promohub",
-        "builds/restId-inbox",
-        "builds/restId-overlay",
-        "builds/restId-toaster",
-        "builds/restId-cta",
-      ],
-      link: {
-        type: "generated-index",
-      },
+      type: "doc",
+      id: "builds/restId",
     },
     {
       type: "doc",
-      id: "builds/staticTile",
+      id: "builds/static-tile",
     },
     {
       type: "category",
@@ -119,6 +111,19 @@ const sidebars = {
     {
       type: "doc",
       id: "builds/landing-page",
+    },
+    {
+      type: "html",
+      value: "<div class='divider'><span class='divider__inner'>Guides</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "doc",
+      id: "builds/cta",
+    },
+    {
+      type: "doc",
+      id: "builds/smartlinks",
     },
   ],
   ticketsSidebar: [
