@@ -54,7 +54,6 @@ const sidebars = {
       type: "category",
       label: "Casino",
       items: [
-        "builds/casino-creatives",
         "builds/casino-carousel",
         "builds/casino-odr-banner",
         "builds/casino-mpp",
@@ -67,7 +66,6 @@ const sidebars = {
       type: "category",
       label: "Poker",
       items: [
-        "builds/poker-creatives",
         "builds/poker-carousel",
         {
           type: "category",
