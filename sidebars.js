@@ -71,7 +71,7 @@ const sidebars = {
             type: "generated-index",
           },
         },
-        "builds/poker-clientOverlay",
+        "builds/poker-client-overlay",
         "builds/poker-banners",
       ],
       link: {
