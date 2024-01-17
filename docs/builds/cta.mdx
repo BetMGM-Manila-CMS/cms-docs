@@ -1,17 +1,25 @@
 ---
 last_update:
-  date: 1/16/2023
+  date: 1/17/2023
   author: Kyle Atienza
-  description: Added Opt In Section
+  description: Rearrange and paraphrased some contents
 authors: Kyle Atienza
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Call To Action
+# CTA
 
-This page serves as a guide for what CTA and CTA links to use depending on the ticket type you are working on. There are many components uses a CTA, and this to be able to diretly redirect the user to a desired page.
+This page serves as a guide for choosing the right CTA links and labels according on the kind of ticket you are managing. This feature is used by many components to smoothly reroute customers to the desired sites.
+
+The CTAs uses smartlinks to redirect to specific pages without specifically typing the domain for the state and product. To see more information refer to this [guide](smartlinks).
+
+:::tip
+
+The Opt In CTA is an HTML element that has specific attributes, copy the element from the [section](#opt-in) below.
+
+:::
 
 <table className="whitespace-nowrap">
 	<thead>
@@ -372,9 +380,3 @@ The Opt In CTA is a button or link that allows the user to join a specific promo
 ```
 <a data-offer-id="{PAT ID}" class="btn" style="background-color:{Promo and Brand Color};" data-offer-message-error="Technical Error" data-offer-message-expired="Expired" data-offer-message-invalid="Invalid" data-offer-message-not-offered="Not Offered" data-offer-message-offered="Opt In" data-offer-message-opted-in="You opted in" data-offer-message-opted-out="You opted out" data-offer-type="promos">Opt In</a>
 ```
-
-:::note
-
-Throughout this page whenever the **Opt In** CTA is mentioned it should be always on the mentioned HTML structure above.
-
-:::

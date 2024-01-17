@@ -121,6 +121,10 @@ const sidebars = {
       type: "doc",
       id: "builds/cta",
     },
+    {
+      type: "doc",
+      id: "builds/smartlinks",
+    },
   ],
   ticketsSidebar: [
     "tickets/monday",
