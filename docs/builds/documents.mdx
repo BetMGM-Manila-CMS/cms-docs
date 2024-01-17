@@ -6,6 +6,7 @@ import requiredTerms from "../../static/img/builds/documents/documents-terms-req
 import projDetailsTerms from "../../static/img/builds/documents/documents-terms-in-proj-details.png"
 import singleState from "../../static/img/builds/documents/documents-copy-single-state.png"
 import multiState from "../../static/img/builds/documents/documents-copy-multi-state.png"
+import tncParenthesis from "../../static/img/builds/documents/documents-remove-link-parenthesis.png"
 
 # Documents
 
@@ -41,8 +42,6 @@ The Project Details tab under the Promotion section contains if the Terms and Co
 
 If it is not found on the Documents tab it may be on the `Project Details` tab, or there some occasions it is mentioned on the `Updates` tab.
 
-{/* <img className="w-2/3 mx-auto lg:mx-0 mt-5 mb-5 max-w-lg" src={projDetailsTerms} alt="Documents Tab" /> */}
-
 :::
 
 This copy often times needs to be _sanitized_ to remove unwanted characters as it will be converted to be in HTML format. In order to do this, see this [guide](./).
@@ -61,9 +60,9 @@ There are instances that older versions may still be used. Please check if it is
 
 :::
 
-## Cleaning the Copy
+## Cleaning the Contents
 
-Whenever a copy will be converted to HTML it needs to be *cleaned*, this is because when copying something from a document to a parsing tool like [HTMLTidy](#) there will be some unwanted elements that needs to be remove to ensure that the content will render properly when it is displayed on the website.
+Whenever a copy will be converted to HTML it needs to be *cleaned*, this is because when copying something from a document to a parsing tool like [HTMLTidy](https://htmltidy.net/) there will be some unwanted elements that needs to be remove to ensure that the content will render properly when it is displayed on the website.
 
 Here are the list of characters and symbols that needs to be removed:
 
@@ -89,4 +88,48 @@ There are still instances that these html elements still needs to be used, only 
 :::
 
 
- 
+### Embedding Links
+
+The copywriting team will often include in the copy some words that needs to have a link embedded on it. Usually encase in parenthesis and highlighted in some color.
+
+<img className="mb-4" src={tncParenthesis} alt="Documents Tab" />
+
+For this instances, remove the text enclosed in parenthesis and embed the appropriate link for the phrase or word. This can be done by enclosing the text in an `<a>` tag placing the link on its `href` attribute. 
+
+:::tip
+
+Using a parser tool like [HTMLTidy](https://htmltidy.net/), a text editor like [VSCode](https://code.visualstudio.com/) or [Sublime](https://www.sublimetext.com/), or just Sitecore's integrated editor can help you perform this section much faster.
+
+Simply higlight the text or phrase and press <kbd>Ctrl</kbd>+<kbd>K</kbd> and a popup will appear for you to paste the approporiate link.
+
+:::
+
+:::note
+
+For smartlinks see this [guide](/smartlinks).
+
+:::
+
+### Formatting
+
+#### Terms and Conditions Heading
+
+The heading section of the terms is formatted depending on the brand of the ticket you are working on.
+
+| Ticket Type | Header Formatting |
+| --- | --- |
+| Default | Normal Case with colon |
+| Sports | Uppercase Case with colon |
+| Landing Page | Uppercase without colon |
+
+#### Bullets
+
+Long contents in the copy such as the Terms and Conditions and How to Participate have contents placed in bulleted list, depending 
+
+| Ticket Type | List Type |
+| --- | --- |
+| Casino and Poker | Unordered List |
+| Sports | Ordered List |
+
+
+

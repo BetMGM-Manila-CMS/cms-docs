@@ -31,9 +31,18 @@ const sidebars = {
       items: ["builds/assets-request", "builds/assets-uploading"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
-    {
+    /* {
       type: "doc",
       id: "builds/documents",
+    }, */
+    {
+      type: "category",
+      label: "Documents",
+      items: ["builds/documents-tables"],
+      link: {
+        type: "doc",
+        id: "builds/documents",
+      },
     },
     {
       type: "html",
