@@ -28,15 +28,20 @@ const sidebars = {
     {
       type: "category",
       label: "Assets",
-      items: ["builds/assets-request", "builds/assets-compressing"],
+      items: ["builds/assets-request", "builds/assets-uploading"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
+    /* {
+      type: "doc",
+      id: "builds/documents",
+    }, */
     {
       type: "category",
       label: "Documents",
-      items: ["builds/documents-get", "builds/documents-cleaning"],
+      items: ["builds/documents-tables"],
       link: {
-        type: "generated-index",
+        type: "doc",
+        id: "builds/documents",
       },
     },
     {
@@ -51,7 +56,7 @@ const sidebars = {
       items: [
         "builds/casino-creatives",
         "builds/casino-carousel",
-        "builds/casino-odrBanner",
+        "builds/casino-odr-banner",
         "builds/casino-mpp",
       ],
       link: {
@@ -115,6 +120,19 @@ const sidebars = {
     {
       type: "doc",
       id: "builds/landing-page",
+    },
+    {
+      type: "html",
+      value: "<div class='divider'><span class='divider__inner'>Guides</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "doc",
+      id: "builds/cta",
+    },
+    {
+      type: "doc",
+      id: "builds/smartlinks",
     },
   ],
   ticketsSidebar: [
