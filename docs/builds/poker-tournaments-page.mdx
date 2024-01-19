@@ -1,0 +1,176 @@
+---
+last_update:
+  date: 01/19/2024
+  author: Emmanuel Borromeo
+  description: Added Side Nav, Filter, & Publishing Details
+authors: Emil Borromeo
+---
+
+import tourneyPage0 from "../../static/img/builds/tourney-page/sitecore tourney - 0.png";
+import tourneyPage2 from "../../static/img/builds/tourney-page/sitecore tourney - 2.png";
+import tourneyPage3 from "../../static/img/builds/tourney-page/sitecore tourney - 3.png";
+import tourneyPage4 from "../../static/img/builds/tourney-page/sitecore tourney - 4.png";
+import tourneyPage41 from "../../static/img/builds/tourney-page/sitecore tourney - 4 1.png";
+import tourneyPage5 from "../../static/img/builds/tourney-page/sitecore tourney - 5.png";
+import tourneyPage51 from "../../static/img/builds/tourney-page/sitecore tourney - 5 1.png";
+import tourneyPage6 from "../../static/img/builds/tourney-page/sitecore tourney - 6.png";
+import tourneyPage61 from "../../static/img/builds/tourney-page/sitecore tourney - 6 1.png";
+import tourneyPage7 from "../../static/img/builds/tourney-page/sitecore tourney - 7.png";
+import tourneyPage8 from "../../static/img/builds/tourney-page/sitecore tourney - 8.png";
+
+# Tournament Page
+
+:::info[SiteCore Path]
+sitecore > content > Vanilla.Mobile > state/brand > MobilePoker-v1.0 > Tournaments
+:::
+
+In this page, you'll learn how to build a Tournament Page for Poker, which consists of two subcomponents: the Tournament Page itself, and the Side Navigation.
+
+If Casino has MPP, Poker has Tournament Page or Tourney Page. Compare to MPP, Tournament Page requires many components in the copy such as **PROMO HUB KEY TERMS**, **Poker Tile**, **PROMO LANDING PAGE**, and **Terms & Conditions**.
+
+### Sample Tourney Page
+
+![Alt text](<../../static/img/builds/tourney-page/tourney page.png>)
+***Disclaimer:** This is screenshot is taken with 75% Zoom, so your Tourney Page will not look like this in actual.*
+
+## Start Building...
+
+### Step 1: Duplicate File
+
+It's always better to duplicate the file with same promo you'll build. Like if it's Leaderboard, look for file that's build for Leaderboad; Champoinship for Champoinship; and the like.  
+
+<img width="50%" src={tourneyPage0} alt="This is " />
+*Right-click your desired file, choose Duplicate, then rename it with your URL*
+
+### Step 2: Update SEO
+
+Fill the following field using the **PROMO HUB KEY TERMS** from the copy.
+
+- Title ➡ H1
+- Description ➡ Subtitle
+
+
+
+<img src={tourneyPage2} width="50%" alt="SEO Preview " />
+*Make sure that there are no double space, and space after the sentence/phrase*
+{/* className="mx-auto" */}
+
+### Step 3: Update Synopsis
+
+Fill the followng fields using the **Poker Tile** from the copy.
+
+- SypnosisImage ➡ Poker Tiles-640x320 Asset  
+- SypnosisTitle ➡ H1  
+- SypnosisDescription ➡ Subtitle  
+
+<img src={tourneyPage3} width="50%" alt="Synopsis Preview " />
+
+### Step 4: Update MainContent1
+
+This Content should follow this format:
+
+```html
+<h1><strong>UPPERCASE PROMO NAME</strong> </h1>
+<h2><strong>Camel Case Subtitle</strong><h2>
+<h2 style="color: #(State Hex Color);"> <strong>Promo Date</strong>\</h2>
+<p>Sentence case. Promotional description</p>
+<p>Most of the time this contains Table, follow Table formatting on the link provided below.</p>
+<p><em>Please make sure to read our full Terms and Conditions before participating in this promotion.</em></p>
+<p><a class="btn" style="background: #{State Hex Color); color: #ffffff;" href="{SmartLink}">{CTA}</a></p>
+```
+
+Fill this content using the following:
+
+<table className="mt-4 w-full max-h-[300px]">
+<thead>
+<tr>
+<td className="w-[30%]"><strong>Field</strong></td>
+<td className="w-[45%]"><strong>Value</strong></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PROMO NAME</td>
+<td>Text found on PROMO LANDING PAGE's Main Image [MPP 1080x486]</td>
+</tr>
+<tr>
+<td>Subtitle</td>
+<td>ROMO LANDING PAGE's Subtitle</td>
+</tr>
+<tr>
+<td>Promo Date</td>
+<td>PROMO LANDING PAGE's Promotional Dates</td>
+</tr>
+<tr>
+<td>Promo description</td>
+<td>PROMO LANDING PAGE's Promotional Description</td>
+</tr>
+<tr>
+<td>CTA</td>
+<td>Depends on the Promo. Check&nbsp;CTA Docs Page&nbsp;for an exhaustive list of CTAs.</td>
+</tr>
+</tbody>
+</table>
+
+<div className="flex gap-2" >
+<img src={tourneyPage4} width="50%" alt="MainContent1 Preview " />
+<img src={tourneyPage41} width="50%" alt="MainContent1 Preview " />
+</div>  
+*You can either click **Show editor, then go to HTML TAB** (found below the text editor) or **Edit HTML** to insert the required content.*
+<br />
+:::info
+Check [Table Docs Page](../builds/cta) for an exhaustive list of tables.
+:::
+
+### Step 5: Update Terms  
+
+The Poker Tournament Page's Terms & Condition has an additional line compare to other builds. Copy the code below and add this before your Ticket's Terms & Conditions.
+```html
+<h2>${dic:4BBA6E66-85C6-4D2F-ABC0-5BA4C06D20CE/TermsandConditions}</h2>
+<br />
+```
+<img src={tourneyPage5} width="50%" alt="Terms Preview " />  
+<br />
+:::info
+Check [Documents Page](../builds/cta) on How To Clean your Terms and Conditions.
+:::
+
+## Tournaments Side Navigation
+
+:::info[SiteCore Path]
+sitecore > content/Vanilla.Mobile > state/brand > MobilePoker-v1.0> Tournaments > shared > navigation
+:::
+
+### Step 6: Duplicate File
+
+Duplicate File, and rename it with your ticket's URL. Please note not to move your file above the file with file name "Title" as this is the Side Nav Title seen in the image below. 
+
+<img src={tourneyPage6} width="50%" alt="Terms Preview " /> 
+
+### Step 7: Update Data
+
+Update the following fields:  
+
+LinkReference ➡ Your Tourney Page Smartlink (e.g. `!!M2.Poker/tournaments/<insert-your-url-here>`)  
+LinkText ➡ Promo Name in Camel Case
+<img src={tourneyPage61} width="50%" alt="Terms Preview " />
+
+## Filter & Publishing Dates
+
+### Step 8: Filter
+
+Both Tourney Page and Side-Nav must have filter.
+```
+QueryString.Get('qa') = 'yourname'
+
+```
+<img src={tourneyPage7} width="30%" alt="Filter " />
+
+### Step 9: Publishing Date
+
+Both Tourney Page and Side-Nav must have the same publishing date. If it's a new build, the publishing date should be empty and the Never Publish must be ▢ unticked. 
+<img src={tourneyPage8} width="25%" alt="Publishing Date " />
+
+
+
+

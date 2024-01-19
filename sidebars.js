@@ -67,17 +67,7 @@ const sidebars = {
       label: "Poker",
       items: [
         "builds/poker-carousel",
-        {
-          type: "category",
-          label: "Tournaments",
-          items: [
-            "builds/poker-tournaments-page",
-            "builds/poker-tournaments-nav",
-          ],
-          link: {
-            type: "generated-index",
-          },
-        },
+        "builds/poker-tournaments-page",
         "builds/poker-clientOverlay",
         "builds/poker-banners",
       ],
