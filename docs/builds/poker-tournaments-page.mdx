@@ -20,7 +20,7 @@ import tourneyPage51 from "../../static/img/builds/tourney-page/sitecore tourney
 sitecore > content > Vanilla.Mobile > state/brand > MobilePoker-v1.0 > Tournaments
 :::
 
-If Casino has Marketing Promotional Page (MPP), Poker has Tournament Page. Compare to MPP, Tournament Page or Tourney Page requires many components in the copy such as **PROMO HUB KEY TERMS**, **Poker Tile**, **PROMO LANDING PAGE**, and **Terms & Condition**.
+If Casino has MPP, Poker has Tournament Page or Tourney Page. Compare to MPP, Tournament Page requires many components in the copy such as **PROMO HUB KEY TERMS**, **Poker Tile**, **PROMO LANDING PAGE**, and **Terms & Conditions**.
 
 ### Sample Tourney Page
 
@@ -34,6 +34,7 @@ If Casino has Marketing Promotional Page (MPP), Poker has Tournament Page. Compa
 It's always better to duplicate the file with same promo you'll build. Like if it's Leaderboard, look for file that's build for Leaderboad; Champoinship for Champoinship; and the like.  
 
 <img width="50%" src={tourneyPage0} alt="This is " />
+*Right-click your desired file, choose Duplicate, then rename it with your URL*
 
 ### Step 2: Update SEO
 
@@ -43,6 +44,7 @@ Title ➡ H1
 Description ➡ Subtitle
 
 <img src={tourneyPage2} width="50%" alt="SEO Preview " />
+*Make sure that there are no double space, and space after the sentence/phrase*
 {/* className="mx-auto" */}
 
 ### Step 3: Update Synopsis
@@ -81,12 +83,21 @@ CTA ➡ Depends on the Promo. Check [CTA Docs Page](../builds/cta) for an exhaus
 <img src={tourneyPage4} width="50%" alt="MainContent1 Preview " />
 <img src={tourneyPage41} width="50%" alt="MainContent1 Preview " />
 </div>  
-
+*You can either click **Show editor, then go to HTML TAB** (found below the text editor) or **Edit HTML** to insert the required content.*
 <br />
 :::info
 Check [Table Docs Page](../builds/cta) for an exhaustive list of tables.
 :::
 
-### Step 5: Update Terms
+### Step 5: Update Terms  
 
-<img src={tourneyPage5} width="50%" alt="Terms Preview " />
+The Poker Tournament Page's Terms & Condition has an additional line compare to other builds. Copy the code below and add this before your Ticket's Terms & Conditions.
+```
+<h2>${dic:4BBA6E66-85C6-4D2F-ABC0-5BA4C06D20CE/TermsandConditions}</h2>
+<br />
+```
+<img src={tourneyPage5} width="50%" alt="Terms Preview " />  
+<br />
+:::info
+Check [Documents Page](../builds/cta) on How To Clean your Terms and Conditions.
+:::
