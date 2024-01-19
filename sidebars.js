@@ -31,9 +31,18 @@ const sidebars = {
       items: ["builds/assets-request", "builds/assets-uploading"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
-    {
+    /* {
       type: "doc",
       id: "builds/documents",
+    }, */
+    {
+      type: "category",
+      label: "Documents",
+      items: ["builds/documents-tables"],
+      link: {
+        type: "doc",
+        id: "builds/documents",
+      },
     },
     {
       type: "html",
@@ -45,7 +54,6 @@ const sidebars = {
       type: "category",
       label: "Casino",
       items: [
-        "builds/casino-creatives",
         "builds/casino-carousel",
         "builds/casino-odr-banner",
         "builds/casino-mpp",
@@ -58,20 +66,9 @@ const sidebars = {
       type: "category",
       label: "Poker",
       items: [
-        "builds/poker-creatives",
         "builds/poker-carousel",
-        {
-          type: "category",
-          label: "Tournaments",
-          items: [
-            "builds/poker-tournaments-page",
-            "builds/poker-tournaments-nav",
-          ],
-          link: {
-            type: "generated-index",
-          },
-        },
-        "builds/poker-client-overlay",
+        "builds/poker-tournaments-page",
+        "builds/poker-clientOverlay",
         "builds/poker-banners",
       ],
       link: {
