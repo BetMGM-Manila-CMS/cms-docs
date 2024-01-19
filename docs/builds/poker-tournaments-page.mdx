@@ -1,9 +1,9 @@
 ---
 last_update:
-  date: 01/16/2024
+  date: 01/19/2024
   author: Emmanuel Borromeo
-  description: Started Building the Poker Tourney Page Tutorial
-authors: Kyle Atienza, Emil Borromeo
+  description: Added Side Nav, Filter, & Publishing Details
+authors: Emil Borromeo
 ---
 
 import tourneyPage0 from "../../static/img/builds/tourney-page/sitecore tourney - 0.png";
@@ -13,6 +13,10 @@ import tourneyPage4 from "../../static/img/builds/tourney-page/sitecore tourney 
 import tourneyPage41 from "../../static/img/builds/tourney-page/sitecore tourney - 4 1.png";
 import tourneyPage5 from "../../static/img/builds/tourney-page/sitecore tourney - 5.png";
 import tourneyPage51 from "../../static/img/builds/tourney-page/sitecore tourney - 5 1.png";
+import tourneyPage6 from "../../static/img/builds/tourney-page/sitecore tourney - 6.png";
+import tourneyPage61 from "../../static/img/builds/tourney-page/sitecore tourney - 6 1.png";
+import tourneyPage7 from "../../static/img/builds/tourney-page/sitecore tourney - 7.png";
+import tourneyPage8 from "../../static/img/builds/tourney-page/sitecore tourney - 8.png";
 
 # Tournament Page
 
@@ -101,3 +105,43 @@ The Poker Tournament Page's Terms & Condition has an additional line compare to 
 :::info
 Check [Documents Page](../builds/cta) on How To Clean your Terms and Conditions.
 :::
+
+## Tournaments Side Navigation
+
+:::info[SiteCore Path]
+sitecore > content/Vanilla.Mobile > state/brand > MobilePoker-v1.0> Tournaments > shared > navigation
+:::
+
+### Step 6: Duplicate File
+
+Duplicate File, and rename it with your ticket's URL. Please note not to move your file above the file with file name "Title" as this is the Side Nav Title seen in the image below. 
+
+<img src={tourneyPage6} width="50%" alt="Terms Preview " /> 
+
+### Step 7: Update Data
+
+Update the following fields:  
+
+LinkReference ➡ Your Tourney Page Smartlink (e.g. `!!M2.Poker/tournaments/<insert-your-url-here>`)  
+LinkText ➡ Promo Name in Camel Case
+<img src={tourneyPage61} width="50%" alt="Terms Preview " />
+
+## Filter & Publishing Dates
+
+### Step 8: Filter
+
+Both Tourney Page and Side-Nav must have filter.
+```
+QueryString.Get('qa') = 'yourname'
+
+```
+<img src={tourneyPage7} width="30%" alt="Filter " />
+
+### Step 9: Publishing Date
+
+Both Tourney Page and Side-Nav must have the same publishing date. If it's a new build, the publishing date should be empty and the Never Publish must be ▢ unticked. 
+<img src={tourneyPage8} width="25%" alt="Publishing Date " />
+
+
+
+

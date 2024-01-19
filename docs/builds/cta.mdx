@@ -2,7 +2,7 @@
 last_update:
   date: 1/17/2023
   author: Kyle Atienza
-  description: Rearrange and paraphrased some contents
+  description: Update Opt In code
 authors: Kyle Atienza
 ---
 
@@ -377,6 +377,20 @@ The Opt In CTA is an HTML element that has specific attributes, copy the element
 
 The Opt In CTA is a button or link that allows the user to join a specific promotion, its HTML element consists of different attributes and where we also place the `PAT ID`. It is often used for the [MPP](#).
 
-```
-<a data-offer-id="{PAT ID}" class="btn" style="background-color:{Promo and Brand Color};" data-offer-message-error="Technical Error" data-offer-message-expired="Expired" data-offer-message-invalid="Invalid" data-offer-message-not-offered="Not Offered" data-offer-message-offered="Opt In" data-offer-message-opted-in="You opted in" data-offer-message-opted-out="You opted out" data-offer-type="promos">Opt In</a>
+```html
+<a 
+	data-offer-id="{PAT ID}" 
+	class="btn" 
+	style="background-color:{Promo and Brand Color};" 
+	data-offer-message-error="Technical Error" 
+	data-offer-message-expired="Expired" 
+	data-offer-message-invalid="Invalid" 
+	data-offer-message-not-offered="Not Offered" 
+	data-offer-message-offered="Opt In" 
+	data-offer-message-opted-in="You opted in" 
+	data-offer-message-opted-out="You opted out" 
+	data-offer-type="promos"
+>
+	Opt In
+</a>
 ```
