@@ -35,14 +35,6 @@ const config = {
     locales: ["en"],
   },
 
-  stylesheets: [
-    "https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css",
-  ],
-
-  scripts: [
-    "https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js",
-  ],
-
   presets: [
     [
       "classic",
