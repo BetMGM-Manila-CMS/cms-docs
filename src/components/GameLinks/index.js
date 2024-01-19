@@ -1,7 +1,10 @@
 import { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 
+import { CopyIconButton } from "../CopyIconButton";
+
 import CodeBlock from "@theme/CodeBlock";
+import CopyButton from "@theme/CodeBlock/CopyButton";
 
 export const GameLinks = () => {
   const baseUrl = (domain) =>
@@ -9,6 +12,8 @@ export const GameLinks = () => {
 
   const [selectedOption, setSelectedOption] = useState({});
   const [games, setGames] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const options = [
     {
@@ -38,46 +43,36 @@ export const GameLinks = () => {
   ];
 
   useEffect(() => {
-    setSelectedOption(options[0]);
-  }, []);
-
-  useEffect(() => {
-    console.log(baseUrl(selectedOption.domain));
     setGames([]);
     if (selectedOption.domain) {
+      setIsLoading(true);
+      setIsError(false);
       axios({
         method: "get",
         url: baseUrl(selectedOption.domain),
-      }).then((res) => {
-        console.log(res.data);
-        setGames(res.data);
-      });
+      })
+        .then((res) => {
+          console.log(res.data);
+          setGames(res.data);
+        })
+        .catch((e) => {
+          console.log(e);
+          setIsError(true);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
     }
   }, [selectedOption]);
 
-  const copyTile = (game) => {
-    const tile = `
-        <a href="!!M2.CasinoHome/launchng/${game.game}">
-            <img 
-                style="border: 5px solid #FFFFFF;" 
-                src="https://${selectedOption.imageDomain}/htmllobby/images/newlmticons/square/${game.game}.jpg" 
-                alt="${game.name}" 
-                width="100" 
-                height="100" 
-            />
-        </a>`;
+  const gameTile = (game) => {
+    const tile = `<a href="!!M2.CasinoHome/launchng/${game.game}"> <img style="border: 5px solid #FFFFFF;" src="https://${selectedOption.imageDomain}/htmllobby/images/newlmticons/square/${game.game}.jpg" alt="${game.name}" width="100" height="100" /> </a>`;
 
-    navigator.clipboard.writeText(tile);
+    return tile;
   };
 
   return (
     <>
-      <label
-        htmlFor="countries"
-        className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      >
-        Select the Brand and State
-      </label>
       <select
         defaultValue="default"
         id="countries"
@@ -98,32 +93,49 @@ export const GameLinks = () => {
         })}
       </select>
 
-      <table className="mt-10 h-[300px]">
+      <table className="mt-4 w-full max-h-[300px]">
         <thead>
           <tr>
-            <th>Game</th>
-            <th>Smartlink</th>
-            <th>Copy Tile</th>
+            <th className="w-[30%]">Game</th>
+            <th className="w-[20%]">Provider</th>
+            <th className="w-[30%] whitespace-nowrap">Code</th>
+            <th className="w-[10%] whitespace-nowrap">Smartlink</th>
+            <th className="w-[10%] whitespace-nowrap">Game Tile</th>
           </tr>
         </thead>
         <tbody>
+          {isLoading ? (
+            <tr>
+              <td className="text-center" colSpan={5}>
+                Fetching Games Data
+              </td>
+            </tr>
+          ) : null}
+          {isError ? (
+            <tr>
+              <td className="text-center" colSpan={5}>
+                Error Fetching Games
+              </td>
+            </tr>
+          ) : null}
           {games.length
             ? games.map((game, index) => {
                 return (
                   <tr key={index}>
                     <td>{game.name}</td>
+                    <td>{game.provider}</td>
                     <td>
-                      <CodeBlock>
-                        !!M2.CasinoHome/launchng/{game.game}
+                      <CodeBlock className="max-w-[300px]">
+                        {game.game}
                       </CodeBlock>
                     </td>
                     <td>
-                      <button
-                        className="btn btn-primary"
-                        onClick={() => copyTile(game)}
-                      >
-                        Copy Tile
-                      </button>
+                      <CopyIconButton
+                        text={`!!M2.CasinoHome/launchng/${game.game}`}
+                      />
+                    </td>
+                    <td>
+                      <CopyIconButton text={gameTile(game)} />
                     </td>
                   </tr>
                 );
