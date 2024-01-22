@@ -11,48 +11,43 @@
   "tasks": {
     "docusaurus": {
       "name": "docusaurus",
-      "command": "npm run docusaurus",
-      "runAtStart": false
+      "command": "npm run docusaurus"
     },
     "start": {
       "name": "start",
       "command": "npm run start",
-      "runAtStart": true
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
     },
     "build": {
       "name": "build",
-      "command": "npm run build",
-      "runAtStart": false
+      "command": "npm run build"
     },
     "swizzle": {
       "name": "swizzle",
-      "command": "npm run swizzle",
-      "runAtStart": false
+      "command": "npm run swizzle"
     },
     "deploy": {
       "name": "deploy",
-      "command": "npm run deploy",
-      "runAtStart": false
+      "command": "npm run deploy"
     },
     "clear": {
       "name": "clear",
-      "command": "npm run clear",
-      "runAtStart": false
+      "command": "npm run clear"
     },
     "serve": {
       "name": "serve",
-      "command": "npm run serve",
-      "runAtStart": false
+      "command": "npm run serve"
     },
     "write-translations": {
       "name": "write-translations",
-      "command": "npm run write-translations",
-      "runAtStart": false
+      "command": "npm run write-translations"
     },
     "write-heading-ids": {
       "name": "write-heading-ids",
-      "command": "npm run write-heading-ids",
-      "runAtStart": false
+      "command": "npm run write-heading-ids"
     }
   }
 }

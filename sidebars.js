@@ -28,46 +28,21 @@ const sidebars = {
     {
       type: "category",
       label: "Assets",
-      items: [
-        "builds/assets-request",
-        "builds/assets-compressing",
-      ],
+      items: ["builds/assets-request", "builds/assets-uploading"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
-    {
+    /* {
       type: "doc",
       id: "builds/documents",
-    },
-    {
-      type: "html",
-      value:
-        "<div class='divider'><span class='divider__inner'>All Products</div>",
-      defaultStyle: true,
-    },
+    }, */
     {
       type: "category",
-      label: "Rest ID",
-      items: [
-        "builds/restId-inbox",
-        "builds/restId-overlay",
-        "builds/restId-toaster",
-      ],
+      label: "Documents",
+      items: ["builds/documents-tables"],
       link: {
         type: "doc",
-        id: "builds/restId-introduction",
+        id: "builds/documents",
       },
-    },
-    {
-      type: "doc",
-      id: "builds/staticTile",
-    },
-    {
-      type: "category",
-      label: "Engagements",
-      link: {
-        type: "generated-index",
-      },
-      items: ["builds/engagements-stw", "builds/engagements-pab"],
     },
     {
       type: "html",
@@ -79,9 +54,8 @@ const sidebars = {
       type: "category",
       label: "Casino",
       items: [
-        "builds/casino-creatives",
         "builds/casino-carousel",
-        "builds/casino-odrBanner",
+        "builds/casino-odr-banner",
         "builds/casino-mpp",
       ],
       link: {
@@ -92,20 +66,9 @@ const sidebars = {
       type: "category",
       label: "Poker",
       items: [
-        "builds/poker-creatives",
         "builds/poker-carousel",
-        {
-          type: "category",
-          label: "Tournaments",
-          items: [
-            "builds/poker-tournaments-page",
-            "builds/poker-tournaments-nav",
-          ],
-          link: {
-            type: "generated-index",
-          },
-        },
-        "builds/poker-clientOverlay",
+        "builds/poker-tournaments-page",
+        "builds/poker-client-overlay",
         "builds/poker-banners",
       ],
       link: {
@@ -119,6 +82,45 @@ const sidebars = {
       link: {
         type: "generated-index",
       },
+    },
+    {
+      type: "html",
+      value:
+        "<div class='divider'><span class='divider__inner'>Common Components</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "doc",
+      id: "builds/restId",
+    },
+    {
+      type: "doc",
+      id: "builds/static-tile",
+    },
+    {
+      type: "category",
+      label: "Engagements",
+      link: {
+        type: "generated-index",
+      },
+      items: ["builds/engagements-stw", "builds/engagements-pab"],
+    },
+    {
+      type: "doc",
+      id: "builds/landing-page",
+    },
+    {
+      type: "html",
+      value: "<div class='divider'><span class='divider__inner'>Guides</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "doc",
+      id: "builds/cta",
+    },
+    {
+      type: "doc",
+      id: "builds/smartlinks",
     },
   ],
   ticketsSidebar: [

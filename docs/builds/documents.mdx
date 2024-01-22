@@ -1,0 +1,135 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import documentsTab from "../../static/img/builds/documents/documents-wf.png"
+import requiredTerms from "../../static/img/builds/documents/documents-terms-required.png"
+import projDetailsTerms from "../../static/img/builds/documents/documents-terms-in-proj-details.png"
+import singleState from "../../static/img/builds/documents/documents-copy-single-state.png"
+import multiState from "../../static/img/builds/documents/documents-copy-multi-state.png"
+import tncParenthesis from "../../static/img/builds/documents/documents-remove-link-parenthesis.png"
+
+# Documents
+
+The documents are accessible within the Documents tab of your Workfront tickets. inside are folder where the documents are grouped into. 
+
+<img className="w-full mt-3 max-w-xl" src={documentsTab} alt="Documents Tab" />
+
+## Types of Documents
+
+### Copy
+
+The copy document holds general texts used across builds. Almost every build component requires content, often sourced from this document.
+
+The Copy folder contains the folders for each state, therefore the file will be on the corresponding state indicated on the ticket, unless there are multiple states indicated in which the file will be found on the `All States` folder
+
+<img className="w-1/3 mt-3 max-w-xl" src={singleState} alt="Documents Tab" />
+
+### Terms and Conditions
+
+The Terms and Conditions is an important copy that contains the legal agreement between a business and a customer or end user.
+
+Aside from the Terms and Conditions this also contains the `How to Paricipate` section to be used for the MPP component.
+
+:::info
+
+The Project Details tab under the Promotion section contains if the Terms and Conditions copy is required in your builds.
+
+<img className="w-1/2 mt-5 mb-5 max-w-52" src={requiredTerms} alt="Documents Tab" />
+
+:::
+
+:::tip 
+
+If it is not found on the Documents tab it may be on the `Project Details` tab, or there some occasions it is mentioned on the `Updates` tab.
+
+:::
+
+This copy often times needs to be _sanitized_ to remove unwanted characters as it will be converted to be in HTML format. In order to do this, see this [guide](#cleaning-the-contents).
+
+### Prize Tool
+
+This is a spreadsheet file that contains the contents for the prize table for [Engagement](#) components.
+
+## Downloading the Files
+
+The folders may contain files named `Final` or folders named `Final` or prefixed with `CHR`, this are the versions of the document as changes are requested along the way. To avoid confusion, the general rule is to get the copy that is **uploaded on the latest date**.
+
+:::warning
+
+There are instances that older versions may still be used. Please check if it is mentioned on the `Updates` tab or mentioned by your sub-lead in your ticket assignment. 
+
+:::
+
+## Cleaning the Contents
+
+Whenever a copy will be converted to HTML it needs to be *cleaned*, this is because when copying something from a document to a parsing tool like [HTMLTidy](https://htmltidy.net/) there will be some unwanted elements that needs to be remove to ensure that the content will render properly when it is displayed on the website.
+
+Here are the list of characters and symbols that needs to be removed:
+
+### Unwanted Characters
+
+| Name | Character |
+| --- | ----------- |
+| narrow no-break space | ```   ``` |
+| zero width space | ```​ ```|
+| no-break space | ```&nbsp;``` |
+
+### Unwanted HTML Tags
+
+| Name | Tags |
+| --- | ----------- |
+| break line | ``` <br /> ``` |
+| emphasis | ``` <em></em> ``` |
+
+:::note
+
+There are still instances that these html elements still needs to be used, only remove out of place elements.
+
+:::
+
+
+### Embedding Links
+
+The copywriting team will often include in the copy some words that needs to have a link embedded on it. Usually encase in parenthesis and highlighted in some color.
+
+<img className="mb-4" src={tncParenthesis} alt="Documents Tab" />
+
+For this instances, remove the text enclosed in parenthesis and embed the appropriate link for the phrase or word. This can be done by enclosing the text in an `<a>` tag placing the link on its `href` attribute. 
+
+:::tip
+
+Using a parser tool like [HTMLTidy](https://htmltidy.net/), a text editor like [VSCode](https://code.visualstudio.com/) or [Sublime](https://www.sublimetext.com/), or just Sitecore's integrated editor can help you perform this section much faster.
+
+Simply higlight the text or phrase and press <kbd>Ctrl</kbd>+<kbd>K</kbd> and a popup will appear for you to paste the approporiate link.
+
+:::
+
+:::note
+
+For smartlinks see this [guide](../builds/smartlinks).
+
+:::
+
+### Formatting
+
+#### Terms and Conditions Heading
+
+The heading section of the terms is formatted depending on the brand of the ticket you are working on.
+
+| Ticket Type | Header Formatting |
+| --- | --- |
+| Default | Normal Case with colon |
+| Sports | Uppercase Case with colon |
+| Landing Page | Uppercase without colon |
+
+#### Bullets
+
+Long contents in the copy such as the Terms and Conditions and How to Participate have contents placed in bulleted list, depending 
+
+| Ticket Type | List Type |
+| --- | --- |
+| Casino and Poker | Unordered List |
+| Sports | Ordered List |
+
+
+
