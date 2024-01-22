@@ -69,7 +69,7 @@ const sidebars = {
       items: [
         "builds/poker-carousel",
         "builds/poker-tournaments-page",
-        "builds/poker-clientOverlay",
+        "builds/poker-client-overlay",
         "builds/poker-banners",
       ],
       link: {
