@@ -143,6 +143,10 @@ const sidebars = {
     },
     {
       type: "doc",
+      id: "builds/colors",
+    },
+    {
+      type: "doc",
       id: "builds/smartlinks",
     },
   ],
