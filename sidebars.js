@@ -57,6 +57,7 @@ const sidebars = {
         "builds/casino-carousel",
         "builds/casino-odr-banner",
         "builds/casino-mpp",
+        "builds/casino-video-banners"
       ],
       link: {
         type: "generated-index",
@@ -88,6 +89,28 @@ const sidebars = {
       value:
         "<div class='divider'><span class='divider__inner'>Common Components</div>",
       defaultStyle: true,
+    },
+    {
+      type: "category",
+      label: "EDS and PAT",
+      items: [
+        "builds/pat-eds-stw",
+        "builds/pat-eds-cc",
+      ],
+      link: {
+        type: "doc",
+        id: "builds/pat-eds",
+      },
+    },
+    {
+      type: "category",
+      label: "Layout",
+      items: [
+      ],
+      link: {
+        type: "doc",
+        id: "builds/pat-eds",
+      },
     },
     {
       type: "doc",
