@@ -1,0 +1,112 @@
+---
+last_update:
+  date: 1/22/2024
+  author: Kyle Atienza
+  description: Create Table Guide Page
+authors: Kyle Atienza
+---
+
+# Tables
+
+This guide provides instructions on appropriately formatting tables for use in text fields within Sitecore. It's important to understand that the table will be converted to HTML. The guide includes the initial structure and styling recommendations for formatting tables.
+
+:::tip
+
+Using a [table parser](https://tableconvert.com/excel-to-html) can help you easily convert the table from your excel file to HTML table.
+
+:::
+
+## HTML
+
+The table uses a standard HTML table element. 
+
+:::note 
+
+Replace the appropriate colors to match with the ticket's brand.
+
+:::
+
+```html
+<table class="table table-striped table-bordered" style="text-align: center;">
+    <thead>
+        <tr style="color: {#fff | #000}; background-color: {Brand Color Here};">
+            <th>Date</th>
+            <th>Time</th>
+            <th>Event</th>
+            <th>Total</th>
+            <th>Bounty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Janury 28</td>
+            <td>5:00 PM</td>
+            <td>Winter Online Championship #1</td>
+            <td>$215</td>
+            <td>$100</td>
+        </tr>
+    </tbody>
+</table>
+
+```
+
+### Adjustments
+
+Some adjustments are needed to be made from the original copy to present the data in a more cleaner way.
+
+- Update the date to be on the `Month-Day` format.
+
+## CSS
+
+Put this CSS on the top of the text editor.
+
+```css
+<style>
+    .table tbody th, 
+    .table tbody tr td, 
+    .table thead th {
+        font-size: 12px;
+        vertical-align: middle;
+    }
+    .tablescroll { 
+        overflow: auto; 
+        max-height: 20em; 
+    }
+    .tablescroll th { 
+        position: sticky; 
+        top: 0; 
+        z-index: 2;
+    }
+    details { 
+        border: 1px solid /*{Brand Color Here}*/; 
+        padding: .75em .75em 0; 
+        margin-top: 10px; 
+        box-shadow:0 0 20px #d4d4d4; 
+    }
+    summary { 
+        font-weight: bold; 
+        margin: -.75em -.75em 0; 
+        padding: .75em; 
+        color: /*{#fff | #000}*/; 
+    }
+    summary { 
+        font-weight: bold; 
+        margin: -.75em -.75em 0; 
+        padding: .75em; 
+        background-color: /*{Brand Color Here}*/; 
+        color: /*{#fff | #000}*/; 
+    }
+    details[open] summary { 
+        border-bottom: 1px solid /*{Brand Color Here}*/; 
+        margin-bottom: 10px; 
+    }
+    .tablescroll-accord { 
+        overflow: auto;
+    }
+    .tablescroll-accord th { 
+        position: sticky; 
+        top: 0; 
+        z-index: 2;
+    }
+</style>
+```
