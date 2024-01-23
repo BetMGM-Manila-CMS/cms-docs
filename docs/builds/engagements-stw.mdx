@@ -1,0 +1,47 @@
+# Spin The Wheel
+Spin The Wheel is an Engagement tool for players to play and win prizes.
+
+// insert image (STW sample)
+
+## The Layout
+First, we must build the layout for our STW Engagement tool.
+
+:::info[SiteCore Path]
+<strong>Layout:</strong><br/>
+Content > Vanilla.Mobile > State/Brand > Promo > BspinLayouts<br/>
+<strong>CSS asset:</strong><br/>
+Content > Vanilla.Mobile > State/Brand > Promo > PageAssets
+:::
+
+Duplicate any of the Layouts, and rename it like in the existing layouts.<br/>
+You also need to create it's own CSS asset, just duplicate existing css and rename as such.
+
+### Required Fields
+| Field | Value |
+| --- | --------- |
+| BSpinBackground | Background 2048x800 |
+| Marker | Ticker |
+| SpinButton | Wheel Center |
+| WheelBackground(s) | Wheel (without icons) |
+
+// insert image
+
+Under PageAssets, replace the selected CSS asset with your newly created asset.
+
+// insert image sample
+
+In the Content section shown below, fill the <strong>PageHeaderText</strong> with Promohub H1.
+
+// insert image
+
+Scroll down to Overlay section, and edit <strong>PreLoginPage</strong> and <strong>PostLoginErrorPage</strong>.
+
+For <strong>PreLoginPage</strong>, replace the img src link with the media link for Wheel with icons.
+
+// insert image
+
+For <strong>PostLoginErrorPage</strong>, replace the button link depending on your ticket if Casino/Poker.
+
+// insert image
+
+## Spin The Wheel PAT
