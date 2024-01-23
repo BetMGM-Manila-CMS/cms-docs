@@ -57,7 +57,7 @@ const sidebars = {
         "builds/casino-carousel",
         "builds/casino-odr-banner",
         "builds/casino-mpp",
-        "builds/casino-video-banners"
+        "builds/casino-video-banners",
       ],
       link: {
         type: "generated-index",
@@ -93,10 +93,7 @@ const sidebars = {
     {
       type: "category",
       label: "EDS and PAT",
-      items: [
-        "builds/pat-eds-stw",
-        "builds/pat-eds-cc",
-      ],
+      items: ["builds/pat-eds-stw", "builds/pat-eds-cc"],
       link: {
         type: "doc",
         id: "builds/pat-eds",
@@ -105,8 +102,7 @@ const sidebars = {
     {
       type: "category",
       label: "Layout",
-      items: [
-      ],
+      items: [],
       link: {
         type: "doc",
         id: "builds/pat-eds",
@@ -126,7 +122,11 @@ const sidebars = {
       link: {
         type: "generated-index",
       },
-      items: ["builds/engagements-stw", "builds/engagements-pab"],
+      items: [
+        "builds/engagements-stw",
+        "builds/engagements-pab",
+        "builds/engagements-coin",
+      ],
     },
     {
       type: "doc",
