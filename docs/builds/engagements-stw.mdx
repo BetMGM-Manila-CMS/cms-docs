@@ -1,15 +1,26 @@
 ---
 last_update:
-  date: 1/23/2024
+  date: 1/24/2024
   author: JM Antonio
-  description: Initial contents for STW layout
+  description: Added images
 authors: JM Antonio
 ---
+
+import sample from "../../static/img/builds/stw/sample.png";
+import bspin from "../../static/img/builds/stw/bspin.png";
+import content from "../../static/img/builds/stw/content.png";
+import marker from "../../static/img/builds/stw/marker.png";
+import message from "../../static/img/builds/stw/message.png";
+import pageassets from "../../static/img/builds/stw/pageassets.png";
+import postlogin from "../../static/img/builds/stw/postlogin.png";
+import prelogin from "../../static/img/builds/stw/prelogin.png";
+import spinbutton from "../../static/img/builds/stw/spinbutton.png";
+import wheelbackground from "../../static/img/builds/stw/wheelbackground.png";
 
 # Spin The Wheel
 Spin The Wheel is an Engagement tool for players to play and win prizes.
 
-// insert image (STW sample)
+<img width="900" src={sample} />
 
 ## The Layout
 First, we must build the layout for our STW Engagement tool.
@@ -24,7 +35,7 @@ Content > Vanilla.Mobile > State/Brand > Promo > PageAssets
 Duplicate any of the Layouts, and rename it like in the existing layouts.<br/>
 You also need to create it's own CSS asset, just duplicate existing css and rename as such.
 
-### Required Fields
+### Image Fields
 | Field | Value |
 | --- | --------- |
 | BSpinBackground | Background 2048x800 |
@@ -32,24 +43,40 @@ You also need to create it's own CSS asset, just duplicate existing css and rena
 | SpinButton | Wheel Center |
 | WheelBackground(s) | Wheel (without icons) |
 
-// insert image
+<img width="900" src={bspin} />
+<img src={marker} />
+<img src={spinbutton} />
+<img src={wheelbackground} />
 
-Under PageAssets, replace the selected CSS asset with your newly created asset.
+### PageAssets
+Replace the selected CSS asset with your newly created asset.
 
-// insert image sample
+<img width="900" src={pageassets} />
 
-In the Content section shown below, fill the <strong>PageHeaderText</strong> with Promohub H1.
+### Content
+Fill the <strong>PageHeaderText</strong> with Promohub H1.
 
-// insert image
+<img width="900" src={content} /><br/>
 
-Scroll down to Overlay section, and edit <strong>PreLoginPage</strong> and <strong>PostLoginErrorPage</strong>.
+Change CTA depending on your ticket if Casino/Poker.
 
-For <strong>PreLoginPage</strong>, replace the img src link with the media link for Wheel with icons.
+<img width="900" src={message} />
 
-// insert image
+### Overlay 
+<strong>PreLoginPage</strong>: replace the img src link with the media link for Wheel with icons and the button color depending on your Brand.
 
-For <strong>PostLoginErrorPage</strong>, replace the button link depending on your ticket if Casino/Poker.
+Replace place this line in the html code.
 
-// insert image
+```html
+<img alt="" class="wheel-static-img" src="{insert img link here}" />
+```
+<img width="900" src={prelogin} /><br/>
+
+<strong>PostLoginErrorPage</strong>: replace the button link depending on your ticket if Casino/Poker.
+
+<img width="900" src={postlogin} />
 
 ## Spin The Wheel PAT
+:::info
+For updating the Test Spin The Wheel PAT, go to this page for reference: [Engagement PAT](#).
+:::
