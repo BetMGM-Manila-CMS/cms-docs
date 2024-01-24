@@ -51,7 +51,7 @@ const sidebars = {
       ],
       link: {
         type: "doc",
-        id: "builds/restId-introduction",
+        id: "builds/restId",
       },
     },
     {
