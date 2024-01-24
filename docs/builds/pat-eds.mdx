@@ -1,8 +1,8 @@
 ---
 last_update:
-  date: 1/23/2023
+  date: 1/24/2023
   author: Kyle Atienza
-  description: Initial Content
+  description: Add Editing your PAT or EDS
 authors: Kyle Atienza
 ---
 
@@ -12,12 +12,38 @@ import marketing from "../../static/img/builds/pat-eds/pat-eds-marketing.png"
 import steps from "../../static/img/builds/pat-eds/pat-eds-steps.png"
 import uatTool from "../../static/img/builds/pat-eds/pat-eds-uat-tool.png"
 import gameTiles from "../../static/img/builds/pat-eds/pat-eds-tac-tiles.png"
+import updates from "../../static/img/builds/pat-eds/pat-eds-updates.png"
+import projDeets from "../../static/img/builds/pat-eds/pat-eds-proj-deets.png"
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # PAT and EDS
 
 PAT and EDS have different use cases but most of the components' fields have some similarities.
 
 At the same time with other use cases often when it is being used with `Engagement Tickets` there are many fields that are specific with those type of tickets. Please refer to the guides under the PAT and EDS section.
+
+## Editing your PAT or EDS
+
+In contrast with other components, the PAT and EDS is provided by the Ops team. We can either get the respective PAT or EDS from the `Updates` or `Project Details` tab under the `CRM Ops` Section of your Workfront ticket.
+
+<Tabs>
+  <TabItem value="updated" label="Updates Tab" default>
+    <img className="mt-3 mb-5" src={updates} />
+  </TabItem>
+  <TabItem value="projDetails" label="Project Details">
+    <img className="mt-3 mb-5" src={projDeets} />
+  </TabItem>
+</Tabs>
+
+:::tip
+
+Often times PAT or EDS will be provided in the most bottom part the Updates.
+
+:::
+
+
 
 ## Teaser Image
 
