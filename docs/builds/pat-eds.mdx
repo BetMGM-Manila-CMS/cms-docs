@@ -168,17 +168,9 @@ The value for the remaining fields of `FirstSlabImage`, `SlabImage`, and `StepIm
 
 ## Terms
 
-<h3>KeyTermsAndConditions</h3>
+### KeyTermsAndConditions
 
 The value for this field will be from the `Promo Hub Key Terms > Short Summary` from the copy.
-
-:::note
-
-In addition to this, if there is an [MPP](./casino-mpp) component along with the PAT components. The tiles for eligible games will also be included at the top of the Terms and Conditions.
-
-<img className="mt-3 mb-5 max-w-2xl" src={gameTiles} />
-
-:::
 
 :::warning[note]
 
@@ -186,9 +178,17 @@ Enclose this content with the `<p></p>` tag
 
 :::
 
-<h3>Full Terms and Conditions</h3>
+### Full Terms and Conditions
 
 :::note
+
+If the Terms have mentioned for games that **must be wagered**, the tiles for these games will also be included at the top of the Terms and Conditions.
+
+<img className="mt-3 mb-5 max-w-2xl" src={gameTiles} />
+
+:::
+
+:::tip
 
 The content for the Terms and Codition will be the same for the content from `MPP` or `Rest ID`, so feel free to just copy and paste the content from those components. For a reference please refer to this [guide](./documents#terms-and-conditions).
 

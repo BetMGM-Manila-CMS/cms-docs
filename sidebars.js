@@ -99,8 +99,7 @@ const sidebars = {
       items: [
       ],
       link: {
-        type: "doc",
-        id: "builds/pat-eds",
+        type: "generated-index",
       },
     },
     {
