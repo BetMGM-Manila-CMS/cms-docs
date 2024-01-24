@@ -83,7 +83,7 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "EDS and PAT",
+      label: "PAT and EDS",
       items: [
         "builds/pat-eds-stw",
         "builds/pat-eds-cc",

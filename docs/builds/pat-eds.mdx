@@ -1,0 +1,319 @@
+---
+last_update:
+  date: 1/23/2023
+  author: Kyle Atienza
+  description: Initial Content
+authors: Kyle Atienza
+---
+
+import teaser from "../../static/img/builds/pat-eds/pat-eds-teaser.png"
+import promoDetails from "../../static/img/builds/pat-eds/pat-eds-promotion.png"
+import marketing from "../../static/img/builds/pat-eds/pat-eds-marketing.png"
+import steps from "../../static/img/builds/pat-eds/pat-eds-steps.png"
+import uatTool from "../../static/img/builds/pat-eds/pat-eds-uat-tool.png"
+import gameTiles from "../../static/img/builds/pat-eds/pat-eds-tac-tiles.png"
+
+# PAT and EDS
+
+PAT and EDS have different use cases but most of the components' fields have some similarities.
+
+At the same time with other use cases often when it is being used with `Engagement Tickets` there are many fields that are specific with those type of tickets. Please refer to the guides under the PAT and EDS section.
+
+## Teaser Image
+
+The teaser image `Promohub Tiles-800x360` is consistently used for displaying promo cards on the promo page. The image placement field may vary based on the provided PAT or EDS. Refer to the guide below.
+
+<img className="mt-3 mb-5" src={teaser} />
+
+<table>
+    <thead>
+        <tr>
+            <th>Promotion Type</th>
+            <th>Field</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bet & Get</td>
+            <td rowSpan={3}>`Teaser > Teaser Image`</td>
+        </tr>
+        <tr>
+            <td>Click Card</td>
+        </tr>
+        <tr>
+            <td>Coin Toss</td>
+        </tr>
+        <tr>
+            <td>Spin The Wheel</td>
+            <td>`Promo Hub Tile > Image`</td>
+        </tr>
+        <tr>
+            <td>Pick A Card</td>
+            <td>`Offer > TeaserImage`</td>
+        </tr>
+    </tbody>
+</table>
+
+## Basic Promotion Details
+
+<img className="mt-3 mb-5" src={promoDetails} />
+
+<table className="whitespace-nowrap">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Promotion Type</th>
+            <th>Transaction Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bet & Get</td>
+            <td rowSpan={5}>`Promohub Key Terms H1`</td>
+            <td rowSpan={2}>`Promohub Key Terms H1`</td>
+        </tr>
+        <tr>
+            <td>Click Card</td>
+        </tr>
+        <tr>
+            <td>Coin Toss</td>
+            <td rowSpan={3}>`TD-{EDS ID | PAT ID}`</td>
+        </tr>
+        <tr>
+            <td>Spin The Wheel</td>
+        </tr>
+        <tr>
+            <td>Pick A Card</td>
+        </tr>
+    </tbody>
+</table>
+
+## Overview
+
+<h3>Required Fields</h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Introduction Text</td>
+            <td>`Promo Teaser Section`</td>
+        </tr>
+        <tr>
+            <td>The "hook"</td>
+            <td>`Prize Message`</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Optional Fields</h3>
+
+There are 2 reserved text fields if there are any more copy provided after the Prize Message content in the copy, put each line on each text field if there is any.
+
+<img className="mt-3 mb-5" src={marketing} />
+
+## HowItWorks
+
+This section contains 3 steps that summarizes how the players can join and receive their rewards.
+
+The copy has the `How It Works Tab` section which contains the value for each step. Place the bolded text for the title and below each are the description.
+
+
+<img className="mt-3 mb-5" src={steps} />
+
+:::note
+
+If the `ManualDataPoints` have any fields displayed, delete or remove all fields that are displayed.
+
+:::
+
+## MyProgress
+
+The first field `CarouselBackGroundImage` will have the asset of `1210x440`.
+
+The value for the remaining fields of `FirstSlabImage`, `SlabImage`, and `StepImage` can be acquired from the [UAT Images](http://betmgm-phtools.entaingroup.corp/sc-pat-images/) Tool, just select the appropriate `Site`, `State`, and `SiteCore Template` to get the appropriate images for each field
+
+<img className="mt-3 mb-5" src={uatTool} />
+
+## Terms
+
+<h3>KeyTermsAndConditions</h3>
+
+The value for this field will be from the `Promo Hub Key Terms > Short Summary` from the copy.
+
+:::note
+
+In addition to this, if there is an [MPP](./casino-mpp) component along with the PAT components. The tiles for eligible games will also be included at the top of the Terms and Conditions.
+
+<img className="mt-3 mb-5 max-w-2xl" src={gameTiles} />
+
+:::
+
+:::warning[note]
+
+Enclose this content with the `<p></p>` tag
+
+:::
+
+<h3>Full Terms and Conditions</h3>
+
+:::note
+
+The content for the Terms and Codition will be the same for the content from `MPP` or `Rest ID`, so feel free to just copy and paste the content from those components. For a reference please refer to this [guide](./documents#terms-and-conditions).
+
+:::
+
+## CTA
+
+For CTA it can be different fields and different contents, refer to the guide below.
+
+<table>
+    <thead>
+        <tr>
+            <th>Promotion Type</th>
+            <th>Section</th>
+            <th>CTA URL</th>
+            <th>CTA Text</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bet & Get</td>
+            <td rowSpan={2}>Play Now CTA</td>
+            <td rowSpan={2} className="text-center">`Play Now`</td>
+            <td>[See Bet & Get CTA Guide](#bet-and-get-cta)</td>
+        </tr>
+        <tr>
+            <td>Click Card</td>
+            <td>
+            ```
+            !!M2.CasinoHome
+            ```
+            </td>
+        </tr>
+        <tr>
+            <td>Coin Toss</td>
+            <td>CTA</td>
+            <td className="text-center">`Flip Now` or `Toss Now`</td>
+            <td>
+            ```
+            !!M2.Promo/ep/c/{Layout Name}?id={PAT ID}
+            ```
+            </td>
+        </tr>
+        <tr>
+            <td>Spin The Wheel</td>
+            <td rowSpan={2} colSpan={3} className="text-center">No CTA Needed</td>
+        </tr>
+        <tr>
+            <td>Pick A Card</td>
+        </tr>
+    </tbody>
+</table>
+
+### Bet and Get CTA
+
+For Bet & Get, the CTA URL will be depending on the eligible games for the promotion.
+
+<table>
+    <thead>
+        <tr>
+            <th>Eligible Game</th>
+            <th>CTA URL</th>
+            <th>CTA Text</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Single Game</td>
+            <td>
+            ```
+            !!M2.CasinoHome/launchng/{Game}
+            ```
+            </td>
+            <td rowSpan={3}>Play Now</td>
+        </tr>
+        <tr>
+            <td>Multiple Games</td>
+            <td>
+            ```
+            !!M2.CasinoHome
+            ```
+            </td>
+        </tr>
+        <tr>
+            <td>Game is not yet live</td>
+            <td>
+            ```
+            !!M2.CasinoHome/c/newgames
+            ```
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+## Rewards and Results options
+
+This field is a dropdown where we need to select the appropriate folder depending on promotion type of your ticket.
+
+:::tip
+
+The appropriate folder will be under the `DetailPagesContent` folder inside the `state/brand` folder. The `state/brand` should be the same as stated in your ticket.
+
+<div className="mt-3" />
+
+:::info[DetailPagesContent Path]
+
+Content > Vanilla.Mobile > State/Brand > Promo > PromoHub > DetailPagesContent
+
+:::
+
+:::note
+
+There are always two final folder destination to select, those are `Default` and `Default-US`, only pick `Default` folder if `Default-US` is not present.
+
+:::
+
+<table>
+    <thead>
+        <tr>
+            <th className="w-[20%]">Promotion Type</th>
+            <th>Folder Path</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Bet & Get</td>
+            <td>`DetailPagesContent > PAT Promotions > Player Activity > Default-US | Default`</td>
+        </tr>
+        <tr>
+            <td>EDS</td>
+            <td>`DetailPagesContent > Eds > Default-US | Default`</td>
+        </tr>
+        <tr>
+            <td>Click Card</td>
+            <td>`DetailPagesContent > PAT Promotions > Click Card > Default-US | Default`</td>
+        </tr>
+        <tr>
+            <td>Leaderboard</td>
+            <td>`DetailPagesContent > PAT Promotions > Leaderboard > Default-US | Default`</td>
+        </tr>
+        <tr>
+            <td>[Shared Leaderboard](#shared-leaderboard)</td>
+            <td>`Content/Vanilla.Mobile/m2.borgataonline.com/Promo/PromoHub/DetailPagesContent/PAT Promotions/Leaderboard/Leaderboard_Shared_NJ_Labels`</td>
+        </tr>
+    </tbody>
+</table>
+
+### Shared Leaderboard
+
+:::note
+
+For Shared Leaderboard tickets, the `state/brand` folder should always be set to `m2.borgataonline.com`, as the `Leaderboard_Shared_NJ_Labels` folder is located there, regardless of the state.
+
+:::
