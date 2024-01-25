@@ -1,10 +1,13 @@
 ---
 last_update:
-  date: 1/15/2023
+  date: 1/25/2023
   author: Kyle Atienza
-  description: add section select and additional notes
+  description: Add section creating and commenting
 authors: Kyle Atienza
 ---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 import rewardTool from "../../static/img/builds/restId/restid-rewards-tool.png"
 import projDetailsTemplate from "../../static/img/builds/restId/restid-wf-template.png"
@@ -12,14 +15,57 @@ import betMgmInbox from "../../static/img/builds/restId/restid-betmgm-inbox.png"
 import overlayImg from "../../static/img/builds/restId/restid-overlay-eg.png"
 import toaster from "../../static/img/builds/restId/restid-toaster-eg.png"
 import sectionSelect from "../../static/img/builds/restId/restid-section-select.png"
+import template from "../../static/img/builds/restId/restid-template.png"
+import tiered from "../../static/img/builds/restId/restid-tiered.png"
+import engagement from "../../static/img/builds/restId/restid-engagement.png"
+import commentValue from "../../static/img/builds/restId/restid-comment-value.png"
+import comment from "../../static/img/builds/restId/restid-comment.png"
+import duplicate from "../../static/img/builds/restId/restid-duplicate.gif"
 
 # Rest ID
+
+
+
+## Creating a Rest ID
+
+To create a Rest ID go to the Sitecore path mentioned below and duplicate an existing Rest ID Item.
+
+:::info[Sitecore Path]
+
+Content Editor > Marketing > US > CMS-NEW-FOLDER > `state`-`brand` > `product` > `year` > `month`
+
+:::
+
+Name the new created Rest ID same with the name of your ticket. Just remove unwanted characters.
+
+:::tip
+
+Vivian from US provided a template folder inside the the [US Sitecore NJ Folder](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={64853FDD-BE01-41A1-AFBD-AC7536EC6773}&la=), we can just `copy to` these items (except to ON) to the correct folder.
+
+<img className="my-3" src={template} />
+
+:::
+
+### Grouped Rest IDs
+
+Rest IDs needs to be grouped if a ticket is requiring more than one Rest ID for that create a folder and name it the name of your ticket. Then place the different Rest IDs inside the folder. See examples below.
+
+<Tabs>
+  <TabItem value="tiered" label="Tiered" default>
+    <img className="my-3 w-xl" src={tiered} />
+  </TabItem>
+  <TabItem value="engagement" label="Engagement">
+    <img className="my-3 w-xl" src={engagement} />
+  </TabItem>
+</Tabs>
+
+## SectionSelector
 
 Rest ID has different sections that can be displayed or hidden, it will be adjusted depending on the needs of your ticket.
 
 <img className="my-3" src={sectionSelect} />
 
-:::note
+:::warning[note]
 
 When duplicating Rest ID components most fields will be populated with contents even though it is blank from the source item.
 
@@ -152,3 +198,21 @@ Plese check the [CTA guide](../builds/cta) for the proper labeling and link to u
 | Field | Image |
 | --- | --- |
 | PreviewTitle | `Toaster-65x65` |
+
+## Commenting
+
+Right click your Rest ID and copy both the Rest ID and the Direct Link, provide both these for your ticket comment.
+
+<img className="my-3 w-lg" src={commentValue} />
+
+:::tip
+
+Embed the direct link of the Rest ID on the Rest ID itself or on a 'DL' beside it.
+
+<div className="my-3" />
+
+You can also provide a short description for what the Rest ID is(`IOT`, `CB-Fixed No Deposit Wager`, `BS-Fixed Deposit Wager`, etc...).
+
+<img className="my-5" src={comment} />
+
+:::
