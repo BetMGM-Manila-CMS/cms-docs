@@ -83,8 +83,11 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "EDS and PAT",
-      items: ["builds/pat-eds-stw", "builds/pat-eds-cc"],
+      label: "PAT and EDS",
+      items: [
+        "builds/pat-eds-stw",
+        "builds/pat-eds-cc",
+      ],
       link: {
         type: "doc",
         id: "builds/pat-eds",
@@ -95,8 +98,7 @@ const sidebars = {
       label: "Layout",
       items: [],
       link: {
-        type: "doc",
-        id: "builds/pat-eds",
+        type: "generated-index",
       },
     },
     {
