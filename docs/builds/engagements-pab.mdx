@@ -2,10 +2,33 @@
 last_update:
   date: 1/25/2024
   author: JM Antonio
-  description: Finalized Text Contents
-authors: JM Antonio
+  description: Uploaded Images and finalizing content
+authors: JM Antonio, Josh Javier (grid guide images)
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import brandlogo from "../../static/img/builds/pab/brandlogo.png";
+import errormsg from "../../static/img/builds/pab/errormsg.png";
+import guideL from "../../static/img/builds/pab/guidelandscape.png";
+import guideP from "../../static/img/builds/pab/guideportrait.png";
+import LBG from "../../static/img/builds/pab/landscapebg.png";
+import PBG from "../../static/img/builds/pab/portraitbg.png";
+import landscape from "../../static/img/builds/pab/landscapecards.png";
+import portrait from "../../static/img/builds/pab/portraitcards.png";
+import Lbox3 from "../../static/img/builds/pab/Lbox3.png";
+import Lbox4 from "../../static/img/builds/pab/Lbox4.png";
+import Lbox5 from "../../static/img/builds/pab/Lbox5.png";
+import Lbox6 from "../../static/img/builds/pab/Lbox6.png";
+import Pbox3 from "../../static/img/builds/pab/Pbox3.png";
+import Pbox4 from "../../static/img/builds/pab/Pbox4.png";
+import Pbox5 from "../../static/img/builds/pab/Pbox5.png";
+import Pbox6 from "../../static/img/builds/pab/Pbox6.png";
+import pageheader from "../../static/img/builds/pab/pageheader.png";
+import pageasset from "../../static/img/builds/pab/pageasset.png";
+import prelogin from "../../static/img/builds/pab/prelogin.png";
+import postlogin from "../../static/img/builds/pab/postlogin.png";
 
 # Pick A Box
 Pick A Box is an Engagement tool for players to play and win prizes.
@@ -26,11 +49,11 @@ You also need to create it's own CSS asset, just duplicate existing css and rena
 ### Content
 Fill the **PageHeaderText** with Promohub H1.
 
-// insert image for pageheader
+<img width="900" src={pageheader} alt="" />
 
 Change CTA depending on your ticket if Casino/Poker.
 
-// insert image errormsg
+<img width="900" src={errormsg} alt="" />
 
 ### Image Fields
 | Field | Value |
@@ -41,47 +64,87 @@ Change CTA depending on your ticket if Casino/Poker.
 
 Fill up the image fields listed.
 
-// insert images for design
+<img width="900" src={brandlogo} alt="" />
+<img width="900" src={LBG} alt="" />
+<img width="900" src={PBG} alt="" />
 
 ### Image Configuration
 This section lets you configure where the box/card/object of your Pick A Box Engagement tool will be placed.
+<ol>
+  <li>Position in the grid guide</li>
+  <li>Static image</li>
+  <li>GIF image</li>
+</ol>
 
-| Number of Box | Landscape | Portrait |
-| ------ | ------ | ------ |
-| 3 | // insert image | // insert image |
-| 4 | // insert image | // insert image |
-| 5 | // insert image | // insert image |
-| 6 | // insert image | // insert image |
+:::note
+Follow the arrangement of images in the mock design.<br/>
+You may also add more entries if needed.
+:::
+
+<img src={landscape} alt="" />
+
+<img src={portrait} alt="" /><br/>
+
+<Tabs>
+  <TabItem value="landscape" label="Landscape" default>
+    | Number of Box | Configuration |
+    | ------ | ------ |
+    | 3 | <details><summary>Show/Hide</summary><img src={Lbox3} alt="" /></details> |
+    | 4 | <details><summary>Show/Hide</summary><img src={Lbox4} alt="" /></details> |
+    | 5 | <details><summary>Show/Hide</summary><img src={Lbox5} alt="" /></details> |
+    | 6 | <details><summary>Show/Hide</summary><img src={Lbox6} alt="" /></details> |
+  </TabItem>
+  <TabItem value="portrait" label="Portrait">
+    | Number of Box | Configuration |
+    | ------ | ------ |
+    | 3 | <details><summary>Show/Hide</summary><img src={Pbox3} alt="" /></details> |
+    | 4 | <details><summary>Show/Hide</summary><img src={Pbox4} alt="" /></details> |
+    | 5 | <details><summary>Show/Hide</summary><img src={Pbox5} alt="" /></details> |
+    | 6 | <details><summary>Show/Hide</summary><img src={Pbox6} alt="" /></details> |
+  </TabItem>
+</Tabs>
 
 :::info
 The configuration is dependent on the mock design provided. Use the guide image with numbers inside of boxes.
 :::
 
-// insert image for guide
+Landscape Grid Guide:
+
+<img src={guideL} alt="" /><br/>
+
+Portrait Grid Guide:
+
+<img src={guideP} alt="" /><br/>
+
+:::note
+Each box fills 2x2 area in the guide.
+:::
 
 ### PageAssets
 Replace the selected CSS asset with your newly created asset.
 
-// insert image pageassets
+<img src={pageasset} alt="" />
 
 ### Overlay
 **PreLoginPage:** replace the img src link with the media link for "Background 955x562 Desktop mock up" and the button color depending on your Brand.
 
-Replace place this line in the html code.
+Replace this line in the html code.
 
 ```html
 <img alt="" class="box-static-img" src="{insert image url}" style="width:100%;" />
 ```
 
-// insert image prelogin
+<img src={prelogin} alt="" /><br/>
 
 **PostLoginErrorPage:** replace the img src link with the media link for "Background 955x498 Desktop mock up", the button color depending on your Brand, and the button link depending on your ticket if Casino/Poker.
+
+Replace this line in the html code.
 
 ```html
 <img class="box-static-img" alt="prelogin_wheel_only" src="{insert image url}" />
 ```
 
-// insert image for postlogin
+<img src={postlogin} alt="" />
 
 ## Pick A Box PAT
 :::info

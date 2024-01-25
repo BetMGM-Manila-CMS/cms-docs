@@ -38,29 +38,6 @@ const sidebars = {
     {
       type: "html",
       value:
-        "<div class='divider'><span class='divider__inner'>All Products</div>",
-      defaultStyle: true,
-    },
-    {
-      type: "category",
-      label: "Rest ID",
-      items: [
-        "builds/restId-inbox",
-        "builds/restId-overlay",
-        "builds/restId-toaster",
-      ],
-      link: {
-        type: "doc",
-        id: "builds/restId",
-      },
-    },
-    {
-      type: "doc",
-      id: "builds/documents",
-    },
-    {
-      type: "html",
-      value:
         "<div class='divider'><span class='divider__inner'>Product Categories</div>",
       defaultStyle: true,
     },
@@ -71,7 +48,7 @@ const sidebars = {
         "builds/casino-carousel",
         "builds/casino-odr-banner",
         "builds/casino-mpp",
-        "builds/casino-video-banners"
+        "builds/casino-video-banners",
       ],
       link: {
         type: "generated-index",
@@ -107,10 +84,7 @@ const sidebars = {
     {
       type: "category",
       label: "EDS and PAT",
-      items: [
-        "builds/pat-eds-stw",
-        "builds/pat-eds-cc",
-      ],
+      items: ["builds/pat-eds-stw", "builds/pat-eds-cc"],
       link: {
         type: "doc",
         id: "builds/pat-eds",
@@ -119,8 +93,7 @@ const sidebars = {
     {
       type: "category",
       label: "Layout",
-      items: [
-      ],
+      items: [],
       link: {
         type: "doc",
         id: "builds/pat-eds",
