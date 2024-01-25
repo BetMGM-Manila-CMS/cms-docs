@@ -1,0 +1,61 @@
+---
+last_update:
+  date: 2024-01-17
+  author: Josh Javier
+  description: Initial content
+authors: Josh Javier
+---
+
+import clientOverlayPath from '../../static/img/builds/client-overlay/client-overlay-path.png'
+import clientOverlayPreview from '../../static/img/builds/client-overlay/client-overlay-preview.png'
+import clientOverlaySitecore from '../../static/img/builds/client-overlay/client-overlay-sitecore-v2.png'
+
+# Client Overlay
+
+:::info[Sitecore Path]
+
+Content Editor > Vanilla.Mobile > m2.`state`.`label` > MobilePortal-v1.0 > Regional > Global > ClientPromotionsPortal
+
+<img src={clientOverlayPath} alt="" className="my-4" />
+
+:::
+
+## Overview
+
+Here's what a client overlay looks like. Note the highlighted elements you need to update and their corresponding fields in Sitecore.
+
+<img src={clientOverlayPreview} alt="Client overlay preview." className="my-4" />
+
+<img src={clientOverlaySitecore} alt="Client overlay Sitecore fields." className="my-4" />
+
+
+## Building in Sitecore
+
+There are only two sections you need to update: the **DownloadClientPromotionData** and the **Filter** sections.
+
+### DownloadClientPromotionData
+
+| Field | Value |
+| ----- | ----- |
+| Title | Promotion title in Title Case. Do not wrap in `<p>` tags. |
+| Description | The value for this field varies. Usually it's *Promo Landing Page > Subtitle*, but if a tourney page is not included in the build, sometimes the *Inbox Preview Description* or *Promohub Key Terms > Short Summary* will be used. **Consult your sublead if unsure.** |
+| BackgroundImage | `Client Overlay-600x360.jpg` or similar |
+| ActorImage | `Client Overlay png-192x186.png` or similar |
+| CTA Url and Link Text | See [CTA Guide](cta.mdx) for more info. Use UPPERCASE for the Link Text. |
+| TermsAndConditions | Retain existing content. |
+
+### Filter
+
+Use your QA filter, e.g., `QueryString.Get('qa') = 'josh'`
+
+## Take a screenshot of the preview
+
+:::info[Sample Client Overlay Preview URL]
+
+https://www.nj.betmgm.com/en/mobileportal/clientplppreview?qa=josh
+
+:::
+
+To preview the client overlay, go to the client overlay preview URL, adjusting it based on the state/label of your ticket and the QA filter you used.
+
+For example, if you're working on a ticket for Borgata NJ and you used the QA filter `Request.Query MATCHES 'josh'`, then the client overlay preview URL will be: `https://www.borgataonline.com/en/mobileportal/clientplppreview?josh`

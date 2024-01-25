@@ -1,0 +1,154 @@
+---
+last_update:
+  date: 1/15/2023
+  author: Kyle Atienza
+  description: add section select and additional notes
+authors: Kyle Atienza
+---
+
+import rewardTool from "../../static/img/builds/restId/restid-rewards-tool.png"
+import projDetailsTemplate from "../../static/img/builds/restId/restid-wf-template.png"
+import betMgmInbox from "../../static/img/builds/restId/restid-betmgm-inbox.png";
+import overlayImg from "../../static/img/builds/restId/restid-overlay-eg.png"
+import toaster from "../../static/img/builds/restId/restid-toaster-eg.png"
+import sectionSelect from "../../static/img/builds/restId/restid-section-select.png"
+
+# Rest ID
+
+Rest ID has different sections that can be displayed or hidden, it will be adjusted depending on the needs of your ticket.
+
+<img className="my-3" src={sectionSelect} />
+
+:::note
+
+When duplicating Rest ID components most fields will be populated with contents even though it is blank from the source item.
+
+:::
+
+## Promohub Section
+
+:::note
+
+Get the template value for this section either on your monday.com ticket mentioned by your sub-lead or in the Project Details of your Workfront ticket under the `CRM Ops` section.
+
+<img className="my-3 w-sm" src={projDetailsTemplate} />
+
+:::
+
+<h3> Required Fields </h3>
+
+The team uses an [internal tool](http://betmgm-phtools.entaingroup.corp/promohub-templates/) to get the appropriate value for the fields.
+
+<img className="my-3 mx-md" src={rewardTool} />
+
+To use the tool, click through each icon to get to the desired values that will be displayed on the right side of the tool and paste the appropriate values on the following fields.
+
+| Fields |
+| --- |
+| CommonTitle |
+| CommonDescription |
+| CommonTermsAndConditions |
+
+<h3> Required Images </h3>
+
+The fields `Image Landscape` and `Image Square` will be placed with the same image. Depending on the type of the ticket we will either use `Promohub Tiles-800x360` or `Promohub Reward Tiles-800x360`. Please see guide below:
+
+| Provided PAT/EDS | Image |
+| --- | --- |
+| Yes | `Promohub Tiles-800x360` |
+| No | `Promohub Reward Tiles-800x360` |
+
+## Inbox
+
+The Inbox is a section for the Rest ID component that holds the values for the notification messages whenever a user recieves one.
+
+Here is an example from BetMGM:
+
+<img className="my-3 max-w-xl" src={betMgmInbox} />
+
+<h3> Required Fields </h3>
+
+| Field                    | Value                                             |
+| ------------------------ | ------------------------------------------------- |
+| PreviewTitle             | `Player Inbox > Preview Title`                    |
+| PreviewDescription       | `Player Inbox > Preview Description`              |
+| FullViewTitle            | `Player Inbox > Fullview Title`                   |
+| FullViewDescription      | `Player Inbox > Fullview Description`             |
+| ManualTermsAndConditions | [See Terms Doc](./documents#terms-and-conditions) |
+
+:::info
+
+Plese check the [CTA guide](../builds/cta) for the proper labeling and link to use.
+
+:::
+
+<h3> Required Images </h3>
+
+| Field         | Image                  |
+| ------------- | ---------------------- |
+| PreviewImage  | `Inbox_short_50x50`    |
+| FullViewImage | `Inbox-Detail-690x246` |
+
+## Overlay
+
+The Overlay is a section for the Rest ID component that holds the values for a popup message.
+
+Here is an example:
+
+<img className="my-3 min-w-sm w-1/2 max-w-sm" src={overlayImg} />
+
+<h3> Required Fields </h3>
+
+| Field | Value |
+| --- | --- |
+| PreviewTitle | `Overlay > Overlay Description` |
+
+:::note
+
+If the copy mentions a title for the Overlay put it inside `<h2></h2>` and place on the top before the description.
+
+:::
+
+:::info
+
+Plese check the [CTA guide](../builds/cta) for the proper labeling and link to use.
+
+:::
+
+<h3> Required Images </h3>
+
+| Field | Image |
+| --- | --- |
+| PreviewTitle | `Overlay EDS-840x246` |
+
+## Toaster
+
+The Toaster is a section for the Rest ID component that holds the values for the toaster components that attracts the user's attention for notifications and messages.
+
+Here is an example:
+
+<img className="my-3 w-lg" src={toaster} />
+
+<h3> Required Fields </h3>
+
+| Field | Value |
+| --- | --- |
+| PreviewTitle | `Toaster` |
+
+:::note
+
+Enclose the toaster in `<a>` tag and add the CTA link to its `href` attribute
+
+:::
+
+:::info
+
+Plese check the [CTA guide](../builds/cta) for the proper labeling and link to use.
+
+:::
+
+<h3> Required Images </h3>
+
+| Field | Image |
+| --- | --- |
+| PreviewTitle | `Toaster-65x65` |

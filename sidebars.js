@@ -46,8 +46,9 @@ const sidebars = {
       label: "Casino",
       items: [
         "builds/casino-carousel",
-        "builds/casino-odrBanner",
+        "builds/casino-odr-banner",
         "builds/casino-mpp",
+        "builds/casino-video-banners"
       ],
       link: {
         type: "generated-index",
@@ -58,18 +59,8 @@ const sidebars = {
       label: "Poker",
       items: [
         "builds/poker-carousel",
-        {
-          type: "category",
-          label: "Tournaments",
-          items: [
-            "builds/poker-tournaments-page",
-            "builds/poker-tournaments-nav",
-          ],
-          link: {
-            type: "generated-index",
-          },
-        },
-        "builds/poker-clientOverlay",
+        "builds/poker-tournaments-page",
+        "builds/poker-client-overlay",
         "builds/poker-banners",
       ],
       link: {
@@ -92,21 +83,33 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Rest ID",
+      label: "EDS and PAT",
       items: [
-        "builds/restId-promohub",
-        "builds/restId-inbox",
-        "builds/restId-overlay",
-        "builds/restId-toaster",
-        "builds/restId-cta",
+        "builds/pat-eds-stw",
+        "builds/pat-eds-cc",
       ],
       link: {
-        type: "generated-index",
+        type: "doc",
+        id: "builds/pat-eds",
+      },
+    },
+    {
+      type: "category",
+      label: "Layout",
+      items: [
+      ],
+      link: {
+        type: "doc",
+        id: "builds/pat-eds",
       },
     },
     {
       type: "doc",
-      id: "builds/staticTile",
+      id: "builds/restId",
+    },
+    {
+      type: "doc",
+      id: "builds/static-tile",
     },
     {
       type: "category",
@@ -119,6 +122,27 @@ const sidebars = {
     {
       type: "doc",
       id: "builds/landing-page",
+    },
+    {
+      type: "html",
+      value: "<div class='divider'><span class='divider__inner'>Guides</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "doc",
+      id: "builds/cta",
+    },
+    {
+      type: "doc",
+      id: "builds/colors",
+    },
+    {
+      type: "doc",
+      id: "builds/tables",
+    },
+    {
+      type: "doc",
+      id: "builds/smartlinks",
     },
   ],
   ticketsSidebar: [
