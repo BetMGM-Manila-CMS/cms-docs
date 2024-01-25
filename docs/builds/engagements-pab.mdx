@@ -28,9 +28,9 @@ Change CTA depending on your ticket if Casino/Poker.
 ### Image Fields
 | Field | Value |
 | ------ | ------- |
-| Brand Logo Image | Pick-a-Box Logo 800x360 |
-| Landscape View Background Image | Pick-a-Box Background 955x562 Desktop |
-| Portrait View Background Image | Pick-a-Box Mobile Background 1920x1080 |
+| Brand Logo Image | Logo 800x360 |
+| Landscape View Background Image | Background 955x562 Desktop |
+| Portrait View Background Image | Mobile Background 1920x1080 |
 
 Fill up the image fields listed.
 
@@ -43,3 +43,40 @@ This section lets you configure where the box/card/object of your Pick A Box Eng
 
 | Number of Box | Landscape | Portrait |
 | ------ | ------ | ------ |
+| 3 | // insert image | // insert image |
+| 4 | // insert image | // insert image |
+| 5 | // insert image | // insert image |
+| 6 | // insert image | // insert image |
+
+:::info
+The configuration is dependent on the mock design provided.
+:::
+
+### PageAssets
+Replace the selected CSS asset with your newly created asset.
+
+// insert image 
+
+### Overlay
+**PreLoginPage:** replace the img src link with the media link for "Background 955x562 Desktop mock up" and the button color depending on your Brand.
+
+Replace place this line in the html code.
+
+```html
+<img alt="" class="box-static-img" src="{insert image url}" style="width:100%;" />
+```
+
+// insert image
+
+**PostLoginErrorPage:** replace the img src link with the media link for "Background 955x498 Desktop mock up", the button color depending on your Brand, and the button link depending on your ticket if Casino/Poker.
+
+```html
+<img class="box-static-img" alt="prelogin_wheel_only" src="{insert image url}" />
+```
+
+// insert image
+
+## Pick A Box PAT
+:::info
+For updating the Test Spin The Wheel PAT, go to this page for reference: (Engagement PAT)[#].
+:::
