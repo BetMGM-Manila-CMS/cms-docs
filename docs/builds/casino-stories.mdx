@@ -1,0 +1,82 @@
+# Stories
+// insert casino Stories screenshot
+
+## Building the Story
+Casino stories has two components, InstaContainer and StoryContent.
+
+## StoryContent
+:::info[SiteCore Path]
+Content > Vanilla.Mobile > m2.borgataonline.com > MobileCasino-v1.0 > InstaStories > StoryContent
+:::
+
+Duplicate any component, and rename it to your ticket.
+
+StoryContent has 2 child components, CSS and HTML.
+
+:::tip
+Naming convention for "Stories" are no spaces, and no special characters except underscore, '_' .
+:::
+
+### CSS
+Edit the `backgroundImage` parameter, fill the "1080x1920-Stories" media link.
+
+// insert image
+
+### HTML
+Edit the 'HTML editor', set the same CTA for Carousel/ODR Banner.
+
+```html
+<div class="casino-background-image-section">
+<div class="img-promo-container">
+<div class="imgbackground">
+<div class="story-text">
+<div><br></div>
+</div>
+<div>
+<div class="optinBtn">
+<a href="!!M2.Portal/mobileportal/promotions/casino/url" class="btn btn-primary more-info-btn">LEARN MORE</a>
+</div>
+</div>
+</div>
+```
+
+## InstaContainer
+:::info[SiteCore Path]
+Content > Vanilla.Mobile > m2.borgataonline.com > MobileCasino-v1.0 > InstaStories > InstaContainer > InstaPromotions
+:::
+
+Duplicate any component, and rename it the same as the StoryContent component. Also rename the child component as well.
+
+// insert image
+
+### Parent
+<ol>
+<li>
+Fill the `StoryThumbnailImage` with the "Story - 500x500_round" media URL.
+</li>
+<li>
+In Stories section, select your child component and push it to selected.
+</li>
+<li>
+Fill the `Title` with Promohub H1.
+</li>
+<li>
+Fill the `Condition` with your QA filter.
+</li>
+</ol>
+
+// insert images
+
+### Child
+In the MainStoryContent, find and select your newly created StoryContent.
+
+// insert image
+
+## Publishing The Story
+Like in Casino Carousel, we push the Stories to publish.
+
+:::info[SiteCore Path]
+Content > Vanilla.Mobile > m2.borgataonline.com > MobileCasino-v1.0 > InstaStories > InstaContainer > InstaContainer
+:::
+
+// insert image
