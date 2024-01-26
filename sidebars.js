@@ -49,7 +49,7 @@ const sidebars = {
         "builds/casino-odr-banner",
         "builds/casino-mpp",
         "builds/casino-video-banners",
-        "builds/stories"
+        "builds/casino-stories"
       ],
       link: {
         type: "generated-index",
