@@ -87,6 +87,8 @@ const sidebars = {
       label: "PAT and EDS",
       items: [
         "builds/pat-eds-stw",
+        "builds/pat-eds-pab",
+        "builds/pat-eds-coin",
         "builds/pat-eds-cc",
       ],
       link: {
