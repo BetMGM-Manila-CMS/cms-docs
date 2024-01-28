@@ -41,23 +41,12 @@ The Promotion type dictates the *Box* asset to be used, as indicated by the tick
 
 ## BoxSection
 
-In this section is where the contents from the [Prize Tool](#) document will be placed. Each row will contain a prize title, an image that is assigned to that specific reward, and a description which contains a message and a CTA to direct the user to either claim or use the reward that has been granted to them.
+In this section is where the contents from the [Prize Tool](./documents#prize-tool) document will be placed. Each row will contain a prize title, an image that is assigned to that specific reward, and a description which contains a message and a CTA to direct the user to either claim or use the reward that has been granted to them.
 
 <img className="mt-3 mb-5" src={boxSection} />
 
 1. **Title** - Place the the contents from the `PRIZE` column from the `Prize Tool` document in the same order to the BoxSection's `Title` Rows.
 
-{/*
-<details>
-  <summary>Prize Tool to BoxSection</summary>
-
-    Place the values from `PRIZE` to `Title`, and `PRIZE MESSAGE` to `Description`.
-
-    <br/>
-
-  <img src={prizeTool} alt="" />
-</details>
-*/}
 
 2. **Image** - For the images use the `240x240` image where it *doesn't show the prize* ([see note below](#boxImageTip)), and place it on all the rows only if there is only a single image provided, but for multiple different images place it the same order as in the creatives folder.
 
@@ -82,7 +71,7 @@ In this section is where the contents from the [Prize Tool](#) document will be 
     <p class="mb-2">Register in our tournament lobby for the Online Open Hybrid Tournament</p>
     <p class="mb-2">Tickets expire after 90 days. T&amp;C's apply.</p>
     <div class="mt-2">
-    <a rel="noopener noreferrer" class="btn btn-primary" href="!!M2.Promo/offers/p/poker">Claim Now</a>
+    <a rel="noopener noreferrer" class="btn btn-primary" href="{Reward CTA URL}">{Reward CTA Text}</a>
     </div>
     </div>
     ```

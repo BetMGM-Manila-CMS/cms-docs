@@ -1,1 +1,132 @@
+---
+last_update:
+  date: 1/28/2024
+  author: Kyle Atienza
+  description: Initial content
+authors: Kyle Atienza
+---
+
+import cta from "../../static/img/builds/pat-eds-coin/coin-cta.png"
+import teaser from "../../static/img/builds/pat-eds-coin/coin-teaser.png"
+import rewards from "../../static/img/builds/pat-eds-coin/coin-rewards.png"
+import terms from "../../static/img/builds/pat-eds-coin/coin-terms.png"
+
+
 # Coin Flip
+
+:::note
+
+Coin Toss and Coin Flip is used interchangeably depending on the promotion, but does not have any differences on the promotion, only on the naming.
+
+:::
+
+:::info[Copy and assets needed]
+
+- **Prize Tool** - You'll find this in the Documents section of your ticket's Workfront.
+- **Coin Images** - Look for the `Coin Flip/Toss Assets` folder in the ticket's creatives.
+
+:::
+
+## Teaser
+
+<img className="mt-3 mb-5" src={teaser} />
+
+
+1. **TeaserImage** - Use `Promohub Tiles-800x360` image.
+2. **Description** - Place an empty `<p></p>` inside the field.
+3. **TeaserClass** - Use the `Promo Teaser Section` value from you copy document.
+
+## Rewards
+
+The Rewards section is where the contents from the [Prize Tool](./documents#prize-tool) document will be placed. Each row will contain a prize title, an image that is assigned to that specific reward, and a description which contains a message and a CTA to direct the user to either claim or use the reward that has been granted to them.
+
+One difference compared to [STW](./pat-eds-stw) and [PAB](./pat-eds-pab) is that the last row for the rewards is assaigned to a `No Prize` prize.
+
+<img className="mt-3 mb-5" src={rewards} />
+
+1. **Title** - Place the the contents from the `PRIZE` column from the `Prize Tool` document in the same order to the BoxSection's `Title` Rows.
+
+
+2. **Image** - We can use the 3 `500x500` images each prize except for the `No Prize` row. 
+
+    For the `500x500` images there are the `Coin 1`, `Coin 2`, and `Reward Coin` images, each for the rewards. But there are instances that there are 4 rewards, in this case it would be fine to reuse any of the earlier mentioned images.
+
+    For the `No Prize` row we will use the `Reward Coin 120x120` image.
+
+3. **Description** - The `Description` column's value will be the value from the `PRIZE DESCRIPTION` column from the `Prize Tool` document, but it should be inserted in the HTML format shown below, just replace the appropriate value to be the same from your `Prize Tool` document.
+    
+    <br />
+
+    ```html
+    <div class="overlay-header">
+    <h1 class="mb-1 mt-0">Congratulations!</h1>
+    <h2 class="mb-2 mt-1">You won a prize in the Road to The Big Game Coin Toss promotion.</h2>
+    <p class="mb-2">Enjoy 10 Bonus Spins on Bankin' Bacon&trade;.</p>
+    <p class="mb-2">T&amp;Cs apply.</p>
+    <div class="mt-2">
+    <a class="btn btn-primary" href="{Reward CTA URL}">{Reward CTA Text}</a>
+    </div>
+    </div>
+    ```
+    :::note[CTA]
+
+    See the [CTA guide](./cta) to use the correct CTA for each description.
+
+    :::
+
+## Terms
+
+<img className="mt-3 mb-5" src={terms} />
+
+### KeyTermsAndConditions
+
+The value for this field will be from the `Promo Hub Key Terms > Short Summary` from the copy.
+
+:::warning[note]
+
+Enclose this content with the `<p></p>` tag
+
+:::
+
+### FullTermsAndConditions
+
+Place the same Terms and Conditions content you have placed for the MPP or Rest ID components if you have created any. For a full guide see this [section](./documents#terms-and-conditions).
+
+## Overlay
+
+The content for this field is referenced from the `Eligibility` section of your `Terms and Conditions` document. Update the list and use the first three items from the section. 
+
+See the HTML below for reference, replace some of the contents to match the contents from you document.
+
+```html
+<p>Sorry, you&rsquo;re not currently eligible for this promotion.</p>
+<p>To qualify, players must meet the following criteria prior to the start of today&rsquo;s promotion:</p>
+<ul>
+<li><strong>Existing BetMGM Casino account (&ldquo;Account&rdquo;) holders.</strong></li>
+<li><strong>To be eligible, players must be 21 years of age or older and playing physically within the state of Pennsylvania, not be on an exclusion or self-exclusion list, and not otherwise be an Unauthorized Person (as defined in the Terms of Service).</strong></li>
+<li><strong>All personal and contact data associated to the player&rsquo;s account must be verifiable.</strong></li>
+</ul>
+```
+
+
+## CTA
+
+<img className="mt-3 mb-5" src={cta} />
+
+1. **URL** - Place the link to the game with the PAT ID of the same PAT you are working on currently
+
+    <br/>
+
+    ```
+    !!M2.Promo/ep/c/{Coin Flip Layout Name}?id={PAT ID}
+    ```
+
+2. **Link Text** - `"Flip Now or Toss Now"` depeding on the promotion name.
+
+## Toss
+
+Refer to the [AssetsAndContent](./engagements-coin#step-2-edit-assetsandcontent) section for the Coin Flip Layout page as the content will be the same.
+ 
+## Media Content
+
+Refer to the [MediaContent](./engagements-coin#media-content) section for the Coin Flip Layout page as the content will be the same.
