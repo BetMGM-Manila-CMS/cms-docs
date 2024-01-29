@@ -48,7 +48,7 @@ In this section is where the contents from the [Prize Tool](./documents#prize-to
 1. **Title** - Place the the contents from the `PRIZE` column from the `Prize Tool` document in the same order to the BoxSection's `Title` Rows.
 
 
-2. **Image** - For the images use the `240x240` image where it *doesn't show the prize* ([see note below](#boxImageTip)), and place it on all the rows only if there is only a single image provided, but for multiple different images place it the same order as in the creatives folder.
+2. **Image** - For the images use the `240x240` image where it *doesn't show the prize* ([see note below](#boxImageTip)), and place it on all the rows only if there is only a single image provided, but for multiple different images place it the same order as in the creatives folder order.
 
     <br />
 
@@ -56,9 +56,15 @@ In this section is where the contents from the [Prize Tool](./documents#prize-to
 
     <div id="boxImageTip" />
 
-    For box images its the unopened box image, for cards its the facing down card image, etc.
+    The images may vary per promotion, for example for Pick a Box the image to use is the unopened box image, for Pick a Card its the facing down card image, etc.
 
     ::: 
+
+    :::tip[Note]
+
+    Use the image url by clicking the `Open` link of the image on the Media Library. And copy the link on the URL and paste on the image column of the `BoxSection` table.
+
+    :::
 
 3. **Description** - The `Description` column's value will be the value from the `PRIZE DESCRIPTION` column from the `Prize Tool` document, but it should be inserted in the HTML format shown below, just replace the appropriate value to be the same from your `Prize Tool` document.
     
@@ -90,7 +96,11 @@ In this section is where the contents from the [Prize Tool](./documents#prize-to
 
 ## Content Section
 
-For the Title Fields for `T & C Header` and `How It Works Title` doesn't need to be changed
+:::tip[Title Fields]
+
+For the Title Fields for `T & C Header` and `How It Works Title`, the values here doesn't need to be changed.
+
+:::
 
 ### T & C Content
 
@@ -135,7 +145,7 @@ The value from this field will be from the `3 Steps` section from your copy docu
 
 Place the HTML content below for this field and replace the correct description from the `Overlay Description` from you copy document.
 
-For the CTA, use the appropriate home link depending if this PAT is for a Casino or Poker Promotio Ticket.
+For the CTA, use the appropriate home link depending if this PAT is for a Casino or Poker promotion ticket.
 
 ```html
 <h3 class="mb-2 mt-1">If you have not picked yet today, you first must qualify!</h3>
