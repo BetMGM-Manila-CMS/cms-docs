@@ -38,6 +38,29 @@ const sidebars = {
     {
       type: "html",
       value:
+        "<div class='divider'><span class='divider__inner'>All Products</div>",
+      defaultStyle: true,
+    },
+    {
+      type: "category",
+      label: "Rest ID",
+      items: [
+        "builds/restId-inbox",
+        "builds/restId-overlay",
+        "builds/restId-toaster",
+      ],
+      link: {
+        type: "doc",
+        id: "builds/restId",
+      },
+    },
+    {
+      type: "doc",
+      id: "builds/documents",
+    },
+    {
+      type: "html",
+      value:
         "<div class='divider'><span class='divider__inner'>Product Categories</div>",
       defaultStyle: true,
     },
