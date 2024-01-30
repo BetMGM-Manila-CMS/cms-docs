@@ -1,8 +1,8 @@
 ---
 last_update:
-  date: 1/28/2024
+  date: 1/30/2024
   author: Kyle Atienza
-  description: Initial content
+  description: Update Errors
 authors: Kyle Atienza
 ---
 
@@ -205,15 +205,77 @@ See HTML below and replace the image with the `Background 955x562 Desktop Image`
 
 <img className="mt-3 mb-5" src={errors} />
 
-1. **Code 1103** - Uses the HTML value below, and replace with correct CTA value directing to offers page of Casino or Poker. 
+Ensure that the values for each keys are with the proper values. `1103` is updated depending if the promotion is for Casino or Poker, and `PageTitle` to be updated with `Promohub Key Terms > H1`
 
-    <br />
-
-    ```html
-    Sorry, it looks like you have an unclaimed deposit match from this promotion in your account.<br>
-    Once you've claimed your prize, return to this page to be able to claim another one.<br>
-    <a class="btn btn-primary mt-2" href="{Offers Page of Casino or Poker}">
-        Claim here
-    </a>
-    ```
-2. **Page Title** - `Promo Hub Key Terms > H1`  
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>SUCCESS</td>
+    </tr>
+    <tr>
+      <td>1101</td>
+      <td>Sorry, a technical error has taken place. Please try again or contact our customer service team quoting code, "1101".</td>
+    </tr>
+    <tr>
+      <td>1102</td>
+      <td>Sorry, a technical error has taken place. Please try again or contact our customer service team quoting code, "1102".</td>
+    </tr>
+    <tr>
+      <td>1103</td>
+      <td>
+      ```html
+      Sorry, it looks like you have an unclaimed deposit match from this promotion in your account.
+      <br>
+      Once you've claimed your prize, return to this page to be able to claim another one.
+      <br>
+      <a class="btn btn-primary mt-2" href="!!M2.Promo/offers/p/casino">
+      Claim here
+      </a>
+      ```
+      </td>
+    </tr>
+    <tr>
+      <td>1104</td>
+      <td>Sorry, a technical error has taken place. Please try again or contact our customer service team quoting code, "1104".</td>
+    </tr>
+    <tr>
+      <td>1105</td>
+      <td>Sorry, you’re not currently eligible for this promotion. Try again later or contact our customer service team quoting code, "1105".</td>
+    </tr>
+    <tr>
+      <td>1106</td>
+      <td>Your chance has expired. Try again next Wednesday. For more information, contact our customer service team quoting code, "1106".</td>
+    </tr>
+    <tr>
+      <td>1107</td>
+      <td>Your chance has expired. Try again next Wednesday. For more information, contact our customer service team quoting code, "1106".</td>
+    </tr>
+    <tr>
+      <td>1108</td>
+      <td>Sorry, there is no longer any prize left. For more information, contact our customer service team quoting code, "1108".</td>
+    </tr>
+    <tr>
+      <td>1109</td>
+      <td>This promotion is now over. Check our Promotions Home page to find details of our latest offers.</td>
+    </tr>
+    <tr>
+      <td>1110</td>
+      <td>This promotion has not started yet. Check back soon to use your "chance" to win!</td>
+    </tr>
+    <tr>
+      <td>1111</td>
+      <td>You have used all your chance for today - come back next Wednesday for more fun!</td>
+    </tr>
+    <tr>
+      <td>PageTitle</td>
+      <td>`Promo Hub Key Terms > H1`</td>
+    </tr>
+  </tbody>
+</table>
