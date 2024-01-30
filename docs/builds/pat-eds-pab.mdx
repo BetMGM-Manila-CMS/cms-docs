@@ -1,0 +1,281 @@
+---
+last_update:
+  date: 1/30/2024
+  author: Kyle Atienza
+  description: Update Errors
+authors: Kyle Atienza
+---
+
+import offer from "../../static/img/builds/pat-eds-pab/pab-offer.png"
+import boxSection from "../../static/img/builds/pat-eds-pab/pab-box.png"
+import prizeTool from "../../static/img/builds/pat-eds-pab/pab-excel-to-box.png"
+import layoutDeets from "../../static/img/builds/pat-eds-pab/pab-pld.png"
+import terms from "../../static/img/builds/pat-eds-pab/pab-tnc.png"
+import steps from "../../static/img/builds/pat-eds-pab/pab-steps.png"
+import criteria from "../../static/img/builds/pat-eds-pab/pab-criteria.png"
+import tncNote from "../../static/img/builds/pat-eds-pab/pab-tnc-note.png"
+import loginError from "../../static/img/builds/pat-eds-pab/pab-post-login-error.png"
+import errors from "../../static/img/builds/pat-eds-pab/pab-errors.png"
+
+# Pick A Box
+
+:::info[Copy and assets needed]
+
+- **Prize Tool** - You'll find this in the Documents section of your ticket's Workfront.
+- **Box** - Look for the `PAB Assets` folder in the ticket's creatives.
+
+:::note
+
+The Promotion type dictates the *Box* asset to be used, as indicated by the ticket name. PAB promotions involve selecting a **Box**, **Present**, **Card**, and so forth, each corresponding to a designated asset. 
+
+:::
+
+## Offer
+
+<img className="mt-3 mb-5" src={offer} />
+
+1. Place an empty `<p></p>` tag for the value of the description.
+2. The KeyTermsAndConditions will take the value of the `Short Summary` in your copy document enclosed in `<p></p>`
+3. For the Teaser Image place the `Promohub Tiles-800x360` image.
+4. Place `"Reveal a mystery prize"` for the TeaserClass.
+
+## BoxSection
+
+In this section is where the contents from the [Prize Tool](./documents#prize-tool) document will be placed. Each row will contain a prize title, an image that is assigned to that specific reward, and a description which contains a message and a CTA to direct the user to either claim or use the reward that has been granted to them.
+
+<img className="mt-3 mb-5" src={boxSection} />
+
+1. **Title** - Place the the contents from the `PRIZE` column from the `Prize Tool` document in the same order to the BoxSection's `Title` Rows.
+
+
+2. **Image** - For the images use the `240x240` image where it *doesn't show the prize* ([see note below](#boxImageTip)), and place it on all the rows only if there is only a single image provided, but for multiple different images place it the same order as in the creatives folder order.
+
+    <br />
+
+    :::note[Unopened Prize Image]
+
+    <div id="boxImageTip" />
+
+    The images may vary per promotion, for example for Pick a Box the image to use is the unopened box image, for Pick a Card its the facing down card image, etc.
+
+    ::: 
+
+    :::tip[Note]
+
+    Use the image url by clicking the `Open` link of the image on the Media Library. And copy the link on the URL and paste on the image column of the `BoxSection` table.
+
+    :::
+
+3. **Description** - The `Description` column's value will be the value from the `PRIZE DESCRIPTION` column from the `Prize Tool` document, but it should be inserted in the HTML format shown below, just replace the appropriate value to be the same from your `Prize Tool` document.
+    
+    <br />
+
+    ```html
+    <div class="overlay-header">
+    <h1 class="mb-1 mt-0">Congratulations!</h1>
+    <h2 class="mb-2 mt-1">You've won: $1000 Online Open Hybrid Tournament Ticket</h2>
+    <p class="mb-2">Register in our tournament lobby for the Online Open Hybrid Tournament</p>
+    <p class="mb-2">Tickets expire after 90 days. T&amp;C's apply.</p>
+    <div class="mt-2">
+    <a rel="noopener noreferrer" class="btn btn-primary" href="{Reward CTA URL}">{Reward CTA Text}</a>
+    </div>
+    </div>
+    ```
+    :::note[CTA]
+
+    See the [CTA guide](./cta) to use the correct CTA for each description.
+
+    :::
+
+## PageLayoutDetails
+
+<img className="mt-3 mb-5" src={layoutDeets} />
+
+1. Do not change the value for the `Desktop Layout Path`
+2. Click the Dropdown and navigate to the  [PAB Layout](./engagements-pab) item that you have created for this PAB PAT 
+
+## Content Section
+
+:::tip[Title Fields]
+
+For the Title Fields for `T & C Header` and `How It Works Title`, the values here doesn't need to be changed.
+
+:::
+
+### T & C Content
+
+<img className="mt-3 mb-5" src={terms} />
+
+Place the same Terms and Conditions content you have placed for the MPP or Rest ID components if you have created any. For a full guide see this [section](./documents#terms-and-conditions).
+
+### How It Works Content
+
+<img className="mt-3 mb-5" src={steps} />
+
+The value from this field will be from the `3 Steps` section from your copy document, but it should be on HTML format, follow the format below and replace with the correct contents.
+
+```html
+<section class="custom-tnc-hiw sk-bingo-container">
+<article>
+<div class="c-how-to-component">
+<div class="c-predictor-message c-box">
+<div class="c-how-it-works ">
+<div class="c-how-it-works-collapsible__body c-display" id="ptb-how-it-works__desc">
+<!-- how it work content -->
+<ol>
+    <li><strong>STEP 1 TITLE</strong><br />
+    Step 1 Description</li>
+    <li><strong>STEP 2 TITLE</strong><br />
+    Step 2 Description</li>
+    <li><strong>STEP 3 TITLE</strong><br />
+    Step 3 Description</li>
+</ol>
+<!-- // end how it work content -->
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+```
+
+### Deposit and Wager Criteria Content
+
+<img className="mt-3 mb-5" src={criteria} />
+
+Place the HTML content below for this field and replace the correct description from the `Overlay Description` from you copy document.
+
+For the CTA, use the appropriate home link depending if this PAT is for a Casino or Poker promotion ticket.
+
+```html
+<h3 class="mb-2 mt-1">If you have not picked yet today, you first must qualify!</h3>
+<p class="mb-1">{Overlay Description}</p>
+<p><a href="{Poker or Casino Home Smartlink}" class="btn mt-1" style="background-color: {Brand Color Hex}; color:#ffffff;">BACK TO {POKER | CASINO}</a></p>
+<style>
+    .ptb .spin-result-dialog .overlay-content {
+    text-align: center;
+    }
+</style>
+```
+
+:::note
+
+Use the appropriate color for the CTA, see this [guide](./colors) for reference.
+
+:::
+
+### Key T & C Note Text
+
+<img className="mt-3 mb-5" src={tncNote} />
+
+Place an empty `<p></p>` inside this field
+
+### Post Login Error Page Content
+
+<img className="mt-3 mb-5" src={loginError} />
+
+See HTML below and replace the image with the `Background 955x562 Desktop Image` and the CTA with the appropriate values depending on the promotion.
+
+```html
+<div class="ptb ptb-prelogin container-bg">
+  <div>
+    <img class="box-static-img" alt="prelogin_wheel_only" src="{Background 955x562 Desktop Image}" />
+    <br />
+    <h4 class="postLoginErrorMessage">#ERROR_MESSAGE#</h4>
+  </div>
+  <div id="post-login-error" class="overlay-bg hover" style="display: block;">
+    <div class="spin-result-dialog">
+      <div class="overlay-content">
+        <a onclick="DisplayNoneById('post-login-error')">
+            <span class="ui-icon ui-icon-size-lg ui-close ui-close-primary theme-ex close-btn"></span>
+        </a>
+        <div class="overlay-header">
+          <h4 class="postLoginErrorMessage">#ERROR_MESSAGE#</h4>
+        </div>
+        <div class="footer clearfix">
+          <a class="btn-l3 btn prominent" href="{Poker or Casino Home Smartlink}">Back To {Poker | Casino}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+### Error Page Content
+
+<img className="mt-3 mb-5" src={errors} />
+
+Ensure that the values for each keys are with the proper values. `1103` is updated depending if the promotion is for Casino or Poker, and `PageTitle` to be updated with `Promohub Key Terms > H1`
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>SUCCESS</td>
+    </tr>
+    <tr>
+      <td>1101</td>
+      <td>Sorry, a technical error has taken place. Please try again or contact our customer service team quoting code, "1101".</td>
+    </tr>
+    <tr>
+      <td>1102</td>
+      <td>Sorry, a technical error has taken place. Please try again or contact our customer service team quoting code, "1102".</td>
+    </tr>
+    <tr>
+      <td>1103</td>
+      <td>
+      ```html
+      Sorry, it looks like you have an unclaimed deposit match from this promotion in your account.
+      <br>
+      Once you've claimed your prize, return to this page to be able to claim another one.
+      <br>
+      <a class="btn btn-primary mt-2" href="!!M2.Promo/offers/p/casino">
+      Claim here
+      </a>
+      ```
+      </td>
+    </tr>
+    <tr>
+      <td>1104</td>
+      <td>Sorry, a technical error has taken place. Please try again or contact our customer service team quoting code, "1104".</td>
+    </tr>
+    <tr>
+      <td>1105</td>
+      <td>Sorry, you’re not currently eligible for this promotion. Try again later or contact our customer service team quoting code, "1105".</td>
+    </tr>
+    <tr>
+      <td>1106</td>
+      <td>Your chance has expired. Try again next Wednesday. For more information, contact our customer service team quoting code, "1106".</td>
+    </tr>
+    <tr>
+      <td>1107</td>
+      <td>Your chance has expired. Try again next Wednesday. For more information, contact our customer service team quoting code, "1106".</td>
+    </tr>
+    <tr>
+      <td>1108</td>
+      <td>Sorry, there is no longer any prize left. For more information, contact our customer service team quoting code, "1108".</td>
+    </tr>
+    <tr>
+      <td>1109</td>
+      <td>This promotion is now over. Check our Promotions Home page to find details of our latest offers.</td>
+    </tr>
+    <tr>
+      <td>1110</td>
+      <td>This promotion has not started yet. Check back soon to use your "chance" to win!</td>
+    </tr>
+    <tr>
+      <td>1111</td>
+      <td>You have used all your chance for today - come back next Wednesday for more fun!</td>
+    </tr>
+    <tr>
+      <td>PageTitle</td>
+      <td>`Promo Hub Key Terms > H1`</td>
+    </tr>
+  </tbody>
+</table>
