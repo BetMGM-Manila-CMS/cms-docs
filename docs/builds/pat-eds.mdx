@@ -6,6 +6,8 @@ last_update:
 authors: Kyle Atienza
 ---
 
+import promoHubTile from '../../static/img/builds/pat-eds-engagement/promo-hub-tile.png'
+import basicPromoDetails from '../../static/img/builds/pat-eds-engagement/basic-promo-details.png'
 import teaser from "../../static/img/builds/pat-eds/pat-eds-teaser.png"
 import promoDetails from "../../static/img/builds/pat-eds/pat-eds-promotion.png"
 import marketing from "../../static/img/builds/pat-eds/pat-eds-marketing.png"
@@ -44,11 +46,16 @@ Often times PAT or EDS will be provided in the most bottom part the Updates.
 
 :::
 
-
-
 ## Teaser Image
 
-The teaser image `Promohub Tiles-800x360` is consistently used for displaying promo cards on the promo page. The image placement field may vary based on the provided PAT or EDS. Refer to the guide below.
+This section can also called the Promo Hub Tile. For this section image `Promohub Tiles-800x360` is consistently used for displaying promo cards on the promo page. The image placement field may vary based on the provided PAT or EDS. Refer to the guide below.
+
+{/*
+<details>
+  <img src={promoHubTile} alt="" />
+  <summary>Sitecore Preview</summary>
+</details>
+*/}
 
 <img className="mt-3 mb-5" src={teaser} />
 
@@ -68,7 +75,7 @@ The teaser image `Promohub Tiles-800x360` is consistently used for displaying pr
             <td>Click Card</td>
         </tr>
         <tr>
-            <td>Coin Toss</td>
+            <td>Coin Flip</td>
         </tr>
         <tr>
             <td>Spin The Wheel</td>
@@ -88,29 +95,33 @@ The teaser image `Promohub Tiles-800x360` is consistently used for displaying pr
 <table className="whitespace-nowrap">
     <thead>
         <tr>
-            <th></th>
             <th>Promotion Type</th>
+            <th>Promotion Title</th>
             <th>Transaction Description</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Bet & Get</td>
-            <td rowSpan={5}>`Promohub Key Terms H1`</td>
+            <td rowSpan={6}>`Promohub Key Terms H1`</td>
             <td rowSpan={2}>`Promohub Key Terms H1`</td>
         </tr>
         <tr>
             <td>Click Card</td>
         </tr>
         <tr>
-            <td>Coin Toss</td>
-            <td rowSpan={3}>`TD-{EDS ID | PAT ID}`</td>
+            <td>Coin Flip</td>
+            <td rowSpan={3}>`TD-{PAT ID}`</td>
         </tr>
         <tr>
             <td>Spin The Wheel</td>
         </tr>
         <tr>
             <td>Pick A Card</td>
+        </tr>
+        <tr>
+            <td>Pick A Card</td>
+            <td>`EDS-{EDS ID}`</td>
         </tr>
     </tbody>
 </table>
@@ -224,7 +235,7 @@ For CTA it can be different fields and different contents, refer to the guide be
             </td>
         </tr>
         <tr>
-            <td>Coin Toss</td>
+            <td>Coin Flip</td>
             <td>CTA</td>
             <td className="text-center">`Flip Now` or `Toss Now`</td>
             <td>
@@ -346,3 +357,19 @@ There are always two final folder destination to select, those are `Default` and
 For Shared Leaderboard tickets, the `state/brand` folder should always be set to `m2.borgataonline.com`, as the `Leaderboard_Shared_NJ_Labels` folder is located there, regardless of the state.
 
 :::
+
+## Engagement PATs
+
+When you're working on an engagement ticket, you'll notice some fields in the PAT and/or EDS components that are not present in BAU tickets.
+
+See the guides this page below to learn how PAT and EDS components for engagement tickets are different from BAU tickets, and what you should put in these fields.
+
+<div className="flex gap-2 mt-4 flex-wrap">
+    [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">🎡 Spin The Wheel</button>](./pat-eds-stw)
+
+    [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">📦 Pick a Box/Card</button>](./pat-eds-pab)
+
+    [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">👛 Coin Flip/Toss</button>](./pat-eds-coin)
+
+    [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">🃏 Click Card</button>](./pat-eds-cc)
+</div>
