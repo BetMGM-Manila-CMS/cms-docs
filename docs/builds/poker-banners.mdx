@@ -8,6 +8,8 @@ authors: Josh Javier
 
 import scmediaUrl1 from '../../static/img/builds/poker-banners/scmedia-url-1.png'
 import scmediaUrl2 from '../../static/img/builds/poker-banners/scmedia-url-2.png'
+import mobileBannerPath from '../../static/img/builds/poker-banners/mobile-banner-path.png'
+import mobileBannerData from '../../static/img/builds/poker-banners/mobile-banner-data.png'
 
 # Banners
 
@@ -48,3 +50,37 @@ To find the scmedia URLs for the above images:
   - \<a href="https://poker.pa.betmgm.com/en/tournaments/betmgm-poker-big-shots" target="_blank">\<img src="https://scmedia-us.itsfogo.com/$-$/4ef7fa4971e544a0b90141c8cfc1d445.jpg" border="0" />\</a>
 
 ## Mobile Banners
+
+:::note
+
+This component is applicable to MI and PA only, not NJ.
+
+:::
+
+:::info[Sitecore Path]
+
+Content Editor > Vanilla.Mobile > m2.`state`.`label` > MobilePoker-v1.0 > Regional > Global > Promotions-Live
+
+<img src={mobileBannerPath} alt="" className="my-4" />
+
+:::
+
+If your ticket's needs require a mobile banner, here's how to create one.
+
+1. Navigate to the Sitecore path above.
+
+2. Create a duplicate of any component inside. Use the ticket's title as the name of the component.
+
+3. Update the fields in the following sections:
+
+   - **Filter**
+     - **Condition:** Use your QA filter (e.g. `QueryString.Get('qa') = 'josh'`).
+   - **MobileBannerData**
+     - **MobileBannerImage:** `367x77.jpg`
+     - **MobileBannerTitle:** Use the promotion title.
+     - **MobileBannerText:** Use the promotion dates. Wrap in `<p></p>` tags and check `AlignMobileBannerTextToTheRight`.
+     - **MobileBannerCTA Url:** Tournament Page smartlink (e.g., `!!M2.Poker/tournaments/TOURNEY_PAGE_URL`). See [CTA guide](cta.mdx) for more info.
+
+     <img src={mobileBannerData} alt="" className="my-4" />
+
+4. In the Publishing section, make sure the Publish and Unpublish dropdowns are empty (clear them if otherwise) and *Never publish* is **unchecked**.
