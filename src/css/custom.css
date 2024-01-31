@@ -67,3 +67,7 @@ tr th:nth-child(6) {
   top: 50%;
   transform: translate(100%, -50%);
 }
+
+.wrap-code code {
+  white-space: pre-wrap !important;
+}
