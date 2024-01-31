@@ -150,6 +150,10 @@ const sidebars = {
       id: "builds/smartlinks",
     },
   ],
+  testingSchedulingSidebar: [
+    "testing-scheduling/testing",
+    "testing-scheduling/scheduling"
+  ],
   ticketsSidebar: [
     "tickets/monday",
     "tickets/workfront",

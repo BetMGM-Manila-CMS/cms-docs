@@ -96,6 +96,12 @@ const config = {
           },
           {
             type: "docSidebar",
+            sidebarId: "testingSchedulingSidebar",
+            position: "left",
+            label: "Testing and Scheduling",
+          },
+          {
+            type: "docSidebar",
             sidebarId: "ticketsSidebar",
             position: "left",
             label: "Tickets",
