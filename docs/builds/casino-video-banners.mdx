@@ -1,1 +1,204 @@
+---
+last_update:
+  date: 1/31/2024
+  author: Kyle Atienza
+  description: Initial Content
+authors: Kyle Atienza
+---
+
+import sample from "../../static/img/builds/video/video-banner-sample.png"
+import exclusive from "../../static/img/builds/video/video-exclusive.png"
+import schedule from "../../static/img/builds/video/video-schedule.png"
+import comment from "../../static/img/builds/video/video-comment.png"
+import fields from "../../static/img/builds/video/video-fields.png"
+
 # Video Banners
+
+A video banner is a component on the casino homepage of a product, that plays a trailer or teaser for a game.
+
+<img className="my-3" src={sample} alt="Image alt" />
+
+The video banner is updated from time to time to display different teasers in a period of time. To update the video banner see sitecore path below.
+
+:::warning[Check Game]
+
+First check if the game is live. If not, do not publish the component. Notify your sublead or make a comment when you submit on Monday. 
+
+:::
+
+:::warning[Updating Video Banner]
+
+Video Banners are updated in real time, if there is still a video banner live on casino home, wait until the existing video banner unpublishing date to be finished until you can update the contents of the video banner.
+
+:::
+
+:::info[SiteCore Path]
+
+Content > Vanilla.Mobile > State/Brand > MobileCasino-v1.0 > LMTCategories > instantCasino
+
+<br/>
+
+For each state and brand the item to is named differently, see guide below to edit the proper video banner.
+
+<div className="mt-3" />
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>NJ</th>
+      <th>PA</th>
+      <th>MI</th>
+      <th>WV</th>
+      <th>ON</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>BetMGM</th>
+      <td>[featuredfeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BBBC8DB5-84B4-4835-BA6F-48EBAA00FBAA}&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F69608C4-B4DD-4725-B670-A134D5F42051}&la=)</td>
+      <td>[lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BA9FC78E-2B1B-43FF-8BBD-40A095875985}&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A7FFDFB9-EE51-453C-8B4B-0EF8A32FA0F0}&la=)</td>
+      <td>[featured](http://cms.prod.env.works/sitecore/DirectLink.aspx?fo=%7BAB60994A-7063-445E-BC79-30BA6C5EA85E%7D&la=)</td>
+    </tr>
+    <tr>
+      <th>Borgata</th>
+      <td>
+      [featured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={DC436D50-AB38-4B74-86DA-04FB5A06E29E}&la=)<br/>
+      [lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={9A73217B-258B-4D2A-A08E-E86DC47F1D02}&la=)
+      </td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F69608C4-B4DD-4725-B670-A134D5F42051}&la=)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>PartyCasino</th>
+      <td>[lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A78CBEA5-15F8-4C54-B9E8-A8700D57DEDA}&la=)<br/>
+      [homehome_featured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={6286E556-09AE-42BF-83DB-466F0B20BCD0}&la=)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table> 
+
+:::
+
+## Getting Assets
+
+For updating the Video Banner, 2 assets are required, a image, `1200x300 Image` and a `MP4 video`.
+
+These assets are acquired differently compared to other tickets. See steps below on how to get these assets:
+
+1. Go to the parent ticket
+2. Open Project Details tab
+3. Scroll down to see `Project relationships` section and clikc the link under the `This Resolves` label.
+4. This will open a `Request`, and click its `Request Details` tab.
+5. Under the `Details` section, it will be under the `CMS description` label.
+6. Click both links to open each of the assets.
+
+The image is uploaded to sitecore. See this [guide](./assets-uploading) on how to upload assets to sitecore. While for the video, just copy its URL for now as we don't need to upload it to sitecore.
+
+## Updating The Video Banner
+
+Upon opening the appropriate Video Banner for each state, scroll down to the `GameVideo` section. See table below to update the appropriate fields.
+
+<img className="my-3" src={fields} alt="Image alt" />
+
+<br />
+
+| Field | Value |
+| --- | --- |
+| ImageOrVideoUrl | `MP4 video` URL |
+| ImageThumbnail  | `1200x300 Image` |
+| LaunchURL > Url | [See guide below](#launchurl) |
+
+### LaunchURL
+
+On the Casino home if the game is being shown with a `Exclusive` tag under the `Featured section`. Use the smartlink for exclusive games
+
+```
+!!M2.CasinoHome/c/exclusive
+```
+
+<img className="my-3" src={exclusive} alt="Image alt" />
+
+If not use the launch url of the game which can be get here in the [Smartlinks guide](./smartlinks#games), or in the smartlinks page of the brand state.
+
+## ODR Video Banner
+
+Another type of video banner is the ODR video banner. Some states have ODR Video Banners which also needs to be updated if mentioned in the `needs` for your ticket.
+
+:::info[SiteCore Path]
+
+Content > Clients > `state/brand` > Casino > NativeJackpotWidget > Native
+
+<br/>
+
+Use reference below to navigate to the the proper item to edit from the `Native` folder.
+
+<div className="mt-3" />
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>NJ</th>
+      <th>PA</th>
+      <th>MI</th>
+      <th>WV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>BetMGM</th>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={736FBE94-F8EB-406A-B6D7-D5A7E1E9E788}&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={16F6562B-0B96-41FC-A87E-7CD69A56607E}&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={389049B8-D6D7-43FD-B900-B7E7EFBCF77C}&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7E11ED82-AAD8-4548-97FB-8B26138FDAC4}&la=)</td>
+    </tr>
+    <tr>
+      <th>Borgata</th>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={53B9F214-80A6-4215-867B-C3AF98C696BE}&la=)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>PartyCasino</th>
+      <td>[lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={1D256ED6-11A0-47B3-B13A-6CF354DA4E2D}&la=)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table> 
+
+:::note
+
+Most of the ODR video banners are not yet live, please confirm to your sublead if this is required to update also along with the default video banner.
+
+:::
+
+
+## Scheduling
+
+Do not forget to set the publishing dates for the video banner, the dates is often times mentioned in the `Project Details` tab of the Workfront ticket, Under the `Description` section it is mentioned.
+
+<img className="my-3" src={schedule} alt="Image alt" />
+
+Use the dates provided to update the publishing dates of the video banner.
+
+Also update the [Carousel Scheduler](http://betmgm-phtools.entaingroup.corp/carousel-scheduler/) to add the newly updated video banner.
+
+## Commenting
+
+On Commenting for video banner, include the screenshots for the publishing date and the added item on the [Carousel Scheduler](http://betmgm-phtools.entaingroup.corp/carousel-scheduler/) for the updated video banner
+
+<details>
+  <summary>Example of Video Banner Comment</summary>
+  <img src={comment} alt="" />
+</details>
