@@ -46,7 +46,20 @@ The Opt In CTA is an HTML element that has specific attributes, copy the element
 			<td className="text-center" colspan="1" rowspan="10">
 				<p>`Learn More`</p>
 			</td>
-			<td className="text-center" colspan="1" rowspan="10">Link to MPP (Smartlink)</td>
+			<td className="text-center" colspan="1" rowspan="10">
+			For Casino use:
+			<div className="mt-2" />			
+			```
+			!!M2.Portal/mobileportal/promotions/casino/{MPP URL}
+			```
+			<div className="mt-2" />
+			For Poker use:
+			<div className="mt-2" />
+			
+			```
+			!!M2.Poker/tournaments/{Tourney URL}
+			```
+			</td>
 		</tr>
 		<tr>
 			<td>Leaderboard</td>
@@ -172,14 +185,27 @@ The Opt In CTA is an HTML element that has specific attributes, copy the element
 		<tbody>
 			<tr>
 				<td>Casino Bonus</td>
+				<td colspan="1" rowspan="3">Claim Now</td>				
 				<td>
 				```
 				!!M2.Promo/offers/grouped?filter=cb
 				```
 				</td>
-				<td colspan="1" rowspan="3">Claim Now</td>
 				<td colspan="1" rowspan="3">Learn More</td>
-				<td colspan="1" rowspan="3">Link to MPP (Smartlink)</td>
+				<td className="text-center" colspan="1" rowspan="10">
+				For Casino use:
+				<div className="mt-2" />			
+				```
+				!!M2.Portal/mobileportal/promotions/casino/{MPP URL}
+				```
+				<div className="mt-2" />
+				For Poker use:
+				<div className="mt-2" />
+				
+				```
+				!!M2.Poker/tournaments/{Tourney URL}
+				```
+				</td>
 			</tr>
 			<tr>
 				<td>Bonus Spins</td>
@@ -380,7 +406,7 @@ The Opt In CTA is a button or link that allows the user to join a specific promo
 ```html
 <a 
 	data-offer-id="{PAT ID}" 
-	class="btn" 
+	className="btn" 
 	style="background-color:{Promo and Brand Color};" 
 	data-offer-message-error="Technical Error" 
 	data-offer-message-expired="Expired" 
@@ -389,7 +415,7 @@ The Opt In CTA is a button or link that allows the user to join a specific promo
 	data-offer-message-offered="Opt In" 
 	data-offer-message-opted-in="You opted in" 
 	data-offer-message-opted-out="You opted out" 
-	data-offer-type="promos"
+	data-offer-type="{promos | eds}"
 >
 	Opt In
 </a>

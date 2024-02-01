@@ -31,18 +31,9 @@ const sidebars = {
       items: ["builds/assets-request", "builds/assets-uploading"],
       link: { type: "doc", id: "builds/assets-introduction" },
     },
-    /* {
+    {
       type: "doc",
       id: "builds/documents",
-    }, */
-    {
-      type: "category",
-      label: "Documents",
-      items: ["builds/documents-tables"],
-      link: {
-        type: "doc",
-        id: "builds/documents",
-      },
     },
     {
       type: "html",
@@ -57,6 +48,8 @@ const sidebars = {
         "builds/casino-carousel",
         "builds/casino-odr-banner",
         "builds/casino-mpp",
+        "builds/casino-video-banners",
+        "builds/casino-stories"
       ],
       link: {
         type: "generated-index",
@@ -67,18 +60,8 @@ const sidebars = {
       label: "Poker",
       items: [
         "builds/poker-carousel",
-        {
-          type: "category",
-          label: "Tournaments",
-          items: [
-            "builds/poker-tournaments-page",
-            "builds/poker-tournaments-nav",
-          ],
-          link: {
-            type: "generated-index",
-          },
-        },
-        "builds/poker-clientOverlay",
+        "builds/poker-tournaments-page",
+        "builds/poker-client-overlay",
         "builds/poker-banners",
       ],
       link: {
@@ -100,6 +83,14 @@ const sidebars = {
       defaultStyle: true,
     },
     {
+      type: "category",
+      label: "Layout",
+      items: [],
+      link: {
+        type: "generated-index",
+      },
+    },
+    {
       type: "doc",
       id: "builds/restId",
     },
@@ -108,17 +99,36 @@ const sidebars = {
       id: "builds/static-tile",
     },
     {
+      type: "doc",
+      id: "builds/landing-page",
+    },
+    {
+      type: "category",
+      label: "PAT and EDS",
+      items: [
+        "builds/pat-eds-stw",
+        "builds/pat-eds-pab",
+        "builds/pat-eds-coin",
+        "builds/pat-eds-cc",
+      ],
+      link: {
+        type: "doc",
+        id: "builds/pat-eds",
+      },
+    },
+    {
       type: "category",
       label: "Engagements",
       link: {
         type: "generated-index",
       },
-      items: ["builds/engagements-stw", "builds/engagements-pab"],
+      items: [
+        "builds/engagements-stw",
+        "builds/engagements-pab",
+        "builds/engagements-coin",
+      ],
     },
-    {
-      type: "doc",
-      id: "builds/landing-page",
-    },
+
     {
       type: "html",
       value: "<div class='divider'><span class='divider__inner'>Guides</div>",
@@ -127,6 +137,14 @@ const sidebars = {
     {
       type: "doc",
       id: "builds/cta",
+    },
+    {
+      type: "doc",
+      id: "builds/colors",
+    },
+    {
+      type: "doc",
+      id: "builds/tables",
     },
     {
       type: "doc",
