@@ -84,20 +84,6 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "PAT and EDS",
-      items: [
-        "builds/pat-eds-stw",
-        "builds/pat-eds-pab",
-        "builds/pat-eds-coin",
-        "builds/pat-eds-cc",
-      ],
-      link: {
-        type: "doc",
-        id: "builds/pat-eds",
-      },
-    },
-    {
-      type: "category",
       label: "Layout",
       items: [],
       link: {
@@ -113,6 +99,24 @@ const sidebars = {
       id: "builds/static-tile",
     },
     {
+      type: "doc",
+      id: "builds/landing-page",
+    },
+    {
+      type: "category",
+      label: "PAT and EDS",
+      items: [
+        "builds/pat-eds-stw",
+        "builds/pat-eds-pab",
+        "builds/pat-eds-coin",
+        "builds/pat-eds-cc",
+      ],
+      link: {
+        type: "doc",
+        id: "builds/pat-eds",
+      },
+    },
+    {
       type: "category",
       label: "Engagements",
       link: {
@@ -124,10 +128,7 @@ const sidebars = {
         "builds/engagements-coin",
       ],
     },
-    {
-      type: "doc",
-      id: "builds/landing-page",
-    },
+
     {
       type: "html",
       value: "<div class='divider'><span class='divider__inner'>Guides</div>",
