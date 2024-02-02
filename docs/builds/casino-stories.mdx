@@ -1,1 +1,116 @@
-# Insta Stories
+---
+last_update:
+  date: 2/2/2024
+  author: JM Antonio
+  description: uploaded images
+authors: JM Antonio
+---
+
+import css from "../../static/img/builds/stories/CSS.png";
+import header from "../../static/img/builds/stories/header.png";
+import html from "../../static/img/builds/stories/html.png";
+import contchild from "../../static/img/builds/stories/instacontainer child.png";
+import contparent from "../../static/img/builds/stories/instacontainer parent.png";
+import instacontainer from "../../static/img/builds/stories/instacontainer.png";
+import instastoryP from "../../static/img/builds/stories/instastory parent.png";
+import pushtable from "../../static/img/builds/stories/push table.png";
+import storypush from "../../static/img/builds/stories/story push.png";
+import round from "../../static/img/builds/stories/story round.png";
+import sample from "../../static/img/builds/stories/story sample.png";
+import storycontentP from "../../static/img/builds/stories/storycontent parent.png";
+import storycontent from "../../static/img/builds/stories/storycontent.png";
+
+# Stories
+<img src={sample} width="900" />
+
+## Building the Story
+Casino stories has two components, InstaContainer and StoryContent.
+
+## StoryContent
+:::info[SiteCore Path]
+Content > Vanilla.Mobile > m2.borgataonline.com > MobileCasino-v1.0 > InstaStories > StoryContent
+<br/>
+<img src={storycontent} />
+:::
+
+Duplicate any component, and rename it to your ticket.
+
+StoryContent has 2 child components, CSS and HTML.
+
+<img src={storycontentP} />
+<br/>
+:::tip
+Naming convention for "Stories" are no spaces, and no special characters except underscore, '_' .
+:::
+
+### CSS
+Edit the `backgroundImage` parameter, fill the "1080x1920-Stories" media link.
+
+<img src={css} />
+
+### HTML
+Edit the 'HTML editor', set the same CTA for Carousel/ODR Banner.
+
+<img src={html} />
+<br/>
+```html
+<div class="casino-background-image-section">
+<div class="img-promo-container">
+<div class="imgbackground">
+<div class="story-text">
+<div><br></div>
+</div>
+<div>
+<div class="optinBtn">
+<a href="!!M2.Portal/mobileportal/promotions/casino/url" class="btn btn-primary more-info-btn">LEARN MORE</a>
+</div>
+</div>
+</div>
+```
+
+## InstaContainer
+:::info[SiteCore Path]
+Content > Vanilla.Mobile > m2.borgataonline.com > MobileCasino-v1.0 > InstaStories > InstaContainer > InstaPromotions
+<br/>
+<img src={instacontainer} />
+:::
+
+Duplicate any component, and rename it the same as the StoryContent component. Also rename the child component as well.
+
+<img src={contparent} />
+
+### Parent
+<ol>
+<li>
+Fill the `StoryThumbnailImage` with the "Story - 500x500_round" media URL.
+</li>
+<li>
+In Stories section, select your child component and push it to selected.
+</li>
+<li>
+Fill the `Title` with Promohub H1.
+</li>
+<li>
+Fill the `Condition` with your QA filter.
+</li>
+</ol>
+
+<img src={round} />
+
+<img src={instastoryP} />
+
+### Child
+In the MainStoryContent, find and select your newly created StoryContent.
+
+<img src={contchild} />
+
+## Publishing The Story
+Like in Casino Carousel, we push the Stories to publish.
+
+:::info[SiteCore Path]
+Content > Vanilla.Mobile > m2.borgataonline.com > MobileCasino-v1.0 > InstaStories > InstaContainer > InstaContainer
+<br/>
+<img src={storypush} />
+:::
+
+<img src={pushtable} />
