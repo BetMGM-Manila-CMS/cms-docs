@@ -1,18 +1,12 @@
-import uploadBtn from "../../static/img/builds/assets/upload-upload-btn.png"
-import uploadDialog from "../../static/img/builds/assets/upload-dialog.png"
-import assetIsSiteMedia from "../../static/img/builds/assets/asset-shared.png"
-import uploadShared from "../../static/img/builds/assets/asset-upload-shared.png"
-import selectState from "../../static/img/builds/assets/shared-select-state.png"
-import sharedToUpload from "../../static/img/builds/assets/shared-to-upload.png"
-import sharedUploaded from "../../static/img/builds/assets/shared-uploaded.png"
+---
+title: Uploading Creatives
+---
 
 # Uploading Creatives
 
-:::warning
-
-Ensure that all files are below required [minimum size](./assets-introduction#exceeded-required-file-size) as the Audit team regularly checks files that are above the required file size and may report it.
-
-:::
+<Admonition type="tip" title="File Sizes">
+  Ensure that all files are below required [minimum size](./assets-introduction#exceeded-required-file-size) as the Audit team regularly checks files that are above the required file size and may report it.
+</Admonition>
 
 ## Sitecore Path
 
@@ -20,23 +14,88 @@ All of the media folders will be found in `Media Library > Vanilla.Mobile > Bran
 
 After going inside through the appropriate Brand State Domain there are specific folder to place your assets depending on the brand on you ticket, see guide below:
 
-|  | BetMGM | Borgata | PartyCasino | partypoker | 
-| --- | --- | --- | --- | --- |
-| Casino | `Year > Month` | `Year > Month` | `Year > Month` |  |
-| Poker | `BetMGM-Poker > Year > Month` | `BorgataPoker > Year > Month` |  | `Year > Month` |
-| Sports | `BetMGM-Sports > Year > Month` | `BorgataSports > Year > Month` |  |  |
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "", header: true },
+      { label: "BetMGM", header: true },
+      { label: "Borgata", header: true },
+      { label: "PartyCasino", header: true },
+      { label: "partypoker", header: true }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "Casino", header: true },
+      { label: "Year > Month", style: "highlight" },
+      { label: "Year > Month", style: "highlight" },
+      { label: "Year > Month", style: "highlight" },
+      { label: "" }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+            {
+                label: "Sports",
+                header: true
+            },
+            {
+                label: "BetMGM-Poker > Year > Month",
+                style: "highlight"
+            },
+            {
+                label: "BorgataPoker > Year > Month",
+                style: "highlight"
+            },
+            {
+                label: "",
+            },
+            {
+                label: "Year > Month",
+                style: "highlight"
+            },
+            
+        ]}
+  />
+
+  <TinaTableRow
+    items={[
+            {
+                label: "Poker",
+                header: true
+            },
+            {
+                label: "BetMGM-Sports > Year > Month",
+                style: "highlight"
+            },
+            {
+                label: "BorgataSports > Year > Month",
+                style: "highlight"
+            },
+            {
+                label: "",
+            },
+            {
+                label: "",
+            },
+            
+        ]}
+  />
+</TinaTable>
 
 ## Uploading the Folder
 
-Make sure that you are inside the appropriate folder, and click on `Upload files (advanced)` and the top of the [content area](https://doc.sitecore.com/xp/en/users/100/sitecore-experience-platform/the-content-editor.html#:~:text=contains%20no%20subitems.-,The%20content%20area,-The%20content%20area)
+Make sure that you are inside the appropriate folder, and click on `Upload files (advanced)` and the top of the [content area](https://doc.sitecore.com/xp/en/users/100/sitecore-experience-platform/the-content-editor.html#:~\:text=contains%20no%20subitems.-,The%20content%20area,-The%20content%20area)
 
-<img className="my-3" src={uploadBtn} />
+<img className="my-3" src="/img/builds/assets/upload-upload-btn.png" />
 
 It will display a popup where you can drag and drop the compressed folder to the `Choose File` input or click the same button and navigate to the respoective folder.
 
 Remember to check `Unpack ZIP Archives` checkbox so it will be automatically unzipped the folder is uploaded.
 
-<img className="my-3 w-1/2 max-w-md" src={uploadDialog} />
+<img className="my-3 w-1/2 max-w-md" src="/img/builds/assets/upload-dialog.png" />
 
 Click upload and wait for your document to finish uploading.
 
@@ -50,20 +109,20 @@ There are additional steps in order to do this.
 
 Select the asset and check its `Is SiteMedia Item` Checkbox
 
-<img className="my-3 max-w-lg" src={assetIsSiteMedia} />
+<img className="my-3 max-w-lg" src="/img/builds/assets/asset-shared.png" />
 
-Right click the image on the [Content Tree](https://doc.sitecore.com/xp/en/users/100/sitecore-experience-platform/the-content-editor.html#:~:text=something%20like%20this%3A-,The%20content%20tree,-One%20of%20the) and select `Insert > Upload SiteMedia (Label) File`.
+Right click the image on the [Content Tree](https://doc.sitecore.com/xp/en/users/100/sitecore-experience-platform/the-content-editor.html#:~\:text=something%20like%20this%3A-,The%20content%20tree,-One%20of%20the) and select `Insert > Upload SiteMedia (Label) File`.
 
-<img className="my-3 max-w-lg" src={uploadShared} />
+<img className="my-3 max-w-lg" src="/img/builds/assets/asset-upload-shared.png" />
 
 A popup will open and will allow you to select the `Brand State Domain` for the shared image. Click the OK Button to confirm.
 
-<img className="my-3 max-w-lg" src={selectState} />
+<img className="my-3 max-w-lg" src="/img/builds/assets/shared-select-state.png" />
 
 Another popup will open that allows you to upload the other asset that will be used for the shared state. Click Upload to start uploading.
 
-<img className="my-3 max-w-lg" src={sharedToUpload} />
+<img className="my-3 max-w-lg" src="/img/builds/assets/shared-to-upload.png" />
 
 It will display a new item as a child but the parent's direct link can be used for the shared PAT. It will automatically change the asset depending on which state it is being viewed on.
 
-<img className="my-3 w-1/2 max-w-sm" src={sharedUploaded} />
+<img className="my-3 w-1/2 max-w-sm" src="/img/builds/assets/shared-uploaded.png" />
