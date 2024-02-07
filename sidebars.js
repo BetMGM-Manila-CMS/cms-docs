@@ -47,7 +47,7 @@ const sidebars = {
       items: [
         "builds/casino-carousel",
         "builds/casino-odr-banner",
-        "builds/casino-mpp",
+        // "builds/casino-mpp",
         "builds/casino-video-banners",
         "builds/casino-stories"
       ],
@@ -86,9 +86,10 @@ const sidebars = {
       type: "category",
       label: "MPP",
       link: {
-        type: "generated-index",
+        type: "doc",
+        id: "builds/mpp"
       },
-      items: ["builds/mpp", "builds/mpp-v2"],
+      items: ["builds/mpp-v2"],
     },
     {
       type: "doc",
