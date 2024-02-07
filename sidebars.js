@@ -84,11 +84,11 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Layout",
-      items: [],
+      label: "MPP",
       link: {
         type: "generated-index",
       },
+      items: ["builds/mpp", "builds/mpp-v2"],
     },
     {
       type: "doc",

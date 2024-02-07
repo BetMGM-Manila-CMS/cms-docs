@@ -1,0 +1,105 @@
+---
+last_update:
+  date: 1/17/2024
+  author: JM Antonio
+  description: Updated MPP page
+authors: JM Antonio
+---
+
+import browse from "../../static/img/builds/mpp/mpp_browse.png";
+import desc from "../../static/img/builds/mpp/mpp_desc.png";
+import rule from "../../static/img/builds/mpp/mpp_rule.png";
+import parent from "../../static/img/builds/mpp/mpp_parent.png";
+import template from "../../static/img/builds/mpp/mpp_template.png";
+import game from "../../static/img/builds/mpp/mpp_games.png";
+
+# Version 1
+The MPP is the Promo Landing Page contains the description of the promotion, and on how to join for the customers.
+## Creating The MPP
+Navigate to the MPP directory:
+:::info[SiteCore Path]
+Content > Vanilla.Mobile > State/Brand > MobilePortal-v1.0 > Promotions > Casino
+:::
+Duplicate the `mpp-template-manila` and then rename it to your `url`. Also rename the child component with your `url`.
+<img src={template} />
+## Parent MPP
+Click on "Edit rule", it opens the "Create Rule" box. Click on the highlighted text and it will open another box. Browse to your MPP's child and select it, then press OK. And Save.
+
+Below is the step by step illustration of what you'll see when navigating.
+
+<img src={parent} />
+<br/>
+<img width="500" src={rule} />
+<br/>
+<img width="500" src={browse} />
+## Child MPP
+Fill the required fields as instructed.
+### Required Fields
+| Field | Value |
+| --- | --------- |
+| PromotionTitle | Promohub H1 |
+| Image | Media URL link |
+| DetailedDescription | Promo Description |
+| Terms And Conditions | TnCs |
+
+### DetailedDescription
+Click the "Edit HTML" to open the HTML Editor.
+<img width="500" src={desc} />
+<br/>
+First `<p>` tag, replace the text with the `Promotion Description`.
+
+Second `<p>` tag, [CTA](../builds/cta) will depend on the ticket.
+
+:::info
+Check [CTA Docs Page](../builds/cta) for an exhaustive list of options.
+:::
+
+#### How It Works
+Place each content of the `How To Participate` in the `TnCs`. Make sure they are enclosed in `<ul>` `<li>` tags. Refer to [Documents Page](../builds/documents) for additional information.
+
+#### Eligible Games
+Open the `Smart Links Tool` for your state and brand to search for the eligible games. Copy the game URL and replace in the text:
+
+<img src={game} /><br/>
+```
+<div className="game-thumb d-inline">
+<a href="!!M2.Casino/games/launchng/[url]"><img alt="[Game Name]" src="https://casinogames.nj.betmgm.com/htmllobby/images/newlmticons/square/[url].jpg" width="100" height="100" style="border:5px solid #FFFFFF;" /></a>
+</div>
+```
+:::tip
+Change the link's state & brand depending on your ticket.
+:::
+If the game is NETENT or DGC, add attribute to `<div>` tags:
+<table>
+<tr>
+    <th>Device</th>
+    <th>Attribute</th>
+</tr>
+    <tr>
+    <td>Desktop</td>
+    <td>
+    ```
+    data-content-filter="NOT Device.IsMobile AND NOT Device.IsTablet"
+    ```
+    </td>
+</tr>
+<tr>
+    <td>Mobile</td>
+    <td>
+    ```
+    data-content-filter="Device.IsMobile OR Device.IsTablet"
+    ```
+    </td>
+</tr>
+</table>
+For mobile versions, append the following to url:
+
+| Game | Value |
+| --- | --------- |
+| DGC | mobile |
+| NETENT | touch |
+
+### Terms And Conditions
+:::info
+Check the [Cleaning Documents page](../builds/documents#cleaning-the-copy) for a thorough guide on how to clean the TnCs copy.
+:::
