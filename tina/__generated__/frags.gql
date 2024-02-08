@@ -1,0 +1,11 @@
+fragment PostParts on Post {
+  __typename
+  title
+  body
+}
+
+fragment DocParts on Doc {
+  __typename
+  title
+  body
+}
