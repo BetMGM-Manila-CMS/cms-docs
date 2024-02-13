@@ -41,12 +41,27 @@ Fill the required fields as instructed.
 
 ### Required Fields
 
-| Field                | Value             |
-| -------------------- | ----------------- |
-| PromotionTitle       | Promohub H1       |
-| Image                | Media URL link    |
-| DetailedDescription  | Promo Description |
-| Terms And Conditions | TnCs              |
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "Field", header: true },
+      { label: "Value", header: true }
+    ]}
+  />
+
+  <TinaTableRow items={[{ label: "PromotionTitle " }, { label: "Promohub H1" }]} />
+
+  <TinaTableRow items={[{ label: "Image" }, { label: "Media URL link" }]} />
+
+  <TinaTableRow
+    items={[
+      { label: "DetailedDescription" },
+      { label: "Promo Description" }
+    ]}
+  />
+
+  <TinaTableRow items={[{ label: "Terms And Conditions" }, { label: "TnCs" }]} />
+</TinaTable>
 
 ### DetailedDescription
 
@@ -84,33 +99,6 @@ Open the `Smart Links Tool` for your state and brand to search for the eligible 
 
 If the game is NETENT or DGC, add attribute to `<div>` tags:
 
-<table>
-  <tr>
-    <th>Device</th>
-    <th>Attribute</th>
-  </tr>
-
-  <tr>
-    <td>Desktop</td>
-
-    <td>
-      ```
-      data-content-filter="NOT Device.IsMobile AND NOT Device.IsTablet"
-      ```
-    </td>
-  </tr>
-
-  <tr>
-    <td>Mobile</td>
-
-    <td>
-      ```
-      data-content-filter="Device.IsMobile OR Device.IsTablet"
-      ```
-    </td>
-  </tr>
-</table>
-
 <TinaTable>
   <TinaTableRow
     items={[
@@ -144,13 +132,21 @@ If the game is NETENT or DGC, add attribute to `<div>` tags:
 
 For mobile versions, append the following to url:
 
-| Game   | Value  |
-| ------ | ------ |
-| DGC    | mobile |
-| NETENT | touch  |
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "Game", header: true },
+      { label: "Value", header: true }
+    ]}
+  />
+
+  <TinaTableRow items={[{ label: "DGC" }, { label: "mobile" }]} />
+
+  <TinaTableRow items={[{ label: "NETENT" }, { label: "touch" }]} />
+</TinaTable>
 
 ### Terms And Conditions
 
-\:::info
-Check the [Cleaning Documents page](../builds/documents#cleaning-the-copy) for a thorough guide on how to clean the TnCs copy.
-\:::
+<Admonition type="note" title="Note">
+  Check the [Cleaning Documents page](../builds/documents#cleaning-the-copy) for a thorough guide on how to clean the TnCs copy.
+</Admonition>

@@ -4,39 +4,177 @@ last_update:
   author: Kyle Atienza
   description: Initial Content
 authors: Kyle Atienza
+title: Video Banners
 ---
-
-import sample from "../../static/img/builds/video/video-banner-sample.png"
-import exclusive from "../../static/img/builds/video/video-exclusive.png"
-import schedule from "../../static/img/builds/video/video-schedule.png"
-import comment from "../../static/img/builds/video/video-comment.png"
-import fields from "../../static/img/builds/video/video-fields.png"
 
 # Video Banners
 
 A video banner is a component on the casino homepage of a product, that plays a trailer or teaser for a game.
 
-<img className="my-3" src={sample} alt="Image alt" />
+<img className="my-3" src="/img/builds/video/video-banner-sample.png" alt="Image alt" />
 
 The video banner is updated from time to time to display different teasers in a period of time. To update the video banner see sitecore path below.
 
-:::warning[Check Game]
+<Admonition type="caution" title="Check Game">
+  First check if the game is live. If not, do not publish the component. Notify your sublead or make a comment when you submit on Monday.
+</Admonition>
 
-First check if the game is live. If not, do not publish the component. Notify your sublead or make a comment when you submit on Monday. 
+<Admonition type="caution" title="Updating Video Banner">
+  Video Banners are updated in real time, if there is still a video banner live on casino home, wait until the existing video banner unpublishing date to be finished until you can update the contents of the video banner.
+</Admonition>
 
-:::
+<Admonition type="info" title="Sitecore Path">
+  Content > Vanilla.Mobile > State/Brand > MobileCasino-v1.0 > LMTCategories > instantCasino
 
-:::warning[Updating Video Banner]
+  <TinaSpacer space="mt-4" />
 
-Video Banners are updated in real time, if there is still a video banner live on casino home, wait until the existing video banner unpublishing date to be finished until you can update the contents of the video banner.
+  For each state and brand the item to is named differently, see guide below to edit the proper video banner.
 
-:::
+  <TinaSpacer space="mt-6" />
 
-:::info[SiteCore Path]
+  <TinaTable>
+    <TinaTableRow
+      items={[
+        { label: " ", header: true },
+        { label: "NJ", header: true },
+        { label: "PA", header: true },
+        { label: "MI", header: true },
+        { label: "WV", header: true },
+        { label: "ON", header: true }
+      ]}
+    />
+
+    <TinaTableRow
+      items={[
+        { label: " BetMGM", header: false },
+        {
+          label: "featuredfeatured\t",
+          header: false,
+          url: "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo=%7BBBBC8DB5-84B4-4835-BA6F-48EBAA00FBAA%7D&la="
+        },
+        {
+          label: "homefeatured",
+          header: false,
+          url: "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo=%7BF69608C4-B4DD-4725-B670-A134D5F42051%7D&la="
+        },
+        {
+          label: "lobbyhomefeatured",
+          header: false,
+          url: "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo=%7BBA9FC78E-2B1B-43FF-8BBD-40A095875985%7D&la="
+        },
+        {
+          label: "homefeatured",
+          header: false,
+          url: "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo=%7BA7FFDFB9-EE51-453C-8B4B-0EF8A32FA0F0%7D&la="
+        },
+        {
+          label: "featured",
+          header: false,
+          url: "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo=%7BAB60994A-7063-445E-BC79-30BA6C5EA85E%7D&la="
+        }
+      ]}
+    />
+
+    <TinaTableRow
+      items={[
+        { label: " BetMGM", header: false },
+        { label: "featuredfeatured\t", header: false, url: "" },
+        {
+          label: "homefeatured",
+          header: false,
+          url: "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo=%7BF69608C4-B4DD-4725-B670-A134D5F42051%7D&la="
+        },
+        { label: "", header: false, url: "" },
+        { label: "", header: false, url: "" },
+        { label: "", header: false, url: "" }
+      ]}
+    />
+  </TinaTable>
+
+</Admonition>
+  <RichTable>
+    <RichTableRow
+      items={[
+        {},
+        {
+          children: {
+            type: "root",
+            children: [{ type: "p", children: [{ text: "NJ", bold: true }] }]
+          }
+        },
+        {
+          children: {
+            type: "root",
+            children: [{ type: "p", children: [{ text: "PA", bold: true }] }]
+          }
+        },
+        {
+          children: {
+            type: "root",
+            children: [{ type: "p", children: [{ text: "MI", bold: true }] }]
+          }
+        },
+        {
+          children: {
+            type: "root",
+            children: [{ type: "p", children: [{ text: "WV", bold: true }] }]
+          }
+        },
+        {
+          children: {
+            type: "root",
+            children: [
+              { type: "p", children: [{ text: "ON", bold: true }], id: 1707731167059 }
+            ]
+          }
+        }
+      ]}
+    />
+
+    <RichTableRow
+      items={[
+        {},
+        {
+          children: {
+            type: "root",
+            children: [{ type: "p", children: [{ text: "NJ", bold: true }] }]
+          }
+        },
+        {
+          children: {
+            type: "root",
+            children: [{ type: "p", children: [{ text: "PA", bold: true }] }]
+          }
+        },
+        {
+          children: {
+            type: "root",
+            children: [{ type: "p", children: [{ text: "MI", bold: true }] }]
+          }
+        },
+        {
+          children: {
+            type: "root",
+            children: [{ type: "p", children: [{ text: "WV", bold: true }] }]
+          }
+        },
+        {
+          children: {
+            type: "root",
+            children: [
+              { type: "p", children: [{ text: "ON", bold: true }], id: 1707731167059 }
+            ]
+          }
+        }
+      ]}
+    />
+  </RichTable>
+
+\:::info\[SiteCore Path]
 
 Content > Vanilla.Mobile > State/Brand > MobileCasino-v1.0 > LMTCategories > instantCasino
 
-<br/>
+<br />
 
 For each state and brand the item to is named differently, see guide below to edit the proper video banner.
 
@@ -45,7 +183,8 @@ For each state and brand the item to is named differently, see guide below to ed
 <table>
   <thead>
     <tr>
-      <th></th>
+      <th />
+
       <th>NJ</th>
       <th>PA</th>
       <th>MI</th>
@@ -53,39 +192,51 @@ For each state and brand the item to is named differently, see guide below to ed
       <th>ON</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <th>BetMGM</th>
-      <td>[featuredfeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BBBC8DB5-84B4-4835-BA6F-48EBAA00FBAA}&la=)</td>
-      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F69608C4-B4DD-4725-B670-A134D5F42051}&la=)</td>
-      <td>[lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BA9FC78E-2B1B-43FF-8BBD-40A095875985}&la=)</td>
-      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A7FFDFB9-EE51-453C-8B4B-0EF8A32FA0F0}&la=)</td>
-      <td>[featured](http://cms.prod.env.works/sitecore/DirectLink.aspx?fo=%7BAB60994A-7063-445E-BC79-30BA6C5EA85E%7D&la=)</td>
+      <td>[featuredfeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BBBC8DB5-84B4-4835-BA6F-48EBAA00FBAA}\&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F69608C4-B4DD-4725-B670-A134D5F42051}\&la=)</td>
+      <td>[lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BA9FC78E-2B1B-43FF-8BBD-40A095875985}\&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A7FFDFB9-EE51-453C-8B4B-0EF8A32FA0F0}\&la=)</td>
+      <td>[featured](http://cms.prod.env.works/sitecore/DirectLink.aspx?fo=%7BAB60994A-7063-445E-BC79-30BA6C5EA85E%7D\&la=)</td>
     </tr>
+
     <tr>
       <th>Borgata</th>
+
       <td>
-      [featured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={DC436D50-AB38-4B74-86DA-04FB5A06E29E}&la=)<br/>
-      [lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={9A73217B-258B-4D2A-A08E-E86DC47F1D02}&la=)
+        [featured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={DC436D50-AB38-4B74-86DA-04FB5A06E29E}\&la=)<br />
+        [lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={9A73217B-258B-4D2A-A08E-E86DC47F1D02}\&la=)
       </td>
-      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F69608C4-B4DD-4725-B670-A134D5F42051}&la=)</td>
-      <td></td>
-      <td></td>
-      <td></td>
+
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F69608C4-B4DD-4725-B670-A134D5F42051}\&la=)</td>
+
+      <td />
+
+      <td />
+
+      <td />
     </tr>
+
     <tr>
       <th>PartyCasino</th>
-      <td>[lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A78CBEA5-15F8-4C54-B9E8-A8700D57DEDA}&la=)<br/>
-      [homehome_featured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={6286E556-09AE-42BF-83DB-466F0B20BCD0}&la=)</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>[lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A78CBEA5-15F8-4C54-B9E8-A8700D57DEDA}\&la=)<br />
+      [homehome\_featured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={6286E556-09AE-42BF-83DB-466F0B20BCD0}\&la=)</td>
+
+      <td />
+
+      <td />
+
+      <td />
+
+      <td />
     </tr>
   </tbody>
-</table> 
+</table>
 
-:::
+\:::
 
 ## Getting Assets
 
@@ -106,14 +257,14 @@ The image is uploaded to sitecore. See this [guide](./assets-uploading) on how t
 
 Upon opening the appropriate Video Banner for each state, scroll down to the `GameVideo` section. See table below to update the appropriate fields.
 
-<img className="my-3" src={fields} alt="Image alt" />
+<img className="my-3" src="/img/builds/video/video-fields.png" alt="Image alt" />
 
 <br />
 
-| Field | Value |
-| --- | --- |
-| ImageOrVideoUrl | `MP4 video` URL |
-| ImageThumbnail  | `1200x300 Image` |
+| Field           | Value                         |
+| --------------- | ----------------------------- |
+| ImageOrVideoUrl | `MP4 video` URL               |
+| ImageThumbnail  | `1200x300 Image`              |
 | LaunchURL > Url | [See guide below](#launchurl) |
 
 ### LaunchURL
@@ -124,7 +275,7 @@ On the Casino home if the game is being shown with a `Exclusive` tag under the `
 !!M2.CasinoHome/c/exclusive
 ```
 
-<img className="my-3" src={exclusive} alt="Image alt" />
+<img className="my-3" src="/img/builds/video/video-exclusive.png" alt="Image alt" />
 
 If not use the launch url of the game which can be get here in the [Smartlinks guide](./smartlinks#games), or in the smartlinks page of the brand state.
 
@@ -132,11 +283,11 @@ If not use the launch url of the game which can be get here in the [Smartlinks g
 
 Another type of video banner is the ODR video banner. Some states have ODR Video Banners which also needs to be updated if mentioned in the `needs` for your ticket.
 
-:::info[SiteCore Path]
+\:::info\[SiteCore Path]
 
 Content > Clients > `state/brand` > Casino > NativeJackpotWidget > Native
 
-<br/>
+<br />
 
 Use reference below to navigate to the the proper item to edit from the `Native` folder.
 
@@ -145,50 +296,59 @@ Use reference below to navigate to the the proper item to edit from the `Native`
 <table>
   <thead>
     <tr>
-      <th></th>
+      <th />
+
       <th>NJ</th>
       <th>PA</th>
       <th>MI</th>
       <th>WV</th>
     </tr>
   </thead>
+
   <tbody>
     <tr>
       <th>BetMGM</th>
-      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={736FBE94-F8EB-406A-B6D7-D5A7E1E9E788}&la=)</td>
-      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={16F6562B-0B96-41FC-A87E-7CD69A56607E}&la=)</td>
-      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={389049B8-D6D7-43FD-B900-B7E7EFBCF77C}&la=)</td>
-      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7E11ED82-AAD8-4548-97FB-8B26138FDAC4}&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={736FBE94-F8EB-406A-B6D7-D5A7E1E9E788}\&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={16F6562B-0B96-41FC-A87E-7CD69A56607E}\&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={389049B8-D6D7-43FD-B900-B7E7EFBCF77C}\&la=)</td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7E11ED82-AAD8-4548-97FB-8B26138FDAC4}\&la=)</td>
     </tr>
+
     <tr>
       <th>Borgata</th>
-      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={53B9F214-80A6-4215-867B-C3AF98C696BE}&la=)</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>[homefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={53B9F214-80A6-4215-867B-C3AF98C696BE}\&la=)</td>
+
+      <td />
+
+      <td />
+
+      <td />
     </tr>
+
     <tr>
       <th>PartyCasino</th>
-      <td>[lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={1D256ED6-11A0-47B3-B13A-6CF354DA4E2D}&la=)</td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>[lobbyhomefeatured](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={1D256ED6-11A0-47B3-B13A-6CF354DA4E2D}\&la=)</td>
+
+      <td />
+
+      <td />
+
+      <td />
     </tr>
   </tbody>
-</table> 
+</table>
 
-:::note
+\:::note
 
 Most of the ODR video banners are not yet live, please confirm to your sublead if this is required to update also along with the default video banner.
 
-:::
-
+\:::
 
 ## Scheduling
 
 Do not forget to set the publishing dates for the video banner, the dates is often times mentioned in the `Project Details` tab of the Workfront ticket, Under the `Description` section it is mentioned.
 
-<img className="my-3" src={schedule} alt="Image alt" />
+<img className="my-3" src="/img/builds/video/video-schedule.png" alt="Image alt" />
 
 Use the dates provided to update the publishing dates of the video banner.
 
@@ -200,5 +360,6 @@ On Commenting for video banner, include the screenshots for the publishing date 
 
 <details>
   <summary>Example of Video Banner Comment</summary>
-  <img src={comment} alt="" />
+
+  <img src="/img/builds/video/video-comment.png" alt="" />
 </details>

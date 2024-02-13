@@ -1,35 +1,18 @@
 import CodeBlock from "@theme-original/CodeBlock";
+import { TinaMarkdown } from 'tinacms/dist/rich-text'
 
-export const TinaTableRow = ({ items }) => {
-    const cellValue = (cell) => {
-        if (cell.url) {
-            return <a href={cell.url}>{cell.label}</a>
-        }
-        
-        return cell.label
-    }
-    
-    const cellWrapper = (cell) => {
-        if (cell.style === "highlight") {
-            return <code>{cellValue(cell)}</code>
-        } else if (cell.style === "code") {
-            return <CodeBlock className="mb-0">{cellValue(cell)}</CodeBlock>
-        }
-
-        return cellValue(cell)
-    }
-
+export const RichTableRow = ({ items }) => {
     const mapItems = (items) => {
         return items.map((cell, index) => cell.header ?
             <th
                 key={index}
             >
-                {cellWrapper(cell)}
+                <TinaMarkdown content={cell.children} />
             </th> :
             <td
                 key={index}
             >
-                {cellWrapper(cell)}
+                <TinaMarkdown content={cell.children} />
             </td>)
 
     }
@@ -43,7 +26,7 @@ export const TinaTableRow = ({ items }) => {
     )
 }
 
-export const TinaTable = ({ children }) => {
+export const RichTable = ({ children }) => {
     const head = children ? children[0] : null
     const body = children && children.length ? children.slice(1) : null
 

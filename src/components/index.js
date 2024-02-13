@@ -5,3 +5,5 @@ export * from "./AuthorBadge";
 export * from "./GameLinks";
 export * from "./CopyIconButton";
 export * from "./TinaTable"
+export * from "./TinaSpacer"
+export * from "./RichTable"

@@ -268,8 +268,66 @@ export type DocBodyAdmonitionChildrenImgFilter = {
   alt?: InputMaybe<StringFilter>;
 };
 
+export type DocBodyAdmonitionChildrenTinaSpacerFilter = {
+  space?: InputMaybe<StringFilter>;
+};
+
+export type BooleanFilter = {
+  eq?: InputMaybe<Scalars['Boolean']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type NumberFilter = {
+  lt?: InputMaybe<Scalars['Float']['input']>;
+  lte?: InputMaybe<Scalars['Float']['input']>;
+  gte?: InputMaybe<Scalars['Float']['input']>;
+  gt?: InputMaybe<Scalars['Float']['input']>;
+  eq?: InputMaybe<Scalars['Float']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
+};
+
+export type DocBodyTinaTableChildrenTinaTableRowItemsFilter = {
+  label?: InputMaybe<StringFilter>;
+  header?: InputMaybe<BooleanFilter>;
+  style?: InputMaybe<StringFilter>;
+  url?: InputMaybe<StringFilter>;
+  rowSpan?: InputMaybe<NumberFilter>;
+};
+
+export type DocBodyTinaTableChildrenTinaTableRowFilter = {
+  items?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowItemsFilter>;
+};
+
+export type DocBodyAdmonitionChildrenTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowFilter>;
+};
+
+export type DocBodyAdmonitionChildrenTinaTableFilter = {
+  children?: InputMaybe<DocBodyAdmonitionChildrenTinaTableChildrenFilter>;
+};
+
+export type DocBodyRichTableChildrenRichTableRowItemsFilter = {
+  children?: InputMaybe<RichTextFilter>;
+};
+
+export type DocBodyRichTableChildrenRichTableRowFilter = {
+  items?: InputMaybe<DocBodyRichTableChildrenRichTableRowItemsFilter>;
+};
+
+export type DocBodyAdmonitionChildrenRichTableChildrenFilter = {
+  RichTableRow?: InputMaybe<DocBodyRichTableChildrenRichTableRowFilter>;
+};
+
+export type DocBodyAdmonitionChildrenRichTableFilter = {
+  children?: InputMaybe<DocBodyAdmonitionChildrenRichTableChildrenFilter>;
+};
+
 export type DocBodyAdmonitionChildrenFilter = {
   img?: InputMaybe<DocBodyAdmonitionChildrenImgFilter>;
+  TinaSpacer?: InputMaybe<DocBodyAdmonitionChildrenTinaSpacerFilter>;
+  TinaTable?: InputMaybe<DocBodyAdmonitionChildrenTinaTableFilter>;
+  RichTable?: InputMaybe<DocBodyAdmonitionChildrenRichTableFilter>;
 };
 
 export type DocBodyAdmonitionFilter = {
@@ -284,21 +342,6 @@ export type DocBodyImgFilter = {
   alt?: InputMaybe<StringFilter>;
 };
 
-export type BooleanFilter = {
-  eq?: InputMaybe<Scalars['Boolean']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type DocBodyTinaTableChildrenTinaTableRowItemsFilter = {
-  label?: InputMaybe<StringFilter>;
-  header?: InputMaybe<BooleanFilter>;
-  style?: InputMaybe<StringFilter>;
-};
-
-export type DocBodyTinaTableChildrenTinaTableRowFilter = {
-  items?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowItemsFilter>;
-};
-
 export type DocBodyTinaTableChildrenFilter = {
   TinaTableRow?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowFilter>;
 };
@@ -307,11 +350,34 @@ export type DocBodyTinaTableFilter = {
   children?: InputMaybe<DocBodyTinaTableChildrenFilter>;
 };
 
+export type DocBodyTinaSpacerFilter = {
+  space?: InputMaybe<StringFilter>;
+};
+
+export type DocBodyRichTableRowItemsFilter = {
+  children?: InputMaybe<RichTextFilter>;
+};
+
+export type DocBodyRichTableRowFilter = {
+  items?: InputMaybe<DocBodyRichTableRowItemsFilter>;
+};
+
+export type DocBodyRichTableChildrenFilter = {
+  RichTableRow?: InputMaybe<DocBodyRichTableChildrenRichTableRowFilter>;
+};
+
+export type DocBodyRichTableFilter = {
+  children?: InputMaybe<DocBodyRichTableChildrenFilter>;
+};
+
 export type DocBodyFilter = {
   Tabs?: InputMaybe<DocBodyTabsFilter>;
   Admonition?: InputMaybe<DocBodyAdmonitionFilter>;
   img?: InputMaybe<DocBodyImgFilter>;
   TinaTable?: InputMaybe<DocBodyTinaTableFilter>;
+  TinaSpacer?: InputMaybe<DocBodyTinaSpacerFilter>;
+  RichTableRow?: InputMaybe<DocBodyRichTableRowFilter>;
+  RichTable?: InputMaybe<DocBodyRichTableFilter>;
 };
 
 export type DocFilter = {

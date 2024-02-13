@@ -171,8 +171,66 @@ input DocBodyAdmonitionChildrenImgFilter {
   alt: StringFilter
 }
 
+input DocBodyAdmonitionChildrenTinaSpacerFilter {
+  space: StringFilter
+}
+
+input BooleanFilter {
+  eq: Boolean
+  exists: Boolean
+}
+
+input NumberFilter {
+  lt: Float
+  lte: Float
+  gte: Float
+  gt: Float
+  eq: Float
+  exists: Boolean
+  in: [Float]
+}
+
+input DocBodyTinaTableChildrenTinaTableRowItemsFilter {
+  label: StringFilter
+  header: BooleanFilter
+  style: StringFilter
+  url: StringFilter
+  rowSpan: NumberFilter
+}
+
+input DocBodyTinaTableChildrenTinaTableRowFilter {
+  items: DocBodyTinaTableChildrenTinaTableRowItemsFilter
+}
+
+input DocBodyAdmonitionChildrenTinaTableChildrenFilter {
+  TinaTableRow: DocBodyTinaTableChildrenTinaTableRowFilter
+}
+
+input DocBodyAdmonitionChildrenTinaTableFilter {
+  children: DocBodyAdmonitionChildrenTinaTableChildrenFilter
+}
+
+input DocBodyRichTableChildrenRichTableRowItemsFilter {
+  children: RichTextFilter
+}
+
+input DocBodyRichTableChildrenRichTableRowFilter {
+  items: DocBodyRichTableChildrenRichTableRowItemsFilter
+}
+
+input DocBodyAdmonitionChildrenRichTableChildrenFilter {
+  RichTableRow: DocBodyRichTableChildrenRichTableRowFilter
+}
+
+input DocBodyAdmonitionChildrenRichTableFilter {
+  children: DocBodyAdmonitionChildrenRichTableChildrenFilter
+}
+
 input DocBodyAdmonitionChildrenFilter {
   img: DocBodyAdmonitionChildrenImgFilter
+  TinaSpacer: DocBodyAdmonitionChildrenTinaSpacerFilter
+  TinaTable: DocBodyAdmonitionChildrenTinaTableFilter
+  RichTable: DocBodyAdmonitionChildrenRichTableFilter
 }
 
 input DocBodyAdmonitionFilter {
@@ -187,21 +245,6 @@ input DocBodyImgFilter {
   alt: StringFilter
 }
 
-input BooleanFilter {
-  eq: Boolean
-  exists: Boolean
-}
-
-input DocBodyTinaTableChildrenTinaTableRowItemsFilter {
-  label: StringFilter
-  header: BooleanFilter
-  style: StringFilter
-}
-
-input DocBodyTinaTableChildrenTinaTableRowFilter {
-  items: DocBodyTinaTableChildrenTinaTableRowItemsFilter
-}
-
 input DocBodyTinaTableChildrenFilter {
   TinaTableRow: DocBodyTinaTableChildrenTinaTableRowFilter
 }
@@ -210,11 +253,34 @@ input DocBodyTinaTableFilter {
   children: DocBodyTinaTableChildrenFilter
 }
 
+input DocBodyTinaSpacerFilter {
+  space: StringFilter
+}
+
+input DocBodyRichTableRowItemsFilter {
+  children: RichTextFilter
+}
+
+input DocBodyRichTableRowFilter {
+  items: DocBodyRichTableRowItemsFilter
+}
+
+input DocBodyRichTableChildrenFilter {
+  RichTableRow: DocBodyRichTableChildrenRichTableRowFilter
+}
+
+input DocBodyRichTableFilter {
+  children: DocBodyRichTableChildrenFilter
+}
+
 input DocBodyFilter {
   Tabs: DocBodyTabsFilter
   Admonition: DocBodyAdmonitionFilter
   img: DocBodyImgFilter
   TinaTable: DocBodyTinaTableFilter
+  TinaSpacer: DocBodyTinaSpacerFilter
+  RichTableRow: DocBodyRichTableRowFilter
+  RichTable: DocBodyRichTableFilter
 }
 
 input DocFilter {

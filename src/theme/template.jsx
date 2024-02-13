@@ -22,62 +22,40 @@ const ClassyImageTemplate = {
     ],
 }
 
-const AdmonitionTemplate = {
-    name: "Admonition",
+const TinaSpacerTemplate = {
+    name: "TinaSpacer",
+    label: "Spacer",
     ui: {
         defaultItem: {
-            type: "note",
-            title: "Note",
-        },
-        itemProps: (item) => {
-            return { label: item ? item.title : null };
-        },
+            space: "mt-4"
+        }
     },
     fields: [
         {
-            name: "type",
-            label: "Type",
+            name: "space",
+            label: "Space",
             type: "string",
             options: [
                 {
-                    label: "Note",
-                    value: "note",
+                    label: "Small",
+                    value: "mt-2"
                 },
                 {
-                    label: "Tip",
-                    value: "tip",
+                    label: "Normal",
+                    value: "mt-4"
                 },
                 {
-                    label: "Info",
-                    value: "info",
+                    label: "Medium",
+                    value: "mt-6"
                 },
                 {
-                    label: "Caution",
-                    value: "caution",
-                },
-                {
-                    label: "Danger",
-                    value: "danger",
-                },
-            ],
-        },
-        {
-            name: "title",
-            label: "Title",
-            type: "string",
-            isTitle: true,
-            required: true,
-        },
-        {
-            name: "children",
-            label: "Content",
-            type: "rich-text",
-            templates: [
-                ClassyImageTemplate,
+                    label: "Large",
+                    value: "mt-9"
+                }
             ]
-        },
-    ],
-};
+        }
+    ]
+}
 
 const TabItemTemplate = {
     name: "TabItem",
@@ -163,6 +141,16 @@ const TinaTableRowTemplate = {
                         value: "code",
                         label: "Code"
                     }]
+                },
+                {
+                    name: "url",
+                    label: "Link",
+                    type: "string"
+                },
+                {
+                    name: "rowSpan",
+                    label: "Row Span",
+                    type: 'number'
                 }
             ]
         }
@@ -172,7 +160,7 @@ const TinaTableRowTemplate = {
 
 const TinaTableTemplate = {
     name: "TinaTable",
-    label: "TinaTable",
+    label: "Table",
     fields: [
         {
             name: "children",
@@ -185,10 +173,115 @@ const TinaTableTemplate = {
     ]
 }
 
+const RichTableRowTemplate = {
+    name: "RichTableRow",
+    label: "Row",
+    type: "object",
+    fields: [
+        {
+            name: "items",
+            label: "Items",
+            type: "object",
+            list: true,
+            itemProps: (item) => {
+                return { label: item ? item.label : null };
+            },
+            fields: [
+                {
+                    name: "children",
+                    label: "Content",
+                    type: "rich-text",
+                    isBody: true,
+                },
+            ]
+        }
+    ]
+
+}
+
+const RichTableTemplate = {
+    name: "RichTable",
+    label: "Rich Table",
+    fields: [
+        {
+            name: "children",
+            label: "Rows",
+            type: "rich-text",
+            templates: [
+                RichTableRowTemplate
+            ]
+        },
+    ]
+}
+
+const AdmonitionTemplate = {
+    name: "Admonition",
+    ui: {
+        defaultItem: {
+            type: "note",
+            title: "Note",
+        },
+        itemProps: (item) => {
+            return { label: item ? item.title : null };
+        },
+    },
+    fields: [
+        {
+            name: "type",
+            label: "Type",
+            type: "string",
+            options: [
+                {
+                    label: "Note",
+                    value: "note",
+                },
+                {
+                    label: "Tip",
+                    value: "tip",
+                },
+                {
+                    label: "Info",
+                    value: "info",
+                },
+                {
+                    label: "Caution",
+                    value: "caution",
+                },
+                {
+                    label: "Danger",
+                    value: "danger",
+                },
+            ],
+        },
+        {
+            name: "title",
+            label: "Title",
+            type: "string",
+            isTitle: true,
+            required: true,
+        },
+        {
+            name: "children",
+            label: "Content",
+            type: "rich-text",
+            templates: [
+                ClassyImageTemplate,
+                TinaSpacerTemplate,
+                TinaTableTemplate,
+                RichTableTemplate
+            ]
+        },
+    ],
+};
+
+
 
 export const MDXTemplates = [
     TabsTemplate,
     AdmonitionTemplate,
     ClassyImageTemplate,
     TinaTableTemplate,
+    TinaSpacerTemplate,
+    RichTableRowTemplate,
+    RichTableTemplate,
 ]

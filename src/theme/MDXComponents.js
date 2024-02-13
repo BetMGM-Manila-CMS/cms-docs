@@ -5,7 +5,7 @@ import Details from "@theme/Details";
 import Tabs from "@theme-original/Tabs";
 import TabItem from "@theme-original/TabItem";
 import DocCardList from "@theme-original/DocCardList";
-import { TinaTable, TinaTableRow } from "@site/src/components"
+import { TinaTable, TinaTableRow, TinaSpacer, RichTable, RichTableRow } from "@site/src/components"
 
 export default {
   ...MDXComponents,
@@ -16,5 +16,8 @@ export default {
   Admonition: MDXComponents.admonition,
   DocCardList: DocCardList,
   TinaTable: TinaTable,
-  TinaTableRow: TinaTableRow
+  TinaTableRow: TinaTableRow,
+  RichTable: RichTable,
+  RichTableRow: RichTableRow,
+  TinaSpacer: TinaSpacer
 };
