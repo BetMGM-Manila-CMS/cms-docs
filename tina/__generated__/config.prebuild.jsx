@@ -147,6 +147,11 @@ var TinaTableRowTemplate = {
           name: "rowSpan",
           label: "Row Span",
           type: "number"
+        },
+        {
+          name: "colSpan",
+          label: "Column Span",
+          type: "number"
         }
       ]
     }
@@ -155,51 +160,23 @@ var TinaTableRowTemplate = {
 var TinaTableTemplate = {
   name: "TinaTable",
   label: "Table",
+  ui: {
+    itemProps: (item) => {
+      return { label: item ? item.name : null };
+    }
+  },
   fields: [
+    {
+      name: "name",
+      label: "Name",
+      type: "string"
+    },
     {
       name: "children",
       label: "Rows",
       type: "rich-text",
       templates: [
         TinaTableRowTemplate
-      ]
-    }
-  ]
-};
-var RichTableRowTemplate = {
-  name: "RichTableRow",
-  label: "Row",
-  type: "object",
-  fields: [
-    {
-      name: "items",
-      label: "Items",
-      type: "object",
-      list: true,
-      itemProps: (item) => {
-        return { label: item ? item.label : null };
-      },
-      fields: [
-        {
-          name: "children",
-          label: "Content",
-          type: "rich-text",
-          isBody: true
-        }
-      ]
-    }
-  ]
-};
-var RichTableTemplate = {
-  name: "RichTable",
-  label: "Rich Table",
-  fields: [
-    {
-      name: "children",
-      label: "Rows",
-      type: "rich-text",
-      templates: [
-        RichTableRowTemplate
       ]
     }
   ]
@@ -257,9 +234,33 @@ var AdmonitionTemplate = {
       templates: [
         ClassyImageTemplate,
         TinaSpacerTemplate,
-        TinaTableTemplate,
-        RichTableTemplate
+        TinaTableTemplate
       ]
+    }
+  ]
+};
+var DetailsTemplate = {
+  name: "Details",
+  ui: {
+    defaultItem: {
+      summary: "Detail"
+    },
+    itemProps: (item) => {
+      return { label: item ? item.summary : null };
+    }
+  },
+  fields: [
+    {
+      name: "summary",
+      label: "Label",
+      type: "string",
+      isTitle: true,
+      required: true
+    },
+    {
+      name: "children",
+      label: "Content",
+      type: "rich-text"
     }
   ]
 };
@@ -269,8 +270,7 @@ var MDXTemplates = [
   ClassyImageTemplate,
   TinaTableTemplate,
   TinaSpacerTemplate,
-  RichTableRowTemplate,
-  RichTableTemplate
+  DetailsTemplate
 ];
 
 // tina/config.ts

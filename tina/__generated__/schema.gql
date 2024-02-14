@@ -196,6 +196,7 @@ input DocBodyTinaTableChildrenTinaTableRowItemsFilter {
   style: StringFilter
   url: StringFilter
   rowSpan: NumberFilter
+  colSpan: NumberFilter
 }
 
 input DocBodyTinaTableChildrenTinaTableRowFilter {
@@ -207,30 +208,14 @@ input DocBodyAdmonitionChildrenTinaTableChildrenFilter {
 }
 
 input DocBodyAdmonitionChildrenTinaTableFilter {
+  name: StringFilter
   children: DocBodyAdmonitionChildrenTinaTableChildrenFilter
-}
-
-input DocBodyRichTableChildrenRichTableRowItemsFilter {
-  children: RichTextFilter
-}
-
-input DocBodyRichTableChildrenRichTableRowFilter {
-  items: DocBodyRichTableChildrenRichTableRowItemsFilter
-}
-
-input DocBodyAdmonitionChildrenRichTableChildrenFilter {
-  RichTableRow: DocBodyRichTableChildrenRichTableRowFilter
-}
-
-input DocBodyAdmonitionChildrenRichTableFilter {
-  children: DocBodyAdmonitionChildrenRichTableChildrenFilter
 }
 
 input DocBodyAdmonitionChildrenFilter {
   img: DocBodyAdmonitionChildrenImgFilter
   TinaSpacer: DocBodyAdmonitionChildrenTinaSpacerFilter
   TinaTable: DocBodyAdmonitionChildrenTinaTableFilter
-  RichTable: DocBodyAdmonitionChildrenRichTableFilter
 }
 
 input DocBodyAdmonitionFilter {
@@ -250,6 +235,7 @@ input DocBodyTinaTableChildrenFilter {
 }
 
 input DocBodyTinaTableFilter {
+  name: StringFilter
   children: DocBodyTinaTableChildrenFilter
 }
 
@@ -257,20 +243,9 @@ input DocBodyTinaSpacerFilter {
   space: StringFilter
 }
 
-input DocBodyRichTableRowItemsFilter {
+input DocBodyDetailsFilter {
+  summary: StringFilter
   children: RichTextFilter
-}
-
-input DocBodyRichTableRowFilter {
-  items: DocBodyRichTableRowItemsFilter
-}
-
-input DocBodyRichTableChildrenFilter {
-  RichTableRow: DocBodyRichTableChildrenRichTableRowFilter
-}
-
-input DocBodyRichTableFilter {
-  children: DocBodyRichTableChildrenFilter
 }
 
 input DocBodyFilter {
@@ -279,8 +254,7 @@ input DocBodyFilter {
   img: DocBodyImgFilter
   TinaTable: DocBodyTinaTableFilter
   TinaSpacer: DocBodyTinaSpacerFilter
-  RichTableRow: DocBodyRichTableRowFilter
-  RichTable: DocBodyRichTableFilter
+  Details: DocBodyDetailsFilter
 }
 
 input DocFilter {

@@ -151,6 +151,11 @@ const TinaTableRowTemplate = {
                     name: "rowSpan",
                     label: "Row Span",
                     type: 'number'
+                },
+                {
+                    name: "colSpan",
+                    label: "Column Span",
+                    type: 'number'
                 }
             ]
         }
@@ -161,54 +166,23 @@ const TinaTableRowTemplate = {
 const TinaTableTemplate = {
     name: "TinaTable",
     label: "Table",
+    ui: {
+        itemProps: (item) => {
+            return { label: item ? item.name : null };
+        },
+    },
     fields: [
+        {
+            name: "name",
+            label: "Name",
+            type: "string"
+        },
         {
             name: "children",
             label: "Rows",
             type: "rich-text",
             templates: [
                 TinaTableRowTemplate
-            ]
-        },
-    ]
-}
-
-const RichTableRowTemplate = {
-    name: "RichTableRow",
-    label: "Row",
-    type: "object",
-    fields: [
-        {
-            name: "items",
-            label: "Items",
-            type: "object",
-            list: true,
-            itemProps: (item) => {
-                return { label: item ? item.label : null };
-            },
-            fields: [
-                {
-                    name: "children",
-                    label: "Content",
-                    type: "rich-text",
-                    isBody: true,
-                },
-            ]
-        }
-    ]
-
-}
-
-const RichTableTemplate = {
-    name: "RichTable",
-    label: "Rich Table",
-    fields: [
-        {
-            name: "children",
-            label: "Rows",
-            type: "rich-text",
-            templates: [
-                RichTableRowTemplate
             ]
         },
     ]
@@ -268,11 +242,36 @@ const AdmonitionTemplate = {
                 ClassyImageTemplate,
                 TinaSpacerTemplate,
                 TinaTableTemplate,
-                RichTableTemplate
             ]
         },
     ],
 };
+
+const DetailsTemplate = {
+    name: "Details", 
+    ui: {
+        defaultItem: {
+            summary: "Detail",
+        },
+        itemProps: (item) => {
+            return { label: item ? item.summary : null };
+        },
+    },
+    fields: [
+        {
+            name: "summary",
+            label: "Label",
+            type: "string",
+            isTitle: true,
+            required: true,
+        },
+        {
+            name: "children",
+            label: "Content",
+            type: "rich-text",
+        },
+    ]
+}
 
 
 
@@ -282,6 +281,5 @@ export const MDXTemplates = [
     ClassyImageTemplate,
     TinaTableTemplate,
     TinaSpacerTemplate,
-    RichTableRowTemplate,
-    RichTableTemplate,
+    DetailsTemplate,
 ]

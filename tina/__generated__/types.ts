@@ -293,6 +293,7 @@ export type DocBodyTinaTableChildrenTinaTableRowItemsFilter = {
   style?: InputMaybe<StringFilter>;
   url?: InputMaybe<StringFilter>;
   rowSpan?: InputMaybe<NumberFilter>;
+  colSpan?: InputMaybe<NumberFilter>;
 };
 
 export type DocBodyTinaTableChildrenTinaTableRowFilter = {
@@ -304,30 +305,14 @@ export type DocBodyAdmonitionChildrenTinaTableChildrenFilter = {
 };
 
 export type DocBodyAdmonitionChildrenTinaTableFilter = {
+  name?: InputMaybe<StringFilter>;
   children?: InputMaybe<DocBodyAdmonitionChildrenTinaTableChildrenFilter>;
-};
-
-export type DocBodyRichTableChildrenRichTableRowItemsFilter = {
-  children?: InputMaybe<RichTextFilter>;
-};
-
-export type DocBodyRichTableChildrenRichTableRowFilter = {
-  items?: InputMaybe<DocBodyRichTableChildrenRichTableRowItemsFilter>;
-};
-
-export type DocBodyAdmonitionChildrenRichTableChildrenFilter = {
-  RichTableRow?: InputMaybe<DocBodyRichTableChildrenRichTableRowFilter>;
-};
-
-export type DocBodyAdmonitionChildrenRichTableFilter = {
-  children?: InputMaybe<DocBodyAdmonitionChildrenRichTableChildrenFilter>;
 };
 
 export type DocBodyAdmonitionChildrenFilter = {
   img?: InputMaybe<DocBodyAdmonitionChildrenImgFilter>;
   TinaSpacer?: InputMaybe<DocBodyAdmonitionChildrenTinaSpacerFilter>;
   TinaTable?: InputMaybe<DocBodyAdmonitionChildrenTinaTableFilter>;
-  RichTable?: InputMaybe<DocBodyAdmonitionChildrenRichTableFilter>;
 };
 
 export type DocBodyAdmonitionFilter = {
@@ -347,6 +332,7 @@ export type DocBodyTinaTableChildrenFilter = {
 };
 
 export type DocBodyTinaTableFilter = {
+  name?: InputMaybe<StringFilter>;
   children?: InputMaybe<DocBodyTinaTableChildrenFilter>;
 };
 
@@ -354,20 +340,9 @@ export type DocBodyTinaSpacerFilter = {
   space?: InputMaybe<StringFilter>;
 };
 
-export type DocBodyRichTableRowItemsFilter = {
+export type DocBodyDetailsFilter = {
+  summary?: InputMaybe<StringFilter>;
   children?: InputMaybe<RichTextFilter>;
-};
-
-export type DocBodyRichTableRowFilter = {
-  items?: InputMaybe<DocBodyRichTableRowItemsFilter>;
-};
-
-export type DocBodyRichTableChildrenFilter = {
-  RichTableRow?: InputMaybe<DocBodyRichTableChildrenRichTableRowFilter>;
-};
-
-export type DocBodyRichTableFilter = {
-  children?: InputMaybe<DocBodyRichTableChildrenFilter>;
 };
 
 export type DocBodyFilter = {
@@ -376,8 +351,7 @@ export type DocBodyFilter = {
   img?: InputMaybe<DocBodyImgFilter>;
   TinaTable?: InputMaybe<DocBodyTinaTableFilter>;
   TinaSpacer?: InputMaybe<DocBodyTinaSpacerFilter>;
-  RichTableRow?: InputMaybe<DocBodyRichTableRowFilter>;
-  RichTable?: InputMaybe<DocBodyRichTableFilter>;
+  Details?: InputMaybe<DocBodyDetailsFilter>;
 };
 
 export type DocFilter = {

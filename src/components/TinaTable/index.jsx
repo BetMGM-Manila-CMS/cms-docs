@@ -5,10 +5,10 @@ export const TinaTableRow = ({ items }) => {
         if (cell.url) {
             return <a href={cell.url}>{cell.label}</a>
         }
-        
+
         return cell.label
     }
-    
+
     const cellWrapper = (cell) => {
         if (cell.style === "highlight") {
             return <code>{cellValue(cell)}</code>
@@ -19,16 +19,26 @@ export const TinaTableRow = ({ items }) => {
         return cellValue(cell)
     }
 
+    const cellSpans = (cell) => {
+        let spans = {}
+
+        if (cell.rowSpan) {
+            spans.rowSpan = cell.rowSpan
+        }
+
+        if (cell.colSpan) {
+            spans.colSpan = cell.colSpan
+        }
+
+        return spans
+    }
+
     const mapItems = (items) => {
         return items.map((cell, index) => cell.header ?
-            <th
-                key={index}
-            >
+            <th {...cellSpans(cell)} key={index}>
                 {cellWrapper(cell)}
             </th> :
-            <td
-                key={index}
-            >
+            <td {...cellSpans(cell)} key={index} >
                 {cellWrapper(cell)}
             </td>)
 
