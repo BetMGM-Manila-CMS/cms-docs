@@ -38,6 +38,10 @@ p {
   margin-bottom: 1rem;
 }
 
+li > img:first-of-type {
+  margin-top: 1rem;
+}
+
 /* custom styles */
 
 td
