@@ -177,8 +177,6 @@ const TinaTableTemplate = {
             name: "title",
             label: "Title",
             type: "string",
-            isTitle: true,
-            required: true,
         },
         {
             name: "children",

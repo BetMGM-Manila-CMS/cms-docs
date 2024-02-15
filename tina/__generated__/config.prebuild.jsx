@@ -170,9 +170,7 @@ var TinaTableTemplate = {
     {
       name: "title",
       label: "Title",
-      type: "string",
-      isTitle: true,
-      required: true
+      type: "string"
     },
     {
       name: "children",
