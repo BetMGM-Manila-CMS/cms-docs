@@ -1,22 +1,18 @@
 ---
 last_update:
-    date: 01/19/2024
-    author: Emmanuel Borromeo
-    description: Updated Poker Carousel
-    authors: Emmanuel Borromeo
+  date: 01/19/2024
+  author: Emmanuel Borromeo
+  description: Updated Poker Carousel
+  authors: Emmanuel Borromeo
+title: Poker Carousel
 ---
-
-import CaroPreview from "../../static/img/builds/poker-carousel/carousel preview.png";
-import CaroDupRen from "../../static/img/builds/poker-carousel/carousel duplicate rename.png";
-import Caro1 from "../../static/img/builds/poker-carousel/caro sitecore - 1.png";
-import Caro11 from "../../static/img/builds/poker-carousel/caro sitecore - 1 1.png";
-import Caro2 from "../../static/img/builds/poker-carousel/caro sitecore - 2.png";
 
 # Poker Carousel
 
-The Poker Carousel is the main attraction of the Poker Page. It shows all the latest promos, Public and Targetted, to the customers.  
+The Poker Carousel is the main attraction of the Poker Page. It shows all the latest promos, Public and Targetted, to the customers.
 
-<img src={CaroPreview} width="100%" alt="Sample Carousel" /> 
+![](/img/builds/poker-carousel/carouselpreview.png)
+
 *Highlighted in red box is the Carousel*
 
 In this section, we will provide the necessary steps in building the Poker Carousel.
@@ -25,44 +21,71 @@ In this section, we will provide the necessary steps in building the Poker Carou
 
 To create your Carousel, navigate to it's directory:
 
-:::info[SiteCore Path]
-sitecore > content > Vanilla.Mobile > state/brand > MobilePoker-v1.0 > PokerTeasers
-:::
+<Admonition type="note" title="Sitecore Path">
+  sitecore > content > Vanilla.Mobile > state/brand > MobilePoker-v1.0 > PokerTeasers
+</Admonition>
 
 ### Step 1: Duplicate Carousel Object
 
 Duplicate one of the Carousel object, preferably the poker-manila-template.
 
-<img src={CaroDupRen} width="50%" alt="Duplicating a Carousel" /> 
+![](/img/builds/poker-carousel/carouselduplicaterename.png)
+
 *Right-click your desired carousel object, choose duplicate, then rename with your Ticket Name*
 
 ### Step 2: Fill in Teaser & Background Field
 
 #### Required Fields:
-|Field | Value|
-|---|---|
-|Title| CAROUSEL H1 (from the Copy)|
-|Subtitle| CAROUSEL H2 (from the Copy)|
-|Image|	Media URL: *Carousel PNG-605x328|
-|BackgroundImage| Media URL: Poker Carousel-1210x328|
 
-:::warning[Reminder]
-Check your Carousel Assets. *If **Poker Carousel baked -1210x328_** is available, then replaced the Asset Carousel PNG-605x328 with a **Blank PNG** with size 605x328.
-:::
+<Admonition type="caution" title="Reminder">
+  Check your Carousel Assets. \*If Poker Carousel baked -1210x328\_ is available, then replaced the Asset Carousel PNG-605x328 with a Blank PNG with size 605x328.
+</Admonition>
 
-<img src={Caro1} width="100%" alt="Duplicating a Carousel" /> 
-<img src={Caro11} width="100%" alt="Duplicating a Carousel" /> 
+<TinaTable title="Required Fields">
+  <TinaTableRow
+    items={[
+      { label: "Field", header: true },
+      { label: "Value", header: true }
+    ]}
+  />
+
+  <TinaTableRow items={[{ label: "Title" }, { label: "CAROUSEL H1 (from the Copy)" }]} />
+
+  <TinaTableRow
+    items={[
+      { label: "Subtitle" },
+      { label: "CAROUSEL H2 (from the Copy)" }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "Image" },
+      { label: "Media URL: *Carousel PNG-605x328" }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "BackgroundImage" },
+      { label: "Media URL: Poker Carousel-1210x328" }
+    ]}
+  />
+</TinaTable>
+
+![](/img/builds/poker-carousel/carositecore-1.png)
+
+![](/img/builds/poker-carousel/carositecore-11.png)
 
 ### Step 2: Fill in Links
 
 If your build have an MPP or Tourney Page, the Links will be smartlink of your page. Otherwise, check [CTA Guide](cta.mdx) for all the List of CTAs.
 
-<img src={Caro2} width="100%" alt="Link to Fill in" />
-
+![](/img/builds/poker-carousel/carositecore-2.png)
 
 ### Step 3: Filter
 
-Don't forget to put filter for new builds 
+Don't forget to put filter for new builds
 
 ```html
 QueryString.Get('qa') = 'yourname'
@@ -76,9 +99,10 @@ To check your carousel, go to your ticket's state website, then put `?qa=yournam
 https://poker.nj.betmgm.com/en/poker?qa=yourname
 ```
 
-:::tip[PRO TIP]
-adding this to the URL will lessen your waiting time to check if your Carousel if already Up.
-```
-&_nocache=1
-```
-:::
+<Admonition type="tip" title="PRO TIP">
+  Adding this to the URL will lessen your waiting time to check if your Carousel if already Up.
+
+  ```javascript
+  &_nocache=1
+  ```
+</Admonition>

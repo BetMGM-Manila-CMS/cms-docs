@@ -7,7 +7,8 @@ var ClassyImageTemplate = {
     {
       name: "className",
       label: "Class",
-      type: "string"
+      type: "string",
+      required: true
     },
     {
       name: "src",
@@ -162,14 +163,16 @@ var TinaTableTemplate = {
   label: "Table",
   ui: {
     itemProps: (item) => {
-      return { label: item ? item.name : null };
+      return { label: item ? item.title : null };
     }
   },
   fields: [
     {
-      name: "name",
-      label: "Name",
-      type: "string"
+      name: "title",
+      label: "Title",
+      type: "string",
+      isTitle: true,
+      required: true
     },
     {
       name: "children",

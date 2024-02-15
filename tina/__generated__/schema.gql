@@ -208,7 +208,7 @@ input DocBodyAdmonitionChildrenTinaTableChildrenFilter {
 }
 
 input DocBodyAdmonitionChildrenTinaTableFilter {
-  name: StringFilter
+  title: StringFilter
   children: DocBodyAdmonitionChildrenTinaTableChildrenFilter
 }
 
@@ -235,7 +235,7 @@ input DocBodyTinaTableChildrenFilter {
 }
 
 input DocBodyTinaTableFilter {
-  name: StringFilter
+  title: StringFilter
   children: DocBodyTinaTableChildrenFilter
 }
 

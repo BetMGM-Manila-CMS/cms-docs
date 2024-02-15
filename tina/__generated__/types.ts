@@ -305,7 +305,7 @@ export type DocBodyAdmonitionChildrenTinaTableChildrenFilter = {
 };
 
 export type DocBodyAdmonitionChildrenTinaTableFilter = {
-  name?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
   children?: InputMaybe<DocBodyAdmonitionChildrenTinaTableChildrenFilter>;
 };
 
@@ -332,7 +332,7 @@ export type DocBodyTinaTableChildrenFilter = {
 };
 
 export type DocBodyTinaTableFilter = {
-  name?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
   children?: InputMaybe<DocBodyTinaTableChildrenFilter>;
 };
 

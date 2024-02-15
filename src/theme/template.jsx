@@ -7,7 +7,8 @@ const ClassyImageTemplate = {
         {
             name: "className",
             label: "Class",
-            type: "string"
+            type: "string",
+            required: true,
         },
         {
             name: "src",
@@ -168,14 +169,16 @@ const TinaTableTemplate = {
     label: "Table",
     ui: {
         itemProps: (item) => {
-            return { label: item ? item.name : null };
+            return { label: item ? item.title : null };
         },
     },
     fields: [
         {
-            name: "name",
-            label: "Name",
-            type: "string"
+            name: "title",
+            label: "Title",
+            type: "string",
+            isTitle: true,
+            required: true,
         },
         {
             name: "children",
@@ -248,7 +251,7 @@ const AdmonitionTemplate = {
 };
 
 const DetailsTemplate = {
-    name: "Details", 
+    name: "Details",
     ui: {
         defaultItem: {
             summary: "Detail",
