@@ -115,20 +115,16 @@ Fill this content using the following:
 </TinaTable>
 
 <div className="sm:flex gap-2">
-  <div className="w-1/2">
-    ![MainContent1 Preview](/img/builds/tourney-page/sitecoretourney-4.png)
-  </div>
+  <img className="sm:w-1/2 h-auto" src="/img/builds/tourney-page/sitecoretourney-4.png" />
 
-  <div className="min-w-1/2">
-    ![MainContent1 Preview](/img/builds/tourney-page/sitecoretourney-41.png)
-  </div>
+  <img className="sm:w-1/2 h-auto" src="/img/builds/tourney-page/sitecoretourney-41.png" />
 </div>
 
 *You can either click **Show editor, then go to HTML TAB** (found below the text editor) or **Edit HTML** to insert the required content.*
 
-\:::info
-Check [Table Docs Page](../builds/cta) for an exhaustive list of tables.
-\:::
+<Admonition type="info" title="Info">
+  Check [Table Docs Page](../builds/cta) for an exhaustive list of tables.
+</Admonition>
 
 ### Step 5: Update Terms
 
@@ -140,15 +136,15 @@ The Poker Tournament Page's Terms & Condition has an additional line compare to 
 
 ![Terms Preview "](/img/builds/tourney-page/sitecoretourney-5.png)
 
-\:::info
-Check [Documents Page](../builds/cta) on How To Clean your Terms and Conditions.
-\:::
+<Admonition type="info" title="Info">
+  Check [Documents Page](http://localhost:3000/docs/builds/cta) on How To Clean your Terms and Conditions
+</Admonition>
 
 ## Tournaments Side Navigation
 
-\:::info\[SiteCore Path]
-sitecore > content/Vanilla.Mobile > state/brand > MobilePoker-v1.0> Tournaments > shared > navigation
-\:::
+<Admonition type="info" title="Sitecore path">
+  sitecore > content/Vanilla.Mobile > state/brand > MobilePoker-v1.0> Tournaments > shared > navigation
+</Admonition>
 
 ### Step 6: Duplicate File
 
@@ -180,4 +176,5 @@ QueryString.Get('qa') = 'yourname'
 ### Step 9: Publishing Date
 
 Both Tourney Page and Side-Nav must have the same publishing date. If it's a new build, the publishing date should be empty and the Never Publish must be ▢ unticked.
+
 ![Publishing Date](/img/builds/tourney-page/sitecoretourney-8.png)
