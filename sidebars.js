@@ -71,7 +71,7 @@ const sidebars = {
     {
       type: "category",
       label: "Sports",
-      items: ["builds/sports-core", "builds/mai", "builds/sports-horse-racing"],
+      items: ["builds/sports-core", "builds/mai",  "builds/sports-horse-racing", "builds/sports-mission-page"],
       link: {
         type: "generated-index",
       },

@@ -1,0 +1,109 @@
+---
+last_update:
+  date: 2024-02-15
+  author: JM Antonio
+  description: Initial content
+authors: JM Antonio
+---
+
+import img630x896 from "../../static/img/builds/sports-mission/630x896.png";
+import cards from "../../static/img/builds/sports-mission/cards.png";
+import challenges from "../../static/img/builds/sports-mission/challenges.png";
+import description from "../../static/img/builds/sports-mission/description.png";
+import mission_comp from "../../static/img/builds/sports-mission/mission_components.png";
+import parent_comp from "../../static/img/builds/sports-mission/parent_component.png";
+import preview1 from "../../static/img/builds/sports-mission/preview1.png";
+import preview2 from "../../static/img/builds/sports-mission/preview2.png";
+import sample_challenge_desc from "../../static/img/builds/sports-mission/sample_challenge_desc.png";
+import teaser from "../../static/img/builds/sports-mission/teaser.png";
+import tnc from "../../static/img/builds/sports-mission/tnc.png";
+
+# Mission Page
+
+Mission Page is an interactive Landing page where customers join and do challenges/missions to earn rewards.
+
+<img src={preview2} alt="" /><br/>
+
+# Building The Mission Page
+<br/>
+:::info[Sitecore Path]
+
+Content Editor > Sitecore > Content > Vanilla.Mobile > m2.`state`.`brand`.com > Promo > casino / sports folder
+
+:::
+
+1. Shown below are the components that are required to update.
+
+<img src={mission_comp} alt="" /><br/>
+
+2. <strong>Parent</strong> 
+
+In this part you can adjust the size of the lockup and challenge_icon.
+
+<img src={parent_comp} alt="" /><br/>
+
+Here's a preview what it looks like on the page.
+
+<img src={preview1} alt="" /><br/>
+
+3. <strong>Teaser</strong> 
+
+| Required | Size |
+| ---------- | ----------- |
+| Img_mobile_src | 1057x705 |
+| Img_src |  1057x705 |
+| Lockup_src | 1050x823 |
+
+<img src={teaser} alt="" /><br/>
+
+4. <strong>Challenges</strong>
+
+<img src={challenges} alt="" /><br/>
+
+`ForallCompletedDescription`, just change the name of the Promotion.
+
+For `challenge_success_overlay_bg_src` - image size needed is <strong>630x896</strong> (there are three (3) images with the same size, please use the one with plain background).
+
+<img src={img630x896} alt="" /><br/>
+
+5. <strong>Challenge (Cards)</strong>
+
+| Fields | Required |
+| ----------- | ------------ |
+| carousel_bg and carousel_expired_bg | 630x896 |
+| challenge_icon | 649x648 |
+| cta_url |  according to your  ticket state and brand |
+| description | you can find this part in the copy |
+| detail_bg | 1057x705 |
+| detail_countdown_headline | change according to your promotion name |
+| start and end date | update this part according on the promotional dates given |
+| headline_1 | PROMOTION NAME (all caps) |
+| headline_2 | MISSION # (all caps) |
+
+Reference Image below.
+
+<img src={cards} alt="" /><br/>
+
+<img src={sample_challenge_desc} alt="" /><br/>
+
+Repeat this action with all the other challenge/mission cards.
+
+6. <strong>Description</strong>
+
+<img src={description} alt="" /><br/>
+
+<strong>Upper box</strong> can found in the MPP description.
+
+<strong>Lower box</strong> will be provided in another documents for this part.
+
+Note: Don’t forget to put at the end:
+
+```
+Please read our full terms & conditions before participating.
+```
+
+7. <strong>Terms & Conditions</strong>
+
+<img src={tnc} alt="" /><br/>
+
+Format the TnCs as with the Casino Landing Pages, `Titles` are `ALL CAPS` with no `colon(:)`.
