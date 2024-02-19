@@ -248,6 +248,13 @@ input DocBodyDetailsFilter {
   children: RichTextFilter
 }
 
+input DocBodyCodeBlockFilter {
+  title: StringFilter
+  language: StringFilter
+  showLineNumbers: BooleanFilter
+  children: RichTextFilter
+}
+
 input DocBodyFilter {
   Tabs: DocBodyTabsFilter
   Admonition: DocBodyAdmonitionFilter
@@ -255,6 +262,7 @@ input DocBodyFilter {
   TinaTable: DocBodyTinaTableFilter
   TinaSpacer: DocBodyTinaSpacerFilter
   Details: DocBodyDetailsFilter
+  CodeBlock: DocBodyCodeBlockFilter
 }
 
 input DocFilter {

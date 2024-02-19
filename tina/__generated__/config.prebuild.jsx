@@ -265,13 +265,51 @@ var DetailsTemplate = {
     }
   ]
 };
+var CodeBlockTemplate = {
+  name: "CodeBlock",
+  label: "Code Block",
+  ui: {
+    defaultItem: {
+      title: "Code"
+    },
+    itemProps: (item) => {
+      return { label: item ? item.title : null };
+    }
+  },
+  fields: [
+    {
+      name: "title",
+      label: "Title",
+      type: "string",
+      isTitle: true,
+      required: true
+    },
+    {
+      name: "language",
+      label: "Language",
+      type: "string"
+    },
+    {
+      name: "showLineNumbers",
+      label: "Show Line Numbers",
+      type: "boolean"
+    },
+    {
+      name: "children",
+      label: "Code",
+      type: "rich-text",
+      required: true
+    }
+  ]
+};
 var MDXTemplates = [
   TabsTemplate,
   AdmonitionTemplate,
   ClassyImageTemplate,
   TinaTableTemplate,
   TinaSpacerTemplate,
-  DetailsTemplate
+  DetailsTemplate,
+  CodeBlockTemplate
 ];
 
 // tina/config.ts

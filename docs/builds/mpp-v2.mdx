@@ -23,14 +23,8 @@ title: MPP V2
 
 When creating the MPP component you can either:
 
-1. **Duplicate from template folder**\\
-
-   \:::tip\[Template]
-
-   The [template](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={4D7657B8-1397-440D-88C2-33FA39BB366E}\&la=) is only avalable at BetMGM NJ. Make sure to copy it to the correct state.
-
-   \:::
-2. \*\*Duplicate a sibling MPP \*\*- You can also duplicate an existing MPP on the same state brand, aterwards rename the parent item to the provided name.
+1. **Duplicate from template folder**
+2. **Duplicate a sibling MPP** - You can also duplicate an existing MPP on the same state brand, aterwards rename the parent item to the provided name.
 
 <Admonition type="note" title="Template">
   The [template](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={4D7657B8-1397-440D-88C2-33FA39BB366E}\&la=) is only avalable at BetMGM NJ. Make sure to copy it to the correct state.
@@ -48,11 +42,9 @@ This will be the name of the Tab when visiting the MPP page through the browser.
 
 The Content child contains child of the components of the MPP. The components are separated individually.
 
-\:::tip\[Publishing Components]
-
-Because on different applications some of the sections is not necessary, and these components can be set to `Not Publish` so that it wont show in the MPP when viewing through the browser.
-
-\:::
+<Admonition type="tip" title="Publishing Components">
+  Because on different applications some of the sections is not necessary, and these components can be set to Not Publish so that it wont show in the MPP when viewing through the browser.
+</Admonition>
 
 ![](/img/builds/mpp-v2/mppv2-content.png)
 
@@ -73,15 +65,9 @@ This is located on `Content > PageTitle > DefaultPageTitle`
 1. Update the `Title` field with `Promohub Key Terms > H1`.
 2. If there is a `Promotional Dates` indicated on your copy place it on the `epiry-date` field under `Parameters`
 
-   <br />
-
-   \:::note\[Date Format]
-
-   Make sure that the date is on `MM/DD/YY` format, and add the time of `11:59 PM`.
-
-   \:::
-
-   <br />
+<Admonition type="note" title="Date Format">
+  Make sure that the date is on MM/DD/YY format, and add the time of 11:59 PM.
+</Admonition>
 
 ![](/img/builds/mpp-v2/mppv2-content-pagetitle.png)
 
@@ -96,6 +82,10 @@ Use the content of the `Promotion Description` from your copy and place it on th
 Remember to enclose the contents with `<p></p>` tags
 
 \:::
+
+<Admonition type="note" title="Note">
+  Remember to enclose the contents with \<p>\</p> tags
+</Admonition>
 
 ![](/img/builds/mpp-v2/mppv2-promoDetails.png)
 
@@ -132,20 +122,21 @@ Clicking the `Content` tab for the Slider, here are some of the fields that can 
 1. Click on an item under the `Slider`.
 2. Get the game code from the [Game Smartlinks](./smartlinks#games) of the appropriate game.
 3. Update the content of the `Text` field. You can refer to the format below.
+4. Save, Publish and Finalize.
 
-```
+<CodeBlock title="Code" showLineNumbers={true}>
+  ${val:/sitecore/content/marketing/games/headline_games/{game code}.Content}
+</CodeBlock>
+
+```javascript
 ${val:/sitecore/content/marketing/games/headline_games/{game code}.Content}
 ```
 
-1. Save, Publish and Finalize.
+<Admonition type="note" title="Note">
+  Sometimes an error will occur when you try to save a game that is because the game is not in the path. This can happen even if the game is live on the site
 
-\:::note
-
-Sometimes an error will occur when you try to save a game that is because the game is not in the path. This can happen even if the game is live on the site
-
-![](/img/builds/mpp-v2/mppv2-game-error.png)
-
-\:::
+  ![](/img/builds/mpp-v2/mppv2-game-error.png)
+</Admonition>
 
 ### TermsToQualify
 
@@ -184,11 +175,9 @@ Contains the `Terms and Condition` section. To edit the contents go to `Content 
 
 Place the contents of the `Terms and Conditions` on the `Text Field.`
 
-\:::info
-
-Make sure that your terms is *clean*. Check the [Cleaning Documents page](../builds/documents#cleaning-the-copy) for a thorough guide on how to clean the TnCs copy.
-
-\:::
+<Admonition type="info" title="Info">
+  Make sure that your terms is *clean*. Check the [Cleaning Documents page](../builds/documents#cleaning-the-copy) for a thorough guide on how to clean the TnCs copy.
+</Admonition>
 
 ![](/img/builds/mpp-v2/mppv2-terms.png)
 
@@ -242,21 +231,18 @@ To do this we will create a single MPP under the Whitelabel path and clone the M
 
 1. Open the `Clone Distribution` panel by right clicking the parent component.
 
-   !\[]\(/img/builds/mpp-v2/mppv2-clone-parent.png" />)
+   ![](/img/builds/mpp-v2/mppv2-clone-parent.png)
 2. Select all the states to clone the MPP and click OK.
 
-   !\[]\(/img/builds/mpp-v2/mppv2-clone-panel-parent.png" />    )
-3. Go through each published subcomponent and when opening the `Clone Distribution` panel we can just click the `Clone All` checkbox as it will select all locations we have set to the parent when we have clones it. Then click OK
+   ![](/img/builds/mpp-v2/mppv2-clone-panel-parent.png)
+3. Go through each published subcomponent and when opening the `Clone Distribution` panel we can just click the `Clone All` checkbox as it will select all locations we have set to the parent when we have clones it. Then click OK.
 
-   <br />
+   ![](/img/builds/mpp-v2/mppv2-clone-child.png)
 
-   <details><summary>Example of Components to Clone</summary>
-   ![](/img/builds/mpp-v2/mppv2-components-to-clone.png" />    )</details>
+<Details summary="Example of Components to Clone">
+  ![](/img/builds/mpp-v2/mppv2-components-to-clone.png)
+</Details>
 
-   !\[]\(/img/builds/mpp-v2/mppv2-clone-child.png" />)
-
-\:::tip\[Note]
-
-Check if it is properly cloned by previewing the Final URL for the MPP for all states that you cloned the MPP to.
-
-\:::
+<Admonition type="tip" title="Note">
+  Check if it is properly cloned by previewing the Final URL for the MPP for all states that you cloned the MPP to.
+</Admonition>

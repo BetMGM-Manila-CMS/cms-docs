@@ -345,6 +345,13 @@ export type DocBodyDetailsFilter = {
   children?: InputMaybe<RichTextFilter>;
 };
 
+export type DocBodyCodeBlockFilter = {
+  title?: InputMaybe<StringFilter>;
+  language?: InputMaybe<StringFilter>;
+  showLineNumbers?: InputMaybe<BooleanFilter>;
+  children?: InputMaybe<RichTextFilter>;
+};
+
 export type DocBodyFilter = {
   Tabs?: InputMaybe<DocBodyTabsFilter>;
   Admonition?: InputMaybe<DocBodyAdmonitionFilter>;
@@ -352,6 +359,7 @@ export type DocBodyFilter = {
   TinaTable?: InputMaybe<DocBodyTinaTableFilter>;
   TinaSpacer?: InputMaybe<DocBodyTinaSpacerFilter>;
   Details?: InputMaybe<DocBodyDetailsFilter>;
+  CodeBlock?: InputMaybe<DocBodyCodeBlockFilter>;
 };
 
 export type DocFilter = {
