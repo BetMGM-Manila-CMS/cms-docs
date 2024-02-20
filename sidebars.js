@@ -47,7 +47,7 @@ const sidebars = {
       items: [
         "builds/casino-carousel",
         "builds/casino-odr-banner",
-        "builds/casino-mpp",
+        // "builds/casino-mpp",
         "builds/casino-video-banners",
         "builds/casino-stories"
       ],
@@ -71,7 +71,7 @@ const sidebars = {
     {
       type: "category",
       label: "Sports",
-      items: ["builds/sports-core"],
+      items: ["builds/sports-core", "builds/mai",  "builds/sports-horse-racing", "builds/sports-mission-page"],
       link: {
         type: "generated-index",
       },
@@ -81,6 +81,27 @@ const sidebars = {
       value:
         "<div class='divider'><span class='divider__inner'>Common Components</div>",
       defaultStyle: true,
+    },
+    {
+      type: "category",
+      label: "MPP",
+      link: {
+        type: "doc",
+        id: "builds/mpp"
+      },
+      items: ["builds/mpp-v2"],
+    },
+    {
+      type: "doc",
+      id: "builds/restId",
+    },
+    {
+      type: "doc",
+      id: "builds/static-tile",
+    },
+    {
+      type: "doc",
+      id: "builds/landing-page",
     },
     {
       type: "category",
@@ -98,22 +119,6 @@ const sidebars = {
     },
     {
       type: "category",
-      label: "Layout",
-      items: [],
-      link: {
-        type: "generated-index",
-      },
-    },
-    {
-      type: "doc",
-      id: "builds/restId",
-    },
-    {
-      type: "doc",
-      id: "builds/static-tile",
-    },
-    {
-      type: "category",
       label: "Engagements",
       link: {
         type: "generated-index",
@@ -124,10 +129,7 @@ const sidebars = {
         "builds/engagements-coin",
       ],
     },
-    {
-      type: "doc",
-      id: "builds/landing-page",
-    },
+
     {
       type: "html",
       value: "<div class='divider'><span class='divider__inner'>Guides</div>",

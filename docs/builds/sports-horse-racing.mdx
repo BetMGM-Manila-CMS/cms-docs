@@ -1,0 +1,50 @@
+---
+last_update:
+  date: 2024-02-15
+  author: JM Antonio
+  description: more updates to content
+authors: JM Antonio
+---
+
+import creative from '../../static/img/builds/horserace/images.png'
+import publish from '../../static/img/builds/horserace/publish.png'
+
+# Horse Racing Schedule
+
+This section shows where to update and schedule the Horse Racing Carousel. 
+
+## Uploading Creatives
+
+Upload the provided design creatives in the SiteCore link.
+
+:::info[SiteCore Path]
+<a href="http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={2BF46448-2A06-416E-A714-0367B414E2CB}&la=">Media Library > Vanilla.Mobile > m2.betmgm.com > Horse Racing</a>
+:::
+
+## Updating the Carousel
+
+:::info[SiteCore Path]
+<a href="https://cms-us.prod.env.works/sitecore/shell/Applications/Content%20Manager/default.aspx?fo=%7BB9587560-37A9-46E1-8FF5-E5D3EE8096E1%7D&la">Content Editor > Vanilla.Mobile > m2.horseracing.betmgm.com > Horseracing > Teasers > TeaserItems > HomeF > upcoming</a>
+:::
+
+There are 9 slots for the Horse Racing Carousel, `upcoming` up to `upcoming9`.
+
+Depending if there are still any active Carousel, find the oldest carousel published by checking the publishing dates in the carousel components.
+
+:::warning
+<strong>Do not update carousels that are live or will go live. Only update the carousels which have ended.</strong>
+:::
+
+Update the Carousel by editing the `Background Image` and `DesktopImage` respectively.
+
+<img src={creative} alt="" className="my-4" />
+
+Also in the image are the dates for the Carousel.
+
+When publishing, put on the starting date a day before, i.e. Oct. 29, then put 28.10.2024, and as usual add a day after on the end date.
+
+<img src={publish} alt="" className="my-4" />
+
+Then repeat the process on the other carousels until up to date.
+
+Re-schedule the remaining, if any, when the previous active carousels have ended.
