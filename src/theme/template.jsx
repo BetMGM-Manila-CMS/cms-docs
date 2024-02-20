@@ -307,7 +307,6 @@ const CodeBlockTemplate = {
             name: "children",
             label: "Code",
             type: "rich-text",
-            required: true,
         },
     ],
 };

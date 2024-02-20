@@ -25,11 +25,20 @@ export default function CodeBlock({ children: rawChildren, ...props }) {
   const CodeBlockComp =
     typeof children === 'string' ? StringContent : ElementContent;
 
+  const sanitizeChildren = (children) => {
+    let sanitized = children.toString()
+
+    sanitized = sanitized.findAll("${", "$\{")
+    sanitized = sanitized.findAll("/{", "/\{")
+
+    return sanitized
+  }
+
+  console.log(children)
+
   return (
     <CodeBlockComp key={String(isBrowser)} {...props}>
-      {`
-        ${children}
-      `}
+      {children}
     </CodeBlockComp>
   );
 }
