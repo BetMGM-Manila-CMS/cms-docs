@@ -422,7 +422,8 @@ var DocLinkTemplate = {
       name: "label",
       label: "Label",
       description: "By default this is the document title",
-      type: "string"
+      type: "string",
+      required: true
     }
   ]
 };

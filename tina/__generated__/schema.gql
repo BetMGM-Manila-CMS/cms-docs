@@ -294,7 +294,7 @@ union SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocDocument = Doc
 
 type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc {
   document: SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocDocument!
-  label: String
+  label: String!
 }
 
 type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink {
@@ -315,7 +315,7 @@ union SidebarItemsItemsCategoryItemsCategoryItemsDocDocument = Doc
 
 type SidebarItemsItemsCategoryItemsCategoryItemsDoc {
   document: SidebarItemsItemsCategoryItemsCategoryItemsDocDocument!
-  label: String
+  label: String!
 }
 
 type SidebarItemsItemsCategoryItemsCategoryItemsLink {
@@ -336,7 +336,7 @@ union SidebarItemsItemsCategoryItemsDocDocument = Doc
 
 type SidebarItemsItemsCategoryItemsDoc {
   document: SidebarItemsItemsCategoryItemsDocDocument!
-  label: String
+  label: String!
 }
 
 type SidebarItemsItemsCategoryItemsLink {
@@ -357,7 +357,7 @@ union SidebarItemsItemsDocDocument = Doc
 
 type SidebarItemsItemsDoc {
   document: SidebarItemsItemsDocDocument!
-  label: String
+  label: String!
 }
 
 type SidebarItemsItemsLink {
