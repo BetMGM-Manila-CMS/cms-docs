@@ -22,7 +22,7 @@
           "_template": "category"
         },
         {
-          "document": "docs/builds/assets-introduction.mdx",
+          "document": "docs/builds/assets.mdx",
           "label": "Assets",
           "_template": "doc"
         }
