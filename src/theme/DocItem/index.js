@@ -12,7 +12,12 @@ import DocItemMetadata from "@theme/DocItem/Metadata";
 import DocItemLayout from "@theme/DocItem/Layout";
 // import type {Props} from '@theme/DocItem';
 
+import Admonition from '@theme/Admonition';
+
 import { AuthorBadge } from "../../components";
+
+import { TinaMarkdown } from "tinacms/dist/rich-text"
+import { useTina } from "tinacms/dist/react"
 
 export default function DocItem(props) {
   const docHtmlClassName = `docs-doc-id-${props.content.metadata.id}`;
@@ -25,7 +30,7 @@ export default function DocItem(props) {
       <HtmlClassNameProvider className={docHtmlClassName}>
         <DocItemMetadata />
         <DocItemLayout>
-          <MDXComponent />
+            <MDXComponent />
           <div className="mt-8 pt-8 border-t-[1px] border-primary md:flex">
             {last_update ? (
               <div className="w-full md:w-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-neutral-800 dark:border-gray-700 transition">

@@ -22,7 +22,7 @@ const FeatureList = [
     ),
     label: "Get Building Your Builds",
     description: "Know how to create the different needs for your tickets.",
-    url: "docs/builds/assets-introduction",
+    url: "docs/builds/assets",
   },
   {
     icon: (

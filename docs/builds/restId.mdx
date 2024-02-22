@@ -1,4 +1,5 @@
 ---
+title: Rest ID
 last_update:
   date: 1/25/2023
   author: Kyle Atienza
@@ -6,56 +7,35 @@ last_update:
 authors: Kyle Atienza
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-import rewardTool from "../../static/img/builds/restId/restid-rewards-tool.png"
-import projDetailsTemplate from "../../static/img/builds/restId/restid-wf-template.png"
-import betMgmInbox from "../../static/img/builds/restId/restid-betmgm-inbox.png";
-import overlayImg from "../../static/img/builds/restId/restid-overlay-eg.png"
-import toaster from "../../static/img/builds/restId/restid-toaster-eg.png"
-import sectionSelect from "../../static/img/builds/restId/restid-section-select.png"
-import template from "../../static/img/builds/restId/restid-template.png"
-import tiered from "../../static/img/builds/restId/restid-tiered.png"
-import engagement from "../../static/img/builds/restId/restid-engagement.png"
-import commentValue from "../../static/img/builds/restId/restid-comment-value.png"
-import comment from "../../static/img/builds/restId/restid-comment.png"
-import duplicate from "../../static/img/builds/restId/restid-duplicate.gif"
-
 # Rest ID
-
-
 
 ## Creating a Rest ID
 
 To create a Rest ID go to the Sitecore path mentioned below and duplicate an existing Rest ID Item.
 
-:::info[Sitecore Path]
-
-Content Editor > Marketing > US > CMS-NEW-FOLDER > `state`-`brand` > `product` > `year` > `month`
-
-:::
+<Admonition type="info" title="Sitecore Path">
+  Content Editor > Marketing > US > CMS-NEW-FOLDER > state-brand > product > year > month
+</Admonition>
 
 Name the new created Rest ID same with the name of your ticket. Just remove unwanted characters.
 
-:::tip
+<Admonition type="tip" title="Tip">
+  Vivian from US provided a template folder inside the the [US Sitecore NJ Folder](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={64853FDD-BE01-41A1-AFBD-AC7536EC6773}\&la=), we can just `copy to` these items (except to ON) to the correct folder.
 
-Vivian from US provided a template folder inside the the [US Sitecore NJ Folder](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={64853FDD-BE01-41A1-AFBD-AC7536EC6773}&la=), we can just `copy to` these items (except to ON) to the correct folder.
-
-<img className="my-3" src={template} />
-
-:::
+![](/img/builds/restId/restid-template.png)
+</Admonition>
 
 ### Grouped Rest IDs
 
 Rest IDs needs to be grouped if a ticket is requiring more than one Rest ID for that create a folder and name it the name of your ticket. Then place the different Rest IDs inside the folder. See examples below.
 
 <Tabs>
-  <TabItem value="tiered" label="Tiered" default>
-    <img className="my-3 w-xl" src={tiered} />
+  <TabItem value="tiered" label="Tiered">
+    ![](/img/builds/restId/restid-tiered.png)
   </TabItem>
+
   <TabItem value="engagement" label="Engagement">
-    <img className="my-3 w-xl" src={engagement} />
+    ![](/img/builds/restId/restid-engagement.png)
   </TabItem>
 </Tabs>
 
@@ -63,46 +43,65 @@ Rest IDs needs to be grouped if a ticket is requiring more than one Rest ID for 
 
 Rest ID has different sections that can be displayed or hidden, it will be adjusted depending on the needs of your ticket.
 
-<img className="my-3" src={sectionSelect} />
+![](/img/builds/restId/restid-section-select.png)
 
-:::warning[note]
-
-When duplicating Rest ID components most fields will be populated with contents even though it is blank from the source item.
-
-:::
+<Admonition type="warning" title="note">
+  When duplicating Rest ID components most fields will be populated with contents even though it is blank from the source item.
+</Admonition>
 
 ## Promohub Section
 
-:::note
-
+<Admonition type="note" title="note">
 Get the template value for this section either on your monday.com ticket mentioned by your sub-lead or in the Project Details of your Workfront ticket under the `CRM Ops` section.
 
-<img className="my-3 w-sm" src={projDetailsTemplate} />
+![](/img/builds/restId/restid-wf-template.png)
+</Admonition>
 
-:::
 
-<h3> Required Fields </h3>
+### Required Fields
 
 The team uses an [internal tool](http://betmgm-phtools.entaingroup.corp/promohub-templates/) to get the appropriate value for the fields.
 
-<img className="my-3 mx-md" src={rewardTool} />
+![](/img/builds/restId/restid-rewards-tool.png)
 
 To use the tool, click through each icon to get to the desired values that will be displayed on the right side of the tool and paste the appropriate values on the following fields.
 
-| Fields |
-| --- |
-| CommonTitle |
-| CommonDescription |
-| CommonTermsAndConditions |
+<TinaTable>
+  <TinaTableRow items={[{ label: "Fields", header: true }]} />
 
-<h3> Required Images </h3>
+  <TinaTableRow items={[{ label: "CommonTitle", style: "highlight" }]} />
+
+  <TinaTableRow items={[{ label: "CommonDescription", style: "highlight" }]} />
+
+  <TinaTableRow items={[{ label: "CommonTermsAndConditions", style: "highlight" }]} />
+</TinaTable>
+
+### Required Images
 
 The fields `Image Landscape` and `Image Square` will be placed with the same image. Depending on the type of the ticket we will either use `Promohub Tiles-800x360` or `Promohub Reward Tiles-800x360`. Please see guide below:
 
-| Provided PAT/EDS | Image |
-| --- | --- |
-| Yes | `Promohub Tiles-800x360` |
-| No | `Promohub Reward Tiles-800x360` |
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "Provided PAT/EDS", header: true },
+      { label: "Image", header: true }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "Yes" },
+      { label: "Promohub Tiles-800x360", style: "highlight" }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "No" },
+      { label: "Promohub Reward Tiles-800x360", style: "highlight" }
+    ]}
+  />
+</TinaTable>
 
 ## Inbox
 
@@ -110,30 +109,82 @@ The Inbox is a section for the Rest ID component that holds the values for the n
 
 Here is an example from BetMGM:
 
-<img className="my-3 max-w-xl" src={betMgmInbox} />
+![](/img/builds/restId/restid-betmgm-inbox.png)
 
-<h3> Required Fields </h3>
+### Required Fields
 
-| Field                    | Value                                             |
-| ------------------------ | ------------------------------------------------- |
-| PreviewTitle             | `Player Inbox > Preview Title`                    |
-| PreviewDescription       | `Player Inbox > Preview Description`              |
-| FullViewTitle            | `Player Inbox > Fullview Title`                   |
-| FullViewDescription      | `Player Inbox > Fullview Description`             |
-| ManualTermsAndConditions | [See Terms Doc](./documents#terms-and-conditions) |
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "Field", header: true },
+      { label: "Value", header: true }
+    ]}
+  />
 
-:::info
+  <TinaTableRow
+    items={[
+      { label: "PreviewTitle" },
+      { label: "Player Inbox > Preview Title", style: "highlight" }
+    ]}
+  />
 
+  <TinaTableRow
+    items={[
+      { label: "PreviewDescription" },
+      { label: "Player Inbox > Preview Description", style: "highlight" }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "FullViewTitle" },
+      { label: "Player Inbox > Fullview Title", style: "highlight" }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "FullViewDescription" },
+      { label: "Player Inbox > Fullview Description", style: "highlight" }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "ManualTermsAndConditions" },
+      { label: "See Terms Doc", url: "./documents#terms-and-conditions" }
+    ]}
+  />
+</TinaTable>
+
+<Admonition type="info" title="info">
 Plese check the [CTA guide](../builds/cta) for the proper labeling and link to use.
+</Admonition>
 
-:::
+### Required Images
 
-<h3> Required Images </h3>
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "Field", header: true },
+      { label: "Image", header: true }
+    ]}
+  />
 
-| Field         | Image                  |
-| ------------- | ---------------------- |
-| PreviewImage  | `Inbox_short_50x50`    |
-| FullViewImage | `Inbox-Detail-690x246` |
+  <TinaTableRow
+    items={[
+      { label: "PreviewImage" },
+      { label: "Inbox_short_50x50", style: "highlight" }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "FullViewImage" },
+      { label: "Inbox-Detail-690x246", style: "highlight" }
+    ]}
+  />
+</TinaTable>
 
 ## Overlay
 
@@ -141,31 +192,51 @@ The Overlay is a section for the Rest ID component that holds the values for a p
 
 Here is an example:
 
-<img className="my-3 min-w-sm w-1/2 max-w-sm" src={overlayImg} />
+![](/img/builds/restId/restid-overlay-eg.png)
 
-<h3> Required Fields </h3>
+### Required Fields
 
-| Field | Value |
-| --- | --- |
-| PreviewTitle | `Overlay > Overlay Description` |
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "Field", header: true },
+      { label: "Value", header: true }
+    ]}
+  />
 
-:::note
+  <TinaTableRow
+    items={[
+      { label: "PreviewTitle" },
+      { label: "Overlay > Overlay Description", style: "highlight" }
+    ]}
+  />
+</TinaTable>
 
+<Admonition type="note" title="note">
 If the copy mentions a title for the Overlay put it inside `<h2></h2>` and place on the top before the description.
+</Admonition>
 
-:::
-
-:::info
-
+<Admonition type="info" title="info">
 Plese check the [CTA guide](../builds/cta) for the proper labeling and link to use.
+</Admonition>
 
-:::
+### Required Images
 
-<h3> Required Images </h3>
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "Field", header: true },
+      { label: "Image", header: true }
+    ]}
+  />
 
-| Field | Image |
-| --- | --- |
-| PreviewTitle | `Overlay EDS-840x246` |
+  <TinaTableRow
+    items={[
+      { label: "PreviewTitle" },
+      { label: "Overlay EDS-840x246", style: "highlight" }
+    ]}
+  />
+</TinaTable>
 
 ## Toaster
 
@@ -173,46 +244,62 @@ The Toaster is a section for the Rest ID component that holds the values for the
 
 Here is an example:
 
-<img className="my-3 w-lg" src={toaster} />
+![](/img/builds/restId/restid-toaster-eg.png)
 
-<h3> Required Fields </h3>
+### Required Fields
 
-| Field | Value |
-| --- | --- |
-| PreviewTitle | `Toaster` |
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "Field", header: true },
+      { label: "Value", header: true }
+    ]}
+  />
 
-:::note
+  <TinaTableRow
+    items={[
+      { label: "PreviewTitle" },
+      { label: "Toaster", style: "highlight" }
+    ]}
+  />
+</TinaTable>
 
+<Admonition type="note" title="note">
 Enclose the toaster in `<a>` tag and add the CTA link to its `href` attribute
+</Admonition>
 
-:::
-
-:::info
-
+<Admonition type="info" title="info">
 Plese check the [CTA guide](../builds/cta) for the proper labeling and link to use.
+</Admonition>
 
-:::
+### Required Images
 
-<h3> Required Images </h3>
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "Field", header: true },
+      { label: "Image", header: true }
+    ]}
+  />
 
-| Field | Image |
-| --- | --- |
-| PreviewTitle | `Toaster-65x65` |
+  <TinaTableRow
+    items={[
+      { label: "PreviewTitle" },
+      { label: "Toaster-65x65", style: "highlight" }
+    ]}
+  />
+</TinaTable>
 
 ## Commenting
 
 Right click your Rest ID and copy both the Rest ID and the Direct Link, provide both these for your ticket comment.
 
-<img className="my-3 w-lg" src={commentValue} />
+![](/img/builds/restId/restid-comment-value.png)
 
-:::tip
-
+<Admonition type="tip" title="tip">
 Embed the direct link of the Rest ID on the Rest ID itself or on a 'DL' beside it.
-
-<div className="my-3" />
 
 You can also provide a short description for what the Rest ID is(`IOT`, `CB-Fixed No Deposit Wager`, `BS-Fixed Deposit Wager`, etc...).
 
-<img className="my-5" src={comment} />
-
-:::
+![](/img/builds/restId/restid-comment.png)
+</Admonition>

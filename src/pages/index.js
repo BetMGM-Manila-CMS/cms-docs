@@ -22,7 +22,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/builds/assets-introduction"
+            to="/docs/builds/assets"
           >
             Docusaurus Tutorial - 5min ⏱️
           </Link>

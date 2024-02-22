@@ -1,0 +1,204 @@
+{
+  "label": "Docs Sidebar",
+  "items": [
+    {
+      "label": "Builds",
+      "items": [
+        {
+          "title": "Prerequisites",
+          "_template": "divider"
+        },
+        {
+          "title": "Assets",
+          "link": "doc",
+          "docLink": "docs/builds/assets.mdx",
+          "items": [
+            {
+              "document": "docs/builds/assets-request.mdx",
+              "label": "Requesting Assets",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/assets-uploading.mdx",
+              "label": "Uploading Creatives",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "document": "docs/builds/documents.mdx",
+          "label": "Documents",
+          "_template": "doc"
+        },
+        {
+          "title": "Product Categories",
+          "_template": "divider"
+        },
+        {
+          "title": "Casino",
+          "link": "generated",
+          "items": [
+            {
+              "document": "docs/builds/casino-carousel.mdx",
+              "label": "Casino Carousel",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/casino-odr-banner.mdx",
+              "label": "ODR Banner",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/casino-video-banners.mdx",
+              "label": "Video Banners",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/casino-stories.mdx",
+              "label": "Stories",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "title": "Poker",
+          "link": "generated",
+          "items": [
+            {
+              "document": "docs/builds/poker-carousel.mdx",
+              "label": "Poker Carousel",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/poker-tournaments-page.mdx",
+              "label": "Tournament Page",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/poker-client-overlay.mdx",
+              "label": "Client Overlay",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/poker-banners.mdx",
+              "label": "Banners",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "title": "Sports",
+          "link": "none",
+          "items": [
+            {
+              "document": "docs/builds/sports-core.mdx",
+              "label": "Core Domain",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/mai.mdx",
+              "label": "MAI Journey",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/sports-horse-racing.mdx",
+              "label": "Horse Racing Schedule",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/sports-mission-page.mdx",
+              "label": "MIssion Page",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "title": "Common Components",
+          "_template": "divider"
+        },
+        {
+          "title": "MPP",
+          "link": "doc",
+          "docLink": "docs/builds/mpp.mdx",
+          "items": [
+            {
+              "document": "docs/builds/mpp-v2.mdx",
+              "label": "V2",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "document": "docs/builds/restId.mdx",
+          "label": "Rest ID",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/landing-page.mdx",
+          "label": "Static Tile",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/landing-page.mdx",
+          "label": "Landing Page",
+          "_template": "doc"
+        },
+        {
+          "title": "PAT and EDS",
+          "link": "doc",
+          "docLink": "docs/builds/pat-eds.mdx",
+          "items": [
+            {
+              "document": "docs/builds/pat-eds-stw.mdx",
+              "label": "Spin The Wheel",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/pat-eds-pab.mdx",
+              "label": "Pick A Box",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/pat-eds-coin.mdx",
+              "label": "Coin Flip",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/pat-eds-cc.mdx",
+              "label": "Click Card",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "title": "Engagements",
+          "link": "generated",
+          "items": [
+            {
+              "document": "docs/builds/engagements-stw.mdx",
+              "label": "Spin The Wheel",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/engagements-pab.mdx",
+              "label": "Pick A Box",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/engagements-coin.mdx",
+              "label": "Coin Flip",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        }
+      ]
+    }
+  ]
+}
