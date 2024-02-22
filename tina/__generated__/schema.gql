@@ -57,11 +57,14 @@ type Query {
   postConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PostFilter): PostConnection!
   doc(relativePath: String): Doc!
   docConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: DocFilter): DocConnection!
+  sidebar(relativePath: String): Sidebar!
+  sidebarConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SidebarFilter): SidebarConnection!
 }
 
 input DocumentFilter {
   post: PostFilter
   doc: DocFilter
+  sidebar: SidebarFilter
 }
 
 type DocumentConnectionEdges {
@@ -87,7 +90,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Post | Doc | Folder
+union DocumentNode = Post | Doc | Sidebar | Folder
 
 type Post implements Node & Document {
   title: String!
@@ -281,6 +284,246 @@ type DocConnection implements Connection {
   edges: [DocConnectionEdges]
 }
 
+union SidebarItemsItemsCategoryDocLink = Doc
+
+union SidebarItemsItemsCategoryItemsCategoryDocLink = Doc
+
+union SidebarItemsItemsCategoryItemsCategoryItemsCategoryDocLink = Doc
+
+union SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocDocument = Doc
+
+type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc {
+  document: SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocDocument!
+  label: String
+}
+
+type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink {
+  title: String!
+  href: String!
+}
+
+union SidebarItemsItemsCategoryItemsCategoryItemsCategoryItems = SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc | SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink
+
+type SidebarItemsItemsCategoryItemsCategoryItemsCategory {
+  title: String!
+  link: String
+  docLink: SidebarItemsItemsCategoryItemsCategoryItemsCategoryDocLink
+  items: [SidebarItemsItemsCategoryItemsCategoryItemsCategoryItems]
+}
+
+union SidebarItemsItemsCategoryItemsCategoryItemsDocDocument = Doc
+
+type SidebarItemsItemsCategoryItemsCategoryItemsDoc {
+  document: SidebarItemsItemsCategoryItemsCategoryItemsDocDocument!
+  label: String
+}
+
+type SidebarItemsItemsCategoryItemsCategoryItemsLink {
+  title: String!
+  href: String!
+}
+
+union SidebarItemsItemsCategoryItemsCategoryItems = SidebarItemsItemsCategoryItemsCategoryItemsCategory | SidebarItemsItemsCategoryItemsCategoryItemsDoc | SidebarItemsItemsCategoryItemsCategoryItemsLink
+
+type SidebarItemsItemsCategoryItemsCategory {
+  title: String!
+  link: String
+  docLink: SidebarItemsItemsCategoryItemsCategoryDocLink
+  items: [SidebarItemsItemsCategoryItemsCategoryItems]
+}
+
+union SidebarItemsItemsCategoryItemsDocDocument = Doc
+
+type SidebarItemsItemsCategoryItemsDoc {
+  document: SidebarItemsItemsCategoryItemsDocDocument!
+  label: String
+}
+
+type SidebarItemsItemsCategoryItemsLink {
+  title: String!
+  href: String!
+}
+
+union SidebarItemsItemsCategoryItems = SidebarItemsItemsCategoryItemsCategory | SidebarItemsItemsCategoryItemsDoc | SidebarItemsItemsCategoryItemsLink
+
+type SidebarItemsItemsCategory {
+  title: String!
+  link: String
+  docLink: SidebarItemsItemsCategoryDocLink
+  items: [SidebarItemsItemsCategoryItems]
+}
+
+union SidebarItemsItemsDocDocument = Doc
+
+type SidebarItemsItemsDoc {
+  document: SidebarItemsItemsDocDocument!
+  label: String
+}
+
+type SidebarItemsItemsLink {
+  title: String!
+  href: String!
+}
+
+type SidebarItemsItemsDivider {
+  title: String!
+}
+
+union SidebarItemsItems = SidebarItemsItemsCategory | SidebarItemsItemsDoc | SidebarItemsItemsLink | SidebarItemsItemsDivider
+
+type SidebarItems {
+  label: String!
+  items: [SidebarItemsItems]
+}
+
+type Sidebar implements Node & Document {
+  _warning: String
+  label: String!
+  items: [SidebarItems]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input SidebarItemsItemsCategoryDocLinkFilter {
+  doc: DocFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryDocLinkFilter {
+  doc: DocFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsCategoryDocLinkFilter {
+  doc: DocFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocDocumentFilter {
+  doc: DocFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocFilter {
+  document: SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocDocumentFilter
+  label: StringFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLinkFilter {
+  title: StringFilter
+  href: StringFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsFilter {
+  doc: SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocFilter
+  link: SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLinkFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsCategoryFilter {
+  title: StringFilter
+  link: StringFilter
+  docLink: SidebarItemsItemsCategoryItemsCategoryItemsCategoryDocLinkFilter
+  items: SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsDocDocumentFilter {
+  doc: DocFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsDocFilter {
+  document: SidebarItemsItemsCategoryItemsCategoryItemsDocDocumentFilter
+  label: StringFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsLinkFilter {
+  title: StringFilter
+  href: StringFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsFilter {
+  category: SidebarItemsItemsCategoryItemsCategoryItemsCategoryFilter
+  doc: SidebarItemsItemsCategoryItemsCategoryItemsDocFilter
+  link: SidebarItemsItemsCategoryItemsCategoryItemsLinkFilter
+}
+
+input SidebarItemsItemsCategoryItemsCategoryFilter {
+  title: StringFilter
+  link: StringFilter
+  docLink: SidebarItemsItemsCategoryItemsCategoryDocLinkFilter
+  items: SidebarItemsItemsCategoryItemsCategoryItemsFilter
+}
+
+input SidebarItemsItemsCategoryItemsDocDocumentFilter {
+  doc: DocFilter
+}
+
+input SidebarItemsItemsCategoryItemsDocFilter {
+  document: SidebarItemsItemsCategoryItemsDocDocumentFilter
+  label: StringFilter
+}
+
+input SidebarItemsItemsCategoryItemsLinkFilter {
+  title: StringFilter
+  href: StringFilter
+}
+
+input SidebarItemsItemsCategoryItemsFilter {
+  category: SidebarItemsItemsCategoryItemsCategoryFilter
+  doc: SidebarItemsItemsCategoryItemsDocFilter
+  link: SidebarItemsItemsCategoryItemsLinkFilter
+}
+
+input SidebarItemsItemsCategoryFilter {
+  title: StringFilter
+  link: StringFilter
+  docLink: SidebarItemsItemsCategoryDocLinkFilter
+  items: SidebarItemsItemsCategoryItemsFilter
+}
+
+input SidebarItemsItemsDocDocumentFilter {
+  doc: DocFilter
+}
+
+input SidebarItemsItemsDocFilter {
+  document: SidebarItemsItemsDocDocumentFilter
+  label: StringFilter
+}
+
+input SidebarItemsItemsLinkFilter {
+  title: StringFilter
+  href: StringFilter
+}
+
+input SidebarItemsItemsDividerFilter {
+  title: StringFilter
+}
+
+input SidebarItemsItemsFilter {
+  category: SidebarItemsItemsCategoryFilter
+  doc: SidebarItemsItemsDocFilter
+  link: SidebarItemsItemsLinkFilter
+  divider: SidebarItemsItemsDividerFilter
+}
+
+input SidebarItemsFilter {
+  label: StringFilter
+  items: SidebarItemsItemsFilter
+}
+
+input SidebarFilter {
+  _warning: StringFilter
+  label: StringFilter
+  items: SidebarItemsFilter
+}
+
+type SidebarConnectionEdges {
+  cursor: String!
+  node: Sidebar
+}
+
+type SidebarConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [SidebarConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -290,17 +533,21 @@ type Mutation {
   createPost(relativePath: String!, params: PostMutation!): Post!
   updateDoc(relativePath: String!, params: DocMutation!): Doc!
   createDoc(relativePath: String!, params: DocMutation!): Doc!
+  updateSidebar(relativePath: String!, params: SidebarMutation!): Sidebar!
+  createSidebar(relativePath: String!, params: SidebarMutation!): Sidebar!
 }
 
 input DocumentUpdateMutation {
   post: PostMutation
   doc: DocMutation
+  sidebar: SidebarMutation
   relativePath: String
 }
 
 input DocumentMutation {
   post: PostMutation
   doc: DocMutation
+  sidebar: SidebarMutation
 }
 
 input PostMutation {
@@ -311,6 +558,106 @@ input PostMutation {
 input DocMutation {
   title: String
   body: JSON
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocMutation {
+  document: String
+  label: String
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLinkMutation {
+  title: String
+  href: String
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsMutation {
+  doc: SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocMutation
+  link: SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLinkMutation
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsCategoryMutation {
+  title: String
+  link: String
+  docLink: String
+  items: [SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsMutation]
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsDocMutation {
+  document: String
+  label: String
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsLinkMutation {
+  title: String
+  href: String
+}
+
+input SidebarItemsItemsCategoryItemsCategoryItemsMutation {
+  category: SidebarItemsItemsCategoryItemsCategoryItemsCategoryMutation
+  doc: SidebarItemsItemsCategoryItemsCategoryItemsDocMutation
+  link: SidebarItemsItemsCategoryItemsCategoryItemsLinkMutation
+}
+
+input SidebarItemsItemsCategoryItemsCategoryMutation {
+  title: String
+  link: String
+  docLink: String
+  items: [SidebarItemsItemsCategoryItemsCategoryItemsMutation]
+}
+
+input SidebarItemsItemsCategoryItemsDocMutation {
+  document: String
+  label: String
+}
+
+input SidebarItemsItemsCategoryItemsLinkMutation {
+  title: String
+  href: String
+}
+
+input SidebarItemsItemsCategoryItemsMutation {
+  category: SidebarItemsItemsCategoryItemsCategoryMutation
+  doc: SidebarItemsItemsCategoryItemsDocMutation
+  link: SidebarItemsItemsCategoryItemsLinkMutation
+}
+
+input SidebarItemsItemsCategoryMutation {
+  title: String
+  link: String
+  docLink: String
+  items: [SidebarItemsItemsCategoryItemsMutation]
+}
+
+input SidebarItemsItemsDocMutation {
+  document: String
+  label: String
+}
+
+input SidebarItemsItemsLinkMutation {
+  title: String
+  href: String
+}
+
+input SidebarItemsItemsDividerMutation {
+  title: String
+}
+
+input SidebarItemsItemsMutation {
+  category: SidebarItemsItemsCategoryMutation
+  doc: SidebarItemsItemsDocMutation
+  link: SidebarItemsItemsLinkMutation
+  divider: SidebarItemsItemsDividerMutation
+}
+
+input SidebarItemsMutation {
+  label: String
+  items: [SidebarItemsItemsMutation]
+}
+
+input SidebarMutation {
+  _warning: String
+  label: String
+  items: [SidebarItemsMutation]
 }
 
 schema {

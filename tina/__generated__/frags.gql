@@ -9,3 +9,194 @@ fragment DocParts on Doc {
   title
   body
 }
+
+fragment SidebarParts on Sidebar {
+  __typename
+  _warning
+  label
+  items {
+    __typename
+    label
+    items {
+      __typename
+      ... on SidebarItemsItemsCategory {
+        title
+        link
+        docLink {
+          ... on Doc {
+            __typename
+            title
+            body
+          }
+          ... on Document {
+            _sys {
+              filename
+              basename
+              breadcrumbs
+              path
+              relativePath
+              extension
+            }
+            id
+          }
+        }
+        items {
+          __typename
+          ... on SidebarItemsItemsCategoryItemsCategory {
+            title
+            link
+            docLink {
+              ... on Doc {
+                __typename
+                title
+                body
+              }
+              ... on Document {
+                _sys {
+                  filename
+                  basename
+                  breadcrumbs
+                  path
+                  relativePath
+                  extension
+                }
+                id
+              }
+            }
+            items {
+              __typename
+              ... on SidebarItemsItemsCategoryItemsCategoryItemsCategory {
+                title
+                link
+                docLink {
+                  ... on Doc {
+                    __typename
+                    title
+                    body
+                  }
+                  ... on Document {
+                    _sys {
+                      filename
+                      basename
+                      breadcrumbs
+                      path
+                      relativePath
+                      extension
+                    }
+                    id
+                  }
+                }
+                items {
+                  __typename
+                  ... on SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc {
+                    document {
+                      ... on Doc {
+                        __typename
+                        title
+                        body
+                      }
+                      ... on Document {
+                        _sys {
+                          filename
+                          basename
+                          breadcrumbs
+                          path
+                          relativePath
+                          extension
+                        }
+                        id
+                      }
+                    }
+                    label
+                  }
+                  ... on SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink {
+                    title
+                    href
+                  }
+                }
+              }
+              ... on SidebarItemsItemsCategoryItemsCategoryItemsDoc {
+                document {
+                  ... on Doc {
+                    __typename
+                    title
+                    body
+                  }
+                  ... on Document {
+                    _sys {
+                      filename
+                      basename
+                      breadcrumbs
+                      path
+                      relativePath
+                      extension
+                    }
+                    id
+                  }
+                }
+                label
+              }
+              ... on SidebarItemsItemsCategoryItemsCategoryItemsLink {
+                title
+                href
+              }
+            }
+          }
+          ... on SidebarItemsItemsCategoryItemsDoc {
+            document {
+              ... on Doc {
+                __typename
+                title
+                body
+              }
+              ... on Document {
+                _sys {
+                  filename
+                  basename
+                  breadcrumbs
+                  path
+                  relativePath
+                  extension
+                }
+                id
+              }
+            }
+            label
+          }
+          ... on SidebarItemsItemsCategoryItemsLink {
+            title
+            href
+          }
+        }
+      }
+      ... on SidebarItemsItemsDoc {
+        document {
+          ... on Doc {
+            __typename
+            title
+            body
+          }
+          ... on Document {
+            _sys {
+              filename
+              basename
+              breadcrumbs
+              path
+              relativePath
+              extension
+            }
+            id
+          }
+        }
+        label
+      }
+      ... on SidebarItemsItemsLink {
+        title
+        href
+      }
+      ... on SidebarItemsItemsDivider {
+        title
+      }
+    }
+  }
+}

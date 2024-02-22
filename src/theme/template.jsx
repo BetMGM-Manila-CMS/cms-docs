@@ -311,6 +311,8 @@ const CodeBlockTemplate = {
     ],
 };
 
+const SibarItemTemplate = {}
+
 
 export const MDXTemplates = [
     TabsTemplate,

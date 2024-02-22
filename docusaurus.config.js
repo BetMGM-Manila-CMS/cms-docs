@@ -94,33 +94,19 @@ const config = {
             position: "left",
             label: "Builds",
           },
-          {
+          /* {
             type: "docSidebar",
             sidebarId: "ticketsSidebar",
             position: "left",
             label: "Tickets",
-          },
-          /* {
-            type: "docSidebar",
-            sidebarId: "teamSidebar",
-            position: "left",
-            label: "Team",
-          },
-           */
+          }, */
           { to: "/team", label: "Team", position: "left" }, // temporary
-          {
+          /* {
             type: "docSidebar",
             sidebarId: "toolsSidebar",
             position: "left",
             label: "Tools",
-          },
-          // { to: "/blog", label: "Tools", position: "left" }, // temporary
-          // { to: "/blog", label: "Blog", position: "left" },
-          // {
-          //   href: "https://github.com/facebook/docusaurus",
-          //   label: "GitHub",
-          //   position: "right",
-          // },
+          }, */
           {
             type: "search",
             position: "right",

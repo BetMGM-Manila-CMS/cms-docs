@@ -1,0 +1,32 @@
+{
+  "label": "Docs Sidebar",
+  "items": [
+    {
+      "label": "Builds",
+      "items": [
+        {
+          "title": "Prerequisites",
+          "_template": "divider"
+        },
+        {
+          "title": "MPP",
+          "link": "doc",
+          "docLink": "docs/builds/mpp.mdx",
+          "items": [
+            {
+              "document": "docs/builds/mpp-v2.mdx",
+              "label": "V2",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "document": "docs/builds/assets-introduction.mdx",
+          "label": "Assets",
+          "_template": "doc"
+        }
+      ]
+    }
+  ]
+}
