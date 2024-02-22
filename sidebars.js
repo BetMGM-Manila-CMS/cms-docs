@@ -107,7 +107,7 @@ const mapPageSidebars = (sidebarData) => {
 }
 
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
-const sidebars = {
+/* const sidebars = {
 
   buildsSidebar: [
     {
@@ -138,7 +138,6 @@ const sidebars = {
       items: [
         "builds/casino-carousel",
         "builds/casino-odr-banner",
-        // "builds/casino-mpp",
         "builds/casino-video-banners",
         "builds/casino-stories"
       ],
@@ -243,9 +242,6 @@ const sidebars = {
       id: "builds/smartlinks",
     },
   ],
-  /* buildsSidebar: sidebarData.items.flatMap((item) => {
-    return getItem(item);
-  }), */
   ticketsSidebar: [
     "tickets/monday",
     "tickets/workfront",
@@ -259,9 +255,7 @@ const sidebars = {
     },
   ],
   toolsSidebar: ["tools/htmlTidy", "tools/textCompare", "tools/restIdQaTool"],
-  /* teamSidebar: [],
-  toolsSidebar: [], */
-};
+}; */
 
 const generatedSidebar = mapPageSidebars(sidebarData)
 
