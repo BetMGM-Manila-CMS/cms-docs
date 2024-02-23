@@ -346,6 +346,11 @@ var DocCollection = {
   label: "Docs",
   path: "docs/builds",
   format: "mdx",
+  ui: {
+    router: ({ document }) => {
+      return `/docs/builds/${document._sys.filename}`;
+    }
+  },
   fields: [
     {
       type: "string",
@@ -630,9 +635,9 @@ var config_default = defineConfig({
   // clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   // Get this from tina.io
   // token: process.env.TINA_TOKEN,
-  branch: "dev/main",
-  clientId: "7eb9602a-63c1-49ab-986c-560697edb96a",
-  token: "da9696e46e2fa32edbb7287a0b9bbd8bf99ecc0f",
+  branch: process.env.TINA_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || "",
+  clientId: process.env.TINA_CLIENT_ID || "",
+  token: process.env.TINA_TOKEN || "",
   build: {
     outputFolder: "admin",
     publicFolder: "static"
