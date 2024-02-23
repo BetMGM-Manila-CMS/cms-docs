@@ -5,13 +5,16 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "tinacms build && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "tina": "tinacms dev -c \"docusaurus start\"",
+    "tina-build": "tinacms build && docusaurus build",
+    "tina-start": "tinacms build && docusaurus start"
   },
   "dependencies": {
     "@docusaurus/core": "3.0.1",
@@ -26,11 +29,14 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-dynamic-virtual-scroll": "^1.4.0",
-    "tailwindcss": "^3.4.0"
+    "tailwindcss": "^3.4.0",
+    "tinacms": "^1.5.28"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.0.1",
     "@docusaurus/types": "3.0.1",
+    "@tinacms/cli": "^1.5.39",
+    "@types/node": "^20.11.14",
     "daisyui": "^4.4.24"
   },
   "browserslist": {

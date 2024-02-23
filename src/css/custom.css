@@ -29,15 +29,25 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* global styles */
+img {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+li > img:first-of-type {
+  margin-top: 1rem;
+}
+
+/* custom styles */
+
 td
   .codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module {
   margin-bottom: 0 !important;
 }
-
-/* tr td:nth-child(6),
-tr th:nth-child(6) {
-  width: 200px;
-} */
 
 .divider {
   font-size: 0.6em;
@@ -71,3 +81,4 @@ tr th:nth-child(6) {
 .wrap-code code {
   white-space: pre-wrap !important;
 }
+

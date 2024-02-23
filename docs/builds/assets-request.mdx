@@ -1,21 +1,19 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-import adjustPokerChip from "../../static/img/builds/assets/request-image-adjust-chip.png"
-import adjustCoin from "../../static/img/builds/assets/request-image-adjust-coin-lp.png"
-import adjustWheel from "../../static/img/builds/assets/request-image-wheel-blank.png"
-import missingImages from "../../static/img/builds/assets/request-missing-odr.png"
-import compressImages from "../../static/img/builds/assets/request-compress.png"
+---
+title: Requesting Assets
+category: Assets
+group: Prerequisites
+---
 
 # Requesting Assets
 
 Requesting assets is done if there are discrepancies on the provided assets.
 
 Following reasons may be:
-- File size is too large.
-- Image has contrast issue.
-- Image has misaligned elements.
-- Image is required but is not provided.
+
+* File size is too large.
+* Image has contrast issue.
+* Image has misaligned elements.
+* Image is required but is not provided.
 
 ## Prerequisites
 
@@ -25,35 +23,35 @@ In order to request access please check you need to have access to `CMS Design C
 
 Please include the following parts to your message:
 
-- **Leads of Designer** - depending on your ticket it can be Casino or Sports. Tag the respective leads for fast visibility of the designers.
-- **Reason of Request** - mention what needs to be done for your request.
-- **Images to Modify** - list the filenames of the files you want to be updated.
-- **Workfront Link** - include the Workfront link of the ticket, preferrably linking to the updates tab.
-- **Box Link** - include the box link of the file where it is stored.
-- **Image for Instruction** - this can be optional but can really help for adjustments, so the designers can easily figure out what you want to be adjusted.
+* **Leads of Designer** - depending on your ticket it can be Casino or Sports. Tag the respective leads for fast visibility of the designers.
+* **Reason of Request** - mention what needs to be done for your request.
+* **Images to Modify** - list the filenames of the files you want to be updated.
+* **Workfront Link** - include the Workfront link of the ticket, preferrably linking to the updates tab.
+* **Box Link** - include the box link of the file where it is stored.
+* **Image for Instruction** - this can be optional but can really help for adjustments, so the designers can easily figure out what you want to be adjusted.
 
 ## Request Examples
 
 ### Compressing of Files
 
-<img className="w-3/4 max-w-md mt-4" src={compressImages} alt="Message Requesting to adjust Coin" />
+<img className="w-3/4 max-w-md mt-4" src="/img/builds/assets/request-compress.png" alt="Message Requesting to adjust Coin" />
 
 ### Missing Files
 
-<img className="w-3/4 max-w-md mt-4" src={missingImages} alt="Message Requesting to adjust Coin" />
+<img className="w-3/4 max-w-md mt-4" src="/img/builds/assets/request-missing-odr.png" alt="Message Requesting to adjust Coin" />
 
 ### Adjustment of Elements
 
 <Tabs>
-  <TabItem value="apple" label="Adjust Poker Chips on Carousel" default>
-    <img className="w-3/4 max-w-md mt-4" src={adjustPokerChip} alt="Message Requesting to adjust Poker Chip" />
+  <TabItem label="Adjust Poker Chips on Carousel" value="adjust-poker-chips-on-carousel">
+    <img src="/img/builds/assets/request-image-adjust-chip.png" />
   </TabItem>
-  <TabItem value="orange" label="Move Coin on Landing Page">
-    <img className="w-3/4 max-w-md mt-4" src={adjustCoin} alt="Message Requesting to adjust Coin" />
+
+  <TabItem label="Move Coin on Landing Page" value="move-coin-on-landing-page">
+    <img src="/img/builds/assets/request-image-adjust-coin-lp.png" />
   </TabItem>
-  <TabItem value="banana" label="Resize Wheel">
-    <img className="w-3/4 max-w-md mt-4" src={adjustWheel} alt="Message Requesting to adjust Wheel Blank" />
+
+  <TabItem label="Resize Wheel" value="resize-wheel">
+    <img src="/img/builds/assets/request-image-wheel-blank.png" />
   </TabItem>
 </Tabs>
-
-

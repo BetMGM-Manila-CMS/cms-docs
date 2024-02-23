@@ -85,6 +85,8 @@ export type Query = {
   postConnection: PostConnection;
   doc: Doc;
   docConnection: DocConnection;
+  sidebar: Sidebar;
+  sidebarConnection: SidebarConnection;
 };
 
 
@@ -138,9 +140,25 @@ export type QueryDocConnectionArgs = {
   filter?: InputMaybe<DocFilter>;
 };
 
+
+export type QuerySidebarArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QuerySidebarConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<SidebarFilter>;
+};
+
 export type DocumentFilter = {
   post?: InputMaybe<PostFilter>;
   doc?: InputMaybe<DocFilter>;
+  sidebar?: InputMaybe<SidebarFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -180,7 +198,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Post | Doc | Folder;
+export type DocumentNode = Post | Doc | Sidebar | Folder;
 
 export type Post = Node & Document & {
   __typename?: 'Post';
@@ -268,8 +286,51 @@ export type DocBodyAdmonitionChildrenImgFilter = {
   alt?: InputMaybe<StringFilter>;
 };
 
+export type DocBodyAdmonitionChildrenTinaSpacerFilter = {
+  space?: InputMaybe<StringFilter>;
+};
+
+export type BooleanFilter = {
+  eq?: InputMaybe<Scalars['Boolean']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type NumberFilter = {
+  lt?: InputMaybe<Scalars['Float']['input']>;
+  lte?: InputMaybe<Scalars['Float']['input']>;
+  gte?: InputMaybe<Scalars['Float']['input']>;
+  gt?: InputMaybe<Scalars['Float']['input']>;
+  eq?: InputMaybe<Scalars['Float']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
+};
+
+export type DocBodyTinaTableChildrenTinaTableRowItemsFilter = {
+  label?: InputMaybe<StringFilter>;
+  header?: InputMaybe<BooleanFilter>;
+  style?: InputMaybe<StringFilter>;
+  url?: InputMaybe<StringFilter>;
+  rowSpan?: InputMaybe<NumberFilter>;
+  colSpan?: InputMaybe<NumberFilter>;
+};
+
+export type DocBodyTinaTableChildrenTinaTableRowFilter = {
+  items?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowItemsFilter>;
+};
+
+export type DocBodyAdmonitionChildrenTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowFilter>;
+};
+
+export type DocBodyAdmonitionChildrenTinaTableFilter = {
+  title?: InputMaybe<StringFilter>;
+  children?: InputMaybe<DocBodyAdmonitionChildrenTinaTableChildrenFilter>;
+};
+
 export type DocBodyAdmonitionChildrenFilter = {
   img?: InputMaybe<DocBodyAdmonitionChildrenImgFilter>;
+  TinaSpacer?: InputMaybe<DocBodyAdmonitionChildrenTinaSpacerFilter>;
+  TinaTable?: InputMaybe<DocBodyAdmonitionChildrenTinaTableFilter>;
 };
 
 export type DocBodyAdmonitionFilter = {
@@ -284,27 +345,29 @@ export type DocBodyImgFilter = {
   alt?: InputMaybe<StringFilter>;
 };
 
-export type BooleanFilter = {
-  eq?: InputMaybe<Scalars['Boolean']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type DocBodyTinaTableChildrenTinaTableRowItemsFilter = {
-  label?: InputMaybe<StringFilter>;
-  header?: InputMaybe<BooleanFilter>;
-  style?: InputMaybe<StringFilter>;
-};
-
-export type DocBodyTinaTableChildrenTinaTableRowFilter = {
-  items?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowItemsFilter>;
-};
-
 export type DocBodyTinaTableChildrenFilter = {
   TinaTableRow?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowFilter>;
 };
 
 export type DocBodyTinaTableFilter = {
+  title?: InputMaybe<StringFilter>;
   children?: InputMaybe<DocBodyTinaTableChildrenFilter>;
+};
+
+export type DocBodyTinaSpacerFilter = {
+  space?: InputMaybe<StringFilter>;
+};
+
+export type DocBodyDetailsFilter = {
+  summary?: InputMaybe<StringFilter>;
+  children?: InputMaybe<RichTextFilter>;
+};
+
+export type DocBodyCodeBlockFilter = {
+  title?: InputMaybe<StringFilter>;
+  language?: InputMaybe<StringFilter>;
+  showLineNumbers?: InputMaybe<BooleanFilter>;
+  children?: InputMaybe<RichTextFilter>;
 };
 
 export type DocBodyFilter = {
@@ -312,6 +375,9 @@ export type DocBodyFilter = {
   Admonition?: InputMaybe<DocBodyAdmonitionFilter>;
   img?: InputMaybe<DocBodyImgFilter>;
   TinaTable?: InputMaybe<DocBodyTinaTableFilter>;
+  TinaSpacer?: InputMaybe<DocBodyTinaSpacerFilter>;
+  Details?: InputMaybe<DocBodyDetailsFilter>;
+  CodeBlock?: InputMaybe<DocBodyCodeBlockFilter>;
 };
 
 export type DocFilter = {
@@ -332,6 +398,262 @@ export type DocConnection = Connection & {
   edges?: Maybe<Array<Maybe<DocConnectionEdges>>>;
 };
 
+export type SidebarItemsItemsCategoryDocLink = Doc;
+
+export type SidebarItemsItemsCategoryItemsCategoryDocLink = Doc;
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryDocLink = Doc;
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocDocument = Doc;
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc = {
+  __typename?: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc';
+  document: SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocDocument;
+  label: Scalars['String']['output'];
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink = {
+  __typename?: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink';
+  title: Scalars['String']['output'];
+  href: Scalars['String']['output'];
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItems = SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc | SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink;
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategory = {
+  __typename?: 'SidebarItemsItemsCategoryItemsCategoryItemsCategory';
+  title: Scalars['String']['output'];
+  link?: Maybe<Scalars['String']['output']>;
+  docLink?: Maybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryDocLink>;
+  items?: Maybe<Array<Maybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryItems>>>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsDocDocument = Doc;
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsDoc = {
+  __typename?: 'SidebarItemsItemsCategoryItemsCategoryItemsDoc';
+  document: SidebarItemsItemsCategoryItemsCategoryItemsDocDocument;
+  label: Scalars['String']['output'];
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsLink = {
+  __typename?: 'SidebarItemsItemsCategoryItemsCategoryItemsLink';
+  title: Scalars['String']['output'];
+  href: Scalars['String']['output'];
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItems = SidebarItemsItemsCategoryItemsCategoryItemsCategory | SidebarItemsItemsCategoryItemsCategoryItemsDoc | SidebarItemsItemsCategoryItemsCategoryItemsLink;
+
+export type SidebarItemsItemsCategoryItemsCategory = {
+  __typename?: 'SidebarItemsItemsCategoryItemsCategory';
+  title: Scalars['String']['output'];
+  link?: Maybe<Scalars['String']['output']>;
+  docLink?: Maybe<SidebarItemsItemsCategoryItemsCategoryDocLink>;
+  items?: Maybe<Array<Maybe<SidebarItemsItemsCategoryItemsCategoryItems>>>;
+};
+
+export type SidebarItemsItemsCategoryItemsDocDocument = Doc;
+
+export type SidebarItemsItemsCategoryItemsDoc = {
+  __typename?: 'SidebarItemsItemsCategoryItemsDoc';
+  document: SidebarItemsItemsCategoryItemsDocDocument;
+  label: Scalars['String']['output'];
+};
+
+export type SidebarItemsItemsCategoryItemsLink = {
+  __typename?: 'SidebarItemsItemsCategoryItemsLink';
+  title: Scalars['String']['output'];
+  href: Scalars['String']['output'];
+};
+
+export type SidebarItemsItemsCategoryItems = SidebarItemsItemsCategoryItemsCategory | SidebarItemsItemsCategoryItemsDoc | SidebarItemsItemsCategoryItemsLink;
+
+export type SidebarItemsItemsCategory = {
+  __typename?: 'SidebarItemsItemsCategory';
+  title: Scalars['String']['output'];
+  link?: Maybe<Scalars['String']['output']>;
+  docLink?: Maybe<SidebarItemsItemsCategoryDocLink>;
+  items?: Maybe<Array<Maybe<SidebarItemsItemsCategoryItems>>>;
+};
+
+export type SidebarItemsItemsDocDocument = Doc;
+
+export type SidebarItemsItemsDoc = {
+  __typename?: 'SidebarItemsItemsDoc';
+  document: SidebarItemsItemsDocDocument;
+  label: Scalars['String']['output'];
+};
+
+export type SidebarItemsItemsLink = {
+  __typename?: 'SidebarItemsItemsLink';
+  title: Scalars['String']['output'];
+  href: Scalars['String']['output'];
+};
+
+export type SidebarItemsItemsDivider = {
+  __typename?: 'SidebarItemsItemsDivider';
+  title: Scalars['String']['output'];
+};
+
+export type SidebarItemsItems = SidebarItemsItemsCategory | SidebarItemsItemsDoc | SidebarItemsItemsLink | SidebarItemsItemsDivider;
+
+export type SidebarItems = {
+  __typename?: 'SidebarItems';
+  label: Scalars['String']['output'];
+  items?: Maybe<Array<Maybe<SidebarItemsItems>>>;
+};
+
+export type Sidebar = Node & Document & {
+  __typename?: 'Sidebar';
+  _warning?: Maybe<Scalars['String']['output']>;
+  label: Scalars['String']['output'];
+  items?: Maybe<Array<Maybe<SidebarItems>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type SidebarItemsItemsCategoryDocLinkFilter = {
+  doc?: InputMaybe<DocFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryDocLinkFilter = {
+  doc?: InputMaybe<DocFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryDocLinkFilter = {
+  doc?: InputMaybe<DocFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocDocumentFilter = {
+  doc?: InputMaybe<DocFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocFilter = {
+  document?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocDocumentFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLinkFilter = {
+  title?: InputMaybe<StringFilter>;
+  href?: InputMaybe<StringFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsFilter = {
+  doc?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocFilter>;
+  link?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLinkFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryFilter = {
+  title?: InputMaybe<StringFilter>;
+  link?: InputMaybe<StringFilter>;
+  docLink?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryDocLinkFilter>;
+  items?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsDocDocumentFilter = {
+  doc?: InputMaybe<DocFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsDocFilter = {
+  document?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsDocDocumentFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsLinkFilter = {
+  title?: InputMaybe<StringFilter>;
+  href?: InputMaybe<StringFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsFilter = {
+  category?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryFilter>;
+  doc?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsDocFilter>;
+  link?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsLinkFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryFilter = {
+  title?: InputMaybe<StringFilter>;
+  link?: InputMaybe<StringFilter>;
+  docLink?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryDocLinkFilter>;
+  items?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsDocDocumentFilter = {
+  doc?: InputMaybe<DocFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsDocFilter = {
+  document?: InputMaybe<SidebarItemsItemsCategoryItemsDocDocumentFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsLinkFilter = {
+  title?: InputMaybe<StringFilter>;
+  href?: InputMaybe<StringFilter>;
+};
+
+export type SidebarItemsItemsCategoryItemsFilter = {
+  category?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryFilter>;
+  doc?: InputMaybe<SidebarItemsItemsCategoryItemsDocFilter>;
+  link?: InputMaybe<SidebarItemsItemsCategoryItemsLinkFilter>;
+};
+
+export type SidebarItemsItemsCategoryFilter = {
+  title?: InputMaybe<StringFilter>;
+  link?: InputMaybe<StringFilter>;
+  docLink?: InputMaybe<SidebarItemsItemsCategoryDocLinkFilter>;
+  items?: InputMaybe<SidebarItemsItemsCategoryItemsFilter>;
+};
+
+export type SidebarItemsItemsDocDocumentFilter = {
+  doc?: InputMaybe<DocFilter>;
+};
+
+export type SidebarItemsItemsDocFilter = {
+  document?: InputMaybe<SidebarItemsItemsDocDocumentFilter>;
+  label?: InputMaybe<StringFilter>;
+};
+
+export type SidebarItemsItemsLinkFilter = {
+  title?: InputMaybe<StringFilter>;
+  href?: InputMaybe<StringFilter>;
+};
+
+export type SidebarItemsItemsDividerFilter = {
+  title?: InputMaybe<StringFilter>;
+};
+
+export type SidebarItemsItemsFilter = {
+  category?: InputMaybe<SidebarItemsItemsCategoryFilter>;
+  doc?: InputMaybe<SidebarItemsItemsDocFilter>;
+  link?: InputMaybe<SidebarItemsItemsLinkFilter>;
+  divider?: InputMaybe<SidebarItemsItemsDividerFilter>;
+};
+
+export type SidebarItemsFilter = {
+  label?: InputMaybe<StringFilter>;
+  items?: InputMaybe<SidebarItemsItemsFilter>;
+};
+
+export type SidebarFilter = {
+  _warning?: InputMaybe<StringFilter>;
+  label?: InputMaybe<StringFilter>;
+  items?: InputMaybe<SidebarItemsFilter>;
+};
+
+export type SidebarConnectionEdges = {
+  __typename?: 'SidebarConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Sidebar>;
+};
+
+export type SidebarConnection = Connection & {
+  __typename?: 'SidebarConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<SidebarConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -342,6 +664,8 @@ export type Mutation = {
   createPost: Post;
   updateDoc: Doc;
   createDoc: Doc;
+  updateSidebar: Sidebar;
+  createSidebar: Sidebar;
 };
 
 
@@ -395,15 +719,29 @@ export type MutationCreateDocArgs = {
   params: DocMutation;
 };
 
+
+export type MutationUpdateSidebarArgs = {
+  relativePath: Scalars['String']['input'];
+  params: SidebarMutation;
+};
+
+
+export type MutationCreateSidebarArgs = {
+  relativePath: Scalars['String']['input'];
+  params: SidebarMutation;
+};
+
 export type DocumentUpdateMutation = {
   post?: InputMaybe<PostMutation>;
   doc?: InputMaybe<DocMutation>;
+  sidebar?: InputMaybe<SidebarMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
   post?: InputMaybe<PostMutation>;
   doc?: InputMaybe<DocMutation>;
+  sidebar?: InputMaybe<SidebarMutation>;
 };
 
 export type PostMutation = {
@@ -416,9 +754,111 @@ export type DocMutation = {
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocMutation = {
+  document?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLinkMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  href?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsMutation = {
+  doc?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDocMutation>;
+  link?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLinkMutation>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsCategoryMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  link?: InputMaybe<Scalars['String']['input']>;
+  docLink?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsMutation>>>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsDocMutation = {
+  document?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsLinkMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  href?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryItemsMutation = {
+  category?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsCategoryMutation>;
+  doc?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsDocMutation>;
+  link?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsLinkMutation>;
+};
+
+export type SidebarItemsItemsCategoryItemsCategoryMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  link?: InputMaybe<Scalars['String']['input']>;
+  docLink?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<SidebarItemsItemsCategoryItemsCategoryItemsMutation>>>;
+};
+
+export type SidebarItemsItemsCategoryItemsDocMutation = {
+  document?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SidebarItemsItemsCategoryItemsLinkMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  href?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SidebarItemsItemsCategoryItemsMutation = {
+  category?: InputMaybe<SidebarItemsItemsCategoryItemsCategoryMutation>;
+  doc?: InputMaybe<SidebarItemsItemsCategoryItemsDocMutation>;
+  link?: InputMaybe<SidebarItemsItemsCategoryItemsLinkMutation>;
+};
+
+export type SidebarItemsItemsCategoryMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  link?: InputMaybe<Scalars['String']['input']>;
+  docLink?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<SidebarItemsItemsCategoryItemsMutation>>>;
+};
+
+export type SidebarItemsItemsDocMutation = {
+  document?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SidebarItemsItemsLinkMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  href?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SidebarItemsItemsDividerMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type SidebarItemsItemsMutation = {
+  category?: InputMaybe<SidebarItemsItemsCategoryMutation>;
+  doc?: InputMaybe<SidebarItemsItemsDocMutation>;
+  link?: InputMaybe<SidebarItemsItemsLinkMutation>;
+  divider?: InputMaybe<SidebarItemsItemsDividerMutation>;
+};
+
+export type SidebarItemsMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<SidebarItemsItemsMutation>>>;
+};
+
+export type SidebarMutation = {
+  _warning?: InputMaybe<Scalars['String']['input']>;
+  label?: InputMaybe<Scalars['String']['input']>;
+  items?: InputMaybe<Array<InputMaybe<SidebarItemsMutation>>>;
+};
+
 export type PostPartsFragment = { __typename: 'Post', title: string, body?: any | null };
 
 export type DocPartsFragment = { __typename: 'Doc', title: string, body?: any | null };
+
+export type SidebarPartsFragment = { __typename: 'Sidebar', _warning?: string | null, label: string, items?: Array<{ __typename: 'SidebarItems', label: string, items?: Array<{ __typename: 'SidebarItemsItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsLink', title: string, href: string } | { __typename: 'SidebarItemsItemsDivider', title: string } | null> | null } | null> | null };
 
 export type PostQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -458,6 +898,25 @@ export type DocConnectionQueryVariables = Exact<{
 
 export type DocConnectionQuery = { __typename?: 'Query', docConnection: { __typename?: 'DocConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'DocConnectionEdges', cursor: string, node?: { __typename: 'Doc', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
+export type SidebarQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type SidebarQuery = { __typename?: 'Query', sidebar: { __typename: 'Sidebar', id: string, _warning?: string | null, label: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, items?: Array<{ __typename: 'SidebarItems', label: string, items?: Array<{ __typename: 'SidebarItemsItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsLink', title: string, href: string } | { __typename: 'SidebarItemsItemsDivider', title: string } | null> | null } | null> | null } };
+
+export type SidebarConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<SidebarFilter>;
+}>;
+
+
+export type SidebarConnectionQuery = { __typename?: 'Query', sidebarConnection: { __typename?: 'SidebarConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'SidebarConnectionEdges', cursor: string, node?: { __typename: 'Sidebar', id: string, _warning?: string | null, label: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, items?: Array<{ __typename: 'SidebarItems', label: string, items?: Array<{ __typename: 'SidebarItemsItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsLink', title: string, href: string } | { __typename: 'SidebarItemsItemsDivider', title: string } | null> | null } | null> | null } | null } | null> | null } };
+
 export const PostPartsFragmentDoc = gql`
     fragment PostParts on Post {
   __typename
@@ -470,6 +929,198 @@ export const DocPartsFragmentDoc = gql`
   __typename
   title
   body
+}
+    `;
+export const SidebarPartsFragmentDoc = gql`
+    fragment SidebarParts on Sidebar {
+  __typename
+  _warning
+  label
+  items {
+    __typename
+    label
+    items {
+      __typename
+      ... on SidebarItemsItemsCategory {
+        title
+        link
+        docLink {
+          ... on Doc {
+            __typename
+            title
+            body
+          }
+          ... on Document {
+            _sys {
+              filename
+              basename
+              breadcrumbs
+              path
+              relativePath
+              extension
+            }
+            id
+          }
+        }
+        items {
+          __typename
+          ... on SidebarItemsItemsCategoryItemsCategory {
+            title
+            link
+            docLink {
+              ... on Doc {
+                __typename
+                title
+                body
+              }
+              ... on Document {
+                _sys {
+                  filename
+                  basename
+                  breadcrumbs
+                  path
+                  relativePath
+                  extension
+                }
+                id
+              }
+            }
+            items {
+              __typename
+              ... on SidebarItemsItemsCategoryItemsCategoryItemsCategory {
+                title
+                link
+                docLink {
+                  ... on Doc {
+                    __typename
+                    title
+                    body
+                  }
+                  ... on Document {
+                    _sys {
+                      filename
+                      basename
+                      breadcrumbs
+                      path
+                      relativePath
+                      extension
+                    }
+                    id
+                  }
+                }
+                items {
+                  __typename
+                  ... on SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc {
+                    document {
+                      ... on Doc {
+                        __typename
+                        title
+                        body
+                      }
+                      ... on Document {
+                        _sys {
+                          filename
+                          basename
+                          breadcrumbs
+                          path
+                          relativePath
+                          extension
+                        }
+                        id
+                      }
+                    }
+                    label
+                  }
+                  ... on SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink {
+                    title
+                    href
+                  }
+                }
+              }
+              ... on SidebarItemsItemsCategoryItemsCategoryItemsDoc {
+                document {
+                  ... on Doc {
+                    __typename
+                    title
+                    body
+                  }
+                  ... on Document {
+                    _sys {
+                      filename
+                      basename
+                      breadcrumbs
+                      path
+                      relativePath
+                      extension
+                    }
+                    id
+                  }
+                }
+                label
+              }
+              ... on SidebarItemsItemsCategoryItemsCategoryItemsLink {
+                title
+                href
+              }
+            }
+          }
+          ... on SidebarItemsItemsCategoryItemsDoc {
+            document {
+              ... on Doc {
+                __typename
+                title
+                body
+              }
+              ... on Document {
+                _sys {
+                  filename
+                  basename
+                  breadcrumbs
+                  path
+                  relativePath
+                  extension
+                }
+                id
+              }
+            }
+            label
+          }
+          ... on SidebarItemsItemsCategoryItemsLink {
+            title
+            href
+          }
+        }
+      }
+      ... on SidebarItemsItemsDoc {
+        document {
+          ... on Doc {
+            __typename
+            title
+            body
+          }
+          ... on Document {
+            _sys {
+              filename
+              basename
+              breadcrumbs
+              path
+              relativePath
+              extension
+            }
+            id
+          }
+        }
+        label
+      }
+      ... on SidebarItemsItemsLink {
+        title
+        href
+      }
+      ... on SidebarItemsItemsDivider {
+        title
+      }
+    }
+  }
 }
     `;
 export const PostDocument = gql`
@@ -582,6 +1233,61 @@ export const DocConnectionDocument = gql`
   }
 }
     ${DocPartsFragmentDoc}`;
+export const SidebarDocument = gql`
+    query sidebar($relativePath: String!) {
+  sidebar(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...SidebarParts
+  }
+}
+    ${SidebarPartsFragmentDoc}`;
+export const SidebarConnectionDocument = gql`
+    query sidebarConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: SidebarFilter) {
+  sidebarConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...SidebarParts
+      }
+    }
+  }
+}
+    ${SidebarPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -596,6 +1302,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     docConnection(variables?: DocConnectionQueryVariables, options?: C): Promise<{data: DocConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: DocConnectionQueryVariables, query: string}> {
         return requester<{data: DocConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: DocConnectionQueryVariables, query: string}, DocConnectionQueryVariables>(DocConnectionDocument, variables, options);
+      },
+    sidebar(variables: SidebarQueryVariables, options?: C): Promise<{data: SidebarQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SidebarQueryVariables, query: string}> {
+        return requester<{data: SidebarQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SidebarQueryVariables, query: string}, SidebarQueryVariables>(SidebarDocument, variables, options);
+      },
+    sidebarConnection(variables?: SidebarConnectionQueryVariables, options?: C): Promise<{data: SidebarConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SidebarConnectionQueryVariables, query: string}> {
+        return requester<{data: SidebarConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SidebarConnectionQueryVariables, query: string}, SidebarConnectionQueryVariables>(SidebarConnectionDocument, variables, options);
       }
     };
   }
