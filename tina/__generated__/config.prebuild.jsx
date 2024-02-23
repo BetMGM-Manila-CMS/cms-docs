@@ -346,11 +346,11 @@ var DocCollection = {
   label: "Docs",
   path: "docs/builds",
   format: "mdx",
-  ui: {
+  /* ui: {
     router: ({ document }) => {
-      return `/docs/builds/${document._sys.filename}`;
+      return `/docs/builds/${document._sys.filename}`
     }
-  },
+  }, */
   fields: [
     {
       type: "string",
@@ -644,7 +644,7 @@ var config_default = defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "img",
       publicFolder: "static"
     }
   },

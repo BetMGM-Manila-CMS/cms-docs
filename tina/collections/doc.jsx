@@ -7,11 +7,11 @@ export const DocCollection = {
   label: "Docs",
   path: "docs/builds",
   format: "mdx",
-  ui: {
+  /* ui: {
     router: ({ document }) => {
       return `/docs/builds/${document._sys.filename}`
     }
-  },
+  }, */
   fields: [
     {
       type: 'string',
