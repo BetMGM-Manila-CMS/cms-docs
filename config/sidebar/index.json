@@ -223,6 +223,10 @@
           "_template": "doc"
         },
         {
+          "title": "Tests",
+          "_template": "divider"
+        },
+        {
           "document": "docs/builds/New-Tina-Page.mdx",
           "label": "Test",
           "_template": "doc"
