@@ -206,6 +206,11 @@
           "document": "docs/builds/cta.mdx",
           "label": "CTAs",
           "_template": "doc"
+        },
+        {
+          "document": "docs/builds/tables.mdx",
+          "label": "Tables",
+          "_template": "doc"
         }
       ]
     }
