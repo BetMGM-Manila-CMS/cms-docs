@@ -230,6 +230,11 @@
           "document": "docs/builds/New-Tina-Page.mdx",
           "label": "Test",
           "_template": "doc"
+        },
+        {
+          "document": "docs/builds/New-Page.mdx",
+          "label": "Test Page",
+          "_template": "doc"
         }
       ]
     }
