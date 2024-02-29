@@ -2,4 +2,63 @@
 title: New Tina Page
 ---
 
-Hello Tina
+# Hello Tina
+
+This is a page created from TinaCMS
+
+![](/img/bg.png)
+
+link
+
+> quote
+
+quote
+
+Sample List
+
+* 1
+* 2
+* 3
+
+Numbered List
+
+1. 1
+2. 2
+3. 3
+
+inline code
+
+```javascript
+const text = "hello world"
+```
+
+bold
+
+italize
+
+<img className="w-[100px]" src="/img/android-chrome-192x192.png" />
+
+<Tabs>
+  <TabItem label="New Tab" value="tab">
+    1st tab
+  </TabItem>
+
+  <TabItem label="New Tab" value="tab">
+    2nd tab
+  </TabItem>
+</Tabs>
+
+<Details summary="Detail Test">
+  Detail Content
+</Details>
+
+<TinaTable title="Sample Table">
+  <TinaTableRow
+    items={[
+      { label: "Section", header: true },
+      { label: "Content", header: true }
+    ]}
+  />
+
+  <TinaTableRow items={[{ label: "Description" }, { label: "Description Value" }]} />
+</TinaTable>
