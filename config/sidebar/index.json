@@ -211,6 +211,11 @@
           "document": "docs/builds/tables.mdx",
           "label": "Tables",
           "_template": "doc"
+        },
+        {
+          "document": "docs/builds/colors.mdx",
+          "label": "Colors",
+          "_template": "doc"
         }
       ]
     }
