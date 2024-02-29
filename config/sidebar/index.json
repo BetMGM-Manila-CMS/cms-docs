@@ -201,6 +201,11 @@
         {
           "title": "Guides",
           "_template": "divider"
+        },
+        {
+          "document": "docs/builds/cta.mdx",
+          "label": "CTAs",
+          "_template": "doc"
         }
       ]
     }
