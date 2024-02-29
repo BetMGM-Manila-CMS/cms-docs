@@ -221,6 +221,11 @@
           "document": "docs/builds/smartlinks.mdx",
           "label": "Smartlinks",
           "_template": "doc"
+        },
+        {
+          "document": "docs/builds/New-Tina-Page.mdx",
+          "label": "Test",
+          "_template": "doc"
         }
       ]
     }
