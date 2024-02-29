@@ -197,6 +197,10 @@
             }
           ],
           "_template": "category"
+        },
+        {
+          "title": "Guides",
+          "_template": "divider"
         }
       ]
     }
