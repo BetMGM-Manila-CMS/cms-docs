@@ -1,0 +1,52 @@
+---
+title: New Page
+---
+
+# New Page
+
+![](/img/logo.svg)
+
+<img src="/img/logo.svg" className="w-[10px]" />
+
+<Admonition type="caution" title="Do this thing">
+  sample content
+</Admonition>
+
+<Tabs>
+  <TabItem label="New Tab" value="1">
+    1
+  </TabItem>
+
+  <TabItem label="New Tab" value="2">
+    2
+  </TabItem>
+</Tabs>
+
+<Details summary="Sample Detail">
+  content
+</Details>
+
+<TinaTable>
+  <TinaTableRow
+    items={[
+      { label: "Header 1", header: true },
+      { label: "Header 2", header: true }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "Content 1", style: "highlight" },
+      { label: "Content 2" }
+    ]}
+  />
+
+  <TinaTableRow
+    items={[
+      { label: "Content 3", url: "https://betmgm-cms-docs.vercel.app/" },
+      { label: "Content 4", rowSpan: 2 }
+    ]}
+  />
+
+  <TinaTableRow items={[{ label: "Content 5" }]} />
+</TinaTable>

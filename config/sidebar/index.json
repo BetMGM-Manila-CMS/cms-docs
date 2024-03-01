@@ -197,6 +197,44 @@
             }
           ],
           "_template": "category"
+        },
+        {
+          "title": "Guides",
+          "_template": "divider"
+        },
+        {
+          "document": "docs/builds/colors.mdx",
+          "label": "Colors",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/cta.mdx",
+          "label": "CTAs",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/smartlinks.mdx",
+          "label": "Smartlinks",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/tables.mdx",
+          "label": "Tables",
+          "_template": "doc"
+        },
+        {
+          "title": "Tests",
+          "_template": "divider"
+        },
+        {
+          "document": "docs/builds/New-Tina-Page.mdx",
+          "label": "Test",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/New-Page.mdx",
+          "label": "Test Page",
+          "_template": "doc"
         }
       ]
     }
