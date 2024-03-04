@@ -32,7 +32,6 @@ To create your Carousel, navigate to it's directory:
   Content > Vanilla.Mobile > State/Brand > MobileCasino-v1.0 > Teasers > Repository
 </Admonition>
 
-
 Duplicate one of the Carousel object, preferably the template.
 
 <img src="/img/builds/carousel/duplicate.png" className="mb-3" />
@@ -43,22 +42,9 @@ Name the new Carousel object with the Ticket name.
 
 ### Required Fields
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { header: true, label: "Value" }
-    ]}
-  />
+<TinaTable rows={[{ row: [{ label: "Field" }, { label: "Value" }] }]} rowHeader={true} />
 
-  <TinaTableRow items={[{ label: "Title" }, { label: "H1" }]} />
-
-  <TinaTableRow items={[{ label: "Subtitle" }, { label: "H2" }]} />
-
-  <TinaTableRow items={[{ label: "Image" }, { label: "blank Media URL" }]} />
-
-  <TinaTableRow items={[{ label: "Background: Image" }, { label: "Media URL" }]} />
-</TinaTable>
+<TinaTable />
 
 <Admonition type="info" title="Labeling">
   Please check the CTA guide for the proper labeling and link to use.
@@ -70,37 +56,11 @@ Name the new Carousel object with the Ticket name.
 
 ### Teaser Alignments
 
-<TinaTable>
-    <TinaTableRow items={[
-    { label: 'Device', header: true },
-    { header: true, label: 'Value' },
-  ]} />
-    <TinaTableRow items={[
-    { label: 'Desktop' },
-    { label: 'actor-left title-big text-center actor no-cta' },
-  ]} />
-    <TinaTableRow items={[
-    { label: 'Mobile' },
-    { label: 'disable-actor title-big text-center' },
-  ]} />
-  </TinaTable>
+<TinaTable />
 
 ### Filters
 
-<TinaTable>
-    <TinaTableRow items={[
-    { label: 'Device', header: true },
-    { header: true, label: 'Value' },
-  ]} />
-    <TinaTableRow items={[
-    { label: 'Desktop' },
-    { label: '(Request.Query MATCHES "\[your name]") AND (NOT Device.IsMobile AND NOT Device.IsTablet)' },
-  ]} />
-    <TinaTableRow items={[
-    { label: 'Mobile' },
-    { label: '(Request.Query MATCHES "\[your name]") AND (Device.IsMobile OR Device.IsTablet)' },
-  ]} />
-  </TinaTable>
+<TinaTable />
 
 ## Pushing The Carousel
 

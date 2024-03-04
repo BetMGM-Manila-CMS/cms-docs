@@ -1,4 +1,5 @@
 import React from "react";
+import { wrapFieldsWithMeta } from "tinacms";
 
 const ClassyImageTemplate = {
     name: "img",
@@ -173,19 +174,82 @@ const TinaTableTemplate = {
         },
     },
     fields: [
+        /*         {
+                    name: "title",
+                    label: "Title",
+                    type: "string",
+                }, */
         {
-            name: "title",
-            label: "Title",
-            type: "string",
+            name: "rowHeader",
+            label: "Row Header",
+            type: "boolean"
         },
         {
+            name: "columnHeader",
+            label: "Column Header",
+            type: "boolean"
+        },
+        {
+            name: "rows",
+            label: "Rows",
+            list: true,
+            type: "object",
+            fields: [
+                {
+                    name: "row",
+                    label: "Row",
+                    type: "object",
+                    list: true,
+                    itemProps: (item) => {
+                        return { label: item ? item.label : null };
+                    },
+                    fields: [
+                        {
+                            name: "label",
+                            label: "Label",
+                            type: "string"
+                        },
+                        {
+                            name: "style",
+                            label: "Style",
+                            component: "select",
+                            type: "string",
+                            options: [{
+                                value: "highlight",
+                                label: "Highlight"
+                            }, {
+                                value: "code",
+                                label: "Code"
+                            }]
+                        },
+                        {
+                            name: "url",
+                            label: "Link",
+                            type: "string"
+                        },
+                        {
+                            name: "rowSpan",
+                            label: "Row Span",
+                            type: 'number'
+                        },
+                        {
+                            name: "colSpan",
+                            label: "Column Span",
+                            type: 'number'
+                        }
+                    ]
+                }
+            ]
+        },
+
+        /* {
             name: "children",
             label: "Rows",
             type: "rich-text",
             templates: [
                 TinaTableRowTemplate
             ]
-        },
+        }, */
     ]
 }
 

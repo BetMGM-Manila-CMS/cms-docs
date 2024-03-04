@@ -53,7 +53,7 @@ export const TinaTableRow = ({ items }) => {
     )
 }
 
-export const TinaTable = ({ children }) => {
+const ChildredContents = (children) => {
     const head = children ? children[0] : null
     const body = children && children.length ? children.slice(1) : null
 
@@ -75,4 +75,33 @@ export const TinaTable = ({ children }) => {
             }
         </table>
     )
+}
+
+export const TinaTable = ({ children }) => {
+    const head = children ? children[0] : null
+    const body = children && children.length ? children.slice(1) : null
+
+    if (children) {
+        return <ChildredContents children={children} />
+    }
+
+    /* return children ?
+        <table>
+            {
+                head ?
+                    <thead>
+                        {head}
+                    </thead>
+                    : null
+            }
+            {
+                body ?
+                    <tbody>
+                        {body}
+                    </tbody>
+                    : null
+            }
+        </table>
+        : <table>
+        </table> */
 }
