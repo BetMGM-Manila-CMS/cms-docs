@@ -149,6 +149,11 @@
           "_template": "doc"
         },
         {
+          "document": "docs/builds/Marquee.mdx",
+          "label": "Marquee",
+          "_template": "doc"
+        },
+        {
           "title": "PAT and EDS",
           "link": "doc",
           "docLink": "docs/builds/pat-eds.mdx",
