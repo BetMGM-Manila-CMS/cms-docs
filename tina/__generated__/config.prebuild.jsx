@@ -29,6 +29,7 @@ import React3 from "react";
 
 // src/theme/template.jsx
 import React2 from "react";
+import { wrapFieldsWithMeta } from "tinacms";
 var ClassyImageTemplate = {
   name: "img",
   label: "Classy Image",
@@ -131,62 +132,6 @@ var TabsTemplate = {
     }
   ]
 };
-var TinaTableRowTemplate = {
-  name: "TinaTableRow",
-  label: "Row",
-  type: "object",
-  fields: [
-    {
-      name: "items",
-      label: "Items",
-      type: "object",
-      list: true,
-      itemProps: (item) => {
-        return { label: item ? item.label : null };
-      },
-      fields: [
-        {
-          name: "label",
-          label: "Label",
-          type: "string"
-        },
-        {
-          name: "header",
-          label: "Header",
-          type: "boolean"
-        },
-        {
-          name: "style",
-          label: "Style",
-          component: "select",
-          type: "string",
-          options: [{
-            value: "highlight",
-            label: "Highlight"
-          }, {
-            value: "code",
-            label: "Code"
-          }]
-        },
-        {
-          name: "url",
-          label: "Link",
-          type: "string"
-        },
-        {
-          name: "rowSpan",
-          label: "Row Span",
-          type: "number"
-        },
-        {
-          name: "colSpan",
-          label: "Column Span",
-          type: "number"
-        }
-      ]
-    }
-  ]
-};
 var TinaTableTemplate = {
   name: "TinaTable",
   label: "Table",
@@ -196,19 +141,81 @@ var TinaTableTemplate = {
     }
   },
   fields: [
+    /*         {
+                name: "title",
+                label: "Title",
+                type: "string",
+            }, */
     {
-      name: "title",
-      label: "Title",
-      type: "string"
+      name: "rowHeader",
+      label: "Row Header",
+      type: "boolean"
     },
     {
-      name: "children",
+      name: "columnHeader",
+      label: "Column Header",
+      type: "boolean"
+    },
+    {
+      name: "rows",
       label: "Rows",
-      type: "rich-text",
-      templates: [
-        TinaTableRowTemplate
+      list: true,
+      type: "object",
+      fields: [
+        {
+          name: "row",
+          label: "Row",
+          type: "object",
+          list: true,
+          itemProps: (item) => {
+            return { label: item ? item.label : null };
+          },
+          fields: [
+            {
+              name: "label",
+              label: "Label",
+              type: "string"
+            },
+            {
+              name: "style",
+              label: "Style",
+              component: "select",
+              type: "string",
+              options: [{
+                value: "highlight",
+                label: "Highlight"
+              }, {
+                value: "code",
+                label: "Code"
+              }]
+            },
+            {
+              name: "url",
+              label: "Link",
+              type: "string"
+            },
+            {
+              name: "rowSpan",
+              label: "Row Span",
+              type: "number"
+            },
+            {
+              name: "colSpan",
+              label: "Column Span",
+              type: "number"
+            }
+          ]
+        }
       ]
     }
+    /* {
+        name: "children",
+        label: "Rows",
+        type: "rich-text",
+        templates: [
+            TinaTableRowTemplate
+        ]
+    }, */
   ]
 };
 var AdmonitionTemplate = {
