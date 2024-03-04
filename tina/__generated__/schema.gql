@@ -193,26 +193,22 @@ input NumberFilter {
   in: [Float]
 }
 
-input DocBodyTinaTableChildrenTinaTableRowItemsFilter {
+input DocBodyTinaTableRowsRowFilter {
   label: StringFilter
-  header: BooleanFilter
   style: StringFilter
   url: StringFilter
   rowSpan: NumberFilter
   colSpan: NumberFilter
 }
 
-input DocBodyTinaTableChildrenTinaTableRowFilter {
-  items: DocBodyTinaTableChildrenTinaTableRowItemsFilter
-}
-
-input DocBodyAdmonitionChildrenTinaTableChildrenFilter {
-  TinaTableRow: DocBodyTinaTableChildrenTinaTableRowFilter
+input DocBodyAdmonitionChildrenTinaTableRowsFilter {
+  row: DocBodyTinaTableRowsRowFilter
 }
 
 input DocBodyAdmonitionChildrenTinaTableFilter {
-  title: StringFilter
-  children: DocBodyAdmonitionChildrenTinaTableChildrenFilter
+  rowHeader: BooleanFilter
+  columnHeader: BooleanFilter
+  rows: DocBodyAdmonitionChildrenTinaTableRowsFilter
 }
 
 input DocBodyAdmonitionChildrenFilter {
@@ -233,13 +229,14 @@ input DocBodyImgFilter {
   alt: StringFilter
 }
 
-input DocBodyTinaTableChildrenFilter {
-  TinaTableRow: DocBodyTinaTableChildrenTinaTableRowFilter
+input DocBodyTinaTableRowsFilter {
+  row: DocBodyTinaTableRowsRowFilter
 }
 
 input DocBodyTinaTableFilter {
-  title: StringFilter
-  children: DocBodyTinaTableChildrenFilter
+  rowHeader: BooleanFilter
+  columnHeader: BooleanFilter
+  rows: DocBodyTinaTableRowsFilter
 }
 
 input DocBodyTinaSpacerFilter {

@@ -149,6 +149,11 @@
           "_template": "doc"
         },
         {
+          "document": "docs/builds/Marquee.mdx",
+          "label": "Marquee",
+          "_template": "doc"
+        },
+        {
           "title": "PAT and EDS",
           "link": "doc",
           "docLink": "docs/builds/pat-eds.mdx",
@@ -223,8 +228,17 @@
           "_template": "doc"
         },
         {
+          "title": "Tests",
+          "_template": "divider"
+        },
+        {
           "document": "docs/builds/New-Tina-Page.mdx",
           "label": "Test",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/New-Page.mdx",
+          "label": "Test Page",
           "_template": "doc"
         }
       ]
