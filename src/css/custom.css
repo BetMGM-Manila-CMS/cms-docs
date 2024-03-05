@@ -78,7 +78,10 @@ td
   transform: translate(100%, -50%);
 }
 
-.wrap-code code {
+/* .wrap-code code {
+  white-space: pre-wrap !important;
+} */
+
+code {
   white-space: pre-wrap !important;
 }
-

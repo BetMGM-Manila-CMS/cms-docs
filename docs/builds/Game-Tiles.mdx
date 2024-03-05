@@ -1,0 +1,84 @@
+---
+title: Game Tiles
+---
+
+# Game Tiles
+
+![](/img/builds/game-tiles/game-tile.png)
+
+Game tiles are added to display a single or multiple games. It is often added in to terms and conditions and in the MPP description.
+
+<Admonition type="tip" title="Game Tool">
+  Right now, we have the default website we can check for game links [here](https://casino.nj.betmgm.com/en/p/tools/smartlinks). Just update the URL to use the appropriate state and label for your use.
+
+  But this documentation has also its own, but right now only available for the US states for BetMGM. See [here](./smartlinks#games).
+</Admonition>
+
+## Game Tile
+
+Each tile is an image wrapped in anchor tags. See code below as reference
+
+```html
+<a href="!!M2.CasinoHome/launchng/eusmdsquelinricheuk/{Game Code}">
+  <img 
+    alt="{Game Name}" 
+    src="https://casinogames.{State Label Domain}/htmllobby/images/newlmticons/square/{Game Code}" 
+    width="100" 
+    height="100" 
+    style="border: 5px solid #FFFFFF;" 
+  />
+</a>
+
+<!-- Example -->
+<a href="!!M2.CasinoHome/launchng/eusmdsquelinricheuk"> 
+  <img 
+    alt="Squealin' Riches" 
+    src="https://casinogames.nj.betmgm.com/htmllobby/images/newlmticons/square/eusmdsquelinricheuk.jpg" 
+    width="100" 
+    height="100" 
+    style="border: 5px solid #FFFFFF;" 
+  />
+</a>
+```
+
+<Admonition type="note" title="Adding Game Tile">
+  When creating a game tile always add the caption "Click Tiles Below To Play Eligible Games:" before the tiles.
+
+  The **tiles** also needs to be wrapped inside of `<p></p>` tags.
+
+  ```html
+  <p><strong>Click Tiles Below To Play Eligible Games:</strong></p>
+  <p>
+    <!-- Place Tiles Here -->
+  </p>
+  ```
+</Admonition>
+
+## GDS & Netent Games
+
+Each games have each their owners or providers, if the game is from GDS or Netent the game link needs to be updated to be optimized for mobile and desktop use.
+
+The game code needs to be passed as a query parameter to the anchor link, the desktop version will be passed as the value of `gd` and for mobile it will be `gm`, and needs to be `prefixed` with mobile.
+
+```html
+<a href="!!M2.CasinoHome/launchng/eusmdsquelinricheuk?gd={Game Code}&gm={Game Code}mobile">
+  <img
+    alt="{Game Name}"
+    src="https://casinogames.{State Label Domain}/htmllobby/images/newlmticons/square/{Game Code}"
+    width="100"
+    height="100"
+    style="border: 5px solid #FFFFFF;" 
+  />
+</a>
+
+<!-- Example -->
+<a href="!!M2.CasinoHome/launchng?gd=eusmdsquelinricheuk&gm=eusmdsquelinricheuk">
+  <img
+    alt="Squealin' Riches"
+    src="https://casinogames.nj.betmgm.com/htmllobby/images/newlmticons/square/eusmdsquelinricheuk.jpg"
+    width="100"
+    height="100"
+    style="border: 5px solid #FFFFFF;"
+  />
+</a>
+```

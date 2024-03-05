@@ -1,26 +1,11 @@
 ---
-title: PAT and EDS ID
 last_update:
   date: 1/24/2023
   author: Kyle Atienza
   description: Add Image for Rewards and Results options
 authors: Kyle Atienza
+title: PAT and EDS ID
 ---
-
-import promoHubTile from '../../static/img/builds/pat-eds-engagement/promo-hub-tile.png'
-import basicPromoDetails from '../../static/img/builds/pat-eds-engagement/basic-promo-details.png'
-import teaser from "../../static/img/builds/pat-eds/pat-eds-teaser.png"
-import promoDetails from "../../static/img/builds/pat-eds/pat-eds-promotion.png"
-import marketing from "../../static/img/builds/pat-eds/pat-eds-marketing.png"
-import steps from "../../static/img/builds/pat-eds/pat-eds-steps.png"
-import uatTool from "../../static/img/builds/pat-eds/pat-eds-uat-tool.png"
-import gameTiles from "../../static/img/builds/pat-eds/pat-eds-tac-tiles.png"
-import updates from "../../static/img/builds/pat-eds/pat-eds-updates.png"
-import projDeets from "../../static/img/builds/pat-eds/pat-eds-proj-deets.png"
-import rewardsResults from "../../static/img/builds/pat-eds/pat-eds-rewards-results.png"
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 # PAT and EDS
 
@@ -33,98 +18,101 @@ At the same time with other use cases often when it is being used with `Engageme
 In contrast with other components, the PAT and EDS is provided by the Ops team. We can either get the respective PAT or EDS from the `Updates` or `Project Details` tab under the `CRM Ops` Section of your Workfront ticket.
 
 <Tabs>
-  <TabItem value="updated" label="Updates Tab" default>
-    <img className="mt-3 mb-5" src={updates} />
+  <TabItem value="updated" label="Updates Tab">
+    ![](/img/builds/pat-eds/pat-eds-updates.png)
   </TabItem>
+
   <TabItem value="projDetails" label="Project Details">
-    <img className="mt-3 mb-5" src={projDeets} />
+    ![](/img/builds/pat-eds/pat-eds-proj-deets.png)
   </TabItem>
 </Tabs>
 
-:::tip
-
-Often times PAT or EDS will be provided in the most bottom part the Updates.
-
-:::
+<Admonition type="tip" title="Tip">
+  Often times PAT or EDS will be provided in the most bottom part the Updates.
+</Admonition>
 
 ## Teaser Image
 
 This section can also called the Promo Hub Tile. For this section image `Promohub Tiles-800x360` is consistently used for displaying promo cards on the promo page. The image placement field may vary based on the provided PAT or EDS. Refer to the guide below.
 
-{/*
-<details>
-  <img src={promoHubTile} alt="" />
-  <summary>Sitecore Preview</summary>
-</details>
-*/}
-
-<img className="mt-3 mb-5" src={teaser} />
+![](/img/builds/pat-eds/pat-eds-teaser.png)
 
 <table>
-    <thead>
-        <tr>
-            <th>Promotion Type</th>
-            <th>Field</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Bet & Get</td>
-            <td rowSpan={3}>`Teaser > Teaser Image`</td>
-        </tr>
-        <tr>
-            <td>Click Card</td>
-        </tr>
-        <tr>
-            <td>Coin Flip</td>
-        </tr>
-        <tr>
-            <td>Spin The Wheel</td>
-            <td>`Promo Hub Tile > Image`</td>
-        </tr>
-        <tr>
-            <td>Pick A Card</td>
-            <td>`Offer > TeaserImage`</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Promotion Type</th>
+      <th>Field</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Bet & Get</td>
+      <td rowSpan={3}>`Teaser > Teaser Image`</td>
+    </tr>
+
+    <tr>
+      <td>Click Card</td>
+    </tr>
+
+    <tr>
+      <td>Coin Flip</td>
+    </tr>
+
+    <tr>
+      <td>Spin The Wheel</td>
+      <td>`Promo Hub Tile > Image`</td>
+    </tr>
+
+    <tr>
+      <td>Pick A Card</td>
+      <td>`Offer > TeaserImage`</td>
+    </tr>
+  </tbody>
 </table>
 
 ## Basic Promotion Details
 
-<img className="mt-3 mb-5" src={promoDetails} />
+![](/img/builds/pat-eds/pat-eds-promotion.png)
 
 <table className="whitespace-nowrap">
-    <thead>
-        <tr>
-            <th>Promotion Type</th>
-            <th>Promotion Title</th>
-            <th>Transaction Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Bet & Get</td>
-            <td rowSpan={6}>`Promohub Key Terms H1`</td>
-            <td rowSpan={2}>`Promohub Key Terms H1`</td>
-        </tr>
-        <tr>
-            <td>Click Card</td>
-        </tr>
-        <tr>
-            <td>Coin Flip</td>
-            <td rowSpan={3}>`TD-{PAT ID}`</td>
-        </tr>
-        <tr>
-            <td>Spin The Wheel</td>
-        </tr>
-        <tr>
-            <td>Pick A Card</td>
-        </tr>
-        <tr>
-            <td>Pick A Card</td>
-            <td>`EDS-{EDS ID}`</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Promotion Type</th>
+      <th>Promotion Title</th>
+      <th>Transaction Description</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Bet & Get</td>
+      <td rowSpan={6}>`Promohub Key Terms H1`</td>
+      <td rowSpan={2}>`Promohub Key Terms H1`</td>
+    </tr>
+
+    <tr>
+      <td>Click Card</td>
+    </tr>
+
+    <tr>
+      <td>Coin Flip</td>
+      <td rowSpan={3}>`TD-{PAT ID}`</td>
+    </tr>
+
+    <tr>
+      <td>Spin The Wheel</td>
+    </tr>
+
+    <tr>
+      <td>Pick A Card</td>
+    </tr>
+
+    <tr>
+      <td>Pick A Card</td>
+      <td>`EDS-{EDS ID}`</td>
+    </tr>
+  </tbody>
 </table>
 
 ## Overview
@@ -132,29 +120,31 @@ This section can also called the Promo Hub Tile. For this section image `Promohu
 <h3>Required Fields</h3>
 
 <table>
-    <thead>
-        <tr>
-            <th>Field</th>
-            <th>Value</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Introduction Text</td>
-            <td>`Promo Teaser Section`</td>
-        </tr>
-        <tr>
-            <td>The "hook"</td>
-            <td>`Prize Message`</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Introduction Text</td>
+      <td>`Promo Teaser Section`</td>
+    </tr>
+
+    <tr>
+      <td>The "hook"</td>
+      <td>`Prize Message`</td>
+    </tr>
+  </tbody>
 </table>
 
 <h3>Optional Fields</h3>
 
 There are 2 reserved text fields if there are any more copy provided after the Prize Message content in the copy, put each line on each text field if there is any.
 
-<img className="mt-3 mb-5" src={marketing} />
+![](/img/builds/pat-eds/pat-eds-marketing.png)
 
 ## HowItWorks
 
@@ -162,14 +152,11 @@ This section contains 3 steps that summarizes how the players can join and recei
 
 The copy has the `How It Works Tab` section which contains the value for each step. Place the bolded text for the title and below each are the description.
 
+![](/img/builds/pat-eds/pat-eds-steps.png)
 
-<img className="mt-3 mb-5" src={steps} />
-
-:::note
-
-If the `ManualDataPoints` have any fields displayed, delete or remove all fields that are displayed.
-
-:::
+<Admonition type="note" title="Note">
+  If the `ManualDataPoints` have any fields displayed, delete or remove all fields that are displayed.
+</Admonition>
 
 ## MyProgress
 
@@ -177,7 +164,7 @@ The first field `CarouselBackGroundImage` will have the asset of `1210x440`.
 
 The value for the remaining fields of `FirstSlabImage`, `SlabImage`, and `StepImage` can be acquired from the [UAT Images](http://betmgm-phtools.entaingroup.corp/sc-pat-images/) Tool, just select the appropriate `Site`, `State`, and `SiteCore Template` to get the appropriate images for each field
 
-<img className="mt-3 mb-5" src={uatTool} />
+![](/img/builds/pat-eds/pat-eds-uat-tool.png)
 
 ## Terms
 
@@ -185,74 +172,75 @@ The value for the remaining fields of `FirstSlabImage`, `SlabImage`, and `StepIm
 
 The value for this field will be from the `Promo Hub Key Terms > Short Summary` from the copy.
 
-:::warning[note]
-
-Enclose this content with the `<p></p>` tag
-
-:::
+<Admonition type="caution" title="Note">
+  Enclose this content with the \<p>\</p> tag
+</Admonition>
 
 ### Full Terms and Conditions
 
-:::note
+<Admonition type="note" title="Note">
+  If the Terms have mentioned for games that **must be wagered**, the tiles for these games will also be included at the top of the Terms and Conditions.
 
-If the Terms have mentioned for games that **must be wagered**, the tiles for these games will also be included at the top of the Terms and Conditions.
+  ![](/img/builds/pat-eds/pat-eds-tac-tiles.png)
+</Admonition>
 
-<img className="mt-3 mb-5 max-w-2xl" src={gameTiles} />
-
-:::
-
-:::tip
-
-The content for the Terms and Codition will be the same for the content from `MPP` or `Rest ID`, so feel free to just copy and paste the content from those components. For a reference please refer to this [guide](./documents#terms-and-conditions).
-
-:::
+<Admonition type="tip" title="Tip">
+  The content for the Terms and Codition will be the same for the content from `MPP` or `Rest ID`, so feel free to just copy and paste the content from those components. For a reference please refer to this [guide](./documents#terms-and-conditions).
+</Admonition>
 
 ## CTA
 
 For CTA it can be different fields and different contents, refer to the guide below.
 
 <table>
-    <thead>
-        <tr>
-            <th>Promotion Type</th>
-            <th>Section</th>
-            <th>CTA URL</th>
-            <th>CTA Text</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Bet & Get</td>
-            <td rowSpan={2}>Play Now CTA</td>
-            <td rowSpan={2} className="text-center">`Play Now`</td>
-            <td>[See Bet & Get CTA Guide](#bet-and-get-cta)</td>
-        </tr>
-        <tr>
-            <td>Click Card</td>
-            <td>
-            ```
-            !!M2.CasinoHome
-            ```
-            </td>
-        </tr>
-        <tr>
-            <td>Coin Flip</td>
-            <td>CTA</td>
-            <td className="text-center">`Flip Now` or `Toss Now`</td>
-            <td>
-            ```
-            !!M2.Promo/ep/c/{Layout Name}?id={PAT ID}
-            ```
-            </td>
-        </tr>
-        <tr>
-            <td>Spin The Wheel</td>
-            <td rowSpan={2} colSpan={3} className="text-center">No CTA Needed</td>
-        </tr>
-        <tr>
-            <td>Pick A Card</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Promotion Type</th>
+      <th>Section</th>
+      <th>CTA URL</th>
+      <th>CTA Text</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Bet & Get</td>
+      <td rowSpan={2}>Play Now CTA</td>
+      <td rowSpan={2} className="text-center">`Play Now`</td>
+      <td>[See Bet & Get CTA Guide](#bet-and-get-cta)</td>
+    </tr>
+
+    <tr>
+      <td>Click Card</td>
+
+      <td>
+        ```
+        !!M2.CasinoHome
+        ```
+      </td>
+    </tr>
+
+    <tr>
+      <td>Coin Flip</td>
+      <td>CTA</td>
+      <td className="text-center">`Flip Now` or `Toss Now`</td>
+
+      <td>
+        ```
+        !!M2.Promo/ep/c/{Layout Name}?id={PAT ID}
+        ```
+      </td>
+    </tr>
+
+    <tr>
+      <td>Spin The Wheel</td>
+      <td rowSpan={2} colSpan={3} className="text-center">No CTA Needed</td>
+    </tr>
+
+    <tr>
+      <td>Pick A Card</td>
+    </tr>
+  </tbody>
 </table>
 
 ### Bet and Get CTA
@@ -260,104 +248,106 @@ For CTA it can be different fields and different contents, refer to the guide be
 For Bet & Get, the CTA URL will be depending on the eligible games for the promotion.
 
 <table>
-    <thead>
-        <tr>
-            <th>Eligible Game</th>
-            <th>CTA URL</th>
-            <th>CTA Text</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Single Game</td>
-            <td>
-            ```
-            !!M2.CasinoHome/launchng/{Game}
-            ```
-            </td>
-            <td rowSpan={3}>Play Now</td>
-        </tr>
-        <tr>
-            <td>Multiple Games</td>
-            <td>
-            ```
-            !!M2.CasinoHome
-            ```
-            </td>
-        </tr>
-        <tr>
-            <td>Game is not yet live</td>
-            <td>
-            ```
-            !!M2.CasinoHome/c/newgames
-            ```
-            </td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Eligible Game</th>
+      <th>CTA URL</th>
+      <th>CTA Text</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Single Game</td>
+
+      <td>
+        ```
+        !!M2.CasinoHome/launchng/{Game}
+        ```
+      </td>
+
+      <td rowSpan={3}>Play Now</td>
+    </tr>
+
+    <tr>
+      <td>Multiple Games</td>
+
+      <td>
+        ```
+        !!M2.CasinoHome
+        ```
+      </td>
+    </tr>
+
+    <tr>
+      <td>Game is not yet live</td>
+
+      <td>
+        ```
+        !!M2.CasinoHome/c/newgames
+        ```
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 ## Rewards and Results options
 
 This field is a dropdown where we need to select the appropriate folder depending on promotion type of your ticket.
 
-<img className="mt-3 mb-5" src={rewardsResults} />
+![](/img/builds/pat-eds/pat-eds-rewards-results.png)
 
-:::tip
+<Admonition type="tip" title="Tip">
+  The appropriate folder will be under the DetailPagesContent folder inside the state/brand folder. The state/brand should be the same as stated in your ticket. Here is the path to DetailPagesContent
 
-The appropriate folder will be under the `DetailPagesContent` folder inside the `state/brand` folder. The `state/brand` should be the same as stated in your ticket.
+  Content > Vanilla.Mobile > State/Brand > Promo > PromoHub > DetailPagesContent
+</Admonition>
 
-<div className="mt-3" />
-
-:::info[DetailPagesContent Path]
-
-Content > Vanilla.Mobile > State/Brand > Promo > PromoHub > DetailPagesContent
-
-:::
-
-:::note
-
-There are always two final folder destination to select, those are `Default` and `Default-US`, only pick `Default` folder if `Default-US` is not present.
-
-:::
+<Admonition type="note" title="Note">
+  There are always two final folder destination to select, those are `Default` and `Default-US`, only pick `Default` folder if `Default-US` is not present.
+</Admonition>
 
 <table>
-    <thead>
-        <tr>
-            <th className="w-[20%]">Promotion Type</th>
-            <th>Folder Path</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Bet & Get</td>
-            <td>`DetailPagesContent > PAT Promotions > Player Activity > Default-US | Default`</td>
-        </tr>
-        <tr>
-            <td>EDS</td>
-            <td>`DetailPagesContent > Eds > Default-US | Default`</td>
-        </tr>
-        <tr>
-            <td>Click Card</td>
-            <td>`DetailPagesContent > PAT Promotions > Click Card > Default-US | Default`</td>
-        </tr>
-        <tr>
-            <td>Leaderboard</td>
-            <td>`DetailPagesContent > PAT Promotions > Leaderboard > Default-US | Default`</td>
-        </tr>
-        <tr>
-            <td>[Shared Leaderboard](#shared-leaderboard)</td>
-            <td>`Content/Vanilla.Mobile/m2.borgataonline.com/Promo/PromoHub/DetailPagesContent/PAT Promotions/Leaderboard/Leaderboard_Shared_NJ_Labels`</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th className="w-[20%]">Promotion Type</th>
+      <th>Folder Path</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Bet & Get</td>
+      <td>`DetailPagesContent > PAT Promotions > Player Activity > Default-US | Default`</td>
+    </tr>
+
+    <tr>
+      <td>EDS</td>
+      <td>`DetailPagesContent > Eds > Default-US | Default`</td>
+    </tr>
+
+    <tr>
+      <td>Click Card</td>
+      <td>`DetailPagesContent > PAT Promotions > Click Card > Default-US | Default`</td>
+    </tr>
+
+    <tr>
+      <td>Leaderboard</td>
+      <td>`DetailPagesContent > PAT Promotions > Leaderboard > Default-US | Default`</td>
+    </tr>
+
+    <tr>
+      <td>[Shared Leaderboard](#shared-leaderboard)</td>
+      <td>`Content/Vanilla.Mobile/m2.borgataonline.com/Promo/PromoHub/DetailPagesContent/PAT Promotions/Leaderboard/Leaderboard_Shared_NJ_Labels`</td>
+    </tr>
+  </tbody>
 </table>
 
 ### Shared Leaderboard
 
-:::note
-
-For Shared Leaderboard tickets, the `state/brand` folder should always be set to `m2.borgataonline.com`, as the `Leaderboard_Shared_NJ_Labels` folder is located there, regardless of the state.
-
-:::
+<Admonition type="note" title="Note">
+  For Shared Leaderboard tickets, the `state/brand` folder should always be set to `m2.borgataonline.com`, as the `Leaderboard_Shared_NJ_Labels` folder is located there, regardless of the state.
+</Admonition>
 
 ## Engagement PATs
 
@@ -366,11 +356,11 @@ When you're working on an engagement ticket, you'll notice some fields in the PA
 See the guides this page below to learn how PAT and EDS components for engagement tickets are different from BAU tickets, and what you should put in these fields.
 
 <div className="flex gap-2 mt-4 flex-wrap">
-    [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">🎡 Spin The Wheel</button>](./pat-eds-stw)
+  [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">🎡 Spin The Wheel</button>](./pat-eds-stw)
 
-    [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">📦 Pick a Box/Card</button>](./pat-eds-pab)
+  [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">📦 Pick a Box/Card</button>](./pat-eds-pab)
 
-    [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">👛 Coin Flip/Toss</button>](./pat-eds-coin)
+  [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">👛 Coin Flip/Toss</button>](./pat-eds-coin)
 
-    [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">🃏 Click Card</button>](./pat-eds-cc)
+  [<button type="button" className="text-white bg-primary hover:bg-primary-darkest focus:ring-1 focus:ring-primary-dark font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">🃏 Click Card</button>](./pat-eds-cc)
 </div>

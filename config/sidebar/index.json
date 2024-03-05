@@ -159,6 +159,11 @@
           "docLink": "docs/builds/pat-eds.mdx",
           "items": [
             {
+              "document": "docs/builds/Cashback-PAT.mdx",
+              "label": "Cashback",
+              "_template": "doc"
+            },
+            {
               "document": "docs/builds/pat-eds-stw.mdx",
               "label": "Spin The Wheel",
               "_template": "doc"
@@ -206,6 +211,11 @@
         {
           "title": "Guides",
           "_template": "divider"
+        },
+        {
+          "document": "docs/builds/Game-Tiles.mdx",
+          "label": "Game Tiles",
+          "_template": "doc"
         },
         {
           "document": "docs/builds/colors.mdx",
