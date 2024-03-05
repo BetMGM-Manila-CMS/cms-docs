@@ -67,6 +67,23 @@
           "link": "generated",
           "items": [
             {
+              "title": "PLP",
+              "link": "none",
+              "items": [
+                {
+                  "document": "docs/builds/Mobile-PLP.mdx",
+                  "label": "Mobile PLP",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/builds/Desktop-PLP.mdx",
+                  "label": "Desktop PLP",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            },
+            {
               "document": "docs/builds/poker-carousel.mdx",
               "label": "Poker Carousel",
               "_template": "doc"
