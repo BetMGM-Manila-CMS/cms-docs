@@ -159,8 +159,8 @@
           "docLink": "docs/builds/pat-eds.mdx",
           "items": [
             {
-              "document": "docs/builds/Cashback-PAT.mdx",
-              "label": "Cashback",
+              "document": "docs/builds/Rewards.mdx",
+              "label": "Rewards",
               "_template": "doc"
             },
             {
