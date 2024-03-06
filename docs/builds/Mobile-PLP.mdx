@@ -1,5 +1,109 @@
 ---
-title: Mobile PLP
+title: Poker Carousel
+last_update:
+  date: 03/06/2024
+  author: Emmanuel Borromeo
+  description: Mobile PLP Build
+  authors: Emmanuel Borromeo
 ---
 
+import CoinTossPreview from "../../static/img/builds/mobile-plp/sample.png";
+
 # Mobile PLP
+
+**Mobile PLP** is a carousel-like feature but takes up the whole screen of a mobile device.
+
+<img src="/img/builds/mobile-plp/sample.png" width="25%"/>
+
+## Building Mobile PLP
+
+:::info[SiteCore Path]
+sitecore > content > Vanilla.Mobile > state/brand > Promo > casino or sports or poker
+:::
+
+Go to the above Sitecore Path. Then do the following:
+
+### Step 1. Duplicate File
+
+1. Right-click the file you want to duplicate.
+2. Choose Copy To
+3. Remove the URL of your choosen File
+4. Click Copy
+5. Rename the file to your ticket's name
+
+### Step 2: Edit PokerPromotionData
+
+<table>
+<tbody>
+<tr>
+<td>Title</td>
+<td>Fill this with just ```<p></p>```</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Insert the Promotional Description, usually Featuting Part of the copy or the Inbox Preview</td>
+</tr>
+<tr>
+<td>BackgroupImage</td>
+<td>Asset with size 345 x 511</td>
+</tr>
+<tr>
+<td>CTA</td>
+<td>Insert the appropriate CTA, this is a CTA after Opt-In</td>
+</tr>
+<tr>
+<td>Click the two arrow icon</td>
+<td>Insert here the clean copy of your URL</td>
+</tr>
+<tr>
+<td>TermsAndConditions</td>
+<td>If the promo has Opt-In CTA the Terms &amp; Condition will have a smartlink to the Tourney Page, if not leave this empty</td>
+</tr>
+<tr>
+<td>ForegroundImage</td>
+<td>Asset with size 395 x 176</td>
+</tr>
+<tr>
+<td>OptInRequired</td>
+<td>If the promo has Opt-In CTA, tick this. If not, untick this.</td>
+</tr>
+<tr>
+<td>OptInText</td>
+<td>OPT-IN</td>
+</tr>
+<tr>
+<td>ErrorCTA</td>
+<td>In case the PAT ID is invalid this CTA will show up, either put the TourneyPage smartlink or PromoHub Smartlink</td>
+</tr>
+<tr>
+<td>Click the two arrow icon</td>
+<td>Insert here the clean copy of your URL</td>
+</tr>
+<tr>
+<td>PromotionalId</td>
+<td>Insert here the PAT ID</td>
+</tr>
+<tr>
+<td>PromotionalSource</td>
+<td>Promos</td>
+</tr>
+</tbody>
+</table>
+
+### Step 3: Filter & Publishing Date
+
+1. Insert your QA Filter under **Condition**
+
+```html
+QueryString.Get('qa') = 'emil'
+```
+
+2. Clear Publishing Date (for new builds)
+
+### Step 4: Screenshot your PLP
+
+Go to your sites plp preview page with your qa filter name, then look for your output.
+
+```html
+https://poker.nj.betmgm.com/en/mobileplp?qa=yourname
+```
