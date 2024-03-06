@@ -1,101 +1,61 @@
 ---
-title: Colors
 last_update:
   date: 1/22/2024
   author: Kyle Atienza
   description: Create Colors Page
 authors: Kyle Atienza
+title: Colors
 ---
 
 # Colors
 
-<table>
-    <thead>
-        <tr>
-            <th className="w-[10%]"></th>
-            <th className="w-[15%]">BetMGM</th>
-            <th className="w-[15%]">Borgata</th>
-            <th className="w-[15%]">PartyCasino</th>
-            <th className="w-[15%]">PartyPoker</th>
-            <th className="w-[15%]">Wheel of Fortune</th>
-            <th className="w-[15%]">Shared PAT</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td className="font-bold text-center">Casino</td>
-            <td>
-            ```
-            #D4B962
-            ```
-            </td>
-            <td>
-            ```
-            #D21C5D
-            ```
-            </td>
-            <td>
-            ```
-            #F00A47
-            ```
-            </td>
-            <td>
-            </td>
-            <td>
-            ```
-            #EFE700
-            ```
-            </td>
-            <td>
-            ```
-            #474747
-            ```
-            </td>
-        </tr>
-        <tr>
-            <td className="font-bold text-center">Poker</td>
-            <td>
-            ```
-            #00A35B
-            ```
-            </td>
-            <td>
-            ```
-            #F47523
-            ```
-            </td>
-            <td>
-            </td>
-            <td>
-            ```
-            #F00A47
-            ```
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-        <tr>
-            <td className="font-bold text-center">Sports</td>
-            <td>
-            ```
-            #D4B962
-            ```
-            </td>
-            <td>
-            ```
-            #5ac8e8
-            ```
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<TinaTable
+  rowHeader={true}
+  columnHeader={true}
+  rows={[
+    {
+      row: [
+        {},
+        { label: "BetMGM" },
+        { label: "Borgata" },
+        { label: "PartyCasino" },
+        { label: "partypoker" },
+        { label: "Wheel of Fortune" },
+        { label: "Shared PAT" }
+      ]
+    },
+    {
+      row: [
+        { label: "Casino\t" },
+        { label: "#D4B962", style: "code" },
+        { label: "#D21C5D", style: "code" },
+        { label: "#F00A47", style: "code" },
+        {},
+        { label: "#EFE700", style: "code" },
+        { label: "#474747", style: "code" }
+      ]
+    },
+    {
+      row: [
+        { label: "Poker" },
+        { label: "#00A35B", style: "code" },
+        { label: "#F47523", style: "code" },
+        {},
+        { label: "#F00A47", style: "code" },
+        {},
+        {}
+      ]
+    },
+    {
+      row: [
+        { label: "Sports" },
+        { label: "#D4B962", style: "code" },
+        { label: "#5ac8e8", style: "code" },
+        {},
+        {},
+        {},
+        {}
+      ]
+    }
+  ]}
+/>

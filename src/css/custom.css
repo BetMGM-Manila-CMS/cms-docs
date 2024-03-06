@@ -85,3 +85,7 @@ td
 code {
   white-space: pre-wrap !important;
 }
+
+.table-code {
+  margin-bottom: 0 !important;
+}
