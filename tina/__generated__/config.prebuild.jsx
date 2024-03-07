@@ -121,10 +121,11 @@ var TabItemTemplate = {
 };
 var TabsTemplate = {
   name: "Tabs",
+  label: "Tabs",
   fields: [
     {
       name: "children",
-      label: "Tabs",
+      label: "Tab Items",
       type: "rich-text",
       templates: [
         TabItemTemplate
@@ -141,11 +142,6 @@ var TinaTableTemplate = {
     }
   },
   fields: [
-    /*         {
-                name: "title",
-                label: "Title",
-                type: "string",
-            }, */
     {
       name: "rowHeader",
       label: "Row Header",
@@ -208,14 +204,6 @@ var TinaTableTemplate = {
         }
       ]
     }
-    /* {
-        name: "children",
-        label: "Rows",
-        type: "rich-text",
-        templates: [
-            TinaTableRowTemplate
-        ]
-    }, */
   ]
 };
 var AdmonitionTemplate = {
@@ -301,50 +289,12 @@ var DetailsTemplate = {
     }
   ]
 };
-var CodeBlockTemplate = {
-  name: "CodeBlock",
-  label: "Code Block",
-  ui: {
-    defaultItem: {
-      title: "Code"
-    },
-    itemProps: (item) => {
-      return { label: item ? item.title : null };
-    }
-  },
-  fields: [
-    {
-      name: "title",
-      label: "Title",
-      type: "string",
-      isTitle: true,
-      required: true
-    },
-    {
-      name: "language",
-      label: "Language",
-      type: "string"
-    },
-    {
-      name: "showLineNumbers",
-      label: "Show Line Numbers",
-      type: "boolean"
-    },
-    {
-      name: "children",
-      label: "Code",
-      type: "rich-text"
-    }
-  ]
-};
 var MDXTemplates = [
+  ClassyImageTemplate,
   TabsTemplate,
   AdmonitionTemplate,
-  ClassyImageTemplate,
   TinaTableTemplate,
-  TinaSpacerTemplate,
-  DetailsTemplate,
-  CodeBlockTemplate
+  DetailsTemplate
 ];
 
 // tina/collections/doc.jsx

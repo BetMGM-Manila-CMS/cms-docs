@@ -93,17 +93,63 @@ const TabItemTemplate = {
     ]
 }
 
+const TinaTabsTemplate = {
+    name: "TinaTabs",
+    label: "Tina Tabs",
+    fields: [
+        {
+            name: "items",
+            label: "Tabs",
+            type: "object",
+            list: true,
+            ui: {
+                defaultItem: {
+                    label: "New Tab",
+                    value: "tab",
+                },
+            },
+            itemProps: (item) => {
+                return { label: item ? item.label : null };
+            },
+            fields: [
+                {
+                    name: "label",
+                    label: "Label",
+                    type: "string"
+                },
+                {
+                    name: "value",
+                    label: "Value",
+                    type: "string"
+                },
+                {
+                    name: "image",
+                    label: "Image",
+                    type: "image"
+                },
+                {
+                    name: "content",
+                    label: "Content",
+                    type: "string",
+                    component: "textarea",
+                },
+            ]
+        }
+    ],
+};
+
 const TabsTemplate = {
     name: "Tabs",
+    label: "Tabs",
     fields: [
         {
             name: "children",
-            label: "Tabs",
+            label: "Tab Items",
             type: "rich-text",
             templates: [
                 TabItemTemplate
-            ],
-        },
+            ]
+        }
     ],
 };
 
@@ -174,11 +220,6 @@ const TinaTableTemplate = {
         },
     },
     fields: [
-        /*         {
-                    name: "title",
-                    label: "Title",
-                    type: "string",
-                }, */
         {
             name: "rowHeader",
             label: "Row Header",
@@ -241,15 +282,6 @@ const TinaTableTemplate = {
                 }
             ]
         },
-
-        /* {
-            name: "children",
-            label: "Rows",
-            type: "rich-text",
-            templates: [
-                TinaTableRowTemplate
-            ]
-        }, */
     ]
 }
 
@@ -379,11 +411,9 @@ const SibarItemTemplate = {}
 
 
 export const MDXTemplates = [
+    ClassyImageTemplate,
     TabsTemplate,
     AdmonitionTemplate,
-    ClassyImageTemplate,
     TinaTableTemplate,
-    TinaSpacerTemplate,
     DetailsTemplate,
-    CodeBlockTemplate
 ]

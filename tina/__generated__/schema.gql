@@ -144,6 +144,12 @@ input ImageFilter {
   in: [String]
 }
 
+input DocBodyImgFilter {
+  className: StringFilter
+  src: ImageFilter
+  alt: StringFilter
+}
+
 input DocBodyTabsChildrenTabItemChildrenImgFilter {
   className: StringFilter
   src: ImageFilter
@@ -223,12 +229,6 @@ input DocBodyAdmonitionFilter {
   children: DocBodyAdmonitionChildrenFilter
 }
 
-input DocBodyImgFilter {
-  className: StringFilter
-  src: ImageFilter
-  alt: StringFilter
-}
-
 input DocBodyTinaTableRowsFilter {
   row: DocBodyTinaTableRowsRowFilter
 }
@@ -239,30 +239,17 @@ input DocBodyTinaTableFilter {
   rows: DocBodyTinaTableRowsFilter
 }
 
-input DocBodyTinaSpacerFilter {
-  space: StringFilter
-}
-
 input DocBodyDetailsFilter {
   summary: StringFilter
   children: RichTextFilter
 }
 
-input DocBodyCodeBlockFilter {
-  title: StringFilter
-  language: StringFilter
-  showLineNumbers: BooleanFilter
-  children: RichTextFilter
-}
-
 input DocBodyFilter {
+  img: DocBodyImgFilter
   Tabs: DocBodyTabsFilter
   Admonition: DocBodyAdmonitionFilter
-  img: DocBodyImgFilter
   TinaTable: DocBodyTinaTableFilter
-  TinaSpacer: DocBodyTinaSpacerFilter
   Details: DocBodyDetailsFilter
-  CodeBlock: DocBodyCodeBlockFilter
 }
 
 input DocFilter {
