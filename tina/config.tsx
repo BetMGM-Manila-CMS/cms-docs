@@ -1,7 +1,6 @@
 import React from "react";
 import { MDXTemplates } from "../src/theme/template";
 import { defineConfig } from "tinacms";
-import { tinaTableTemplate } from 'tinacms'
 import { PostCollection, DocCollection, SidebarCollection } from './collections'
 
 // Your hosting provider likely exposes this as an environment variable
