@@ -41,27 +41,7 @@ Fill the required fields as instructed.
 
 ### Required Fields
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
-
-  <TinaTableRow items={[{ label: "PromotionTitle " }, { label: "Promohub H1" }]} />
-
-  <TinaTableRow items={[{ label: "Image" }, { label: "Media URL link" }]} />
-
-  <TinaTableRow
-    items={[
-      { label: "DetailedDescription" },
-      { label: "Promo Description" }
-    ]}
-  />
-
-  <TinaTableRow items={[{ label: "Terms And Conditions" }, { label: "TnCs" }]} />
-</TinaTable>
+<TinaTable />
 
 ### DetailedDescription
 
@@ -92,58 +72,6 @@ Open the `Smart Links Tool` for your state and brand to search for the eligible 
 <a href="!!M2.Casino/games/launchng/[url]"><img alt="[Game Name]" src="https://casinogames.nj.betmgm.com/htmllobby/images/newlmticons/square/[url].jpg" width="100" height="100" style="border:5px solid #FFFFFF;" /></a>
 </div>
 ```
-
-<Admonition type="note" title="Updating Game Tile">
-   Change the link's state & brand depending on your ticket.
-</Admonition>
-
-If the game is NETENT or DGC, add attribute to `<div>` tags:
-
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Device", header: true },
-      { label: "Attribute", header: true }
-    ]}
-  />
-
-  <TinaTableRow
-    items={[
-      { label: "Desktop" },
-      {
-        label: 'data-content-filter="NOT Device.IsMobile AND NOT Device.IsTablet"',
-        code: true,
-        style: "code"
-      }
-    ]}
-  />
-
-  <TinaTableRow
-    items={[
-      { label: "Mobile" },
-      {
-        label: 'data-content-filter="Device.IsMobile OR Device.IsTablet"',
-        code: true,
-        style: "code"
-      }
-    ]}
-  />
-</TinaTable>
-
-For mobile versions, append the following to url:
-
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Game", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
-
-  <TinaTableRow items={[{ label: "DGC" }, { label: "mobile" }]} />
-
-  <TinaTableRow items={[{ label: "NETENT" }, { label: "touch" }]} />
-</TinaTable>
 
 ### Terms And Conditions
 
