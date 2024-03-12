@@ -34,8 +34,6 @@ export default function CodeBlock({ children: rawChildren, ...props }) {
     return sanitized
   }
 
-  console.log(children)
-
   return (
     <CodeBlockComp key={String(isBrowser)} {...props}>
       {children}
