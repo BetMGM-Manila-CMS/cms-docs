@@ -11,12 +11,12 @@ last_update:
 
 **Desktop PLP** is a carousel-like feature but takes up the whole screen of a desktop device.
 
-<img src="/img/builds/mobile-plp/sample.png" width="25%"/>
+<img src="/img/builds/desktop-plp/sample.png" width="25%"/>
 
-## Building Desktop PLP
+## Building desktop PLP
 
 :::info[SiteCore Path]
-sitecore > content > Vanilla.Mobile > state/brand > Promo > casino or sports or poker
+sitecore > content > Vanilla.desktop > brand/state > desktopPoker-v1.0 > Regional > Global > desktopPLP > desktopPLP-LIVE
 :::
 
 Go to the above Sitecore Path. Then do the following:
@@ -35,58 +35,53 @@ Go to the above Sitecore Path. Then do the following:
 <tbody>
 <tr>
 <td>Title</td>
-<td>Fill this with just ```<p></p>```</td>
+<td>Insert here the Promotional Title</td>
+<td><img src="/img/builds/desktop-plp/desktop plp title.png" width="100%"/></td>
 </tr>
 <tr>
 <td>Description</td>
 <td>Insert the Promotional Description, usually Featuting Part of the copy or the Inbox Preview</td>
+<td><img src="/img/builds/desktop-plp/desktop plp desc.png" width="100%"/></td>
 </tr>
 <tr>
 <td>BackgroupImage</td>
-<td>Asset with size 345 x 511</td>
+<td>Asset with size 500 x 300</td>
+<td><img src="/img/builds/desktop-plp/desktop plp bg.png" width="100%"/></td>
 </tr>
 <tr>
 <td>CTA</td>
-<td>Insert the appropriate CTA, this is a CTA after Opt-In</td>
-</tr>
-<tr>
-<td>Click the two arrow icon</td>
-<td>Insert here the clean copy of your URL</td>
+<td>Insert the appropriate CTA, this is a CTA after Opt-In. In the <strong>data-purl</strong> insert the clean URL (use https://www.urlencoder.org/).</td>
+<td><img src="/img/builds/desktop-plp/desktop plp cta.png" width="100%"/></td>
 </tr>
 <tr>
 <td>TermsAndConditions</td>
 <td>If the promo has Opt-In CTA the Terms &amp; Condition will have a smartlink to the Tourney Page, if not leave this empty</td>
+<td><img src="/img/builds/desktop-plp/mobi plp tnc.png" width="100%"/></td>
 </tr>
 <tr>
-<td>ForegroundImage</td>
-<td>Asset with size 395 x 176</td>
-</tr>
-<tr>
-<td>OptInRequired</td>
-<td>If the promo has Opt-In CTA, tick this. If not, untick this.</td>
-</tr>
-<tr>
-<td>OptInText</td>
-<td>OPT-IN</td>
+<td>OptInRequired & OptInText</td>
+<td>If the promo has Opt-In CTA, tick this and Inpit <strong>OPT IN</strong>. If not, untick this.</td>
+<td><img src="/img/builds/desktop-plp/desktop plp opt in.png" width="100%"/></td>
 </tr>
 <tr>
 <td>ErrorCTA</td>
-<td>In case the PAT ID is invalid this CTA will show up, either put the TourneyPage smartlink or PromoHub Smartlink</td>
+<td>In case the PAT ID is invalid this CTA will show up, either put the TourneyPage smartlink or PromoHub Smartlink. In the <strong>data-purl</strong> insert the clean URL (use https://www.urlencoder.org/).</td>
+<td><img src="/img/builds/desktop-plp/desktop plp error cta.png" width="100%"/></td>
 </tr>
 <tr>
-<td>Click the two arrow icon</td>
-<td>Insert here the clean copy of your URL</td>
-</tr>
-<tr>
-<td>PromotionalId</td>
-<td>Insert here the PAT ID</td>
-</tr>
-<tr>
-<td>PromotionalSource</td>
-<td>Promos</td>
+<td>PromotionalId & Source</td>
+<td>Insert here the PAT ID, and choose Promos. (Leave empty if non opt-in promo)</td>
+<td><img src="/img/builds/desktop-plp/mobi plp promos.png" width="100%"/></td>
 </tr>
 </tbody>
 </table>
+
+:::tip[URL Cleaner]
+To clean URL use https://www.urlencoder.org/
+<img src="/img/builds/mobile-plp/url cleaner.png" width="50%"/>
+:::
+
+
 
 ### Step 3: Filter & Publishing Date
 
@@ -103,5 +98,5 @@ QueryString.Get('qa') = 'emil'
 Go to your sites plp preview page with your qa filter name, then look for your output.
 
 ```html
-https://poker.nj.betmgm.com/en/clientplp?qa=emil
+https://poker.nj.betmgm.com/en/clientplp?qa=yourname
 ```
