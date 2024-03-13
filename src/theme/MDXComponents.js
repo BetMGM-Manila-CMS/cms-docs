@@ -12,7 +12,8 @@ import {
   TinaSpacer,
   RichTable,
   RichTableRow,
-  GameLinks
+  GameLinks,
+  TinaTabs
 } from "@site/src/components"
 
 export default {
@@ -28,5 +29,6 @@ export default {
   RichTable: RichTable,
   RichTableRow: RichTableRow,
   TinaSpacer: TinaSpacer,
-  GameLinks: GameLinks
+  GameLinks: GameLinks,
+  TinaTabs: TinaTabs
 };

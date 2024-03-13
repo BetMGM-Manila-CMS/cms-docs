@@ -45,7 +45,7 @@ li > img:first-of-type {
 /* custom styles */
 
 td
-  .codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module {
+  .codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module, td .codeBlockContainer_src-theme-CodeBlock-Container-styles-module {
   margin-bottom: 0 !important;
 }
 
@@ -88,4 +88,8 @@ code {
 
 .table-code {
   margin-bottom: 0 !important;
+}
+
+.selected-game-row {
+  background-color: var(--ifm-color-primary-darkest) !important;
 }

@@ -256,6 +256,12 @@ export type ImageFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
+export type DocBodyImgFilter = {
+  className?: InputMaybe<StringFilter>;
+  src?: InputMaybe<ImageFilter>;
+  alt?: InputMaybe<StringFilter>;
+};
+
 export type DocBodyTabsChildrenTabItemChildrenImgFilter = {
   className?: InputMaybe<StringFilter>;
   src?: InputMaybe<ImageFilter>;
@@ -335,12 +341,6 @@ export type DocBodyAdmonitionFilter = {
   children?: InputMaybe<DocBodyAdmonitionChildrenFilter>;
 };
 
-export type DocBodyImgFilter = {
-  className?: InputMaybe<StringFilter>;
-  src?: InputMaybe<ImageFilter>;
-  alt?: InputMaybe<StringFilter>;
-};
-
 export type DocBodyTinaTableRowsFilter = {
   row?: InputMaybe<DocBodyTinaTableRowsRowFilter>;
 };
@@ -351,30 +351,17 @@ export type DocBodyTinaTableFilter = {
   rows?: InputMaybe<DocBodyTinaTableRowsFilter>;
 };
 
-export type DocBodyTinaSpacerFilter = {
-  space?: InputMaybe<StringFilter>;
-};
-
 export type DocBodyDetailsFilter = {
   summary?: InputMaybe<StringFilter>;
   children?: InputMaybe<RichTextFilter>;
 };
 
-export type DocBodyCodeBlockFilter = {
-  title?: InputMaybe<StringFilter>;
-  language?: InputMaybe<StringFilter>;
-  showLineNumbers?: InputMaybe<BooleanFilter>;
-  children?: InputMaybe<RichTextFilter>;
-};
-
 export type DocBodyFilter = {
+  img?: InputMaybe<DocBodyImgFilter>;
   Tabs?: InputMaybe<DocBodyTabsFilter>;
   Admonition?: InputMaybe<DocBodyAdmonitionFilter>;
-  img?: InputMaybe<DocBodyImgFilter>;
   TinaTable?: InputMaybe<DocBodyTinaTableFilter>;
-  TinaSpacer?: InputMaybe<DocBodyTinaSpacerFilter>;
   Details?: InputMaybe<DocBodyDetailsFilter>;
-  CodeBlock?: InputMaybe<DocBodyCodeBlockFilter>;
 };
 
 export type DocFilter = {

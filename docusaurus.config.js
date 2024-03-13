@@ -9,8 +9,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title:
-    "Welcome to the Official Documentation of BetMGM Creatives Manila CMS Team",
-  tagline: "What do you want to learn today",
+    "The Official Website of BetMGM Creatives Manila CMS Team",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -82,17 +81,23 @@ const config = {
         },
       },
       navbar: {
-        title: "CMS Knowledge Hub",
+        title: "BetMGM CMS Manila Hub",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "buildsSidebar",
+            type: "dropdown",
+            label: "Documentation",
             position: "left",
-            label: "Builds",
+            items: [
+              {
+                type: "docSidebar",
+                sidebarId: "buildsSidebar",
+                label: "Builds",
+              },
+            ]
           },
           /* {
             type: "docSidebar",

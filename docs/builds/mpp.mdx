@@ -41,27 +41,12 @@ Fill the required fields as instructed.
 
 ### Required Fields
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
-
-  <TinaTableRow items={[{ label: "PromotionTitle " }, { label: "Promohub H1" }]} />
-
-  <TinaTableRow items={[{ label: "Image" }, { label: "Media URL link" }]} />
-
-  <TinaTableRow
-    items={[
-      { label: "DetailedDescription" },
-      { label: "Promo Description" }
-    ]}
-  />
-
-  <TinaTableRow items={[{ label: "Terms And Conditions" }, { label: "TnCs" }]} />
-</TinaTable>
+| Field | Value |
+| --- | --------- |
+| PromotionTitle | Promohub H1 |
+| Image | Media URL link |
+| DetailedDescription | Promo Description |
+| Terms And Conditions | TnCs |
 
 ### DetailedDescription
 
@@ -79,7 +64,7 @@ Second `<p>` tag, [CTA](../builds/cta) will depend on the ticket.
 
 #### How It Works
 
-Place each content of the `How To Participate` in the `TnCs`. Make sure they are enclosed in `<ul>` `<li>` tags. Refer to [Documents Page](../builds/documents) for additional information.
+Place each content of the `How To Participate` in the `T&Cs`. Make sure they are enclosed in `<ul>` `<li>` tags. Refer to [Documents Page](../builds/documents) for additional information.
 
 #### Eligible Games
 
@@ -93,57 +78,11 @@ Open the `Smart Links Tool` for your state and brand to search for the eligible 
 </div>
 ```
 
-<Admonition type="note" title="Updating Game Tile">
-   Change the link's state & brand depending on your ticket.
+<Admonition type="note" title="For NETENT & DGC:">
+  Use `gd=[url]&gm=[url]` to replace the game url.
+
+  *Note: Add `touch` for NETENT & `mobile` for DGC at the end.*
 </Admonition>
-
-If the game is NETENT or DGC, add attribute to `<div>` tags:
-
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Device", header: true },
-      { label: "Attribute", header: true }
-    ]}
-  />
-
-  <TinaTableRow
-    items={[
-      { label: "Desktop" },
-      {
-        label: 'data-content-filter="NOT Device.IsMobile AND NOT Device.IsTablet"',
-        code: true,
-        style: "code"
-      }
-    ]}
-  />
-
-  <TinaTableRow
-    items={[
-      { label: "Mobile" },
-      {
-        label: 'data-content-filter="Device.IsMobile OR Device.IsTablet"',
-        code: true,
-        style: "code"
-      }
-    ]}
-  />
-</TinaTable>
-
-For mobile versions, append the following to url:
-
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Game", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
-
-  <TinaTableRow items={[{ label: "DGC" }, { label: "mobile" }]} />
-
-  <TinaTableRow items={[{ label: "NETENT" }, { label: "touch" }]} />
-</TinaTable>
 
 ### Terms And Conditions
 

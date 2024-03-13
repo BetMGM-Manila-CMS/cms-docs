@@ -42,9 +42,12 @@ Name the new Carousel object with the Ticket name.
 
 ### Required Fields
 
-<TinaTable rows={[{ row: [{ label: "Field" }, { label: "Value" }] }]} rowHeader={true} />
-
-<TinaTable />
+| Field | Value |
+| --- | ----------- |
+| Title | H1 |
+| Subtitle | H2 |
+| Image | blank Media URL |
+| Background: Image | Media URL |
 
 <Admonition type="info" title="Labeling">
   Please check the CTA guide for the proper labeling and link to use.
@@ -56,11 +59,17 @@ Name the new Carousel object with the Ticket name.
 
 ### Teaser Alignments
 
-<TinaTable />
+| Device | Value |
+| --- | ----------- |
+| Desktop | actor-left title-big text-center actor no-cta |
+| Mobile | disable-actor title-big text-center |
 
 ### Filters
 
-<TinaTable />
+| Device | Value |
+| --- | ----------- |
+| Desktop | (Request.Query MATCHES "[your name]") AND (NOT Device.IsMobile AND NOT Device.IsTablet) |
+| Mobile |(Request.Query MATCHES "[your name]") AND (Device.IsMobile OR Device.IsTablet)  |
 
 ## Pushing The Carousel
 

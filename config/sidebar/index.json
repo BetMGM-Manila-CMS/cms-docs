@@ -72,12 +72,12 @@
               "items": [
                 {
                   "document": "docs/builds/Mobile-PLP.mdx",
-                  "label": "Mobile PLP",
+                  "label": "Mobile",
                   "_template": "doc"
                 },
                 {
                   "document": "docs/builds/Desktop-PLP.mdx",
-                  "label": "Desktop PLP",
+                  "label": "Desktop",
                   "_template": "doc"
                 }
               ],
@@ -241,7 +241,7 @@
         },
         {
           "document": "docs/builds/cta.mdx",
-          "label": "CTAs",
+          "label": "CTAs 🚧",
           "_template": "doc"
         },
         {
@@ -252,20 +252,6 @@
         {
           "document": "docs/builds/tables.mdx",
           "label": "Tables",
-          "_template": "doc"
-        },
-        {
-          "title": "Tests",
-          "_template": "divider"
-        },
-        {
-          "document": "docs/builds/New-Tina-Page.mdx",
-          "label": "Test",
-          "_template": "doc"
-        },
-        {
-          "document": "docs/builds/New-Page.mdx",
-          "label": "Test Page",
           "_template": "doc"
         }
       ]
