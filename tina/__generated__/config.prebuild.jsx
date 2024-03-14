@@ -86,53 +86,6 @@ var TinaSpacerTemplate = {
     }
   ]
 };
-var TabItemTemplate = {
-  name: "TabItem",
-  label: "Tab Item",
-  ui: {
-    defaultItem: {
-      label: "New Tab",
-      value: "tab"
-    }
-  },
-  itemProps: (item) => {
-    return { label: item ? item.label : null };
-  },
-  fields: [
-    {
-      name: "label",
-      label: "Label",
-      type: "string"
-    },
-    {
-      name: "value",
-      label: "Value",
-      type: "string"
-    },
-    {
-      name: "children",
-      label: "Content",
-      type: "rich-text",
-      templates: [
-        ClassyImageTemplate
-      ]
-    }
-  ]
-};
-var TabsTemplate = {
-  name: "Tabs",
-  label: "Tabs",
-  fields: [
-    {
-      name: "children",
-      label: "Tab Items",
-      type: "rich-text",
-      templates: [
-        TabItemTemplate
-      ]
-    }
-  ]
-};
 var TinaTableCell = {
   name: "TinaTableCell",
   label: "Cell",
@@ -402,6 +355,54 @@ var DetailsTemplate = {
       name: "children",
       label: "Content",
       type: "rich-text"
+    }
+  ]
+};
+var TabItemTemplate = {
+  name: "TabItem",
+  label: "Tab Item",
+  ui: {
+    defaultItem: {
+      label: "New Tab",
+      value: "tab"
+    }
+  },
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    {
+      name: "label",
+      label: "Label",
+      type: "string"
+    },
+    {
+      name: "value",
+      label: "Value",
+      type: "string"
+    },
+    {
+      name: "children",
+      label: "Content",
+      type: "rich-text",
+      templates: [
+        ClassyImageTemplate,
+        TinaTableTemplate
+      ]
+    }
+  ]
+};
+var TabsTemplate = {
+  name: "Tabs",
+  label: "Tabs",
+  fields: [
+    {
+      name: "children",
+      label: "Tab Items",
+      type: "rich-text",
+      templates: [
+        TabItemTemplate
+      ]
     }
   ]
 };

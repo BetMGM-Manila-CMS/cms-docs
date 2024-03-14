@@ -156,8 +156,50 @@ input DocBodyTabsChildrenTabItemChildrenImgFilter {
   alt: StringFilter
 }
 
+input BooleanFilter {
+  eq: Boolean
+  exists: Boolean
+}
+
+input NumberFilter {
+  lt: Float
+  lte: Float
+  gte: Float
+  gt: Float
+  eq: Float
+  exists: Boolean
+  in: [Float]
+}
+
+input DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
+  children: RichTextFilter
+  rowSpan: NumberFilter
+  colSpan: NumberFilter
+}
+
+input DocBodyTinaTableChildrenTinaTableRowChildrenFilter {
+  TinaTableCell: DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
+}
+
+input DocBodyAdmonitionChildrenTinaTableChildrenTinaTableRowFilter {
+  children: DocBodyTinaTableChildrenTinaTableRowChildrenFilter
+}
+
+input DocBodyTabsChildrenTabItemChildrenTinaTableChildrenFilter {
+  TinaTableRow: DocBodyAdmonitionChildrenTinaTableChildrenTinaTableRowFilter
+}
+
+input DocBodyTabsChildrenTabItemChildrenTinaTableFilter {
+  topHeader: BooleanFilter
+  leftHeader: BooleanFilter
+  columnWidth: StringFilter
+  className: StringFilter
+  children: DocBodyTabsChildrenTabItemChildrenTinaTableChildrenFilter
+}
+
 input DocBodyTabsChildrenTabItemChildrenFilter {
   img: DocBodyTabsChildrenTabItemChildrenImgFilter
+  TinaTable: DocBodyTabsChildrenTabItemChildrenTinaTableFilter
 }
 
 input DocBodyTabsChildrenTabItemFilter {
@@ -182,31 +224,6 @@ input DocBodyAdmonitionChildrenImgFilter {
 
 input DocBodyAdmonitionChildrenTinaSpacerFilter {
   space: StringFilter
-}
-
-input BooleanFilter {
-  eq: Boolean
-  exists: Boolean
-}
-
-input NumberFilter {
-  lt: Float
-  lte: Float
-  gte: Float
-  gt: Float
-  eq: Float
-  exists: Boolean
-  in: [Float]
-}
-
-input DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
-  children: RichTextFilter
-  rowSpan: NumberFilter
-  colSpan: NumberFilter
-}
-
-input DocBodyTinaTableChildrenTinaTableRowChildrenFilter {
-  TinaTableCell: DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
 }
 
 input DocBodyTinaTableChildrenTinaTableRowFilter {

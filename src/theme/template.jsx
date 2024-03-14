@@ -59,100 +59,6 @@ const TinaSpacerTemplate = {
     ]
 }
 
-const TabItemTemplate = {
-    name: "TabItem",
-    label: "Tab Item",
-    ui: {
-        defaultItem: {
-            label: "New Tab",
-            value: "tab",
-        },
-    },
-    itemProps: (item) => {
-        return { label: item ? item.label : null };
-    },
-    fields: [
-        {
-            name: "label",
-            label: "Label",
-            type: "string"
-        },
-        {
-            name: "value",
-            label: "Value",
-            type: "string"
-        },
-        {
-            name: "children",
-            label: "Content",
-            type: "rich-text",
-            templates: [
-                ClassyImageTemplate,
-            ]
-        },
-    ]
-}
-
-const TinaTabsTemplate = {
-    name: "TinaTabs",
-    label: "Tina Tabs",
-    fields: [
-        {
-            name: "items",
-            label: "Tabs",
-            type: "object",
-            list: true,
-            ui: {
-                defaultItem: {
-                    label: "New Tab",
-                    value: "tab",
-                },
-            },
-            itemProps: (item) => {
-                return { label: item ? item.label : null };
-            },
-            fields: [
-                {
-                    name: "label",
-                    label: "Label",
-                    type: "string"
-                },
-                {
-                    name: "value",
-                    label: "Value",
-                    type: "string"
-                },
-                {
-                    name: "image",
-                    label: "Image",
-                    type: "image"
-                },
-                {
-                    name: "content",
-                    label: "Content",
-                    type: "string",
-                    component: "textarea",
-                },
-            ]
-        }
-    ],
-};
-
-const TabsTemplate = {
-    name: "Tabs",
-    label: "Tabs",
-    fields: [
-        {
-            name: "children",
-            label: "Tab Items",
-            type: "rich-text",
-            templates: [
-                TabItemTemplate
-            ]
-        }
-    ],
-};
-
 const TinaTableCell = {
     name: "TinaTableCell",
     label: "Cell",
@@ -465,6 +371,101 @@ const CodeBlockTemplate = {
             label: "Code",
             type: "rich-text",
         },
+    ],
+};
+
+const TabItemTemplate = {
+    name: "TabItem",
+    label: "Tab Item",
+    ui: {
+        defaultItem: {
+            label: "New Tab",
+            value: "tab",
+        },
+    },
+    itemProps: (item) => {
+        return { label: item ? item.label : null };
+    },
+    fields: [
+        {
+            name: "label",
+            label: "Label",
+            type: "string"
+        },
+        {
+            name: "value",
+            label: "Value",
+            type: "string"
+        },
+        {
+            name: "children",
+            label: "Content",
+            type: "rich-text",
+            templates: [
+                ClassyImageTemplate,
+                TinaTableTemplate
+            ]
+        },
+    ]
+}
+
+const TinaTabsTemplate = {
+    name: "TinaTabs",
+    label: "Tina Tabs",
+    fields: [
+        {
+            name: "items",
+            label: "Tabs",
+            type: "object",
+            list: true,
+            ui: {
+                defaultItem: {
+                    label: "New Tab",
+                    value: "tab",
+                },
+            },
+            itemProps: (item) => {
+                return { label: item ? item.label : null };
+            },
+            fields: [
+                {
+                    name: "label",
+                    label: "Label",
+                    type: "string"
+                },
+                {
+                    name: "value",
+                    label: "Value",
+                    type: "string"
+                },
+                {
+                    name: "image",
+                    label: "Image",
+                    type: "image"
+                },
+                {
+                    name: "content",
+                    label: "Content",
+                    type: "string",
+                    component: "textarea",
+                },
+            ]
+        }
+    ],
+};
+
+const TabsTemplate = {
+    name: "Tabs",
+    label: "Tabs",
+    fields: [
+        {
+            name: "children",
+            label: "Tab Items",
+            type: "rich-text",
+            templates: [
+                TabItemTemplate
+            ]
+        }
     ],
 };
 
