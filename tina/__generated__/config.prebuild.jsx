@@ -133,6 +133,104 @@ var TabsTemplate = {
     }
   ]
 };
+var TinaTableCell = {
+  name: "TinaTableCell",
+  label: "Cell",
+  type: "object",
+  ui: {
+    defaultItem: {
+      rowSpan: 0,
+      colSpan: 0
+    }
+  },
+  fields: [
+    {
+      name: "children",
+      label: "Content",
+      type: "rich-text"
+    },
+    {
+      name: "rowSpan",
+      label: "Row Span",
+      type: "number",
+      ui: {
+        validate: (value) => {
+          return value < 0 ? "Value cannot go below 0" : null;
+        }
+      }
+    },
+    {
+      name: "colSpan",
+      label: "Column Span",
+      type: "number"
+    }
+  ]
+};
+var TinaTableRowTemplate = {
+  name: "TinaTableRow",
+  label: "Row",
+  type: "object",
+  fields: [
+    /* {
+                name: "items",
+                label: "Items",
+                type: "object",
+                list: true,
+                itemProps: (item) => {
+                    return { label: item ? item.label : null };
+                },
+                fields: [
+                    {
+                        name: "label", // to delete
+                        label: "Label",
+                        type: "string"
+                    },
+                    {
+                        name: "header", // to delete
+                        label: "Header",
+                        type: "boolean"
+                    },
+                    {
+                        name: "style", // to delete
+                        label: "Style",
+                        component: "select",
+                        type: "string",
+                        options: [{
+                            value: "highlight",
+                            label: "Highlight"
+                        }, {
+                            value: "code",
+                            label: "Code"
+                        }]
+                    },
+                    {
+                        name: "url", // to delete
+                        label: "Link",
+                        type: "string"
+                    },
+                    {
+                        name: "rowSpan", // to delete
+                        label: "Row Span",
+                        type: 'number'
+                    },
+                    {
+                        name: "colSpan", // to delete
+                        label: "Column Span",
+                        type: 'number'
+                    },
+    
+                ]
+            }, */
+    {
+      name: "children",
+      label: "Items",
+      type: "rich-text",
+      templates: [
+        TinaTableCell
+      ]
+    }
+  ]
+};
 var TinaTableTemplate = {
   name: "TinaTable",
   label: "Table",
@@ -143,65 +241,78 @@ var TinaTableTemplate = {
   },
   fields: [
     {
-      name: "rowHeader",
-      label: "Row Header",
+      name: "topHeader",
+      label: "Top Header",
       type: "boolean"
     },
     {
-      name: "columnHeader",
-      label: "Column Header",
+      name: "leftHeader",
+      label: "left Header",
       type: "boolean"
     },
     {
-      name: "rows",
-      label: "Rows",
-      list: true,
-      type: "object",
-      fields: [
-        {
-          name: "row",
-          label: "Row",
-          type: "object",
-          list: true,
-          itemProps: (item) => {
-            return { label: item ? item.label : null };
-          },
-          fields: [
+      name: "columnWidth",
+      label: "Column Width",
+      type: "string"
+    },
+    /* {
+        name: "rows", // to delete
+        label: "Rows",
+        list: true,
+        type: "object",
+        fields: [
             {
-              name: "label",
-              label: "Label",
-              type: "string"
-            },
-            {
-              name: "style",
-              label: "Style",
-              component: "select",
-              type: "string",
-              options: [{
-                value: "highlight",
-                label: "Highlight"
-              }, {
-                value: "code",
-                label: "Code"
-              }]
-            },
-            {
-              name: "url",
-              label: "Link",
-              type: "string"
-            },
-            {
-              name: "rowSpan",
-              label: "Row Span",
-              type: "number"
-            },
-            {
-              name: "colSpan",
-              label: "Column Span",
-              type: "number"
+                name: "row",
+                label: "Row",
+                type: "object",
+                list: true,
+                itemProps: (item) => {
+                    return { label: item ? item.label : null };
+                },
+                fields: [
+                    {
+                        name: "label",
+                        label: "Label",
+                        type: "string"
+                    },
+                    {
+                        name: "style",
+                        label: "Style",
+                        component: "select",
+                        type: "string",
+                        options: [{
+                            value: "highlight",
+                            label: "Highlight"
+                        }, {
+                            value: "code",
+                            label: "Code"
+                        }]
+                    },
+                    {
+                        name: "url",
+                        label: "Link",
+                        type: "string"
+                    },
+                    {
+                        name: "rowSpan",
+                        label: "Row Span",
+                        type: 'number'
+                    },
+                    {
+                        name: "colSpan",
+                        label: "Column Span",
+                        type: 'number'
+                    }
+                ]
             }
-          ]
-        }
+        ]
+    }, */
+    {
+      name: "children",
+      label: "Rows",
+      type: "rich-text",
+      templates: [
+        TinaTableRowTemplate
       ]
     }
   ]

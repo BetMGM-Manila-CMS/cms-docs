@@ -9,6 +9,7 @@ import DocCardList from "@theme-original/DocCardList";
 import {
   TinaTable,
   TinaTableRow,
+  TinaTableCell,
   TinaSpacer,
   RichTable,
   RichTableRow,
@@ -28,6 +29,7 @@ export default {
   TinaTableRow: TinaTableRow,
   RichTable: RichTable,
   RichTableRow: RichTableRow,
+  TinaTableCell: TinaTableCell,
   TinaSpacer: TinaSpacer,
   GameLinks: GameLinks,
   TinaTabs: TinaTabs

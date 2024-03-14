@@ -153,12 +153,46 @@ const TabsTemplate = {
     ],
 };
 
+const TinaTableCell = {
+    name: "TinaTableCell",
+    label: "Cell",
+    type: 'object',
+    ui: {
+        defaultItem: {
+            rowSpan: 0,
+            colSpan: 0,
+        },
+    },
+    fields: [
+        {
+            name: "children",
+            label: "Content",
+            type: "rich-text"
+        },
+        {
+            name: "rowSpan",
+            label: "Row Span",
+            type: 'number',
+            ui: {
+                validate: (value) => {
+                    return value < 0 ? 'Value cannot go below 0' : null
+                }
+            }
+        },
+        {
+            name: "colSpan",
+            label: "Column Span",
+            type: 'number'
+        },
+    ]
+}
+
 const TinaTableRowTemplate = {
     name: "TinaTableRow",
     label: "Row",
     type: "object",
     fields: [
-        {
+        /* {
             name: "items",
             label: "Items",
             type: "object",
@@ -168,17 +202,17 @@ const TinaTableRowTemplate = {
             },
             fields: [
                 {
-                    name: "label",
+                    name: "label", // to delete
                     label: "Label",
                     type: "string"
                 },
                 {
-                    name: "header",
+                    name: "header", // to delete
                     label: "Header",
                     type: "boolean"
                 },
                 {
-                    name: "style",
+                    name: "style", // to delete
                     label: "Style",
                     component: "select",
                     type: "string",
@@ -191,22 +225,31 @@ const TinaTableRowTemplate = {
                     }]
                 },
                 {
-                    name: "url",
+                    name: "url", // to delete
                     label: "Link",
                     type: "string"
                 },
                 {
-                    name: "rowSpan",
+                    name: "rowSpan", // to delete
                     label: "Row Span",
                     type: 'number'
                 },
                 {
-                    name: "colSpan",
+                    name: "colSpan", // to delete
                     label: "Column Span",
                     type: 'number'
-                }
+                },
+
             ]
-        }
+        }, */
+        {
+            name: "children",
+            label: "Items",
+            type: "rich-text",
+            templates: [
+                TinaTableCell
+            ]
+        },
     ]
 
 }
@@ -221,17 +264,22 @@ const TinaTableTemplate = {
     },
     fields: [
         {
-            name: "rowHeader",
-            label: "Row Header",
+            name: "topHeader",
+            label: "Top Header",
             type: "boolean"
         },
         {
-            name: "columnHeader",
-            label: "Column Header",
+            name: "leftHeader",
+            label: "left Header",
             type: "boolean"
         },
         {
-            name: "rows",
+            name: "columnWidth",
+            label: "Column Width",
+            type: "string"
+        },
+        /* {
+            name: "rows", // to delete
             label: "Rows",
             list: true,
             type: "object",
@@ -280,6 +328,14 @@ const TinaTableTemplate = {
                         }
                     ]
                 }
+            ]
+        }, */
+        {
+            name: "children",
+            label: "Rows",
+            type: "rich-text",
+            templates: [
+                TinaTableRowTemplate
             ]
         },
     ]

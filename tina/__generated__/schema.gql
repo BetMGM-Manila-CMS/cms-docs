@@ -199,22 +199,29 @@ input NumberFilter {
   in: [Float]
 }
 
-input DocBodyTinaTableRowsRowFilter {
-  label: StringFilter
-  style: StringFilter
-  url: StringFilter
+input DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
+  children: RichTextFilter
   rowSpan: NumberFilter
   colSpan: NumberFilter
 }
 
-input DocBodyAdmonitionChildrenTinaTableRowsFilter {
-  row: DocBodyTinaTableRowsRowFilter
+input DocBodyTinaTableChildrenTinaTableRowChildrenFilter {
+  TinaTableCell: DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
+}
+
+input DocBodyTinaTableChildrenTinaTableRowFilter {
+  children: DocBodyTinaTableChildrenTinaTableRowChildrenFilter
+}
+
+input DocBodyAdmonitionChildrenTinaTableChildrenFilter {
+  TinaTableRow: DocBodyTinaTableChildrenTinaTableRowFilter
 }
 
 input DocBodyAdmonitionChildrenTinaTableFilter {
-  rowHeader: BooleanFilter
-  columnHeader: BooleanFilter
-  rows: DocBodyAdmonitionChildrenTinaTableRowsFilter
+  topHeader: BooleanFilter
+  leftHeader: BooleanFilter
+  columnWidth: StringFilter
+  children: DocBodyAdmonitionChildrenTinaTableChildrenFilter
 }
 
 input DocBodyAdmonitionChildrenFilter {
@@ -229,14 +236,15 @@ input DocBodyAdmonitionFilter {
   children: DocBodyAdmonitionChildrenFilter
 }
 
-input DocBodyTinaTableRowsFilter {
-  row: DocBodyTinaTableRowsRowFilter
+input DocBodyTinaTableChildrenFilter {
+  TinaTableRow: DocBodyTinaTableChildrenTinaTableRowFilter
 }
 
 input DocBodyTinaTableFilter {
-  rowHeader: BooleanFilter
-  columnHeader: BooleanFilter
-  rows: DocBodyTinaTableRowsFilter
+  topHeader: BooleanFilter
+  leftHeader: BooleanFilter
+  columnWidth: StringFilter
+  children: DocBodyTinaTableChildrenFilter
 }
 
 input DocBodyDetailsFilter {

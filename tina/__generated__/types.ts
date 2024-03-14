@@ -311,22 +311,29 @@ export type NumberFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
 };
 
-export type DocBodyTinaTableRowsRowFilter = {
-  label?: InputMaybe<StringFilter>;
-  style?: InputMaybe<StringFilter>;
-  url?: InputMaybe<StringFilter>;
+export type DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter = {
+  children?: InputMaybe<RichTextFilter>;
   rowSpan?: InputMaybe<NumberFilter>;
   colSpan?: InputMaybe<NumberFilter>;
 };
 
-export type DocBodyAdmonitionChildrenTinaTableRowsFilter = {
-  row?: InputMaybe<DocBodyTinaTableRowsRowFilter>;
+export type DocBodyTinaTableChildrenTinaTableRowChildrenFilter = {
+  TinaTableCell?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
+};
+
+export type DocBodyTinaTableChildrenTinaTableRowFilter = {
+  children?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowChildrenFilter>;
+};
+
+export type DocBodyAdmonitionChildrenTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowFilter>;
 };
 
 export type DocBodyAdmonitionChildrenTinaTableFilter = {
-  rowHeader?: InputMaybe<BooleanFilter>;
-  columnHeader?: InputMaybe<BooleanFilter>;
-  rows?: InputMaybe<DocBodyAdmonitionChildrenTinaTableRowsFilter>;
+  topHeader?: InputMaybe<BooleanFilter>;
+  leftHeader?: InputMaybe<BooleanFilter>;
+  columnWidth?: InputMaybe<StringFilter>;
+  children?: InputMaybe<DocBodyAdmonitionChildrenTinaTableChildrenFilter>;
 };
 
 export type DocBodyAdmonitionChildrenFilter = {
@@ -341,14 +348,15 @@ export type DocBodyAdmonitionFilter = {
   children?: InputMaybe<DocBodyAdmonitionChildrenFilter>;
 };
 
-export type DocBodyTinaTableRowsFilter = {
-  row?: InputMaybe<DocBodyTinaTableRowsRowFilter>;
+export type DocBodyTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowFilter>;
 };
 
 export type DocBodyTinaTableFilter = {
-  rowHeader?: InputMaybe<BooleanFilter>;
-  columnHeader?: InputMaybe<BooleanFilter>;
-  rows?: InputMaybe<DocBodyTinaTableRowsFilter>;
+  topHeader?: InputMaybe<BooleanFilter>;
+  leftHeader?: InputMaybe<BooleanFilter>;
+  columnWidth?: InputMaybe<StringFilter>;
+  children?: InputMaybe<DocBodyTinaTableChildrenFilter>;
 };
 
 export type DocBodyDetailsFilter = {
