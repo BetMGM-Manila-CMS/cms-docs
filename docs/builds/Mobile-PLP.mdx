@@ -1,5 +1,107 @@
 ---
-title: Mobile PLP
+title: Poker Carousel
+last_update:
+  date: 03/06/2024
+  author: Emmanuel Borromeo
+  description: Mobile PLP Build
+  authors: Emmanuel Borromeo
 ---
 
 # Mobile PLP
+
+**Mobile PLP** is a carousel-like feature but takes up the whole screen of a mobile device.
+
+<img src="/img/builds/mobile-plp/sample.png" width="25%"/>
+
+## Building Mobile PLP
+
+:::info[SiteCore Path]
+sitecore > content > Vanilla.Mobile > brand/state > MobilePoker-v1.0 > Regional > Global > MobilePLP > MobilePLP-LIVE
+:::
+
+Go to the above Sitecore Path. Then do the following:
+
+### Step 1. Duplicate File
+
+1. Right-click the file you want to duplicate.
+2. Choose Copy To
+3. Remove the URL of your choosen File
+4. Click Copy
+5. Rename the file to your ticket's name
+
+### Step 2: Edit PokerPromotionData
+
+<table>
+<tbody>
+<tr>
+<td>Title</td>
+<td>Fill this with just ```<p></p>```</td>
+<td><img src="/img/builds/mobile-plp/mobi plp title.png" width="100%"/></td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Insert the Promotional Description, usually Featuting Part of the copy or the Inbox Preview</td>
+<td><img src="/img/builds/mobile-plp/mobi plp desc.png" width="100%"/></td>
+</tr>
+<tr>
+<td>BackgroupImage</td>
+<td>Asset with size 345 x 511</td>
+<td><img src="/img/builds/mobile-plp/mobi plp bg.png" width="100%"/></td>
+</tr>
+<tr>
+<td>CTA</td>
+<td>Insert the appropriate CTA, this is a CTA after Opt-In. In the <strong>data-purl</strong> insert the clean URL (use https://www.urlencoder.org/).</td>
+<td><img src="/img/builds/mobile-plp/mobi plp cta.png" width="100%"/></td>
+</tr>
+<tr>
+<td>TermsAndConditions</td>
+<td>If the promo has Opt-In CTA the Terms &amp; Condition will have a smartlink to the Tourney Page, if not leave this empty</td>
+<td><img src="/img/builds/mobile-plp/mobi plp tnc.png" width="100%"/></td>
+</tr>
+<tr>
+<td>ForegroundImage</td>
+<td>Asset with size 395 x 176</td>
+<td><img src="/img/builds/mobile-plp/mobi plp png.png" width="100%"/></td>
+</tr>
+<tr>
+<td>OptInRequired & OptInText</td>
+<td>If the promo has Opt-In CTA, tick this and Inpit <strong>OPT IN</strong>. If not, untick this.</td>
+<td><img src="/img/builds/mobile-plp/mobi plp opt in.png" width="100%"/></td>
+</tr>
+<tr>
+<td>ErrorCTA</td>
+<td>In case the PAT ID is invalid this CTA will show up, either put the TourneyPage smartlink or PromoHub Smartlink. In the <strong>data-purl</strong> insert the clean URL (use https://www.urlencoder.org/).</td>
+<td><img src="/img/builds/mobile-plp/mobi plp error cta.png" width="100%"/></td>
+</tr>
+<tr>
+<td>PromotionalId & Source</td>
+<td>Insert here the PAT ID, and choose Promos. (Leave empty if non opt-in promo)</td>
+<td><img src="/img/builds/mobile-plp/mobi plp promos.png" width="100%"/></td>
+</tr>
+</tbody>
+</table>
+
+:::tip[URL Cleaner]
+To clean URL use https://www.urlencoder.org/
+<img src="/img/builds/mobile-plp/url cleaner.png" width="50%"/>
+:::
+
+
+
+### Step 3: Filter & Publishing Date
+
+1. Insert your QA Filter under **Condition**
+
+```html
+QueryString.Get('qa') = 'emil'
+```
+
+2. Clear Publishing Date (for new builds)
+
+### Step 4: Screenshot your PLP
+
+Go to your sites plp preview page with your qa filter name, then look for your output.
+
+```html
+https://poker.nj.betmgm.com/en/mobileplp?qa=yourname
+```
