@@ -94,6 +94,12 @@ export const GameLinks = () => {
       domain: "casino.nj.partycasino.com",
       imageDomain: "casinogames.nj.partycasino.com",
     },
+    {
+      label: "Wheel Of Fortune",
+      code: "WOF",
+      domain: "casino.wheeloffortunecasino.com",
+      imageDomain: "casinogames.wheeloffortunecasino.com",
+    },
   ];
 
   useEffect(() => {
