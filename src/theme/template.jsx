@@ -278,6 +278,11 @@ const TinaTableTemplate = {
             label: "Column Width",
             type: "string"
         },
+        {
+            name: "className",
+            label: "Class",
+            type: "string"
+        },
         /* {
             name: "rows", // to delete
             label: "Rows",

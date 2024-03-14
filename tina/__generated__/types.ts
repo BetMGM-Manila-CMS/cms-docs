@@ -333,6 +333,7 @@ export type DocBodyAdmonitionChildrenTinaTableFilter = {
   topHeader?: InputMaybe<BooleanFilter>;
   leftHeader?: InputMaybe<BooleanFilter>;
   columnWidth?: InputMaybe<StringFilter>;
+  className?: InputMaybe<StringFilter>;
   children?: InputMaybe<DocBodyAdmonitionChildrenTinaTableChildrenFilter>;
 };
 
@@ -356,6 +357,7 @@ export type DocBodyTinaTableFilter = {
   topHeader?: InputMaybe<BooleanFilter>;
   leftHeader?: InputMaybe<BooleanFilter>;
   columnWidth?: InputMaybe<StringFilter>;
+  className?: InputMaybe<StringFilter>;
   children?: InputMaybe<DocBodyTinaTableChildrenFilter>;
 };
 

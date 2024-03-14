@@ -221,6 +221,7 @@ input DocBodyAdmonitionChildrenTinaTableFilter {
   topHeader: BooleanFilter
   leftHeader: BooleanFilter
   columnWidth: StringFilter
+  className: StringFilter
   children: DocBodyAdmonitionChildrenTinaTableChildrenFilter
 }
 
@@ -244,6 +245,7 @@ input DocBodyTinaTableFilter {
   topHeader: BooleanFilter
   leftHeader: BooleanFilter
   columnWidth: StringFilter
+  className: StringFilter
   children: DocBodyTinaTableChildrenFilter
 }
 

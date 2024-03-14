@@ -22,7 +22,7 @@ export const TinaTableRow = ({ children }) => {
 
 }
 
-export const TinaTable = ({ children, topHeader, leftHeader, columnWidth }) => {
+export const TinaTable = ({ children, topHeader, leftHeader, columnWidth, className }) => {
     let items = children
 
     if (leftHeader && children.length) {
@@ -105,7 +105,7 @@ export const TinaTable = ({ children, topHeader, leftHeader, columnWidth }) => {
     }
 
     return (
-        <table>
+        <table className={className}>
             {
                 head ? <thead>
                     <tr>
