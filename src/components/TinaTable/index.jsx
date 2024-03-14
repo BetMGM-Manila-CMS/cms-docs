@@ -23,34 +23,25 @@ export const TinaTableRow = ({ children }) => {
 }
 
 export const TinaTable = ({ children, topHeader, leftHeader, columnWidth }) => {
-    let items = children
+    let items = children;
 
-    if (leftHeader) {
+    // Adjusting leftHeader
+    if (leftHeader && children.length) {
         items = children.map(row => ({
             ...row,
             props: {
                 ...row.props,
-                children: row.props.children.map((cell, index) => {
-                    if (index === 0) {
-                        return {
-                            ...cell,
-                            props: {
-                                ...cell.props,
-                                header: true
-                            }
-                        }
-                    } else {
-                        return cell
-                    }
-                })
+                children: row.props.children.map((cell, index) => (
+                    index === 0 ? { ...cell, props: { ...cell.props, header: true } } : cell
+                ))
             }
-        }))
+        }));
     }
 
+    // Adjusting columnWidth
     if (columnWidth) {
-        const widths = columnWidth.split(', ').map(val => Number(val))
-        const firstRow = items[0]
-
+        const widths = columnWidth.split(', ').map(val => Number(val));
+        const firstRow = items[0];
         const topRow = {
             ...firstRow,
             props: {
@@ -63,34 +54,36 @@ export const TinaTable = ({ children, topHeader, leftHeader, columnWidth }) => {
                     }
                 }))
             }
-        }
-
-        items = [topRow, ...items.slice(1)]
+        };
+        items = [topRow, ...items.slice(1)];
     }
 
-    const head = topHeader && items.length ? items[0].props.children.map(cell => ({
-        ...cell,
-        props: {
-            ...cell.props,
-            header: true,
-        }
-    })) : null
-    const body = head ? items.slice(1) : items.length ? items : [items]
+    // Setting head
+    let head;
+    if (topHeader) {
+        head = items.length ?
+            items[0].props.children.map(cell => ({ ...cell, props: { ...cell.props, header: true } })) :
+            [items.props.children.map(cell => ({ ...cell, props: { ...cell.props, header: true } }))];
+    }
+
+    // Setting body
+    let body;
+    if (head) {
+        body = items.length > 1 ? items.slice(1) : null;
+    } else {
+        body = items.length > 1 ? items : [items];
+    }
 
     return (
         <table>
-            {
-                head ? <thead>
-                    <tr>
-                        {head}
-                    </tr>
-                </thead> : null
+            {head &&
+                <thead>
+                    <tr>{head}</tr>
+                </thead>
             }
-            {
-                body.length ? <tbody>
-                    {body}
-                </tbody> : null
+            {body &&
+                <tbody>{body}</tbody>
             }
         </table>
-    )
-}
+    );
+};

@@ -1,37 +1,26 @@
 ---
-title: Coin Flip PAT
 last_update:
   date: 1/30/2024
   author: Kyle Atienza
   description: Add no prize description
 authors: Kyle Atienza
+title: Coin Flip PAT
 ---
-
-import cta from "../../static/img/builds/pat-eds-coin/coin-cta.png"
-import teaser from "../../static/img/builds/pat-eds-coin/coin-teaser.png"
-import rewards from "../../static/img/builds/pat-eds-coin/coin-rewards.png"
-import terms from "../../static/img/builds/pat-eds-coin/coin-terms.png"
-
 
 # Coin Flip
 
-:::note
+<Admonition type="note" title="Note">
+  Coin Toss and Coin Flip is used interchangeably depending on the promotion, but does not have any differences on the promotion or the mechanics, only on the naming.
+</Admonition>
 
-Coin Toss and Coin Flip is used interchangeably depending on the promotion, but does not have any differences on the promotion or the mechanics, only on the naming.
-
-:::
-
-:::info[Copy and assets needed]
-
-- **Prize Tool** - You'll find this in the Documents section of your ticket's Workfront.
-- **Coin Images** - Look for the `Coin Flip/Toss Assets` folder in the ticket's creatives.
-
-:::
+<Admonition type="info" title="Copy and assets needed">
+  * **Prize Tool** - You'll find this in the Documents section of your ticket's Workfront.
+  * **Coin Images** - Look for the `Coin Flip/Toss Assets` folder in the ticket's creatives.
+</Admonition>
 
 ## Teaser
 
-<img className="mt-3 mb-5" src={teaser} />
-
+![](/img/builds/pat-eds-coin/coin-teaser.png)
 
 1. **TeaserImage** - Use `Promohub Tiles-800x360` image.
 2. **Description** - Place an empty `<p></p>` inside the field.
@@ -43,71 +32,57 @@ The Rewards section is where the contents from the [Prize Tool](./documents#priz
 
 One difference compared to [STW](./pat-eds-stw) and [PAB](./pat-eds-pab) is that the last row for the rewards is assaigned to a `No Prize` prize.
 
-<img className="mt-3 mb-5" src={rewards} />
+![](/img/builds/pat-eds-coin/coin-rewards.png)
 
-1. **Title** - Place the the contents from the `PRIZE` column from the `Prize Tool` document in the same order to the BoxSection's `Title` Rows.
+* **Title** - Place the the contents from the `PRIZE` column from the `Prize Tool` document in the same order to the BoxSection's `Title` Rows.
+* **Image** - We can use the 3 `500x500` images each prize except for the `No Prize` row.
 
+  For the `500x500` images there are the `Coin 1`, `Coin 2`, and `Reward Coin` images, each for the rewards. But there are instances that there are 4 rewards, in this case it would be fine to reuse any of the earlier mentioned images.
 
-2. **Image** - We can use the 3 `500x500` images each prize except for the `No Prize` row. 
+  For the `No Prize` row we will use the `Reward Coin 120x120` image.
 
-    For the `500x500` images there are the `Coin 1`, `Coin 2`, and `Reward Coin` images, each for the rewards. But there are instances that there are 4 rewards, in this case it would be fine to reuse any of the earlier mentioned images.
+<Admonition type="tip" title="Note">
+  Use the image url by clicking the \`Open\` link of the image on the Media Library. And copy the link on the URL and paste on the \`Rewards\` table.
+</Admonition>
 
-    For the `No Prize` row we will use the `Reward Coin 120x120` image.
+* **Description** - The `Description` column's value will be the value from the `PRIZE DESCRIPTION` column from the `Prize Tool` document, but it should be inserted in the HTML format shown below, just replace the appropriate value to be the same from your `Prize Tool` document.
 
-    <br />
+```html
+<div className="overlay-header">
+<h1 className="mb-1 mt-0">Congratulations!</h1>
+<h2 className="mb-2 mt-1">You won a prize in the Road to The Big Game Coin Flip promotion.</h2>
+<p className="mb-2">Enjoy 10 Bonus Spins on Bankin' Bacon&trade;.</p>
+<p className="mb-2">T&amp;Cs apply.</p>
+<div className="mt-2">
+<a className="btn btn-primary" href="{Reward CTA URL}">{Reward CTA Text}</a>
+</div>
+</div>
+```
 
-    :::tip[Note]
+For the `No Prize` row the value for the `Description` is provided below:
 
-    Use the image url by clicking the `Open` link of the image on the Media Library. And copy the link on the URL and paste on the `Rewards` table.
+```html
+<h1 className="mb-1 mt-0">Sorry!</h1>
+<h2 className="mb-2 mt-1"><strong>You didn&rsquo;t win anything today.</strong></h2>
+<p className="mb-1">Come back tomorrow to flip again!</p>
+<div className="mt-2"><a rel="noopener noreferrer" className="btn btn-primary" href="!!M2.CasinoHome">Home</a></div>
+```
 
-    :::
-
-3. **Description** - The `Description` column's value will be the value from the `PRIZE DESCRIPTION` column from the `Prize Tool` document, but it should be inserted in the HTML format shown below, just replace the appropriate value to be the same from your `Prize Tool` document.
-    
-    <br />
-
-    ```html
-    <div className="overlay-header">
-    <h1 className="mb-1 mt-0">Congratulations!</h1>
-    <h2 className="mb-2 mt-1">You won a prize in the Road to The Big Game Coin Flip promotion.</h2>
-    <p className="mb-2">Enjoy 10 Bonus Spins on Bankin' Bacon&trade;.</p>
-    <p className="mb-2">T&amp;Cs apply.</p>
-    <div className="mt-2">
-    <a className="btn btn-primary" href="{Reward CTA URL}">{Reward CTA Text}</a>
-    </div>
-    </div>
-    ```
-
-    For the `No Prize` row the value for the `Description` is provided below:
-
-    <br />
-
-    ```html
-    <h1 className="mb-1 mt-0">Sorry!</h1>
-    <h2 className="mb-2 mt-1"><strong>You didn&rsquo;t win anything today.</strong></h2>
-    <p className="mb-1">Come back tomorrow to flip again!</p>
-    <div className="mt-2"><a rel="noopener noreferrer" className="btn btn-primary" href="!!M2.CasinoHome">Home</a></div>
-    ```
-
-    :::note[CTA]
-
-    See the [CTA guide](./cta) to use the correct CTA for each description.
-
-    :::
+<Admonition type="note" title="CTA">
+  See the [CTA guide](./cta) to use the correct CTA for each description.
+</Admonition>
 
 ## Terms
 
-<img className="mt-3 mb-5" src={terms} />
+![](/img/builds/pat-eds-coin/coin-terms.png)
 
 ### KeyTermsAndConditions
 
 The value for this field will be from the `Promo Hub Key Terms > Short Summary` from the copy.
 
-:::warning[note]
-
-Enclose this content with the `<p></p>` tag
-
-:::
+<Admonition type="caution" title="Note">
+  Enclose this content with the `<p></p>` tag
+</Admonition>
 
 ### FullTermsAndConditions
 
@@ -115,7 +90,7 @@ Place the same Terms and Conditions content you have placed for the MPP or Rest 
 
 ## Overlay
 
-The content for this field is referenced from the `Eligibility` section of your `Terms and Conditions` document. Update the list and use the first three items from the section. 
+The content for this field is referenced from the `Eligibility` section of your `Terms and Conditions` document. Update the list and use the first three items from the section.
 
 See the HTML below for reference, replace some of the contents to match the contents from you document.
 
@@ -129,25 +104,22 @@ See the HTML below for reference, replace some of the contents to match the cont
 </ul>
 ```
 
-
 ## CTA
 
-<img className="mt-3 mb-5" src={cta} />
+![](/img/builds/pat-eds-coin/coin-cta.png)
 
 1. **URL** - Place the link to the game with the PAT ID of the same PAT you are working on currently
 
-    <br/>
+```
+!!M2.Promo/ep/c/{Coin Flip Layout Name}?id={PAT ID}
+```
 
-    ```
-    !!M2.Promo/ep/c/{Coin Flip Layout Name}?id={PAT ID}
-    ```
-
-2. **Link Text** - `"Flip Now or Toss Now"` depeding on the promotion name.
+1. **Link Text** - `"Flip Now or Toss Now"` depeding on the promotion name.
 
 ## Toss
 
 Refer to the [AssetsAndContent](./engagements-coin#step-2-edit-assetsandcontent) section for the Coin Flip Layout page as the content will be the same.
- 
+
 ## Media Content
 
 Refer to the [MediaContent](./engagements-coin#media-content) section for the Coin Flip Layout page as the content will be the same.

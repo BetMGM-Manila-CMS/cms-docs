@@ -1,10 +1,10 @@
 ---
-title: Coin Flip Engagement
 last_update:
   date: 01/23/2024
   author: Emmanuel Borromeo
   description: Build Coin Toss Docs
 authors: Emil Borromeo
+title: Coin Flip Engagement
 ---
 
 # Coin Flip
@@ -13,22 +13,22 @@ One of the Casino Engagements is the Coin Flip. In this game, the player flips a
 
 ![](/img/builds/coin-toss/cointosspreview.png)
 
-
 To build a Coin Flip Page, you'll need to have the following sitecore files:
+
 1. Layout
-2. PAT 
+2. PAT
 
 ## Layout
+
 Here, you'll edit the layout of the Coin Flip. Follow the Path below to start building.
 
-:::info[SiteCore Path]
-content > Vanilla.Mobile > brand/state > Promo > Engagement > c 
-:::
+<Admonition type="info" title="SiteCore Path">
+  content > Vanilla.Mobile > brand/state > Promo > Engagement > c
+</Admonition>
 
 ### Step 1: Duplicate File
 
-![](/img/builds/coin-toss/Coin Toss Duplicate.jpg)
-
+!\[]\(/img/builds/coin-toss/Coin Toss Duplicate.jpg)
 
 1. Right-click the file you want to duplicate.
 2. Choose Copy To
@@ -42,72 +42,87 @@ content > Vanilla.Mobile > brand/state > Promo > Engagement > c
   <li>
     Click the drop down icon (►) of your file, then go to assetsandcontent
   </li>
+
   <li>
     Edit the **Toss** Section
   </li>
+
   <ul>
     <li>PreBetText</li>
     <li className="list-none">Just edit the Gold or Purple part, depending on the color of your Coin *(as seen in the assets)*.</li>
+
     <li className="list-none">
       ```html
       <span className="txt-white" style="font-size: var(--site-spacer-l)">
         It's all in your hands
       </span>
-      
+
       <span>Make a bet! is it going to be</span>
       <span>Gold or Purple?</span>
       ```
-      </li>
-<li>TossConfirmationText</li>
-<li className="list-none">
-```html
-<span>You chose #COIN_SIDE#..</span>
-```
-</li>
-<li>TossResultText</li>
-<li className="list-none">
-```html
-<span>#COIN_SIDE# it is..</span>
-```
-</li>
-<li>HeadText</li>
-<li className="list-none">
-```html
-<span>Gold</span>
-```
-</li>
-<li>TailText</li>
-<li className="list-none">Change this based on the Coin Color in the assets of your ticket.</li>
-<li className="list-none">
-```html
-<span>Purple</span>
-```
-</li>
-</ul>
-<li id="media-content">Edit **MediaContent**</li>
+    </li>
 
-![](/img/builds/coin-toss/Layout3.png)
+    <li>TossConfirmationText</li>
 
-<ul>
-<li>FrontImage</li>
-<li className="list-none">Coin 1 Asset with size 500x500</li>
-<li>BackImage</li>
-<li className="list-none">Coin 2 Asset with size 500x500</li>
-<li>CoinFlipLogo</li>
-<li className="list-none">Logo Asset with size 600x150, if not provided can be replaced by 1px png *(can be source from previous ticket/s)*</li>
-<li>BackgroundImage</li>
-<li className="list-none">Mobile BG Asset with size 900x700</li>
-</ul>
+    <li className="list-none">
+      ```html
+      <span>You chose #COIN_SIDE#..</span>
+      ```
+    </li>
+
+    <li>TossResultText</li>
+
+    <li className="list-none">
+      ```html
+      <span>#COIN_SIDE# it is..</span>
+      ```
+    </li>
+
+    <li>HeadText</li>
+
+    <li className="list-none">
+      ```html
+      <span>Gold</span>
+      ```
+    </li>
+
+    <li>TailText</li>
+    <li className="list-none">Change this based on the Coin Color in the assets of your ticket.</li>
+
+    <li className="list-none">
+      ```html
+      <span>Purple</span>
+      ```
+    </li>
+  </ul>
+
+  <li id="media-content">Edit **MediaContent**</li>
+
+  ![](/img/builds/coin-toss/Layout3.png)
+
+  <ul>
+    <li>FrontImage</li>
+    <li className="list-none">Coin 1 Asset with size 500x500</li>
+    <li>BackImage</li>
+    <li className="list-none">Coin 2 Asset with size 500x500</li>
+    <li>CoinFlipLogo</li>
+    <li className="list-none">Logo Asset with size 600x150, if not provided can be replaced by 1px png *(can be source from previous ticket/s)*</li>
+    <li>BackgroundImage</li>
+    <li className="list-none">Mobile BG Asset with size 900x700</li>
+  </ul>
 </ol>
 
-### Step 3: Edit **Faqs**  
+### Step 3: Edit **Faqs**
+
 There are 5 FAQs here, but only edit Faq1 & Faq3. Click the drop down icon (►) of Faqs, then go to Faq1.
-1. Change the Promo Name with your Ticket's Promo Name  
-![](/img/builds/coin-toss/Layout42.png)<ol className="list-none"><li></li></ol>
-2. Proceed to Faq3. Change the Promo Date with your Ticket's Promo Date  
-![](/img/builds/coin-toss/Layout41.png)<ol className="list-none"><li></li></ol>
+
+1. Change the Promo Name with your Ticket's Promo Name\
+   ![](/img/builds/coin-toss/Layout42.png)<ol className="list-none"><li /></ol>
+2. Proceed to Faq3. Change the Promo Date with your Ticket's Promo Date\
+   ![](/img/builds/coin-toss/Layout41.png)<ol className="list-none"><li /></ol>
 
 ## Coin Flip PAT
-:::info
-For updating the Test Coin Flip PAT, go to this page for reference: [Coin Flip PAT](./pat-eds-coin).
-:::
+
+<Admonition type="info" title="Info">
+  For updating the Test Coin Flip PAT, go to this page for reference: \[Coin Flip PAT]\(./pat-eds-coin).
+</Admonition>
