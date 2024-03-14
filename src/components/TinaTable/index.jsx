@@ -23,25 +23,34 @@ export const TinaTableRow = ({ children }) => {
 }
 
 export const TinaTable = ({ children, topHeader, leftHeader, columnWidth }) => {
-    let items = children;
+    let items = children
 
-    // Adjusting leftHeader
     if (leftHeader && children.length) {
         items = children.map(row => ({
             ...row,
             props: {
                 ...row.props,
-                children: row.props.children.map((cell, index) => (
-                    index === 0 ? { ...cell, props: { ...cell.props, header: true } } : cell
-                ))
+                children: row.props.children.map((cell, index) => {
+                    if (index === 0) {
+                        return {
+                            ...cell,
+                            props: {
+                                ...cell.props,
+                                header: true
+                            }
+                        }
+                    } else {
+                        return cell
+                    }
+                })
             }
-        }));
+        }))
     }
 
-    // Adjusting columnWidth
     if (columnWidth) {
-        const widths = columnWidth.split(', ').map(val => Number(val));
-        const firstRow = items[0];
+        const widths = columnWidth.split(', ').map(val => Number(val))
+        const firstRow = items[0]
+
         const topRow = {
             ...firstRow,
             props: {
@@ -54,36 +63,61 @@ export const TinaTable = ({ children, topHeader, leftHeader, columnWidth }) => {
                     }
                 }))
             }
-        };
-        items = [topRow, ...items.slice(1)];
+        }
+
+        items = [topRow, ...items.slice(1)]
     }
 
-    // Setting head
-    let head;
+    // head
+    let head
     if (topHeader) {
-        head = items.length ?
-            items[0].props.children.map(cell => ({ ...cell, props: { ...cell.props, header: true } })) :
-            [items.props.children.map(cell => ({ ...cell, props: { ...cell.props, header: true } }))];
+        if (items.length) {
+            head = items[0].props.children.map(cell => ({
+                ...cell,
+                props: {
+                    ...cell.props,
+                    header: true,
+                }
+            }))
+        } else {
+            head = [items.props.children.map(cell => ({
+                ...cell,
+                props: {
+                    ...cell.props,
+                    header: true,
+                }
+            }))]
+        }
     }
 
-    // Setting body
-    let body;
+    // bidy
+    let body
     if (head) {
-        body = items.length > 1 ? items.slice(1) : null;
+        if (items.length > 1) {
+            body = items.slice(1)
+        }
     } else {
-        body = items.length > 1 ? items : [items];
+        if (items.length > 1) {
+            body = items
+        } else {
+            body = [items]
+        }
     }
 
     return (
         <table>
-            {head &&
-                <thead>
-                    <tr>{head}</tr>
-                </thead>
+            {
+                head ? <thead>
+                    <tr>
+                        {head}
+                    </tr>
+                </thead> : null
             }
-            {body &&
-                <tbody>{body}</tbody>
+            {
+                body ? <tbody>
+                    {body}
+                </tbody> : null
             }
         </table>
-    );
-};
+    )
+}

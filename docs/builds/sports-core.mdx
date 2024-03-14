@@ -7,20 +7,6 @@ last_update:
 authors: Josh Javier
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-import nflCoreDomain from '../../static/img/builds/sports-core/nfl-core-domain-v2.png'
-import coreDomainCopy from '../../static/img/builds/sports-core/core-domain-copy.webm'
-import sampleWFComment from '../../static/img/builds/sports-core/sample-wf-comment.png'
-import sitecoreURLMapping from '../../static/img/builds/sports-core/sitecore-url-mapping-v2.png'
-import sc11 from '../../static/img/builds/sports-core/sc-11.png'
-import sc9 from '../../static/img/builds/sports-core/sc-9.png'
-import sc35 from '../../static/img/builds/sports-core/sc-35.png'
-import coreDomainCopy2 from '../../static/img/builds/sports-core/core-domain-copy-v2.png'
-import coreGoogleDoc from '../../static/img/builds/sports-core/core-google-doc.png'
-import clonedItemWarning from '../../static/img/builds/sports-core/cloned-item-warning.png'
-
 # Core Domain
 
 ## Overview
@@ -28,7 +14,8 @@ import clonedItemWarning from '../../static/img/builds/sports-core/cloned-item-w
 Core domains are pages where players can place bets on a certain sport or league. For example, here is the core domain for the NFL:
 
 <a href="https://sports.nj.betmgm.com/en/sports/football-11/betting/usa-9/nfl-35" target="_blank" title="Visit the NFL core page for NJ in a new tab">
-  <img src={nflCoreDomain} alt="" className="my-4" />
+  
+  ![](/img/builds/sports-core/nfl-core-domain-v2.png)
 </a>
 
 You can find links to the other core pages at the top navigation bar or (if you're on [Sports home](https://sports.nj.betmgm.com/en/sports)) in the A-Z menu on the left sidebar.
@@ -36,7 +23,7 @@ You can find links to the other core pages at the top navigation bar or (if you'
 When you scroll down the core page, you'll find a disclosure component just before the footer that contains the page copy for that core domain.
 
 <video controls className="my-4">
-  <source src={coreDomainCopy} type="video/webm" />
+  <source src={"/img/builds/sports-core/core-domain-copy.webm"} type="video/webm" />
 </video>
 
 ## Updating the Core Domain
@@ -45,21 +32,27 @@ Your task is to update the core domain copy for all [Sports states](#compile-fin
 
 You will receive a Google Doc which contains the URL for the core domain and the updated copy you need to use.
 
-<img src={coreGoogleDoc} alt="" className="my-4" />
+
+![](/img/builds/sports-core/core-google-doc.png)
 
 If you take a look at the URL, you'll notice certain numbers that come after a sport/country/league. These segments actually map to a Sitecore component as shown in the image below.
 
-<img src={sitecoreURLMapping} alt="" className="my-4" />
+
+![](/img/builds/sports-core/sitecore-url-mapping-v2.png)
 
 Let's say we're working on the NFL core domain, which has the following URL:  
 `https://sports.STATE.betmgm.com/en/sports/football-11/betting/usa-9/nfl-35`
 
 Take note of the three segments with numbers after the `/sports/` subdirectory:
-- `/football-11` - maps to the <img src={sc11} alt="11" style={{ display: 'inline' }} /> component
-- `/usa-9` - maps to the <img src={sc9} alt="9" style={{ display: 'inline' }} /> component
-- `/nfl-35` - maps to the <img src={sc35} alt="35" style={{ display: 'inline' }} /> component
+- `/football-11` - maps to the 
+<img className="inline" src="/img/builds/sports-core/sc-11.png" alt="11" /> component
+- `/usa-9` - maps to the 
+<img className="inline" src="/img/builds/sports-core/sc-9.png" alt="9" /> component
+- `/nfl-35` - maps to the 
+<img className="inline" src="/img/builds/sports-core/sc-35.png" alt="35" /> component
 
-**The component that maps to the last segment in the URL is the one you need to update.** In this case, you need to update the <img src={sc35} alt="35" style={{ display: 'inline' }} /> component in all three Sitecore paths.
+**The component that maps to the last segment in the URL is the one you need to update.** In this case, you need to update the 
+<img className="inline" src="/img/builds/sports-core/sc-35.png" alt="35" /> component in all three Sitecore paths.
 
 ## Sitecore components
 
@@ -78,7 +71,7 @@ Since BetMGM ON is not included in the US CMS (`cms-us.prod.env.works`), you als
 :::info[Sitecore Paths]
 
 <Tabs>
-  <TabItem value="sc-path" label="Paths" default>
+  <TabItem value="sc-path" label="Paths">
     - **Whitelabel**: Content > Vanilla.Mobile > m2.WhiteLabel > MobileSports-v1.0 > SEO-Nationwide-BetMGM-Sports
     - **Nationwide**: Content > Vanilla.Mobile > m2.betmgm.com > MobileSports-v1.0 > SEO-Nationwide-BetMGM-Sports
     - **National**: Content > Vanilla.Mobile > m2.betmgm.com > MobileSports-v1.0 > SEO
@@ -109,14 +102,52 @@ Before making any updates, keep the old core page open in a tab so you can use i
 
 Place the updated copy into the corresponding Sitecore fields. Make sure the StayOnline checkbox is **checked**.
 
-| Copy document | Sitecore field |
-| ------------- | -------------- |
-| Page title | MetaTitle |
-| Meta Description | MetaDescription |
-| `<h1>` | H2Header |
-| Body text | Text |
+<TinaTable>
+  <TinaTableRow>
+    <TinaTableCell>
+    Copy document
+    </TinaTableCell>
+    <TinaTableCell>
+    Sitecore field
+    </TinaTableCell>
+  </TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+    Page title
+    </TinaTableCell>
+    <TinaTableCell>
+    MetaTitle
+    </TinaTableCell>
+  </TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+     Meta Description
+    </TinaTableCell>
+    <TinaTableCell>
+    MetaDescription
+    </TinaTableCell>
+  </TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+    `<h1>`
+    </TinaTableCell>
+    <TinaTableCell>
+    H2Header
+    </TinaTableCell>
+  </TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+    Body text
+    </TinaTableCell>
+    <TinaTableCell>
+    Text
+    </TinaTableCell>
+  </TinaTableRow>
+  
+</TinaTable>
 
-<img src={coreDomainCopy2} alt="" className="my-4" />
+
+![](/img/builds/sports-core/core-domain-copy-v2.png)
 
 ### Things to update in the body text
 
@@ -131,12 +162,57 @@ Place the updated copy into the corresponding Sitecore fields. Make sure the Sta
 
   Examples:
 
-  | Link | Redirects to Geolocator? | Final `href` |
-  | :--: | :----------------------: | :----------: |
-  | [online sportsbook](https://sports.betmgm.com/en/sports) | Yes | `!!M2.Sports/sports` |
-  | [NFL MVP Odds](https://sports.betmgm.com/en/blog/nfl/nfl-mvp-odds-tickets-handle-bm03/) | No | https://sports.betmgm.com/en/blog/nfl/nfl-mvp-odds-tickets-handle-bm03/ |
-  | [Live betting](https://sports.betmgm.com/en/sports/live/betting) | Yes | `!!M2.Sports/sports/live/betting` |
+<TinaTable>
+  <TinaTableRow>
+    <TinaTableCell>
+    Link
+    </TinaTableCell>
+    <TinaTableCell>
+    Redirects to Geolocator?
+    </TinaTableCell>
+    <TinaTableCell>
+    Final `href`
+    </TinaTableCell>
+  </TinaTableRow>
 
+  <TinaTableRow>
+    <TinaTableCell>
+   [online sportsbook](https://sports.betmgm.com/en/sports)
+    </TinaTableCell>
+    <TinaTableCell>
+    Yes
+    </TinaTableCell>
+    <TinaTableCell>
+    `!!M2.Sports/sports`
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    [NFL MVP Odds](https://sports.betmgm.com/en/blog/nfl/nfl-mvp-odds-tickets-handle-bm03/) 
+    </TinaTableCell>
+    <TinaTableCell>
+    No
+    </TinaTableCell>
+    <TinaTableCell>
+    https://sports.betmgm.com/en/blog/nfl/nfl-mvp-odds-tickets-handle-bm03/
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    [Live betting](https://sports.betmgm.com/en/sports/live/betting)
+    </TinaTableCell>
+    <TinaTableCell>
+    Yes
+    </TinaTableCell>
+    <TinaTableCell>
+    `!!M2.Sports/sports/live/betting`
+    </TinaTableCell>
+  </TinaTableRow>
+
+  
+</TinaTable>
 
 ### "Why is the core page for X state not updating?"
 
@@ -147,7 +223,8 @@ To do this:
 1. Go to *Content > Vanilla.Mobile > m2.`state`.betmgm.com > MobileSports-v1.0 > SEO > Main*, then look for the corresponding component for the core domain you're updating.
 2. If you don't see a yellow box that says "This item is cloned! It cannot be modified!" then it means the component isn't cloned from WhiteLabel. So you have to update it manually.
 
-   <img src={clonedItemWarning} alt="" className="my-4 mx-auto" />
+   
+   ![](/img/builds/sports-core/cloned-item-warning.png)
 
 3. Update the Sitecore fields like you did with the Whitelabel component.
 4. Save and finalize, wait for a few minutes, then check the final URL for that state to see if the changes have already reflected.
@@ -185,4 +262,5 @@ Here's a list of all Sports states:
 
 ## Sample WF comment
 
-<img src={sampleWFComment} className="my-4" />
+
+![](/img/builds/sports-core/sample-wf-comment.png)
