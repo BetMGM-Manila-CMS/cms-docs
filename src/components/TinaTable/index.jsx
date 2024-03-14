@@ -76,7 +76,9 @@ export const TinaTableRow = ({ items }) => {
     )
 }
 
-const ChildredContents = (children) => {
+const ChildredContents = ({ children }) => {
+
+
     const head = children ? children[0] : null
     const body = children && children.length ? children.slice(1) : null
 
@@ -104,8 +106,6 @@ export const TinaTable = ({ children, rows, rowHeader, columnHeader }) => {
 
     const rowHead = rowHeader ? rows[0] : null
     const body = rowHead ? rows.slice(1) : rows
-
-    console.log(rowHead, body)
 
     // version 1
     if (children) {
