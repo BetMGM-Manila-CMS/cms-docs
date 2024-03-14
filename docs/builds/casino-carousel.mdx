@@ -62,7 +62,7 @@ Name the new Carousel object with the Ticket name.
       H1
     </TinaTableCell>
   </TinaTableRow>
-  
+
   <TinaTableRow>
     <TinaTableCell rowSpan={0} colSpan={0}>
       Subtitle
@@ -94,13 +94,6 @@ Name the new Carousel object with the Ticket name.
   </TinaTableRow>
 </TinaTable>
 
-| Field             | Value           |
-| ----------------- | --------------- |
-| Title             | H1              |
-| Subtitle          | H2              |
-| Image             | blank Media URL |
-| Background: Image | Media URL       |
-
 <Admonition type="info" title="Labeling">
   Please check the CTA guide for the proper labeling and link to use.
 </Admonition>
@@ -111,17 +104,79 @@ Name the new Carousel object with the Ticket name.
 
 ### Teaser Alignments
 
-| Device  | Value                                         |
-| ------- | --------------------------------------------- |
-| Desktop | actor-left title-big text-center actor no-cta |
-| Mobile  | disable-actor title-big text-center           |
+<TinaTable topHeader={true} leftHeader={false}>
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Device
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Desktop
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      ```
+      actor-left title-big text-center actor no-cta
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Mobile
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      ```
+      disable-actor title-big text-center
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
 
 ### Filters
 
-| Device  | Value                                                                                    |
-| ------- | ---------------------------------------------------------------------------------------- |
-| Desktop | (Request.Query MATCHES "\[your name]") AND (NOT Device.IsMobile AND NOT Device.IsTablet) |
-| Mobile  | (Request.Query MATCHES "\[your name]") AND (Device.IsMobile OR Device.IsTablet)          |
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Device
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Desktop
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      ```
+      (Request.Query MATCHES "[your name]") AND (NOT Device.IsMobile AND NOT Device.IsTablet)
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Mobile
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      ```
+      (Request.Query MATCHES "\[your name]") AND (Device.IsMobile OR Device.IsTablet)
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
 
 ## Pushing The Carousel
 
