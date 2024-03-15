@@ -1,97 +1,196 @@
 ---
-title: Mission Page
 last_update:
-  date: 2024-02-15
+  date: '2024-02-15T00:00:00.000Z'
   author: JM Antonio
   description: Initial content
 authors: JM Antonio
+title: Mission Page
 ---
-
-import img630x896 from "../../static/img/builds/sports-mission/630x896.png";
-import cards from "../../static/img/builds/sports-mission/cards.png";
-import challenges from "../../static/img/builds/sports-mission/challenges.png";
-import description from "../../static/img/builds/sports-mission/description.png";
-import mission_comp from "../../static/img/builds/sports-mission/mission_components.png";
-import parent_comp from "../../static/img/builds/sports-mission/parent_component.png";
-import preview1 from "../../static/img/builds/sports-mission/preview1.png";
-import preview2 from "../../static/img/builds/sports-mission/preview2.png";
-import sample_challenge_desc from "../../static/img/builds/sports-mission/sample_challenge_desc.png";
-import teaser from "../../static/img/builds/sports-mission/teaser.png";
-import tnc from "../../static/img/builds/sports-mission/tnc.png";
 
 # Mission Page
 
 Mission Page is an interactive Landing page where customers join and do challenges/missions to earn rewards.
 
-<img src={preview2} alt="" /><br/>
+![](/img/builds/sports-mission/preview2.png)
 
-# Building The Mission Page
-<br/>
-:::info[Sitecore Path]
+## Building The Mission Page
 
-Content Editor > Sitecore > Content > Vanilla.Mobile > m2.`state`.`brand`.com > Promo > casino / sports folder
-
-:::
+<Admonition type="info" title="Sitecore Path">
+  Content Editor > Sitecore > Content > Vanilla.Mobile > m2.`state`.`brand`.com > Promo > casino / sports folder
+</Admonition>
 
 1. Shown below are the components that are required to update.
 
-<img src={mission_comp} alt="" /><br/>
+![](/img/builds/sports-mission/mission_components.png)
 
-2. <strong>Parent</strong> 
+## Parent
 
-In this part you can adjust the size of the lockup and challenge_icon.
+In this part you can adjust the size of the lockup and challenge\_icon.
 
-<img src={parent_comp} alt="" /><br/>
+![](/img/builds/sports-mission/parent_component.png)
 
 Here's a preview what it looks like on the page.
 
-<img src={preview1} alt="" /><br/>
+![](/img/builds/sports-mission/preview1.png)
 
-3. <strong>Teaser</strong> 
+## Teaser
 
-| Required | Size |
-| ---------- | ----------- |
-| Img_mobile_src | 1057x705 |
-| Img_src |  1057x705 |
-| Lockup_src | 1050x823 |
+<TinaTable>
+  <TinaTableRow>
+    <TinaTableCell>
+    Required
+    </TinaTableCell>
+    <TinaTableCell>
+    Size
+    </TinaTableCell>
+  </TinaTableRow>
+  
+  <TinaTableRow>
+    <TinaTableCell>
+    Img_mobile_src
+    </TinaTableCell>
+    <TinaTableCell>
+    1057x705
+    </TinaTableCell>
+  </TinaTableRow>
 
-<img src={teaser} alt="" /><br/>
+  <TinaTableRow>
+    <TinaTableCell>
+    Img_src
+    </TinaTableCell>
+    <TinaTableCell>
+    1057x705
+    </TinaTableCell>
+  </TinaTableRow>
 
-4. <strong>Challenges</strong>
+  <TinaTableRow>
+    <TinaTableCell>
+    Lockup_src
+    </TinaTableCell>
+    <TinaTableCell>
+    1050x823
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
 
-<img src={challenges} alt="" /><br/>
+![](/img/builds/sports-mission/teaser.png)
+
+## Challenges
+
+![](/img/builds/sports-mission/challenges.png)
 
 `ForallCompletedDescription`, just change the name of the Promotion.
 
 For `challenge_success_overlay_bg_src` - image size needed is <strong>630x896</strong> (there are three (3) images with the same size, please use the one with plain background).
 
-<img src={img630x896} alt="" /><br/>
+![](/img/builds/sports-mission/630x896.png)
 
-5. <strong>Challenge (Cards)</strong>
+## Challenge (Cards)
 
-| Fields | Required |
-| ----------- | ------------ |
-| carousel_bg and carousel_expired_bg | 630x896 |
-| challenge_icon | 649x648 |
-| cta_url |  according to your  ticket state and brand |
-| description | you can find this part in the copy |
-| detail_bg | 1057x705 |
-| detail_countdown_headline | change according to your promotion name |
-| start and end date | update this part according on the promotional dates given |
-| headline_1 | PROMOTION NAME (all caps) |
-| headline_2 | MISSION # (all caps) |
+<TinaTable>
+  <TinaTableRow>
+    <TinaTableCell>
+    Fields
+    </TinaTableCell>
+    <TinaTableCell>
+    Required
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    carousel\_bg and carousel\_expired\_bg
+    </TinaTableCell>
+    <TinaTableCell>
+    630x896
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    challenge\_icon
+    </TinaTableCell>
+    <TinaTableCell>
+    649x648
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    cta\_ur
+    </TinaTableCell>
+    <TinaTableCell>
+    according to your  ticket state and brand
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    description
+    </TinaTableCell>
+    <TinaTableCell>
+    you can find this part in the copy
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    detail\_bg
+    </TinaTableCell>
+    <TinaTableCell>
+    1057x705
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    detail\_countdown\_headline
+    </TinaTableCell>
+    <TinaTableCell>
+    change according to your promotion name
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    start and end date
+    </TinaTableCell>
+    <TinaTableCell>
+    update this part according on the promotional dates given
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    headline\_1
+    </TinaTableCell>
+    <TinaTableCell>
+    PROMOTION NAME (all caps)
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+    headline\_2
+    </TinaTableCell>
+    <TinaTableCell>
+    MISSION # (all caps)
+    </TinaTableCell>
+  </TinaTableRow>
+
+</TinaTable>
 
 Reference Image below.
 
-<img src={cards} alt="" /><br/>
+![](/img/builds/sports-mission/cards.png)
 
-<img src={sample_challenge_desc} alt="" /><br/>
+![](/img/builds/sports-mission/sample_challenge_desc.png)
 
 Repeat this action with all the other challenge/mission cards.
 
-6. <strong>Description</strong>
+## Description
 
-<img src={description} alt="" /><br/>
+![](/img/builds/sports-mission/description.png)
 
 <strong>Upper box</strong> can found in the MPP description.
 
@@ -103,8 +202,8 @@ Note: Don’t forget to put at the end:
 Please read our full terms & conditions before participating.
 ```
 
-7. <strong>Terms & Conditions</strong>
+## Terms & Conditions
 
-<img src={tnc} alt="" /><br/>
+![](/img/builds/sports-mission/tnc.png)
 
 Format the TnCs as with the Casino Landing Pages, `Titles` are `ALL CAPS` with no `colon(:)`.

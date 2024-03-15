@@ -1,145 +1,133 @@
-import CodeBlock from "@theme-original/CodeBlock";
+const cellSpans = (rowSpan = false, colSpan = false) => ({
+    ...(rowSpan && { rowSpan }),
+    ...(colSpan && { colSpan }),
+});
 
-const cellValue = (cell) => {
-    if (cell.url) {
-        return <a href={cell.url}>{cell.label}</a>
+export const TinaTableCell = ({ children, header, rowSpan, colSpan, className }) => {
+
+    if (header) {
+        return <th {...cellSpans(rowSpan, colSpan)} className={className} >{children}</th>
+    } else {
+        return <td {...cellSpans(rowSpan, colSpan)} className={className} >{children}</td>
     }
-
-    return cell.label
-}
-
-const cellWrapper = (cell) => {
-    if (cell.style === "highlight") {
-        return <code>{cellValue(cell)}</code>
-    } else if (cell.style === "code") {
-        return <CodeBlock className="table-code">{cellValue(cell)}</CodeBlock>
-    }
-
-    return cellValue(cell)
-}
-
-const cellSpans = (cell) => {
-    let spans = {}
-
-    if (cell.rowSpan) {
-        spans.rowSpan = cell.rowSpan
-    }
-
-    if (cell.colSpan) {
-        spans.colSpan = cell.colSpan
-    }
-
-    return spans
-}
-
-const mapCells = (items, header = false) => {
-    return items.map((cell, index) => {
-        if (header == "first") {
-            if (index == 0) {
-                return (
-                    <th {...cellSpans(cell)} key={index}>
-                        {cellWrapper(cell)}
-                    </th>
-                )
-            } else {
-                return (
-                    <td {...cellSpans(cell)} key={index} >
-                        {cellWrapper(cell)}
-                    </td>
-                )
-            }
-        } else if (cell.header || header) {
-            return (
-                <th {...cellSpans(cell)} key={index}>
-                    {cellWrapper(cell)}
-                </th>
-            )
-        } else {
-            return (
-                <td {...cellSpans(cell)} key={index} >
-                    {cellWrapper(cell)}
-                </td>
-            )
-        }
-    })
 
 }
 
-export const TinaTableRow = ({ items }) => {
-
+export const TinaTableRow = ({ children }) => {
     return (
-        <>
-            <tr>
-                {items && items.length ? mapCells(items) : null}
-            </tr>
-        </>
+        <tr>
+            {children}
+        </tr>
     )
+
 }
 
-const ChildredContents = ({ children }) => {
-
-
-    const head = children ? children[0] : null
-    const body = children && children.length ? children.slice(1) : null
-
-    return (
-        <table>
-            {
-                head ?
-                    <thead>
-                        {head}
-                    </thead>
-                    : null
-            }
-            {
-                body ?
-                    <tbody>
-                        {body}
-                    </tbody>
-                    : null
-            }
-        </table>
-    )
-}
-
-export const TinaTable = ({ children, rows, rowHeader, columnHeader }) => {
-
-    const rowHead = rowHeader ? rows[0] : null
-    const body = rowHead ? rows.slice(1) : rows
-
-    // version 1
+export const TinaTable = ({ children, topHeader, leftHeader, columnWidth, className }) => {
     if (children) {
-        return <ChildredContents children={children} />
-    }
 
-    if (rows) {
+        let items = children
+
+        if (leftHeader && children.length) {
+            items = children.map(row => {
+                const children = row.props.children.length ? row.props.children : [row.props.children]
+
+                return {
+                    ...row,
+                    props: {
+                        ...row.props,
+                        children: children.map((cell, index) => {
+                            if (index === 0) {
+                                return {
+                                    ...cell,
+                                    props: {
+                                        ...cell.props,
+                                        header: true
+                                    }
+                                }
+                            } else {
+                                return cell
+                            }
+                        })
+                    }
+                }
+            })
+        }
+
+        if (columnWidth) {
+            const widths = columnWidth.split(', ').map(val => Number(val))
+            const firstRow = items[0]
+
+            const topRow = {
+                ...firstRow,
+                props: {
+                    ...firstRow.props,
+                    children: firstRow.props.children.map((cell, index) => ({
+                        ...cell,
+                        props: {
+                            ...cell.props,
+                            className: `w-[${widths[index]}%]`
+                        }
+                    }))
+                }
+            }
+
+            items = [topRow, ...items.slice(1)]
+        }
+
+        // head
+        let head
+        if (topHeader) {
+            if (items.length) {
+                const children = items[0].props.children.length ? items[0].props.children : [items[0].props.children]
+
+                head = children.map(cell => ({
+                    ...cell,
+                    props: {
+                        ...cell.props,
+                        header: true,
+                    }
+                }))
+            } else {
+                head = [items.props.children.map(cell => ({
+                    ...cell,
+                    props: {
+                        ...cell.props,
+                        header: true,
+                    }
+                }))]
+            }
+        }
+
+        // body
+        let body
+        if (head) {
+            if (items.length > 1) {
+                body = items.slice(1)
+            }
+        } else {
+            if (items.length > 1) {
+                body = items
+            } else {
+                body = [items]
+            }
+        }
+
         return (
-            <table>
+            <table className={className}>
                 {
-                    rowHead ?
-                        <thead>
-                            <tr>
-                                {mapCells(rowHead.row, true)}
-                            </tr>
-                        </thead>
-                        : null
+                    head ? <thead>
+                        <tr>
+                            {head}
+                        </tr>
+                    </thead> : null
                 }
                 {
-                    body ?
-                        <tbody>
-                            {
-                                body.map(({ row }) => {
-                                    return (
-                                        <tr>
-                                            {mapCells(row, columnHeader ? "first" : false)}
-                                        </tr>
-                                    )
-                                })
-                            }
-                        </tbody>
-                        : null
+                    body ? <tbody>
+                        {body}
+                    </tbody> : null
                 }
             </table>
         )
     }
+
 }

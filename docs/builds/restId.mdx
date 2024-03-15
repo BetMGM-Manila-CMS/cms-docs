@@ -65,42 +65,67 @@ The team uses an [internal tool](http://betmgm-phtools.entaingroup.corp/promohub
 
 To use the tool, click through each icon to get to the desired values that will be displayed on the right side of the tool and paste the appropriate values on the following fields.
 
-<TinaTable>
-  <TinaTableRow items={[{ label: "Fields", header: true }]} />
+<TinaTable topHeader={true}>
+<TinaTableRow>
+<TinaTableCell>
+Fields
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow items={[{ label: "CommonTitle", style: "highlight" }]} />
+<TinaTableRow>
+<TinaTableCell>
+`CommonTitle`
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow items={[{ label: "CommonDescription", style: "highlight" }]} />
+<TinaTableRow>
+<TinaTableCell>
+`CommonDescription`
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow items={[{ label: "CommonTermsAndConditions", style: "highlight" }]} />
+<TinaTableRow>
+<TinaTableCell>
+`CommonTermsAndConditions`
+</TinaTableCell>
+</TinaTableRow>
+
 </TinaTable>
+
 
 ### Required Images
 
 The fields `Image Landscape` and `Image Square` will be placed with the same image. Depending on the type of the ticket we will either use `Promohub Tiles-800x360` or `Promohub Reward Tiles-800x360`. Please see guide below:
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Provided PAT/EDS", header: true },
-      { label: "Image", header: true }
-    ]}
-  />
+<TinaTable topHeader={true}>
+<TinaTableRow>
+<TinaTableCell>
+Provided PAT/EDS
+</TinaTableCell>
+<TinaTableCell>
+Image
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "Yes" },
-      { label: "Promohub Tiles-800x360", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+Yes
+</TinaTableCell>
+<TinaTableCell>
+Promohub Tiles-800x360
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "No" },
-      { label: "Promohub Reward Tiles-800x360", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+No
+</TinaTableCell>
+<TinaTableCell>
+Promohub Tiles-800x360
+</TinaTableCell>
+</TinaTableRow>
 </TinaTable>
+
 
 ## Inbox
 
@@ -112,48 +137,60 @@ Here is an example from BetMGM:
 
 #### Required Fields
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
+<TinaTable topHeader={true}>
+<TinaTableRow>
+<TinaTableCell>
+Field
+</TinaTableCell>
+<TinaTableCell>
+Value
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "PreviewTitle" },
-      { label: "Player Inbox > Preview Title", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+PreviewTitle
+</TinaTableCell>
+<TinaTableCell>
+`Player Inbox > Preview Title`
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "PreviewDescription" },
-      { label: "Player Inbox > Preview Description", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+PreviewDescription
+</TinaTableCell>
+<TinaTableCell>
+`Player Inbox > Preview Description`
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "FullViewTitle" },
-      { label: "Player Inbox > Fullview Title", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+FullViewTitle
+</TinaTableCell>
+<TinaTableCell>
+`Player Inbox > Fullview Title`
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "FullViewDescription" },
-      { label: "Player Inbox > Fullview Description", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+FullViewDescription
+</TinaTableCell>
+<TinaTableCell>
+`Player Inbox > Fullview Description`
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "ManualTermsAndConditions" },
-      { label: "See Terms Doc", url: "./documents#terms-and-conditions" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+ManualTermsAndConditions
+</TinaTableCell>
+<TinaTableCell>
+[See Terms Doc](./documents#terms-and-conditions)
+</TinaTableCell>
+</TinaTableRow>
 </TinaTable>
 
 <Admonition type="info" title="info">
@@ -162,27 +199,33 @@ Here is an example from BetMGM:
 
 #### Required Images
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Image", header: true }
-    ]}
-  />
+<TinaTable topHeader={true}>
+<TinaTableRow>
+<TinaTableCell>
+Field
+</TinaTableCell>
+<TinaTableCell>
+Image
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "PreviewImage" },
-      { label: "Inbox_short_50x50", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+PreviewImage
+</TinaTableCell>
+<TinaTableCell>
+`Inbox_short_50x50`
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "FullViewImage" },
-      { label: "Inbox-Detail-690x246", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+FullViewImage
+</TinaTableCell>
+<TinaTableCell>
+`Inbox-Detail-690x246`
+</TinaTableCell>
+</TinaTableRow>
 </TinaTable>
 
 ## Overlay
@@ -219,20 +262,24 @@ Here are the required fields for the overlay component
 
 ##### Required Fields
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
+<TinaTable topHeader={true}>
+<TinaTableRow>
+<TinaTableCell>
+Field
+</TinaTableCell>
+<TinaTableCell>
+Value
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "PreviewTitle" },
-      { label: "Overlay > Overlay Description", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+PreviewTitle
+</TinaTableCell>
+<TinaTableCell>
+`Overlay > Overlay Description`
+</TinaTableCell>
+</TinaTableRow>
 </TinaTable>
 
 <Admonition type="note" title="note">
@@ -245,20 +292,24 @@ Here are the required fields for the overlay component
 
 ##### Required Images
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Image", header: true }
-    ]}
-  />
+<TinaTable topHeader={true}>
+<TinaTableRow>
+<TinaTableCell>
+Field
+</TinaTableCell>
+<TinaTableCell>
+Image
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "PreviewTitle" },
-      { label: "Overlay EDS-840x246", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+PreviewTitle
+</TinaTableCell>
+<TinaTableCell>
+`Overlay EDS-840x246`
+</TinaTableCell>
+</TinaTableRow>
 </TinaTable>
 
 ## Toaster
@@ -289,20 +340,24 @@ Here are the required fields for the toaster component:
 
 #### Required Fields
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
+<TinaTable topHeader={true}>
+<TinaTableRow>
+<TinaTableCell>
+Field
+</TinaTableCell>
+<TinaTableCell>
+Value
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "PreviewTitle" },
-      { label: "Toaster", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+PreviewTitle
+</TinaTableCell>
+<TinaTableCell>
+`Toaster`
+</TinaTableCell>
+</TinaTableRow>
 </TinaTable>
 
 <Admonition type="info" title="note">
@@ -315,21 +370,29 @@ Here are the required fields for the toaster component:
 
 #### Required Images
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Image", header: true }
-    ]}
-  />
+<TinaTable topHeader={true}>
+<TinaTableRow>
+<TinaTableCell>
+Field
+</TinaTableCell>
+<TinaTableCell>
+Image
+</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "PreviewTitle" },
-      { label: "Toaster-65x65", style: "highlight" }
-    ]}
-  />
+<TinaTableRow>
+<TinaTableCell>
+PreviewTitle
+</TinaTableCell>
+<TinaTableCell>
+`Toaster-65x65`
+</TinaTableCell>
+</TinaTableRow>
 </TinaTable>
+
+## Push to Optimove
+
+Do not forget to push to optimove the Rest ID you just created.
 
 ## Commenting
 

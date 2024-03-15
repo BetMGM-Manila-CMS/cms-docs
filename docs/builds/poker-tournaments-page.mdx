@@ -67,51 +67,60 @@ This Content should follow this format:
 
 Fill this content using the following:
 
-<TinaTable title="Required Fields">
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
+<TinaTable topHeader={true}>
+    <TinaTableRow>
+        <TinaTableCell>
+            Field
+</TinaTableCell>
+        <TinaTableCell>
+            Value
+</TinaTableCell>
+    </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "PROMO NAME" },
-      { label: "Text found on PROMO LANDING PAGE's Main Image [MPP 1080x486]" }
-    ]}
-  />
+    <TinaTableRow>
+        <TinaTableCell>
+            PROMO NAME
+</TinaTableCell>
+        <TinaTableCell>
+            Text found on PROMO LANDING PAGE's Main Image [MPP 1080x486]
+</TinaTableCell>
+    </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "Subtitle" },
-      { label: "ROMO LANDING PAGE's Subtitle" }
-    ]}
-  />
+    <TinaTableRow>
+        <TinaTableCell>
+            Subtitle
+</TinaTableCell>
+        <TinaTableCell>
+            ROMO LANDING PAGE's Subtitle
+</TinaTableCell>
+    </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "Promo Date" },
-      { label: "\tPROMO LANDING PAGE's Promotional Dates" }
-    ]}
-  />
+    <TinaTableRow>
+        <TinaTableCell>
+            Promo Date
+</TinaTableCell>
+        <TinaTableCell>
+          PROMO LANDING PAGE's Promotional Dates
+</TinaTableCell>
+    </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "Promo description" },
-      { label: "\tPROMO LANDING PAGE's Promotional Description" }
-    ]}
-  />
+    <TinaTableRow>
+        <TinaTableCell>
+            Promo description
+</TinaTableCell>
+        <TinaTableCell>
+          PROMO LANDING PAGE's Promotional Description
+</TinaTableCell>
+    </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "CTA" },
-      {
-        label:
-          "\tDepends on the Promo. Check CTA Docs Page for an exhaustive list of CTAs."
-      }
-    ]}
-  />
+    <TinaTableRow>
+        <TinaTableCell>
+            CTA
+</TinaTableCell>
+        <TinaTableCell>
+            Depends on the Promo. Check CTA Docs Page for an exhaustive list of CTA
+</TinaTableCell>
+    </TinaTableRow>
 </TinaTable>
 
 <div className="sm:flex gap-2">

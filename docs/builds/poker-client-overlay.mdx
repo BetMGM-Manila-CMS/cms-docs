@@ -1,10 +1,10 @@
 ---
-title: Client Overlay
 last_update:
   date: '2024-01-17T00:00:00.000Z'
   author: Josh Javier
   description: Initial content
 authors: Josh Javier
+title: Client Overlay
 ---
 
 # Client Overlay
@@ -29,61 +29,76 @@ There are only two sections you need to update: the **DownloadClientPromotionDat
 
 ### DownloadClientPromotionData
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>
+      Field
+    </TinaTableCell>
 
-  <TinaTableRow
-    items={[
-      { label: "Title" },
-      { label: "Promotion title in Title Case. Do not wrap in <p> tags." }
-    ]}
-  />
+    <TinaTableCell>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "Description" },
-      {
-        label:
-          "The value for this field varies. Usually it's Promo Landing Page > Subtitle, but if a tourney page is not included in the build, sometimes the Inbox Preview Description or Promohub Key Terms > Short Summary will be used. Consult your sublead if unsure."
-      }
-    ]}
-  />
+  <TinaTableRow>
+    <TinaTableCell>
+      Title
+    </TinaTableCell>
 
-  <TinaTableRow
-    items={[
-      { label: "BackgroundImage\t" },
-      { label: "Client Overlay-600x360.jpg or similar" }
-    ]}
-  />
+    <TinaTableCell>
+      Promotion title in Title Case. Do not wrap in `<p>` tags.
+    </TinaTableCell>
+  </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "ActorImage" },
-      { label: "Client Overlay png-192x186.png or similar" }
-    ]}
-  />
+  <TinaTableRow>
+    <TinaTableCell>
+      Description
+    </TinaTableCell>
 
-  <TinaTableRow
-    items={[
-      { label: "CTA Url and Link Text" },
-      {
-        label: "See CTA Guide for more info. Use UPPERCASE for the Link Text.",
-        url: "http://localhost:3000/docs/builds/cta"
-      }
-    ]}
-  />
+    <TinaTableCell>
+      The value for this field varies. Usually it's Promo Landing Page > Subtitle, but if a tourney page is not included in the build, sometimes the Inbox Preview Description or Promohub Key Terms > Short Summary will be used. Consult your sublead if unsure.
+    </TinaTableCell>
+  </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "TermsAndConditions" },
-      { label: "Retain existing content." }
-    ]}
-  />
+  <TinaTableRow>
+    <TinaTableCell>
+      BackgroundImage
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Client Overlay-600x360.jpg or similar
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      ActorImage
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Client Overlay png-192x186.png or similar
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      "CTA Url and Link Text
+    </TinaTableCell>
+
+    <TinaTableCell>
+      See [CTA Guide](./cta.mdx) for more info. Use UPPERCASE for the Link Text.
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      TermsAndConditions
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Retain existing content.
+    </TinaTableCell>
+  </TinaTableRow>
 </TinaTable>
 
 ### Filter
