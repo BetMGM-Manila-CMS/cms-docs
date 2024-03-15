@@ -156,7 +156,7 @@
           "_template": "doc"
         },
         {
-          "document": "docs/builds/landing-page.mdx",
+          "document": "docs/builds/static-tile.mdx",
           "label": "Static Tile",
           "_template": "doc"
         },

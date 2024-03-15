@@ -1,31 +1,27 @@
 ---
-title: Tables
 last_update:
   date: 1/22/2024
   author: Kyle Atienza
   description: Create Table Guide Page
 authors: Kyle Atienza
+title: Tables
 ---
 
 # Tables
 
 This guide provides instructions on appropriately formatting tables for use in text fields within Sitecore. It's important to understand that the table will be converted to HTML. The guide includes the initial structure and styling recommendations for formatting tables.
 
-:::tip
-
-Using a [table parser](https://tableconvert.com/excel-to-html) can help you easily convert the table from your excel file to HTML table.
-
-:::
+<Admonition type="tip" title="Tip">
+  Using a [table parser](https://tableconvert.com/excel-to-html) can help you easily convert the table from your excel file to HTML table.
+</Admonition>
 
 ## HTML
 
-The table uses a standard HTML table element. 
+The table uses a standard HTML table element.
 
-:::note 
-
-Replace the appropriate colors to match with the ticket's brand.
-
-:::
+<Admonition type="note" title="Note">
+  Replace the appropriate colors to match with the ticket's brand.
+</Admonition>
 
 ```html
 <table className="table table-striped table-bordered" style="text-align: center;">
@@ -55,13 +51,13 @@ Replace the appropriate colors to match with the ticket's brand.
 
 Some adjustments are needed to be made from the original copy to present the data in a more cleaner way.
 
-- Update the date to be on the `Month-Day` format.
+* Update the date to be on the `Month-Day` format.
 
 ## CSS
 
 Put this CSS on the top of the text editor.
 
-```css
+```html
 <style>
     .table tbody th, 
     .table tbody tr td, 

@@ -74,7 +74,9 @@ export const TinaTable = ({ children, topHeader, leftHeader, columnWidth, classN
         let head
         if (topHeader) {
             if (items.length) {
-                head = items[0].props.children.map(cell => ({
+                const children = items[0].props.children.length ? items[0].props.children : [items[0].props.children]
+
+                head = children.map(cell => ({
                     ...cell,
                     props: {
                         ...cell.props,
@@ -92,7 +94,7 @@ export const TinaTable = ({ children, topHeader, leftHeader, columnWidth, classN
             }
         }
 
-        // bidy
+        // body
         let body
         if (head) {
             if (items.length > 1) {
