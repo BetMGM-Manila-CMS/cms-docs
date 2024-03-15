@@ -334,10 +334,6 @@ export type DocBodyAdmonitionChildrenImgFilter = {
   alt?: InputMaybe<StringFilter>;
 };
 
-export type DocBodyAdmonitionChildrenTinaSpacerFilter = {
-  space?: InputMaybe<StringFilter>;
-};
-
 export type DocBodyTinaTableChildrenTinaTableRowFilter = {
   children?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowChildrenFilter>;
 };
@@ -356,7 +352,6 @@ export type DocBodyAdmonitionChildrenTinaTableFilter = {
 
 export type DocBodyAdmonitionChildrenFilter = {
   img?: InputMaybe<DocBodyAdmonitionChildrenImgFilter>;
-  TinaSpacer?: InputMaybe<DocBodyAdmonitionChildrenTinaSpacerFilter>;
   TinaTable?: InputMaybe<DocBodyAdmonitionChildrenTinaTableFilter>;
 };
 

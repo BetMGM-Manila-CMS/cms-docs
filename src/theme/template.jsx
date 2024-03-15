@@ -304,7 +304,6 @@ const AdmonitionTemplate = {
             type: "rich-text",
             templates: [
                 ClassyImageTemplate,
-                TinaSpacerTemplate,
                 TinaTableTemplate,
             ]
         },

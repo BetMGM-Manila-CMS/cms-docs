@@ -222,10 +222,6 @@ input DocBodyAdmonitionChildrenImgFilter {
   alt: StringFilter
 }
 
-input DocBodyAdmonitionChildrenTinaSpacerFilter {
-  space: StringFilter
-}
-
 input DocBodyTinaTableChildrenTinaTableRowFilter {
   children: DocBodyTinaTableChildrenTinaTableRowChildrenFilter
 }
@@ -244,7 +240,6 @@ input DocBodyAdmonitionChildrenTinaTableFilter {
 
 input DocBodyAdmonitionChildrenFilter {
   img: DocBodyAdmonitionChildrenImgFilter
-  TinaSpacer: DocBodyAdmonitionChildrenTinaSpacerFilter
   TinaTable: DocBodyAdmonitionChildrenTinaTableFilter
 }
 

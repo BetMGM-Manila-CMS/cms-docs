@@ -28,25 +28,29 @@ export const TinaTable = ({ children, topHeader, leftHeader, columnWidth, classN
         let items = children
 
         if (leftHeader && children.length) {
-            items = children.map(row => ({
-                ...row,
-                props: {
-                    ...row.props,
-                    children: row.props.children.map((cell, index) => {
-                        if (index === 0) {
-                            return {
-                                ...cell,
-                                props: {
-                                    ...cell.props,
-                                    header: true
+            items = children.map(row => {
+                const children = row.props.children.length ? row.props.children : [row.props.children]
+
+                return {
+                    ...row,
+                    props: {
+                        ...row.props,
+                        children: children.map((cell, index) => {
+                            if (index === 0) {
+                                return {
+                                    ...cell,
+                                    props: {
+                                        ...cell.props,
+                                        header: true
+                                    }
                                 }
+                            } else {
+                                return cell
                             }
-                        } else {
-                            return cell
-                        }
-                    })
+                        })
+                    }
                 }
-            }))
+            })
         }
 
         if (columnWidth) {

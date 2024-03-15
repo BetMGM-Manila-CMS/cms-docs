@@ -52,40 +52,6 @@ var ClassyImageTemplate = {
     }
   ]
 };
-var TinaSpacerTemplate = {
-  name: "TinaSpacer",
-  label: "Spacer",
-  ui: {
-    defaultItem: {
-      space: "mt-4"
-    }
-  },
-  fields: [
-    {
-      name: "space",
-      label: "Space",
-      type: "string",
-      options: [
-        {
-          label: "Small",
-          value: "mt-2"
-        },
-        {
-          label: "Normal",
-          value: "mt-4"
-        },
-        {
-          label: "Medium",
-          value: "mt-6"
-        },
-        {
-          label: "Large",
-          value: "mt-9"
-        }
-      ]
-    }
-  ]
-};
 var TinaTableCell = {
   name: "TinaTableCell",
   label: "Cell",
@@ -327,7 +293,6 @@ var AdmonitionTemplate = {
       type: "rich-text",
       templates: [
         ClassyImageTemplate,
-        TinaSpacerTemplate,
         TinaTableTemplate
       ]
     }
