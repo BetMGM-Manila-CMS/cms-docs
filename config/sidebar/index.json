@@ -253,6 +253,10 @@
           "document": "docs/builds/tables.mdx",
           "label": "Tables",
           "_template": "doc"
+        },
+        {
+          "title": "Demo",
+          "_template": "divider"
         }
       ]
     }
