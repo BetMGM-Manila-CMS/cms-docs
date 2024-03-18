@@ -68,18 +68,18 @@ export default function DocItem(props) {
           <DocItemLayout>
             <MDXComponent />
             <div className="mt-8 pt-8 border-t-[1px] border-primary md:flex">
-              {lastUpdate.commit ? (
+              {lastUpdate?.commit ? (
                 <div className="w-full md:w-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-neutral-800 dark:border-gray-700 transition">
                   <h5 className=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     Last Update
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    {lastUpdate.commit.message}
+                    {lastUpdate?.commit.message}
                   </p>
                   <div className="flex items-center justify-between mt-5">
-                    <AuthorBadge name={lastUpdate.author.login} avatar={lastUpdate.author.avatar_url} />
+                    <AuthorBadge name={lastUpdate?.author.login} avatar={lastUpdate?.author.avatar_url} />
                     <p className="text-xs text-end">
-                      {new Date(lastUpdate.commit.author.date).toDateString()}
+                      {new Date(lastUpdate?.commit.author.date).toDateString()}
                     </p>
                   </div>
                 </div>
