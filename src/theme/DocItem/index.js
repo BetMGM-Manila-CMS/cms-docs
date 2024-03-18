@@ -74,7 +74,7 @@ export default function DocItem(props) {
                     Last Update
                   </h5>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    {last_update.description}
+                    {lastUpdate.commit.message}
                   </p>
                   <div className="flex items-center justify-between mt-5">
                     <AuthorBadge name={lastUpdate.author.login} avatar={lastUpdate.author.avatar_url} />
