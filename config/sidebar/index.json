@@ -111,8 +111,6 @@
           "link": "none",
           "items": [
             {
-              "document": "docs/builds/sports-core.mdx",
-              "label": "Core Domain",
               "_template": "doc"
             },
             {
@@ -128,6 +126,11 @@
             {
               "document": "docs/builds/sports-mission-page.mdx",
               "label": "MIssion Page",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/sports-core.mdx",
+              "label": "Core Domain",
               "_template": "doc"
             }
           ],
