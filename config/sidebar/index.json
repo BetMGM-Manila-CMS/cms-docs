@@ -111,9 +111,6 @@
           "link": "none",
           "items": [
             {
-              "_template": "doc"
-            },
-            {
               "document": "docs/builds/mai.mdx",
               "label": "MAI Journey",
               "_template": "doc"
