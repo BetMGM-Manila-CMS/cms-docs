@@ -83,7 +83,7 @@ export const GameLinks = () => {
       imageDomain: "casinogames.borgataonline.com",
     },
     {
-      label: "Borgata NJ",
+      label: "Borgata PA",
       code: "BC PA",
       domain: "casino.pa.borgataonline.com",
       imageDomain: "casinogames.pa.borgataonline.com",
