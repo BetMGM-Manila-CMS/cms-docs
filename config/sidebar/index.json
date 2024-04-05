@@ -129,6 +129,11 @@
               "document": "docs/builds/sports-core.mdx",
               "label": "Core Domain",
               "_template": "doc"
+            },
+            {
+              "document": "docs/builds/Voucher.mdx",
+              "label": "Voucher",
+              "_template": "doc"
             }
           ],
           "_template": "category"
