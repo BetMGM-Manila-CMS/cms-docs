@@ -253,15 +253,6 @@
           "document": "docs/builds/tables.mdx",
           "label": "Tables",
           "_template": "doc"
-        },
-        {
-          "title": "Demo",
-          "_template": "divider"
-        },
-        {
-          "document": "docs/builds/demo-page.mdx",
-          "label": "Demo Page",
-          "_template": "doc"
         }
       ]
     }
