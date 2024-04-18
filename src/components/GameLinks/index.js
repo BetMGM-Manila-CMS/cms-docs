@@ -134,7 +134,7 @@ export const GameLinks = () => {
   const gameTile = (game) => {
     if (game.provider === "NETENT" || game.provider === "DGC") {
       return `
-        <a href="!!M2.CasinoHome/launchng?gd=${game.game}&gm=${game.game}mobile"> 
+        <a href="!!M2.CasinoHome/launchmgc?gd=${game.game}&gm=${game.game}mobile"> 
           <img 
             style="border: 5px solid #FFFFFF;" 
             src="https://${selectedOption.imageDomain}/htmllobby/images/newlmticons/square/${game.game}.jpg" alt="${game.name}" 
