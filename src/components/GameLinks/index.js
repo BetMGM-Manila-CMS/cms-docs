@@ -132,7 +132,7 @@ export const GameLinks = () => {
   }, [games])
 
   const gameTile = (game) => {
-    if (game.provider === "NETENT" || game.provider === "DGC") {
+    if (game.provider === "NETENT" || game.provider === "DGC" || game.provider === "Microgaming") {
       return `
         <a href="!!M2.CasinoHome/launchmgc?gd=${game.game}&gm=${game.game}mobile"> 
           <img 
