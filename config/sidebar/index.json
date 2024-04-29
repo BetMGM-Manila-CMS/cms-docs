@@ -240,11 +240,6 @@
           "_template": "doc"
         },
         {
-          "document": "docs/builds/cta.mdx",
-          "label": "CTAs 🚧",
-          "_template": "doc"
-        },
-        {
           "document": "docs/builds/smartlinks.mdx",
           "label": "Smartlinks",
           "_template": "doc"
@@ -252,6 +247,50 @@
         {
           "document": "docs/builds/tables.mdx",
           "label": "Tables",
+          "_template": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Site Checking",
+      "items": [
+        {
+          "document": "docs/builds/Carousel-Scheduler.mdx",
+          "label": "Carousel Scheduler",
+          "_template": "doc"
+        },
+        {
+          "title": " ",
+          "_template": "divider"
+        },
+        {
+          "document": "docs/builds/casino-carousel-checking.mdx",
+          "label": "Casino Carousel",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/Poker-Carousel-Checking.mdx",
+          "label": "Poker Carousel",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/Sports-Marquee-Checking.mdx",
+          "label": "Sports Marquee",
+          "_template": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Testing And Scheduling",
+      "items": [
+        {
+          "document": "docs/builds/Engagement-Testing.mdx",
+          "label": "Engagement Testing",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/Component-Scheduling.mdx",
+          "label": "Component Scheduling",
           "_template": "doc"
         }
       ]

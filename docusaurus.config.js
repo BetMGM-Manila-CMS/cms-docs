@@ -97,21 +97,19 @@ const config = {
                 sidebarId: "buildsSidebar",
                 label: "Builds",
               },
+              {
+                type: "docSidebar",
+                sidebarId: "siteCheckingSidebar",
+                label: "Site Checking",
+              },
+              {
+                type: "docSidebar",
+                sidebarId: "testingAndSchedulingSidebar",
+                label: "Testing And Scheduling",
+              },
             ]
           },
-          /* {
-            type: "docSidebar",
-            sidebarId: "ticketsSidebar",
-            position: "left",
-            label: "Tickets",
-          }, */
           { to: "/team", label: "Team", position: "left" }, // temporary
-          /* {
-            type: "docSidebar",
-            sidebarId: "toolsSidebar",
-            position: "left",
-            label: "Tools",
-          }, */
           {
             type: "search",
             position: "right",
