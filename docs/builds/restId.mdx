@@ -333,51 +333,53 @@ Here is an example:
 
 ![](/img/builds/restId/restid-toaster-eg.png)
 
-Here are the required fields for the toaster component:
+<Tabs>
+  <TabItem label="Current Format" value="current">
+    Here are the required fields for the toaster component:
 
-1. Check the `Close With Timer` checkbox
-2. **Toaster Title** - add the toaster title
-3. **Toaster Description** - add the toaster description
-4. **Toaster CTA** - add the toaster CTA. For more info refer to the CTA page.
+    1. Check the `Close With Timer` checkbox
+    2. **Toaster Title** - add the toaster title
+    3. **Toaster Description** - add the toaster description
+    4. **Toaster CTA** - add the toaster CTA. For more info refer to the CTA page.
 
-<Admonition type="info" title="CTA Casing">
-  * Use camel casing for BetMGM
-  * Use capitalized for other labels
-</Admonition>
+    <Admonition type="info" title="CTA Casing">
+      * Use camel casing for BetMGM
+      * Use capitalized for other labels
+    </Admonition>
 
-<Admonition type="note" title="CTA Styling">
-  Do not add any inline style or class to the CTA.
-</Admonition>
+    <Admonition type="note" title="CTA Styling">
+      Do not add any inline style or class to the CTA.
+    </Admonition>
+  </TabItem>
 
-### Old Format
+  <TabItem label="Old Format" value="old">
+    <TinaTable topHeader={true}>
+      <TinaTableRow>
+        <TinaTableCell>
+          Field
+        </TinaTableCell>
 
-#### Required Fields
+        <TinaTableCell>
+          Value
+        </TinaTableCell>
+      </TinaTableRow>
 
-<TinaTable topHeader={true}>
-  <TinaTableRow>
-    <TinaTableCell>
-      Field
-    </TinaTableCell>
+      <TinaTableRow>
+        <TinaTableCell>
+          PreviewTitle
+        </TinaTableCell>
 
-    <TinaTableCell>
-      Value
-    </TinaTableCell>
-  </TinaTableRow>
+        <TinaTableCell>
+          `Toaster`
+        </TinaTableCell>
+      </TinaTableRow>
+    </TinaTable>
 
-  <TinaTableRow>
-    <TinaTableCell>
-      PreviewTitle
-    </TinaTableCell>
-
-    <TinaTableCell>
-      `Toaster`
-    </TinaTableCell>
-  </TinaTableRow>
-</TinaTable>
-
-<Admonition type="info" title="note">
-  Enclose the toaster in `<a>` tag and add the CTA link to its `href` attribute
-</Admonition>
+    <Admonition type="info" title="note">
+      Enclose the toaster in `<a>` tag and add the CTA link to its `href` attribute
+    </Admonition>
+  </TabItem>
+</Tabs>
 
 <Admonition type="info" title="info">
   Plese check the [CTA guide](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for the proper labeling and link to use.
