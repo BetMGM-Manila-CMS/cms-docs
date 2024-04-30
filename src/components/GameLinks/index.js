@@ -169,8 +169,6 @@ export const GameLinks = () => {
         }
       })
     ))
-
-    console.log(games[gameIndex])
   }
 
   const isSelected = (gameName) => {
