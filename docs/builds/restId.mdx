@@ -245,57 +245,61 @@ Here is an example:
 
 ![](/img/builds/restId/restid-overlay-eg.png)
 
-Here are the required fields for the overlay component
+<Tabs>
+  <TabItem label="Current Format" value="current">
+    Here are the required fields for the overlay component
 
-1. **Overlay Title** - add the overlay title
-2. **Overlay Description** - add the overlay  description
-3. **Overlay CTA** - add the overlay CTA. For more info refer to the CTA page.
-4. **Overlay Image** - use image Overlay EDS-840x246.
-5. **CTANativeLink URL** - use the URL you used for the overlay CTA
-6. **CTANativeLink Link Text** - use the text you used for the overlay CTA
+    1. **Overlay Title** - add the overlay title
+    2. **Overlay Description** - add the overlay  description
+    3. **Overlay CTA** - add the overlay CTA. For more info refer to the CTA page.
+    4. **Overlay Image** - use image Overlay EDS-840x246.
+    5. **CTANativeLink URL** - use the URL you used for the overlay CTA
+    6. **CTANativeLink Link Text** - use the text you used for the overlay CTA
 
-<Admonition type="info" title="CTA Casing">
-  * Use camel casing for BetMGM
-  * Use capitalized for other labels
-</Admonition>
+    <Admonition type="info" title="CTA Casing">
+      * Use camel casing for BetMGM
+      * Use capitalized for other labels
+    </Admonition>
 
-<Admonition type="info" title="CTA Styling">
-  Do not add any inline style or class to the CTA.
-</Admonition>
+    <Admonition type="info" title="CTA Styling">
+      Do not add any inline style or class to the CTA.
+    </Admonition>
+  </TabItem>
 
-### Old Format
+  <TabItem label="Old Format" value="old">
+    <Admonition type="note" title="Note">
+      The old format for the overlay component is still used for Sports ticket, but it may change in the future as they may also adapt the new format.
+    </Admonition>
 
-<Admonition type="note" title="Note">
-  The old format for the overlay component is still used for Sports ticket, but it may change in the future as they may also adapt the new format.
-</Admonition>
+    ##### Required Fields
 
-##### Required Fields
+    <TinaTable topHeader={true}>
+      <TinaTableRow>
+        <TinaTableCell>
+          Field
+        </TinaTableCell>
 
-<TinaTable topHeader={true}>
-  <TinaTableRow>
-    <TinaTableCell>
-      Field
-    </TinaTableCell>
+        <TinaTableCell>
+          Value
+        </TinaTableCell>
+      </TinaTableRow>
 
-    <TinaTableCell>
-      Value
-    </TinaTableCell>
-  </TinaTableRow>
+      <TinaTableRow>
+        <TinaTableCell>
+          PreviewTitle
+        </TinaTableCell>
 
-  <TinaTableRow>
-    <TinaTableCell>
-      PreviewTitle
-    </TinaTableCell>
+        <TinaTableCell>
+          `Overlay > Overlay Description`
+        </TinaTableCell>
+      </TinaTableRow>
+    </TinaTable>
 
-    <TinaTableCell>
-      `Overlay > Overlay Description`
-    </TinaTableCell>
-  </TinaTableRow>
-</TinaTable>
-
-<Admonition type="note" title="note">
-  If the copy mentions a title for the Overlay put it inside `<h2></h2>` and place on the top before the description.
-</Admonition>
+    <Admonition type="note" title="note">
+      If the copy mentions a title for the Overlay put it inside `<h2></h2>` and place on the top before the description.
+    </Admonition>
+  </TabItem>
+</Tabs>
 
 <Admonition type="info" title="info">
   Plese check the [CTA guide](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for the proper labeling and link to use.
