@@ -5,6 +5,7 @@ import Details from "@theme/Details";
 import Tabs from "@theme-original/Tabs";
 import TabItem from "@theme-original/TabItem";
 import DocCardList from "@theme-original/DocCardList";
+import Image from '@theme/IdealImage';
 
 import {
   TinaTable,
@@ -32,5 +33,6 @@ export default {
   TinaTableCell: TinaTableCell,
   TinaSpacer: TinaSpacer,
   GameLinks: GameLinks,
-  TinaTabs: TinaTabs
+  TinaTabs: TinaTabs,
+  IdealImage: Image
 };

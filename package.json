@@ -17,7 +17,8 @@
     "tina-start": "tinacms build && docusaurus start"
   },
   "dependencies": {
-    "@docusaurus/core": "3.0.1",
+    "@docusaurus/core": "^3.0.1",
+    "@docusaurus/plugin-ideal-image": "^3.0.1",
     "@docusaurus/preset-classic": "3.0.1",
     "@docusaurus/theme-search-algolia": "^3.2.1",
     "@mdx-js/react": "^3.0.0",
