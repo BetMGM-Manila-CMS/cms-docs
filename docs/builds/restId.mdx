@@ -14,7 +14,8 @@ title: Rest ID
 To create a Rest ID go to the Sitecore path mentioned below and duplicate an existing Rest ID Item.
 
 <Admonition type="info" title="Sitecore Path">
-  Content Editor > Marketing > US > CMS-NEW-FOLDER > state-brand > product > year > month
+  Content Editor > Marketing > US > CMS-NEW-FOLDER > state-brand > product >
+  year > month
 </Admonition>
 
 Name the new created Rest ID same with the name of your ticket. Just remove unwanted characters.
@@ -22,7 +23,8 @@ Name the new created Rest ID same with the name of your ticket. Just remove unwa
 <Admonition type="tip" title="Tip">
   Vivian from US provided a template folder inside the the [US Sitecore NJ Folder](http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={64853FDD-BE01-41A1-AFBD-AC7536EC6773}\&la=), we can just `copy to` these items (except to ON) to the correct folder.
 
-  ![](/img/builds/restId/restid-template.png)
+![](/img/builds/restId/restid-template.png)
+
 </Admonition>
 
 ### Grouped Rest IDs
@@ -46,7 +48,8 @@ Rest ID has different sections that can be displayed or hidden, it will be adjus
 ![](/img/builds/restId/restid-section-select.png)
 
 <Admonition type="warning" title="note">
-  When duplicating Rest ID components most fields will be populated with contents even though it is blank from the source item.
+  When duplicating Rest ID components most fields will be populated with
+  contents even though it is blank from the source item.
 </Admonition>
 
 ## Promohub Section
@@ -54,10 +57,13 @@ Rest ID has different sections that can be displayed or hidden, it will be adjus
 <Admonition type="note" title="note">
   Get the template value for this section either on your monday.com ticket mentioned by your sub-lead or in the Project Details of your Workfront ticket under the `CRM Ops` section.
 
-  ![](/img/builds/restId/restid-wf-template.png)
+![](/img/builds/restId/restid-wf-template.png)
+
 </Admonition>
 
 ### Required Fields
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714549710/builds/restId/promohub-text-fields_w41szt.png)
 
 The team uses an [internal tool](http://betmgm-phtools.entaingroup.corp/promohub-templates/) to get the appropriate value for the fields.
 
@@ -72,17 +78,15 @@ To use the tool, click through each icon to get to the desired values that will 
     </TinaTableCell>
   </TinaTableRow>
 
-  <TinaTableRow>
-    <TinaTableCell>
-      `CommonTitle`
-    </TinaTableCell>
-  </TinaTableRow>
+{" "}
+<TinaTableRow>
+  <TinaTableCell>`CommonTitle`</TinaTableCell>
+</TinaTableRow>
 
-  <TinaTableRow>
-    <TinaTableCell>
-      `CommonDescription`
-    </TinaTableCell>
-  </TinaTableRow>
+{" "}
+<TinaTableRow>
+  <TinaTableCell>`CommonDescription`</TinaTableCell>
+</TinaTableRow>
 
   <TinaTableRow>
     <TinaTableCell>
@@ -93,7 +97,9 @@ To use the tool, click through each icon to get to the desired values that will 
 
 ### Required Images
 
-The fields `Image Landscape` and `Image Square` will be placed with the same image. Depending on the type of the ticket we will either use `Promohub Tiles-800x360` or `Promohub Reward Tiles-800x360`. Please see guide below:
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714549824/builds/restId/promohub-images-field_lmte5r.png)
+
+The images will be placed on `Image Landscape` and `Image Square fields`, and the choice between `Promohub Tiles-800x360` and `Promohub Reward Tiles-800x360` depends on whether your build has a provided PAT or EDS. Please refer the guide below:
 
 <TinaTable topHeader={true}>
   <TinaTableRow>
@@ -104,6 +110,7 @@ The fields `Image Landscape` and `Image Square` will be placed with the same ima
     <TinaTableCell>
       Image
     </TinaTableCell>
+
   </TinaTableRow>
 
   <TinaTableRow>
@@ -112,8 +119,9 @@ The fields `Image Landscape` and `Image Square` will be placed with the same ima
     </TinaTableCell>
 
     <TinaTableCell>
-      Promohub Tiles-800x360
+      Promohub Reward Tiles-800x360
     </TinaTableCell>
+
   </TinaTableRow>
 
   <TinaTableRow>
@@ -124,6 +132,7 @@ The fields `Image Landscape` and `Image Square` will be placed with the same ima
     <TinaTableCell>
       Promohub Tiles-800x360
     </TinaTableCell>
+
   </TinaTableRow>
 </TinaTable>
 
@@ -135,9 +144,68 @@ Here is an example from BetMGM:
 
 ![](/img/builds/restId/restid-betmgm-inbox.png)
 
-#### Required Fields
+### Inbox Preview
 
-<TinaTable topHeader={true}>
+<div className="flex flex-col lg:flex-row gap-4">
+  <div className="flex-[2]">
+  <div className="sticky top-[100px]">  
+    <TinaTable topHeader={true}>
+      <TinaTableRow>
+        <TinaTableCell>
+          Field
+        </TinaTableCell>
+
+        <TinaTableCell>
+          Value
+        </TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell>
+          PreviewTitle
+        </TinaTableCell>
+
+        <TinaTableCell>
+          `Player Inbox > Preview Title`
+        </TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell>
+          PreviewDescription
+        </TinaTableCell>
+
+        <TinaTableCell>
+          `Player Inbox > Preview Description`
+        </TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell>
+          PreviewImage
+        </TinaTableCell>
+
+        <TinaTableCell>
+          `Inbox_short_50x50`
+        </TinaTableCell>
+      </TinaTableRow>
+    </TinaTable>
+
+  </div>
+</div>
+<div className="flex-[3]">
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714550526/builds/restId/inbox-preview_uphd2s.png)
+
+</div>
+</div>
+
+### Inbox Fullview
+
+<div className="flex flex-col lg:flex-row gap-4">
+  <div className="flex-[2]">
+<div className="sticky top-[100px]">
+  <TinaTable topHeader={true}>
   <TinaTableRow>
     <TinaTableCell>
       Field
@@ -146,26 +214,7 @@ Here is an example from BetMGM:
     <TinaTableCell>
       Value
     </TinaTableCell>
-  </TinaTableRow>
 
-  <TinaTableRow>
-    <TinaTableCell>
-      PreviewTitle
-    </TinaTableCell>
-
-    <TinaTableCell>
-      `Player Inbox > Preview Title`
-    </TinaTableCell>
-  </TinaTableRow>
-
-  <TinaTableRow>
-    <TinaTableCell>
-      PreviewDescription
-    </TinaTableCell>
-
-    <TinaTableCell>
-      `Player Inbox > Preview Description`
-    </TinaTableCell>
   </TinaTableRow>
 
   <TinaTableRow>
@@ -176,6 +225,7 @@ Here is an example from BetMGM:
     <TinaTableCell>
       `Player Inbox > Fullview Title`
     </TinaTableCell>
+
   </TinaTableRow>
 
   <TinaTableRow>
@@ -186,44 +236,7 @@ Here is an example from BetMGM:
     <TinaTableCell>
       `Player Inbox > Fullview Description`
     </TinaTableCell>
-  </TinaTableRow>
 
-  <TinaTableRow>
-    <TinaTableCell>
-      ManualTermsAndConditions
-    </TinaTableCell>
-
-    <TinaTableCell>
-      [See Terms Doc](./documents#terms-and-conditions)
-    </TinaTableCell>
-  </TinaTableRow>
-</TinaTable>
-
-<Admonition type="info" title="info">
-  Plese check the [CTA guide](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for the proper labeling and link to use.
-</Admonition>
-
-#### Required Images
-
-<TinaTable topHeader={true}>
-  <TinaTableRow>
-    <TinaTableCell>
-      Field
-    </TinaTableCell>
-
-    <TinaTableCell>
-      Image
-    </TinaTableCell>
-  </TinaTableRow>
-
-  <TinaTableRow>
-    <TinaTableCell>
-      PreviewImage
-    </TinaTableCell>
-
-    <TinaTableCell>
-      `Inbox_short_50x50`
-    </TinaTableCell>
   </TinaTableRow>
 
   <TinaTableRow>
@@ -234,8 +247,31 @@ Here is an example from BetMGM:
     <TinaTableCell>
       `Inbox-Detail-690x246`
     </TinaTableCell>
+
   </TinaTableRow>
+
 </TinaTable>
+  </div>
+  </div>
+  <div className="flex-[3]">
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714550521/builds/restId/inbox-fullview_cph52h.png)
+  </div>
+</div>
+
+<Admonition type="Note" title="Full View Description">
+  Please edit the Full View Description using the rich text editor. Ensure that
+  the CTA has the appropriate color applied. Refer to the [CTA
+  Guide](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA)
+  to determine the correct value for the CTA.
+</Admonition>
+
+### Inbox Terms and Conditions
+
+If Terms and Conditions are required, always ensure that the `ShowManualTermsAndConditions` checkbox is checked. Conversely, if they are not needed, uncheck the checkbox.
+
+Put the Terms and Conditions on the ManualTermsAndConditions Textarea.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714550515/builds/restId/inbox-terms_mtrq13.png)
 
 ## Overlay
 
@@ -245,16 +281,91 @@ Here is an example:
 
 ![](/img/builds/restId/restid-overlay-eg.png)
 
+<Admonition type="note" title="Note">
+  The old format for the overlay component is still used for Sports ticket, but
+  it may change in the future as they may also adapt the new format.
+</Admonition>
+
 <Tabs>
   <TabItem label="Current Format" value="current">
-    Here are the required fields for the overlay component
 
-    1. **Overlay Title** - add the overlay title
-    2. **Overlay Description** - add the overlay  description
-    3. **Overlay CTA** - add the overlay CTA. For more info refer to the CTA page.
-    4. **Overlay Image** - use image Overlay EDS-840x246.
-    5. **CTANativeLink URL** - use the URL you used for the overlay CTA
-    6. **CTANativeLink Link Text** - use the text you used for the overlay CTA
+  <div className="flex flex-col lg:flex-row gap-4">
+  <div className="flex-[2]">
+<div className="sticky top-[100px]">
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>
+      Field
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Value
+    </TinaTableCell>
+
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      Overlay Title
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Add the overlay title from the copy
+    </TinaTableCell>
+
+  </TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      Overlay Description
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Add the overlay  description from the copy
+    </TinaTableCell>
+
+  </TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      Overlay CTA
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Add the overlay CTA. For more info refer to the [CTA Guide](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA).
+    </TinaTableCell>
+
+  </TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      Overlay Image
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Use image `Overlay EDS-840x246`
+    </TinaTableCell>
+
+  </TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      CTANativeLink URL
+    </TinaTableCell>
+
+    <TinaTableCell>
+     Put CTA URL here
+    </TinaTableCell>
+
+  </TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      CTANativeLink Link Text
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Put CTA Text here
+    </TinaTableCell>
+
+  </TinaTableRow>
+
+</TinaTable>
 
     <Admonition type="info" title="CTA Casing">
       * Use camel casing for BetMGM
@@ -264,12 +375,20 @@ Here is an example:
     <Admonition type="info" title="CTA Styling">
       Do not add any inline style or class to the CTA.
     </Admonition>
+
+</div>
+
+</div>
+<div className="flex-[3]">
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714552432/builds/restId/overlay-fields_lae8as.png)
+
+</div>
+</div>
+
   </TabItem>
 
   <TabItem label="Old Format" value="old">
-    <Admonition type="note" title="Note">
-      The old format for the overlay component is still used for Sports ticket, but it may change in the future as they may also adapt the new format.
-    </Admonition>
+
 
     ##### Required Fields
 
@@ -293,32 +412,8 @@ Here is an example:
           `Overlay > Overlay Description`
         </TinaTableCell>
       </TinaTableRow>
-    </TinaTable>
 
-    <Admonition type="note" title="note">
-      If the copy mentions a title for the Overlay put it inside `<h2></h2>` and place on the top before the description.
-    </Admonition>
-  </TabItem>
-</Tabs>
-
-<Admonition type="info" title="info">
-  Plese check the [CTA guide](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for the proper labeling and link to use.
-</Admonition>
-
-##### Required Images
-
-<TinaTable topHeader={true}>
-  <TinaTableRow>
-    <TinaTableCell>
-      Field
-    </TinaTableCell>
-
-    <TinaTableCell>
-      Image
-    </TinaTableCell>
-  </TinaTableRow>
-
-  <TinaTableRow>
+       <TinaTableRow>
     <TinaTableCell>
       PreviewTitle
     </TinaTableCell>
@@ -326,8 +421,16 @@ Here is an example:
     <TinaTableCell>
       `Overlay EDS-840x246`
     </TinaTableCell>
+
   </TinaTableRow>
-</TinaTable>
+    </TinaTable>
+
+    <Admonition type="note" title="note">
+      If the copy mentions a title for the Overlay put it inside `<h2></h2>` and place on the top before the description.
+    </Admonition>
+
+  </TabItem>
+</Tabs>
 
 ## Toaster
 
@@ -337,14 +440,68 @@ Here is an example:
 
 ![](/img/builds/restId/restid-toaster-eg.png)
 
+<Admonition type="note" title="Note">
+  The old format for the overlay component is still used for Sports ticket, but
+  it may change in the future as they may also adapt the new format.
+</Admonition>
+
 <Tabs>
   <TabItem label="Current Format" value="current">
-    Here are the required fields for the toaster component:
+    <div className="flex flex-col lg:flex-row gap-4">
+      <div className="flex-[2]">
+        <div className="sticky top-[100px]">
+        <TinaTable topHeader={true}>
+      <TinaTableRow>
+        <TinaTableCell>
+          Field
+        </TinaTableCell>
+        <TinaTableCell>
+          Value
+        </TinaTableCell>
+      </TinaTableRow>
 
-    1. Check the `Close With Timer` checkbox
-    2. **Toaster Title** - add the toaster title
-    3. **Toaster Description** - add the toaster description
-    4. **Toaster CTA** - add the toaster CTA. For more info refer to the CTA page.
+      <TinaTableRow>
+        <TinaTableCell>
+         Close With Timer checkbox
+        </TinaTableCell>
+        <TinaTableCell>
+          Make sure this checkbox is checked
+        </TinaTableCell>
+      </TinaTableRow>
+      <TinaTableRow>
+        <TinaTableCell>
+         Toaster Title
+        </TinaTableCell>
+        <TinaTableCell>
+          Add the toaster title
+        </TinaTableCell>
+      </TinaTableRow>
+      <TinaTableRow>
+        <TinaTableCell>
+         Toaster Description
+        </TinaTableCell>
+        <TinaTableCell>
+          Add the toaster description
+        </TinaTableCell>
+      </TinaTableRow>
+       <TinaTableRow>
+        <TinaTableCell>
+         Toaster Image
+        </TinaTableCell>
+        <TinaTableCell>
+          Use image `Toaster-65x65`
+        </TinaTableCell>
+      </TinaTableRow>
+      <TinaTableRow>
+        <TinaTableCell>
+         Toaster CTA
+        </TinaTableCell>
+        <TinaTableCell>
+          Add the toaster CTA. For more info refer to the [CTA Guide](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA).
+        </TinaTableCell>
+      </TinaTableRow>
+
+    </TinaTable>
 
     <Admonition type="info" title="CTA Casing">
       * Use camel casing for BetMGM
@@ -354,6 +511,17 @@ Here is an example:
     <Admonition type="note" title="CTA Styling">
       Do not add any inline style or class to the CTA.
     </Admonition>
+        </div>
+      </div>
+      <div className="flex-[3]">
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714553201/builds/restId/toaster-fields_mw0mjp.png)
+
+</div>     
+    </div>
+
+
+    
+
   </TabItem>
 
   <TabItem label="Old Format" value="old">
@@ -377,32 +545,8 @@ Here is an example:
           `Toaster`
         </TinaTableCell>
       </TinaTableRow>
-    </TinaTable>
 
-    <Admonition type="info" title="note">
-      Enclose the toaster in `<a>` tag and add the CTA link to its `href` attribute
-    </Admonition>
-  </TabItem>
-</Tabs>
-
-<Admonition type="info" title="info">
-  Plese check the [CTA guide](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for the proper labeling and link to use.
-</Admonition>
-
-#### Required Images
-
-<TinaTable topHeader={true}>
-  <TinaTableRow>
-    <TinaTableCell>
-      Field
-    </TinaTableCell>
-
-    <TinaTableCell>
-      Image
-    </TinaTableCell>
-  </TinaTableRow>
-
-  <TinaTableRow>
+       <TinaTableRow>
     <TinaTableCell>
       PreviewTitle
     </TinaTableCell>
@@ -410,8 +554,16 @@ Here is an example:
     <TinaTableCell>
       `Toaster-65x65`
     </TinaTableCell>
+
   </TinaTableRow>
-</TinaTable>
+    </TinaTable>
+
+    <Admonition type="info" title="note">
+      Enclose the toaster in `<a>` tag and add the CTA link to its `href` attribute
+    </Admonition>
+
+  </TabItem>
+</Tabs>
 
 ## Push to Optimove
 
@@ -428,7 +580,8 @@ Right click your Rest ID and copy both the Rest ID and the Direct Link, provide 
 <Admonition type="tip" title="tip">
   Embed the direct link of the Rest ID on the Rest ID itself or on a 'DL' beside it.
 
-  You can also provide a short description for what the Rest ID is(`IOT`, `CB-Fixed No Deposit Wager`, `BS-Fixed Deposit Wager`, etc...).
+You can also provide a short description for what the Rest ID is(`IOT`, `CB-Fixed No Deposit Wager`, `BS-Fixed Deposit Wager`, etc...).
 
-  ![](/img/builds/restId/restid-comment.png)
+![](/img/builds/restId/restid-comment.png)
+
 </Admonition>
