@@ -283,14 +283,14 @@ export type NumberFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
 };
 
-export type DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter = {
+export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter = {
   children?: InputMaybe<RichTextFilter>;
   rowSpan?: InputMaybe<NumberFilter>;
   colSpan?: InputMaybe<NumberFilter>;
 };
 
 export type DocBodyTinaTableChildrenTinaTableRowChildrenFilter = {
-  TinaTableCell?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
+  TinaTableCell?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
 };
 
 export type DocBodyAdmonitionChildrenTinaTableChildrenTinaTableRowFilter = {
@@ -328,31 +328,41 @@ export type DocBodyTabsFilter = {
   children?: InputMaybe<DocBodyTabsChildrenFilter>;
 };
 
-export type DocBodyAdmonitionChildrenImgFilter = {
+export type DocBodyRowChildrenColChildrenAdmonitionChildrenImgFilter = {
   className?: InputMaybe<StringFilter>;
   src?: InputMaybe<ImageFilter>;
   alt?: InputMaybe<StringFilter>;
 };
 
-export type DocBodyTinaTableChildrenTinaTableRowFilter = {
-  children?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowChildrenFilter>;
+export type DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter = {
+  children?: InputMaybe<RichTextFilter>;
+  rowSpan?: InputMaybe<NumberFilter>;
+  colSpan?: InputMaybe<NumberFilter>;
 };
 
-export type DocBodyAdmonitionChildrenTinaTableChildrenFilter = {
-  TinaTableRow?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowFilter>;
+export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter = {
+  TinaTableCell?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
 };
 
-export type DocBodyAdmonitionChildrenTinaTableFilter = {
+export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter = {
+  children?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter>;
+};
+
+export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter>;
+};
+
+export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter = {
   topHeader?: InputMaybe<BooleanFilter>;
   leftHeader?: InputMaybe<BooleanFilter>;
   columnWidth?: InputMaybe<StringFilter>;
   className?: InputMaybe<StringFilter>;
-  children?: InputMaybe<DocBodyAdmonitionChildrenTinaTableChildrenFilter>;
+  children?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter>;
 };
 
 export type DocBodyAdmonitionChildrenFilter = {
-  img?: InputMaybe<DocBodyAdmonitionChildrenImgFilter>;
-  TinaTable?: InputMaybe<DocBodyAdmonitionChildrenTinaTableFilter>;
+  img?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenImgFilter>;
+  TinaTable?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter>;
 };
 
 export type DocBodyAdmonitionFilter = {
@@ -361,8 +371,16 @@ export type DocBodyAdmonitionFilter = {
   children?: InputMaybe<DocBodyAdmonitionChildrenFilter>;
 };
 
+export type DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter = {
+  TinaTableCell?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
+};
+
+export type DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter = {
+  children?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter>;
+};
+
 export type DocBodyTinaTableChildrenFilter = {
-  TinaTableRow?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowFilter>;
+  TinaTableRow?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter>;
 };
 
 export type DocBodyTinaTableFilter = {
@@ -378,12 +396,62 @@ export type DocBodyDetailsFilter = {
   children?: InputMaybe<RichTextFilter>;
 };
 
+export type DocBodyRowChildrenColChildrenAdmonitionChildrenFilter = {
+  img?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenImgFilter>;
+  TinaTable?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter>;
+};
+
+export type DocBodyRowChildrenColChildrenAdmonitionFilter = {
+  type?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  children?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenFilter>;
+};
+
+export type DocBodyRowChildrenColChildrenImgFilter = {
+  className?: InputMaybe<StringFilter>;
+  src?: InputMaybe<ImageFilter>;
+  alt?: InputMaybe<StringFilter>;
+};
+
+export type DocBodyRowChildrenColChildrenTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter>;
+};
+
+export type DocBodyRowChildrenColChildrenTinaTableFilter = {
+  topHeader?: InputMaybe<BooleanFilter>;
+  leftHeader?: InputMaybe<BooleanFilter>;
+  columnWidth?: InputMaybe<StringFilter>;
+  className?: InputMaybe<StringFilter>;
+  children?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenFilter>;
+};
+
+export type DocBodyRowChildrenColChildrenFilter = {
+  Admonition?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionFilter>;
+  img?: InputMaybe<DocBodyRowChildrenColChildrenImgFilter>;
+  TinaTable?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableFilter>;
+};
+
+export type DocBodyRowChildrenColFilter = {
+  ratio?: InputMaybe<NumberFilter>;
+  sticky?: InputMaybe<BooleanFilter>;
+  children?: InputMaybe<DocBodyRowChildrenColChildrenFilter>;
+};
+
+export type DocBodyRowChildrenFilter = {
+  Col?: InputMaybe<DocBodyRowChildrenColFilter>;
+};
+
+export type DocBodyRowFilter = {
+  children?: InputMaybe<DocBodyRowChildrenFilter>;
+};
+
 export type DocBodyFilter = {
   img?: InputMaybe<DocBodyImgFilter>;
   Tabs?: InputMaybe<DocBodyTabsFilter>;
   Admonition?: InputMaybe<DocBodyAdmonitionFilter>;
   TinaTable?: InputMaybe<DocBodyTinaTableFilter>;
   Details?: InputMaybe<DocBodyDetailsFilter>;
+  Row?: InputMaybe<DocBodyRowFilter>;
 };
 
 export type DocFilter = {

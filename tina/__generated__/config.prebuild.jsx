@@ -90,56 +90,6 @@ var TinaTableRowTemplate = {
   label: "Row",
   type: "object",
   fields: [
-    /* {
-                name: "items",
-                label: "Items",
-                type: "object",
-                list: true,
-                itemProps: (item) => {
-                    return { label: item ? item.label : null };
-                },
-                fields: [
-                    {
-                        name: "label", // to delete
-                        label: "Label",
-                        type: "string"
-                    },
-                    {
-                        name: "header", // to delete
-                        label: "Header",
-                        type: "boolean"
-                    },
-                    {
-                        name: "style", // to delete
-                        label: "Style",
-                        component: "select",
-                        type: "string",
-                        options: [{
-                            value: "highlight",
-                            label: "Highlight"
-                        }, {
-                            value: "code",
-                            label: "Code"
-                        }]
-                    },
-                    {
-                        name: "url", // to delete
-                        label: "Link",
-                        type: "string"
-                    },
-                    {
-                        name: "rowSpan", // to delete
-                        label: "Row Span",
-                        type: 'number'
-                    },
-                    {
-                        name: "colSpan", // to delete
-                        label: "Column Span",
-                        type: 'number'
-                    },
-    
-                ]
-            }, */
     {
       name: "children",
       label: "Items",
@@ -179,58 +129,6 @@ var TinaTableTemplate = {
       label: "Class",
       type: "string"
     },
-    /* {
-        name: "rows", // to delete
-        label: "Rows",
-        list: true,
-        type: "object",
-        fields: [
-            {
-                name: "row",
-                label: "Row",
-                type: "object",
-                list: true,
-                itemProps: (item) => {
-                    return { label: item ? item.label : null };
-                },
-                fields: [
-                    {
-                        name: "label",
-                        label: "Label",
-                        type: "string"
-                    },
-                    {
-                        name: "style",
-                        label: "Style",
-                        component: "select",
-                        type: "string",
-                        options: [{
-                            value: "highlight",
-                            label: "Highlight"
-                        }, {
-                            value: "code",
-                            label: "Code"
-                        }]
-                    },
-                    {
-                        name: "url",
-                        label: "Link",
-                        type: "string"
-                    },
-                    {
-                        name: "rowSpan",
-                        label: "Row Span",
-                        type: 'number'
-                    },
-                    {
-                        name: "colSpan",
-                        label: "Column Span",
-                        type: 'number'
-                    }
-                ]
-            }
-        ]
-    }, */
     {
       name: "children",
       label: "Rows",
@@ -371,12 +269,62 @@ var TabsTemplate = {
     }
   ]
 };
+var ColTemplate = {
+  name: "Col",
+  label: "Col",
+  ui: {
+    defaultItem: {
+      ratio: 1,
+      sticky: false
+    }
+  },
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    {
+      name: "ratio",
+      label: "Ratio",
+      type: "number"
+    },
+    {
+      name: "sticky",
+      label: "Sticky",
+      type: "boolean"
+    },
+    {
+      name: "children",
+      label: "Content",
+      type: "rich-text",
+      templates: [
+        AdmonitionTemplate,
+        ClassyImageTemplate,
+        TinaTableTemplate
+      ]
+    }
+  ]
+};
+var RowTemplate = {
+  name: "Row",
+  label: "Row",
+  fields: [
+    {
+      name: "children",
+      label: "Col",
+      type: "rich-text",
+      templates: [
+        ColTemplate
+      ]
+    }
+  ]
+};
 var MDXTemplates = [
   ClassyImageTemplate,
   TabsTemplate,
   AdmonitionTemplate,
   TinaTableTemplate,
-  DetailsTemplate
+  DetailsTemplate,
+  RowTemplate
 ];
 
 // tina/collections/doc.jsx
