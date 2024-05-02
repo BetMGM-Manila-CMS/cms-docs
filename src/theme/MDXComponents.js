@@ -15,7 +15,9 @@ import {
   RichTable,
   RichTableRow,
   GameLinks,
-  TinaTabs
+  TinaTabs,
+  Col,
+  Row
 } from "@site/src/components"
 
 export default {
@@ -34,5 +36,7 @@ export default {
   TinaSpacer: TinaSpacer,
   GameLinks: GameLinks,
   TinaTabs: TinaTabs,
-  IdealImage: Image
+  IdealImage: Image,
+  Col: Col,
+  Row: Row,
 };

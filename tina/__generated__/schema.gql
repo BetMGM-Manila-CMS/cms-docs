@@ -171,14 +171,14 @@ input NumberFilter {
   in: [Float]
 }
 
-input DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
+input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
   children: RichTextFilter
   rowSpan: NumberFilter
   colSpan: NumberFilter
 }
 
 input DocBodyTinaTableChildrenTinaTableRowChildrenFilter {
-  TinaTableCell: DocBodyTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
+  TinaTableCell: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
 }
 
 input DocBodyAdmonitionChildrenTinaTableChildrenTinaTableRowFilter {
@@ -216,31 +216,41 @@ input DocBodyTabsFilter {
   children: DocBodyTabsChildrenFilter
 }
 
-input DocBodyAdmonitionChildrenImgFilter {
+input DocBodyRowChildrenColChildrenAdmonitionChildrenImgFilter {
   className: StringFilter
   src: ImageFilter
   alt: StringFilter
 }
 
-input DocBodyTinaTableChildrenTinaTableRowFilter {
-  children: DocBodyTinaTableChildrenTinaTableRowChildrenFilter
+input DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
+  children: RichTextFilter
+  rowSpan: NumberFilter
+  colSpan: NumberFilter
 }
 
-input DocBodyAdmonitionChildrenTinaTableChildrenFilter {
-  TinaTableRow: DocBodyTinaTableChildrenTinaTableRowFilter
+input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter {
+  TinaTableCell: DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
 }
 
-input DocBodyAdmonitionChildrenTinaTableFilter {
+input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter {
+  children: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter
+}
+
+input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter {
+  TinaTableRow: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter
+}
+
+input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter {
   topHeader: BooleanFilter
   leftHeader: BooleanFilter
   columnWidth: StringFilter
   className: StringFilter
-  children: DocBodyAdmonitionChildrenTinaTableChildrenFilter
+  children: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter
 }
 
 input DocBodyAdmonitionChildrenFilter {
-  img: DocBodyAdmonitionChildrenImgFilter
-  TinaTable: DocBodyAdmonitionChildrenTinaTableFilter
+  img: DocBodyRowChildrenColChildrenAdmonitionChildrenImgFilter
+  TinaTable: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter
 }
 
 input DocBodyAdmonitionFilter {
@@ -249,8 +259,16 @@ input DocBodyAdmonitionFilter {
   children: DocBodyAdmonitionChildrenFilter
 }
 
+input DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter {
+  TinaTableCell: DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
+}
+
+input DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter {
+  children: DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter
+}
+
 input DocBodyTinaTableChildrenFilter {
-  TinaTableRow: DocBodyTinaTableChildrenTinaTableRowFilter
+  TinaTableRow: DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter
 }
 
 input DocBodyTinaTableFilter {
@@ -266,12 +284,62 @@ input DocBodyDetailsFilter {
   children: RichTextFilter
 }
 
+input DocBodyRowChildrenColChildrenAdmonitionChildrenFilter {
+  img: DocBodyRowChildrenColChildrenAdmonitionChildrenImgFilter
+  TinaTable: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter
+}
+
+input DocBodyRowChildrenColChildrenAdmonitionFilter {
+  type: StringFilter
+  title: StringFilter
+  children: DocBodyRowChildrenColChildrenAdmonitionChildrenFilter
+}
+
+input DocBodyRowChildrenColChildrenImgFilter {
+  className: StringFilter
+  src: ImageFilter
+  alt: StringFilter
+}
+
+input DocBodyRowChildrenColChildrenTinaTableChildrenFilter {
+  TinaTableRow: DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter
+}
+
+input DocBodyRowChildrenColChildrenTinaTableFilter {
+  topHeader: BooleanFilter
+  leftHeader: BooleanFilter
+  columnWidth: StringFilter
+  className: StringFilter
+  children: DocBodyRowChildrenColChildrenTinaTableChildrenFilter
+}
+
+input DocBodyRowChildrenColChildrenFilter {
+  Admonition: DocBodyRowChildrenColChildrenAdmonitionFilter
+  img: DocBodyRowChildrenColChildrenImgFilter
+  TinaTable: DocBodyRowChildrenColChildrenTinaTableFilter
+}
+
+input DocBodyRowChildrenColFilter {
+  ratio: NumberFilter
+  sticky: BooleanFilter
+  children: DocBodyRowChildrenColChildrenFilter
+}
+
+input DocBodyRowChildrenFilter {
+  Col: DocBodyRowChildrenColFilter
+}
+
+input DocBodyRowFilter {
+  children: DocBodyRowChildrenFilter
+}
+
 input DocBodyFilter {
   img: DocBodyImgFilter
   Tabs: DocBodyTabsFilter
   Admonition: DocBodyAdmonitionFilter
   TinaTable: DocBodyTinaTableFilter
   Details: DocBodyDetailsFilter
+  Row: DocBodyRowFilter
 }
 
 input DocFilter {
