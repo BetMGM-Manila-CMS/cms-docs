@@ -34,8 +34,6 @@ export default function DocItem(props) {
       .then((res) => {
         const commits = res.data
 
-        console.log(commits)
-
         setContributors(
           commits.map((commit) => ({
             name: commit.author ? commit.author.login : commit.commit.author.name,
@@ -60,6 +58,8 @@ export default function DocItem(props) {
   const docHtmlClassName = `docs-doc-id-${props.content.metadata.id}`;
   const MDXComponent = props.content;
 
+  console.log(props)
+
   const { last_update, authors } = props.content.frontMatter;
 
   return (
@@ -68,9 +68,34 @@ export default function DocItem(props) {
         <DocItemMetadata />
         <DocItemLayout>
           <MDXComponent />
-          <div className="mt-8 pt-8 border-t-[1px] border-primary md:flex">
+          <div className="mt-8 pt-8 border-t-[1px] border-primary flex flex-col md:flex-row gap-6">
+            <div className="w-full mt-8 md:mt-0 md:text-right md:w-1/2">
+              <h5 className="text-start text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Contributors
+              </h5>
+              {contributors.length ? (
+                <div className="mb-6">
+                  <div class='divider divider--contributor text-start'><span class='divider__inner'>Github</span></div>
+                  <div className="flex flex-col gap-2 mt-5">
+                    {contributors.map(({ name, avatar }, index) => {
+                      return <AuthorBadge name={name} avatar={avatar} key={index} />;
+                    })}
+                  </div>
+                </div>
+              ) : null}
+              {MDXComponent.frontMatter.contributors ?.length ? (
+                <div className="mb-6">
+                  <div class='divider divider--contributor text-start'><span class='divider__inner'>Members</span></div>
+                  <div className="flex flex-col gap-2 mt-5">
+                    {MDXComponent.frontMatter.contributors.map((contributor, index) => {
+                      return <AuthorBadge name={contributor} key={index} />;
+                    })}
+                  </div>
+                </div>
+              ) : null}
+            </div>
             {lastUpdate ?.commit ? (
-              <div className="w-full md:w-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-neutral-800 dark:border-gray-700 transition">
+              <div className="w-full md:w-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-neutral-800 dark:border-gray-700 transition h-min">
                 <h5 className=" text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                   Last Update
                   </h5>
@@ -85,18 +110,7 @@ export default function DocItem(props) {
                 </div>
               </div>
             ) : null}
-            {contributors.length ? (
-              <div className="w-full mt-8 md:mt-0 md:text-right md:pl-5 md:w-1/2">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  Contributors
-                  </h5>
-                <div className="flex flex-col gap-2 mt-5 md:items-end">
-                  {contributors.map(({ name, avatar }, index) => {
-                    return <AuthorBadge name={name} avatar={avatar} key={index} />;
-                  })}
-                </div>
-              </div>
-            ) : null}
+
           </div>
         </DocItemLayout>
       </HtmlClassNameProvider>
