@@ -40,6 +40,19 @@
           "link": "generated",
           "items": [
             {
+              "title": "Casino Carousel",
+              "link": "doc",
+              "docLink": "docs/builds/casino-carousel.mdx",
+              "items": [
+                {
+                  "document": "docs/builds/WOF-Carousel.mdx",
+                  "label": "WOF Carousel",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            },
+            {
               "document": "docs/builds/casino-carousel.mdx",
               "label": "Casino Carousel",
               "_template": "doc"
