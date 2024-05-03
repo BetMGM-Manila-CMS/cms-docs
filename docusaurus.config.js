@@ -100,16 +100,16 @@ const config = {
               {
                 type: "docSidebar",
                 sidebarId: "siteCheckingSidebar",
-                label: "Site Checking",
+                label: "Site Checking 🚧",
               },
               {
                 type: "docSidebar",
                 sidebarId: "testingAndSchedulingSidebar",
-                label: "Testing And Scheduling",
+                label: "Testing And Scheduling 🚧",
               },
             ]
           },
-          { to: "/team", label: "Team", position: "left" }, // temporary
+          { to: "/team", label: "Team 🚧", position: "left" }, // temporary
           {
             type: "search",
             position: "right",
