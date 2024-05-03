@@ -92,6 +92,19 @@
               "_template": "category"
             },
             {
+              "title": "Poker Carousel",
+              "link": "doc",
+              "docLink": "docs/builds/poker-carousel.mdx",
+              "items": [
+                {
+                  "document": "docs/builds/partypoker-Carousel.mdx",
+                  "label": "partypoker Carousel",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            },
+            {
               "document": "docs/builds/poker-carousel.mdx",
               "label": "Poker Carousel",
               "_template": "doc"
