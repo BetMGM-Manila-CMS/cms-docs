@@ -53,11 +53,6 @@
               "_template": "category"
             },
             {
-              "document": "docs/builds/casino-carousel.mdx",
-              "label": "Casino Carousel",
-              "_template": "doc"
-            },
-            {
               "document": "docs/builds/casino-odr-banner.mdx",
               "label": "ODR Banner",
               "_template": "doc"
