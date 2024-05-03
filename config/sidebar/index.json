@@ -105,11 +105,6 @@
               "_template": "category"
             },
             {
-              "document": "docs/builds/poker-carousel.mdx",
-              "label": "Poker Carousel",
-              "_template": "doc"
-            },
-            {
               "document": "docs/builds/poker-tournaments-page.mdx",
               "label": "Tournament Page",
               "_template": "doc"
