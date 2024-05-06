@@ -11,7 +11,7 @@ title: MAI Journey
 
 The MAI journey is a popup that shows to certain visitors of the Sports websites to add engagement for available promotions.
 
-![](/img/builds/mai/mai-preview.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887538/builds/mai/kxftq92ne6ur794nearh.png)
 
 <Admonition type="note" title="SiteCore Path">
   Content > Vanilla.Mobile > m2.WhiteLabel > App-v1.0 > Messages
@@ -23,7 +23,7 @@ There are 3 main components to create for this type of build, `NOT-REGISTERED`, 
 
 For simplicity, since there are already built components for these, we can just duplicate existing components and rename the duplicated items according to our ticket.
 
-![](/img/builds/mai/mai-duplicate.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887535/builds/mai/xxycm0g8hbbgkzc8yiha.png)
 
 <Admonition type="note" title="Naming">
   The best practice for naming each items is to use **Uppercase** only. Use shortened name from your ticket separated by `_`.
@@ -42,7 +42,8 @@ The filter has 2 parts that we need to change the values of:
 <Admonition type="note" title="Overlay Content Location">
   The `Overlay Content` can be located on `NOT-REGISTERED > Overlay Content`
 
-  ![](/img/builds/mai/mai-overlay.png)
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887535/builds/mai/qnjtobi7vyzjgrzqer8h.png)
+
 </Admonition>
 
 * **Custom Filter** - The filter naming does not have any specific rule, but for best practice we use the name we used for naming the 3 main components and make it lowercase.
@@ -88,7 +89,7 @@ After having the 2 parts for the filter we can place it on the full filter, refe
 
 And lastly go into each  of `NOT-REGISTERED`, `NOT-DEPOSITED`, and `NOT-WAGERED` `Content` tab, and place it on the `Condition` field under the `Filter` section.
 
-![](/img/builds/mai/mai-filter.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887535/builds/mai/xwjszcr0sej2kg0w7bm7.png)
 
 ## Steps
 
@@ -98,11 +99,12 @@ And lastly go into each  of `NOT-REGISTERED`, `NOT-DEPOSITED`, and `NOT-WAGERED`
 <p>${val:{shared-steps Rest ID}.text}</p>
 ```
 
-![](/img/builds/mai/mai-shared-steps-restid.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887537/builds/mai/tkltbtrolwlf0odsqj7n.png)
 
 * **Setting the popup contents**. There will be 3 popups that will show for the user, each popup shows what step the user had already done. The following fields will contain the contents that these popup show.
 
-  ![](/img/builds/mai/mai-popups.png)
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887537/builds/mai/bn5ckvbcpizxh4n3hxkh.png)
+
 
   Since most of the times Bet & Get are the type of promotions to be used for MAI journey tickets, the steps are similar with only changes depedending on the values or amounts, and the specific sport in which it is implemented. The fields to update can be seen under the `Parameters` section.
 
@@ -228,7 +230,8 @@ The description will depend if the promotion is based either for a **team** or *
 
   Under `NOT-DEPOSITED`, and `NOT-WAGERED` there is a `content` component. Open it and under the `Data > Items` field, make sure to use the correct `Overlay Content`.
 
-  ![](/img/builds/mai/mai-push-content.png)
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887537/builds/mai/xcoik6ghitj7c0clk2dw.png)
+
 
 ## Tracker IDs
 
@@ -237,24 +240,25 @@ The tracker IDs are group of numbers that is used to display the popups to speci
 Sometimes the Tracker IDs spreadsheet file contains the IDs for other state, so make sure to only use the appropriate IDs for your ticket.
 
 <Details summary="Tracker IDs Spreadsheet Example">
-  ![](/img/builds/mai/mai-tracker-file.png)
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887473/builds/mai/h1kue8jud2zolxgdarb0.png)
+
 </Details>
 
 These values will be placed on the `Overlay Content`. Open its `Content` Tab, and under `Parameters` place the IDs on the `tracker` field.
 
 Place it inside a bracket and enclose every ID on double quotes separated with commas.
 
-![](/img/builds/mai/mai-trackers.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887538/builds/mai/ruzpaar49whdzu1m0hv9.png)
 
 ## Images
 
 The images is placed inside the `NOT-REGISTERED`, `NOT-DEPOSITED`, and `NOT-WAGERED` under the `default` component inside the parent `NOT-REGISTERED` and not to be confused by it.
 
-![](/img/builds/mai/mai-default.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887469/builds/mai/haqrkdqcowq7on8nhmzl.png)
 
 There is only a single image to use, copy the path of the `750x480` image and place it on the `Data > Image` field on all for `NOT-REGISTERED`, `NOT-DEPOSITED`, and `NOT-WAGERED`.
 
-![](/img/builds/mai/mai-image.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887471/builds/mai/d80w8rjvc66mcw5n3iuw.png)
 
 ## Previewing
 
@@ -269,5 +273,6 @@ Step 3: https://sports.nj.betmgm.com/en/sports?qa=jets-b10w200-3
 Upon checking the website it should show a popup each with different steps accomplished. Take a screenshots of these popups and inlude it on your comment along with the Preview URLs
 
 <Details summary="MAI Journey Preview Example">
-  ![](/img/builds/mai/mai-preview-filter.png)
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887537/builds/mai/kjpjesxpzb289im7cim6.png)
+
 </Details>
