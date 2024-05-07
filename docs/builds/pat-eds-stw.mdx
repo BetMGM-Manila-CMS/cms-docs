@@ -9,24 +9,7 @@ authors: Josh Javier
 
 import CodeBlock from '@theme/CodeBlock'
 
-import promoHubTile from '../../static/img/builds/pat-eds-engagement/promo-hub-tile.png'
-import basicPromoDetails from '../../static/img/builds/pat-eds-engagement/basic-promo-details.png'
-import wheelSections from '../../static/img/builds/pat-eds-engagement/wheel-sections.png'
-import prizeTool from '../../static/img/builds/pat-eds-engagement/prize-tool.png'
-import iconsSitecorePath from '../../static/img/builds/pat-eds-engagement/icons-sitecore-path.png'
-import overlayDescriptionPreview from '../../static/img/builds/pat-eds-engagement/overlay-description-preview.jpg'
-import pageLayoutDetails from '../../static/img/builds/pat-eds-engagement/page-layout-details.png'
-import wheelIconsGuide from '../../static/img/builds/pat-eds-engagement/wheel-icons-guide.png'
-
 # Spin The Wheel
-
-{/*
-When you're working on an engagement ticket, you'll notice some fields in the PAT and/or EDS components that are not present in <abbr title="Business As Usual" style={{ cursor: 'help' }}>BAU</abbr> tickets.
-
-In this guide, you'll learn how PAT and EDS components for engagement tickets are different from BAU tickets, and what you should put in these fields.
-
-## Spin The Wheel (STW)
-*/}
 
 :::info[Copy and assets needed]
 
@@ -45,20 +28,8 @@ The *Teaser* section in BAU PATs is replaced by the *Promo Hub Tile* section in 
 
 <details>
   <summary>Sitecore Preview</summary>
-  <img src={promoHubTile} alt="" />
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887490/builds/pat-eds-engagement/ip0grykcq5byxpoaktjn.png)  
 </details>
-
-{/*
-
-### Basic Promotion Details (Editable)
-
-Same for BAU PATs, but for the Transaction Description field, type `TD-` + the placeholder PAT ID for that ticket. You can find this in Workfront, either in the Updates section or the Project Details section.
-
-<details>
-  <summary>Sitecore Preview</summary>
-  <img src={basicPromoDetails} alt="" />
-</details>
-*/}
 
 ### WheelSections
 
@@ -66,7 +37,7 @@ This is the defining section of STW PATs. As the name suggests, this is where we
 
 Here's the Sitecore preview:
 
-<img src={wheelSections} alt="" className="my-4" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887490/builds/pat-eds-engagement/m7tecqx1rgabxnq21z6q.png)
 
 Each row represents a prize that corresponds to a section of the game wheel. The columns are the fields of each prize. We only need to update the columns highlighted in the screenshot above.
 
@@ -78,13 +49,13 @@ Each row represents a prize that corresponds to a section of the game wheel. The
 
 Download and open the [Prize Tool](documents#prize-tool). This contains the copy you need to fill out the *Prize Table Text* and *Overlay Description* columns.
 
-<img src={prizeTool} alt="" className="my-4" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887489/builds/pat-eds-engagement/gviphbaitv69oduuzwev.png)
 
 To edit the *Prize Table Text*, click on the cell you want to edit and paste the corresponding copy from the Prize Tool.
 
 Next is the Overlay Description, which is what the users see after they spin the wheel and land on a certain icon. For example:
 
-<img src={overlayDescriptionPreview} alt="" className="my-4" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887489/builds/pat-eds-engagement/z6eyq5pvx2fmupumzrz2.jpg)
 
 To edit the *Overlay Description*, follow these steps:
 
@@ -120,11 +91,11 @@ To edit the *Overlay Description*, follow these steps:
 
 You can find the wheel icons in `STW Assets > Icons`.
 
-<img src={iconsSitecorePath} alt="" className="my-4" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887553/builds/pat-eds-engagement/a4wp3blkx4b697mj2xmy.png)
 
 To determine the order of the icons, go to `STW Assets > Wheel` and look for an image of the wheel with icons. Start at the 12 o'clock mark, and then work your way clockwise. For example:
 
-<img src={wheelIconsGuide} alt="" className="my-4" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887490/builds/pat-eds-engagement/fljjbir9ylqnorxokadk.png)
 
 To update the *Icon* column:
 
@@ -173,6 +144,6 @@ To update the *Icon* column:
 
 Click on the dropdown, then select the [Layout](engagements-stw) component that you created in a previous step.
 
-<img src={pageLayoutDetails} alt="" className="my-4" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887553/builds/pat-eds-engagement/myjyhqgwbrcu7iz89ynz.png)
 
 Double check your work, then finalize the component. You're now done filling out the STW PAT!
