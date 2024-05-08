@@ -81,6 +81,26 @@ Here are the list of characters and symbols that needs to be removed:
   There are still instances that these html elements still needs to be used, these HTML elements are mostly removed in the body of the Terms and Conditions.
 </Admonition>
 
+<Admonition type="tip" title="Regex Hack">
+<Row>
+<Col ratio={1} sticky={false}>
+
+If you have a code editor with a find and replace feature that supports regex, such as VSCode, you can utilize this feature to remove all unwanted elements or characters at once. Copy the following regex and use it for replacement:
+
+```
+(?:&nbsp;|<br\s?\/>|<em><\/em>| |​)
+```
+Replace all matches with a ` `(space).
+</Col>
+<Col ratio={1} sticky={true}>
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715136882/builds/documents/tip-delete-unwanted-w-regex_p5yach.png)
+</Col>
+</Row>
+
+  
+</Admonition>
+
 ### Embedding Links
 
 The copywriting team will often include in the copy some words that needs to have a link embedded on it. Usually encase in parenthesis and highlighted in some color.
@@ -98,6 +118,8 @@ For this instances, remove the text enclosed in parenthesis and embed the approp
 <Admonition type="note" title="note">
   For smartlinks see this [guide](../builds/smartlinks).
 </Admonition>
+
+
 
 ### Formatting
 

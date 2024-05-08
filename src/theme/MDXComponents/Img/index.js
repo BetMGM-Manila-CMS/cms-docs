@@ -12,6 +12,16 @@ function transformImgClassName(className) {
   return clsx(className, styles.img);
 }
 export default function MDXImg(props) {
+  const transformedProps = {
+    ...props,
+    className: `${props.className || ''} ${props.title || ''}`,
+  }
+  if (props.title) {
+    delete transformedProps.title
+  }
+  // console.log(transformedProps)
+
+
   const {
     siteConfig,
   } = useDocusaurusContext();
@@ -19,8 +29,6 @@ export default function MDXImg(props) {
   if (props.src.includes('res.cloudinary.com')) {
     const splitSrc = props.src.split('/')
     const publicId = splitSrc.splice(7).join('/').split('.')[0]
-
-    console.log(siteConfig.customFields.cloudinaryCloudName)
 
     const cld = new Cloudinary({
       cloud: {
@@ -32,21 +40,23 @@ export default function MDXImg(props) {
 
     myImage.quality('auto').format('auto').resize(scale().width(480));
 
-    // console.log(process.env.CLOUDINARY_CLOUD_NAME)
-
     return (
       <AdvancedImage
         cldImg={myImage}
+        {...transformedProps}
+        loading="lazy"
+        className={transformImgClassName(transformedProps.className)}
       />
     )
+  } else {
+    return (
+      // eslint-disable-next-line jsx-a11y/alt-text
+      <img
+        loading="lazy"
+        {...transformedProps}
+        className={transformImgClassName(transformedProps.className)}
+      />
+    );
   }
 
-  return (
-    // eslint-disable-next-line jsx-a11y/alt-text
-    <img
-      loading="lazy"
-      {...props}
-      className={transformImgClassName(props.className)}
-    />
-  );
 }
