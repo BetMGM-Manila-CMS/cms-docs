@@ -58,8 +58,6 @@ export default function DocItem(props) {
   const docHtmlClassName = `docs-doc-id-${props.content.metadata.id}`;
   const MDXComponent = props.content;
 
-  console.log(props)
-
   const { last_update, authors } = props.content.frontMatter;
 
   return (

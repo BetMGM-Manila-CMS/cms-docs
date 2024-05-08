@@ -9,7 +9,6 @@ export const TinaTabs = ({ items }) => {
             <Tabs>
                 {
                     items.map((tab, index) => {
-                        console.log(tab.content)
                         return (
                             <TabItem key={index} value={tab.value} label={tab.label}>
                                 {/* <TinaMarkdown content={tab.children} /> */}
