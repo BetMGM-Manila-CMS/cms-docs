@@ -1,16 +1,16 @@
 new Crawler({
-    appId: 'YOUR_APP_ID',
-    apiKey: 'YOUR_API_KEY',
+    appId: 'PTF14DVY99',
+    apiKey: '700e29028b1af4612d193f499db725e1',
     rateLimit: 8,
     maxDepth: 10,
-    startUrls: ['http://localhost:3000/'],
-    sitemaps: ['http://localhost:3000/sitemap.xml'],
+    startUrls: ['https://betmgm-cms-docs.netlify.app/'],
+    sitemaps: ['https://betmgm-cms-docs.netlify.app/sitemap.xml'],
     ignoreCanonicalTo: true,
-    discoveryPatterns: ['http://localhost:3000/**'],
+    discoveryPatterns: ['https://betmgm-cms-docs.netlify.app/**'],
     actions: [
         {
             indexName: 'YOUR_INDEX_NAME',
-            pathsToMatch: ['http://localhost:3000/**'],
+            pathsToMatch: ['https://betmgm-cms-docs.netlify.app/**'],
             recordExtractor: ({ $, helpers }) => {
                 // priority order: deepest active sub list header -> navbar active item -> 'Documentation'
                 const lvl0 =
@@ -42,7 +42,7 @@ new Crawler({
         },
     ],
     initialIndexSettings: {
-        YOUR_INDEX_NAME: {
+        'betmgm-cms-vercel': {
             attributesForFaceting: [
                 'type',
                 'lang',
