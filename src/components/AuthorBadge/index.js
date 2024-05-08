@@ -1,5 +1,4 @@
 export const AuthorBadge = ({ name, avatar, className }) => {
-  console.log(name)
 
   const initials = name
     .split(" ")

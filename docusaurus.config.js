@@ -4,6 +4,8 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
+import 'dotenv/config';
+
 import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
@@ -32,6 +34,10 @@ const config = {
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
+  },
+
+  customFields: {
+    cloudinaryCloudName: process.env.CLOUDINARY_CLOUD_NAME
   },
 
   presets: [
