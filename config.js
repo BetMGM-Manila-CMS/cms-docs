@@ -9,7 +9,7 @@ new Crawler({
     discoveryPatterns: ['https://betmgm-cms-docs.netlify.app/**'],
     actions: [
         {
-            indexName: 'YOUR_INDEX_NAME',
+            indexName: 'betmgm-cms-vercel',
             pathsToMatch: ['https://betmgm-cms-docs.netlify.app/**'],
             recordExtractor: ({ $, helpers }) => {
                 // priority order: deepest active sub list header -> navbar active item -> 'Documentation'
