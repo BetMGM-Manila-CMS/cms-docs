@@ -46,7 +46,7 @@
               "items": [
                 {
                   "document": "docs/builds/WOF-Carousel.mdx",
-                  "label": "WOF Carousel",
+                  "label": "WOF Carousel 🚧",
                   "_template": "doc"
                 }
               ],
@@ -98,7 +98,7 @@
               "items": [
                 {
                   "document": "docs/builds/partypoker-Carousel.mdx",
-                  "label": "partypoker Carousel",
+                  "label": "partypoker Carousel 🚧",
                   "_template": "doc"
                 }
               ],
@@ -263,6 +263,11 @@
         {
           "document": "docs/builds/tables.mdx",
           "label": "Tables",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/seoboxes.mdx",
+          "label": "SEOBoxes 🚧",
           "_template": "doc"
         }
       ]
