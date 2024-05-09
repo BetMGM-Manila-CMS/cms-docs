@@ -264,6 +264,11 @@
           "document": "docs/builds/tables.mdx",
           "label": "Tables",
           "_template": "doc"
+        },
+        {
+          "document": "docs/builds/seoboxes.mdx",
+          "label": "SEOBoxes",
+          "_template": "doc"
         }
       ]
     },
