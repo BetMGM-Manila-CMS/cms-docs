@@ -3,3 +3,183 @@ title: WOF Carousel
 ---
 
 # WOF Carousel
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715236709/builds/carousel/wof-carousel_hrmjjo.png "header-img")
+
+For Wheel Of Fortune Casino, the difference is that the path to create a Carousel Slide is different and there is no need to *push* each Carousel Item.
+
+<Admonition type="note" title="Sitecore Path">
+  Content > Vanilla.Mobile > m2.wheeloffortunecasino.com > MobileCasino-v1.0 > OptimizedTeasers > TeaserItems > HomeF
+</Admonition>
+
+## Creating Your Carousel
+
+We can just follow the usual steps for creating the usual casino carousel from the [parent guide](./casino-carousel), and always create a new carousel slide under the `RECENTLY BUILT BY MANILA` marker.
+
+### Required Fields
+
+Compared to the usual casino carousel build, the fields are mostly similar with just the order quite change and some changes to note.
+
+<Row>
+    <Col ratio={2} sticky={true}>
+        <table id="cta" >
+            <thead>
+                <tr>
+                    <th>
+                        Field
+                    </th>
+                    <th className="w-full">
+                        Value
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colSpan="2" className="text-center">
+                        TeaserContent
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        TeaserTitle
+                    </td>
+                    <td>
+                        Carousel H1
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        SubTitle
+                    </td>
+                    <td>
+                        Carousel H2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CTA
+                    </td>
+                    <td>
+                        See [CTA](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) Guide
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </Col>
+    <Col ratio={3} sticky={true}>
+        <div className="*:mb-0">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715227001/builds/carousel/wof-teasercontent_drbgoz.png) 
+        </div>
+    </Col>
+</Row>
+
+<Admonition type="tip" title="Text Fields">
+    Compared to the default carousel, the text fields is inputted in a rich text editor, add `<br>` tags to break spacing of words
+    <div className="flex justify-center *:mb-0">
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715236204/builds/carousel/wof-edit-html_d8vkec.png) 
+    </div>
+</Admonition>
+
+<Row>
+    <Col ratio={2} sticky={true}>
+        <table >
+            
+            <tbody>
+                <tr>
+                    <td colSpan="2" className="text-center">
+                        Filter
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Condition
+                    </td>
+                    <td className="w-full" >
+                        If new, add a [preview](./casino-carousel#previewing-the-carousel) filter.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </Col>
+    <Col ratio={3} sticky={true}>
+        <div className="*:mb-0">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715230622/builds/carousel/wof-filter_oyupui.png) 
+        </div>
+    </Col>
+</Row>
+
+<Row>
+    <Col ratio={2} sticky={true}>
+        <table >
+            <tbody>
+                <tr>
+                    <td colSpan="2" className="text-center">
+                        Imagery
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Background Image
+                    </td>
+                    <td className="w-full">
+                        `480x200`
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        DesktopImage
+                    </td>
+                    <td>
+                        `1600x450`
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </Col>
+    <Col ratio={3} sticky={true}>
+        <div className="*:mb-0">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715233226/builds/carousel/wof-image_ffndqi.png) 
+        </div>
+    </Col>
+</Row>
+
+<Row>
+    <Col ratio={2} sticky={true}>
+        <table >
+            <tr>
+                <td colSpan="2" className="text-center">
+                        Links
+                    </td>
+                </tr>
+            <tbody>
+                <tr>
+                    <td>
+                        TeaserLink
+                    </td>
+                    <td className="w-full">
+                        [Same CTA](#cta)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        TeaserNativeLink
+                    </td>
+                    <td>
+                        [Same CTA](#cta)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </Col>
+    <Col ratio={3} sticky={true}>
+        <div className="*:mb-0">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715234713/builds/carousel/wof-links_fozuqj.png) 
+        </div>
+    </Col>
+</Row>
+
+<Admonition type="note" title="Carousel Limit">
+  The WOF Carousel is limited to 6 slides. Therefore, if there are active slides in the 7th position and so on, they won't be displayed on the Carousel. The order of each carousel slide will depend on the order on Sitecore.
+</Admonition>
+
+

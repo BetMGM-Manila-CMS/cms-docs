@@ -1,6 +1,6 @@
 export const Col = ({ children, ratio, sticky }) => {
     return (
-        <div className={`${ratio && ratio > 1 ? `flex-[${ratio}]` : 'flex-1'}`}>
+        <div className={`doc-col ${ratio && ratio > 1 ? `flex-[${ratio}]` : 'flex-1'}`}>
             <div className={sticky ? 'sticky top-[100px]' : ''}>
                 {children}
             </div>
@@ -10,7 +10,7 @@ export const Col = ({ children, ratio, sticky }) => {
 
 export const Row = ({ children }) => {
     return (
-        <div className="flex flex-col lg:flex-row gap-4">
+        <div className="doc-row flex flex-col lg:flex-row gap-4 mb-[1rem]">
             {children}
         </div>
     )

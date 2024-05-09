@@ -34,6 +34,10 @@ img {
   margin-bottom: 1rem;
 }
 
+img[title="header-img"] {
+  width: 100%;
+}
+
 p {
   margin-bottom: 1rem;
 }
@@ -99,4 +103,8 @@ td > *:last-child, th > *:last-child {
 /* code */
 code {
   white-space: pre-wrap !important;
+}
+
+.doc-row img {
+  margin-bottom: 0;
 }

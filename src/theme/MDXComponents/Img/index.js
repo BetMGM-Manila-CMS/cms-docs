@@ -43,9 +43,9 @@ export default function MDXImg(props) {
     return (
       <AdvancedImage
         cldImg={myImage}
-        {...transformedProps}
+        {...props}
         loading="lazy"
-        className={transformImgClassName(transformedProps.className)}
+        className={transformImgClassName(props.className)}
       />
     )
   } else {
@@ -53,8 +53,8 @@ export default function MDXImg(props) {
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
         loading="lazy"
-        {...transformedProps}
-        className={transformImgClassName(transformedProps.className)}
+        {...props}
+        className={transformImgClassName(props.className)}
       />
     );
   }
