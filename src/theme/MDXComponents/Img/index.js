@@ -12,21 +12,14 @@ function transformImgClassName(className) {
   return clsx(className, styles.img);
 }
 export default function MDXImg(props) {
-  const transformedProps = {
-    ...props,
-    className: `${props.className || ''} ${props.title || ''}`,
-  }
-  if (props.title) {
-    delete transformedProps.title
-  }
-  // console.log(transformedProps)
+  console.log(props.src)
 
 
   const {
     siteConfig,
   } = useDocusaurusContext();
 
-  if (props.src.includes('res.cloudinary.com')) {
+  if (props.src.includes('res.cloudinary.com') && (props.title && !props.title.includes('default'))) {
     const splitSrc = props.src.split('/')
     const publicId = splitSrc.splice(7).join('/').split('.')[0]
 
