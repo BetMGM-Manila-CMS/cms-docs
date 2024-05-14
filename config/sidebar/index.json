@@ -127,6 +127,11 @@
           "link": "none",
           "items": [
             {
+              "document": "docs/builds/Marquee.mdx",
+              "label": "Marquee",
+              "_template": "doc"
+            },
+            {
               "document": "docs/builds/mai.mdx",
               "label": "MAI Journey",
               "_template": "doc"
