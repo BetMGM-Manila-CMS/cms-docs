@@ -11,7 +11,6 @@ Game tiles are added to display a single or multiple games. It is often added in
 <Admonition type="tip" title="Game Tool">
   Right now, we have the default website we can check for game links [here](https://casino.nj.betmgm.com/en/p/tools/smartlinks). Just update the URL to use the appropriate state and label for your use.
 
-  
   But this documentation has also its own, check our [game selector](#games-selector) below.
 </Admonition>
 
@@ -62,7 +61,7 @@ Each games have each their owners or providers, most of the time games from DGC,
 The game code needs to be passed as a query parameter to the anchor link, the desktop version will be passed as the value of `gd` and for mobile it will be `gm`, and needs to be `prefixed` with mobile.
 
 ```html
-<a href="!!M2.CasinoHome/launchmgc?gd={Game Code}&gm={Game Code}mobile">
+<a href="!!M2.Promo/launchmgc?gd={Game Code}&gm={Game Code}mobile">
   <img
     alt="{Game Name}"
     src="https://casinogames.{State Label Domain}/htmllobby/images/newlmticons/square/{Game Code}"
@@ -73,7 +72,7 @@ The game code needs to be passed as a query parameter to the anchor link, the de
 </a>
 
 <!-- Example -->
-<a href="!!M2.CasinoHome/launchmgc?gd=eusmdsquelinricheuk&gm=eusmdsquelinricheukmobile">
+<a href="!!M2.Promo/launchmgc?gd=eusmdsquelinricheuk&gm=eusmdsquelinricheukmobile">
   <img
     alt="Squealin' Riches"
     src="https://casinogames.nj.betmgm.com/htmllobby/images/newlmticons/square/eusmdsquelinricheuk.jpg"
