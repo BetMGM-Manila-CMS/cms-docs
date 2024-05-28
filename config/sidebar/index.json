@@ -118,6 +118,11 @@
               "document": "docs/builds/poker-banners.mdx",
               "label": "Banners",
               "_template": "doc"
+            },
+            {
+              "document": "docs/builds/poker-mobile-banner.mdx",
+              "label": "Mobile Banner",
+              "_template": "doc"
             }
           ],
           "_template": "category"
