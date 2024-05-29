@@ -1,23 +1,23 @@
 ---
-title: Mobile PLP
 last_update:
   date: 03/06/2024
   author: Emmanuel Borromeo
   description: Mobile PLP Build
   authors: Emmanuel Borromeo
+title: Mobile PLP
 ---
 
 # Mobile PLP
 
 **Mobile PLP** is a carousel-like feature but takes up the whole screen of a mobile device.
 
-<img src="https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984672/builds/plp/mobile/sample_masx3m.png" width="25%" className="mx-auto"/>
+<img src="https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984672/builds/plp/mobile/sample_masx3m.png" className="mx-auto" />
 
 ## Building Mobile PLP
 
-:::info[SiteCore Path]
+\:::info\[SiteCore Path]
 sitecore > content > Vanilla.Mobile > brand/state > MobilePoker-v1.0 > Regional > Global > MobilePLP > MobilePLP-LIVE
-:::
+\:::
 
 Go to the above Sitecore Path. Then do the following:
 
@@ -32,79 +32,94 @@ Go to the above Sitecore Path. Then do the following:
 ### Step 2: Edit PokerPromotionData
 
 <table>
-<tbody>
-<tr>
-<td>Title</td>
-<td>Fill this with just ```<p></p>```</td>
-<td>
-![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984666/builds/plp/mobile/mobi_plp_title_iegsgl.png)
-</td>
-</tr>
-<tr>
-<td>Description</td>
-<td>Insert the Promotional Description, usually Featuring Part of the copy or the Inbox Preview</td>
-<td>
-![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984652/builds/plp/mobile/mobi_plp_desc_eumr1d.png)
-</td>
-</tr>
-<tr>
-<td>BackgroupImage</td>
-<td>Asset with size 345 x 511</td>
-<td>
-![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984646/builds/plp/mobile/mobi_plp_bg_bkgwim.png)
-</td>
-</tr>
-<tr>
-<td>CTA</td>
-<td>Insert the appropriate CTA, this is a CTA after Opt-In. In the <strong>data-purl</strong> insert the clean URL (use https://www.urlencoder.org/).</td>
-<td>
-![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984649/builds/plp/mobile/mobi_plp_cta_tp4qxq.png)
-</td>
-</tr>
-<tr>
-<td>TermsAndConditions</td>
-<td>If the promo has Opt-In CTA the Terms &amp; Condition will have a smartlink to the Tourney Page, if not leave this empty</td>
-<td>
-![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984669/builds/plp/mobile/mobi_plp_tnc_gjfk90.png)
-</td>
-</tr>
-<tr>
-<td>ForegroundImage</td>
-<td>Asset with size 395 x 176</td>
-<td>
-![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984661/builds/plp/mobile/mobi_plp_png_khtlxm.png)
-</td>
-</tr>
-<tr>
-<td>OptInRequired & OptInText</td>
-<td>If the promo has Opt-In CTA, tick this and Inpit <strong>OPT IN</strong>. If not, untick this.</td>
-<td>
-![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984658/builds/plp/mobile/mobi_plp_opt_in_cgblf8.png)
-</td>
-</tr>
-<tr>
-<td>ErrorCTA</td>
-<td>In case the PAT ID is invalid this CTA will show up, either put the TourneyPage smartlink or PromoHub Smartlink. In the <strong>data-purl</strong> insert the clean URL (use https://www.urlencoder.org/).</td>
-<td>
-![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984655/builds/plp/mobile/mobi_plp_error_cta_fu62va.png)
-</td>
-</tr>
-<tr>
-<td>PromotionalId & Source</td>
-<td>Insert here the PAT ID, and choose Promos. (Leave empty if non opt-in promo)</td>
-<td>
-![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984664/builds/plp/mobile/mobi_plp_promos_sa95nk.png)
-</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <td>Title</td>
+      <td>Fill this with `&nbsp;`</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984666/builds/plp/mobile/mobi_plp_title_iegsgl.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>Description</td>
+      <td>Use Poker Tile Subtitle</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984652/builds/plp/mobile/mobi_plp_desc_eumr1d.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>BackgroupImage</td>
+      <td>Asset with size 345 x 511</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984646/builds/plp/mobile/mobi_plp_bg_bkgwim.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>CTA</td>
+      <td>Insert the appropriate CTA, this is a CTA after Opt-In. In the <strong>data-purl</strong> insert the clean URL (use [https://www.urlencoder.org/](https://www.urlencoder.org/)).</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984649/builds/plp/mobile/mobi_plp_cta_tp4qxq.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>TermsAndConditions</td>
+      <td>If the promo has Opt-In CTA the Terms & Condition will have a smartlink to the Tourney Page, if not leave this empty</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984669/builds/plp/mobile/mobi_plp_tnc_gjfk90.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>ForegroundImage</td>
+      <td>Asset with size 395 x 176</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984661/builds/plp/mobile/mobi_plp_png_khtlxm.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>OptInRequired & OptInText</td>
+      <td>If the promo has Opt-In CTA, tick this and Inpit <strong>OPT IN</strong>. If not, untick this.</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984658/builds/plp/mobile/mobi_plp_opt_in_cgblf8.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>ErrorCTA</td>
+      <td>In case the PAT ID is invalid this CTA will show up, either put the TourneyPage smartlink or PromoHub Smartlink. In the <strong>data-purl</strong> insert the clean URL (use [https://www.urlencoder.org/](https://www.urlencoder.org/)).</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984655/builds/plp/mobile/mobi_plp_error_cta_fu62va.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>PromotionalId & Source</td>
+      <td>Insert here the PAT ID, and choose Promos. (Leave empty if non opt-in promo)</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984664/builds/plp/mobile/mobi_plp_promos_sa95nk.png)
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-:::tip[URL Cleaner]
-To clean URL use https://www.urlencoder.org/
+\:::tip\[URL Cleaner]
+To clean URL use [https://www.urlencoder.org/](https://www.urlencoder.org/)
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984675/builds/plp/mobile/url_cleaner_fg0alb.png)
-:::
-
-
+\:::
 
 ### Step 3: Filter & Publishing Date
 
@@ -114,7 +129,7 @@ To clean URL use https://www.urlencoder.org/
 QueryString.Get('qa') = 'manila'
 ```
 
-2. Clear Publishing Date (for new builds)
+1. Clear Publishing Date (for new builds)
 
 ### Step 4: Screenshot your PLP
 
