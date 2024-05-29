@@ -5,3 +5,112 @@ title: Mobile Banner
 # Mobile Banner
 
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1716953378/builds/mobile-banner/kjeotd70vet17hc6xvud.png)
+
+<Admonition type="note" title="Sitecore Path">
+  Content > Vanilla.Mobile > m2.State/Brand.com > MobilePoker-v1.0 > Regional > Global > MobileBanner > MobileBanner-LIVE
+</Admonition>
+
+## Creating a MobileBanner
+
+You can duplicate another mobile banner item and name it with your ticket name.
+
+## Required Fields
+
+<Row>
+    <Col ratio={2} sticky={true}>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Field
+                    </th>
+                    <th className="w-full">
+                        Value
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colSpan="2" className="text-center">
+                        PokerPromotionData
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        BackgroundImage
+                    </td>
+                    <td>
+                        980x134 🖼
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CTA URL
+                    </td>
+                    <td>
+                        *Tournament Page Smartlink URL*
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        CTA data-purl
+                    </td>
+                    <td>
+                        *Tournament Page Clean URL*
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </Col>
+    <Col ratio={3} sticky={true}>
+
+        <div className="*:mb-0">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1716953379/builds/mobile-banner/izny85ntajzu41wehcok.jpg) 
+        </div>
+    </Col>
+</Row>
+
+## New Build Setup
+
+<Row>
+    <Col ratio={2} sticky={true}> 
+        ### Filter
+
+        Add a filter to your build to prevent it on displaying to production, and allow us to preview it for ourselves on development. Use the filter format below:
+        ```
+        QueryString.Get('qa') = 'manila'
+        ```
+    </Col>
+    <Col ratio={3} sticky={true}>
+
+        <div className="*:mb-0">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1716955414/builds/mobile-banner/mobile-banner-filter_o50nve.jpg) 
+        </div>
+    </Col>
+</Row>
+
+<Row>
+    <Col ratio={2} sticky={true}> 
+        ### Publishing
+
+        Make sure that the fields for Publish and Unpublish is empty, and the checkbox for Never Publish is unchecked
+    </Col>
+    <Col ratio={3} sticky={true}>
+
+        <div className="*:mb-0">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1716955227/builds/mobile-banner/mobile-banner-publish_niofme.jpg) 
+        </div>
+    </Col>
+</Row>
+
+## Previewing
+
+You can preview the published mobile banners with the link below. Just update the url to preview for other state and brand.
+```
+https://poker.nj.betmgm.com/en/mobilebanner
+```
+
+If you have applied a query filter, just add it to the original link:
+```
+https://poker.nj.betmgm.com/en/mobilebanner?qa=manila
+```
