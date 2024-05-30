@@ -108,3 +108,20 @@ code {
 .doc-row img {
   margin-bottom: 0;
 }
+
+.borderless-table, 
+.borderless-table tobdy, 
+.borderless-table tr, 
+.borderless-table th,
+.borderless-table td {
+  border: 0 !important;
+}
+
+.transparent-table tr {
+  background-color: transparent !important;
+} 
+
+.nospace-table td,
+.nospace-table th {
+  padding: 0 !important;
+}
