@@ -53,18 +53,18 @@ type Query {
   collections: [Collection!]!
   node(id: String): Node!
   document(collection: String, relativePath: String): DocumentNode!
-  post(relativePath: String): Post!
-  postConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PostFilter): PostConnection!
   doc(relativePath: String): Doc!
   docConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: DocFilter): DocConnection!
   sidebar(relativePath: String): Sidebar!
   sidebarConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SidebarFilter): SidebarConnection!
+  quicklink(relativePath: String): Quicklink!
+  quicklinkConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: QuicklinkFilter): QuicklinkConnection!
 }
 
 input DocumentFilter {
-  post: PostFilter
   doc: DocFilter
   sidebar: SidebarFilter
+  quicklink: QuicklinkFilter
 }
 
 type DocumentConnectionEdges {
@@ -90,9 +90,9 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Post | Doc | Sidebar | Folder
+union DocumentNode = Doc | Sidebar | Quicklink | Folder
 
-type Post implements Node & Document {
+type Doc implements Node & Document {
   title: String!
   body: JSON
   id: ID!
@@ -105,36 +105,6 @@ input StringFilter {
   eq: String
   exists: Boolean
   in: [String]
-}
-
-input RichTextFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-}
-
-input PostFilter {
-  title: StringFilter
-  body: RichTextFilter
-}
-
-type PostConnectionEdges {
-  cursor: String!
-  node: Post
-}
-
-type PostConnection implements Connection {
-  pageInfo: PageInfo!
-  totalCount: Float!
-  edges: [PostConnectionEdges]
-}
-
-type Doc implements Node & Document {
-  title: String!
-  body: JSON
-  id: ID!
-  _sys: SystemInfo!
-  _values: JSON!
 }
 
 input ImageFilter {
@@ -158,6 +128,12 @@ input DocBodyTabsChildrenTabItemChildrenImgFilter {
 
 input BooleanFilter {
   eq: Boolean
+  exists: Boolean
+}
+
+input RichTextFilter {
+  startsWith: String
+  eq: String
   exists: Boolean
 }
 
@@ -598,35 +574,159 @@ type SidebarConnection implements Connection {
   edges: [SidebarConnectionEdges]
 }
 
+type QuicklinkQuickLinksGroupLinksQuickLink {
+  label: String!
+  url: String!
+}
+
+type QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink {
+  label: String!
+  url: String!
+}
+
+type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink {
+  label: String!
+  url: String!
+}
+
+type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink {
+  label: String!
+  url: String!
+}
+
+union QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinks = QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink
+
+type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup {
+  label: String!
+  links: [QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinks]
+}
+
+union QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinks = QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink | QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup
+
+type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup {
+  label: String!
+  links: [QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinks]
+}
+
+union QuicklinkQuickLinksGroupLinksSubGroupLinks = QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink | QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup
+
+type QuicklinkQuickLinksGroupLinksSubGroup {
+  label: String!
+  links: [QuicklinkQuickLinksGroupLinksSubGroupLinks]
+}
+
+union QuicklinkQuickLinksGroupLinks = QuicklinkQuickLinksGroupLinksQuickLink | QuicklinkQuickLinksGroupLinksSubGroup
+
+type QuicklinkQuickLinksGroup {
+  label: String!
+  links: [QuicklinkQuickLinksGroupLinks]
+}
+
+type Quicklink implements Node & Document {
+  quickLinksGroup: [QuicklinkQuickLinksGroup]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input QuicklinkQuickLinksGroupLinksQuickLinkFilter {
+  label: StringFilter
+  url: StringFilter
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkFilter {
+  label: StringFilter
+  url: StringFilter
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter {
+  label: StringFilter
+  url: StringFilter
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter {
+  label: StringFilter
+  url: StringFilter
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksFilter {
+  quickLink: QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupFilter {
+  label: StringFilter
+  links: QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksFilter
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksFilter {
+  quickLink: QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter
+  subGroup: QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupFilter
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupFilter {
+  label: StringFilter
+  links: QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksFilter
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksFilter {
+  quickLink: QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkFilter
+  subGroup: QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupFilter
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupFilter {
+  label: StringFilter
+  links: QuicklinkQuickLinksGroupLinksSubGroupLinksFilter
+}
+
+input QuicklinkQuickLinksGroupLinksFilter {
+  quickLink: QuicklinkQuickLinksGroupLinksQuickLinkFilter
+  subGroup: QuicklinkQuickLinksGroupLinksSubGroupFilter
+}
+
+input QuicklinkQuickLinksGroupFilter {
+  label: StringFilter
+  links: QuicklinkQuickLinksGroupLinksFilter
+}
+
+input QuicklinkFilter {
+  quickLinksGroup: QuicklinkQuickLinksGroupFilter
+}
+
+type QuicklinkConnectionEdges {
+  cursor: String!
+  node: Quicklink
+}
+
+type QuicklinkConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [QuicklinkConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
   deleteDocument(collection: String, relativePath: String!): DocumentNode!
   createDocument(collection: String, relativePath: String!, params: DocumentMutation!): DocumentNode!
-  updatePost(relativePath: String!, params: PostMutation!): Post!
-  createPost(relativePath: String!, params: PostMutation!): Post!
   updateDoc(relativePath: String!, params: DocMutation!): Doc!
   createDoc(relativePath: String!, params: DocMutation!): Doc!
   updateSidebar(relativePath: String!, params: SidebarMutation!): Sidebar!
   createSidebar(relativePath: String!, params: SidebarMutation!): Sidebar!
+  updateQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
+  createQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
 }
 
 input DocumentUpdateMutation {
-  post: PostMutation
   doc: DocMutation
   sidebar: SidebarMutation
+  quicklink: QuicklinkMutation
   relativePath: String
 }
 
 input DocumentMutation {
-  post: PostMutation
   doc: DocMutation
   sidebar: SidebarMutation
-}
-
-input PostMutation {
-  title: String
-  body: JSON
+  quicklink: QuicklinkMutation
 }
 
 input DocMutation {
@@ -732,6 +832,69 @@ input SidebarMutation {
   _warning: String
   label: String
   items: [SidebarItemsMutation]
+}
+
+input QuicklinkQuickLinksGroupLinksQuickLinkMutation {
+  label: String
+  url: String
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkMutation {
+  label: String
+  url: String
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation {
+  label: String
+  url: String
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation {
+  label: String
+  url: String
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksMutation {
+  quickLink: QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupMutation {
+  label: String
+  links: [QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksMutation]
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksMutation {
+  quickLink: QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation
+  subGroup: QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupMutation
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupMutation {
+  label: String
+  links: [QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksMutation]
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupLinksMutation {
+  quickLink: QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkMutation
+  subGroup: QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupMutation
+}
+
+input QuicklinkQuickLinksGroupLinksSubGroupMutation {
+  label: String
+  links: [QuicklinkQuickLinksGroupLinksSubGroupLinksMutation]
+}
+
+input QuicklinkQuickLinksGroupLinksMutation {
+  quickLink: QuicklinkQuickLinksGroupLinksQuickLinkMutation
+  subGroup: QuicklinkQuickLinksGroupLinksSubGroupMutation
+}
+
+input QuicklinkQuickLinksGroupMutation {
+  label: String
+  links: [QuicklinkQuickLinksGroupLinksMutation]
+}
+
+input QuicklinkMutation {
+  quickLinksGroup: [QuicklinkQuickLinksGroupMutation]
 }
 
 schema {

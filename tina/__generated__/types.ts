@@ -81,12 +81,12 @@ export type Query = {
   collections: Array<Collection>;
   node: Node;
   document: DocumentNode;
-  post: Post;
-  postConnection: PostConnection;
   doc: Doc;
   docConnection: DocConnection;
   sidebar: Sidebar;
   sidebarConnection: SidebarConnection;
+  quicklink: Quicklink;
+  quicklinkConnection: QuicklinkConnection;
 };
 
 
@@ -108,21 +108,6 @@ export type QueryNodeArgs = {
 export type QueryDocumentArgs = {
   collection?: InputMaybe<Scalars['String']['input']>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-export type QueryPostArgs = {
-  relativePath?: InputMaybe<Scalars['String']['input']>;
-};
-
-
-export type QueryPostConnectionArgs = {
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<PostFilter>;
 };
 
 
@@ -155,10 +140,25 @@ export type QuerySidebarConnectionArgs = {
   filter?: InputMaybe<SidebarFilter>;
 };
 
+
+export type QueryQuicklinkArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryQuicklinkConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<QuicklinkFilter>;
+};
+
 export type DocumentFilter = {
-  post?: InputMaybe<PostFilter>;
   doc?: InputMaybe<DocFilter>;
   sidebar?: InputMaybe<SidebarFilter>;
+  quicklink?: InputMaybe<QuicklinkFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -198,10 +198,10 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Post | Doc | Sidebar | Folder;
+export type DocumentNode = Doc | Sidebar | Quicklink | Folder;
 
-export type Post = Node & Document & {
-  __typename?: 'Post';
+export type Doc = Node & Document & {
+  __typename?: 'Doc';
   title: Scalars['String']['output'];
   body?: Maybe<Scalars['JSON']['output']>;
   id: Scalars['ID']['output'];
@@ -214,39 +214,6 @@ export type StringFilter = {
   eq?: InputMaybe<Scalars['String']['input']>;
   exists?: InputMaybe<Scalars['Boolean']['input']>;
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
-export type RichTextFilter = {
-  startsWith?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-};
-
-export type PostFilter = {
-  title?: InputMaybe<StringFilter>;
-  body?: InputMaybe<RichTextFilter>;
-};
-
-export type PostConnectionEdges = {
-  __typename?: 'PostConnectionEdges';
-  cursor: Scalars['String']['output'];
-  node?: Maybe<Post>;
-};
-
-export type PostConnection = Connection & {
-  __typename?: 'PostConnection';
-  pageInfo: PageInfo;
-  totalCount: Scalars['Float']['output'];
-  edges?: Maybe<Array<Maybe<PostConnectionEdges>>>;
-};
-
-export type Doc = Node & Document & {
-  __typename?: 'Doc';
-  title: Scalars['String']['output'];
-  body?: Maybe<Scalars['JSON']['output']>;
-  id: Scalars['ID']['output'];
-  _sys: SystemInfo;
-  _values: Scalars['JSON']['output'];
 };
 
 export type ImageFilter = {
@@ -270,6 +237,12 @@ export type DocBodyTabsChildrenTabItemChildrenImgFilter = {
 
 export type BooleanFilter = {
   eq?: InputMaybe<Scalars['Boolean']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+};
+
+export type RichTextFilter = {
+  startsWith?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
   exists?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
@@ -728,18 +701,158 @@ export type SidebarConnection = Connection & {
   edges?: Maybe<Array<Maybe<SidebarConnectionEdges>>>;
 };
 
+export type QuicklinkQuickLinksGroupLinksQuickLink = {
+  __typename?: 'QuicklinkQuickLinksGroupLinksQuickLink';
+  label: Scalars['String']['output'];
+  url: Scalars['String']['output'];
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink = {
+  __typename?: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink';
+  label: Scalars['String']['output'];
+  url: Scalars['String']['output'];
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink = {
+  __typename?: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink';
+  label: Scalars['String']['output'];
+  url: Scalars['String']['output'];
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink = {
+  __typename?: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink';
+  label: Scalars['String']['output'];
+  url: Scalars['String']['output'];
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinks = QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink;
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup = {
+  __typename?: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup';
+  label: Scalars['String']['output'];
+  links?: Maybe<Array<Maybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinks>>>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinks = QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink | QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup;
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup = {
+  __typename?: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup';
+  label: Scalars['String']['output'];
+  links?: Maybe<Array<Maybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinks>>>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinks = QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink | QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup;
+
+export type QuicklinkQuickLinksGroupLinksSubGroup = {
+  __typename?: 'QuicklinkQuickLinksGroupLinksSubGroup';
+  label: Scalars['String']['output'];
+  links?: Maybe<Array<Maybe<QuicklinkQuickLinksGroupLinksSubGroupLinks>>>;
+};
+
+export type QuicklinkQuickLinksGroupLinks = QuicklinkQuickLinksGroupLinksQuickLink | QuicklinkQuickLinksGroupLinksSubGroup;
+
+export type QuicklinkQuickLinksGroup = {
+  __typename?: 'QuicklinkQuickLinksGroup';
+  label: Scalars['String']['output'];
+  links?: Maybe<Array<Maybe<QuicklinkQuickLinksGroupLinks>>>;
+};
+
+export type Quicklink = Node & Document & {
+  __typename?: 'Quicklink';
+  quickLinksGroup?: Maybe<Array<Maybe<QuicklinkQuickLinksGroup>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type QuicklinkQuickLinksGroupLinksQuickLinkFilter = {
+  label?: InputMaybe<StringFilter>;
+  url?: InputMaybe<StringFilter>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkFilter = {
+  label?: InputMaybe<StringFilter>;
+  url?: InputMaybe<StringFilter>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter = {
+  label?: InputMaybe<StringFilter>;
+  url?: InputMaybe<StringFilter>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter = {
+  label?: InputMaybe<StringFilter>;
+  url?: InputMaybe<StringFilter>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksFilter = {
+  quickLink?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupFilter = {
+  label?: InputMaybe<StringFilter>;
+  links?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksFilter>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksFilter = {
+  quickLink?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter>;
+  subGroup?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupFilter>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupFilter = {
+  label?: InputMaybe<StringFilter>;
+  links?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksFilter>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksFilter = {
+  quickLink?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkFilter>;
+  subGroup?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupFilter>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupFilter = {
+  label?: InputMaybe<StringFilter>;
+  links?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksFilter>;
+};
+
+export type QuicklinkQuickLinksGroupLinksFilter = {
+  quickLink?: InputMaybe<QuicklinkQuickLinksGroupLinksQuickLinkFilter>;
+  subGroup?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupFilter>;
+};
+
+export type QuicklinkQuickLinksGroupFilter = {
+  label?: InputMaybe<StringFilter>;
+  links?: InputMaybe<QuicklinkQuickLinksGroupLinksFilter>;
+};
+
+export type QuicklinkFilter = {
+  quickLinksGroup?: InputMaybe<QuicklinkQuickLinksGroupFilter>;
+};
+
+export type QuicklinkConnectionEdges = {
+  __typename?: 'QuicklinkConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Quicklink>;
+};
+
+export type QuicklinkConnection = Connection & {
+  __typename?: 'QuicklinkConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<QuicklinkConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
   updateDocument: DocumentNode;
   deleteDocument: DocumentNode;
   createDocument: DocumentNode;
-  updatePost: Post;
-  createPost: Post;
   updateDoc: Doc;
   createDoc: Doc;
   updateSidebar: Sidebar;
   createSidebar: Sidebar;
+  updateQuicklink: Quicklink;
+  createQuicklink: Quicklink;
 };
 
 
@@ -770,18 +883,6 @@ export type MutationCreateDocumentArgs = {
 };
 
 
-export type MutationUpdatePostArgs = {
-  relativePath: Scalars['String']['input'];
-  params: PostMutation;
-};
-
-
-export type MutationCreatePostArgs = {
-  relativePath: Scalars['String']['input'];
-  params: PostMutation;
-};
-
-
 export type MutationUpdateDocArgs = {
   relativePath: Scalars['String']['input'];
   params: DocMutation;
@@ -805,22 +906,29 @@ export type MutationCreateSidebarArgs = {
   params: SidebarMutation;
 };
 
+
+export type MutationUpdateQuicklinkArgs = {
+  relativePath: Scalars['String']['input'];
+  params: QuicklinkMutation;
+};
+
+
+export type MutationCreateQuicklinkArgs = {
+  relativePath: Scalars['String']['input'];
+  params: QuicklinkMutation;
+};
+
 export type DocumentUpdateMutation = {
-  post?: InputMaybe<PostMutation>;
   doc?: InputMaybe<DocMutation>;
   sidebar?: InputMaybe<SidebarMutation>;
+  quicklink?: InputMaybe<QuicklinkMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type DocumentMutation = {
-  post?: InputMaybe<PostMutation>;
   doc?: InputMaybe<DocMutation>;
   sidebar?: InputMaybe<SidebarMutation>;
-};
-
-export type PostMutation = {
-  title?: InputMaybe<Scalars['String']['input']>;
-  body?: InputMaybe<Scalars['JSON']['input']>;
+  quicklink?: InputMaybe<QuicklinkMutation>;
 };
 
 export type DocMutation = {
@@ -928,30 +1036,74 @@ export type SidebarMutation = {
   items?: InputMaybe<Array<InputMaybe<SidebarItemsMutation>>>;
 };
 
-export type PostPartsFragment = { __typename: 'Post', title: string, body?: any | null };
+export type QuicklinkQuickLinksGroupLinksQuickLinkMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  url?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksMutation = {
+  quickLink?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  links?: InputMaybe<Array<InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksMutation>>>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksMutation = {
+  quickLink?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation>;
+  subGroup?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupMutation>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  links?: InputMaybe<Array<InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksMutation>>>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupLinksMutation = {
+  quickLink?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkMutation>;
+  subGroup?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupMutation>;
+};
+
+export type QuicklinkQuickLinksGroupLinksSubGroupMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  links?: InputMaybe<Array<InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupLinksMutation>>>;
+};
+
+export type QuicklinkQuickLinksGroupLinksMutation = {
+  quickLink?: InputMaybe<QuicklinkQuickLinksGroupLinksQuickLinkMutation>;
+  subGroup?: InputMaybe<QuicklinkQuickLinksGroupLinksSubGroupMutation>;
+};
+
+export type QuicklinkQuickLinksGroupMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  links?: InputMaybe<Array<InputMaybe<QuicklinkQuickLinksGroupLinksMutation>>>;
+};
+
+export type QuicklinkMutation = {
+  quickLinksGroup?: InputMaybe<Array<InputMaybe<QuicklinkQuickLinksGroupMutation>>>;
+};
 
 export type DocPartsFragment = { __typename: 'Doc', title: string, body?: any | null };
 
 export type SidebarPartsFragment = { __typename: 'Sidebar', _warning?: string | null, label: string, items?: Array<{ __typename: 'SidebarItems', label: string, items?: Array<{ __typename: 'SidebarItemsItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsLink', title: string, href: string } | { __typename: 'SidebarItemsItemsDivider', title: string } | null> | null } | null> | null };
 
-export type PostQueryVariables = Exact<{
-  relativePath: Scalars['String']['input'];
-}>;
-
-
-export type PostQuery = { __typename?: 'Query', post: { __typename: 'Post', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
-
-export type PostConnectionQueryVariables = Exact<{
-  before?: InputMaybe<Scalars['String']['input']>;
-  after?: InputMaybe<Scalars['String']['input']>;
-  first?: InputMaybe<Scalars['Float']['input']>;
-  last?: InputMaybe<Scalars['Float']['input']>;
-  sort?: InputMaybe<Scalars['String']['input']>;
-  filter?: InputMaybe<PostFilter>;
-}>;
-
-
-export type PostConnectionQuery = { __typename?: 'Query', postConnection: { __typename?: 'PostConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'PostConnectionEdges', cursor: string, node?: { __typename: 'Post', id: string, title: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type QuicklinkPartsFragment = { __typename: 'Quicklink', quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null };
 
 export type DocQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -991,13 +1143,25 @@ export type SidebarConnectionQueryVariables = Exact<{
 
 export type SidebarConnectionQuery = { __typename?: 'Query', sidebarConnection: { __typename?: 'SidebarConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'SidebarConnectionEdges', cursor: string, node?: { __typename: 'Sidebar', id: string, _warning?: string | null, label: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, items?: Array<{ __typename: 'SidebarItems', label: string, items?: Array<{ __typename: 'SidebarItemsItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsLink', title: string, href: string } | { __typename: 'SidebarItemsItemsDivider', title: string } | null> | null } | null> | null } | null } | null> | null } };
 
-export const PostPartsFragmentDoc = gql`
-    fragment PostParts on Post {
-  __typename
-  title
-  body
-}
-    `;
+export type QuicklinkQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type QuicklinkQuery = { __typename?: 'Query', quicklink: { __typename: 'Quicklink', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null } };
+
+export type QuicklinkConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<QuicklinkFilter>;
+}>;
+
+
+export type QuicklinkConnectionQuery = { __typename?: 'Query', quicklinkConnection: { __typename?: 'QuicklinkConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'QuicklinkConnectionEdges', cursor: string, node?: { __typename: 'Quicklink', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null } | null } | null> | null } };
+
 export const DocPartsFragmentDoc = gql`
     fragment DocParts on Doc {
   __typename
@@ -1197,61 +1361,52 @@ export const SidebarPartsFragmentDoc = gql`
   }
 }
     `;
-export const PostDocument = gql`
-    query post($relativePath: String!) {
-  post(relativePath: $relativePath) {
-    ... on Document {
-      _sys {
-        filename
-        basename
-        breadcrumbs
-        path
-        relativePath
-        extension
+export const QuicklinkPartsFragmentDoc = gql`
+    fragment QuicklinkParts on Quicklink {
+  __typename
+  quickLinksGroup {
+    __typename
+    label
+    links {
+      __typename
+      ... on QuicklinkQuickLinksGroupLinksQuickLink {
+        label
+        url
       }
-      id
-    }
-    ...PostParts
-  }
-}
-    ${PostPartsFragmentDoc}`;
-export const PostConnectionDocument = gql`
-    query postConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: PostFilter) {
-  postConnection(
-    before: $before
-    after: $after
-    first: $first
-    last: $last
-    sort: $sort
-    filter: $filter
-  ) {
-    pageInfo {
-      hasPreviousPage
-      hasNextPage
-      startCursor
-      endCursor
-    }
-    totalCount
-    edges {
-      cursor
-      node {
-        ... on Document {
-          _sys {
-            filename
-            basename
-            breadcrumbs
-            path
-            relativePath
-            extension
+      ... on QuicklinkQuickLinksGroupLinksSubGroup {
+        label
+        links {
+          __typename
+          ... on QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink {
+            label
+            url
           }
-          id
+          ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup {
+            label
+            links {
+              __typename
+              ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink {
+                label
+                url
+              }
+              ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup {
+                label
+                links {
+                  __typename
+                  ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink {
+                    label
+                    url
+                  }
+                }
+              }
+            }
+          }
         }
-        ...PostParts
       }
     }
   }
 }
-    ${PostPartsFragmentDoc}`;
+    `;
 export const DocDocument = gql`
     query doc($relativePath: String!) {
   doc(relativePath: $relativePath) {
@@ -1362,16 +1517,65 @@ export const SidebarConnectionDocument = gql`
   }
 }
     ${SidebarPartsFragmentDoc}`;
+export const QuicklinkDocument = gql`
+    query quicklink($relativePath: String!) {
+  quicklink(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...QuicklinkParts
+  }
+}
+    ${QuicklinkPartsFragmentDoc}`;
+export const QuicklinkConnectionDocument = gql`
+    query quicklinkConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: QuicklinkFilter) {
+  quicklinkConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...QuicklinkParts
+      }
+    }
+  }
+}
+    ${QuicklinkPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
-      post(variables: PostQueryVariables, options?: C): Promise<{data: PostQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PostQueryVariables, query: string}> {
-        return requester<{data: PostQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PostQueryVariables, query: string}, PostQueryVariables>(PostDocument, variables, options);
-      },
-    postConnection(variables?: PostConnectionQueryVariables, options?: C): Promise<{data: PostConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PostConnectionQueryVariables, query: string}> {
-        return requester<{data: PostConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: PostConnectionQueryVariables, query: string}, PostConnectionQueryVariables>(PostConnectionDocument, variables, options);
-      },
-    doc(variables: DocQueryVariables, options?: C): Promise<{data: DocQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: DocQueryVariables, query: string}> {
+      doc(variables: DocQueryVariables, options?: C): Promise<{data: DocQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: DocQueryVariables, query: string}> {
         return requester<{data: DocQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: DocQueryVariables, query: string}, DocQueryVariables>(DocDocument, variables, options);
       },
     docConnection(variables?: DocConnectionQueryVariables, options?: C): Promise<{data: DocConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: DocConnectionQueryVariables, query: string}> {
@@ -1382,6 +1586,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     sidebarConnection(variables?: SidebarConnectionQueryVariables, options?: C): Promise<{data: SidebarConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SidebarConnectionQueryVariables, query: string}> {
         return requester<{data: SidebarConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: SidebarConnectionQueryVariables, query: string}, SidebarConnectionQueryVariables>(SidebarConnectionDocument, variables, options);
+      },
+    quicklink(variables: QuicklinkQueryVariables, options?: C): Promise<{data: QuicklinkQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuicklinkQueryVariables, query: string}> {
+        return requester<{data: QuicklinkQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuicklinkQueryVariables, query: string}, QuicklinkQueryVariables>(QuicklinkDocument, variables, options);
+      },
+    quicklinkConnection(variables?: QuicklinkConnectionQueryVariables, options?: C): Promise<{data: QuicklinkConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuicklinkConnectionQueryVariables, query: string}> {
+        return requester<{data: QuicklinkConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuicklinkConnectionQueryVariables, query: string}, QuicklinkConnectionQueryVariables>(QuicklinkConnectionDocument, variables, options);
       }
     };
   }

@@ -1,0 +1,605 @@
+{
+    "quickLinksGroup": [
+        {
+            "label": "Sitecore",
+            "links": [
+                {
+                    "label": "Casino",
+                    "links": [
+                        {
+                            "label": "Media Library",
+                            "links": [
+                                {
+                                    "label": "BetMGM MI",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={ED2BE8BB-0233-4699-A4BB-26214952030C}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={FB8EF9ED-24F1-451A-BA61-65FAB97C19F1}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM ON",
+                                    "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={793F3789-46E3-47A0-B68D-15DFB1D04E14}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={1241EB02-6B34-442D-A1B8-DA0794E12D6F}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM WV",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={28D117CB-9D12-4E75-8627-8B6209897E4F}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={8E05D88C-B373-4FF7-8CD4-BECC2517FC29}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={C70D2747-3AFC-4576-9527-F07813AE0490}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "PC",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={B8AD6434-23A2-47A4-8225-866F09A25DB3}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "WOF",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={CD4F904B-2974-45EA-B0BB-646EE9F10C5E}&la=",
+                                    "_template": "quickLink"
+                                }
+                            ],
+                            "_template": "subGroup"
+                        },
+                        {
+                            "label": "Carousel",
+                            "links": [
+                                {
+                                    "label": "BetMGM MI",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={B31B0C7B-3B5B-43CE-8E7F-606432CF38A2}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={9081DDBA-2E8D-45D9-91CB-8176E3F2071E}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM ON",
+                                    "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={F75C7F42-84FF-4984-9C36-B170F814B864}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={EF853285-0556-4365-922C-C44C0F40059B}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM WV",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={5CF4277E-3DFD-4397-BE7D-053CD6E6CFB9}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={03843F23-6104-44C2-8A15-8DB5C10DA003}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={9024B493-1DD1-43ED-A437-C59D35B678E8}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "PC",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={9E55821E-B5D6-4264-A219-43B6FF04A37C}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "WOF",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={05C78D5B-E33D-48C6-B3B1-730E7444762D}&la=",
+                                    "_template": "quickLink"
+                                }
+                            ],
+                            "_template": "subGroup"
+                        },
+                        {
+                            "label": "MPP",
+                            "links": [
+                                {
+                                    "label": "BetMGM MI",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={B0304D5D-AC1E-42D6-ADF4-2E1E963EE054}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={E49E51C3-0108-41B2-875D-C64CF0F2FE25}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM ON",
+                                    "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={5FD129FC-7F80-4A53-99D8-B0C820C3464E}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F5EF4BB4-0D37-4EDD-92E9-507618DF56AA}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM WV",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={49035430-022A-4985-B513-D0A57E3382F8}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={C2316A93-A9E6-4F1F-AE99-D662AD79298C}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BF13A873-6032-4CA3-822A-FFAAD0D84AB5}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "PC",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={DC852507-ED80-4F28-92FA-62669CFF8382}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "WOF",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={95FEE45C-2A63-49B9-B94C-B1DAC6A070C1}&la=",
+                                    "_template": "quickLink"
+                                }
+                            ],
+                            "_template": "subGroup"
+                        },
+                        {
+                            "label": "Rest ID",
+                            "links": [
+                                {
+                                    "label": "BetMGM MI",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={3E249C2F-BE85-4645-B398-72D34D67A138}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={2E3AD442-1B04-4A8B-A238-0E21EDFCC7E2}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM ON",
+                                    "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={5E410280-8CDC-413A-891F-7D9B22C7E1FC}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={26F5F8C3-ED03-4F1E-A213-31116F190EB8}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM WV",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={852961C7-7BFC-4AE8-AB74-2F5CB09459BB}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={2AC824DC-EB7A-4BFD-A8E7-1D0688AD99CA}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={DCC3032D-F199-455B-B5D6-807B9424E8CB}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "PC",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={772A0CCB-8A4F-4CB9-A470-F0B1AD4EB12B}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "WOF",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={44BD1074-4BC3-4825-95EA-4F78A9773051}&la=",
+                                    "_template": "quickLink"
+                                }
+                            ],
+                            "_template": "subGroup"
+                        },
+                        {
+                            "label": "Static Tile",
+                            "links": [
+                                {
+                                    "label": "BetMGM MI",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={6E8F1510-CEC3-4E1F-8AF9-B111FE621FFD}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7CA111BA-2977-4F62-A410-5C0BF79A7B41}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM ON",
+                                    "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={5E113CF7-CAD1-4992-A29A-435F50CEFBE4}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={C3BBCDDB-CCC1-4A50-AC8B-74EAEE5362B7}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM WV",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F76B0242-2904-4602-914C-8538E5E0405F}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={9BF35B54-6A3E-4871-80A0-37E6F3C662DA}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={ABDC3C68-406B-495E-ABD0-C2E7553F9604}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "PC",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={B2604C2A-047C-4CA8-9D3E-B3B3CE75FB73}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "WOF",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7183EB1A-B235-4DB5-A410-FA927E168147}&la=",
+                                    "_template": "quickLink"
+                                }
+                            ],
+                            "_template": "subGroup"
+                        },
+                        {
+                            "label": "Landing Page",
+                            "links": [
+                                {
+                                    "label": "BetMGM MI",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={65A13914-BA29-4F39-B56B-17282F868493}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={75DF7517-9518-4CDA-BAE5-1FDDAF43F714}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM ON",
+                                    "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={743B2744-CDF3-4B3F-A86A-53D2F9D2D71B}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A2F37970-16A7-40E1-A8CA-A54ECB080135}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM WV",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={446011EF-867F-4417-B821-6C2C07349987}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata NJ",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={4A5CF417-DC30-4995-976A-30CF09DE0B71}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata PA",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={00A0DE0B-64C3-4A02-ACBD-415B878ACFDA}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "PC",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={2E7C0DE4-B96C-4F66-A5F7-0F8C3CCC00DA}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "WOF",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={DF74A497-8432-4DA0-A8F0-897584E72FC0}&la=",
+                                    "_template": "quickLink"
+                                }
+                            ],
+                            "_template": "subGroup"
+                        },
+                        {
+                            "label": "Layout",
+                            "links": [
+                                {
+                                    "label": "Spin The Wheel",
+                                    "links": [
+                                        {
+                                            "label": "BetMGM MI - SpinTheWheel",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={DA7FD470-42C7-40A3-9738-FF6D817D1D71}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM NJ - SpinTheWheel",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={15540FB0-BE08-4325-B9E3-57EA7BC69F98}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM ON - SpinTheWheel",
+                                            "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={D108C067-9CF5-49FD-94C0-66B904D9F7F0}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM PA - SpinTheWheel",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={2B3BA81F-5A39-4D49-AF6E-C47432561C12}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM WV - SpinTheWheel",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={5B3EB337-647D-4F27-83B7-4514A003D108}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "Borgata NJ - SpinTheWheel",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={EE4F180A-0207-4384-8DC9-20046E5C9AD8}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "Borgata PA - SpinTheWheel",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={36287A73-C102-4C2C-AC78-B965441671AA}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "PC - SpinTheWheel",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={4F079BE7-4653-4AAE-A545-596A494F750F}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "WOF - SpinTheWheel",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={9909AE34-946C-4053-9AED-1BBB5ECA47A2}&la=",
+                                            "_template": "quickLink"
+                                        }
+                                    ],
+                                    "_template": "subGroup"
+                                },
+                                {
+                                    "label": "Pick The Box",
+                                    "links": [
+                                        {
+                                            "label": "BetMGM MI - PickTheBox",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={FF984304-0A7E-4187-A180-AB5223D73353}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM NJ - PickTheBox",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={D66C523F-CFC3-4CC9-B5CC-5B978266313F}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM ON - PickTheBox",
+                                            "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={D3DC24FC-62CD-47A9-9223-55754F38D5C2}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM PA - PickTheBox",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={405D39D1-5CA3-4C72-825A-AE4A1F467478}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM WV - PickTheBox",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={0F94EA02-E331-4527-A14F-A770475BF4C6}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "Borgata NJ - PickTheBox",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={57C3E72C-5F9A-4D01-B449-C7D2E32FA864}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "Borgata PA - PickTheBox",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={85F700E9-495B-497D-A5E1-C59FC3091967}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "PC - PickTheBox",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F127DA43-C45A-468A-88F7-FC6F9D224454}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "WOF - PickTheBox",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={958CC091-BBF7-4CD3-9640-D5A14A3943A5}&la=",
+                                            "_template": "quickLink"
+                                        }
+                                    ],
+                                    "_template": "subGroup"
+                                },
+                                {
+                                    "label": "Flip A Coin",
+                                    "links": [
+                                        {
+                                            "label": "BetMGM MI - FlipACoin",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={36453244-4A72-4790-A5E9-7F3EF791D16D}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM NJ - FlipACoin",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={93BBF2A3-1EED-4DFC-B060-6EF35BD9731F}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM ON - FlipACoin",
+                                            "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={967AE589-4424-4DBA-885F-10EFBA873F19}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM PA - FlipACoin",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={18FDA7ED-4F52-4470-B17A-09074F29CD0C}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "BetMGM WV - FlipACoin",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={039B2AFF-5FBB-4D0B-96EF-A4974EBF64F2}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "Borgata NJ - FlipACoin",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={5AA3CF38-9C29-4513-9927-22D484DD3683}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "Borgata PA - FlipACoin",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={04BBC0A5-FBF0-4342-A776-18D53B23A30F}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "PC - FlipACoin",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={77B44FA7-177F-42DF-AB7F-2B376D50758E}&la=",
+                                            "_template": "quickLink"
+                                        },
+                                        {
+                                            "label": "WOF - FlipACoin",
+                                            "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={20E00BB9-83F6-417A-9A1C-E4335A7DC38A}&la=",
+                                            "_template": "quickLink"
+                                        }
+                                    ],
+                                    "_template": "subGroup"
+                                }
+                            ],
+                            "_template": "subGroup"
+                        },
+                        {
+                            "label": "InstaStory",
+                            "links": [
+                                {
+                                    "label": "Borg PA - InstaPromotions",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={07FED266-773B-420D-8BA6-4106D4B3404E}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borg PA - StoryContent",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F8E22EF0-A47D-4285-9B1E-6D998E5E1302}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borg NJ - InstaPromotions",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={37AB4BE9-6209-4CCA-B40B-6030E18E8D23}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borg NJ - StoryContent",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={32D5EA82-0AE5-4FA0-A179-6242C258418D}&la=",
+                                    "_template": "quickLink"
+                                }
+                            ],
+                            "_template": "subGroup"
+                        },
+                        {
+                            "label": "Netflix / Video",
+                            "links": [
+                                {
+                                    "label": "BetMGM MI - lobbyhomefeatured",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BA9FC78E-2B1B-43FF-8BBD-40A095875985}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM MI - homefeatured (ODR)",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={389049B8-D6D7-43FD-B900-B7E7EFBCF77C}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM NJ - featuredfeatured",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BBBC8DB5-84B4-4835-BA6F-48EBAA00FBAA}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM NJ - homefeatured (ODR)",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={736FBE94-F8EB-406A-B6D7-D5A7E1E9E788}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata NJ - lobbyhomefeatured",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={9A73217B-258B-4D2A-A08E-E86DC47F1D02}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM ON - homefeatured",
+                                    "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={1865C6BD-E717-42CF-BF7E-8F7839A8CAE6}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM ON - homefeatured (ODR)",
+                                    "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={FB700FB5-242B-4168-A9C2-79198AC8260B}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM PA - homefeatured",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F69608C4-B4DD-4725-B670-A134D5F42051}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM PA - homefeatured (ODR)",
+                                    "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={16F6562B-0B96-41FC-A87E-7CD69A56607E}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM WV - homefeatured",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A7FFDFB9-EE51-453C-8B4B-0EF8A32FA0F0}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "BetMGM WV - homefeatured (ODR)",
+                                    "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7E11ED82-AAD8-4548-97FB-8B26138FDAC4}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata NJ - featuredfeatured - no need maybe",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={DC436D50-AB38-4B74-86DA-04FB5A06E29E}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata NJ - homefeatured (ODR)",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={53B9F214-80A6-4215-867B-C3AF98C696BE}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata PA - homefeatured",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={FFEE433A-2723-4CDE-A05B-7FBDC6108DBA}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "Borgata PA - homefeatured (ODR)",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={8E400D70-8ACE-42DC-B35E-A02AAB0DB320}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "PC - lobbyhomefeatured",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A78CBEA5-15F8-4C54-B9E8-A8700D57DEDA}&la=",
+                                    "_template": "quickLink"
+                                },
+                                {
+                                    "label": "PC - homehome_featured",
+                                    "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={6286E556-09AE-42BF-83DB-466F0B20BCD0}&la=",
+                                    "_template": "quickLink"
+                                }
+                            ],
+                            "_template": "subGroup"
+                        }
+                    ],
+                    "_template": "subGroup"
+                },
+                {
+                    "label": "Poker",
+                    "_template": "subGroup"
+                },
+                {
+                    "label": "Sports",
+                    "_template": "subGroup"
+                }
+            ]
+        }
+    ]
+}

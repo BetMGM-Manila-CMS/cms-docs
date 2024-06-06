@@ -1,34 +1,11 @@
 // tina/config.tsx
 import { defineConfig } from "tinacms";
 
-// tina/collections/post.jsx
-import React from "react";
-var PostCollection = {
-  name: "post",
-  label: "Posts",
-  path: "content/posts",
-  fields: [
-    {
-      type: "string",
-      name: "title",
-      label: "Title",
-      isTitle: true,
-      required: true
-    },
-    {
-      type: "rich-text",
-      name: "body",
-      label: "Body",
-      isBody: true
-    }
-  ]
-};
-
 // tina/collections/doc.jsx
-import React3 from "react";
+import React2 from "react";
 
 // src/theme/template.jsx
-import React2 from "react";
+import React from "react";
 import { wrapFieldsWithMeta } from "tinacms";
 var ClassyImageTemplate = {
   name: "img",
@@ -359,14 +336,14 @@ var DocCollection = {
 };
 
 // tina/collections/sidebar.jsx
-import React4 from "react";
+import React3 from "react";
 import { ReferenceField } from "tinacms";
 var titleFromSlug = (slug) => {
   const titleString = slug.split("/").slice(1).join(" \u2013 ").replace(/-/g, " ").replace(/\.[^/.]+$/, "");
   return title(titleString);
 };
 var WarningIcon = (props) => {
-  return React4.createElement(
+  return React3.createElement(
     "svg",
     {
       stroke: "currentColor",
@@ -378,12 +355,12 @@ var WarningIcon = (props) => {
       xmlns: "http://www.w3.org/2000/svg",
       ...props
     },
-    React4.createElement("path", { d: "M11.001 10h2v5h-2zM11 16h2v2h-2z" }),
-    React4.createElement("path", { d: "M13.768 4.2C13.42 3.545 12.742 3.138 12 3.138s-1.42.407-1.768 1.063L2.894 18.064a1.986 1.986 0 0 0 .054 1.968A1.984 1.984 0 0 0 4.661 21h14.678c.708 0 1.349-.362 1.714-.968a1.989 1.989 0 0 0 .054-1.968L13.768 4.2zM4.661 19 12 5.137 19.344 19H4.661z" })
+    React3.createElement("path", { d: "M11.001 10h2v5h-2zM11 16h2v2h-2z" }),
+    React3.createElement("path", { d: "M13.768 4.2C13.42 3.545 12.742 3.138 12 3.138s-1.42.407-1.768 1.063L2.894 18.064a1.986 1.986 0 0 0 .054 1.968A1.984 1.984 0 0 0 4.661 21h14.678c.708 0 1.349-.362 1.714-.968a1.989 1.989 0 0 0 .054-1.968L13.768 4.2zM4.661 19 12 5.137 19.344 19H4.661z" })
   );
 };
 var RestartWarning = () => {
-  return React4.createElement("p", { className: "rounded-lg border shadow px-4 py-2.5 bg-gradient-to-r from-yellow-50 to-yellow-100 border-yellow-200 mb-4" }, React4.createElement("div", { className: "flex items-center gap-2" }, React4.createElement(WarningIcon, { className: `w-6 h-auto flex-shrink-0 text-yellow-400` }), React4.createElement("div", { className: `flex-1 text-sm text-yellow-700 whitespace-normal	` }, "To see settings changes reflected on your site, restart the Tina CLI after saving ", React4.createElement("em", null, "(local development only)"), ".")));
+  return React3.createElement("p", { className: "rounded-lg border shadow px-4 py-2.5 bg-gradient-to-r from-yellow-50 to-yellow-100 border-yellow-200 mb-4" }, React3.createElement("div", { className: "flex items-center gap-2" }, React3.createElement(WarningIcon, { className: `w-6 h-auto flex-shrink-0 text-yellow-400` }), React3.createElement("div", { className: `flex-1 text-sm text-yellow-700 whitespace-normal	` }, "To see settings changes reflected on your site, restart the Tina CLI after saving ", React3.createElement("em", null, "(local development only)"), ".")));
 };
 var ItemsField = {
   name: "items",
@@ -506,7 +483,7 @@ var CategoryFields = [
     collections: ["doc"],
     ui: {
       component: (props) => {
-        const link = React4.useMemo(() => {
+        const link = React3.useMemo(() => {
           let fieldName = props.field.name;
           fieldName = fieldName.substring(0, fieldName.lastIndexOf(".")) || fieldName;
           return fieldName.split(".").reduce((o, i) => o[i], props.tinaForm.values).link;
@@ -596,7 +573,7 @@ var SidebarCollection = {
       name: "_warning",
       ui: {
         component: () => {
-          return React4.createElement(RestartWarning, null);
+          return React3.createElement(RestartWarning, null);
         }
       }
     },
@@ -611,6 +588,129 @@ var SidebarCollection = {
       }
     },
     SidebarsField
+  ]
+};
+
+// tina/collections/quicklink.jsx
+var QuickLinkTemplate = {
+  name: "quickLink",
+  label: "Quick Link",
+  ui: {
+    itemProps: (item) => {
+      return { label: item ? item.label : null };
+    }
+  },
+  fields: [
+    {
+      name: "label",
+      label: "Label",
+      type: "string",
+      required: true,
+      isTitle: true
+    },
+    {
+      name: "url",
+      label: "URL",
+      type: "string",
+      required: true
+    }
+  ]
+};
+var LabelField = {
+  name: "label",
+  label: "Label",
+  type: "string",
+  required: true,
+  isTitle: true
+};
+var LinksField = {
+  name: "links",
+  label: "Links",
+  type: "object",
+  list: true
+};
+var SubGroupTemplate = {
+  name: "subGroup",
+  label: "Sub Group",
+  type: "object",
+  ui: {
+    itemProps: (item) => {
+      return { label: item ? item.label : null };
+    }
+  }
+};
+var QuickLinkGroupField = {
+  name: "quickLinksGroup",
+  label: "Quick Links Group",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    LabelField,
+    {
+      ...LinksField,
+      templates: [
+        QuickLinkTemplate,
+        // Reference the QuickLinkGroupField to allow nesting
+        {
+          ...SubGroupTemplate,
+          fields: [
+            LabelField,
+            {
+              ...LinksField,
+              templates: [
+                QuickLinkTemplate,
+                // You can continue nesting here if needed
+                {
+                  ...SubGroupTemplate,
+                  fields: [
+                    LabelField,
+                    {
+                      ...LinksField,
+                      templates: [
+                        QuickLinkTemplate,
+                        // You can continue nesting here if needed
+                        {
+                          ...SubGroupTemplate,
+                          fields: [
+                            LabelField,
+                            {
+                              ...LinksField,
+                              templates: [
+                                QuickLinkTemplate
+                                // You can continue nesting here if needed
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+var QuickLinkCollection = {
+  name: "quicklink",
+  label: "Quick Links",
+  path: "config/quicklink",
+  format: "json",
+  ui: {
+    global: true,
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  fields: [
+    QuickLinkGroupField
   ]
 };
 
@@ -642,9 +742,9 @@ var config_default = defineConfig({
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
-      PostCollection,
       DocCollection,
-      SidebarCollection
+      SidebarCollection,
+      QuickLinkCollection
     ]
   }
 });

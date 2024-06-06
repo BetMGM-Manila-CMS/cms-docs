@@ -1,7 +1,7 @@
 import React from "react";
 import { MDXTemplates } from "../src/theme/template";
 import { defineConfig } from "tinacms";
-import { PostCollection, DocCollection, SidebarCollection } from './collections'
+import { DocCollection, SidebarCollection, QuickLinkCollection } from './collections'
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -36,9 +36,9 @@ export default defineConfig({
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
-      PostCollection,
       DocCollection,
-      SidebarCollection
+      SidebarCollection,
+      QuickLinkCollection
     ],
   },
 });
