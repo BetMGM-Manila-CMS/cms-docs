@@ -1,23 +1,29 @@
 import Link from "@docusaurus/Link";
 
+import heroBg from "@site/static/img/hero-bg.png"
+
 export const Hero = function () {
   return (
-    <section className="bg-white dark:bg-[#333333] bg-[url('../../../static/img/hero-bg.png')] bg-cover bg-blend-multiply bg-fixed">
+    <section 
+      style={{
+        backgroundImage: `url(https://res.cloudinary.com/dlfu36fiw/image/upload/v1717638160/hero-bg_mkts99.png)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed"
+      }} 
+      className="bg-white dark:bg-[#333333] bg-cover bg-blend-multiply bg-fixed"
+    >
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-        <Link
-          to="/"
-          className="inline-flex justify-between items-center py-1 px-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
-          role="alert"
+        <div
+          className="inline-flex justify-between items-center py-1 px-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white"
         >
           BetMGM Creatives Manila
-        </Link>
+        </div>
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-primary">
-          Welcome to the
-          <br />
-          CMS Team Documentation
+          CMS Team Hub
         </h1>
         <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white">
-          This documentation will be your go-to resource for navigating CMS
+          This hub will be your go-to resource for navigating CMS
           development at BetMGM Creatives Manila. Packed with insights, best
           practices, and troubleshooting tips.
         </p>

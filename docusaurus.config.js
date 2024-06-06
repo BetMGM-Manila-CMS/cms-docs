@@ -11,7 +11,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title:
-    "The Official Website of BetMGM Creatives Manila CMS Team",
+    "BetMGM Creatives Manila CMS Team Hub",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -115,7 +115,13 @@ const config = {
               },
             ]
           },
-          { to: "/team", label: "Team 🚧", position: "left" }, // temporary
+          { to: "/quick-links", label: "Quick Links", position: "left" },
+          { to: "/team", label: "Team 🚧", position: "left" },
+          /* {
+            href: 'https://coralracing-my.sharepoint.com/:x:/r/personal/emma_bulos_entaingroup_com/_layouts/15/Doc.aspx?sourcedoc=%7B287DEB61-B6DE-43C4-A5BC-620460666F3D%7D&file=Test%20Account%20Usernames.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1',
+            position: 'left',
+            label: 'Test Accounts',
+          }, */
           {
             type: "search",
             position: "right",
