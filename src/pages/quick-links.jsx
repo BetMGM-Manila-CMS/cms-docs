@@ -6,19 +6,97 @@ import Link from "@docusaurus/Link";
 import clsx from "clsx";
 import styles from "./index.module.css";
 
+import quickLinksData from "@site/config/quicklink/index.json"
+import { enableMapSet } from "immer";
+
+const QuickLinkIcon = ({ brand }) => {
+    const icons = {
+        betmgm: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg",
+        borgata: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729426/svg/brands/borgata_ms2oh6.svg",
+        partypoker: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729430/svg/brands/partycasino_ziqhts.svg",
+        partycasino: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729434/svg/brands/partypoker_zm9fse.svg",
+        wof: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729438/svg/brands/wof_zglu4s.svg",
+    }
+
+    return icons[brand] ? <img className="w-5 h-5 p-0 m-0" src={icons[brand]} /> : null
+}
+
+const QuickLinkLabel = ({ depth, label }) => {
+    const headingTags = ['h2', 'h3', 'h4', 'h5', 'h6', 'p'];
+    const textSizes = ['text-4xl', 'text-3xl', 'text-2xl', 'text-xl', 'text-md'];
+
+    const HeadingTag = headingTags[depth] || 'p';
+    const textSize = textSizes[depth] || 'text-md';
+
+    return (
+        <HeadingTag className={`mb-4 tracking-tight font-bold text-gray-900 dark:text-white ${textSize}`}>
+            {label}
+        </HeadingTag>
+    );
+};
+
+const QuickLinksList = ({ quickLinks, depth = 0 }) => {
+    console.log(quickLinks, depth)
+    return (
+        <>
+            {
+                quickLinks ? quickLinks.map((quickLink, index) => {
+                    return (
+                        <>
+                            <div className="max-w-screen-md" key={index}>
+                                {
+                                    quickLink._template !== 'quickLink' ?
+                                        <QuickLinkLabel depth={depth} label={quickLink.label} />
+                                        : null
+                                }
+                                {quickLink.links ? <QuickLinksList quickLinks={quickLink.links} depth={depth + 1} /> : null}
+                                {
+                                    quickLink.links && quickLink._template ?
+                                        <>
+                                            <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-4 md:space-y-0 mb-4">
+                                                {
+                                                    quickLink.links.map((link, index) => {
+                                                        return link._template === 'quickLink' ?
+                                                            <Link to="/" key={index}>
+                                                                <div className="flex items-center p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-neutral-800" role="alert">
+                                                                    {link.brand ? <QuickLinkIcon brand={link.brand} /> : null}
+                                                                    <div className="ps-4 text-sm font-normal">{link.label}</div>
+                                                                </div>
+                                                            </Link>
+                                                            : null
+                                                    })
+                                                }
+                                            </div>
+                                        </>
+                                        : null
+                                }
+                            </div>
+                        </>
+                    )
+                })
+                    : null
+            }
+        </>
+    )
+}
+
 export default function () {
     const { siteConfig } = useDocusaurusContext();
+
+    const quickLinks = quickLinksData.quickLinksGroup
+
+    console.log(quickLinks)
     return (
         <Layout title="Quick Links" description="Collection of frequently used Sitecore links, tools, and previews">
-            <section 
+            <section
                 style={{
                     backgroundImage: `url(https://res.cloudinary.com/dlfu36fiw/image/upload/v1717638160/hero-bg_mkts99.png)`,
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundAttachment: "fixed"
-                }} 
+                }}
                 className="bg-white dark:bg-[#333333] bg-cover bg-blend-multiply bg-fixed"
-                >
+            >
                 <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
                     <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-primary">
                         Quick Links
@@ -28,31 +106,9 @@ export default function () {
                     </p>
                 </div>
             </section>
-            <section class="">
-            <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-                <div class="max-w-screen-md mb-8 lg:mb-8">
-                    <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Sitecore Links</h2>
-                </div>
-                <div class="max-w-screen-md mb-8 lg:mb-8">
-                    <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Casino</h2>
-                </div>
-                <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-4 md:space-y-0">
-                    {
-                        Array.from(Array(10).keys()).map(key => {
-                            return (
-                                <Link to="/" key={key}>
-                                    <div class="flex items-center p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800" role="alert">
-                                        <svg class="w-5 h-5 text-blue-600 dark:text-blue-500 rotate-45" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"/>
-                                        </svg>
-                                        <div class="ps-4 text-sm font-normal">Message sent successfully.</div>
-                                    </div>
-                                </Link>
-                            )
-                        })
-                    }
-                </div>
-            </div>
+
+            <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+                <QuickLinksList quickLinks={quickLinks} />
             </section>
         </Layout>
     );

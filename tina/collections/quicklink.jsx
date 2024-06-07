@@ -17,6 +17,33 @@ const QuickLinkTemplate = {
             isTitle: true,
         },
         {
+            name: "brand",
+            label: "Brand",
+            type: "string",
+            options: [
+                {
+                    value: "betmgm",
+                    label: "BetMGM"
+                },
+                {
+                    value: "borgata",
+                    label: "Borgata"
+                },
+                {
+                    value: "partycasino",
+                    label: "PartyCasino"
+                },
+                {
+                    value: "partypoker",
+                    label: "partypoker"
+                },
+                {
+                    value: "wof",
+                    label: "Wheel Of Fortune"
+                }
+            ]
+        },
+        {
             name: "url",
             label: "URL",
             type: "string",
@@ -38,7 +65,7 @@ const LinksField = {
     label: "Links",
     type: "object",
     list: true,
-    
+
 }
 
 const SubGroupTemplate = {
@@ -79,18 +106,18 @@ const QuickLinkGroupField = {
                                 {
                                     ...SubGroupTemplate,
                                     fields: [
-                                        LabelField,                                        
+                                        LabelField,
                                         {
-                                        ...LinksField,                                            
+                                            ...LinksField,
                                             templates: [
                                                 QuickLinkTemplate,
                                                 // You can continue nesting here if needed
                                                 {
-                                                    ...SubGroupTemplate,                                                    
+                                                    ...SubGroupTemplate,
                                                     fields: [
-                                                        LabelField,                                                        
+                                                        LabelField,
                                                         {
-                                                            ...LinksField,                                                            
+                                                            ...LinksField,
                                                             templates: [
                                                                 QuickLinkTemplate,
                                                                 // You can continue nesting here if needed
@@ -119,8 +146,8 @@ export const QuickLinkCollection = {
     ui: {
         global: true,
         allowedActions: {
-          create: false,
-          delete: false,
+            create: false,
+            delete: false,
         },
     },
     fields: [

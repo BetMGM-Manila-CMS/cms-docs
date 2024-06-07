@@ -576,21 +576,25 @@ type SidebarConnection implements Connection {
 
 type QuicklinkQuickLinksGroupLinksQuickLink {
   label: String!
+  brand: String
   url: String!
 }
 
 type QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink {
   label: String!
+  brand: String
   url: String!
 }
 
 type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink {
   label: String!
+  brand: String
   url: String!
 }
 
 type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink {
   label: String!
+  brand: String
   url: String!
 }
 
@@ -631,21 +635,25 @@ type Quicklink implements Node & Document {
 
 input QuicklinkQuickLinksGroupLinksQuickLinkFilter {
   label: StringFilter
+  brand: StringFilter
   url: StringFilter
 }
 
 input QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkFilter {
   label: StringFilter
+  brand: StringFilter
   url: StringFilter
 }
 
 input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter {
   label: StringFilter
+  brand: StringFilter
   url: StringFilter
 }
 
 input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter {
   label: StringFilter
+  brand: StringFilter
   url: StringFilter
 }
 
@@ -836,21 +844,25 @@ input SidebarMutation {
 
 input QuicklinkQuickLinksGroupLinksQuickLinkMutation {
   label: String
+  brand: String
   url: String
 }
 
 input QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkMutation {
   label: String
+  brand: String
   url: String
 }
 
 input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation {
   label: String
+  brand: String
   url: String
 }
 
 input QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation {
   label: String
+  brand: String
   url: String
 }
 

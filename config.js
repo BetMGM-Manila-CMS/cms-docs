@@ -87,7 +87,7 @@ new Crawler({
                 'exact',
                 'custom',
             ],
-            highlightPreTag: '<span class="algolia-docsearch-suggestion--highlight">',
+            highlightPreTag: '<span className="algolia-docsearch-suggestion--highlight">',
             highlightPostTag: '</span>',
             minWordSizefor1Typo: 3,
             minWordSizefor2Typos: 7,

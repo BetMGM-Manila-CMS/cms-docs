@@ -51,13 +51,13 @@ In this section is where the contents from the [Prize Tool](./documents#prize-to
    <br />
 
 ```html
-<div class="overlay-header">
-<h1 class="mb-1 mt-0">Congratulations!</h1>
-<h2 class="mb-2 mt-1">You've won: $1000 Online Open Hybrid Tournament Ticket</h2>
-<p class="mb-2">Register in our tournament lobby for the Online Open Hybrid Tournament</p>
-<p class="mb-2">Tickets expire after 90 days. T&amp;C's apply.</p>
-<div class="mt-2">
-<a rel="noopener noreferrer" class="btn btn-primary" href="{Reward CTA URL}">{Reward CTA Text}</a>
+<div className="overlay-header">
+<h1 className="mb-1 mt-0">Congratulations!</h1>
+<h2 className="mb-2 mt-1">You've won: $1000 Online Open Hybrid Tournament Ticket</h2>
+<p className="mb-2">Register in our tournament lobby for the Online Open Hybrid Tournament</p>
+<p className="mb-2">Tickets expire after 90 days. T&amp;C's apply.</p>
+<div className="mt-2">
+<a rel="noopener noreferrer" className="btn btn-primary" href="{Reward CTA URL}">{Reward CTA Text}</a>
 </div>
 </div>
 ```
@@ -92,12 +92,12 @@ Place the same Terms and Conditions content you have placed for the MPP or Rest 
 The value from this field will be from the `3 Steps` section from your copy document, but it should be on HTML format, follow the format below and replace with the correct contents.
 
 ```html
-<section class="custom-tnc-hiw sk-bingo-container">
+<section className="custom-tnc-hiw sk-bingo-container">
 <article>
-<div class="c-how-to-component">
-<div class="c-predictor-message c-box">
-<div class="c-how-it-works ">
-<div class="c-how-it-works-collapsible__body c-display" id="ptb-how-it-works__desc">
+<div className="c-how-to-component">
+<div className="c-predictor-message c-box">
+<div className="c-how-it-works ">
+<div className="c-how-it-works-collapsible__body c-display" id="ptb-how-it-works__desc">
 <!-- how it work content -->
 <ol>
     <li><strong>STEP 1 TITLE</strong><br />
@@ -125,9 +125,9 @@ Place the HTML content below for this field and replace the correct description 
 For the CTA, use the appropriate home link depending if this PAT is for a Casino or Poker promotion ticket.
 
 ```html
-<h3 class="mb-2 mt-1">If you have not picked yet today, you first must qualify!</h3>
-<p class="mb-1">{Overlay Description}</p>
-<p><a href="{Poker or Casino Home Smartlink}" class="btn mt-1" style="background-color: {Brand Color Hex}; color:#ffffff;">BACK TO {POKER | CASINO}</a></p>
+<h3 className="mb-2 mt-1">If you have not picked yet today, you first must qualify!</h3>
+<p className="mb-1">{Overlay Description}</p>
+<p><a href="{Poker or Casino Home Smartlink}" className="btn mt-1" style="background-color: {Brand Color Hex}; color:#ffffff;">BACK TO {POKER | CASINO}</a></p>
 <style>
     .ptb .spin-result-dialog .overlay-content {
     text-align: center;
@@ -152,23 +152,23 @@ Place an empty `<p></p>` inside this field
 See HTML below and replace the image with the `Background 955x562 Desktop Image` and the CTA with the appropriate values depending on the promotion.
 
 ```html
-<div class="ptb ptb-prelogin container-bg">
+<div className="ptb ptb-prelogin container-bg">
   <div>
-    <img class="box-static-img" alt="prelogin_wheel_only" src="{Background 955x562 Desktop Image}" />
+    <img className="box-static-img" alt="prelogin_wheel_only" src="{Background 955x562 Desktop Image}" />
     <br />
-    <h4 class="postLoginErrorMessage">#ERROR_MESSAGE#</h4>
+    <h4 className="postLoginErrorMessage">#ERROR_MESSAGE#</h4>
   </div>
-  <div id="post-login-error" class="overlay-bg hover" style="display: block;">
-    <div class="spin-result-dialog">
-      <div class="overlay-content">
+  <div id="post-login-error" className="overlay-bg hover" style="display: block;">
+    <div className="spin-result-dialog">
+      <div className="overlay-content">
         <a onclick="DisplayNoneById('post-login-error')">
-            <span class="ui-icon ui-icon-size-lg ui-close ui-close-primary theme-ex close-btn"></span>
+            <span className="ui-icon ui-icon-size-lg ui-close ui-close-primary theme-ex close-btn"></span>
         </a>
-        <div class="overlay-header">
-          <h4 class="postLoginErrorMessage">#ERROR_MESSAGE#</h4>
+        <div className="overlay-header">
+          <h4 className="postLoginErrorMessage">#ERROR_MESSAGE#</h4>
         </div>
-        <div class="footer clearfix">
-          <a class="btn-l3 btn prominent" href="{Poker or Casino Home Smartlink}">Back To {Poker | Casino}</a>
+        <div className="footer clearfix">
+          <a className="btn-l3 btn prominent" href="{Poker or Casino Home Smartlink}">Back To {Poker | Casino}</a>
         </div>
       </div>
     </div>
@@ -215,7 +215,7 @@ Ensure that the values for each keys are with the proper values. `1103` is updat
         <br>
         Once you've claimed your prize, return to this page to be able to claim another one.
         <br>
-        <a class="btn btn-primary mt-2" href="!!M2.Promo/offers/p/casino">
+        <a className="btn btn-primary mt-2" href="!!M2.Promo/offers/p/casino">
         Claim here
         </a>
         ```

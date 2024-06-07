@@ -73,7 +73,7 @@ export default function DocItem(props) {
               </h5>
               {contributors.length ? (
                 <div className="mb-6">
-                  <div class='divider divider--contributor text-start'><span class='divider__inner'>Github</span></div>
+                  <div className='divider divider--contributor text-start'><span className='divider__inner'>Github</span></div>
                   <div className="flex flex-col gap-2 mt-5">
                     {contributors.map(({ name, avatar }, index) => {
                       return <AuthorBadge name={name} avatar={avatar} key={index} />;
@@ -83,7 +83,7 @@ export default function DocItem(props) {
               ) : null}
               {MDXComponent.frontMatter.contributors ?.length ? (
                 <div className="mb-6">
-                  <div class='divider divider--contributor text-start'><span class='divider__inner'>Members</span></div>
+                  <div className='divider divider--contributor text-start'><span className='divider__inner'>Members</span></div>
                   <div className="flex flex-col gap-2 mt-5">
                     {MDXComponent.frontMatter.contributors.map((contributor, index) => {
                       return <AuthorBadge name={contributor} key={index} />;

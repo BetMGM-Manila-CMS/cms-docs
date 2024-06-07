@@ -12,9 +12,6 @@ function transformImgClassName(className) {
   return clsx(className, styles.img);
 }
 export default function MDXImg(props) {
-  console.log(props.src)
-
-
   const {
     siteConfig,
   } = useDocusaurusContext();

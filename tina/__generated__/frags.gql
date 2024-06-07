@@ -204,6 +204,7 @@ fragment QuicklinkParts on Quicklink {
       __typename
       ... on QuicklinkQuickLinksGroupLinksQuickLink {
         label
+        brand
         url
       }
       ... on QuicklinkQuickLinksGroupLinksSubGroup {
@@ -212,6 +213,7 @@ fragment QuicklinkParts on Quicklink {
           __typename
           ... on QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink {
             label
+            brand
             url
           }
           ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup {
@@ -220,6 +222,7 @@ fragment QuicklinkParts on Quicklink {
               __typename
               ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink {
                 label
+                brand
                 url
               }
               ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup {
@@ -228,6 +231,7 @@ fragment QuicklinkParts on Quicklink {
                   __typename
                   ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink {
                     label
+                    brand
                     url
                   }
                 }

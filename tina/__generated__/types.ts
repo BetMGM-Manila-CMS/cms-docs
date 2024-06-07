@@ -704,24 +704,28 @@ export type SidebarConnection = Connection & {
 export type QuicklinkQuickLinksGroupLinksQuickLink = {
   __typename?: 'QuicklinkQuickLinksGroupLinksQuickLink';
   label: Scalars['String']['output'];
+  brand?: Maybe<Scalars['String']['output']>;
   url: Scalars['String']['output'];
 };
 
 export type QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink = {
   __typename?: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink';
   label: Scalars['String']['output'];
+  brand?: Maybe<Scalars['String']['output']>;
   url: Scalars['String']['output'];
 };
 
 export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink = {
   __typename?: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink';
   label: Scalars['String']['output'];
+  brand?: Maybe<Scalars['String']['output']>;
   url: Scalars['String']['output'];
 };
 
 export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink = {
   __typename?: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink';
   label: Scalars['String']['output'];
+  brand?: Maybe<Scalars['String']['output']>;
   url: Scalars['String']['output'];
 };
 
@@ -767,21 +771,25 @@ export type Quicklink = Node & Document & {
 
 export type QuicklinkQuickLinksGroupLinksQuickLinkFilter = {
   label?: InputMaybe<StringFilter>;
+  brand?: InputMaybe<StringFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
 export type QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkFilter = {
   label?: InputMaybe<StringFilter>;
+  brand?: InputMaybe<StringFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
 export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter = {
   label?: InputMaybe<StringFilter>;
+  brand?: InputMaybe<StringFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
 export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkFilter = {
   label?: InputMaybe<StringFilter>;
+  brand?: InputMaybe<StringFilter>;
   url?: InputMaybe<StringFilter>;
 };
 
@@ -1038,21 +1046,25 @@ export type SidebarMutation = {
 
 export type QuicklinkQuickLinksGroupLinksQuickLinkMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
+  brand?: InputMaybe<Scalars['String']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLinkMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
+  brand?: InputMaybe<Scalars['String']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
+  brand?: InputMaybe<Scalars['String']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLinkMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
+  brand?: InputMaybe<Scalars['String']['input']>;
   url?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1103,7 +1115,7 @@ export type DocPartsFragment = { __typename: 'Doc', title: string, body?: any | 
 
 export type SidebarPartsFragment = { __typename: 'Sidebar', _warning?: string | null, label: string, items?: Array<{ __typename: 'SidebarItems', label: string, items?: Array<{ __typename: 'SidebarItemsItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsLink', title: string, href: string } | { __typename: 'SidebarItemsItemsDivider', title: string } | null> | null } | null> | null };
 
-export type QuicklinkPartsFragment = { __typename: 'Quicklink', quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null };
+export type QuicklinkPartsFragment = { __typename: 'Quicklink', quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null };
 
 export type DocQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1148,7 +1160,7 @@ export type QuicklinkQueryVariables = Exact<{
 }>;
 
 
-export type QuicklinkQuery = { __typename?: 'Query', quicklink: { __typename: 'Quicklink', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null } };
+export type QuicklinkQuery = { __typename?: 'Query', quicklink: { __typename: 'Quicklink', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null } };
 
 export type QuicklinkConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1160,7 +1172,7 @@ export type QuicklinkConnectionQueryVariables = Exact<{
 }>;
 
 
-export type QuicklinkConnectionQuery = { __typename?: 'Query', quicklinkConnection: { __typename?: 'QuicklinkConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'QuicklinkConnectionEdges', cursor: string, node?: { __typename: 'Quicklink', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null } | null } | null> | null } };
+export type QuicklinkConnectionQuery = { __typename?: 'Query', quicklinkConnection: { __typename?: 'QuicklinkConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'QuicklinkConnectionEdges', cursor: string, node?: { __typename: 'Quicklink', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null } | null } | null> | null } };
 
 export const DocPartsFragmentDoc = gql`
     fragment DocParts on Doc {
@@ -1371,6 +1383,7 @@ export const QuicklinkPartsFragmentDoc = gql`
       __typename
       ... on QuicklinkQuickLinksGroupLinksQuickLink {
         label
+        brand
         url
       }
       ... on QuicklinkQuickLinksGroupLinksSubGroup {
@@ -1379,6 +1392,7 @@ export const QuicklinkPartsFragmentDoc = gql`
           __typename
           ... on QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink {
             label
+            brand
             url
           }
           ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup {
@@ -1387,6 +1401,7 @@ export const QuicklinkPartsFragmentDoc = gql`
               __typename
               ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink {
                 label
+                brand
                 url
               }
               ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup {
@@ -1395,6 +1410,7 @@ export const QuicklinkPartsFragmentDoc = gql`
                   __typename
                   ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink {
                     label
+                    brand
                     url
                   }
                 }
