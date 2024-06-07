@@ -82,7 +82,7 @@ const getItem = (item) => {
 
   if (type === "divider") {
     itemProps.type = 'html'
-    itemProps.value = `<div className='divider'><span className='divider__inner'>${item.title}</div>`
+    itemProps.value = `<div class='divider'><span class='divider__inner'>${item.title}</div>`
     itemProps.defaultStyle = true
   }
 
