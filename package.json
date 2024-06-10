@@ -47,7 +47,7 @@
     "@docusaurus/types": "3.0.1",
     "@tinacms/cli": "^1.5.39",
     "@types/node": "^20.11.14",
-    "daisyui": "^4.4.24"
+    "daisyui": "^4.12.2"
   },
   "browserslist": {
     "production": [

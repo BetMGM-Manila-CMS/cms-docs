@@ -40,6 +40,11 @@ const config = {
     cloudinaryCloudName: process.env.CLOUDINARY_CLOUD_NAME
   },
 
+  scripts: [{
+    src: './node_modules/flowbite/dist/flowbite.min.js',
+    async: true
+  }],
+
   presets: [
     [
       "classic",
@@ -66,6 +71,7 @@ const config = {
             "./src/css/tailwind/preflight.css",
             "./src/css/custom.css",
           ],
+          
         },
       }),
     ],
