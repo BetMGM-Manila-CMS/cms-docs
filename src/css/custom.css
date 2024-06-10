@@ -30,6 +30,10 @@
 }
 
 /* global styles */
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   margin-bottom: 1rem;
 }

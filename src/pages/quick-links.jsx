@@ -9,6 +9,8 @@ import styles from "./index.module.css";
 import quickLinksData from "@site/config/quicklink/index.json"
 import { enableMapSet } from "immer";
 
+const getLabelId = (label) => label.replaceAll(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').toLowerCase().replaceAll('  ', ' ').replaceAll(' ', '-')
+
 const QuickLinkIcon = ({ brand }) => {
     const icons = {
         betmgm: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg",
@@ -36,14 +38,15 @@ const QuickLinkLabel = ({ depth, label }) => {
 };
 
 const QuickLinksList = ({ quickLinks, depth = 0 }) => {
-    console.log(quickLinks, depth)
+    // console.log(quickLinks, depth)
     return (
         <>
             {
                 quickLinks ? quickLinks.map((quickLink, index) => {
                     return (
                         <>
-                            <div className="max-w-screen-md" key={index}>
+                            <div className="max-w-screen-md" key={index} >
+                                <div className="relative top-[-60px] invisible" id={getLabelId(quickLink.label)} />
                                 {
                                     quickLink._template !== 'quickLink' ?
                                         <QuickLinkLabel depth={depth} label={quickLink.label} />
@@ -82,6 +85,27 @@ const QuickLinksList = ({ quickLinks, depth = 0 }) => {
     )
 }
 
+const JumpLinks = ({quickLinks}) => {
+    return (
+        <>
+            {
+                quickLinks ? quickLinks.map((quickLink, index) => {
+                    return (
+                        <>
+                            {quickLink._template !== 'quickLink' ?
+                                <a href={`#${getLabelId(quickLink.label)}`} className="border-[1px] border-white rounded-full px-3 py-1 text-white hover:border-primary transition-colors">{quickLink.label}</a>
+                            : null}
+                            {quickLink.links ? <JumpLinks quickLinks={quickLink.links} /> : null}
+                        </>
+                    )
+                })
+                    : null
+            }
+            
+        </>
+    )
+}
+
 export default function () {
     const { siteConfig } = useDocusaurusContext();
 
@@ -106,7 +130,13 @@ export default function () {
                     <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white">
                         Collection of frequently used Sitecore links, tools, and previews
                     </p>
+
+                    <div className="flex flex-wrap justify-center gap-2">
+                        {/* <div className="border-[1px] border-white rounded-full px-3 py-1">Sitecore</div> */}
+                        <JumpLinks quickLinks={quickLinks} />
+                    </div>
                 </div>
+
             </section>
 
             <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
