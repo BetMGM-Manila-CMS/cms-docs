@@ -13,12 +13,12 @@ const QuickLinkIcon = ({ brand }) => {
     const icons = {
         betmgm: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg",
         borgata: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729426/svg/brands/borgata_ms2oh6.svg",
-        partypoker: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729430/svg/brands/partycasino_ziqhts.svg",
-        partycasino: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729434/svg/brands/partypoker_zm9fse.svg",
+        partycasino: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729430/svg/brands/partycasino_ziqhts.svg",
+        partypoker: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729434/svg/brands/partypoker_zm9fse.svg",
         wof: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729438/svg/brands/wof_zglu4s.svg",
     }
 
-    return icons[brand] ? <img className="w-5 h-5 p-0 m-0" src={icons[brand]} /> : null
+    return icons[brand] ? <img className="w-7 h-7 p-0 m-0" src={icons[brand]} /> : null
 }
 
 const QuickLinkLabel = ({ depth, label }) => {
@@ -49,18 +49,19 @@ const QuickLinksList = ({ quickLinks, depth = 0 }) => {
                                         <QuickLinkLabel depth={depth} label={quickLink.label} />
                                         : null
                                 }
-                                {quickLink.links ? <QuickLinksList quickLinks={quickLink.links} depth={depth + 1} /> : null}
                                 {
                                     quickLink.links && quickLink._template ?
                                         <>
-                                            <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-4 md:space-y-0 mb-4">
+                                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
                                                 {
                                                     quickLink.links.map((link, index) => {
                                                         return link._template === 'quickLink' ?
-                                                            <Link to="/" key={index}>
-                                                                <div className="flex items-center p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-neutral-800" role="alert">
+                                                            <Link to={link.url} target="_blank" key={index}>
+                                                                <div className="flex items-center p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-neutral-800 outline-offset-2 hover:outline-1 hover:outline outline-primary" role="alert">
                                                                     {link.brand ? <QuickLinkIcon brand={link.brand} /> : null}
-                                                                    <div className="ps-4 text-sm font-normal">{link.label}</div>
+                                                                    <p className=" ps-4 text-sm font-normal text-ellipsis overflow-hidden m-0 line-clamp-2">
+                                                                        {link.label}
+                                                                    </p>
                                                                 </div>
                                                             </Link>
                                                             : null
@@ -70,6 +71,7 @@ const QuickLinksList = ({ quickLinks, depth = 0 }) => {
                                         </>
                                         : null
                                 }
+                                {quickLink.links ? <QuickLinksList quickLinks={quickLink.links} depth={depth + 1} /> : null}
                             </div>
                         </>
                     )
