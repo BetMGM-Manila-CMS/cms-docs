@@ -3,6 +3,9 @@ import Layout from "@theme/Layout";
 
 import Heading from "@theme/Heading";
 import Link from "@docusaurus/Link";
+import { useLocation } from '@docusaurus/router';
+import ErrorBoundary from '@docusaurus/ErrorBoundary';
+
 import clsx from "clsx";
 import styles from "./index.module.css";
 
@@ -38,7 +41,6 @@ const QuickLinkLabel = ({ depth, label }) => {
 };
 
 const QuickLinksList = ({ quickLinks, depth = 0 }) => {
-    // console.log(quickLinks, depth)
     return (
         <>
             {
@@ -60,7 +62,7 @@ const QuickLinksList = ({ quickLinks, depth = 0 }) => {
                                                     quickLink.links.map((link, index) => {
                                                         return link._template === 'quickLink' ?
                                                             <Link to={link.url} target="_blank" key={index}>
-                                                                <div className="flex items-center p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-neutral-800 outline-offset-2 hover:outline-1 hover:outline outline-primary" role="alert">
+                                                                <div className="flex items-center p-4 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-neutral-800 outline-offset-2 hover:outline-1 hover:outline outline-primary h-full" role="alert">
                                                                     {link.brand ? <QuickLinkIcon brand={link.brand} /> : null}
                                                                     <p className=" ps-4 text-sm font-normal text-ellipsis overflow-hidden m-0 line-clamp-2">
                                                                         {link.label}
@@ -85,7 +87,7 @@ const QuickLinksList = ({ quickLinks, depth = 0 }) => {
     )
 }
 
-const JumpLinks = ({quickLinks}) => {
+const JumpLinks = ({ quickLinks }) => {
     return (
         <>
             {
@@ -94,14 +96,14 @@ const JumpLinks = ({quickLinks}) => {
                         <>
                             {quickLink._template !== 'quickLink' ?
                                 <a href={`#${getLabelId(quickLink.label)}`} className="border-[1px] border-white rounded-full px-3 py-1 text-white hover:border-primary transition-colors">{quickLink.label}</a>
-                            : null}
+                                : null}
                             {quickLink.links ? <JumpLinks quickLinks={quickLink.links} /> : null}
                         </>
                     )
                 })
                     : null
             }
-            
+
         </>
     )
 }
@@ -109,39 +111,91 @@ const JumpLinks = ({quickLinks}) => {
 export default function () {
     const { siteConfig } = useDocusaurusContext();
 
-    const quickLinks = quickLinksData.quickLinksGroup
+    const location = useLocation();
 
-    console.log(quickLinks)
+    const params = location.search ? location.search.replace('?', '').split('&').reduce((params, param) => {
+        const [key, value] = param.split("=")
+        params[key] = value
+        return params
+    }, {}) : {}
+
+    const { group } = params
+    const quickLinks = group ? quickLinksData.quickLinksGroup.filter(data => data.label.toLowerCase() === group) : quickLinksData.quickLinksGroup
+
     return (
         <Layout title="Quick Links" description="Collection of frequently used Sitecore links, tools, and previews">
-            <section
-                style={{
-                    backgroundImage: `url(https://res.cloudinary.com/dlfu36fiw/image/upload/v1717638160/hero-bg_mkts99.png)`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundAttachment: "fixed"
-                }}
-                className="bg-white dark:bg-[#333333] bg-cover bg-blend-multiply bg-fixed"
-            >
-                <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-                    <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-primary">
-                        Quick Links
-                    </h1>
-                    <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white">
-                        Collection of frequently used Sitecore links, tools, and previews
-                    </p>
+            {
+                group ?
+                    <>
+                        <section
+                            style={{
+                                backgroundImage: `url(https://res.cloudinary.com/dlfu36fiw/image/upload/v1717638160/hero-bg_mkts99.png)`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundAttachment: "fixed"
+                            }}
+                            className="bg-white dark:bg-[#333333] bg-cover bg-blend-multiply bg-fixed"
+                        >
+                            <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+                                <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-primary">
+                                    {group[0].toUpperCase() + group.slice(1)} Quick Links
+                                </h1>
+                                <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white">
+                                    Collection of frequently used Sitecore links, tools, and previews
+                                </p>
 
-                    <div className="flex flex-wrap justify-center gap-2">
-                        {/* <div className="border-[1px] border-white rounded-full px-3 py-1">Sitecore</div> */}
-                        <JumpLinks quickLinks={quickLinks} />
-                    </div>
-                </div>
+                                <div className="flex flex-wrap justify-center gap-2">
+                                    <JumpLinks quickLinks={quickLinks} />
+                                </div>
+                            </div>
 
-            </section>
+                        </section>
 
-            <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-                <QuickLinksList quickLinks={quickLinks} />
-            </section>
+                        <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+                            <QuickLinksList quickLinks={quickLinks} />
+                        </section>
+                    </> :
+                    <>
+                        <section
+                            style={{
+                                backgroundImage: `url(https://res.cloudinary.com/dlfu36fiw/image/upload/v1717638160/hero-bg_mkts99.png)`,
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                                backgroundAttachment: "fixed"
+                            }}
+                            className="bg-white dark:bg-[#333333] bg-cover bg-blend-multiply bg-fixed"
+                        >
+                            <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+                                <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-primary">
+                                    Quick Links Select
+                                </h1>
+
+                                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Dropdown button <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                                </button>
+
+                                <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                                    <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                        <li>
+                                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </section>
+                    </>
+            }
         </Layout>
-    );
+    )
 }
