@@ -95,7 +95,7 @@ const JumpLinks = ({ quickLinks }) => {
                     return (
                         <>
                             {quickLink._template !== 'quickLink' ?
-                                <a href={`#${getLabelId(quickLink.label)}`} className="border-[1px] border-white rounded-full px-3 py-1 text-white hover:border-primary transition-colors">{quickLink.label}</a>
+                                <a href={`#${getLabelId(quickLink.label)}`} key={index} className="border-[1px] border-white rounded-full px-3 py-1 text-white hover:border-primary transition-colors hover:bg-gray-100 hover:dark:bg-[transparent]">{quickLink.label}</a>
                                 : null}
                             {quickLink.links ? <JumpLinks quickLinks={quickLink.links} /> : null}
                         </>
@@ -120,11 +120,53 @@ export default function () {
     }, {}) : {}
 
     const { group } = params
-    const quickLinks = group ? quickLinksData.quickLinksGroup.filter(data => data.label.toLowerCase() === group) : quickLinksData.quickLinksGroup
+    const quickLinks = group ? quickLinksData.quickLinksGroup.filter(data => data.label.toLowerCase() === group) : [quickLinksData.quickLinksGroup[0]]
 
     return (
         <Layout title="Quick Links" description="Collection of frequently used Sitecore links, tools, and previews">
-            {
+            <section
+                style={{
+                    backgroundImage: `url(https://res.cloudinary.com/dlfu36fiw/image/upload/v1717638160/hero-bg_mkts99.png)`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundAttachment: "fixed"
+                }}
+                className="bg-white dark:bg-[#333333] bg-cover bg-blend-multiply bg-fixed"
+            >
+                <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+
+                    <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-primary text-white inline-flex">
+                        <details className="dropdown dropdown-start tracking-normal inline-flex self-end mr-2 md:mr-4">
+                            <summary className="btn btn-sm md:btn-md bg-primary text-white hover:bg-gray-600">
+                                {quickLinks[0].label[0].toUpperCase() + quickLinks[0].label.slice(1)} 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                </svg>
+                            </summary>
+                            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                                {
+                                    quickLinksData.quickLinksGroup.map((quickLink, index) => <li key={index}><Link to={`/quick-links?group=${quickLink.label.toLowerCase().replaceAll(' ', '-')}`}>{quickLink.label}</Link></li>)
+                                }
+                            </ul>
+                        </details>
+                        Quick Links
+                    </h1>
+                    <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white">
+                        Collection of frequently used Sitecore links, tools, and previews
+                    </p>
+                    
+                    <div className="flex flex-wrap justify-center gap-2">
+                        <JumpLinks quickLinks={quickLinks} />
+                    </div>
+                </div>
+
+            </section>
+
+            <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+                
+                <QuickLinksList quickLinks={quickLinks} />
+            </section>
+            {/* {
                 group ?
                     <>
                         <section
@@ -182,7 +224,7 @@ export default function () {
                             </div>
                         </section>
                     </>
-            }
+            } */}
         </Layout>
     )
 }
