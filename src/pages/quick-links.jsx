@@ -136,16 +136,16 @@ export default function () {
                 <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
 
                     <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-primary text-white inline-flex">
-                        <details className="dropdown dropdown-start tracking-normal inline-flex self-end mr-2 md:mr-4">
-                            <summary className="btn btn-sm md:btn-md bg-primary text-white hover:bg-gray-600">
+                        <details className="daisy-dropdown dropdown-start tracking-normal inline-flex self-end mr-2 md:mr-4">
+                            <summary className="daisy-btn daisy-btn-sm md:daisy-btn-md bg-primary text-white hover:bg-gray-600">
                                 {quickLinks[0].label[0].toUpperCase() + quickLinks[0].label.slice(1)} 
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                     <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                 </svg>
                             </summary>
-                            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                            <ul className="p-2 daisy-shadow daisy-menu daisy-dropdown-content z-[1] bg-base-100 rounded-box w-52 mt-2 shadow">
                                 {
-                                    quickLinksData.quickLinksGroup.map((quickLink, index) => <li key={index}><Link to={`/quick-links?group=${quickLink.label.toLowerCase().replaceAll(' ', '-')}`}>{quickLink.label}</Link></li>)
+                                    quickLinksData.quickLinksGroup.map((quickLink, index) => <li className="font-normal text-white" key={index}><Link to={`/quick-links?group=${quickLink.label.toLowerCase().replaceAll(' ', '-')}`}>{quickLink.label}</Link></li>)
                                 }
                             </ul>
                         </details>
