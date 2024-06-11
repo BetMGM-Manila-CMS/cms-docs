@@ -17,7 +17,9 @@ import {
   GameLinks,
   TinaTabs,
   Col,
-  Row
+  Row,
+  BrowserWindow,
+  StyleGuide
 } from "@site/src/components"
 
 export default {
@@ -39,4 +41,6 @@ export default {
   IdealImage: Image,
   Col: Col,
   Row: Row,
+  BrowserWindow: BrowserWindow,
+  StyleGuide: StyleGuide
 };

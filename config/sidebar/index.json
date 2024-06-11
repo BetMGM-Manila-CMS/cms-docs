@@ -286,6 +286,11 @@
       "label": "Casino",
       "items": [
         {
+          "document": "docs/builds/casino-style-guide.mdx",
+          "label": "Style Guide",
+          "_template": "doc"
+        },
+        {
           "title": "Components",
           "_template": "divider"
         },
