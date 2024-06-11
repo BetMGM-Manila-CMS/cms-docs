@@ -94,13 +94,43 @@ const config = {
         },
       },
       navbar: {
-        title: "BetMGM CMS Manila Hub",
+        title: "CMS Hub",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",
         },
         items: [
           {
+            position: 'left',
+            type: "docSidebar",
+            sidebarId: "casinoSidebar",
+            label: 'Casino',
+          },
+          {
+            position: 'left',
+            type: "docSidebar",
+            sidebarId: "pokerSidebar",
+            label: 'Poker',
+          },
+          {
+            position: 'left',
+            type: "docSidebar",
+            sidebarId: "sportsSidebar",
+            label: 'Sports',
+          },
+          {
+            position: 'left',
+            type: "docSidebar",
+            sidebarId: "guidesSidebar",
+            label: 'Guides',
+          },
+          /* {
+            position: 'left',
+            type: "docSidebar",
+            sidebarId: "buildsSidebar",
+            label: 'Checklists',
+          }, */
+          /* {
             type: "dropdown",
             label: "Documentation",
             position: "left",
@@ -121,7 +151,7 @@ const config = {
                 label: "Testing And Scheduling 🚧",
               },
             ]
-          },
+          }, */
           { to: "/quick-links", label: "Quick Links", position: "left" },
           /* { 
             type: "dropdown", 
@@ -132,7 +162,13 @@ const config = {
               label: quickLinks.label
             }))
           }, */
-          { to: "/team", label: "Team 🚧", position: "left" },
+          // { to: "/team", label: "Team 🚧", position: "left" },
+          /* {
+            position: 'left',
+            type: "docSidebar",
+            sidebarId: "buildsSidebar",
+            label: 'Announcements 📢',
+          }, */
           /* {
             href: 'https://coralracing-my.sharepoint.com/:x:/r/personal/emma_bulos_entaingroup_com/_layouts/15/Doc.aspx?sourcedoc=%7B287DEB61-B6DE-43C4-A5BC-620460666F3D%7D&file=Test%20Account%20Usernames.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1',
             position: 'left',
