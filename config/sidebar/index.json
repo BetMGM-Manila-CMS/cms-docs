@@ -286,6 +286,11 @@
       "label": "Casino",
       "items": [
         {
+          "document": "docs/builds/casino-style-guide.mdx",
+          "label": "Style Guide",
+          "_template": "doc"
+        },
+        {
           "title": "Components",
           "_template": "divider"
         },
@@ -322,6 +327,11 @@
     {
       "label": "Poker",
       "items": [
+        {
+          "document": "docs/builds/poker-style-guide.mdx",
+          "label": "Style Guide",
+          "_template": "doc"
+        },
         {
           "title": "Components",
           "_template": "divider"
@@ -381,6 +391,11 @@
     {
       "label": "Sports",
       "items": [
+        {
+          "document": "docs/builds/sports-style-guide.mdx",
+          "label": "Style Guide",
+          "_template": "doc"
+        },
         {
           "title": "Components",
           "_template": "divider"

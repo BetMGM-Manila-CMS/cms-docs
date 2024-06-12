@@ -8,9 +8,9 @@ export const Col = ({ children, ratio, sticky, className }) => {
     )
 }
 
-export const Row = ({ children }) => {
+export const Row = ({ children, className }) => {
     return (
-        <div className="doc-row flex flex-col lg:flex-row gap-4 mb-[1rem]">
+        <div className={`doc-row flex flex-col lg:flex-row gap-4 mb-[1rem] ${className}`}>
             {children}
         </div>
     )
