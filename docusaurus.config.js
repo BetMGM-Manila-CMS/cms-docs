@@ -72,7 +72,7 @@ const config = {
             "./src/css/tailwind/preflight.css",
             "./src/css/custom.css",
           ],
-          
+
         },
       }),
     ],
@@ -163,6 +163,7 @@ const config = {
             }))
           }, */
           // { to: "/team", label: "Team 🚧", position: "left" },
+          { to: "/updates", label: "Updates 📢", position: "left" },
           /* {
             position: 'left',
             type: "docSidebar",
@@ -269,7 +270,25 @@ const config = {
         steps: 2, // the max number of images generated between min and max (inclusive)
         disableInDev: false,
       },
-    ]
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        /**
+         * Required for any multi-instance plugin
+         */
+        id: 'updates',
+        /**
+         * URL route for the blog section of your site.
+         * *DO NOT* include a trailing slash.
+         */
+        routeBasePath: 'updates',
+        /**
+         * Path to data on filesystem relative to site dir.
+         */
+        path: './updates',
+      },
+    ],
   ],
 };
 

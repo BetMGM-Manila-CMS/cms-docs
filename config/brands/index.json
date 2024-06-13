@@ -1,0 +1,22 @@
+{
+    "betmgm": {
+        "label": "BetMGM",
+        "iconUrl": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg"
+    },
+    "borgata": {
+        "label": "Borgata",
+        "iconUrl": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729426/svg/brands/borgata_ms2oh6.svg"
+    },
+    "partycasino": {
+        "label": "PartyCasino",
+        "iconUrl": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729430/svg/brands/partycasino_ziqhts.svg"
+    },
+    "partypoker": {
+        "label": "partypoker",
+        "iconUrl": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729434/svg/brands/partypoker_zm9fse.svg"
+    },
+    "wof": {
+        "label": "WOF",
+        "iconUrl": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729438/svg/brands/wof_zglu4s.svg"
+    }
+}
