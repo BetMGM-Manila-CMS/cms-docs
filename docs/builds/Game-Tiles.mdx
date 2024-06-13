@@ -1,0 +1,209 @@
+---
+title: Game Tiles
+---
+
+# Game Tiles
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887465/builds/game-tiles/tb1vfskp7jqqjeewyirh.png)
+
+Game tiles are added to display a single or multiple games. It is often added in to terms and conditions and in the MPP description.
+
+{/*
+<Admonition type="tip" title="Game Tool">
+  Right now, we have the default website we can check for game links [here](https://casino.nj.betmgm.com/en/p/tools/smartlinks). Just update the URL to use the appropriate state and label for your use.
+
+  But this documentation has also its own, check our [game selector](#games-selector) below.
+</Admonition>
+*/}
+
+## Game Tile
+
+Typically, a game tile is a square image representing a game, which users can click to be able to play the game.
+
+```html
+<a href="{Launch Smartlink}">
+  <img 
+    alt="{Game Name}" 
+    src="{Game Image URL}" 
+    width="100" 
+    height="100" 
+    style="border: 5px solid #FFFFFF;" 
+  />
+</a>
+```
+
+Generally, there are two types of game tiles: a `Generic Game Tile` and a `Desktop and Mobile Game Tile`. The only difference between them is the Launch Smartlink, which contains the path to redirect the user to the game.
+
+<Admonition type="note" title="Smartlinks Page">
+  You can find the Launch Game Dropdown on the smartlinks page to get the Launch Smartlink for a game. Here's the link:
+  ```
+  https://casino.nj.betmgm.com/en/p/tools/smartlinks
+  ```
+  Update the URL for the smartlinks pages for all states and platforms (BetMGM, Borgata, PartyCasino, and Wheel Of Fortune) as needed.
+</Admonition>
+
+<Admonition type="tip" title="Check Game Tile">
+  To determine the game tile type, open two tabs of the smartlinks website and emulate mobile in one. If the links differ, use the `Desktop and Mobile Game Tile`; if the same, use the `Generic Game Tile`.
+
+  <Details summary="Checking the Smartlinks Page">
+    <Tabs>
+      <TabItem value="Generic Game Tile" label="Generic Game Tile">
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1716976802/builds/game-tiles/game-link-same_rffdot.jpg)
+      </TabItem>
+      <TabItem value="Desktop and Mobile Game Tile" label="Desktop and Mobile Game Tile">
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1716976798/builds/game-tiles/game-link-diff_q8hytp.jpg)
+      </TabItem>
+    </Tabs>
+  </Details>
+</Admonition>
+
+
+
+<Row>
+  <Col ratio={1}>
+  </Col>
+  <Col ratio={1}>
+  </Col>
+</Row>
+
+<Row>
+  <Col ratio={1} className="lg:max-w-[50%]">
+    ### Generic Game Tile
+
+    <table className="transparent-table ">
+      <tbody>
+        <tr>
+          <td className="w-screen">
+            Smartlink
+          </td>
+        </tr>
+        <tr>
+          <td className="p-0 *:!rounded-none ">
+            ```
+            !!M2.CasinoHome/launchng/{Launch Game Slug}
+            ```
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table className="transparent-table">
+      <tbody>
+        <tr>
+          <td className="p-0">
+            <div className="w-fit p-3 sticky left-0">Game Tile</div>
+          </td>
+        </tr>
+        <tr>
+          <td className="p-0 *:!rounded-none">
+            ```html
+              <a href="!!M2.CasinoHome/launchng/nyxabracardabra"> 
+                <img 
+                  alt="Abracardabra" 
+                  src="https://casinogames.nj.betmgm.com/htmllobby/images/newlmticons/square/nyxabracardabra.jpg" 
+                  width="100" 
+                  height="100" 
+                  style="border: 5px solid #FFFFFF;" 
+                />
+              </a>
+              ```
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="https://casino.nj.betmgm.com/en/games/launchng/nyxabracardabra" target="_blank" className="block"> 
+      <img 
+        alt="Abracardabra" 
+        src="https://casinogames.nj.betmgm.com/htmllobby/images/newlmticons/square/nyxabracardabra.jpg" 
+        width="100" 
+        height="100" 
+        style={{border: "5px solid #FFFFFF"}}
+      />
+    </a> 
+  </Col>
+  <Col ratio={1} className="lg:max-w-[50%]">
+    ### Desktop and Mobile Game Tile
+
+    <table className="transparent-table">
+      <tbody>
+        <tr>
+          <td>
+            Smartlink
+          </td>
+        </tr>
+        <tr>
+          <td className="p-0 *:!rounded-none">
+            ```
+            !!M2.Promo/launchmgc?gd={Desktop Launch Game Slug}&gm={Mobile Launch Game Slug}
+            ```
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table className="transparent-table">
+      <tbody>
+        <tr>
+          <td className="p-0">
+            <div className="w-fit p-3 sticky left-0">Game Tile</div>
+          </td>
+        </tr>
+        <tr>
+          <td className="p-0 *:!rounded-none">
+            ```html
+              <a href="!!M2.Promo/launchmgc?gd=eusmdaugustus&gm=eusmdaugustusmobile">
+                <img 
+                  alt="Augustus" 
+                  style="border: 5px solid #FFFFFF;" 
+                  src="https://casinogames.mi.betmgm.com/htmllobby/images/newlmticons/square/eusmdaugustus.jpg" 
+                  width="100" 
+                  height="100" 
+                />
+              </a>
+              ```
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="https://promo.nj.betmgm.com/en/promo/launchmgc?gd=eusmdaugustus&gm=eusmdaugustusmobile" target="_blank" className="block"> 
+        <img 
+          alt="Augustus" 
+          style="border: 5px solid #FFFFFF;" 
+          src="https://casinogames.mi.betmgm.com/htmllobby/images/newlmticons/square/eusmdaugustus.jpg" 
+          width="100" 
+          height="100" 
+        style={{border: "5px solid #FFFFFF"}}
+      />
+    </a> 
+  </Col>
+</Row>
+
+<Admonition type="info" title="Adding to Editor">
+  When adding the game tiles to editor use this layout.
+
+  ```html
+  <p>
+    <strong>Click Tiles Below To Play Eligible Games:</strong>
+  </p>
+  <p>
+      <!-- Place Game Tiles Here -->
+  </p>
+  ```
+
+  <Admonition type="note" title="Title">
+    Use `Click Tiles Below To Play Eligible Games:` for multiple games and `Click Tile Below To Play Eligible Game:` if only one game.
+  </Admonition>
+</Admonition>
+
+## Verify Game Tiles
+
+Use guide below to ensure that each game tile is correct, regardless of using the `Generic Game Tile` or the `Desktop and Mobile Game Tile`.
+- **Desktop**: redirects you to download a plugin that is required to play the game
+- **Mobile**: displays a prompt to download the app on mobile
+
+<Tabs>
+  <TabItem value="Desktop Tile" label="Desktop">
+    ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1717041218/builds/game-tiles/game-tile-verify-desktop_kadk0p.jpg)
+  </TabItem>
+  <TabItem value="Mobile Tile" label="Mobile">
+    ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1717041212/builds/game-tiles/game-tile-verify-mobile_j3zabl.jpg)
+  </TabItem>
+</Tabs>

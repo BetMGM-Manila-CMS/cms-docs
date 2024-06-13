@@ -1,0 +1,132 @@
+---
+last_update:
+  date: 03/06/2024
+  author: Emmanuel Borromeo
+  description: Desktop PLP Build
+  authors: Emmanuel Borromeo
+title: Desktop PLP
+---
+
+# Desktop PLP
+
+**Desktop PLP** is a carousel-like feature but takes up the whole screen of a desktop device.
+
+<img src="https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984968/builds/plp/desktop/sample_gwdc6g.png" className="mx-auto" />
+
+## Building desktop PLP
+
+<Admonition type="info" title="Sitecore Path">
+Content > Vanilla.desktop > brand/state > desktopPoker-v1.0 > Regional > Global > desktopPLP > desktopPLP-LIVE
+</Admonition>
+
+Go to the above Sitecore Path. Then do the following:
+
+### Step 1. Duplicate File
+
+1. Right-click the file you want to duplicate.
+2. Choose Copy To
+3. Remove the URL of your choosen File
+4. Click Copy
+5. Rename the file to your ticket's name
+
+### Step 2: Edit PokerPromotionData
+
+<table>
+  <tbody>
+    <tr>
+      <td>Title</td>
+      <td>Use Poker Tile Title</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984957/builds/plp/desktop/desktop_plp_title_yznigl.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>Description</td>
+      <td>Use Poker Tile Subtitle</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984941/builds/plp/desktop/desktop_plp_desc_ftr5rw.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>BackgroupImage</td>
+      <td>Asset with size 500 x 300</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984935/builds/plp/desktop/desktop_plp_bg_lnouuz.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>CTA</td>
+      <td>Insert the appropriate CTA, this is a CTA after Opt-In. In the <strong>data-purl</strong> insert the clean URL (use [https://www.urlencoder.org/](https://www.urlencoder.org/)).</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984938/builds/plp/desktop/desktop_plp_cta_dhqmnr.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>TermsAndConditions</td>
+      <td>If the promo has Opt-In CTA the Terms & Condition will have a smartlink to the Tourney Page, if not leave this empty</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984964/builds/plp/desktop/mobi_plp_tnc_m9z1z8.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>OptInRequired & OptInText</td>
+      <td>If the promo has Opt-In CTA, tick this and Inpit <strong>OPT IN</strong>. If not, untick this.</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984952/builds/plp/desktop/desktop_plp_opt_in_ffnmj2.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>ErrorCTA</td>
+      <td>In case the PAT ID is invalid this CTA will show up, either put the TourneyPage smartlink or PromoHub Smartlink. In the <strong>data-purl</strong> insert the clean URL (use [https://www.urlencoder.org/](https://www.urlencoder.org/)).</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984944/builds/plp/desktop/desktop_plp_error_cta_koujin.png)
+      </td>
+    </tr>
+
+    <tr>
+      <td>PromotionalId & Source</td>
+      <td>Insert here the PAT ID, and choose Promos. (Leave empty if non opt-in promo)</td>
+
+      <td>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984960/builds/plp/desktop/mobi_plp_promos_gk76o8.png)
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<Admonition type="tip" title="URL Cleaner">
+To clean URL use [https://www.urlencoder.org/](https://www.urlencoder.org/)
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714984675/builds/plp/mobile/url_cleaner_fg0alb.png)
+</Admonition>
+
+### Step 3: Filter & Publishing Date
+
+1. Insert your QA Filter under **Condition**
+
+```html
+QueryString.Get('qa') = 'manila'
+```
+
+1. Clear Publishing Date (for new builds)
+
+### Step 4: Screenshot your PLP
+
+Go to your sites plp preview page with your qa filter name, then look for your output.
+
+```html
+https://poker.nj.betmgm.com/en/clientplp?qa=manila
+```

@@ -5,6 +5,11 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --ifm-color-primary: #b7a26d;
   --ifm-color-primary-dark: #aa9766;
@@ -30,8 +35,16 @@
 }
 
 /* global styles */
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   margin-bottom: 1rem;
+}
+
+img[title="header-img"] {
+  width: 100%;
 }
 
 p {
@@ -44,11 +57,25 @@ li > img:first-of-type {
 
 /* custom styles */
 
+/* tables */
 td
-  .codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module {
+  .codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module, td .codeBlockContainer_src-theme-CodeBlock-Container-styles-module {
   margin-bottom: 0 !important;
 }
 
+td > *:last-child, th > *:last-child {
+  margin: 0 !important;
+}
+
+.table-code {
+  margin-bottom: 0 !important;
+}
+
+.selected-game-row {
+  background-color: var(--ifm-color-primary-darkest) !important;
+}
+
+/* sidebar */
 .divider {
   font-size: 0.6em;
   text-transform: uppercase;
@@ -57,6 +84,10 @@ td
   position: relative;
   overflow: hidden;
   color: var(--ifm-color-primary);
+}
+
+.divider--contributor {
+  padding-top: 0
 }
 
 .divider__inner {
@@ -78,7 +109,28 @@ td
   transform: translate(100%, -50%);
 }
 
-.wrap-code code {
+/* code */
+code {
   white-space: pre-wrap !important;
 }
 
+.doc-row img {
+  margin-bottom: 0;
+}
+
+.borderless-table, 
+.borderless-table tobdy, 
+.borderless-table tr, 
+.borderless-table th,
+.borderless-table td {
+  border: 0 !important;
+}
+
+.transparent-table tr {
+  background-color: transparent !important;
+} 
+
+.nospace-table td,
+.nospace-table th {
+  padding: 0 !important;
+}

@@ -15,7 +15,11 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui'),],
+  daisyui: {
+    prefix: "daisy-",
+    base: false
+  },
   corePlugins: {
     preflight: false,
   },

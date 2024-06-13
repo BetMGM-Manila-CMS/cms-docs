@@ -1,9 +1,3 @@
-fragment PostParts on Post {
-  __typename
-  title
-  body
-}
-
 fragment DocParts on Doc {
   __typename
   title
@@ -196,6 +190,55 @@ fragment SidebarParts on Sidebar {
       }
       ... on SidebarItemsItemsDivider {
         title
+      }
+    }
+  }
+}
+
+fragment QuicklinkParts on Quicklink {
+  __typename
+  quickLinksGroup {
+    __typename
+    label
+    links {
+      __typename
+      ... on QuicklinkQuickLinksGroupLinksQuickLink {
+        label
+        brand
+        url
+      }
+      ... on QuicklinkQuickLinksGroupLinksSubGroup {
+        label
+        links {
+          __typename
+          ... on QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink {
+            label
+            brand
+            url
+          }
+          ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup {
+            label
+            links {
+              __typename
+              ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink {
+                label
+                brand
+                url
+              }
+              ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup {
+                label
+                links {
+                  __typename
+                  ... on QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink {
+                    label
+                    brand
+                    url
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

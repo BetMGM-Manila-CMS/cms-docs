@@ -21,7 +21,7 @@ Navigate to the MPP directory:
 
 Duplicate the `mpp-template-manila` and then rename it to your `url`. Also rename the child component with your `url`.
 
-<img src="/img/builds/mpp/mpp_template.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887475/builds/mpp/x67k1mpo40skfgod9scc.png)
 
 ## Parent MPP
 
@@ -29,11 +29,11 @@ Click on "Edit rule", it opens the "Create Rule" box. Click on the highlighted t
 
 Below is the step by step illustration of what you'll see when navigating.
 
-<img src="/img/builds/mpp/mpp_parent.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887474/builds/mpp/naoovctllzpizx8mxm9u.png)
 
-<img className="w-[500]" src="/img/builds/mpp/mpp_rule.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887474/builds/mpp/j5e4ylmn4iyastr5iqaa.png)
 
-<img className="w-[500]" src="/img/builds/mpp/mpp_browse.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887473/builds/mpp/ybr4krjjiunnrt1hs83i.png)
 
 ## Child MPP
 
@@ -41,109 +41,79 @@ Fill the required fields as instructed.
 
 ### Required Fields
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>
+      Field
+    </TinaTableCell>
 
-  <TinaTableRow items={[{ label: "PromotionTitle " }, { label: "Promohub H1" }]} />
+    <TinaTableCell>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
 
-  <TinaTableRow items={[{ label: "Image" }, { label: "Media URL link" }]} />
+  <TinaTableRow>
+    <TinaTableCell>
+      PromotionTitle
+    </TinaTableCell>
 
-  <TinaTableRow
-    items={[
-      { label: "DetailedDescription" },
-      { label: "Promo Description" }
-    ]}
-  />
+    <TinaTableCell>
+      Promohub H1
+    </TinaTableCell>
+  </TinaTableRow>
 
-  <TinaTableRow items={[{ label: "Terms And Conditions" }, { label: "TnCs" }]} />
+  <TinaTableRow>
+    <TinaTableCell>
+      Image
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Media URL link
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      DetailedDescription
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Promo Description
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      Terms And Conditions
+    </TinaTableCell>
+
+    <TinaTableCell>
+      TnCs
+    </TinaTableCell>
+  </TinaTableRow>
 </TinaTable>
 
 ### DetailedDescription
 
 Click the "Edit HTML" to open the HTML Editor.
 
-<img className="w-[500] mb-4" src="/img/builds/mpp/mpp_desc.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887473/builds/mpp/sahullwz0hmehtunpfrs.png)
 
 First `<p>` tag, replace the text with the `Promotion Description`.
 
-Second `<p>` tag, [CTA](../builds/cta) will depend on the ticket.
+Second `<p>` tag, [CTA](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) will depend on the ticket.
 
 <Admonition type="info" title="CTA">
-  Check [CTA Docs Page](../builds/cta) for an exhaustive list of options.
+  Check [CTA Docs Page](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for an exhaustive list of options.
 </Admonition>
 
 #### How It Works
 
-Place each content of the `How To Participate` in the `TnCs`. Make sure they are enclosed in `<ul>` `<li>` tags. Refer to [Documents Page](../builds/documents) for additional information.
+Place each content of the `How To Participate` in the `T&Cs`. Make sure they are enclosed in `<ul>` `<li>` tags. Refer to [Documents Page](../builds/documents) for additional information.
 
 #### Eligible Games
 
-Open the `Smart Links Tool` for your state and brand to search for the eligible games. Copy the game URL and replace in the text:
-
-<img src="/img/builds/mpp/mpp_games.png" className="mb-4" />
-
-```
-<div className="game-thumb d-inline">
-<a href="!!M2.Casino/games/launchng/[url]"><img alt="[Game Name]" src="https://casinogames.nj.betmgm.com/htmllobby/images/newlmticons/square/[url].jpg" width="100" height="100" style="border:5px solid #FFFFFF;" /></a>
-</div>
-```
-
-<Admonition type="note" title="Updating Game Tile">
-   Change the link's state & brand depending on your ticket.
-</Admonition>
-
-If the game is NETENT or DGC, add attribute to `<div>` tags:
-
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Device", header: true },
-      { label: "Attribute", header: true }
-    ]}
-  />
-
-  <TinaTableRow
-    items={[
-      { label: "Desktop" },
-      {
-        label: 'data-content-filter="NOT Device.IsMobile AND NOT Device.IsTablet"',
-        code: true,
-        style: "code"
-      }
-    ]}
-  />
-
-  <TinaTableRow
-    items={[
-      { label: "Mobile" },
-      {
-        label: 'data-content-filter="Device.IsMobile OR Device.IsTablet"',
-        code: true,
-        style: "code"
-      }
-    ]}
-  />
-</TinaTable>
-
-For mobile versions, append the following to url:
-
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Game", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
-
-  <TinaTableRow items={[{ label: "DGC" }, { label: "mobile" }]} />
-
-  <TinaTableRow items={[{ label: "NETENT" }, { label: "touch" }]} />
-</TinaTable>
+Go to [Game Tiles](./Game-Tiles) section for a detailed guide.
 
 ### Terms And Conditions
 

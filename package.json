@@ -17,27 +17,37 @@
     "tina-start": "tinacms build && docusaurus start"
   },
   "dependencies": {
-    "@docusaurus/core": "3.0.1",
+    "@cloudinary/react": "^1.13.0",
+    "@cloudinary/url-gen": "^1.19.0",
+    "@docusaurus/core": "^3.0.1",
+    "@docusaurus/plugin-ideal-image": "^3.0.1",
     "@docusaurus/preset-classic": "3.0.1",
-    "@docusaurus/theme-search-algolia": "^3.0.1",
+    "@docusaurus/theme-search-algolia": "^3.2.1",
     "@mdx-js/react": "^3.0.0",
+    "@tinacms/auth": "^1.0.4",
     "autoprefixer": "^10.4.16",
     "axios": "^1.6.5",
     "clsx": "^2.0.0",
+    "docusaurus-lunr-search": "^3.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "flowbite": "^2.3.0",
+    "next-tinacms-cloudinary": "^4.4.7",
     "postcss": "^8.4.32",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-dynamic-virtual-scroll": "^1.4.0",
+    "serverless-http": "^3.2.0",
     "tailwindcss": "^3.4.0",
-    "tinacms": "^1.5.28"
+    "tinacms": "^1.5.30"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.0.1",
     "@docusaurus/types": "3.0.1",
     "@tinacms/cli": "^1.5.39",
     "@types/node": "^20.11.14",
-    "daisyui": "^4.4.24"
+    "daisyui": "^4.12.2"
   },
   "browserslist": {
     "production": [

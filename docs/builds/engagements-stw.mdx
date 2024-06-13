@@ -1,83 +1,127 @@
 ---
-title: Spin The Wheel Layout
 last_update:
   date: 1/24/2024
   author: JM Antonio
   description: Added images
 authors: JM Antonio
+title: Spin The Wheel Layout
 ---
 
-import sample from "../../static/img/builds/stw/sample.png";
-import bspin from "../../static/img/builds/stw/bspin.png";
-import content from "../../static/img/builds/stw/content.png";
-import marker from "../../static/img/builds/stw/marker.png";
-import message from "../../static/img/builds/stw/message.png";
-import pageassets from "../../static/img/builds/stw/pageassets.png";
-import postlogin from "../../static/img/builds/stw/postlogin.png";
-import prelogin from "../../static/img/builds/stw/prelogin.png";
-import spinbutton from "../../static/img/builds/stw/spinbutton.png";
-import wheelbackground from "../../static/img/builds/stw/wheelbackground.png";
-
 # Spin The Wheel
+
 Spin The Wheel is an Engagement tool for players to play and win prizes.
 
-<img width="900" src={sample} />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887578/builds/stw/k3lsdnhfs2g0yprea4nv.png)
 
 ## The Layout
+
 First, we must build the layout for our STW Engagement tool.
 
-:::info[SiteCore Path]
-<strong>Layout:</strong><br/>
-Content > Vanilla.Mobile > State/Brand > Promo > BspinLayouts<br/>
-<strong>CSS asset:</strong><br/>
-Content > Vanilla.Mobile > State/Brand > Promo > SpinTheWheel > PageAssets
-:::
+<Admonition type="info" title="SiteCore Path">
+  **Layout:**
+  Content > Vanilla.Mobile > State/Brand > Promo > BspinLayouts
 
-Duplicate any of the Layouts, and rename it like in the existing layouts.<br/>
+  **CSS asset:**
+  Content > Vanilla.Mobile > State/Brand > Promo > SpinTheWheel > PageAssets
+</Admonition>
+
+Duplicate any of the Layouts, and rename it like in the existing layouts.
+
 You also need to create it's own CSS asset, just duplicate existing css and rename as such.
 
 ### Image Fields
-| Field | Value |
-| --- | --------- |
-| BSpinBackground | Background 2048x800 |
-| Marker | Ticker |
-| SpinButton | Wheel Center |
-| WheelBackground(s) | Wheel (without icons) |
 
-<img width="900" src={bspin} />
-<img src={marker} />
-<img src={spinbutton} />
-<img src={wheelbackground} />
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>
+      Field
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      BSpinBackground
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Background 2048x800
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      Marker
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Ticker
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      SpinButton
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Wheel Center
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      WheelBackground(s)
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Wheel (without icons)
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887574/builds/stw/ykpjjxrcj1va9atzetol.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887575/builds/stw/haqanz2xpyrwjygp84qn.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887512/builds/stw/adefyl5vmzuy7yifhewc.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887513/builds/stw/xnwitpgw9o80vhqekbcq.png)
 
 ### PageAssets
+
 Replace the selected CSS asset with your newly created asset.
 
-<img width="900" src={pageassets} />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887511/builds/stw/emon66atrvpflvq5lags.png)
 
 ### Content
-Fill the <strong>PageHeaderText</strong> with Promohub H1.
 
-<img width="900" src={content} /><br/>
+Fill the **PageHeaderText** with Promohub H1.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887511/builds/stw/jhvpx6qdbpknhrwfeagh.png)
 
 Change CTA depending on your ticket if Casino/Poker.
 
-<img width="900" src={message} />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887511/builds/stw/gh5qxcr9z4nutp3ufghn.png)
 
-### Overlay 
-<strong>PreLoginPage</strong>: replace the img src link with the media link for Wheel with icons and the button color depending on your Brand.
+### Overlay
+
+**PreLoginPage**: replace the img src link with the media link for Wheel with icons and the button color depending on your Brand.
 
 Replace place this line in the html code.
 
 ```html
-<img alt="" className="wheel-static-img" src="{insert img link here}" />
+<img alt="" class="wheel-static-img" src="{insert img link here}" />
 ```
-<img width="900" src={prelogin} /><br/>
 
-<strong>PostLoginErrorPage</strong>: replace the button link depending on your ticket if Casino/Poker.
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887513/builds/stw/fri5wbtw7igwvgaweraj.png)
 
-<img width="900" src={postlogin} />
+**PostLoginErrorPage**: replace the button link depending on your ticket if Casino/Poker.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887512/builds/stw/jd1byupxpbleiudqqhpe.png)
 
 ## Spin The Wheel PAT
-:::info
-For updating the Test Spin The Wheel PAT, go to this page for reference: [Spin The Wheel PAT](./pat-eds-stw).
-:::
+
+<Admonition type="info" title="Info">
+  For updating the Test Spin The Wheel PAT, go to this page for reference: [Spin The Wheel PAT](./pat-eds-stw).
+</Admonition>

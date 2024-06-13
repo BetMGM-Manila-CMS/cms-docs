@@ -4,17 +4,19 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
+import 'dotenv/config';
+
 import { themes as prismThemes } from "prism-react-renderer";
+import quickLinksData from "./config/quicklink/index.json"
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title:
-    "Welcome to the Official Documentation of BetMGM Creatives Manila CMS Team",
-  tagline: "What do you want to learn today",
+    "BetMGM Creatives Manila CMS Team Hub",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "http://localhost:3000",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -34,6 +36,15 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+
+  customFields: {
+    cloudinaryCloudName: process.env.CLOUDINARY_CLOUD_NAME
+  },
+
+  scripts: [{
+    src: './node_modules/flowbite/dist/flowbite.min.js',
+    async: true
+  }],
 
   presets: [
     [
@@ -61,11 +72,12 @@ const config = {
             "./src/css/tailwind/preflight.css",
             "./src/css/custom.css",
           ],
+          
         },
       }),
     ],
   ],
-
+  // themes: ['@docusaurus/theme-search-algolia'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -82,30 +94,85 @@ const config = {
         },
       },
       navbar: {
-        title: "CMS Knowledge Hub",
+        title: "CMS Hub",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",
         },
         items: [
           {
+            position: 'left',
             type: "docSidebar",
-            sidebarId: "buildsSidebar",
-            position: "left",
-            label: "Builds",
+            sidebarId: "casinoSidebar",
+            label: 'Casino',
+          },
+          {
+            position: 'left',
+            type: "docSidebar",
+            sidebarId: "pokerSidebar",
+            label: 'Poker',
+          },
+          {
+            position: 'left',
+            type: "docSidebar",
+            sidebarId: "sportsSidebar",
+            label: 'Sports',
+          },
+          {
+            position: 'left',
+            type: "docSidebar",
+            sidebarId: "guidesSidebar",
+            label: 'Guides',
           },
           /* {
+            position: 'left',
             type: "docSidebar",
-            sidebarId: "ticketsSidebar",
-            position: "left",
-            label: "Tickets",
+            sidebarId: "buildsSidebar",
+            label: 'Checklists',
           }, */
-          { to: "/team", label: "Team", position: "left" }, // temporary
           /* {
-            type: "docSidebar",
-            sidebarId: "toolsSidebar",
+            type: "dropdown",
+            label: "Documentation",
             position: "left",
-            label: "Tools",
+            items: [
+              {
+                type: "docSidebar",
+                sidebarId: "buildsSidebar",
+                label: "Builds",
+              },
+              {
+                type: "docSidebar",
+                sidebarId: "siteCheckingSidebar",
+                label: "Site Checking 🚧",
+              },
+              {
+                type: "docSidebar",
+                sidebarId: "testingAndSchedulingSidebar",
+                label: "Testing And Scheduling 🚧",
+              },
+            ]
+          }, */
+          { to: "/quick-links", label: "Quick Links", position: "left" },
+          /* { 
+            type: "dropdown", 
+            label: "Quick Links", 
+            position: "left",
+            items: quickLinksData.quickLinksGroup.map(quickLinks => ({
+              to: `/quick-links?group=${quickLinks.label.toLowerCase().replaceAll(' ', '-')}`,
+              label: quickLinks.label
+            }))
+          }, */
+          // { to: "/team", label: "Team 🚧", position: "left" },
+          /* {
+            position: 'left',
+            type: "docSidebar",
+            sidebarId: "buildsSidebar",
+            label: 'Announcements 📢',
+          }, */
+          /* {
+            href: 'https://coralracing-my.sharepoint.com/:x:/r/personal/emma_bulos_entaingroup_com/_layouts/15/Doc.aspx?sourcedoc=%7B287DEB61-B6DE-43C4-A5BC-620460666F3D%7D&file=Test%20Account%20Usernames.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1',
+            position: 'left',
+            label: 'Test Accounts',
           }, */
           {
             type: "search",
@@ -181,6 +248,7 @@ const config = {
     }),
 
   plugins: [
+    require.resolve('docusaurus-lunr-search'),
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",
@@ -192,6 +260,16 @@ const config = {
         },
       };
     },
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        quality: 70,
+        max: 1030, // max resized image's size.
+        min: 640, // min resized image's size. if original is lower, use that size.
+        steps: 2, // the max number of images generated between min and max (inclusive)
+        disableInDev: false,
+      },
+    ]
   ],
 };
 

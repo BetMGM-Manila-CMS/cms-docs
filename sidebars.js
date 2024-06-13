@@ -113,7 +113,7 @@ const mapPageSidebars = (sidebarData) => {
     {
       type: "html",
       value:
-        "<div class='divider'><span class='divider__inner'>Prerequisites</div>",
+        "<div className='divider'><span className='divider__inner'>Prerequisites</div>",
       defaultStyle: true,
     },
     {
@@ -129,7 +129,7 @@ const mapPageSidebars = (sidebarData) => {
     {
       type: "html",
       value:
-        "<div class='divider'><span class='divider__inner'>Product Categories</div>",
+        "<div className='divider'><span className='divider__inner'>Product Categories</div>",
       defaultStyle: true,
     },
     {
@@ -169,7 +169,7 @@ const mapPageSidebars = (sidebarData) => {
     {
       type: "html",
       value:
-        "<div class='divider'><span class='divider__inner'>Common Components</div>",
+        "<div className='divider'><span className='divider__inner'>Common Components</div>",
       defaultStyle: true,
     },
     {
@@ -222,7 +222,7 @@ const mapPageSidebars = (sidebarData) => {
 
     {
       type: "html",
-      value: "<div class='divider'><span class='divider__inner'>Guides</div>",
+      value: "<div className='divider'><span className='divider__inner'>Guides</div>",
       defaultStyle: true,
     },
     {

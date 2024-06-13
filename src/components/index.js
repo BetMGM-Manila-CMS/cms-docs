@@ -7,3 +7,7 @@ export * from "./CopyIconButton";
 export * from "./TinaTable"
 export * from "./TinaSpacer"
 export * from "./RichTable"
+export * from "./TinaTabs"
+export * from "./Row"
+export * from "./BrowserWindow"
+export * from "./StyleGuide"

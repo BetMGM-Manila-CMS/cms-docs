@@ -1,23 +1,21 @@
 ---
-title: MAI Journey
 last_update:
   date: 02/08/2024
   author: Kyle Atienza
   description: Initial Content
 authors: Kyle Atienza
+title: MAI Journey
 ---
 
 # MAI Journey
 
 The MAI journey is a popup that shows to certain visitors of the Sports websites to add engagement for available promotions.
 
-<img className="mb-5" src="/img/builds/mai/mai-preview.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887538/builds/mai/kxftq92ne6ur794nearh.png)
 
-:::info[SiteCore Path]
-
-Content > Vanilla.Mobile > m2.WhiteLabel > App-v1.0 > Messages
-
-:::
+<Admonition type="note" title="SiteCore Path">
+  Content > Vanilla.Mobile > m2.WhiteLabel > App-v1.0 > Messages
+</Admonition>
 
 ## Creating the Main Components
 
@@ -25,236 +23,215 @@ There are 3 main components to create for this type of build, `NOT-REGISTERED`, 
 
 For simplicity, since there are already built components for these, we can just duplicate existing components and rename the duplicated items according to our ticket.
 
-<img className="mb-5" src="/img/builds/mai/mai-duplicate.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887535/builds/mai/xxycm0g8hbbgkzc8yiha.png)
 
-:::note[Naming]
-
-The best practice for naming each items is to use **Uppercase** only. Use shortened name from your ticket separated by `_`.
-
-:::
+<Admonition type="note" title="Naming">
+  The best practice for naming each items is to use **Uppercase** only. Use shortened name from your ticket separated by `_`.
+</Admonition>
 
 ## Filter
 
-<div id="condition-template" className="wrap-code">
-```html title="filter Template"
-(App.Product = "sports" AND NOT User.IsKnown AND NOT Request.AbsolutePath CONTAINS 'mobileportal' AND Cookies.Get('trackerId') IN ${val:{Overlay Content Rest ID}.parameters[trackers]}) OR QueryString.Get('qa') = {Custom Filter}
+```
+(App.Product = "sports" AND NOT User.IsKnown AND NOT Request.AbsolutePath CONTAINS 'mobileportal' AND Cookies.Get('trackerId') IN ${ val: {Overlay Content Rest ID }.parameters[trackers] }) OR QueryString.Get('qa') = { Custom Filter }
 ```
 
-The filter has 2 parts that we need to change the values of: 
+The filter has 2 parts that we need to change the values of:
 
-</div>
+* **`Overlay Content` Rest ID**
 
-1. **`Overlay Content` Rest ID**
+<Admonition type="note" title="Overlay Content Location">
+  The `Overlay Content` can be located on `NOT-REGISTERED > Overlay Content`
 
-    <br />
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887535/builds/mai/qnjtobi7vyzjgrzqer8h.png)
 
-    :::note[Overlay Content Location]
+</Admonition>
 
-    The `Overlay Content` can be located on `NOT-REGISTERED > Overlay Content`
+* **Custom Filter** - The filter naming does not have any specific rule, but for best practice we use the name we used for naming the 3 main components and make it lowercase.
 
-    <img className="mt-5" src="/img/builds/mai/mai-overlay.png" />
+<Admonition type="tip" title="Filter Example">
+  Ticket Name: PS\_934896 RUSH BetMGM Jets B10G200 Instantly
+  Filter: jets-b10g200
+</Admonition>
 
-    :::
+<Admonition type="note" title="Note">
+  Prefix each filter with numbers 1 - 3, as we need to use a unique filter for `NOT-REGISTERED`, `NOT-DEPOSITED`, and `NOT-WAGERED` components.
 
-2. **Custom Filter** - The filter naming does not have any specific rule, but for best practice we use the name we used for naming the 3 main components and make it lowercase.
+  For Example:
 
-    <br />
+  <table className="mt-3">
+    <thead>
+      <tr>
+        <th>Filter</th>
+        <th>Component</th>
+      </tr>
+    </thead>
 
-    :::tip[Filter Example]
+    <tbody>
+      <tr>
+        <td>`jets-b10g200-1`</td>
+        <td>`NOT-REGISTERED`</td>
+      </tr>
 
-    Ticket Name: PS_934896 RUSH BetMGM Jets B10G200 Instantly
+      <tr>
+        <td>`jets-b10g200-2`</td>
+        <td>`NOT-DEPOSITED`</td>
+      </tr>
 
-    Filter: jets-b10g200
+      <tr>
+        <td>`jets-b10g200-3`</td>
+        <td>`NOT-WAGERED`</td>
+      </tr>
+    </tbody>
+  </table>
+</Admonition>
 
-    <br />    
-
-    :::note
-
-    Prefix each filter with numbers 1 - 3, as we need to use a unique filter for `NOT-REGISTERED`, `NOT-DEPOSITED`, and `NOT-WAGERED` components.
-
-    <br />
-
-    For Example:
-
-    <table className="mt-3">
-        <thead>
-            <tr>
-                <th>Filter</th>
-                <th>Component</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>`jets-b10g200-1`</td>
-                <td>`NOT-REGISTERED`</td>
-            </tr>
-            <tr>
-                <td>`jets-b10g200-2`</td>
-                <td>`NOT-DEPOSITED`</td>
-            </tr>
-            <tr>
-                <td>`jets-b10g200-3`</td>
-                <td>`NOT-WAGERED`</td>
-            </tr>
-        </tbody>
-    </table>
-
-    :::
-
-After having the 2 parts for the filter we can place it on the full filter, refer to the [template](#condition-template) above. 
+After having the 2 parts for the filter we can place it on the full filter, refer to the [template](#condition-template) above.
 
 And lastly go into each  of `NOT-REGISTERED`, `NOT-DEPOSITED`, and `NOT-WAGERED` `Content` tab, and place it on the `Condition` field under the `Filter` section.
 
-<img className="" src="/img/builds/mai/mai-filter.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887535/builds/mai/xwjszcr0sej2kg0w7bm7.png)
 
 ## Steps
 
-1. Get the `Rest ID` value of the `shared-steps` component and place it as the value of the `Text` field. Wrap it on `<p></p>` tags.
+* Get the `Rest ID` value of the `shared-steps` component and place it as the value of the `Text` field. Wrap it on `<p></p>` tags.
 
-    <br/>
+```html
+<p>${val:{shared-steps Rest ID}.text}</p>
+```
 
-    ```html title="Text Field Value"
-    <p>${val:{shared-steps Rest ID}.text}</p>
-    ```
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887537/builds/mai/tkltbtrolwlf0odsqj7n.png)
 
-    <img className="" src="/img/builds/mai/mai-shared-steps-restid.png" />
+* **Setting the popup contents**. There will be 3 popups that will show for the user, each popup shows what step the user had already done. The following fields will contain the contents that these popup show.
 
-2. **Setting the popup contents**. There will be 3 popups that will show for the user, each popup shows what step the user had already done. The following fields will contain the contents that these popup show.
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887537/builds/mai/bn5ckvbcpizxh4n3hxkh.png)
 
-    <br/>
 
-    <img className="" src="/img/builds/mai/mai-popups.png" />
+  Since most of the times Bet & Get are the type of promotions to be used for MAI journey tickets, the steps are similar with only changes depedending on the values or amounts, and the specific sport in which it is implemented. The fields to update can be seen under the `Parameters` section.
 
-    Since most of the times Bet & Get are the type of promotions to be used for MAI journey tickets, the steps are similar with only changes depedending on the values or amounts, and the specific sport in which it is implemented. The fields to update can be seen under the `Parameters` section.
+<TinaTable className="whitespace-nowrap" topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>Field</TinaTableCell>
+    <TinaTableCell>Value</TinaTableCell>
+  </TinaTableRow>
 
-    <br/>    
+  <TinaTableRow>
+    <TinaTableCell>step-1</TinaTableCell>
+    <TinaTableCell>`Register`</TinaTableCell>
+  </TinaTableRow>
 
-    <table className="whitespace-nowrap">
-        <thead>
-            <tr>
-                <th>Field</th>
-                <th>Value</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>step-1</td>
-                <td>`Register`</td>
-            </tr>
-            <tr>
-                <td>step-1-cta</td>
-                <td>`Claim Offer`</td>
-            </tr>
-            <tr>
-                <td>step-1-cta-link</td>
-                <td>
-                <div className="wrap-code">
-                    ```
-                    !!M2.Portal/mobileportal/register?productId=BETTING&amp;trid=in13739
-                    ```
-                </div>
-                </td>
-            </tr>
-            <tr>
-                <td>step-1-description</td>
-                <td>`Deposit {Amount to Bet}`</td>
-            </tr>
-            <tr>
-                <td>step-2</td>
-                <td>`Deposit`</td>
-            </tr>
-            <tr>
-                <td>step-2-cta</td>
-                <td>`Claim Offer`</td>
-            </tr>
-            <tr>
-                <td>step-2-cta-link</td>
-                <td>
-                <div className="wrap-code">
-                    ```
-                    !!M2.Portal/mobileportal/cashier/deposit
-                    ```
-                </div>
-                </td>
-            </tr>
-            <tr>
-                <td>step-2-description</td>
-                <td>`Make your first deposit`</td>
-            </tr>
-            <tr>
-                <td>step-3</td>
-                <td>`Bet Now`</td>
-            </tr>
-            <tr>
-                <td>step-3-cta</td>
-                <td>`Bet Now`</td>
-            </tr>
-            <tr>
-                <td>step-3-cta-link</td>
-                <td>
-                <div className="wrap-code">
-                    ```
-                    !!M2.Sports/sports/{Sport Slug}
-                    ```
-                </div>
-                </td>
-            </tr>
-            <tr>
-                <td>step-3-description</td>
-                <td>See Step 3 Description [guide](#step-3-description) below</td>
-            </tr>
-            <tr>
-                <td>terms-and-condition-cta</td>
-                <td>`Terms & Conditions`</td>
-            </tr>
-            <tr>
-                <td>terms-and-conditions-link</td>
-                <td>`Landing Page Smartlink`</td>
-            </tr>
-        </tbody>
-    </table>
+  <TinaTableRow>
+    <TinaTableCell>step-1-cta</TinaTableCell>
+    <TinaTableCell>`Claim Offer`</TinaTableCell>
+  </TinaTableRow>
 
-    :::note[Landing Page]
+  <TinaTableRow>
+    <TinaTableCell>step-1-cta-link</TinaTableCell>
 
-    Landing pages are also built along side MAI Journey tickets, use the smartlink to the landing page for the Terms and Conditions link.
+    <TinaTableCell>
+      ```
+      !!M2.Portal/mobileportal/register?productId=BETTING&amp;trid=in13739
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
 
-    :::
+  <TinaTableRow>
+    <TinaTableCell>step-1-description</TinaTableCell>
+    <TinaTableCell>`Deposit {Amount to Bet}`</TinaTableCell>
+  </TinaTableRow>
 
-    ### Step 3 Description
+  <TinaTableRow>
+    <TinaTableCell>step-2</TinaTableCell>
+    <TinaTableCell>`Deposit`</TinaTableCell>
+  </TinaTableRow>
 
-    The description will depend if the promotion is based either for a **team** or **league** and an **event** or a **Welcome Offer** type of promo.
+  <TinaTableRow>
+    <TinaTableCell>step-2-cta</TinaTableCell>
+    <TinaTableCell>`Claim Offer`</TinaTableCell>
+  </TinaTableRow>
 
-    <br/>    
+  <TinaTableRow>
+    <TinaTableCell>step-2-cta-link</TinaTableCell>
 
-    <table className="whitespace-nowrap">
-        <tbody>
-            <tr>
-                <td>Team or League</td>
-                <td>
-                    ```
-                    On any {Team or League Name} game
-                    ```
-                </td>
-            </tr>
-            <tr>
-                <td>Event or Welcome Offer</td>
-                <td>
-                    ```
-                    On any moneyline
-                    ```
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <TinaTableCell>
+      `!!M2.Portal/mobileportal/cashier/deposit`
+    </TinaTableCell>
+  </TinaTableRow>
 
-3. **Connecting contents for `NOT-DEPOSITED`, and `NOT-WAGERED`** - Since `Overlay Content` is only under `NOT-REGISTERED`, for the other components to use the same contents, we need to update the `content` component for each.
+  <TinaTableRow>
+    <TinaTableCell>step-2-description</TinaTableCell>
+    <TinaTableCell>`Make your first deposit`</TinaTableCell>
+  </TinaTableRow>
 
-    Under `NOT-DEPOSITED`, and `NOT-WAGERED` there is a `content` component. Open it and under the `Data > Items` field, make sure to use the correct `Overlay Content`. 
+  <TinaTableRow>
+    <TinaTableCell>step-3</TinaTableCell>
+    <TinaTableCell>`Bet Now`</TinaTableCell>
+  </TinaTableRow>
 
-    <br/>    
+  <TinaTableRow>
+    <TinaTableCell>step-3-cta</TinaTableCell>
+    <TinaTableCell>`Bet Now`</TinaTableCell>
+  </TinaTableRow>
 
-    <img className="" src="/img/builds/mai/mai-push-content.png" />
-    
+  <TinaTableRow>
+    <TinaTableCell>step-3-cta-link</TinaTableCell>
+
+    <TinaTableCell>
+      `!!M2.Sports/sports/{Sport Slug}`
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>step-3-description</TinaTableCell>
+    <TinaTableCell>See Step 3 Description [guide](#step-3-description) below</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>terms-and-condition-cta</TinaTableCell>
+    <TinaTableCell>`Terms &amp; Conditions`</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>terms-and-conditions-link</TinaTableCell>
+    <TinaTableCell>`Landing Page Smartlink`</TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
+
+<Admonition type="note" title="Landing Page">
+  Landing pages are also built along side MAI Journey tickets, use the smartlink to the landing page for the Terms and Conditions link.
+</Admonition>
+
+### Step 3 Description
+
+The description will depend if the promotion is based either for a **team** or **league** and an **event** or a **Welcome Offer** type of promo.
+
+<TinaTable>
+  <TinaTableRow>
+    <TinaTableCell>Team or League</TinaTableCell>
+
+    <TinaTableCell>
+      ```
+      On any {Team or League Name} game
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>Event or Welcome Offer</TinaTableCell>
+
+    <TinaTableCell>
+      ```
+      On any moneyline
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
+
+* **Connecting contents for `NOT-DEPOSITED`, and `NOT-WAGERED`** - Since `Overlay Content` is only under `NOT-REGISTERED`, for the other components to use the same contents, we need to update the `content` component for each.
+
+  Under `NOT-DEPOSITED`, and `NOT-WAGERED` there is a `content` component. Open it and under the `Data > Items` field, make sure to use the correct `Overlay Content`.
+
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887537/builds/mai/xcoik6ghitj7c0clk2dw.png)
+
 
 ## Tracker IDs
 
@@ -262,41 +239,40 @@ The tracker IDs are group of numbers that is used to display the popups to speci
 
 Sometimes the Tracker IDs spreadsheet file contains the IDs for other state, so make sure to only use the appropriate IDs for your ticket.
 
+<Details summary="Tracker IDs Spreadsheet Example">
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887473/builds/mai/h1kue8jud2zolxgdarb0.png)
 
-<details>
-  <summary>Tracker IDs Spreadsheet Example</summary> 
-  <img className="" src="/img/builds/mai/mai-tracker-file.png" />
-</details>
+</Details>
 
 These values will be placed on the `Overlay Content`. Open its `Content` Tab, and under `Parameters` place the IDs on the `tracker` field.
 
 Place it inside a bracket and enclose every ID on double quotes separated with commas.
 
-<img className="" src="/img/builds/mai/mai-trackers.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887538/builds/mai/ruzpaar49whdzu1m0hv9.png)
 
 ## Images
 
-The images is placed inside the `NOT-REGISTERED`, `NOT-DEPOSITED`, and `NOT-WAGERED` under the `default` component inside the parent `NOT-REGISTERED` and not to be confused by it. 
+The images is placed inside the `NOT-REGISTERED`, `NOT-DEPOSITED`, and `NOT-WAGERED` under the `default` component inside the parent `NOT-REGISTERED` and not to be confused by it.
 
-<img className="mb-5" src="/img/builds/mai/mai-default.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887469/builds/mai/haqrkdqcowq7on8nhmzl.png)
 
 There is only a single image to use, copy the path of the `750x480` image and place it on the `Data > Image` field on all for `NOT-REGISTERED`, `NOT-DEPOSITED`, and `NOT-WAGERED`.
 
-<img className="" src="/img/builds/mai/mai-image.png" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887471/builds/mai/d80w8rjvc66mcw5n3iuw.png)
 
 ## Previewing
 
 To preview your created MAI Journey, go to the sports homepage of the appropriate state and add the filter as a query parameter.
 
-```html title="Preview URL Example"
+```html
 Step 1: https://sports.nj.betmgm.com/en/sports?qa=jets-b10w200-1
 Step 2: https://sports.nj.betmgm.com/en/sports?qa=jets-b10w200-2
 Step 3: https://sports.nj.betmgm.com/en/sports?qa=jets-b10w200-3
-``` 
+```
 
 Upon checking the website it should show a popup each with different steps accomplished. Take a screenshots of these popups and inlude it on your comment along with the Preview URLs
 
-<details>
-  <summary>MAI Journey Preview Example</summary> 
-  <img className="" src="/img/builds/mai/mai-preview-filter.png" />
-</details>
+<Details summary="MAI Journey Preview Example">
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887537/builds/mai/kjpjesxpzb289im7cim6.png)
+
+</Details>

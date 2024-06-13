@@ -26,26 +26,29 @@ export const RichTableRow = ({ items }) => {
     )
 }
 
-export const RichTable = ({ children }) => {
+export const RichTable = ({ children, rows, colSpan, rowSpan }) => {
     const head = children ? children[0] : null
     const body = children && children.length ? children.slice(1) : null
 
-    return (
-        <table>
-            {
-                head ?
-                    <thead>
-                        {head}
-                    </thead>
-                    : null
-            }
-            {
-                body ?
-                    <tbody>
-                        {body}
-                    </tbody>
-                    : null
-            }
-        </table>
-    )
+    if (children) {
+        return (
+            <table>
+                {
+                    head ?
+                        <thead>
+                            {head}
+                        </thead>
+                        : null
+                }
+                {
+                    body ?
+                        <tbody>
+                            {body}
+                        </tbody>
+                        : null
+                }
+            </table>
+        )
+    }
+
 }

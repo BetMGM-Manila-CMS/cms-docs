@@ -3,3 +3,95 @@ title: Marquee
 ---
 
 # Marquee
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715654896/builds/marquee/marquee-preview_bjhqib.png "default")
+
+The marquee is a scrollable area located at the top of the sports page, it is used to display ongoing promotions, announcements, and futures.
+
+<Admonition type="info" title="Sitecore Path">
+  Content > Vanilla.Mobile > State/Brand > MoileSports-v1.0 > ModulesContent > US > MarqueeEvents
+</Admonition>
+
+## Creating a Marquee Item
+
+To create one, we can simple duplicate an exisiting marquee item. To name the item it is important to not use any space, so we can the MPP or Landing Page url if there is any or just use the ticket name but the spaced is replaced with a dash(`-`).
+
+### Required Fields
+
+<Row>
+    <Col ratio={2} sticky={true}>
+        <table id="cta" >
+            <thead>
+                <tr>
+                    <th>
+                        Field
+                    </th>
+                    <th className="w-full">
+                        Value
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colSpan="2" className="text-center">
+                        Data
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Link URL
+                    </td>
+                    <td>
+                        See [CTA](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) Guide
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        NativeLink URL
+                    </td>
+                    <td>
+                        Same with Link URL
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Image
+                    </td>
+                    <td>
+                        `Marquee Image_560x280`
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </Col>
+    <Col ratio={3} sticky={true}>
+        <div className="*:mb-0">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715654375/builds/marquee/marquee-fields_b0c5vu.jpg) 
+        </div>
+    </Col>
+</Row>
+
+### Applying Filters
+
+<Row>
+    <Col ratio={1} sticky={true}>
+        If the marquee is new, add a filter on it so that it won't show up to the live website, but we will still be able to preview it
+
+        ```
+        QueryString.Get('qa')='manila'
+        ```
+    </Col>
+    <Col ratio={1} sticky={true}>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715654609/builds/marquee/marquee-filter_qcaq4z.png) 
+    </Col>
+</Row>
+
+## Previewing
+
+To preview the marquee go to the state's sports website and add the filter as a query param. For example:
+
+```
+https://sports.az.betmgm.com/en/sports?qa=manila
+```
+
+You can now take a screenshot to add as a comment for your ticket.

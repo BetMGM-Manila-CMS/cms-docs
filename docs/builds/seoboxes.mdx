@@ -1,0 +1,90 @@
+---
+title: SEOBoxes
+---
+
+SEOBoxes contains contents to improve the website's pages discoverability in browsers or its SEO. This is guide's focus is only for Casino.
+
+<Admonition type="info" title="Sitecore Path">
+  Content > Vanilla.Mobile > State/Label > MobileCasino-v1.0 > SEOBoxes
+</Admonition>
+
+
+<Row>
+    <Col ratio={1} sticky={false}>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1717572876/builds/seo/seobox-folder_jclbi7.jpg)
+    </Col>
+    <Col ratio={3} sticky={true}>
+        Inside The SEOBoxes folder you can see child items that represent for each page of casino, but some of these pages may not have any SEOBoxes.
+        
+        **There are 2 main sections for this**: 
+        - [PMOneColumnPage (Meta Tags)](#meta-tags)
+        - [PCText (SEO Box)](#SEO-Box)
+
+        **And 2 steps**:
+        - Updating the contents
+        - Pushing the SEOBox
+    </Col>
+</Row>
+
+
+
+## PMOneColumnPage
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1717490587/builds/seo/seobox-inspect_nw3dqo.jpg)
+
+
+
+<Row>
+    <Col ratio={1} sticky={true}>
+`PMOneColumnPage` contains meta tags which are not displayed on the website but work on the backend to improve visibility in search results by describing the page's content to search engines. It can be previewed using the Inspect function to a website.
+
+To update, these can be edited thru the `PMOneColumnPage` item.
+    </Col>
+    <Col ratio={1} sticky={false}>
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1717490878/builds/seo/seobox-meta_eoctg3.jpg)        
+    </Col>
+</Row>
+
+
+## PCText
+
+`PCText` contains the text which is usually is displayed at the bottom of a page, but it also contains the page description when it is searched on any browser.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1717558537/builds/seo/seobox-search_qhdquw.png)
+
+To update, these can be edited thru the `PCText` item under the `PMOneColumnPage` item.
+
+<Row>
+    <Col ratio={2} sticky={false}>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1717494172/builds/seo/seobox-pctext_mr9ocq.jpg)        
+    </Col>
+    <Col ratio={2} sticky={false}>
+        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1717494176/builds/seo/seobox-home_zvxphh.jpg)        
+    </Col>
+</Row>
+
+<Admonition type="note" title="Cloned Items">
+  If the item you are editing is cloned from Whitelabel, first ensure it should or can be updated from Whitelabel. Some cloned SEOBox may have links that don't work correctly for every clone on other states.
+</Admonition>
+
+## Pushing the SEO Box
+
+To ensure the SEOBox is applied correctly, it is required to be pushed to the appropriate `LMTCategories` item. If it has, no further action is needed. If not, follow these steps: 
+
+1. Inspect your page and go to the `Applications` tab. 
+2. Click the website's URL under the Local Storage category.
+3. Search for `categoryCoreLookUp_en_instantCasino_casino`, click the result, and check its value.
+4. Look for the `lsCategoriesMap` under `value`, an array showing the LMTCategories names that need updating. This array is ordered the same way page links are displayed on the website. This name coresponds to the `LMTCategories` item that you would update on Sitecore.
+
+<Details summary={"Visualized Steps"}>
+    ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1717570885/builds/seo/seobox-checklmt_rqeiyd.jpg)
+</Details>
+
+
+After you have determined the LMTCategories item, you can now go and push the appropriate SEOBox on the SEOBox section.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1717572321/builds/seo/seobox-lmt_kclszv.jpg)
+
+
+
+
+

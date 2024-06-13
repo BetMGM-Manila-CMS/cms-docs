@@ -288,7 +288,7 @@ summary {
 Removes the default spacing and border for appropriate elements.
 */
 
-blockquote,
+/* blockquote,
 dl,
 dd,
 h1,
@@ -302,7 +302,7 @@ figure,
 p,
 pre {
   margin: 0;
-}
+} */
 
 fieldset {
   margin: 0;

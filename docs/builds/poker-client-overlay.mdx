@@ -1,10 +1,12 @@
 ---
-title: Client Overlay
 last_update:
   date: '2024-01-17T00:00:00.000Z'
   author: Josh Javier
   description: Initial content
 authors: Josh Javier
+title: Client Overlay
+contributors:
+  - Krisha Manalo
 ---
 
 # Client Overlay
@@ -12,16 +14,17 @@ authors: Josh Javier
 <Admonition type="info" title="Sitecore Path">
   Content Editor > Vanilla.Mobile > m2.state.label > MobilePortal-v1.0 > Regional > Global > ClientPromotionsPortal
 
-  ![](/img/builds/client-overlay/client-overlay-path.png)
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887528/builds/client-overlay/hrniyhxvqbqvhopz9g0e.png)
+
 </Admonition>
 
 ## Overview
 
 Here's what a client overlay looks like. Note the highlighted elements you need to update and their corresponding fields in Sitecore.
 
-![Client overlay preview](/img/builds/client-overlay/client-overlay-preview.png)
+![Client overlay preview](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887529/builds/client-overlay/iiqbjscwybkb7mnpc0wy.png)
 
-![Client overlay Sitecore fields](/img/builds/client-overlay/client-overlay-sitecore-v2.png)
+![Client overlay Sitecore fields](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887458/builds/client-overlay/m8zxo4avgumi499yyi8p.png)
 
 ## Building in Sitecore
 
@@ -29,73 +32,94 @@ There are only two sections you need to update: the **DownloadClientPromotionDat
 
 ### DownloadClientPromotionData
 
-<TinaTable>
-  <TinaTableRow
-    items={[
-      { label: "Field", header: true },
-      { label: "Value", header: true }
-    ]}
-  />
+<Row>
+  <Col ratio={3} sticky={false} >
+  <TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>
+      Field
+    </TinaTableCell>
 
-  <TinaTableRow
-    items={[
-      { label: "Title" },
-      { label: "Promotion title in Title Case. Do not wrap in <p> tags." }
-    ]}
-  />
+    <TinaTableCell>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "Description" },
-      {
-        label:
-          "The value for this field varies. Usually it's Promo Landing Page > Subtitle, but if a tourney page is not included in the build, sometimes the Inbox Preview Description or Promohub Key Terms > Short Summary will be used. Consult your sublead if unsure."
-      }
-    ]}
-  />
+  <TinaTableRow>
+    <TinaTableCell>
+      Title
+    </TinaTableCell>
 
-  <TinaTableRow
-    items={[
-      { label: "BackgroundImage\t" },
-      { label: "Client Overlay-600x360.jpg or similar" }
-    ]}
-  />
+    <TinaTableCell>
+      Poker Tile > Title
+    </TinaTableCell>
+  </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "ActorImage" },
-      { label: "Client Overlay png-192x186.png or similar" }
-    ]}
-  />
+  <TinaTableRow>
+    <TinaTableCell>
+      Description
+    </TinaTableCell>
 
-  <TinaTableRow
-    items={[
-      { label: "CTA Url and Link Text" },
-      {
-        label: "See CTA Guide for more info. Use UPPERCASE for the Link Text.",
-        url: "http://localhost:3000/docs/builds/cta"
-      }
-    ]}
-  />
+    <TinaTableCell>
+      Poker Tile > Subtitle
+    </TinaTableCell>
+  </TinaTableRow>
 
-  <TinaTableRow
-    items={[
-      { label: "TermsAndConditions" },
-      { label: "Retain existing content." }
-    ]}
-  />
+  <TinaTableRow>
+    <TinaTableCell>
+      BackgroundImage
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Client Overlay-600x360.jpg or similar
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      ActorImage
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Client Overlay png-192x186.png or similar
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      "CTA Url and Link Text
+    </TinaTableCell>
+
+    <TinaTableCell>
+      See [CTA guide](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for more info. Use UPPERCASE for the Link Text.
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      TermsAndConditions
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Retain existing content.
+    </TinaTableCell>
+  </TinaTableRow>
 </TinaTable>
+  </Col>
+
+  <Col ratio={2} sticky={true} >
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714706667/builds/client-overlay/poker-tile-copy_bledsz.png)
+  </Col>
+</Row>
+
+
 
 ### Filter
 
-Use your QA filter, e.g., `QueryString.Get('qa') = 'josh'`
+Use your QA filter, e.g., `QueryString.Get('qa') = 'manila'`
 
 ## Take a screenshot of the preview
 
 <Admonition type="info" title="Sample Client Overlay Preview URL">
-  [https://www.nj.betmgm.com/en/mobileportal/clientplppreview?qa=josh](https://www.nj.betmgm.com/en/mobileportal/clientplppreview?qa=josh)
+  To preview the client overlay, go to the client overlay preview URL, adjusting it based on the state/label of your ticket and the QA filter you used. For example with the filter we used above the preview will be: [https://www.borgataonline.com/en/mobileportal/clientplppreview?qa=manila](https://www.borgataonline.com/en/mobileportal/clientplppreview?qa=manila)
 </Admonition>
-
-To preview the client overlay, go to the client overlay preview URL, adjusting it based on the state/label of your ticket and the QA filter you used.
-
-For example, if you're working on a ticket for Borgata NJ and you used the QA filter `Request.Query MATCHES 'josh'`, then the client overlay preview URL will be: `https://www.borgataonline.com/en/mobileportal/clientplppreview?josh`

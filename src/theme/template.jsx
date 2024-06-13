@@ -59,53 +59,39 @@ const TinaSpacerTemplate = {
     ]
 }
 
-const TabItemTemplate = {
-    name: "TabItem",
-    label: "Tab Item",
+const TinaTableCell = {
+    name: "TinaTableCell",
+    label: "Cell",
+    type: 'object',
     ui: {
         defaultItem: {
-            label: "New Tab",
-            value: "tab",
+            rowSpan: 0,
+            colSpan: 0,
         },
-    },
-    itemProps: (item) => {
-        return { label: item ? item.label : null };
     },
     fields: [
-        {
-            name: "label",
-            label: "Label",
-            type: "string"
-        },
-        {
-            name: "value",
-            label: "Value",
-            type: "string"
-        },
         {
             name: "children",
             label: "Content",
-            type: "rich-text",
-            templates: [
-                ClassyImageTemplate,
-            ]
+            type: "rich-text"
+        },
+        {
+            name: "rowSpan",
+            label: "Row Span",
+            type: 'number',
+            ui: {
+                validate: (value) => {
+                    return value < 0 ? 'Value cannot go below 0' : null
+                }
+            }
+        },
+        {
+            name: "colSpan",
+            label: "Column Span",
+            type: 'number'
         },
     ]
 }
-
-const TabsTemplate = {
-    name: "Tabs",
-    fields: [
-        {
-            name: "children",
-            label: "Tabs",
-            type: "rich-text",
-            templates: [
-                TabItemTemplate
-            ],
-        },
-    ],
-};
 
 const TinaTableRowTemplate = {
     name: "TinaTableRow",
@@ -113,54 +99,13 @@ const TinaTableRowTemplate = {
     type: "object",
     fields: [
         {
-            name: "items",
+            name: "children",
             label: "Items",
-            type: "object",
-            list: true,
-            itemProps: (item) => {
-                return { label: item ? item.label : null };
-            },
-            fields: [
-                {
-                    name: "label",
-                    label: "Label",
-                    type: "string"
-                },
-                {
-                    name: "header",
-                    label: "Header",
-                    type: "boolean"
-                },
-                {
-                    name: "style",
-                    label: "Style",
-                    component: "select",
-                    type: "string",
-                    options: [{
-                        value: "highlight",
-                        label: "Highlight"
-                    }, {
-                        value: "code",
-                        label: "Code"
-                    }]
-                },
-                {
-                    name: "url",
-                    label: "Link",
-                    type: "string"
-                },
-                {
-                    name: "rowSpan",
-                    label: "Row Span",
-                    type: 'number'
-                },
-                {
-                    name: "colSpan",
-                    label: "Column Span",
-                    type: 'number'
-                }
+            type: "rich-text",
+            templates: [
+                TinaTableCell
             ]
-        }
+        },
     ]
 
 }
@@ -174,82 +119,34 @@ const TinaTableTemplate = {
         },
     },
     fields: [
-        /*         {
-                    name: "title",
-                    label: "Title",
-                    type: "string",
-                }, */
         {
-            name: "rowHeader",
-            label: "Row Header",
+            name: "topHeader",
+            label: "Top Header",
             type: "boolean"
         },
         {
-            name: "columnHeader",
-            label: "Column Header",
+            name: "leftHeader",
+            label: "left Header",
             type: "boolean"
         },
         {
-            name: "rows",
-            label: "Rows",
-            list: true,
-            type: "object",
-            fields: [
-                {
-                    name: "row",
-                    label: "Row",
-                    type: "object",
-                    list: true,
-                    itemProps: (item) => {
-                        return { label: item ? item.label : null };
-                    },
-                    fields: [
-                        {
-                            name: "label",
-                            label: "Label",
-                            type: "string"
-                        },
-                        {
-                            name: "style",
-                            label: "Style",
-                            component: "select",
-                            type: "string",
-                            options: [{
-                                value: "highlight",
-                                label: "Highlight"
-                            }, {
-                                value: "code",
-                                label: "Code"
-                            }]
-                        },
-                        {
-                            name: "url",
-                            label: "Link",
-                            type: "string"
-                        },
-                        {
-                            name: "rowSpan",
-                            label: "Row Span",
-                            type: 'number'
-                        },
-                        {
-                            name: "colSpan",
-                            label: "Column Span",
-                            type: 'number'
-                        }
-                    ]
-                }
-            ]
+            name: "columnWidth",
+            label: "Column Width",
+            type: "string"
         },
-
-        /* {
+        {
+            name: "className",
+            label: "Class",
+            type: "string"
+        },
+        {
             name: "children",
             label: "Rows",
             type: "rich-text",
             templates: [
                 TinaTableRowTemplate
             ]
-        }, */
+        },
     ]
 }
 
@@ -305,7 +202,6 @@ const AdmonitionTemplate = {
             type: "rich-text",
             templates: [
                 ClassyImageTemplate,
-                TinaSpacerTemplate,
                 TinaTableTemplate,
             ]
         },
@@ -375,15 +271,158 @@ const CodeBlockTemplate = {
     ],
 };
 
-const SibarItemTemplate = {}
+const TabItemTemplate = {
+    name: "TabItem",
+    label: "Tab Item",
+    ui: {
+        defaultItem: {
+            label: "New Tab",
+            value: "tab",
+        },
+    },
+    itemProps: (item) => {
+        return { label: item ? item.label : null };
+    },
+    fields: [
+        {
+            name: "label",
+            label: "Label",
+            type: "string"
+        },
+        {
+            name: "value",
+            label: "Value",
+            type: "string"
+        },
+        {
+            name: "children",
+            label: "Content",
+            type: "rich-text",
+            templates: [
+                ClassyImageTemplate,
+                TinaTableTemplate
+            ]
+        },
+    ]
+}
+
+const TinaTabsTemplate = {
+    name: "TinaTabs",
+    label: "Tina Tabs",
+    fields: [
+        {
+            name: "items",
+            label: "Tabs",
+            type: "object",
+            list: true,
+            ui: {
+                defaultItem: {
+                    label: "New Tab",
+                    value: "tab",
+                },
+            },
+            itemProps: (item) => {
+                return { label: item ? item.label : null };
+            },
+            fields: [
+                {
+                    name: "label",
+                    label: "Label",
+                    type: "string"
+                },
+                {
+                    name: "value",
+                    label: "Value",
+                    type: "string"
+                },
+                {
+                    name: "image",
+                    label: "Image",
+                    type: "image"
+                },
+                {
+                    name: "content",
+                    label: "Content",
+                    type: "string",
+                    component: "textarea",
+                },
+            ]
+        }
+    ],
+};
+
+const TabsTemplate = {
+    name: "Tabs",
+    label: "Tabs",
+    fields: [
+        {
+            name: "children",
+            label: "Tab Items",
+            type: "rich-text",
+            templates: [
+                TabItemTemplate
+            ]
+        }
+    ],
+};
+
+const ColTemplate = {
+    name: "Col",
+    label: "Col",
+    ui: {
+        defaultItem: {
+            ratio: 1,
+            sticky: false,
+        },
+    },
+    itemProps: (item) => {
+        return { label: item ? item.label : null };
+    },
+    fields: [
+        {
+            name: "ratio",
+            label: "Ratio",
+            type: "number"
+        },
+        {
+            name: "sticky",
+            label: "Sticky",
+            type: "boolean"
+        },
+        {
+            name: "children",
+            label: "Content",
+            type: "rich-text",
+            templates: [
+                AdmonitionTemplate,
+                ClassyImageTemplate,
+                TinaTableTemplate
+            ]
+        },
+    ]
+}
+
+const RowTemplate = {
+    name: "Row",
+    label: "Row",
+    fields: [
+        {
+            name: "children",
+            label: "Col",
+            type: "rich-text",
+            templates: [
+                ColTemplate
+            ]
+        }
+    ]
+}
 
 
 export const MDXTemplates = [
+    ClassyImageTemplate,
     TabsTemplate,
     AdmonitionTemplate,
-    ClassyImageTemplate,
     TinaTableTemplate,
-    TinaSpacerTemplate,
     DetailsTemplate,
-    CodeBlockTemplate
+    RowTemplate
 ]

@@ -26,9 +26,9 @@ To find the scmedia URLs for the above images:
 
 1. Go to the Sitecore directory where you uploaded your ticket's creatives.
 2. Select the image you need, then in the Media section, click **Open**.
-   ![](/img/builds/poker-banners/scmedia-url-1.png)
+   ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887493/builds/poker-banners/h4u4sfp8fwhebkckvejg.png)
 3. A new tab will open. Copy the URL in the address bar, then paste it in the `src` attribute in the template.
-   ![](/img/builds/poker-banners/scmedia-url-2.png)
+   ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887492/builds/poker-banners/cwkkhrkj2wwo94hfco7u.png)
 4. Repeat for the other banner images.
 
 ### Sample Output
@@ -53,7 +53,7 @@ To find the scmedia URLs for the above images:
 <a href="https://poker.pa.betmgm.com/en/tournaments/betmgm-poker-big-shots" target="_blank">
 <img src="https://scmedia-us.itsfogo.com/$-$/4ef7fa4971e544a0b90141c8cfc1d445.jpg" border="0" /></a>
 ```
-
+{/*
 ## Mobile Banners
 
 <Admonition type="note" title="Note">
@@ -63,7 +63,7 @@ To find the scmedia URLs for the above images:
 <Admonition type="info" title="Sitecore path">
   Content Editor > Vanilla.Mobile > m2.state.label > MobilePoker-v1.0 > Regional > Global > Promotions-Live
 
-  ![](/img/builds/poker-banners/mobile-banner-path.png)
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887556/builds/poker-banners/dtedw1zg228zheo3imqo.png)
 </Admonition>
 
 If your ticket's needs require a mobile banner, here's how to create one.
@@ -72,11 +72,12 @@ If your ticket's needs require a mobile banner, here's how to create one.
 2. Create a duplicate of any component inside. Use the ticket's title as the name of the component.
 3. Update the fields in the following sections:
    * **Filter**
-     * **Condition:** Use your QA filter (e.g. `QueryString.Get('qa') = 'josh'`).
+     * **Condition:** Use your QA filter (e.g. `QueryString.Get('qa') = 'manila'`).
    * **MobileBannerData**
      * **MobileBannerImage:** `367x77.jpg`
      * **MobileBannerTitle:** Use the promotion title.
      * **MobileBannerText:** Use the promotion dates. Wrap in `<p></p>` tags and check `AlignMobileBannerTextToTheRight`.
-     * **MobileBannerCTA Url:** Tournament Page smartlink (e.g., `!!M2.Poker/tournaments/TOURNEY_PAGE_URL`). See [CTA guide](cta.mdx) for more info.
-       ![](/img/builds/poker-banners/mobile-banner-data.png)
+     * **MobileBannerCTA Url:** Tournament Page smartlink (e.g., `!!M2.Poker/tournaments/TOURNEY_PAGE_URL`). See [CTA guide](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for more info.
+       ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887492/builds/poker-banners/chw82wgcvrktpcvtjzx9.png)
 4. In the Publishing section, make sure the Publish and Unpublish dropdowns are empty (clear them if otherwise) and *Never publish* is **unchecked**.
+*/}

@@ -5,12 +5,22 @@ import Details from "@theme/Details";
 import Tabs from "@theme-original/Tabs";
 import TabItem from "@theme-original/TabItem";
 import DocCardList from "@theme-original/DocCardList";
+import Image from '@theme/IdealImage';
+
 import {
   TinaTable,
   TinaTableRow,
+  TinaTableCell,
   TinaSpacer,
   RichTable,
   RichTableRow,
+  GameLinks,
+  TinaTabs,
+  Col,
+  Row,
+  BrowserWindow,
+  StyleGuide,
+  ColorTable
 } from "@site/src/components"
 
 export default {
@@ -25,5 +35,14 @@ export default {
   TinaTableRow: TinaTableRow,
   RichTable: RichTable,
   RichTableRow: RichTableRow,
-  TinaSpacer: TinaSpacer
+  TinaTableCell: TinaTableCell,
+  TinaSpacer: TinaSpacer,
+  GameLinks: GameLinks,
+  TinaTabs: TinaTabs,
+  IdealImage: Image,
+  Col: Col,
+  Row: Row,
+  BrowserWindow: BrowserWindow,
+  StyleGuide: StyleGuide,
+  ColorTable: ColorTable
 };

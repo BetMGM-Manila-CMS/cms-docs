@@ -1,156 +1,243 @@
 ---
-title: "Pick A Box Engagement"
 last_update:
   date: 1/25/2024
   author: JM Antonio
   description: Uploaded Images and finalizing content
-authors: JM Antonio, Josh Javier (grid guide images)
+authors: 'JM Antonio, Josh Javier (grid guide images)'
+title: Pick A Box Engagement
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-import brandlogo from "../../static/img/builds/pab/brandlogo.png";
-import pab from "../../static/img/builds/pab/pab.png";
-import errormsg from "../../static/img/builds/pab/errormsg.png";
-import guideL from "../../static/img/builds/pab/guidelandscape.png";
-import guideP from "../../static/img/builds/pab/guideportrait.png";
-import LBG from "../../static/img/builds/pab/landscapebg.png";
-import PBG from "../../static/img/builds/pab/portraitbg.png";
-import landscape from "../../static/img/builds/pab/landscapecards.png";
-import portrait from "../../static/img/builds/pab/portraitcards.png";
-import Lbox3 from "../../static/img/builds/pab/Lbox3.png";
-import Lbox4 from "../../static/img/builds/pab/Lbox4.png";
-import Lbox5 from "../../static/img/builds/pab/Lbox5.png";
-import Lbox6 from "../../static/img/builds/pab/Lbox6.png";
-import Pbox3 from "../../static/img/builds/pab/Pbox3.png";
-import Pbox4 from "../../static/img/builds/pab/Pbox4.png";
-import Pbox5 from "../../static/img/builds/pab/Pbox5.png";
-import Pbox6 from "../../static/img/builds/pab/Pbox6.png";
-import pageheader from "../../static/img/builds/pab/pageheader.png";
-import pageasset from "../../static/img/builds/pab/pageasset.png";
-import prelogin from "../../static/img/builds/pab/prelogin.png";
-import postlogin from "../../static/img/builds/pab/postlogin.png";
-
 # Pick A Box
+
 Pick A Box is an Engagement tool for players to play and win prizes.
 
-<img width="900" src={pab} alt="" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887547/builds/pab/olodx2ede2dwqnxuqepi.png)
 
 ## The Layout
+
 First, we must build the layout for our PAB Engagement tool.
 
-:::info[SiteCore Path]
-**Layout:**
-Content > Vanilla.Mobile > State/Brand > Promo > Pick A Box<br/>
-**CSS asset:**
-Content > Vanilla.Mobile > State/Brand > Promo > PickaBox > PageAssets
-:::
+<Admonition type="note" title="SiteCore Path">
+  **Layout:**
+  Content > Vanilla.Mobile > State/Brand > Promo > Pick A Box
+
+  **CSS asset:**
+  Content > Vanilla.Mobile > State/Brand > Promo > PickaBox > PageAssets
+</Admonition>
 
 Duplicate any of the Layouts, and rename it like in the existing layouts.
 You also need to create it's own CSS asset, just duplicate existing css and rename as such.
 
 ### Content
+
 Fill the **PageHeaderText** with Promohub H1.
 
-<img width="900" src={pageheader} alt="" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887545/builds/pab/nez1vgxj08r6zsbwcnhh.png)
 
 Change CTA depending on your ticket if Casino/Poker.
 
-<img width="900" src={errormsg} alt="" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887543/builds/pab/l40030pjm1vbxgqkcchd.png)
 
 ### Image Fields
-| Field | Value |
-| ------ | ------- |
-| Brand Logo Image | Logo 800x360 |
-| Landscape View Background Image | Background 955x562 Desktop |
-| Portrait View Background Image | Mobile Background 1920x1080 |
+
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>Field</TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>Value</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>Brand Logo Image</TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>Logo 800x360</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>Landscape View Background Image</TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>Background 955x562 Desktop</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>Portrait View Background Image</TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>Mobile Background 1920x1080</TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
 
 Fill up the image fields listed.
 
-<img width="900" src={brandlogo} alt="" />
-<img width="900" src={LBG} alt="" />
-<img width="900" src={PBG} alt="" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887543/builds/pab/svoxppcwluseoc57qeit.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887481/builds/pab/bckexetrk1rkmfss5tqz.png)
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887482/builds/pab/ozjovxqm3a5jiugzvsck.png)
 
 ### Image Configuration
+
 This section lets you configure where the box/card/object of your Pick A Box Engagement tool will be placed.
-<ol>
-  <li>Position in the grid guide</li>
-  <li>Static image</li>
-  <li>GIF image</li>
-</ol>
 
-:::note
-Follow the arrangement of images in the mock design.<br/>
-You may also add more entries if needed.
-:::
+1. Position in the grid guide
+2. Static image
+3. GIF image
 
-<img src={landscape} alt="" />
+<Admonition type="note" title="Note">
+  Follow the arrangement of images in the mock design.
 
-<img src={portrait} alt="" /><br/>
+  You may also add more entries if needed.
+</Admonition>
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887544/builds/pab/pj4cv4ilwuvxxya7flq2.png)
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887482/builds/pab/bdqdbiesvhtjjleklhka.png)
 
 <Tabs>
-  <TabItem value="landscape" label="Landscape" default>
-    | Number of Box | Configuration |
-    | ------ | ------ |
-    | 3 | <details><summary>Show/Hide</summary><img src={Lbox3} alt="" /></details> |
-    | 4 | <details><summary>Show/Hide</summary><img src={Lbox4} alt="" /></details> |
-    | 5 | <details><summary>Show/Hide</summary><img src={Lbox5} alt="" /></details> |
-    | 6 | <details><summary>Show/Hide</summary><img src={Lbox6} alt="" /></details> |
+  <TabItem value="landscape" label="Landscape">
+    <TinaTable topHeader={true}>
+      <TinaTableRow>
+        <TinaTableCell rowSpan={0} colSpan={0}>Number of Box</TinaTableCell>
+
+        <TinaTableCell rowSpan={0} colSpan={0}>Configuration</TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell rowSpan={0} colSpan={0}>3</TinaTableCell>
+
+        <TinaTableCell rowSpan={0} colSpan={0}>
+          <Details summary="Show/Hide">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887544/builds/pab/ttcinyefh6pcmxphtykh.png)            
+          </Details>
+        </TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell rowSpan={0} colSpan={0}>4</TinaTableCell>
+
+        <TinaTableCell rowSpan={0} colSpan={0}>
+          <Details summary="Show/Hide">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887544/builds/pab/qqfyxvvp1gpn2nde8kzm.png)            
+          </Details>
+        </TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell rowSpan={0} colSpan={0}>5</TinaTableCell>
+
+        <TinaTableCell rowSpan={0} colSpan={0}>
+          <Details summary="Show/Hide">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887544/builds/pab/grchknarunoufoqrsaa2.png)            
+          </Details>
+        </TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell rowSpan={0} colSpan={0}>6</TinaTableCell>
+
+        <TinaTableCell rowSpan={0} colSpan={0}>
+          <Details summary="Show/Hide">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887480/builds/pab/izht4qeu0niz2zjbiysy.png)            
+          </Details>
+        </TinaTableCell>
+      </TinaTableRow>
+    </TinaTable>
   </TabItem>
+
   <TabItem value="portrait" label="Portrait">
-    | Number of Box | Configuration |
-    | ------ | ------ |
-    | 3 | <details><summary>Show/Hide</summary><img src={Pbox3} alt="" /></details> |
-    | 4 | <details><summary>Show/Hide</summary><img src={Pbox4} alt="" /></details> |
-    | 5 | <details><summary>Show/Hide</summary><img src={Pbox5} alt="" /></details> |
-    | 6 | <details><summary>Show/Hide</summary><img src={Pbox6} alt="" /></details> |
+    <TinaTable topHeader={true}>
+      <TinaTableRow>
+        <TinaTableCell rowSpan={0} colSpan={0}>Number of Box</TinaTableCell>
+
+        <TinaTableCell rowSpan={0} colSpan={0}>Configuration</TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell rowSpan={0} colSpan={0}>3</TinaTableCell>
+
+        <TinaTableCell rowSpan={0} colSpan={0}>
+          <Details summary="Show/Hide">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887545/builds/pab/us7e1xcggzvz7ptqvtgf.png)            
+          </Details>
+        </TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell rowSpan={0} colSpan={0}>4</TinaTableCell>
+
+        <TinaTableCell rowSpan={0} colSpan={0}>
+          <Details summary="Show/Hide">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887545/builds/pab/nzgqubhc9vxaxjxv30cx.png)            
+          </Details>
+        </TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell rowSpan={0} colSpan={0}>5</TinaTableCell>
+
+        <TinaTableCell rowSpan={0} colSpan={0}>
+          <Details summary="Show/Hide">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887545/builds/pab/t5aeavsddor9u9mdy2sm.png)            
+          </Details>
+        </TinaTableCell>
+      </TinaTableRow>
+
+      <TinaTableRow>
+        <TinaTableCell rowSpan={0} colSpan={0}>6</TinaTableCell>
+
+        <TinaTableCell rowSpan={0} colSpan={0}>
+          <Details summary="Show/Hide">
+            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887546/builds/pab/x5tbazt7snp8w1kdboad.png)            
+          </Details>
+        </TinaTableCell>
+      </TinaTableRow>
+    </TinaTable>
   </TabItem>
 </Tabs>
 
-:::info
-The configuration is dependent on the mock design provided. Use the guide image with numbers inside of boxes.
-:::
+<Admonition type="info" title="Info">
+  The configuration is dependent on the mock design provided. Use the guide image with numbers inside of boxes.
+</Admonition>
 
 Landscape Grid Guide:
 
-<img src={guideL} alt="" /><br/>
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887544/builds/pab/o1r2uqthqbqayp1smrom.png)
 
 Portrait Grid Guide:
 
-<img src={guideP} alt="" /><br/>
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887544/builds/pab/q3n5okmhrf9trr01rezl.png)
 
-:::note
-Each box fills 2x2 area in the guide.
-:::
+<Admonition type="note" title="Note">
+  Each box fills 2x2 area in the guide.
+</Admonition>
 
 ### PageAssets
+
 Replace the selected CSS asset with your newly created asset.
 
-<img src={pageasset} alt="" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887481/builds/pab/hc4xmvy5cmbjoyt84w51.png)
 
 ### Overlay
+
 **PreLoginPage:** replace the img src link with the media link for "Background 955x562 Desktop mock up" and the button color depending on your Brand.
 
 Replace this line in the html code.
 
 ```html
-<img alt="" className="box-static-img" src="{insert image url}" style="width:100%;" />
+<img alt="" class="box-static-img" src="{insert image url}" style="width:100%;" />
 ```
 
-<img src={prelogin} alt="" /><br/>
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887484/builds/pab/ehvro2sxmgw7f8rcq3dv.png)
 
 **PostLoginErrorPage:** replace the img src link with the media link for "Background 955x498 Desktop mock up", the button color depending on your Brand, and the button link depending on your ticket if Casino/Poker.
 
 Replace this line in the html code.
 
 ```html
-<img className="box-static-img" alt="prelogin_wheel_only" src="{insert image url}" />
+<img class="box-static-img" alt="prelogin_wheel_only" src="{insert image url}" />
 ```
 
-<img src={postlogin} alt="" />
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887484/builds/pab/nco2fze6drpz2jv6macw.png)
 
 ## Pick A Box PAT
-:::info
-For updating the Test Spin The Wheel PAT, go to this page for reference: [Pick a Box PAT](./pat-eds-pab).
-:::
+
+<Admonition type="info" title="Info">
+  For updating the Test Spin The Wheel PAT, go to this page for reference: [Pick a Box PAT](./pat-eds-pab).
+</Admonition>

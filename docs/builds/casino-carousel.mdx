@@ -12,17 +12,23 @@ title: Casino Carousel
 The Casino Carousel is the main attraction of the Casino Page.
 It shows all the latest promos, Public and Targetted, to the customers. In this section, we will provide the necessary steps in building the Casino Carousel.
 
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714980640/builds/carousel/casino-carousel-sample_ism2z4.png "default")
+
+{/*
+
 ## Checking Provided Assets
 
 In the previous section, check if the asset "Casino Carousel-1920x560" is available. Click on the "Copy Media URLs" to get the image link.
 
-<img src="/img/builds/carousel/creative carousel.png" className="mb-4" />
+<img src="https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887528/builds/carousel/r7b5xci20sw6101fjps8.png" className="mb-4" />
 
 <Admonition type="tip" title="Tip">
   Remove texts before "/Vanilla.Mobile" and after the filename, i.e. **Casino Carousel-1920x560**.
 </Admonition>
 
 In the Copy, look for **CAROUSEL H1 & H2**.
+
+*/}
 
 ## Creating The Carousel
 
@@ -34,33 +40,183 @@ To create your Carousel, navigate to it's directory:
 
 Duplicate one of the Carousel object, preferably the template.
 
-<img src="/img/builds/carousel/duplicate.png" className="mb-3" />
+<img src="https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887462/builds/carousel/q6sxdixd81nm41rocaeq.png" className="mb-3" />
 
 Name the new Carousel object with the Ticket name.
 
-<img src="/img/builds/carousel/rename.png" />
+<img src="https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887456/builds/carousel/dwomnqhxhnqi7dizfqub.png" />
+
+### Desktop and Mobile Carousels?
+
+Most of the time we create 2 version of the carousel, one for mobile one for desktop. This is based on the supplied asset from the designers. In this case we need to check for 2 assets: `605x328` and `Casino Carousel-1920x560`.
+
+If there is no provided `605x328` we need to create a desktop and mobile carousel, but if there is, we only need to create a single carousel.
+
+<Admonition type="note" title="Naming Carousels">
+  For desktop and mobile carousels, simply suffix a `-Desktop` and `-Mobile` to label the appropriate carousels
+</Admonition>
 
 ### Required Fields
 
-<TinaTable rows={[{ row: [{ label: "Field" }, { label: "Value" }] }]} rowHeader={true} />
+<TinaTable topHeader={true} leftHeader={false}>
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Field
+    </TinaTableCell>
 
-<TinaTable />
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Title
+    </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+      Carousel H1
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Subtitle
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Carousel H2
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Image
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      `605x328`
+      
+      But if there is no provided, use a blank 605x328 image
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Background: Image
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      `Casino Carousel-1920x560`
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
 
 <Admonition type="info" title="Labeling">
-  Please check the CTA guide for the proper labeling and link to use.
+  Please check the [CTA guide](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for the proper labeling and link to use.
 </Admonition>
+
+{/* 
 
 <Admonition type="tip" title="Creating Desktop and Mobile Versions">
   Duplicate the Carousel you just created, and then name them **Desktop** & **Mobile** accordingly.
 </Admonition>
 
+*/}
+
 ### Teaser Alignments
 
-<TinaTable />
+<TinaTable topHeader={true} leftHeader={false}>
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Device
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Single Carousel
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={2} colSpan={0}>
+      ```
+      actor-left title-big text-center actor no-cta
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Desktop
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Mobile
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      ```
+      disable-actor title-big text-center
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
 
 ### Filters
 
-<TinaTable />
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Device
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Single Carousel
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      ```
+      QueryString.Get('qa') = 'manila'
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Desktop
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      ```
+      ((QueryString.Get('qa') = 'manila') AND ((NOT Device.IsMobile) AND (NOT Device.IsTablet)))
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      Mobile
+    </TinaTableCell>
+
+    <TinaTableCell rowSpan={0} colSpan={0}>
+      ```
+      ((QueryString.Get('qa') = 'manila') AND (Device.IsMobile OR Device.IsTablet))
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
 
 ## Pushing The Carousel
 
@@ -70,7 +226,7 @@ To push your newly created Carousel, navigate to this directory:
   Content > Vanilla.Mobile > State/Brand > MobileCasino-v1.0 > LMTCategories > featured/lobbyhome
 </Admonition>
 
-<img src="/img/builds/carousel/LMT.png" className="mb-3" />
+<img src="https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887456/builds/carousel/zmsaop1y1buoaj1wixa3.png" className="mb-3" />
 
 Find your Carousels in the left box then select and click the right arrow button. Do this for both Desktop and Mobile carousels.
 

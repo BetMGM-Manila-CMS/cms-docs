@@ -40,9 +40,17 @@
           "link": "generated",
           "items": [
             {
-              "document": "docs/builds/casino-carousel.mdx",
-              "label": "Casino Carousel",
-              "_template": "doc"
+              "title": "Casino Carousel",
+              "link": "doc",
+              "docLink": "docs/builds/casino-carousel.mdx",
+              "items": [
+                {
+                  "document": "docs/builds/WOF-Carousel.mdx",
+                  "label": "WOF Carousel",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
             },
             {
               "document": "docs/builds/casino-odr-banner.mdx",
@@ -67,9 +75,34 @@
           "link": "generated",
           "items": [
             {
-              "document": "docs/builds/poker-carousel.mdx",
-              "label": "Poker Carousel",
-              "_template": "doc"
+              "title": "PLP",
+              "link": "none",
+              "items": [
+                {
+                  "document": "docs/builds/Mobile-PLP.mdx",
+                  "label": "Mobile",
+                  "_template": "doc"
+                },
+                {
+                  "document": "docs/builds/Desktop-PLP.mdx",
+                  "label": "Desktop",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
+            },
+            {
+              "title": "Poker Carousel",
+              "link": "doc",
+              "docLink": "docs/builds/poker-carousel.mdx",
+              "items": [
+                {
+                  "document": "docs/builds/partypoker-Carousel.mdx",
+                  "label": "partypoker Carousel",
+                  "_template": "doc"
+                }
+              ],
+              "_template": "category"
             },
             {
               "document": "docs/builds/poker-tournaments-page.mdx",
@@ -85,6 +118,11 @@
               "document": "docs/builds/poker-banners.mdx",
               "label": "Banners",
               "_template": "doc"
+            },
+            {
+              "document": "docs/builds/poker-mobile-banner.mdx",
+              "label": "Mobile Banner",
+              "_template": "doc"
             }
           ],
           "_template": "category"
@@ -94,8 +132,8 @@
           "link": "none",
           "items": [
             {
-              "document": "docs/builds/sports-core.mdx",
-              "label": "Core Domain",
+              "document": "docs/builds/Marquee.mdx",
+              "label": "Marquee",
               "_template": "doc"
             },
             {
@@ -110,7 +148,17 @@
             },
             {
               "document": "docs/builds/sports-mission-page.mdx",
-              "label": "MIssion Page",
+              "label": "Mission Page",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/sports-core.mdx",
+              "label": "Core Domain",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/Voucher.mdx",
+              "label": "Voucher",
               "_template": "doc"
             }
           ],
@@ -139,7 +187,7 @@
           "_template": "doc"
         },
         {
-          "document": "docs/builds/landing-page.mdx",
+          "document": "docs/builds/static-tile.mdx",
           "label": "Static Tile",
           "_template": "doc"
         },
@@ -149,15 +197,15 @@
           "_template": "doc"
         },
         {
-          "document": "docs/builds/Marquee.mdx",
-          "label": "Marquee",
-          "_template": "doc"
-        },
-        {
           "title": "PAT and EDS",
           "link": "doc",
           "docLink": "docs/builds/pat-eds.mdx",
           "items": [
+            {
+              "document": "docs/builds/Rewards.mdx",
+              "label": "Rewards",
+              "_template": "doc"
+            },
             {
               "document": "docs/builds/pat-eds-stw.mdx",
               "label": "Spin The Wheel",
@@ -208,13 +256,13 @@
           "_template": "divider"
         },
         {
-          "document": "docs/builds/colors.mdx",
-          "label": "Colors",
+          "document": "docs/builds/Game-Tiles.mdx",
+          "label": "Game Tiles",
           "_template": "doc"
         },
         {
-          "document": "docs/builds/cta.mdx",
-          "label": "CTAs",
+          "document": "docs/builds/colors.mdx",
+          "label": "Colors",
           "_template": "doc"
         },
         {
@@ -228,17 +276,350 @@
           "_template": "doc"
         },
         {
-          "title": "Tests",
-          "_template": "divider"
-        },
+          "document": "docs/builds/seoboxes.mdx",
+          "label": "SEOBoxes",
+          "_template": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Casino",
+      "items": [
         {
-          "document": "docs/builds/New-Tina-Page.mdx",
-          "label": "Test",
+          "document": "docs/builds/casino-style-guide.mdx",
+          "label": "Style Guide",
           "_template": "doc"
         },
         {
-          "document": "docs/builds/New-Page.mdx",
-          "label": "Test Page",
+          "title": "Components",
+          "_template": "divider"
+        },
+        {
+          "title": "Casino Carousel",
+          "link": "doc",
+          "docLink": "docs/builds/casino-carousel.mdx",
+          "items": [
+            {
+              "document": "docs/builds/WOF-Carousel.mdx",
+              "label": "WOF Carousel",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "document": "docs/builds/casino-odr-banner.mdx",
+          "label": "ODR Banner",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/casino-video-banners.mdx",
+          "label": "Video Banners",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/casino-stories.mdx",
+          "label": "Stories",
+          "_template": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Poker",
+      "items": [
+        {
+          "document": "docs/builds/poker-style-guide.mdx",
+          "label": "Style Guide",
+          "_template": "doc"
+        },
+        {
+          "title": "Components",
+          "_template": "divider"
+        },
+        {
+          "title": "PLP",
+          "link": "none",
+          "items": [
+            {
+              "document": "docs/builds/Mobile-PLP.mdx",
+              "label": "Mobile",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/Desktop-PLP.mdx",
+              "label": "Desktop",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "title": "Poker Carousel",
+          "link": "doc",
+          "docLink": "docs/builds/poker-carousel.mdx",
+          "items": [
+            {
+              "document": "docs/builds/partypoker-Carousel.mdx",
+              "label": "partypoker Carousel",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "document": "docs/builds/poker-tournaments-page.mdx",
+          "label": "Tournament Page",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/poker-client-overlay.mdx",
+          "label": "Client Overlay",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/poker-banners.mdx",
+          "label": "Banners",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/poker-mobile-banner.mdx",
+          "label": "Mobile Banner",
+          "_template": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Sports",
+      "items": [
+        {
+          "document": "docs/builds/sports-style-guide.mdx",
+          "label": "Style Guide",
+          "_template": "doc"
+        },
+        {
+          "title": "Components",
+          "_template": "divider"
+        },
+        {
+          "document": "docs/builds/Marquee.mdx",
+          "label": "Marquee",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/mai.mdx",
+          "label": "MAI Journey",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/sports-horse-racing.mdx",
+          "label": "Horse Racing Schedule",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/sports-mission-page.mdx",
+          "label": "Mission Page",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/sports-core.mdx",
+          "label": "Core Domain",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/Voucher.mdx",
+          "label": "Voucher",
+          "_template": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Guides",
+      "items": [
+        {
+          "title": "Prerequisites",
+          "_template": "divider"
+        },
+        {
+          "title": "Assets",
+          "link": "doc",
+          "docLink": "docs/builds/assets.mdx",
+          "items": [
+            {
+              "document": "docs/builds/assets-request.mdx",
+              "label": "Requesting Assets",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/assets-uploading.mdx",
+              "label": "Uploading Creatives",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "document": "docs/builds/documents.mdx",
+          "label": "Documents",
+          "_template": "doc"
+        },
+        {
+          "title": "Components",
+          "_template": "divider"
+        },
+        {
+          "title": "MPP",
+          "link": "doc",
+          "docLink": "docs/builds/mpp.mdx",
+          "items": [
+            {
+              "document": "docs/builds/mpp-v2.mdx",
+              "label": "V2",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "document": "docs/builds/restId.mdx",
+          "label": "Rest ID",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/static-tile.mdx",
+          "label": "Static Tile",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/landing-page.mdx",
+          "label": "Landing Page",
+          "_template": "doc"
+        },
+        {
+          "title": "PAT and EDS",
+          "link": "doc",
+          "docLink": "docs/builds/pat-eds.mdx",
+          "items": [
+            {
+              "document": "docs/builds/Rewards.mdx",
+              "label": "Rewards",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/pat-eds-stw.mdx",
+              "label": "Spin The Wheel",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/pat-eds-pab.mdx",
+              "label": "Pick A Box",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/pat-eds-coin.mdx",
+              "label": "Coin Flip",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/pat-eds-cc.mdx",
+              "label": "Click Card",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "title": "Engagements",
+          "link": "generated",
+          "items": [
+            {
+              "document": "docs/builds/engagements-stw.mdx",
+              "label": "Spin The Wheel",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/engagements-pab.mdx",
+              "label": "Pick A Box",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/engagements-coin.mdx",
+              "label": "Coin Flip",
+              "_template": "doc"
+            }
+          ],
+          "_template": "category"
+        },
+        {
+          "title": "Miscellaneous",
+          "_template": "divider"
+        },
+        {
+          "document": "docs/builds/Game-Tiles.mdx",
+          "label": "Game Tiles",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/colors.mdx",
+          "label": "Colors",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/smartlinks.mdx",
+          "label": "Smartlinks",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/tables.mdx",
+          "label": "Tables",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/seoboxes.mdx",
+          "label": "SEOBoxes",
+          "_template": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Site Checking",
+      "items": [
+        {
+          "document": "docs/builds/Carousel-Scheduler.mdx",
+          "label": "Carousel Scheduler",
+          "_template": "doc"
+        },
+        {
+          "title": " ",
+          "_template": "divider"
+        },
+        {
+          "document": "docs/builds/casino-carousel-checking.mdx",
+          "label": "Casino Carousel",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/Poker-Carousel-Checking.mdx",
+          "label": "Poker Carousel",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/Sports-Marquee-Checking.mdx",
+          "label": "Sports Marquee",
+          "_template": "doc"
+        }
+      ]
+    },
+    {
+      "label": "Testing And Scheduling",
+      "items": [
+        {
+          "document": "docs/builds/Engagement-Testing.mdx",
+          "label": "Engagement Testing",
+          "_template": "doc"
+        },
+        {
+          "document": "docs/builds/Component-Scheduling.mdx",
+          "label": "Component Scheduling",
           "_template": "doc"
         }
       ]

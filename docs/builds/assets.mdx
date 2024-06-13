@@ -8,42 +8,36 @@ title: Assets
 
 Assets are media files that are provided by the designers which then we upload to be used for our tickets.
 
-To get the ticket's assets, check the [updates](#static-assets) tab from the Workfront ticket.
+To access a ticket's assets, navigate to the Updates tab in the Workfront ticket. Currently, the team utilizes Box links to share assets internally. Check the updates section for any Box links, as they contain the assets required for your ticket.
 
-Currently the team is using [Box](https://www.box.com/) links to share assets between each other. Check the updates section for any Box links as it contains the assets needed for your ticket.
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1714608876/builds/assets/updates-wf_g6j1ri.png)
 
-<Admonition type="tip" title="Box Links">
-  Box links has a domain name of [https://app.box.com](https://app.box.com/)
-
-  <img className="w-3/4 max-w-md" src="/img/builds/assets/sample-box-links.png" />
+<Admonition type="note" title="Multiple Box Links">
+  Multiple Box links may exist due to different versions designers are working on. Typically, select the latest uploaded Box link when choosing among them.
 </Admonition>
 
-<Admonition type="tip" title="Multiple Box Links">
-  There may be multiple Box links and this is because this are the different versions designers are working on. So generally, the one you will select is the latest uploaded Box link.
+<Admonition type="note" title="Required File Size">
+  The general rule of thumb is that files need to be below 95KB in size, as this is the allowed limit for assets uploaded to Sitecore. Therefore, if there are any files that exceed this requirement, it's necessary to request a compressed version from the designers. Please refer to this [page](./assets-request) when making the request for asset compression.
 </Admonition>
 
-There are 2 types of assets that you are going to encounter: [Static](#static-assets) and [Animated](#animated-assets) assets.
+<Row>
+  <Col ratio={3} sticky={false}>
+    ## Static Assets
 
-## Static Assets
+    Static assets are usually media files that consists of images in .jpg or .png format that are made by graphic designers. These are the more common assets that is used in tickets.
 
-Static assets are usually media files that consists of images in .jpg or .png format that are made by graphic designers. These are the more common assets that is used in tickets.
+    <Admonition type="note" title="Folder To Download">
+      Usually designers will provide the Box link with two folders: 100kb or 95kb folder and 500kb folder. Always download the lower size folder and inspect again each images to confirm the sizes.
 
-Static assets is required to be less than `95kb` in size, therefore inspecting each subfolder to check each images' size is necessary to confirm this.
+      <img src="https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887524/builds/assets/ilmr7lzj25eftvkj8b8y.png" className="w-full mt-4" />
+    </Admonition>
 
-<Admonition type="note" title="Folder To Download">
-  Usually designers will provide the Box link with two folders: 100kb or 95kb folder and 500kb folder. Always download the lower size folder and inspect again each images to confirm the sizes.
+    ## Animated Assets
 
-  <img src="/img/builds/assets/assets-2-folder.png" className="w-full mt-4" />
-</Admonition>
+    Animated assets are typically provided in .gif format by motion designers. If any of these files exceed the required file size, it's necessary to compress them only if they are intended for use on builds in Sitecore. Otherwise, there's no need to request compression and uploading to Sitecore for those files.
+  </Col>
 
-## Animated Assets
-
-Animated assets are media files in .gif format and is provided by motion designers.
-
-Similar to static assets it is also required to be less than `95kb` in size. also inspect each files to confirm if each files met the required minimum.
-
-## Exceeded Required File Size
-
-If you encounter assets exceeding the required minimum size, either [compress the images](./assets-request.mdx) or [request for new assets](./assets-request.mdx)
-
-Hello Tina haha
+  <Col ratio={2} sticky={true}>
+    ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887527/builds/assets/mpwesq1a71foayxr1qt2.png)
+  </Col>
+</Row>

@@ -1,107 +1,133 @@
-import CodeBlock from "@theme-original/CodeBlock";
+const cellSpans = (rowSpan = false, colSpan = false) => ({
+    ...(rowSpan && { rowSpan }),
+    ...(colSpan && { colSpan }),
+});
 
-export const TinaTableRow = ({ items }) => {
-    const cellValue = (cell) => {
-        if (cell.url) {
-            return <a href={cell.url}>{cell.label}</a>
-        }
+export const TinaTableCell = ({ children, header, rowSpan, colSpan, className }) => {
 
-        return cell.label
+    if (header) {
+        return <th {...cellSpans(rowSpan, colSpan)} className={className} >{children}</th>
+    } else {
+        return <td {...cellSpans(rowSpan, colSpan)} className={className} >{children}</td>
     }
 
-    const cellWrapper = (cell) => {
-        if (cell.style === "highlight") {
-            return <code>{cellValue(cell)}</code>
-        } else if (cell.style === "code") {
-            return <CodeBlock className="mb-0">{cellValue(cell)}</CodeBlock>
-        }
-
-        return cellValue(cell)
-    }
-
-    const cellSpans = (cell) => {
-        let spans = {}
-
-        if (cell.rowSpan) {
-            spans.rowSpan = cell.rowSpan
-        }
-
-        if (cell.colSpan) {
-            spans.colSpan = cell.colSpan
-        }
-
-        return spans
-    }
-
-    const mapItems = (items) => {
-        return items.map((cell, index) => cell.header ?
-            <th {...cellSpans(cell)} key={index}>
-                {cellWrapper(cell)}
-            </th> :
-            <td {...cellSpans(cell)} key={index} >
-                {cellWrapper(cell)}
-            </td>)
-
-    }
-
-    return (
-        <>
-            <tr>
-                {items && items.length ? mapItems(items) : null}
-            </tr>
-        </>
-    )
 }
 
-const ChildredContents = (children) => {
-    const head = children ? children[0] : null
-    const body = children && children.length ? children.slice(1) : null
-
+export const TinaTableRow = ({ children }) => {
     return (
-        <table>
-            {
-                head ?
-                    <thead>
-                        {head}
-                    </thead>
-                    : null
-            }
-            {
-                body ?
-                    <tbody>
-                        {body}
-                    </tbody>
-                    : null
-            }
-        </table>
+        <tr>
+            {children}
+        </tr>
     )
+
 }
 
-export const TinaTable = ({ children }) => {
-    const head = children ? children[0] : null
-    const body = children && children.length ? children.slice(1) : null
-
+export const TinaTable = ({ children, topHeader, leftHeader, columnWidth, className }) => {
     if (children) {
-        return <ChildredContents children={children} />
+
+        let items = children
+
+        if (leftHeader && children.length) {
+            items = children.map(row => {
+                const children = row.props.children.length ? row.props.children : [row.props.children]
+
+                return {
+                    ...row,
+                    props: {
+                        ...row.props,
+                        children: children.map((cell, index) => {
+                            if (index === 0) {
+                                return {
+                                    ...cell,
+                                    props: {
+                                        ...cell.props,
+                                        header: true
+                                    }
+                                }
+                            } else {
+                                return cell
+                            }
+                        })
+                    }
+                }
+            })
+        }
+
+        if (columnWidth) {
+            const widths = columnWidth.split(', ').map(val => Number(val))
+            const firstRow = items[0]
+
+            const topRow = {
+                ...firstRow,
+                props: {
+                    ...firstRow.props,
+                    children: firstRow.props.children.map((cell, index) => ({
+                        ...cell,
+                        props: {
+                            ...cell.props,
+                            className: `w-[${widths[index]}%]`
+                        }
+                    }))
+                }
+            }
+
+            items = [topRow, ...items.slice(1)]
+        }
+
+        // head
+        let head
+        if (topHeader) {
+            if (items.length) {
+                const children = items[0].props.children.length ? items[0].props.children : [items[0].props.children]
+
+                head = children.map(cell => ({
+                    ...cell,
+                    props: {
+                        ...cell.props,
+                        header: true,
+                    }
+                }))
+            } else {
+                head = [items.props.children.map(cell => ({
+                    ...cell,
+                    props: {
+                        ...cell.props,
+                        header: true,
+                    }
+                }))]
+            }
+        }
+
+        // body
+        let body
+        if (head) {
+            if (items.length > 1) {
+                body = items.slice(1)
+            }
+        } else {
+            if (items.length > 1) {
+                body = items
+            } else {
+                body = [items]
+            }
+        }
+
+        return (
+            <table className={className}>
+                {
+                    head ? <thead>
+                        <tr>
+                            {head}
+                        </tr>
+                    </thead> : null
+                }
+                {
+                    body ? <tbody>
+                        {body}
+                    </tbody> : null
+                }
+            </table>
+        )
     }
 
-    /* return children ?
-        <table>
-            {
-                head ?
-                    <thead>
-                        {head}
-                    </thead>
-                    : null
-            }
-            {
-                body ?
-                    <tbody>
-                        {body}
-                    </tbody>
-                    : null
-            }
-        </table>
-        : <table>
-        </table> */
 }

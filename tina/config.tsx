@@ -1,8 +1,7 @@
 import React from "react";
 import { MDXTemplates } from "../src/theme/template";
 import { defineConfig } from "tinacms";
-import { tinaTableTemplate } from 'tinacms'
-import { PostCollection, DocCollection, SidebarCollection } from './collections'
+import { DocCollection, SidebarCollection, QuickLinkCollection } from './collections'
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -25,17 +24,21 @@ export default defineConfig({
     publicFolder: "static",
   },
   media: {
-    tina: {
+    /* tina: {
       mediaRoot: "img",
       publicFolder: "static",
+    }, */
+    loadCustomStore: async () => {
+      const pack = await import("next-tinacms-cloudinary");
+      return pack.TinaCloudCloudinaryMediaStore;
     },
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
     collections: [
-      PostCollection,
       DocCollection,
-      SidebarCollection
+      SidebarCollection,
+      QuickLinkCollection
     ],
   },
 });
