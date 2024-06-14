@@ -19,8 +19,6 @@ export default function BlogPostItemHeaderAuthors({ className }) {
     return null;
   }
   const imageOnly = authors.every(({ name }) => !name);
-
-  console.log(editor)
   return (
     <div>
       <div>
