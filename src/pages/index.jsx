@@ -3,7 +3,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import { Updates } from "@site/src/components/pages/home/Updates"
+import Updates from "@site/src/components/pages/home/Updates"
 
 // import Hero from "@site/src/components/Hero";
 import { Hero, HomeFeatures } from "@site/src/components";

@@ -3,7 +3,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 // import blogPlugin from "../../../../../plugins/blog-plugin.js"
 import recentPosts from "@site/.docusaurus/docusaurus-plugin-content-blog/updates/updates-archive-681.json"
 
-export const Updates = (props) => {
+export default function Updates (props) {
     const docusaurus = useDocusaurusContext();
 
     console.log('test', recentPosts)
