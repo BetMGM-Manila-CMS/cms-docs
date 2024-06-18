@@ -1,7 +1,7 @@
 import React from "react";
 import { MDXTemplates } from "../src/theme/template";
 import { defineConfig } from "tinacms";
-import { DocCollection, SidebarCollection, QuickLinkCollection } from './collections'
+import { DocCollection, SidebarCollection, QuickLinkCollection, ChecklistsCollection } from './collections'
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -38,7 +38,8 @@ export default defineConfig({
     collections: [
       DocCollection,
       SidebarCollection,
-      QuickLinkCollection
+      QuickLinkCollection,
+      ChecklistsCollection
     ],
   },
 });

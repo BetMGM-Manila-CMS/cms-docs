@@ -1,0 +1,20 @@
+{
+  "checklistGroup": [
+    {
+      "label": "Casino",
+      "checklists": [
+        {
+          "label": "Carousel",
+          "checklist": [
+            {
+              "label": "Heading 1"
+            },
+            {
+              "label": "Subtitle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

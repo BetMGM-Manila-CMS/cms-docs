@@ -243,3 +243,19 @@ fragment QuicklinkParts on Quicklink {
     }
   }
 }
+
+fragment ChecklistsParts on Checklists {
+  __typename
+  checklistGroup {
+    __typename
+    label
+    checklists {
+      __typename
+      label
+      checklist {
+        __typename
+        label
+      }
+    }
+  }
+}

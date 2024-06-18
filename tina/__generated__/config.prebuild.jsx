@@ -741,6 +741,68 @@ var QuickLinkCollection = {
   ]
 };
 
+// tina/collections/checklists.jsx
+var LabelField2 = {
+  name: "label",
+  label: "Label",
+  type: "string",
+  required: true
+};
+var ChecklistField = {
+  name: "checklist",
+  label: "Checklist",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    LabelField2
+  ]
+};
+var ChecklistsField = {
+  name: "checklists",
+  label: "Checklists",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    LabelField2,
+    ChecklistField
+  ]
+};
+var ChecklistGroup = {
+  name: "checklistGroup",
+  label: "Checklist Group",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    LabelField2,
+    ChecklistsField
+  ]
+};
+var ChecklistsCollection = {
+  name: "checklists",
+  label: "Check Lists",
+  path: "config/checklists",
+  format: "json",
+  ui: {
+    global: true,
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  fields: [
+    ChecklistGroup
+  ]
+};
+
 // tina/config.tsx
 var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
 var config_default = defineConfig({
@@ -771,7 +833,8 @@ var config_default = defineConfig({
     collections: [
       DocCollection,
       SidebarCollection,
-      QuickLinkCollection
+      QuickLinkCollection,
+      ChecklistsCollection
     ]
   }
 });
