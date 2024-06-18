@@ -1,5 +1,10 @@
 import Layout from "@theme/Layout";
 import Masonry from '@mui/lab/Masonry';
+import Link from "@docusaurus/Link";
+import { useLocation } from '@docusaurus/router';
+import { useState } from "react"
+
+import checklistsData from "@site/config/checklists/index.json"
 
 const sampleData = [
     {
@@ -106,9 +111,8 @@ function Checklist({ checklist }) {
                     checklist.checklist.map((checklistItem, index) => {
                         return (
                             <div className="flex items-center" key={index}>
-                                {/* <input id="default-checkbox" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" /> */}
                                 <input type="checkbox" className="daisy-checkbox [--chkbg:theme(colors.primary)]" />
-                                <label for="default-checkbox" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">{checklistItem}</label>
+                                <label for="default-checkbox" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">{checklistItem.label}</label>
                             </div>
                         )
                     })
@@ -119,6 +123,23 @@ function Checklist({ checklist }) {
 }
 
 export default function Checklists() {
+    const checklists = checklistsData.checklistGroup
+    const [search, setSearch] = useState('')
+
+    const location = useLocation();
+
+    const params = location.search ? location.search.replace('?', '').split('&').reduce((params, param) => {
+        const [key, value] = param.split("=")
+        params[key] = value
+        return params
+    }, {}) : {}
+
+    const { group } = params
+    const checklistItems = group ? checklists.find(data => data.label.toLowerCase() === group).checklists : checklists[0].checklists
+    const checlistItemsToMap = search ? checklistItems.filter(item => item.label.toLowerCase().includes(search.toLowerCase())) : checklistItems
+
+    const masonryColumnCount = (initialCount) => checlistItemsToMap.length < initialCount ? checlistItemsToMap.length : initialCount
+
     return (
         <Layout title="Checklists" description="Collection of checklists for each component, ensuring consistent and high-quality construction standards across the team.">
             <section
@@ -141,9 +162,9 @@ export default function Checklists() {
                                 </svg>
                             </summary>
                             <ul className="p-2 daisy-shadow daisy-menu daisy-dropdown-content z-[1] bg-base-100 rounded-box w-52 mt-2 shadow">
-                                {/* {
-                                    quickLinksData.quickLinksGroup.map((quickLink, index) => <li className="font-normal text-white" key={index}><Link to={`/quick-links?group=${quickLink.label.toLowerCase().replaceAll(' ', '-')}`}>{quickLink.label}</Link></li>)
-                                } */}
+                                {
+                                    checklists.map((checklist, index) => <li className="font-normal text-white" key={index}><Link to={`/checklists?group=${checklist.label.toLowerCase().replaceAll(' ', '-')}`}>{checklist.label}</Link></li>)
+                                }
                             </ul>
                         </details>
                         Checklists
@@ -151,29 +172,22 @@ export default function Checklists() {
                     <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white">
                         Checklists for each component ensuring consistent, high-quality construction standards across the team.
                     </p>
-                    {/* <input type="text" placeholder="Search Checklists" className="daisy-input daisy-input-bordered w-full max-w-xs" /> */}
+                    <label class="daisy-input daisy-input-bordered flex items-center gap-2 max-w-xs mx-auto">
+                        <input type="text" class="grow" placeholder="Search" value={search} onChange={e => setSearch(e.target.value)} />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" /></svg>
+                    </label>
                 </div>
 
             </section>
 
             <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-                {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
-                    <div className="p-6 rounded-2xl bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
-                        Casino
-                    </div>
-                    <div className="p-6 rounded-2xl bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
-                        Poker
-                    </div>
-                    <div className="p-6 rounded-2xl bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
-                        Sports
-                    </div>
-                    <div className="p-6 rounded-2xl bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
-                        Common
-                    </div>
-                </div> */}
-                <Masonry columns={{ xs: 2, md: 3, lg: 4 }} spacing={4}>
-                    {sampleData.map((data, index) => (
-                        <Checklist checklist={data} key={index} />
+                <Masonry columns={{
+                    xs: masonryColumnCount(2),
+                    md: masonryColumnCount(3),
+                    lg: masonryColumnCount(4)
+                }} spacing={4}>
+                    {checlistItemsToMap.map((checklistItem, index) => (
+                        <Checklist checklist={checklistItem} key={index} />
                     ))}
                 </Masonry>
             </section>
