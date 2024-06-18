@@ -59,20 +59,23 @@ const config = {
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
-        blog: {
+        /* blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        },
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 10,
+        }, */
+        blog: false,
         theme: {
           customCss: [
             "./src/css/tailwind/main.css",
             "./src/css/tailwind/preflight.css",
             "./src/css/custom.css",
           ],
-          
+
         },
       }),
     ],
@@ -163,6 +166,7 @@ const config = {
             }))
           }, */
           // { to: "/team", label: "Team 🚧", position: "left" },
+          { to: "/updates", label: "Updates 📢", position: "left" },
           /* {
             position: 'left',
             type: "docSidebar",
@@ -182,63 +186,6 @@ const config = {
       },
       footer: {
         style: "dark",
-        /* links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Builds",
-                to: "/docs/builds/assets-introduction",
-              },
-              {
-                label: "Tickets",
-                to: "/docs/tickets/monday",
-              },
-              {
-                label: "Team",
-                to: "/",
-              },
-              {
-                label: "Tools",
-                to: "/docs/tools/htmlTidy",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Teams",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Skype",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Facebook",
-                href: "https://web.facebook.com/BetMGMcreativesPH",
-              },
-              {
-                label: "YouTube",
-                href: "https://www.youtube.com/@betmgmcreativesmanila256",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "BetMGM",
-                href: "https://www.betmgminc.com/who-we-are",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-        ], */
         copyright: `Copyright © ${new Date().getFullYear()} CMS Knowledge Hub. Built with Docusaurus.`,
       },
       prism: {
@@ -269,7 +216,18 @@ const config = {
         steps: 2, // the max number of images generated between min and max (inclusive)
         disableInDev: false,
       },
-    ]
+    ],
+    [
+      // '@docusaurus/plugin-content-blog',
+      './plugins/blog-plugin',
+      {
+        id: 'updates',
+        routeBasePath: 'updates',
+        path: './updates',
+        blogSidebarCount: 10,
+        blogSidebarTitle: 'Recent Updates',
+      },
+    ],
   ],
 };
 

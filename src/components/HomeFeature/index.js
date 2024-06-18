@@ -2,7 +2,7 @@ import Link from "@docusaurus/Link";
 
 export const HomeFeature = function ({ icon, label, description, url }) {
   return (
-    <div className="p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
+    <div className="p-6 rounded-lg bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
       {icon}
       <a href="#">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

@@ -108,7 +108,7 @@ const JumpLinks = ({ quickLinks }) => {
     )
 }
 
-export default function () {
+export default function QuickLinks() {
     const { siteConfig } = useDocusaurusContext();
 
     const location = useLocation();

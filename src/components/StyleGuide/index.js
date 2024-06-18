@@ -97,7 +97,7 @@ export const StyleGuide = ({styles}) => {
                         <a 
                             class="btn" 
                             style={{color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor}} 
-                            href="https://promo.nj.betmgm.com/en/promo/bspin/26046946"
+                            href="#"
                         >
                             Spin Now
                         </a>  

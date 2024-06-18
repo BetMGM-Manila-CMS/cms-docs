@@ -3,6 +3,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import Updates from "@site/src/components/pages/home/Updates"
 
 // import Hero from "@site/src/components/Hero";
 import { Hero, HomeFeatures } from "@site/src/components";
@@ -10,6 +11,7 @@ import { Hero, HomeFeatures } from "@site/src/components";
 import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 
+// not used
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -32,7 +34,8 @@ function HomepageHeader() {
   );
 }
 
-export default function Home() {
+export default function Home({ recentPosts }) {
+  console.log(recentPosts)
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
@@ -40,9 +43,8 @@ export default function Home() {
       description="The Official Documentation for BetMGM Creatives Manila CMS Team"
     >
       <Hero />
-      <main>
-        <HomeFeatures />
-      </main>
+      <HomeFeatures />
+      <Updates updates={recentPosts} />
     </Layout>
   );
 }
