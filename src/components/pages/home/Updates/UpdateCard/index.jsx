@@ -1,11 +1,31 @@
-export const UpdateCard = () => {
+import Link from "@docusaurus/Link";
+
+export const UpdateCard = ({ update }) => {
+    const { content: { frontMatter, metadata } } = update
+
     return (
-        <a href="#" className="flex flex-col items-center rounded-lg bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition md:flex-row">
-            <img className="object-cover w-full rounded-t-lg h-64 md:h-full md:w-48 md:rounded-none md:rounded-s-lg mb-0" src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="" />
-            <div className="flex flex-col justify-between p-4 leading-normal">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+        <Link to={`${metadata.permalink}`} className="group">
+            <div
+                className="rounded-xl h-64 w-full relative overflow-hidden bg-primary"
+                style={{ perspective: "255px" }}
+            >
+                <img
+                    className="absolute w-full h-full object-cover "
+                    src={frontMatter.image}
+                    alt=""
+                />
+                <div
+                    className="absolute top-0 left-0 w-full h-full group-hover:opacity-0 transition-opacity duration-500"
+                    style={{
+                        backgroundImage: "linear-gradient(40deg, rgba(183,162,109,0.7483368347338936) 0%, rgba(46,61,75,0.5802696078431373) 65%)"
+                    }}
+                />
             </div>
-        </a>
+            <div className="mt-5">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{frontMatter.title}</h5>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 mb-6">{frontMatter.description}</p>
+                <p className="mb-3 font-normal text-primary">Read in {Math.ceil(metadata.readingTime)} minutes</p>
+            </div>
+        </Link>
     )
 }
