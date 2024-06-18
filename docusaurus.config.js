@@ -127,6 +127,11 @@ const config = {
             sidebarId: "guidesSidebar",
             label: 'Guides',
           },
+          {
+            position: 'left',
+            to: '/checklists',
+            label: 'Checklists',
+          },
           /* {
             position: 'left',
             type: "docSidebar",
