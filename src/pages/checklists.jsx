@@ -1,4 +1,5 @@
 import Layout from "@theme/Layout";
+import Masonry from '@mui/lab/Masonry';
 
 const sampleData = [
     {
@@ -149,13 +150,18 @@ export default function Checklists() {
             </section>
 
             <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
+                {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-4">
                     {
                         sampleData.map((data, index) => {
                             return <Checklist checklist={data} key={index} />
                         })
                     }
-                </div>
+                </div> */}
+                {/* <Masonry columns={{ xs: 2, md: 3, lg: 4 }} spacing={2}>
+                    {sampleData.map((data, index) => (
+                        <Checklist checklist={data} key={index} />
+                    ))}
+                </Masonry> */}
             </section>
         </Layout>
     )

@@ -24,6 +24,7 @@
     "@docusaurus/preset-classic": "3.0.1",
     "@docusaurus/theme-search-algolia": "^3.2.1",
     "@mdx-js/react": "^3.0.0",
+    "@mui/lab": "^5.0.0-alpha.170",
     "@tinacms/auth": "^1.0.4",
     "autoprefixer": "^10.4.16",
     "axios": "^1.6.5",
