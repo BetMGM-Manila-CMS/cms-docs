@@ -89,6 +89,8 @@ export type Query = {
   quicklinkConnection: QuicklinkConnection;
   members: Members;
   membersConnection: MembersConnection;
+  workSchedules: WorkSchedules;
+  workSchedulesConnection: WorkSchedulesConnection;
 };
 
 
@@ -172,11 +174,27 @@ export type QueryMembersConnectionArgs = {
   filter?: InputMaybe<MembersFilter>;
 };
 
+
+export type QueryWorkSchedulesArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryWorkSchedulesConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<WorkSchedulesFilter>;
+};
+
 export type DocumentFilter = {
   doc?: InputMaybe<DocFilter>;
   sidebar?: InputMaybe<SidebarFilter>;
   quicklink?: InputMaybe<QuicklinkFilter>;
   members?: InputMaybe<MembersFilter>;
+  workSchedules?: InputMaybe<WorkSchedulesFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -216,7 +234,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Doc | Sidebar | Quicklink | Members | Folder;
+export type DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Folder;
 
 export type Doc = Node & Document & {
   __typename?: 'Doc';
@@ -871,6 +889,8 @@ export type MembersMember = {
   __typename?: 'MembersMember';
   name: Scalars['String']['output'];
   position: Scalars['String']['output'];
+  birthday?: Maybe<Scalars['String']['output']>;
+  hiredDate?: Maybe<Scalars['String']['output']>;
 };
 
 export type Members = Node & Document & {
@@ -881,9 +901,19 @@ export type Members = Node & Document & {
   _values: Scalars['JSON']['output'];
 };
 
+export type DatetimeFilter = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type MembersMemberFilter = {
   name?: InputMaybe<StringFilter>;
   position?: InputMaybe<StringFilter>;
+  birthday?: InputMaybe<DatetimeFilter>;
+  hiredDate?: InputMaybe<DatetimeFilter>;
 };
 
 export type MembersFilter = {
@@ -903,6 +933,44 @@ export type MembersConnection = Connection & {
   edges?: Maybe<Array<Maybe<MembersConnectionEdges>>>;
 };
 
+export type WorkSchedulesWorkSchedule = {
+  __typename?: 'WorkSchedulesWorkSchedule';
+  startDay: Scalars['String']['output'];
+  endDay: Scalars['String']['output'];
+  schedule?: Maybe<Scalars['String']['output']>;
+};
+
+export type WorkSchedules = Node & Document & {
+  __typename?: 'WorkSchedules';
+  workSchedule?: Maybe<Array<Maybe<WorkSchedulesWorkSchedule>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type WorkSchedulesWorkScheduleFilter = {
+  startDay?: InputMaybe<DatetimeFilter>;
+  endDay?: InputMaybe<DatetimeFilter>;
+  schedule?: InputMaybe<StringFilter>;
+};
+
+export type WorkSchedulesFilter = {
+  workSchedule?: InputMaybe<WorkSchedulesWorkScheduleFilter>;
+};
+
+export type WorkSchedulesConnectionEdges = {
+  __typename?: 'WorkSchedulesConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<WorkSchedules>;
+};
+
+export type WorkSchedulesConnection = Connection & {
+  __typename?: 'WorkSchedulesConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<WorkSchedulesConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -917,6 +985,8 @@ export type Mutation = {
   createQuicklink: Quicklink;
   updateMembers: Members;
   createMembers: Members;
+  updateWorkSchedules: WorkSchedules;
+  createWorkSchedules: WorkSchedules;
 };
 
 
@@ -994,11 +1064,24 @@ export type MutationCreateMembersArgs = {
   params: MembersMutation;
 };
 
+
+export type MutationUpdateWorkSchedulesArgs = {
+  relativePath: Scalars['String']['input'];
+  params: WorkSchedulesMutation;
+};
+
+
+export type MutationCreateWorkSchedulesArgs = {
+  relativePath: Scalars['String']['input'];
+  params: WorkSchedulesMutation;
+};
+
 export type DocumentUpdateMutation = {
   doc?: InputMaybe<DocMutation>;
   sidebar?: InputMaybe<SidebarMutation>;
   quicklink?: InputMaybe<QuicklinkMutation>;
   members?: InputMaybe<MembersMutation>;
+  workSchedules?: InputMaybe<WorkSchedulesMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1007,6 +1090,7 @@ export type DocumentMutation = {
   sidebar?: InputMaybe<SidebarMutation>;
   quicklink?: InputMaybe<QuicklinkMutation>;
   members?: InputMaybe<MembersMutation>;
+  workSchedules?: InputMaybe<WorkSchedulesMutation>;
 };
 
 export type DocMutation = {
@@ -1184,10 +1268,22 @@ export type QuicklinkMutation = {
 export type MembersMemberMutation = {
   name?: InputMaybe<Scalars['String']['input']>;
   position?: InputMaybe<Scalars['String']['input']>;
+  birthday?: InputMaybe<Scalars['String']['input']>;
+  hiredDate?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type MembersMutation = {
   member?: InputMaybe<Array<InputMaybe<MembersMemberMutation>>>;
+};
+
+export type WorkSchedulesWorkScheduleMutation = {
+  startDay?: InputMaybe<Scalars['String']['input']>;
+  endDay?: InputMaybe<Scalars['String']['input']>;
+  schedule?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type WorkSchedulesMutation = {
+  workSchedule?: InputMaybe<Array<InputMaybe<WorkSchedulesWorkScheduleMutation>>>;
 };
 
 export type DocPartsFragment = { __typename: 'Doc', title: string, body?: any | null };
@@ -1196,7 +1292,9 @@ export type SidebarPartsFragment = { __typename: 'Sidebar', _warning?: string | 
 
 export type QuicklinkPartsFragment = { __typename: 'Quicklink', quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null };
 
-export type MembersPartsFragment = { __typename: 'Members', member?: Array<{ __typename: 'MembersMember', name: string, position: string } | null> | null };
+export type MembersPartsFragment = { __typename: 'Members', member?: Array<{ __typename: 'MembersMember', name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null };
+
+export type WorkSchedulesPartsFragment = { __typename: 'WorkSchedules', workSchedule?: Array<{ __typename: 'WorkSchedulesWorkSchedule', startDay: string, endDay: string, schedule?: string | null } | null> | null };
 
 export type DocQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1260,7 +1358,7 @@ export type MembersQueryVariables = Exact<{
 }>;
 
 
-export type MembersQuery = { __typename?: 'Query', members: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', name: string, position: string } | null> | null } };
+export type MembersQuery = { __typename?: 'Query', members: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null } };
 
 export type MembersConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1272,7 +1370,26 @@ export type MembersConnectionQueryVariables = Exact<{
 }>;
 
 
-export type MembersConnectionQuery = { __typename?: 'Query', membersConnection: { __typename?: 'MembersConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'MembersConnectionEdges', cursor: string, node?: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', name: string, position: string } | null> | null } | null } | null> | null } };
+export type MembersConnectionQuery = { __typename?: 'Query', membersConnection: { __typename?: 'MembersConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'MembersConnectionEdges', cursor: string, node?: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null } | null } | null> | null } };
+
+export type WorkSchedulesQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type WorkSchedulesQuery = { __typename?: 'Query', workSchedules: { __typename: 'WorkSchedules', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, workSchedule?: Array<{ __typename: 'WorkSchedulesWorkSchedule', startDay: string, endDay: string, schedule?: string | null } | null> | null } };
+
+export type WorkSchedulesConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<WorkSchedulesFilter>;
+}>;
+
+
+export type WorkSchedulesConnectionQuery = { __typename?: 'Query', workSchedulesConnection: { __typename?: 'WorkSchedulesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'WorkSchedulesConnectionEdges', cursor: string, node?: { __typename: 'WorkSchedules', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, workSchedule?: Array<{ __typename: 'WorkSchedulesWorkSchedule', startDay: string, endDay: string, schedule?: string | null } | null> | null } | null } | null> | null } };
 
 export const DocPartsFragmentDoc = gql`
     fragment DocParts on Doc {
@@ -1530,6 +1647,19 @@ export const MembersPartsFragmentDoc = gql`
     __typename
     name
     position
+    birthday
+    hiredDate
+  }
+}
+    `;
+export const WorkSchedulesPartsFragmentDoc = gql`
+    fragment WorkSchedulesParts on WorkSchedules {
+  __typename
+  workSchedule {
+    __typename
+    startDay
+    endDay
+    schedule
   }
 }
     `;
@@ -1753,6 +1883,61 @@ export const MembersConnectionDocument = gql`
   }
 }
     ${MembersPartsFragmentDoc}`;
+export const WorkSchedulesDocument = gql`
+    query workSchedules($relativePath: String!) {
+  workSchedules(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...WorkSchedulesParts
+  }
+}
+    ${WorkSchedulesPartsFragmentDoc}`;
+export const WorkSchedulesConnectionDocument = gql`
+    query workSchedulesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: WorkSchedulesFilter) {
+  workSchedulesConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...WorkSchedulesParts
+      }
+    }
+  }
+}
+    ${WorkSchedulesPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -1779,6 +1964,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     membersConnection(variables?: MembersConnectionQueryVariables, options?: C): Promise<{data: MembersConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MembersConnectionQueryVariables, query: string}> {
         return requester<{data: MembersConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MembersConnectionQueryVariables, query: string}, MembersConnectionQueryVariables>(MembersConnectionDocument, variables, options);
+      },
+    workSchedules(variables: WorkSchedulesQueryVariables, options?: C): Promise<{data: WorkSchedulesQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: WorkSchedulesQueryVariables, query: string}> {
+        return requester<{data: WorkSchedulesQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: WorkSchedulesQueryVariables, query: string}, WorkSchedulesQueryVariables>(WorkSchedulesDocument, variables, options);
+      },
+    workSchedulesConnection(variables?: WorkSchedulesConnectionQueryVariables, options?: C): Promise<{data: WorkSchedulesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: WorkSchedulesConnectionQueryVariables, query: string}> {
+        return requester<{data: WorkSchedulesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: WorkSchedulesConnectionQueryVariables, query: string}, WorkSchedulesConnectionQueryVariables>(WorkSchedulesConnectionDocument, variables, options);
       }
     };
   }

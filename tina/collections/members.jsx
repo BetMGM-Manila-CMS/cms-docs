@@ -27,6 +27,16 @@ const MemberField = {
                 "CMS Developer",
                 "Sr. CMS Developer"
             ]
+        },
+        {
+            name: 'birthday',
+            label: 'Birthday',
+            type: 'datetime'
+        },
+        {
+            name: 'hiredDate',
+            label: 'Hired Date',
+            type: 'datetime'
         }
     ]
 }

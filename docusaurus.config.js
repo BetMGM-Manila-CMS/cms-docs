@@ -229,6 +229,14 @@ const config = {
         blogSidebarTitle: 'Recent Updates',
       },
     ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'schedule',
+        routeBasePath: 'schedule',
+        path: './schedule',
+      },
+    ],
   ],
 };
 

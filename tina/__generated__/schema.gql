@@ -61,6 +61,8 @@ type Query {
   quicklinkConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: QuicklinkFilter): QuicklinkConnection!
   members(relativePath: String): Members!
   membersConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: MembersFilter): MembersConnection!
+  workSchedules(relativePath: String): WorkSchedules!
+  workSchedulesConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: WorkSchedulesFilter): WorkSchedulesConnection!
 }
 
 input DocumentFilter {
@@ -68,6 +70,7 @@ input DocumentFilter {
   sidebar: SidebarFilter
   quicklink: QuicklinkFilter
   members: MembersFilter
+  workSchedules: WorkSchedulesFilter
 }
 
 type DocumentConnectionEdges {
@@ -93,7 +96,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Doc | Sidebar | Quicklink | Members | Folder
+union DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Folder
 
 type Doc implements Node & Document {
   title: String!
@@ -717,6 +720,8 @@ type QuicklinkConnection implements Connection {
 type MembersMember {
   name: String!
   position: String!
+  birthday: String
+  hiredDate: String
 }
 
 type Members implements Node & Document {
@@ -726,9 +731,19 @@ type Members implements Node & Document {
   _values: JSON!
 }
 
+input DatetimeFilter {
+  after: String
+  before: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
 input MembersMemberFilter {
   name: StringFilter
   position: StringFilter
+  birthday: DatetimeFilter
+  hiredDate: DatetimeFilter
 }
 
 input MembersFilter {
@@ -746,6 +761,40 @@ type MembersConnection implements Connection {
   edges: [MembersConnectionEdges]
 }
 
+type WorkSchedulesWorkSchedule {
+  startDay: String!
+  endDay: String!
+  schedule: String
+}
+
+type WorkSchedules implements Node & Document {
+  workSchedule: [WorkSchedulesWorkSchedule]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input WorkSchedulesWorkScheduleFilter {
+  startDay: DatetimeFilter
+  endDay: DatetimeFilter
+  schedule: StringFilter
+}
+
+input WorkSchedulesFilter {
+  workSchedule: WorkSchedulesWorkScheduleFilter
+}
+
+type WorkSchedulesConnectionEdges {
+  cursor: String!
+  node: WorkSchedules
+}
+
+type WorkSchedulesConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [WorkSchedulesConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -759,6 +808,8 @@ type Mutation {
   createQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
   updateMembers(relativePath: String!, params: MembersMutation!): Members!
   createMembers(relativePath: String!, params: MembersMutation!): Members!
+  updateWorkSchedules(relativePath: String!, params: WorkSchedulesMutation!): WorkSchedules!
+  createWorkSchedules(relativePath: String!, params: WorkSchedulesMutation!): WorkSchedules!
 }
 
 input DocumentUpdateMutation {
@@ -766,6 +817,7 @@ input DocumentUpdateMutation {
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
   members: MembersMutation
+  workSchedules: WorkSchedulesMutation
   relativePath: String
 }
 
@@ -774,6 +826,7 @@ input DocumentMutation {
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
   members: MembersMutation
+  workSchedules: WorkSchedulesMutation
 }
 
 input DocMutation {
@@ -951,10 +1004,22 @@ input QuicklinkMutation {
 input MembersMemberMutation {
   name: String
   position: String
+  birthday: String
+  hiredDate: String
 }
 
 input MembersMutation {
   member: [MembersMemberMutation]
+}
+
+input WorkSchedulesWorkScheduleMutation {
+  startDay: String
+  endDay: String
+  schedule: String
+}
+
+input WorkSchedulesMutation {
+  workSchedule: [WorkSchedulesWorkScheduleMutation]
 }
 
 schema {

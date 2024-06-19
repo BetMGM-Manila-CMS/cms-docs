@@ -250,5 +250,17 @@ fragment MembersParts on Members {
     __typename
     name
     position
+    birthday
+    hiredDate
+  }
+}
+
+fragment WorkSchedulesParts on WorkSchedules {
+  __typename
+  workSchedule {
+    __typename
+    startDay
+    endDay
+    schedule
   }
 }
