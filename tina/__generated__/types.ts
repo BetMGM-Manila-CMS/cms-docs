@@ -87,6 +87,8 @@ export type Query = {
   sidebarConnection: SidebarConnection;
   quicklink: Quicklink;
   quicklinkConnection: QuicklinkConnection;
+  members: Members;
+  membersConnection: MembersConnection;
 };
 
 
@@ -155,10 +157,26 @@ export type QueryQuicklinkConnectionArgs = {
   filter?: InputMaybe<QuicklinkFilter>;
 };
 
+
+export type QueryMembersArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryMembersConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<MembersFilter>;
+};
+
 export type DocumentFilter = {
   doc?: InputMaybe<DocFilter>;
   sidebar?: InputMaybe<SidebarFilter>;
   quicklink?: InputMaybe<QuicklinkFilter>;
+  members?: InputMaybe<MembersFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -198,7 +216,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Doc | Sidebar | Quicklink | Folder;
+export type DocumentNode = Doc | Sidebar | Quicklink | Members | Folder;
 
 export type Doc = Node & Document & {
   __typename?: 'Doc';
@@ -849,6 +867,42 @@ export type QuicklinkConnection = Connection & {
   edges?: Maybe<Array<Maybe<QuicklinkConnectionEdges>>>;
 };
 
+export type MembersMember = {
+  __typename?: 'MembersMember';
+  name: Scalars['String']['output'];
+  position: Scalars['String']['output'];
+};
+
+export type Members = Node & Document & {
+  __typename?: 'Members';
+  member?: Maybe<Array<Maybe<MembersMember>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type MembersMemberFilter = {
+  name?: InputMaybe<StringFilter>;
+  position?: InputMaybe<StringFilter>;
+};
+
+export type MembersFilter = {
+  member?: InputMaybe<MembersMemberFilter>;
+};
+
+export type MembersConnectionEdges = {
+  __typename?: 'MembersConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Members>;
+};
+
+export type MembersConnection = Connection & {
+  __typename?: 'MembersConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<MembersConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -861,6 +915,8 @@ export type Mutation = {
   createSidebar: Sidebar;
   updateQuicklink: Quicklink;
   createQuicklink: Quicklink;
+  updateMembers: Members;
+  createMembers: Members;
 };
 
 
@@ -926,10 +982,23 @@ export type MutationCreateQuicklinkArgs = {
   params: QuicklinkMutation;
 };
 
+
+export type MutationUpdateMembersArgs = {
+  relativePath: Scalars['String']['input'];
+  params: MembersMutation;
+};
+
+
+export type MutationCreateMembersArgs = {
+  relativePath: Scalars['String']['input'];
+  params: MembersMutation;
+};
+
 export type DocumentUpdateMutation = {
   doc?: InputMaybe<DocMutation>;
   sidebar?: InputMaybe<SidebarMutation>;
   quicklink?: InputMaybe<QuicklinkMutation>;
+  members?: InputMaybe<MembersMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -937,6 +1006,7 @@ export type DocumentMutation = {
   doc?: InputMaybe<DocMutation>;
   sidebar?: InputMaybe<SidebarMutation>;
   quicklink?: InputMaybe<QuicklinkMutation>;
+  members?: InputMaybe<MembersMutation>;
 };
 
 export type DocMutation = {
@@ -1111,11 +1181,22 @@ export type QuicklinkMutation = {
   quickLinksGroup?: InputMaybe<Array<InputMaybe<QuicklinkQuickLinksGroupMutation>>>;
 };
 
+export type MembersMemberMutation = {
+  name?: InputMaybe<Scalars['String']['input']>;
+  position?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type MembersMutation = {
+  member?: InputMaybe<Array<InputMaybe<MembersMemberMutation>>>;
+};
+
 export type DocPartsFragment = { __typename: 'Doc', title: string, body?: any | null };
 
 export type SidebarPartsFragment = { __typename: 'Sidebar', _warning?: string | null, label: string, items?: Array<{ __typename: 'SidebarItems', label: string, items?: Array<{ __typename: 'SidebarItemsItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsLink', title: string, href: string } | { __typename: 'SidebarItemsItemsDivider', title: string } | null> | null } | null> | null };
 
 export type QuicklinkPartsFragment = { __typename: 'Quicklink', quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null };
+
+export type MembersPartsFragment = { __typename: 'Members', member?: Array<{ __typename: 'MembersMember', name: string, position: string } | null> | null };
 
 export type DocQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1173,6 +1254,25 @@ export type QuicklinkConnectionQueryVariables = Exact<{
 
 
 export type QuicklinkConnectionQuery = { __typename?: 'Query', quicklinkConnection: { __typename?: 'QuicklinkConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'QuicklinkConnectionEdges', cursor: string, node?: { __typename: 'Quicklink', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null } | null } | null> | null } };
+
+export type MembersQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type MembersQuery = { __typename?: 'Query', members: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', name: string, position: string } | null> | null } };
+
+export type MembersConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<MembersFilter>;
+}>;
+
+
+export type MembersConnectionQuery = { __typename?: 'Query', membersConnection: { __typename?: 'MembersConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'MembersConnectionEdges', cursor: string, node?: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', name: string, position: string } | null> | null } | null } | null> | null } };
 
 export const DocPartsFragmentDoc = gql`
     fragment DocParts on Doc {
@@ -1423,6 +1523,16 @@ export const QuicklinkPartsFragmentDoc = gql`
   }
 }
     `;
+export const MembersPartsFragmentDoc = gql`
+    fragment MembersParts on Members {
+  __typename
+  member {
+    __typename
+    name
+    position
+  }
+}
+    `;
 export const DocDocument = gql`
     query doc($relativePath: String!) {
   doc(relativePath: $relativePath) {
@@ -1588,6 +1698,61 @@ export const QuicklinkConnectionDocument = gql`
   }
 }
     ${QuicklinkPartsFragmentDoc}`;
+export const MembersDocument = gql`
+    query members($relativePath: String!) {
+  members(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...MembersParts
+  }
+}
+    ${MembersPartsFragmentDoc}`;
+export const MembersConnectionDocument = gql`
+    query membersConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: MembersFilter) {
+  membersConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...MembersParts
+      }
+    }
+  }
+}
+    ${MembersPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -1608,6 +1773,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     quicklinkConnection(variables?: QuicklinkConnectionQueryVariables, options?: C): Promise<{data: QuicklinkConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuicklinkConnectionQueryVariables, query: string}> {
         return requester<{data: QuicklinkConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuicklinkConnectionQueryVariables, query: string}, QuicklinkConnectionQueryVariables>(QuicklinkConnectionDocument, variables, options);
+      },
+    members(variables: MembersQueryVariables, options?: C): Promise<{data: MembersQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MembersQueryVariables, query: string}> {
+        return requester<{data: MembersQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MembersQueryVariables, query: string}, MembersQueryVariables>(MembersDocument, variables, options);
+      },
+    membersConnection(variables?: MembersConnectionQueryVariables, options?: C): Promise<{data: MembersConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MembersConnectionQueryVariables, query: string}> {
+        return requester<{data: MembersConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MembersConnectionQueryVariables, query: string}, MembersConnectionQueryVariables>(MembersConnectionDocument, variables, options);
       }
     };
   }
@@ -1650,7 +1821,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/1.4/content/7eb9602a-63c1-49ab-986c-560697edb96a/github/main",
+        url: "http://localhost:4001/graphql",
         queries,
       })
     )

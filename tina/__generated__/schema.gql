@@ -59,12 +59,15 @@ type Query {
   sidebarConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SidebarFilter): SidebarConnection!
   quicklink(relativePath: String): Quicklink!
   quicklinkConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: QuicklinkFilter): QuicklinkConnection!
+  members(relativePath: String): Members!
+  membersConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: MembersFilter): MembersConnection!
 }
 
 input DocumentFilter {
   doc: DocFilter
   sidebar: SidebarFilter
   quicklink: QuicklinkFilter
+  members: MembersFilter
 }
 
 type DocumentConnectionEdges {
@@ -90,7 +93,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Doc | Sidebar | Quicklink | Folder
+union DocumentNode = Doc | Sidebar | Quicklink | Members | Folder
 
 type Doc implements Node & Document {
   title: String!
@@ -711,6 +714,38 @@ type QuicklinkConnection implements Connection {
   edges: [QuicklinkConnectionEdges]
 }
 
+type MembersMember {
+  name: String!
+  position: String!
+}
+
+type Members implements Node & Document {
+  member: [MembersMember]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input MembersMemberFilter {
+  name: StringFilter
+  position: StringFilter
+}
+
+input MembersFilter {
+  member: MembersMemberFilter
+}
+
+type MembersConnectionEdges {
+  cursor: String!
+  node: Members
+}
+
+type MembersConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [MembersConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -722,12 +757,15 @@ type Mutation {
   createSidebar(relativePath: String!, params: SidebarMutation!): Sidebar!
   updateQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
   createQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
+  updateMembers(relativePath: String!, params: MembersMutation!): Members!
+  createMembers(relativePath: String!, params: MembersMutation!): Members!
 }
 
 input DocumentUpdateMutation {
   doc: DocMutation
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
+  members: MembersMutation
   relativePath: String
 }
 
@@ -735,6 +773,7 @@ input DocumentMutation {
   doc: DocMutation
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
+  members: MembersMutation
 }
 
 input DocMutation {
@@ -907,6 +946,15 @@ input QuicklinkQuickLinksGroupMutation {
 
 input QuicklinkMutation {
   quickLinksGroup: [QuicklinkQuickLinksGroupMutation]
+}
+
+input MembersMemberMutation {
+  name: String
+  position: String
+}
+
+input MembersMutation {
+  member: [MembersMemberMutation]
 }
 
 schema {

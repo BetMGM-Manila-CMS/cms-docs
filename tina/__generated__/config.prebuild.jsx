@@ -741,6 +741,54 @@ var QuickLinkCollection = {
   ]
 };
 
+// tina/collections/members.jsx
+var MemberField = {
+  name: "member",
+  label: "Member",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.name : null };
+  },
+  fields: [
+    {
+      name: "name",
+      label: "Name",
+      type: "string",
+      required: true,
+      isTitle: true
+    },
+    {
+      name: "position",
+      label: "Position",
+      type: "string",
+      required: true,
+      options: [
+        "Web Content Specialist",
+        "Jr. CMS Developer",
+        "CMS Developer",
+        "Sr. CMS Developer"
+      ]
+    }
+  ]
+};
+var MembersCollection = {
+  name: "members",
+  label: "Members",
+  path: "config/members",
+  format: "json",
+  ui: {
+    global: true,
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  fields: [
+    MemberField
+  ]
+};
+
 // tina/config.tsx
 var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
 var config_default = defineConfig({
@@ -771,7 +819,8 @@ var config_default = defineConfig({
     collections: [
       DocCollection,
       SidebarCollection,
-      QuickLinkCollection
+      QuickLinkCollection,
+      MembersCollection
     ]
   }
 });

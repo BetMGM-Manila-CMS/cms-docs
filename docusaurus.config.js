@@ -167,6 +167,7 @@ const config = {
           }, */
           // { to: "/team", label: "Team 🚧", position: "left" },
           { to: "/updates", label: "Updates 📢", position: "left" },
+          { to: "/team", label: "Team", position: "left" },
           /* {
             position: 'left',
             type: "docSidebar",
