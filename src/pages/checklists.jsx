@@ -38,7 +38,6 @@ export default function Checklists() {
         params[key] = value
         return params
     }, {}) : {}
-    console.log(checklists)
 
     const { group } = params
     const findChecklists = (group) => checklists.find(data => data.label.toLowerCase().replaceAll(' ', '-') === group)
