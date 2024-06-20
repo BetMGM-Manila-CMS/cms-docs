@@ -4,14 +4,15 @@ import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied
 import { defineConfig, wrapFieldsWithMeta } from 'tinacms'
 import React from "react"
 import Papa from 'papaparse';
+import { displayRangeDate } from "@site/utils/date.js"
 
-const displayDate = (start, end) => {
+/* const displayDate = (start, end) => {
     const options = { month: 'short', day: '2-digit', year: 'numeric' };
     const startDate = new Intl.DateTimeFormat('en-US', options).format(new Date(start)).replace(',', '');
     const endDate = new Intl.DateTimeFormat('en-US', options).format(new Date(end)).replace(',', '')
 
     return `${startDate} - ${endDate}`
-}
+} */
 
 const WorkScheduleField = {
     name: "workSchedule",
@@ -19,7 +20,7 @@ const WorkScheduleField = {
     type: "object",
     list: true,
     itemProps: (item) => {
-        return { label: item && item.startDay && item.endDay ? displayDate(item.startDay, item.endDay) : null };
+        return { label: item && item.startDay && item.endDay ? displayRangeDate(item.startDay, item.endDay) : null };
     },
     fields: [
         {
