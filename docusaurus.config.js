@@ -171,7 +171,6 @@ const config = {
               },
             ]
           },
-          { to: "/updates", label: "Updates 📢" },
           /* { 
             type: "dropdown", 
             label: "Quick Links", 

@@ -24,7 +24,15 @@ export default function () {
     const tableColumns = tableData ? Object.keys(tableData[0]) : null
 
     const cellColorClass = (value) => {
-        if ()
+        if (value === 'Vacation') {
+            return 'dark:bg-green-700 bg-green-400'
+        } else if (value === 'WFH') {
+            return 'dark:bg-cyan-700 bg-cyan-400'
+        } else if (value === 'WFO') {
+            return 'dark:bg-amber-700 bg-amber-400'            
+        }
+
+        return ''
     }
 
     return (
