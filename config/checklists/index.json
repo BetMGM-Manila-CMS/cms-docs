@@ -1,0 +1,212 @@
+{
+  "checklistGroup": [
+    {
+      "label": "Casino",
+      "checklists": [
+        {
+          "label": "Customer Onboarding",
+          "checklist": [
+            {
+              "label": "Create user accounts"
+            },
+            {
+              "label": "Provide training sessions"
+            },
+            {
+              "label": "Set up personalized profiles"
+            },
+            {
+              "label": "Collect customer feedback"
+            }
+          ]
+        },
+        {
+          "label": "Website Development",
+          "checklist": [
+            {
+              "label": "Design wireframes"
+            },
+            {
+              "label": "Code HTML/CSS templates"
+            },
+            {
+              "label": "Implement responsive design"
+            },
+            {
+              "label": "Optimize images and assets"
+            }
+          ]
+        },
+        {
+          "label": "Mobile App Testing",
+          "checklist": [
+            {
+              "label": "Perform unit testing"
+            },
+            {
+              "label": "Conduct integration testing"
+            },
+            {
+              "label": "Check UI/UX consistency"
+            },
+            {
+              "label": "Test functionality across devices"
+            },
+            {
+              "label": "Review performance metrics"
+            }
+          ]
+        },
+        {
+          "label": "Software Deployment",
+          "checklist": [
+            {
+              "label": "Prepare deployment plan"
+            },
+            {
+              "label": "Set up staging environment"
+            },
+            {
+              "label": "Execute deployment scripts"
+            },
+            {
+              "label": "Verify data integrity"
+            },
+            {
+              "label": "Perform rollback tests if necessary"
+            }
+          ]
+        },
+        {
+          "label": "Product Launch",
+          "checklist": [
+            {
+              "label": "Coordinate marketing campaigns"
+            },
+            {
+              "label": "Prepare press releases"
+            },
+            {
+              "label": "Train customer support teams"
+            },
+            {
+              "label": "Monitor website traffic"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Poker",
+      "checklists": [
+        {
+          "label": "Quality Assurance",
+          "checklist": [
+            {
+              "label": "Define testing criteria"
+            },
+            {
+              "label": "Execute test cases"
+            },
+            {
+              "label": "Document test results"
+            },
+            {
+              "label": "Validate bug fixes"
+            },
+            {
+              "label": "Perform regression testing"
+            },
+            {
+              "label": "Conduct user acceptance testing"
+            }
+          ]
+        },
+        {
+          "label": "Content Creation",
+          "checklist": [
+            {
+              "label": "Research target audience"
+            },
+            {
+              "label": "Develop content strategy"
+            },
+            {
+              "label": "Write SEO-friendly content"
+            },
+            {
+              "label": "Proofread and edit"
+            }
+          ]
+        },
+        {
+          "label": "Event Planning",
+          "checklist": [
+            {
+              "label": "Secure venue and permits"
+            },
+            {
+              "label": "Create event schedule"
+            },
+            {
+              "label": "Arrange catering and vendors"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Sports",
+      "checklists": [
+        {
+          "label": "Financial Audit",
+          "checklist": [
+            {
+              "label": "Gather financial documents"
+            },
+            {
+              "label": "Conduct risk assessment"
+            },
+            {
+              "label": "Review accounting practices"
+            },
+            {
+              "label": "Verify compliance with regulations"
+            }
+          ]
+        },
+        {
+          "label": "Customer Onboarding",
+          "checklist": [
+            {
+              "label": "Create user accounts"
+            },
+            {
+              "label": "Provide training sessions"
+            },
+            {
+              "label": "Set up personalized profiles"
+            },
+            {
+              "label": "Collect customer feedback"
+            }
+          ]
+        },
+        {
+          "label": "Security Assessment",
+          "checklist": [
+            {
+              "label": "Perform vulnerability scan"
+            },
+            {
+              "label": "Conduct penetration testing"
+            },
+            {
+              "label": "Review access controls"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

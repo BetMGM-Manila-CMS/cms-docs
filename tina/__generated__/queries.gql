@@ -156,3 +156,56 @@ query quicklinkConnection($before: String, $after: String, $first: Float, $last:
     }
   }
 }
+
+query checklists($relativePath: String!) {
+  checklists(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...ChecklistsParts
+  }
+}
+
+query checklistsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ChecklistsFilter) {
+  checklistsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...ChecklistsParts
+      }
+    }
+  }
+}

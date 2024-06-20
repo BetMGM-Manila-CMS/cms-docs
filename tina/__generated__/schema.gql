@@ -59,12 +59,15 @@ type Query {
   sidebarConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SidebarFilter): SidebarConnection!
   quicklink(relativePath: String): Quicklink!
   quicklinkConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: QuicklinkFilter): QuicklinkConnection!
+  checklists(relativePath: String): Checklists!
+  checklistsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ChecklistsFilter): ChecklistsConnection!
 }
 
 input DocumentFilter {
   doc: DocFilter
   sidebar: SidebarFilter
   quicklink: QuicklinkFilter
+  checklists: ChecklistsFilter
 }
 
 type DocumentConnectionEdges {
@@ -90,7 +93,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Doc | Sidebar | Quicklink | Folder
+union DocumentNode = Doc | Sidebar | Quicklink | Checklists | Folder
 
 type Doc implements Node & Document {
   title: String!
@@ -711,6 +714,56 @@ type QuicklinkConnection implements Connection {
   edges: [QuicklinkConnectionEdges]
 }
 
+type ChecklistsChecklistGroupChecklistsChecklist {
+  label: String!
+}
+
+type ChecklistsChecklistGroupChecklists {
+  label: String!
+  checklist: [ChecklistsChecklistGroupChecklistsChecklist]
+}
+
+type ChecklistsChecklistGroup {
+  label: String!
+  checklists: [ChecklistsChecklistGroupChecklists]
+}
+
+type Checklists implements Node & Document {
+  checklistGroup: [ChecklistsChecklistGroup]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input ChecklistsChecklistGroupChecklistsChecklistFilter {
+  label: StringFilter
+}
+
+input ChecklistsChecklistGroupChecklistsFilter {
+  label: StringFilter
+  checklist: ChecklistsChecklistGroupChecklistsChecklistFilter
+}
+
+input ChecklistsChecklistGroupFilter {
+  label: StringFilter
+  checklists: ChecklistsChecklistGroupChecklistsFilter
+}
+
+input ChecklistsFilter {
+  checklistGroup: ChecklistsChecklistGroupFilter
+}
+
+type ChecklistsConnectionEdges {
+  cursor: String!
+  node: Checklists
+}
+
+type ChecklistsConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [ChecklistsConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -722,12 +775,15 @@ type Mutation {
   createSidebar(relativePath: String!, params: SidebarMutation!): Sidebar!
   updateQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
   createQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
+  updateChecklists(relativePath: String!, params: ChecklistsMutation!): Checklists!
+  createChecklists(relativePath: String!, params: ChecklistsMutation!): Checklists!
 }
 
 input DocumentUpdateMutation {
   doc: DocMutation
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
+  checklists: ChecklistsMutation
   relativePath: String
 }
 
@@ -735,6 +791,7 @@ input DocumentMutation {
   doc: DocMutation
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
+  checklists: ChecklistsMutation
 }
 
 input DocMutation {
@@ -907,6 +964,24 @@ input QuicklinkQuickLinksGroupMutation {
 
 input QuicklinkMutation {
   quickLinksGroup: [QuicklinkQuickLinksGroupMutation]
+}
+
+input ChecklistsChecklistGroupChecklistsChecklistMutation {
+  label: String
+}
+
+input ChecklistsChecklistGroupChecklistsMutation {
+  label: String
+  checklist: [ChecklistsChecklistGroupChecklistsChecklistMutation]
+}
+
+input ChecklistsChecklistGroupMutation {
+  label: String
+  checklists: [ChecklistsChecklistGroupChecklistsMutation]
+}
+
+input ChecklistsMutation {
+  checklistGroup: [ChecklistsChecklistGroupMutation]
 }
 
 schema {
