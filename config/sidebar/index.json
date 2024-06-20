@@ -2,9 +2,6 @@
   "label": "Docs Sidebar",
   "items": [
     {
-      "label": "Team"
-    },
-    {
       "label": "Builds",
       "items": [
         {
