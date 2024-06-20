@@ -741,6 +741,7 @@ var QuickLinkCollection = {
   ]
 };
 
+<<<<<<< HEAD
 // tina/collections/members.jsx
 var MemberField = {
   name: "member",
@@ -786,6 +787,57 @@ var MembersCollection = {
   name: "members",
   label: "Members",
   path: "config/members",
+=======
+// tina/collections/checklists.jsx
+var LabelField2 = {
+  name: "label",
+  label: "Label",
+  type: "string",
+  required: true
+};
+var ChecklistField = {
+  name: "checklist",
+  label: "Checklist",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    LabelField2
+  ]
+};
+var ChecklistsField = {
+  name: "checklists",
+  label: "Checklists",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    LabelField2,
+    ChecklistField
+  ]
+};
+var ChecklistGroup = {
+  name: "checklistGroup",
+  label: "Checklist Group",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    LabelField2,
+    ChecklistsField
+  ]
+};
+var ChecklistsCollection = {
+  name: "checklists",
+  label: "Check Lists",
+  path: "config/checklists",
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   format: "json",
   ui: {
     global: true,
@@ -795,6 +847,7 @@ var MembersCollection = {
     }
   },
   fields: [
+<<<<<<< HEAD
     MemberField
   ]
 };
@@ -888,6 +941,9 @@ var WorkSchedulesCollection = {
   },
   fields: [
     WorkScheduleField
+=======
+    ChecklistGroup
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   ]
 };
 
@@ -922,8 +978,12 @@ var config_default = defineConfig2({
       DocCollection,
       SidebarCollection,
       QuickLinkCollection,
+<<<<<<< HEAD
       MembersCollection,
       WorkSchedulesCollection
+=======
+      ChecklistsCollection
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
     ]
   }
 });

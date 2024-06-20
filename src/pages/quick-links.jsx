@@ -138,9 +138,9 @@ export default function QuickLinks() {
                     <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-primary text-white inline-flex">
                         <details className="daisy-dropdown dropdown-start tracking-normal !inline-flex self-end mr-2 md:mr-4">
                             <summary className="daisy-btn daisy-btn-sm md:daisy-btn-md bg-primary text-white hover:bg-gray-600">
-                                {quickLinks[0].label[0].toUpperCase() + quickLinks[0].label.slice(1)} 
+                                {quickLinks[0].label[0].toUpperCase() + quickLinks[0].label.slice(1)}
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                                 </svg>
                             </summary>
                             <ul className="p-2 daisy-shadow daisy-menu daisy-dropdown-content z-[1] bg-base-100 rounded-box w-52 mt-2 shadow">
@@ -154,7 +154,7 @@ export default function QuickLinks() {
                     <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white">
                         Collection of frequently used Sitecore links, tools, and previews
                     </p>
-                    
+
                     <div className="flex flex-wrap justify-center gap-2">
                         <JumpLinks quickLinks={quickLinks} />
                     </div>
@@ -163,68 +163,9 @@ export default function QuickLinks() {
             </section>
 
             <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-                
+
                 <QuickLinksList quickLinks={quickLinks} />
             </section>
-            {/* {
-                group ?
-                    <>
-                        <section
-                            style={{
-                                backgroundImage: `url(https://res.cloudinary.com/dlfu36fiw/image/upload/v1717638160/hero-bg_mkts99.png)`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                                backgroundAttachment: "fixed"
-                            }}
-                            className="bg-white dark:bg-[#333333] bg-cover bg-blend-multiply bg-fixed"
-                        >
-                            <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-                                <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-primary text-white">
-                                    {group[0].toUpperCase() + group.slice(1)} Quick Links
-                                </h1>
-                                <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white">
-                                    Collection of frequently used Sitecore links, tools, and previews
-                                </p>
-
-                                <div className="flex flex-wrap justify-center gap-2">
-                                    <JumpLinks quickLinks={quickLinks} />
-                                </div>
-                            </div>
-
-                        </section>
-
-                        <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-                            <QuickLinksList quickLinks={quickLinks} />
-                        </section>
-                    </> :
-                    <>
-                        <section
-                            style={{
-                                backgroundImage: `url(https://res.cloudinary.com/dlfu36fiw/image/upload/v1717638160/hero-bg_mkts99.png)`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                                backgroundAttachment: "fixed"
-                            }}
-                            className="bg-white dark:bg-[#333333] bg-cover bg-blend-multiply bg-fixed"
-                        >
-                            <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
-                                <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-primary">
-                                    Quick Links Select
-                                </h1>
-
-                                <details className="dropdown">
-                                <summary className="m-1 btn bg-primary text-white hover:bg-gray-600">Select Quick Links</summary>
-                                <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 left-1/2 -translate-x-1/2">
-                                    {
-                                        quickLinks.map((quickLink, index) => <li key={index}><Link to={`/quick-links?group=${quickLink.label.toLowerCase().replaceAll(' ', '-')}`}>{quickLink.label}</Link></li>)
-                                    }
-                                </ul>
-                                </details>
-
-                            </div>
-                        </section>
-                    </>
-            } */}
         </Layout>
     )
 }

@@ -244,6 +244,7 @@ fragment QuicklinkParts on Quicklink {
   }
 }
 
+<<<<<<< HEAD
 fragment MembersParts on Members {
   __typename
   member {
@@ -262,5 +263,20 @@ fragment WorkSchedulesParts on WorkSchedules {
     startDay
     endDay
     schedule
+=======
+fragment ChecklistsParts on Checklists {
+  __typename
+  checklistGroup {
+    __typename
+    label
+    checklists {
+      __typename
+      label
+      checklist {
+        __typename
+        label
+      }
+    }
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   }
 }

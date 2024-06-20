@@ -155,7 +155,23 @@ const config = {
               },
             ]
           }, */
-          { to: "/quick-links", label: "Quick Links", position: "left" },
+          {
+            type: "dropdown",
+            label: "Resources",
+            position: "left",
+            items: [
+              {
+                to: '/checklists',
+                label: 'Checklists',
+              },
+              { to: "/quick-links", label: "Quick Links" },
+              {
+                href: 'https://coralracing-my.sharepoint.com/:x:/r/personal/emma_bulos_entaingroup_com/_layouts/15/Doc.aspx?sourcedoc=%7B287DEB61-B6DE-43C4-A5BC-620460666F3D%7D&file=Test%20Account%20Usernames.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1',
+                label: 'Test Accounts',
+              },
+            ]
+          },
+          { to: "/updates", label: "Updates 📢" },
           /* { 
             type: "dropdown", 
             label: "Quick Links", 
@@ -174,11 +190,6 @@ const config = {
             sidebarId: "buildsSidebar",
             label: 'Announcements 📢',
           }, */
-          {
-            href: 'https://coralracing-my.sharepoint.com/:x:/r/personal/emma_bulos_entaingroup_com/_layouts/15/Doc.aspx?sourcedoc=%7B287DEB61-B6DE-43C4-A5BC-620460666F3D%7D&file=Test%20Account%20Usernames.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1',
-            position: 'left',
-            label: 'Test Accounts',
-          },
           {
             type: "search",
             position: "right",

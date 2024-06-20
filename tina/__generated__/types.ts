@@ -87,10 +87,15 @@ export type Query = {
   sidebarConnection: SidebarConnection;
   quicklink: Quicklink;
   quicklinkConnection: QuicklinkConnection;
+<<<<<<< HEAD
   members: Members;
   membersConnection: MembersConnection;
   workSchedules: WorkSchedules;
   workSchedulesConnection: WorkSchedulesConnection;
+=======
+  checklists: Checklists;
+  checklistsConnection: ChecklistsConnection;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 };
 
 
@@ -160,17 +165,26 @@ export type QueryQuicklinkConnectionArgs = {
 };
 
 
+<<<<<<< HEAD
 export type QueryMembersArgs = {
+=======
+export type QueryChecklistsArgs = {
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
 
+<<<<<<< HEAD
 export type QueryMembersConnectionArgs = {
+=======
+export type QueryChecklistsConnectionArgs = {
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
+<<<<<<< HEAD
   filter?: InputMaybe<MembersFilter>;
 };
 
@@ -187,14 +201,21 @@ export type QueryWorkSchedulesConnectionArgs = {
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
   filter?: InputMaybe<WorkSchedulesFilter>;
+=======
+  filter?: InputMaybe<ChecklistsFilter>;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 };
 
 export type DocumentFilter = {
   doc?: InputMaybe<DocFilter>;
   sidebar?: InputMaybe<SidebarFilter>;
   quicklink?: InputMaybe<QuicklinkFilter>;
+<<<<<<< HEAD
   members?: InputMaybe<MembersFilter>;
   workSchedules?: InputMaybe<WorkSchedulesFilter>;
+=======
+  checklists?: InputMaybe<ChecklistsFilter>;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 };
 
 export type DocumentConnectionEdges = {
@@ -234,7 +255,11 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
+<<<<<<< HEAD
 export type DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Folder;
+=======
+export type DocumentNode = Doc | Sidebar | Quicklink | Checklists | Folder;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 
 export type Doc = Node & Document & {
   __typename?: 'Doc';
@@ -885,6 +910,7 @@ export type QuicklinkConnection = Connection & {
   edges?: Maybe<Array<Maybe<QuicklinkConnectionEdges>>>;
 };
 
+<<<<<<< HEAD
 export type MembersMember = {
   __typename?: 'MembersMember';
   name: Scalars['String']['output'];
@@ -896,11 +922,34 @@ export type MembersMember = {
 export type Members = Node & Document & {
   __typename?: 'Members';
   member?: Maybe<Array<Maybe<MembersMember>>>;
+=======
+export type ChecklistsChecklistGroupChecklistsChecklist = {
+  __typename?: 'ChecklistsChecklistGroupChecklistsChecklist';
+  label: Scalars['String']['output'];
+};
+
+export type ChecklistsChecklistGroupChecklists = {
+  __typename?: 'ChecklistsChecklistGroupChecklists';
+  label: Scalars['String']['output'];
+  checklist?: Maybe<Array<Maybe<ChecklistsChecklistGroupChecklistsChecklist>>>;
+};
+
+export type ChecklistsChecklistGroup = {
+  __typename?: 'ChecklistsChecklistGroup';
+  label: Scalars['String']['output'];
+  checklists?: Maybe<Array<Maybe<ChecklistsChecklistGroupChecklists>>>;
+};
+
+export type Checklists = Node & Document & {
+  __typename?: 'Checklists';
+  checklistGroup?: Maybe<Array<Maybe<ChecklistsChecklistGroup>>>;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
 };
 
+<<<<<<< HEAD
 export type DatetimeFilter = {
   after?: InputMaybe<Scalars['String']['input']>;
   before?: InputMaybe<Scalars['String']['input']>;
@@ -969,6 +1018,37 @@ export type WorkSchedulesConnection = Connection & {
   pageInfo: PageInfo;
   totalCount: Scalars['Float']['output'];
   edges?: Maybe<Array<Maybe<WorkSchedulesConnectionEdges>>>;
+=======
+export type ChecklistsChecklistGroupChecklistsChecklistFilter = {
+  label?: InputMaybe<StringFilter>;
+};
+
+export type ChecklistsChecklistGroupChecklistsFilter = {
+  label?: InputMaybe<StringFilter>;
+  checklist?: InputMaybe<ChecklistsChecklistGroupChecklistsChecklistFilter>;
+};
+
+export type ChecklistsChecklistGroupFilter = {
+  label?: InputMaybe<StringFilter>;
+  checklists?: InputMaybe<ChecklistsChecklistGroupChecklistsFilter>;
+};
+
+export type ChecklistsFilter = {
+  checklistGroup?: InputMaybe<ChecklistsChecklistGroupFilter>;
+};
+
+export type ChecklistsConnectionEdges = {
+  __typename?: 'ChecklistsConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Checklists>;
+};
+
+export type ChecklistsConnection = Connection & {
+  __typename?: 'ChecklistsConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<ChecklistsConnectionEdges>>>;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 };
 
 export type Mutation = {
@@ -983,10 +1063,15 @@ export type Mutation = {
   createSidebar: Sidebar;
   updateQuicklink: Quicklink;
   createQuicklink: Quicklink;
+<<<<<<< HEAD
   updateMembers: Members;
   createMembers: Members;
   updateWorkSchedules: WorkSchedules;
   createWorkSchedules: WorkSchedules;
+=======
+  updateChecklists: Checklists;
+  createChecklists: Checklists;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 };
 
 
@@ -1053,6 +1138,7 @@ export type MutationCreateQuicklinkArgs = {
 };
 
 
+<<<<<<< HEAD
 export type MutationUpdateMembersArgs = {
   relativePath: Scalars['String']['input'];
   params: MembersMutation;
@@ -1074,14 +1160,29 @@ export type MutationUpdateWorkSchedulesArgs = {
 export type MutationCreateWorkSchedulesArgs = {
   relativePath: Scalars['String']['input'];
   params: WorkSchedulesMutation;
+=======
+export type MutationUpdateChecklistsArgs = {
+  relativePath: Scalars['String']['input'];
+  params: ChecklistsMutation;
+};
+
+
+export type MutationCreateChecklistsArgs = {
+  relativePath: Scalars['String']['input'];
+  params: ChecklistsMutation;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 };
 
 export type DocumentUpdateMutation = {
   doc?: InputMaybe<DocMutation>;
   sidebar?: InputMaybe<SidebarMutation>;
   quicklink?: InputMaybe<QuicklinkMutation>;
+<<<<<<< HEAD
   members?: InputMaybe<MembersMutation>;
   workSchedules?: InputMaybe<WorkSchedulesMutation>;
+=======
+  checklists?: InputMaybe<ChecklistsMutation>;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1089,8 +1190,12 @@ export type DocumentMutation = {
   doc?: InputMaybe<DocMutation>;
   sidebar?: InputMaybe<SidebarMutation>;
   quicklink?: InputMaybe<QuicklinkMutation>;
+<<<<<<< HEAD
   members?: InputMaybe<MembersMutation>;
   workSchedules?: InputMaybe<WorkSchedulesMutation>;
+=======
+  checklists?: InputMaybe<ChecklistsMutation>;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 };
 
 export type DocMutation = {
@@ -1265,6 +1370,7 @@ export type QuicklinkMutation = {
   quickLinksGroup?: InputMaybe<Array<InputMaybe<QuicklinkQuickLinksGroupMutation>>>;
 };
 
+<<<<<<< HEAD
 export type MembersMemberMutation = {
   name?: InputMaybe<Scalars['String']['input']>;
   position?: InputMaybe<Scalars['String']['input']>;
@@ -1284,6 +1390,24 @@ export type WorkSchedulesWorkScheduleMutation = {
 
 export type WorkSchedulesMutation = {
   workSchedule?: InputMaybe<Array<InputMaybe<WorkSchedulesWorkScheduleMutation>>>;
+=======
+export type ChecklistsChecklistGroupChecklistsChecklistMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+};
+
+export type ChecklistsChecklistGroupChecklistsMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  checklist?: InputMaybe<Array<InputMaybe<ChecklistsChecklistGroupChecklistsChecklistMutation>>>;
+};
+
+export type ChecklistsChecklistGroupMutation = {
+  label?: InputMaybe<Scalars['String']['input']>;
+  checklists?: InputMaybe<Array<InputMaybe<ChecklistsChecklistGroupChecklistsMutation>>>;
+};
+
+export type ChecklistsMutation = {
+  checklistGroup?: InputMaybe<Array<InputMaybe<ChecklistsChecklistGroupMutation>>>;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 };
 
 export type DocPartsFragment = { __typename: 'Doc', title: string, body?: any | null };
@@ -1292,9 +1416,13 @@ export type SidebarPartsFragment = { __typename: 'Sidebar', _warning?: string | 
 
 export type QuicklinkPartsFragment = { __typename: 'Quicklink', quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null };
 
+<<<<<<< HEAD
 export type MembersPartsFragment = { __typename: 'Members', member?: Array<{ __typename: 'MembersMember', name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null };
 
 export type WorkSchedulesPartsFragment = { __typename: 'WorkSchedules', workSchedule?: Array<{ __typename: 'WorkSchedulesWorkSchedule', startDay: string, endDay: string, schedule?: string | null } | null> | null };
+=======
+export type ChecklistsPartsFragment = { __typename: 'Checklists', checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string } | null> | null } | null> | null } | null> | null };
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 
 export type DocQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1353,19 +1481,30 @@ export type QuicklinkConnectionQueryVariables = Exact<{
 
 export type QuicklinkConnectionQuery = { __typename?: 'Query', quicklinkConnection: { __typename?: 'QuicklinkConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'QuicklinkConnectionEdges', cursor: string, node?: { __typename: 'Quicklink', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null } | null } | null> | null } };
 
+<<<<<<< HEAD
 export type MembersQueryVariables = Exact<{
+=======
+export type ChecklistsQueryVariables = Exact<{
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   relativePath: Scalars['String']['input'];
 }>;
 
 
+<<<<<<< HEAD
 export type MembersQuery = { __typename?: 'Query', members: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null } };
 
 export type MembersConnectionQueryVariables = Exact<{
+=======
+export type ChecklistsQuery = { __typename?: 'Query', checklists: { __typename: 'Checklists', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string } | null> | null } | null> | null } | null> | null } };
+
+export type ChecklistsConnectionQueryVariables = Exact<{
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   before?: InputMaybe<Scalars['String']['input']>;
   after?: InputMaybe<Scalars['String']['input']>;
   first?: InputMaybe<Scalars['Float']['input']>;
   last?: InputMaybe<Scalars['Float']['input']>;
   sort?: InputMaybe<Scalars['String']['input']>;
+<<<<<<< HEAD
   filter?: InputMaybe<MembersFilter>;
 }>;
 
@@ -1390,6 +1529,13 @@ export type WorkSchedulesConnectionQueryVariables = Exact<{
 
 
 export type WorkSchedulesConnectionQuery = { __typename?: 'Query', workSchedulesConnection: { __typename?: 'WorkSchedulesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'WorkSchedulesConnectionEdges', cursor: string, node?: { __typename: 'WorkSchedules', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, workSchedule?: Array<{ __typename: 'WorkSchedulesWorkSchedule', startDay: string, endDay: string, schedule?: string | null } | null> | null } | null } | null> | null } };
+=======
+  filter?: InputMaybe<ChecklistsFilter>;
+}>;
+
+
+export type ChecklistsConnectionQuery = { __typename?: 'Query', checklistsConnection: { __typename?: 'ChecklistsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ChecklistsConnectionEdges', cursor: string, node?: { __typename: 'Checklists', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string } | null> | null } | null> | null } | null> | null } | null } | null> | null } };
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 
 export const DocPartsFragmentDoc = gql`
     fragment DocParts on Doc {
@@ -1640,6 +1786,7 @@ export const QuicklinkPartsFragmentDoc = gql`
   }
 }
     `;
+<<<<<<< HEAD
 export const MembersPartsFragmentDoc = gql`
     fragment MembersParts on Members {
   __typename
@@ -1660,6 +1807,22 @@ export const WorkSchedulesPartsFragmentDoc = gql`
     startDay
     endDay
     schedule
+=======
+export const ChecklistsPartsFragmentDoc = gql`
+    fragment ChecklistsParts on Checklists {
+  __typename
+  checklistGroup {
+    __typename
+    label
+    checklists {
+      __typename
+      label
+      checklist {
+        __typename
+        label
+      }
+    }
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   }
 }
     `;
@@ -1828,9 +1991,15 @@ export const QuicklinkConnectionDocument = gql`
   }
 }
     ${QuicklinkPartsFragmentDoc}`;
+<<<<<<< HEAD
 export const MembersDocument = gql`
     query members($relativePath: String!) {
   members(relativePath: $relativePath) {
+=======
+export const ChecklistsDocument = gql`
+    query checklists($relativePath: String!) {
+  checklists(relativePath: $relativePath) {
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
     ... on Document {
       _sys {
         filename
@@ -1842,6 +2011,7 @@ export const MembersDocument = gql`
       }
       id
     }
+<<<<<<< HEAD
     ...MembersParts
   }
 }
@@ -1849,6 +2019,15 @@ export const MembersDocument = gql`
 export const MembersConnectionDocument = gql`
     query membersConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: MembersFilter) {
   membersConnection(
+=======
+    ...ChecklistsParts
+  }
+}
+    ${ChecklistsPartsFragmentDoc}`;
+export const ChecklistsConnectionDocument = gql`
+    query checklistsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ChecklistsFilter) {
+  checklistsConnection(
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
     before: $before
     after: $after
     first: $first
@@ -1877,11 +2056,16 @@ export const MembersConnectionDocument = gql`
           }
           id
         }
+<<<<<<< HEAD
         ...MembersParts
+=======
+        ...ChecklistsParts
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
       }
     }
   }
 }
+<<<<<<< HEAD
     ${MembersPartsFragmentDoc}`;
 export const WorkSchedulesDocument = gql`
     query workSchedules($relativePath: String!) {
@@ -1938,6 +2122,9 @@ export const WorkSchedulesConnectionDocument = gql`
   }
 }
     ${WorkSchedulesPartsFragmentDoc}`;
+=======
+    ${ChecklistsPartsFragmentDoc}`;
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -1959,6 +2146,7 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
     quicklinkConnection(variables?: QuicklinkConnectionQueryVariables, options?: C): Promise<{data: QuicklinkConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuicklinkConnectionQueryVariables, query: string}> {
         return requester<{data: QuicklinkConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: QuicklinkConnectionQueryVariables, query: string}, QuicklinkConnectionQueryVariables>(QuicklinkConnectionDocument, variables, options);
       },
+<<<<<<< HEAD
     members(variables: MembersQueryVariables, options?: C): Promise<{data: MembersQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MembersQueryVariables, query: string}> {
         return requester<{data: MembersQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: MembersQueryVariables, query: string}, MembersQueryVariables>(MembersDocument, variables, options);
       },
@@ -1970,6 +2158,13 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     workSchedulesConnection(variables?: WorkSchedulesConnectionQueryVariables, options?: C): Promise<{data: WorkSchedulesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: WorkSchedulesConnectionQueryVariables, query: string}> {
         return requester<{data: WorkSchedulesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: WorkSchedulesConnectionQueryVariables, query: string}, WorkSchedulesConnectionQueryVariables>(WorkSchedulesConnectionDocument, variables, options);
+=======
+    checklists(variables: ChecklistsQueryVariables, options?: C): Promise<{data: ChecklistsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ChecklistsQueryVariables, query: string}> {
+        return requester<{data: ChecklistsQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ChecklistsQueryVariables, query: string}, ChecklistsQueryVariables>(ChecklistsDocument, variables, options);
+      },
+    checklistsConnection(variables?: ChecklistsConnectionQueryVariables, options?: C): Promise<{data: ChecklistsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ChecklistsConnectionQueryVariables, query: string}> {
+        return requester<{data: ChecklistsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: ChecklistsConnectionQueryVariables, query: string}, ChecklistsConnectionQueryVariables>(ChecklistsConnectionDocument, variables, options);
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
       }
     };
   }

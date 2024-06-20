@@ -157,8 +157,13 @@ query quicklinkConnection($before: String, $after: String, $first: Float, $last:
   }
 }
 
+<<<<<<< HEAD
 query members($relativePath: String!) {
   members(relativePath: $relativePath) {
+=======
+query checklists($relativePath: String!) {
+  checklists(relativePath: $relativePath) {
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
     ... on Document {
       _sys {
         filename
@@ -170,12 +175,21 @@ query members($relativePath: String!) {
       }
       id
     }
+<<<<<<< HEAD
     ...MembersParts
   }
 }
 
 query membersConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: MembersFilter) {
   membersConnection(
+=======
+    ...ChecklistsParts
+  }
+}
+
+query checklistsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ChecklistsFilter) {
+  checklistsConnection(
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
     before: $before
     after: $after
     first: $first
@@ -204,6 +218,7 @@ query membersConnection($before: String, $after: String, $first: Float, $last: F
           }
           id
         }
+<<<<<<< HEAD
         ...MembersParts
       }
     }
@@ -258,6 +273,9 @@ query workSchedulesConnection($before: String, $after: String, $first: Float, $l
           id
         }
         ...WorkSchedulesParts
+=======
+        ...ChecklistsParts
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
       }
     }
   }

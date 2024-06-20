@@ -59,18 +59,27 @@ type Query {
   sidebarConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SidebarFilter): SidebarConnection!
   quicklink(relativePath: String): Quicklink!
   quicklinkConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: QuicklinkFilter): QuicklinkConnection!
+<<<<<<< HEAD
   members(relativePath: String): Members!
   membersConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: MembersFilter): MembersConnection!
   workSchedules(relativePath: String): WorkSchedules!
   workSchedulesConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: WorkSchedulesFilter): WorkSchedulesConnection!
+=======
+  checklists(relativePath: String): Checklists!
+  checklistsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ChecklistsFilter): ChecklistsConnection!
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 }
 
 input DocumentFilter {
   doc: DocFilter
   sidebar: SidebarFilter
   quicklink: QuicklinkFilter
+<<<<<<< HEAD
   members: MembersFilter
   workSchedules: WorkSchedulesFilter
+=======
+  checklists: ChecklistsFilter
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 }
 
 type DocumentConnectionEdges {
@@ -96,7 +105,11 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
+<<<<<<< HEAD
 union DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Folder
+=======
+union DocumentNode = Doc | Sidebar | Quicklink | Checklists | Folder
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 
 type Doc implements Node & Document {
   title: String!
@@ -717,6 +730,7 @@ type QuicklinkConnection implements Connection {
   edges: [QuicklinkConnectionEdges]
 }
 
+<<<<<<< HEAD
 type MembersMember {
   name: String!
   position: String!
@@ -726,11 +740,30 @@ type MembersMember {
 
 type Members implements Node & Document {
   member: [MembersMember]
+=======
+type ChecklistsChecklistGroupChecklistsChecklist {
+  label: String!
+}
+
+type ChecklistsChecklistGroupChecklists {
+  label: String!
+  checklist: [ChecklistsChecklistGroupChecklistsChecklist]
+}
+
+type ChecklistsChecklistGroup {
+  label: String!
+  checklists: [ChecklistsChecklistGroupChecklists]
+}
+
+type Checklists implements Node & Document {
+  checklistGroup: [ChecklistsChecklistGroup]
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
 }
 
+<<<<<<< HEAD
 input DatetimeFilter {
   after: String
   before: String
@@ -793,6 +826,35 @@ type WorkSchedulesConnection implements Connection {
   pageInfo: PageInfo!
   totalCount: Float!
   edges: [WorkSchedulesConnectionEdges]
+=======
+input ChecklistsChecklistGroupChecklistsChecklistFilter {
+  label: StringFilter
+}
+
+input ChecklistsChecklistGroupChecklistsFilter {
+  label: StringFilter
+  checklist: ChecklistsChecklistGroupChecklistsChecklistFilter
+}
+
+input ChecklistsChecklistGroupFilter {
+  label: StringFilter
+  checklists: ChecklistsChecklistGroupChecklistsFilter
+}
+
+input ChecklistsFilter {
+  checklistGroup: ChecklistsChecklistGroupFilter
+}
+
+type ChecklistsConnectionEdges {
+  cursor: String!
+  node: Checklists
+}
+
+type ChecklistsConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [ChecklistsConnectionEdges]
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 }
 
 type Mutation {
@@ -806,18 +868,27 @@ type Mutation {
   createSidebar(relativePath: String!, params: SidebarMutation!): Sidebar!
   updateQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
   createQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
+<<<<<<< HEAD
   updateMembers(relativePath: String!, params: MembersMutation!): Members!
   createMembers(relativePath: String!, params: MembersMutation!): Members!
   updateWorkSchedules(relativePath: String!, params: WorkSchedulesMutation!): WorkSchedules!
   createWorkSchedules(relativePath: String!, params: WorkSchedulesMutation!): WorkSchedules!
+=======
+  updateChecklists(relativePath: String!, params: ChecklistsMutation!): Checklists!
+  createChecklists(relativePath: String!, params: ChecklistsMutation!): Checklists!
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 }
 
 input DocumentUpdateMutation {
   doc: DocMutation
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
+<<<<<<< HEAD
   members: MembersMutation
   workSchedules: WorkSchedulesMutation
+=======
+  checklists: ChecklistsMutation
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   relativePath: String
 }
 
@@ -825,8 +896,12 @@ input DocumentMutation {
   doc: DocMutation
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
+<<<<<<< HEAD
   members: MembersMutation
   workSchedules: WorkSchedulesMutation
+=======
+  checklists: ChecklistsMutation
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 }
 
 input DocMutation {
@@ -1001,6 +1076,7 @@ input QuicklinkMutation {
   quickLinksGroup: [QuicklinkQuickLinksGroupMutation]
 }
 
+<<<<<<< HEAD
 input MembersMemberMutation {
   name: String
   position: String
@@ -1020,6 +1096,24 @@ input WorkSchedulesWorkScheduleMutation {
 
 input WorkSchedulesMutation {
   workSchedule: [WorkSchedulesWorkScheduleMutation]
+=======
+input ChecklistsChecklistGroupChecklistsChecklistMutation {
+  label: String
+}
+
+input ChecklistsChecklistGroupChecklistsMutation {
+  label: String
+  checklist: [ChecklistsChecklistGroupChecklistsChecklistMutation]
+}
+
+input ChecklistsChecklistGroupMutation {
+  label: String
+  checklists: [ChecklistsChecklistGroupChecklistsMutation]
+}
+
+input ChecklistsMutation {
+  checklistGroup: [ChecklistsChecklistGroupMutation]
+>>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
 }
 
 schema {
