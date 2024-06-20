@@ -1,0 +1,11 @@
+.custom-docsidebar .collapseSidebarButton_src-theme-DocSidebar-Desktop-CollapseButton-styles-module {
+    display: none !important;
+}
+
+.custom-docsidebar .sidebar_src-theme-DocSidebar-Desktop-styles-module {
+    padding-top: 0 !important;
+}
+
+.custom-docsidebar {
+    margin-top: 0 !important;
+}

@@ -1,5 +1,5 @@
 // tina/config.tsx
-import { defineConfig } from "tinacms";
+import { defineConfig as defineConfig2 } from "tinacms";
 
 // tina/collections/doc.jsx
 import React2 from "react";
@@ -741,6 +741,138 @@ var QuickLinkCollection = {
   ]
 };
 
+// tina/collections/members.jsx
+var MembersCollection = {
+  name: "members",
+  label: "Members",
+  path: "members",
+  format: "mdx",
+  fields: [
+    {
+      type: "string",
+      label: "Name",
+      name: "name",
+      isTitle: true,
+      required: true
+    },
+    {
+      name: "position",
+      label: "Position",
+      type: "string",
+      required: true,
+      options: [
+        "Web Content Specialist",
+        "Jr. CMS Developer",
+        "CMS Developer",
+        "Sr. CMS Developer"
+      ]
+    },
+    {
+      name: "birthday",
+      label: "Birthday",
+      type: "datetime"
+    },
+    {
+      name: "hiredDate",
+      label: "Hired Date",
+      type: "datetime"
+    }
+  ]
+};
+
+// tina/collections/work-schedules.jsx
+import { defineConfig, wrapFieldsWithMeta as wrapFieldsWithMeta2 } from "tinacms";
+import React4 from "react";
+import Papa from "papaparse";
+
+// utils/date.js
+var displayRangeDate = (start, end) => {
+  const options = { month: "short", day: "2-digit", year: "numeric" };
+  const startDate = new Intl.DateTimeFormat("en-US", options).format(new Date(start)).replace(",", "");
+  const endDate = new Intl.DateTimeFormat("en-US", options).format(new Date(end)).replace(",", "");
+  return `${startDate} - ${endDate}`;
+};
+
+// tina/collections/work-schedules.jsx
+var WorkScheduleField = {
+  name: "workSchedule",
+  label: "Work Schedule",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item && item.startDay && item.endDay ? displayRangeDate(item.startDay, item.endDay) : null };
+  },
+  fields: [
+    {
+      name: "startDay",
+      label: "Start Day",
+      type: "datetime",
+      required: true
+    },
+    {
+      name: "endDay",
+      label: "End Day",
+      type: "datetime",
+      required: true
+    },
+    {
+      name: "schedule",
+      label: "Schedule",
+      type: "string",
+      ui: {
+        validate: (value, data) => {
+          if (!value || value.trim() === "") {
+            return "CSV string is empty.";
+          }
+          const lines = value.split("\n");
+          const trimmedLines = lines.map((line) => line.trim()).filter((line) => line !== "");
+          if (trimmedLines.length === 0) {
+            return "CSV string has no valid lines.";
+          }
+          const columnCount = trimmedLines[0].split(",").length;
+          for (let i = 0; i < trimmedLines.length; i++) {
+            const line = trimmedLines[i];
+            const fields = line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g);
+            if (fields.length !== columnCount) {
+              return `Line ${i + 1} does not have the correct number of columns. Expected ${columnCount}, but got ${fields.length}.`;
+            }
+          }
+        },
+        component: wrapFieldsWithMeta2(({ field, input, meta }) => {
+          const data = meta.valid ? Papa.parse(input.value, { header: true, skipEmptyLines: true }).data : null;
+          const columns = data ? Object.keys(data[0]) : null;
+          console.log(data, columns);
+          return React4.createElement("div", null, React4.createElement(
+            "textarea",
+            {
+              name: "workSchedule.0.schedule",
+              className: "shadow-inner text-base px-3 py-2 text-gray-600 resize-y focus:shadow-outline focus:border-blue-500 block w-full border border-gray-200 focus:text-gray-900 rounded-md",
+              ...input,
+              style: { minHeight: "160px" }
+            }
+          ), data && React4.createElement("div", { className: "mt-4 shadow-inner text-base p-2 text-gray-600 resize-y focus:shadow-outline focus:border-blue-500 block w-full border border-gray-200 focus:text-gray-900 rounded-md bg-white" }, React4.createElement("table", { className: "table w-full" }, React4.createElement("thead", null, React4.createElement("tr", null, columns && columns.map((col) => React4.createElement("th", { className: "p-1 border border-gray-200 text-start", key: col }, col)))), React4.createElement("tbody", null, data && data.map((row, rowIndex) => React4.createElement("tr", { key: rowIndex }, columns && columns.map((col) => React4.createElement("td", { className: "p-1 border border-gray-200", key: col }, row[col]))))))));
+        })
+      }
+    }
+  ]
+};
+var WorkSchedulesCollection = {
+  name: "workSchedules",
+  label: "Work Schedules",
+  path: "config/work-schedules",
+  format: "json",
+  ui: {
+    global: true,
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  fields: [
+    WorkScheduleField
+  ]
+};
+
 // tina/collections/checklists.jsx
 var LabelField2 = {
   name: "label",
@@ -803,9 +935,63 @@ var ChecklistsCollection = {
   ]
 };
 
+// tina/collections/carousel-assignments.jsx
+var CarouselAssignmentField = {
+  name: "carouselAssignment",
+  label: "Carousel Assignment",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item && item.startDay && item.endDay ? displayRangeDate(item.startDay, item.endDay) : null };
+  },
+  fields: [
+    {
+      name: "startDay",
+      label: "Start Day",
+      type: "datetime",
+      required: true
+    },
+    {
+      name: "endDay",
+      label: "End Day",
+      type: "datetime",
+      required: true
+    },
+    {
+      name: "casinoPoker",
+      label: "Casino and Poker",
+      type: "object",
+      fields: [
+        {
+          name: "betNJ",
+          label: "BetMGM NJ",
+          type: "reference",
+          collections: ["members"]
+        }
+      ]
+    }
+  ]
+};
+var CarouselAssignmentsCollection = {
+  name: "carouselAssignments",
+  label: "Carousel Assignments",
+  path: "config/carousel-assignments",
+  format: "json",
+  ui: {
+    global: true,
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  fields: [
+    CarouselAssignmentField
+  ]
+};
+
 // tina/config.tsx
 var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
-var config_default = defineConfig({
+var config_default = defineConfig2({
   // branch,
   // Get this from tina.io
   // clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
@@ -834,7 +1020,10 @@ var config_default = defineConfig({
       DocCollection,
       SidebarCollection,
       QuickLinkCollection,
-      ChecklistsCollection
+      MembersCollection,
+      WorkSchedulesCollection,
+      ChecklistsCollection,
+      CarouselAssignmentsCollection
     ]
   }
 });

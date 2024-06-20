@@ -41,10 +41,10 @@ const config = {
     cloudinaryCloudName: process.env.CLOUDINARY_CLOUD_NAME
   },
 
-  scripts: [{
+  /* scripts: [{
     src: './node_modules/flowbite/dist/flowbite.min.js',
     async: true
-  }],
+  }], */
 
   presets: [
     [
@@ -171,7 +171,6 @@ const config = {
               },
             ]
           },
-          { to: "/updates", label: "Updates 📢" },
           /* { 
             type: "dropdown", 
             label: "Quick Links", 
@@ -182,6 +181,8 @@ const config = {
             }))
           }, */
           // { to: "/team", label: "Team 🚧", position: "left" },
+          { to: "/updates", label: "Updates 📢", position: "left" },
+          { to: "/team", label: "Team", position: "left" },
           /* {
             position: 'left',
             type: "docSidebar",
@@ -236,6 +237,14 @@ const config = {
         path: './updates',
         blogSidebarCount: 10,
         blogSidebarTitle: 'Recent Updates',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      {
+        id: 'schedule',
+        routeBasePath: 'schedule',
+        path: './schedule',
       },
     ],
   ],

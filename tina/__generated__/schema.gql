@@ -59,15 +59,24 @@ type Query {
   sidebarConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SidebarFilter): SidebarConnection!
   quicklink(relativePath: String): Quicklink!
   quicklinkConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: QuicklinkFilter): QuicklinkConnection!
+  members(relativePath: String): Members!
+  membersConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: MembersFilter): MembersConnection!
+  workSchedules(relativePath: String): WorkSchedules!
+  workSchedulesConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: WorkSchedulesFilter): WorkSchedulesConnection!
   checklists(relativePath: String): Checklists!
   checklistsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ChecklistsFilter): ChecklistsConnection!
+  carouselAssignments(relativePath: String): CarouselAssignments!
+  carouselAssignmentsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: CarouselAssignmentsFilter): CarouselAssignmentsConnection!
 }
 
 input DocumentFilter {
   doc: DocFilter
   sidebar: SidebarFilter
   quicklink: QuicklinkFilter
+  members: MembersFilter
+  workSchedules: WorkSchedulesFilter
   checklists: ChecklistsFilter
+  carouselAssignments: CarouselAssignmentsFilter
 }
 
 type DocumentConnectionEdges {
@@ -93,7 +102,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Doc | Sidebar | Quicklink | Checklists | Folder
+union DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Checklists | CarouselAssignments | Folder
 
 type Doc implements Node & Document {
   title: String!
@@ -714,6 +723,76 @@ type QuicklinkConnection implements Connection {
   edges: [QuicklinkConnectionEdges]
 }
 
+type Members implements Node & Document {
+  name: String!
+  position: String!
+  birthday: String
+  hiredDate: String
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input DatetimeFilter {
+  after: String
+  before: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
+input MembersFilter {
+  name: StringFilter
+  position: StringFilter
+  birthday: DatetimeFilter
+  hiredDate: DatetimeFilter
+}
+
+type MembersConnectionEdges {
+  cursor: String!
+  node: Members
+}
+
+type MembersConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [MembersConnectionEdges]
+}
+
+type WorkSchedulesWorkSchedule {
+  startDay: String!
+  endDay: String!
+  schedule: String
+}
+
+type WorkSchedules implements Node & Document {
+  workSchedule: [WorkSchedulesWorkSchedule]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input WorkSchedulesWorkScheduleFilter {
+  startDay: DatetimeFilter
+  endDay: DatetimeFilter
+  schedule: StringFilter
+}
+
+input WorkSchedulesFilter {
+  workSchedule: WorkSchedulesWorkScheduleFilter
+}
+
+type WorkSchedulesConnectionEdges {
+  cursor: String!
+  node: WorkSchedules
+}
+
+type WorkSchedulesConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [WorkSchedulesConnectionEdges]
+}
+
 type ChecklistsChecklistGroupChecklistsChecklist {
   label: String!
 }
@@ -764,6 +843,54 @@ type ChecklistsConnection implements Connection {
   edges: [ChecklistsConnectionEdges]
 }
 
+union CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJ = Members
+
+type CarouselAssignmentsCarouselAssignmentCasinoPoker {
+  betNJ: CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJ
+}
+
+type CarouselAssignmentsCarouselAssignment {
+  startDay: String!
+  endDay: String!
+  casinoPoker: CarouselAssignmentsCarouselAssignmentCasinoPoker
+}
+
+type CarouselAssignments implements Node & Document {
+  carouselAssignment: [CarouselAssignmentsCarouselAssignment]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJFilter {
+  members: MembersFilter
+}
+
+input CarouselAssignmentsCarouselAssignmentCasinoPokerFilter {
+  betNJ: CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJFilter
+}
+
+input CarouselAssignmentsCarouselAssignmentFilter {
+  startDay: DatetimeFilter
+  endDay: DatetimeFilter
+  casinoPoker: CarouselAssignmentsCarouselAssignmentCasinoPokerFilter
+}
+
+input CarouselAssignmentsFilter {
+  carouselAssignment: CarouselAssignmentsCarouselAssignmentFilter
+}
+
+type CarouselAssignmentsConnectionEdges {
+  cursor: String!
+  node: CarouselAssignments
+}
+
+type CarouselAssignmentsConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [CarouselAssignmentsConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -775,15 +902,24 @@ type Mutation {
   createSidebar(relativePath: String!, params: SidebarMutation!): Sidebar!
   updateQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
   createQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
+  updateMembers(relativePath: String!, params: MembersMutation!): Members!
+  createMembers(relativePath: String!, params: MembersMutation!): Members!
+  updateWorkSchedules(relativePath: String!, params: WorkSchedulesMutation!): WorkSchedules!
+  createWorkSchedules(relativePath: String!, params: WorkSchedulesMutation!): WorkSchedules!
   updateChecklists(relativePath: String!, params: ChecklistsMutation!): Checklists!
   createChecklists(relativePath: String!, params: ChecklistsMutation!): Checklists!
+  updateCarouselAssignments(relativePath: String!, params: CarouselAssignmentsMutation!): CarouselAssignments!
+  createCarouselAssignments(relativePath: String!, params: CarouselAssignmentsMutation!): CarouselAssignments!
 }
 
 input DocumentUpdateMutation {
   doc: DocMutation
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
+  members: MembersMutation
+  workSchedules: WorkSchedulesMutation
   checklists: ChecklistsMutation
+  carouselAssignments: CarouselAssignmentsMutation
   relativePath: String
 }
 
@@ -791,7 +927,10 @@ input DocumentMutation {
   doc: DocMutation
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
+  members: MembersMutation
+  workSchedules: WorkSchedulesMutation
   checklists: ChecklistsMutation
+  carouselAssignments: CarouselAssignmentsMutation
 }
 
 input DocMutation {
@@ -966,6 +1105,23 @@ input QuicklinkMutation {
   quickLinksGroup: [QuicklinkQuickLinksGroupMutation]
 }
 
+input MembersMutation {
+  name: String
+  position: String
+  birthday: String
+  hiredDate: String
+}
+
+input WorkSchedulesWorkScheduleMutation {
+  startDay: String
+  endDay: String
+  schedule: String
+}
+
+input WorkSchedulesMutation {
+  workSchedule: [WorkSchedulesWorkScheduleMutation]
+}
+
 input ChecklistsChecklistGroupChecklistsChecklistMutation {
   label: String
 }
@@ -982,6 +1138,20 @@ input ChecklistsChecklistGroupMutation {
 
 input ChecklistsMutation {
   checklistGroup: [ChecklistsChecklistGroupMutation]
+}
+
+input CarouselAssignmentsCarouselAssignmentCasinoPokerMutation {
+  betNJ: String
+}
+
+input CarouselAssignmentsCarouselAssignmentMutation {
+  startDay: String
+  endDay: String
+  casinoPoker: CarouselAssignmentsCarouselAssignmentCasinoPokerMutation
+}
+
+input CarouselAssignmentsMutation {
+  carouselAssignment: [CarouselAssignmentsCarouselAssignmentMutation]
 }
 
 schema {

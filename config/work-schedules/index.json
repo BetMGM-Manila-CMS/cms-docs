@@ -1,0 +1,34 @@
+{
+  "workSchedule": [
+    {
+      "startDay": "2024-06-23T16:00:00.000Z",
+      "endDay": "2024-06-27T16:00:00.000Z",
+      "schedule": "Employee ID,Name,Mon,Teu,Wed,Thu,Fri\n1873,Don John Melendez,Vacation,WFH,WFO,WFH,WFO\n1893,Amancio Mulliet,Vacation,WFO,WFO,WFH,WFH\n1933,Adam Muajia,Vacation,WFO,WFH,WFH,WFO\n3309,Jax Javate,Vacation,WFO,WFH,WFH,WFO\n4759,Christian Almazora,Vacation,WFO,WFH,WFH,WFO\n3937,Kevin Chavez,Vacation,WFO,WFH,WFH,WFO\n4981,John Llyod Apolo,Vacation,WFO,WFO,WFO,WFO\n3146,Marc Aldous Conde,WFO,WFH,WFH,WFO,WFO\n2979,John Benedict Barreto,Vacation,WFO,WFH,WFH,WFO\n4605,Mark Joshua Javier,Vacation,WFO,WFO,WFO,WFO\n4699,Emmanuel Borromeo,WFO,WFO,WFO,WFH,WFH\n4678,Jeri General,WFO,WFO,WFO,WFH,WFH\n"
+    },
+    {
+      "startDay": "2024-06-30T16:00:00.000Z",
+      "endDay": "2024-07-04T16:00:00.000Z",
+      "schedule": "Employee ID,Name,Mon,Teu,Wed,Thu,Fri\n1873,Don John Melendez,WFO,WFH,WFO,WFH,WFO\n1893,Amancio Mulliet,WFH,WFO,WFO,WFO,WFH\n1933,Adam Muafia,WFO,WFO,WFH,WFH,WFO\n3309,Jax Javate,WFH,WFO,WFO,WFH,WFO\n4759,Christian Almazora,WFO,WFH,WFO,WFO,WFH\n3937,Kevin Chavez,WFO,WFH,WFH,WFO,WFO\n4981,John Llyod Apolo,WFH,WFO,WFO,WFH,WFO\n3146,Marc Aldous Conde,WFH,WFO,WFO,WFH,WFO\n2979,John Benedict Barreto,WFO,WFH,WFH,WFO,WFO\n4605,Mark Joshua Javier,WFH,WFO,WFO,WFH,WFO\n4699,Emmanuel Borromeo,WFO,WFH,WFO,WFH,WFO\n4678,Jeri General,WFO,WFH,WFO,WFH,WFO"
+    },
+    {
+      "startDay": "2024-07-07T16:00:00.000Z",
+      "endDay": "2024-07-11T16:00:00.000Z",
+      "schedule": "Employee ID,Name,Mon,Teu,Wed,Thu,Fri\n1873,Don John Melendez,WFH,WFO,WFO,WFH,WFO\n1893,Amancio Mulliet,WFO,WFO,WFH,WFH,WFO\n1933,Adam Muafia,WFH,WFO,WFH,WFO,WFO\n3309,Jax Javate,WFO,WFH,WFO,WFH,WFO\n4759,Christian Almazora,WFH,WFO,WFO,WFH,WFO\n3937,Kevin Chavez,WFO,WFH,WFO,WFH,WFO\n4981,John Llyod Apolo,WFH,WFO,WFO,WFO,WFH\n3146,Marc Aldous Conde,WFO,WFH,WFO,WFH,WFO\n2979,John Benedict Barreto,WFH,WFO,WFO,WFH,WFO\n4605,Mark Joshua Javier,WFH,WFH,WFO,WFO,WFO\n4699,Emmanuel Borromeo,WFO,WFH,WFH,WFO,WFO\n4678,Jeri General,WFH,WFO,WFO,WFO,WFH"
+    },
+    {
+      "startDay": "2024-07-14T16:00:00.000Z",
+      "endDay": "2024-07-18T16:00:00.000Z",
+      "schedule": "Employee ID,Name,Mon,Teu,Wed,Thu,Fri\n1873,Don John Melendez,WFH,WFO,WFO,WFH,WFO\n1893,Amancio Mulliet,WFO,WFH,WFH,WFO,WFO\n1933,Adam Muafia,WFO,WFH,WFO,WFH,WFO\n3309,Jax Javate,WFH,WFO,WFH,WFO,WFO\n4759,Christian Almazora,WFO,WFO,WFH,WFO,WFH\n3937,Kevin Chavez,WFH,WFO,WFO,WFH,WFO\n4981,John Llyod Apolo,WFO,WFO,WFH,WFH,WFO\n3146,Marc Aldous Conde,WFH,WFO,WFH,WFO,WFO\n2979,John Benedict Barreto,WFO,WFO,WFH,WFH,WFO\n4605,Mark Joshua Javier,WFO,WFH,WFO,WFH,WFO\n4699,Emmanuel Borromeo,WFH,WFO,WFO,WFH,WFO\n4678,Jeri General,WFH,WFO,WFO,WFH,WFO"
+    },
+    {
+      "startDay": "2024-07-21T16:00:00.000Z",
+      "endDay": "2024-07-25T16:00:00.000Z",
+      "schedule": "Employee ID,Name,Mon,Teu,Wed,Thu,Fri\n1873,Don John Melendez,WFH,WFO,WFO,WFH,WFO\n1893,Amancio Mulliet,WFO,WFH,WFO,WFH,WFO\n1933,Adam Muafia,WFH,WFO,WFH,WFO,WFO\n3309,Jax Javate,WFO,WFO,WFH,WFH,WFO\n4759,Christian Almazora,WFH,WFO,WFO,WFH,WFO\n3937,Kevin Chavez,WFO,WFH,WFO,WFH,WFO\n4981,John Llyod Apolo,WFH,WFO,WFH,WFO,WFO\n3146,Marc Aldous Conde,WFO,WFH,WFO,WFO,WFH\n2979,John Benedict Barreto,WFH,WFO,WFO,WFH,WFO\n4605,Mark Joshua Javier,WFO,WFH,WFO,WFH,WFO\n4699,Emmanuel Borromeo,WFH,WFO,WFO,WFO,WFH\n4678,Jeri General,WFH,WFO,WFH,WFO,WFO"
+    },
+    {
+      "startDay": "2024-07-28T16:00:00.000Z",
+      "endDay": "2024-08-01T16:00:00.000Z",
+      "schedule": "Employee ID,Name,Mon,Teu,Wed,Thu,Fri\n1873,Don John Melendez,WFO,WFH,WFH,WFO,WFO\n1893,Amancio Mulliet,WFH,WFO,WFH,WFO,WFO\n1933,Adam Muafia,WFH,WFO,WFO,WFH,WFO\n3309,Jax Javate,WFO,WFO,WFH,WFH,WFO\n4759,Christian Almazora,WFH,WFO,WFO,WFH,WFO\n3937,Kevin Chavez,WFO,WFO,WFH,WFO,WFH\n4981,John Llyod Apolo,WFH,WFO,WFO,WFH,WFO\n3146,Marc Aldous Conde,WFO,WFO,WFH,WFH,WFO\n2979,John Benedict Barreto,WFH,WFO,WFO,WFH,WFO\n4605,Mark Joshua Javier,WFH,WFO,WFO,WFH,WFO\n4699,Emmanuel Borromeo,WFH,WFO,WFO,WFO,WFH\n4678,Jeri General,WFO,WFH,WFH,WFO,WFO"
+    }
+  ]
+}
