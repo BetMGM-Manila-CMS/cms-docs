@@ -70,7 +70,7 @@ export default function () {
                     {tableData && (tableData.map((row, rowIndex) => (
                         <tr key={rowIndex}>
                             {tableColumns && (tableColumns.map((col) => (
-                                <td key={col}>
+                                <td key={col} className="bg-green-500">
                                     {row[col]}
                                 </td>
                             )))}
