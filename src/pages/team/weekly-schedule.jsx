@@ -23,6 +23,10 @@ export default function () {
     const tableData = schedule.schedule ? Papa.parse(schedule.schedule, { header: true, skipEmptyLines: true }).data : null
     const tableColumns = tableData ? Object.keys(tableData[0]) : null
 
+    const cellColorClass = (value) => {
+        if ()
+    }
+
     return (
         <Layout title="Team" description="All things about the team, weekly schedules, monthly assignments and learn more about every one in the team.">
             <section
@@ -70,7 +74,7 @@ export default function () {
                     {tableData && (tableData.map((row, rowIndex) => (
                         <tr key={rowIndex}>
                             {tableColumns && (tableColumns.map((col) => (
-                                <td key={col} className="bg-green-500">
+                                <td key={col} className={cellColorClass(row[col])}>
                                     {row[col]}
                                 </td>
                             )))}
