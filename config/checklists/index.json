@@ -4,93 +4,521 @@
       "label": "Casino",
       "checklists": [
         {
-          "label": "Customer Onboarding",
+          "label": "Carousel",
           "checklist": [
             {
-              "label": "Create user accounts"
+              "label": "Duplicate Template"
             },
             {
-              "label": "Provide training sessions"
+              "label": "Rename Template (Desktop / Mobile)"
             },
             {
-              "label": "Set up personalized profiles"
+              "label": "Title"
             },
             {
-              "label": "Collect customer feedback"
+              "label": "Subtitle"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "4 links"
+            },
+            {
+              "label": "CTA Title"
+            },
+            {
+              "label": "Check Show BG Image"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "Teaser Alignments"
+            },
+            {
+              "label": "Filters"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Pushed to LMT"
+            },
+            {
+              "label": "Preview is looking good"
+            },
+            {
+              "label": "Screenshot commented"
             }
           ]
         },
         {
-          "label": "Website Development",
+          "label": "Carousel (WOF)",
           "checklist": [
             {
-              "label": "Design wireframes"
+              "label": "Duplicate Template"
             },
             {
-              "label": "Code HTML/CSS templates"
+              "label": "Rename Template"
             },
             {
-              "label": "Implement responsive design"
+              "label": "Moved to Recently Built"
             },
             {
-              "label": "Optimize images and assets"
+              "label": "TeaserTitle"
+            },
+            {
+              "label": "SubTitle"
+            },
+            {
+              "label": "CTA Title"
+            },
+            {
+              "label": "4 links"
+            },
+            {
+              "label": "CTA URL"
+            },
+            {
+              "label": "CTA Link Text"
+            },
+            {
+              "label": "Filter"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "Desktop Image"
+            },
+            {
+              "label": "2 TeaserLink URLs"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Preview is looking good"
+            },
+            {
+              "label": "Screenshot commented"
             }
           ]
         },
         {
-          "label": "Mobile App Testing",
+          "label": "ODR Banner",
           "checklist": [
             {
-              "label": "Perform unit testing"
+              "label": "Duplicate Template"
             },
             {
-              "label": "Conduct integration testing"
+              "label": "Rename Template (w/ ODRBanner-)"
             },
             {
-              "label": "Check UI/UX consistency"
+              "label": "4 CTA links"
             },
             {
-              "label": "Test functionality across devices"
+              "label": "Check Show BG Image"
             },
             {
-              "label": "Review performance metrics"
+              "label": "Background Image"
+            },
+            {
+              "label": "Filter"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Check Never Publish"
             }
           ]
         },
         {
-          "label": "Software Deployment",
+          "label": "Video Banner",
           "checklist": [
             {
-              "label": "Prepare deployment plan"
+              "label": "Past video has ended"
             },
             {
-              "label": "Set up staging environment"
+              "label": "Image is compressed (If needed)"
             },
             {
-              "label": "Execute deployment scripts"
+              "label": "No Filter"
             },
             {
-              "label": "Verify data integrity"
+              "label": "ImageOrVideoUrl"
             },
             {
-              "label": "Perform rollback tests if necessary"
+              "label": "ImageThumbnail"
+            },
+            {
+              "label": "LaunchUrl"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "Set Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "ODR Banner is needed"
+            },
+            {
+              "label": "Live Video is looking good"
             }
           ]
         },
         {
-          "label": "Product Launch",
+          "label": "Stories",
           "checklist": [
             {
-              "label": "Coordinate marketing campaigns"
+              "label": "Duplicate StoryContent Template"
             },
             {
-              "label": "Prepare press releases"
+              "label": "Rename Template (w/ underscores)"
             },
             {
-              "label": "Train customer support teams"
+              "label": "CSS backgroundImage"
             },
             {
-              "label": "Monitor website traffic"
+              "label": "HTML Text CTA"
+            },
+            {
+              "label": "Duplicate InstaContainer Template"
+            },
+            {
+              "label": "Rename Parent (w/ underscores)"
+            },
+            {
+              "label": "Rename Child (w/ underscores)"
+            },
+            {
+              "label": "StoryThumbnailImage"
+            },
+            {
+              "label": "Push child on Stories"
+            },
+            {
+              "label": "Title"
+            },
+            {
+              "label": "Add Filter"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Push StoryContent in Child"
+            },
+            {
+              "label": "Push on InstaContainer"
+            },
+            {
+              "label": "Preview is looking good"
+            },
+            {
+              "label": "Screenshot commented"
+            }
+          ]
+        },
+        {
+          "label": "MPP",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Parent (URL)"
+            },
+            {
+              "label": "Rename Child (URL)"
+            },
+            {
+              "label": "Edit Rule to child"
+            },
+            {
+              "label": "PromotionTitle"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "ImageHeadline"
+            },
+            {
+              "label": "DetailedDescription"
+            },
+            {
+              "label": "— Promotion Description"
+            },
+            {
+              "label": "— CTAs w/ color"
+            },
+            {
+              "label": "— HIW"
+            },
+            {
+              "label": "— Game Tiles"
+            },
+            {
+              "label": "ShowTACS is checked"
+            },
+            {
+              "label": "TACTitle"
+            },
+            {
+              "label": "TnCs"
+            },
+            {
+              "label": "— No unwanted characters"
+            },
+            {
+              "label": "— Bold titles"
+            },
+            {
+              "label": "— AM/PM proper format"
+            },
+            {
+              "label": "— Proper links w/ color"
+            },
+            {
+              "label": "— Proper indents and bullets"
+            },
+            {
+              "label": "— No \"Link to\""
+            },
+            {
+              "label": "— Proper table (if included)"
+            },
+            {
+              "label": "— w/ OLG (if NJ)"
+            },
+            {
+              "label": "No Filters"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "MPP looks good"
+            }
+          ]
+        },
+        {
+          "label": "Rest ID",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template"
+            },
+            {
+              "label": "SectionSelector"
+            },
+            {
+              "label": "Campaign Common Data (if w/ Template)"
+            },
+            {
+              "label": "— CommonTitle"
+            },
+            {
+              "label": "— CommonDescription"
+            },
+            {
+              "label": "— CommonTACs"
+            },
+            {
+              "label": "— 2 Images"
+            },
+            {
+              "label": "Inbox (if included)"
+            },
+            {
+              "label": "— PreviewTitle"
+            },
+            {
+              "label": "— PreviewDescription"
+            },
+            {
+              "label": "— PreviewImage"
+            },
+            {
+              "label": "— FullViewTitle"
+            },
+            {
+              "label": "— FullViewDescription"
+            },
+            {
+              "label": "— FullViewImage"
+            },
+            {
+              "label": "— Checked ShowManualTACs"
+            },
+            {
+              "label": "— ManualTACs"
+            },
+            {
+              "label": "Overlay (if included)"
+            },
+            {
+              "label": "— Overlay Title"
+            },
+            {
+              "label": "— Overlay Description"
+            },
+            {
+              "label": "— Overlay CTA"
+            },
+            {
+              "label": "— Overlay Image"
+            },
+            {
+              "label": "— CTANative Link"
+            },
+            {
+              "label": "— CTANative Link Text"
+            },
+            {
+              "label": "Toaster (if included)"
+            },
+            {
+              "label": "— Checked Close with Timer"
+            },
+            {
+              "label": "— Toaster Title"
+            },
+            {
+              "label": "— Toaster Description"
+            },
+            {
+              "label": "— Toaster Image"
+            },
+            {
+              "label": "— Toaster CTA"
+            },
+            {
+              "label": "Pushed To Optimove"
+            },
+            {
+              "label": "Added Templates for Engagement"
+            },
+            {
+              "label": "Looks good in Rest ID Checker"
+            },
+            {
+              "label": "Properly commented on WF"
+            }
+          ]
+        },
+        {
+          "label": "Static Tile",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template"
+            },
+            {
+              "label": "EligibilityCriteriaInfo"
+            },
+            {
+              "label": "Title"
+            },
+            {
+              "label": "Description"
+            },
+            {
+              "label": "KeyTermsAndConditions"
+            },
+            {
+              "label": "TeaserImage"
+            },
+            {
+              "label": "Product"
+            },
+            {
+              "label": "TeaserClass"
+            },
+            {
+              "label": "PrimaryCTA (for Opt-In)"
+            },
+            {
+              "label": "MoreInfoCTA URL & Link Text"
+            },
+            {
+              "label": "ManualTermsAndCondition"
+            },
+            {
+              "label": "Order & OfferBadge"
+            },
+            {
+              "label": "QA Filters"
+            },
+            {
+              "label": "Preview looks good (Desktop & Mobile)"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Pusblish Unchecked"
+            },
+            {
+              "label": "Screenshot"
+            }
+          ]
+        },
+        {
+          "label": "Landing Page",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template (URL)"
+            },
+            {
+              "label": "hero bg"
+            },
+            {
+              "label": "hero img"
+            },
+            {
+              "label": "hero img-alt"
+            },
+            {
+              "label": "hero mobile-bg"
+            },
+            {
+              "label": "Steps 1-2-3"
+            },
+            {
+              "label": "Terms Text"
+            },
+            {
+              "label": "LP looks good in Desktop"
+            },
+            {
+              "label": "LP looks good in Mobile"
             }
           ]
         }
@@ -100,56 +528,339 @@
       "label": "Poker",
       "checklists": [
         {
-          "label": "Quality Assurance",
+          "label": "PLP",
           "checklist": [
             {
-              "label": "Define testing criteria"
+              "label": "Dupilicate Template"
             },
             {
-              "label": "Execute test cases"
+              "label": "Rename File"
             },
             {
-              "label": "Document test results"
+              "label": "Title"
             },
             {
-              "label": "Validate bug fixes"
+              "label": "Description"
             },
             {
-              "label": "Perform regression testing"
+              "label": "BackgroundImage"
             },
             {
-              "label": "Conduct user acceptance testing"
+              "label": "CTA"
+            },
+            {
+              "label": "—CTA data-purl is cleaned"
+            },
+            {
+              "label": "TermsAndConditions (If Opt-In required)"
+            },
+            {
+              "label": "ForegroundImage"
+            },
+            {
+              "label": "OptInRequired (If Opt-In required)"
+            },
+            {
+              "label": "ErrorCTA "
+            },
+            {
+              "label": "—CTA data-purl is cleaned"
+            },
+            {
+              "label": "PromotionalId & Source (If Opt-In required)"
+            },
+            {
+              "label": "QA Filters"
+            },
+            {
+              "label": "Preview looks good"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Check Never Publish (If stated in Project Detail)"
+            },
+            {
+              "label": "Screenshot commented (Desktop & Mobile)"
             }
           ]
         },
         {
-          "label": "Content Creation",
+          "label": "Carousel",
           "checklist": [
             {
-              "label": "Research target audience"
+              "label": "Dupilicate Template"
             },
             {
-              "label": "Develop content strategy"
+              "label": "Rename File"
             },
             {
-              "label": "Write SEO-friendly content"
+              "label": "Title"
             },
             {
-              "label": "Proofread and edit"
+              "label": "Subtitle"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "4 Links"
+            },
+            {
+              "label": "CTATitle"
+            },
+            {
+              "label": "ShowBackgroundImage is ticked"
+            },
+            {
+              "label": "BackgroundImage"
+            },
+            {
+              "label": "QA Filters"
+            },
+            {
+              "label": "Preview looks good (Desktop & Mobile)"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Pusblish Unchecked"
+            },
+            {
+              "label": "Screenshot commented (Desktop & Mobile)"
             }
           ]
         },
         {
-          "label": "Event Planning",
+          "label": "Carousel (partypoker)",
           "checklist": [
             {
-              "label": "Secure venue and permits"
+              "label": "Dupilicate Template"
             },
             {
-              "label": "Create event schedule"
+              "label": "Rename File"
             },
             {
-              "label": "Arrange catering and vendors"
+              "label": "Text"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "ImageLink URL"
+            },
+            {
+              "label": "ImageLink Link Text"
+            },
+            {
+              "label": "Title"
+            },
+            {
+              "label": "TitleLink URL"
+            },
+            {
+              "label": "TitleLink Link Text"
+            },
+            {
+              "label": "ImageOverlay"
+            },
+            {
+              "label": "QA Filters"
+            },
+            {
+              "label": "Preview looks good (Desktop & Mobile)"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Pusblish Unchecked"
+            },
+            {
+              "label": "Screenshot commented (Desktop & Mobile)"
+            }
+          ]
+        },
+        {
+          "label": "Tournament Page",
+          "checklist": [
+            {
+              "label": "Dupilicate Template"
+            },
+            {
+              "label": "Rename URL"
+            },
+            {
+              "label": "SEO Title"
+            },
+            {
+              "label": "SEO Description"
+            },
+            {
+              "label": "SynopsisImage"
+            },
+            {
+              "label": "SynopsisTitle"
+            },
+            {
+              "label": "SypnosisDescription "
+            },
+            {
+              "label": "HeroImage"
+            },
+            {
+              "label": "MainContent1"
+            },
+            {
+              "label": "— PROMO NAME"
+            },
+            {
+              "label": "— Subtitle"
+            },
+            {
+              "label": "— Promo Date"
+            },
+            {
+              "label": "— Promo description"
+            },
+            {
+              "label": "— CTA"
+            },
+            {
+              "label": "— HIW"
+            },
+            {
+              "label": "Terms"
+            },
+            {
+              "label": "QA Filters"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Pusblish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Side Navigation",
+          "checklist": [
+            {
+              "label": "Dupilicate Template"
+            },
+            {
+              "label": "Rename URL"
+            },
+            {
+              "label": "LinkReference"
+            },
+            {
+              "label": "LinkText"
+            },
+            {
+              "label": "QA Filters"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Pusblish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Client Overlay",
+          "checklist": [
+            {
+              "label": "Dupilicate Template"
+            },
+            {
+              "label": "Rename Template"
+            },
+            {
+              "label": "Title"
+            },
+            {
+              "label": "Description"
+            },
+            {
+              "label": "BackgroundImage"
+            },
+            {
+              "label": "ActorImage"
+            },
+            {
+              "label": "CTA URL"
+            },
+            {
+              "label": "CTA Link Text"
+            },
+            {
+              "label": "TermsAndConditions"
+            },
+            {
+              "label": "QA Filters"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Pusblish Unchecked"
+            },
+            {
+              "label": "Screenshot commented"
+            }
+          ]
+        },
+        {
+          "label": "Banners (Big Banner/Exit Banner/Exit Banner with CTA)",
+          "checklist": [
+            {
+              "label": "Copy Template"
+            },
+            {
+              "label": "Final URL for the href"
+            },
+            {
+              "label": "Correct Asset for the <img> tag"
+            }
+          ]
+        },
+        {
+          "label": "Mobile Banner",
+          "checklist": [
+            {
+              "label": "Dupilicate Template"
+            },
+            {
+              "label": "Rename URL"
+            },
+            {
+              "label": "BackgroundImage"
+            },
+            {
+              "label": "CTA URL"
+            },
+            {
+              "label": "CTA data-purl is cleaned"
+            },
+            {
+              "label": "QA Filters"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Pusblish Unchecked"
+            },
+            {
+              "label": "Preview looks good"
+            },
+            {
+              "label": "Screenshot commented"
             }
           ]
         }
@@ -159,50 +870,989 @@
       "label": "Sports",
       "checklists": [
         {
-          "label": "Financial Audit",
+          "label": "MPP V2",
           "checklist": [
             {
-              "label": "Gather financial documents"
+              "label": "Duplicate Template"
             },
             {
-              "label": "Conduct risk assessment"
+              "label": "Rename Parent (URL)"
             },
             {
-              "label": "Review accounting practices"
+              "label": "PageTitle"
             },
             {
-              "label": "Verify compliance with regulations"
+              "label": "TopImage Image"
+            },
+            {
+              "label": "PageTitle Title"
+            },
+            {
+              "label": "expiry-date (if included)"
+            },
+            {
+              "label": "PromoDetails Text"
+            },
+            {
+              "label": "HowItWorks Title"
+            },
+            {
+              "label": "HowItWorks Text"
+            },
+            {
+              "label": "GameCarousel Title (if needed)"
+            },
+            {
+              "label": "Game links"
+            },
+            {
+              "label": "TermsToQualify Title"
+            },
+            {
+              "label": "TermsToQualify Text"
+            },
+            {
+              "label": "MoreInfo Title"
+            },
+            {
+              "label": "MoreInfo Text"
+            },
+            {
+              "label": "FullTACs Title"
+            },
+            {
+              "label": "FullTACs Text"
+            },
+            {
+              "label": "CTAs MaxItems"
+            },
+            {
+              "label": "CTA Text"
+            },
+            {
+              "label": "CTA url"
+            },
+            {
+              "label": "MPP URL is correct"
+            },
+            {
+              "label": "MPP looks good"
             }
           ]
         },
         {
-          "label": "Customer Onboarding",
+          "label": "Whitelabel MPP (Cloning)",
           "checklist": [
             {
-              "label": "Create user accounts"
+              "label": "MPP duplicated to Whitelabel"
             },
             {
-              "label": "Provide training sessions"
+              "label": "Clone distribute on Parent"
             },
             {
-              "label": "Set up personalized profiles"
+              "label": "Selected all needed states"
             },
             {
-              "label": "Collect customer feedback"
+              "label": "Clone distribute on all Child"
+            },
+            {
+              "label": "MPP URL is correct on all states"
+            },
+            {
+              "label": "MPP looks good on all states"
             }
           ]
         },
         {
-          "label": "Security Assessment",
+          "label": "Marquee",
           "checklist": [
             {
-              "label": "Perform vulnerability scan"
+              "label": "Duplicate Template"
             },
             {
-              "label": "Conduct penetration testing"
+              "label": "Rename Template (no spaces)"
             },
             {
-              "label": "Review access controls"
+              "label": "2 links"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Filter"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Marquee looks good on preview"
+            }
+          ]
+        },
+        {
+          "label": "MAI Journey",
+          "checklist": [
+            {
+              "label": "Duplicate Template for NOT-REGISTERED"
+            },
+            {
+              "label": "Duplicate Template for NOT-DEPOSITED"
+            },
+            {
+              "label": "Duplicate Template for NOT-WAGERED"
+            },
+            {
+              "label": "Rename Files"
+            },
+            {
+              "label": "QA Filter for NOT-REGISTERED & NOT-DEPOSITED & NOT WAGERED"
+            },
+            {
+              "label": "Overlay Content >> default >> fullsize-overlay-text"
+            },
+            {
+              "label": "— Text"
+            },
+            {
+              "label": "— Parameters"
+            },
+            {
+              "label": "step-1"
+            },
+            {
+              "label": "step-1-cta"
+            },
+            {
+              "label": "step-1-cta-link"
+            },
+            {
+              "label": "step-1-description"
+            },
+            {
+              "label": "step-2"
+            },
+            {
+              "label": "step-2-cta"
+            },
+            {
+              "label": "step-2-cta-link"
+            },
+            {
+              "label": "step-2-description"
+            },
+            {
+              "label": "step-3"
+            },
+            {
+              "label": "step-3-cta"
+            },
+            {
+              "label": "step-3-cta-link"
+            },
+            {
+              "label": "step-3-description"
+            },
+            {
+              "label": "terms-and-condition-cta"
+            },
+            {
+              "label": "terms-and-conditions-link"
+            },
+            {
+              "label": "NOT-DEPOSITED & NOT-WAGERED File >> content"
+            },
+            {
+              "label": "— Items"
+            },
+            {
+              "label": "Overlay Content Content tab"
+            },
+            {
+              "label": "— trackers"
+            },
+            {
+              "label": "Image for the NOT-REGISTERED & NOT-DEPOSITED & NOT WAGERED"
+            },
+            {
+              "label": "Preview looks good"
+            },
+            {
+              "label": "Screenshot"
+            }
+          ]
+        },
+        {
+          "label": "Horse Racing",
+          "checklist": [
+            {
+              "label": "Check if there Active Carousels"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "DesktopImage"
+            },
+            {
+              "label": "Schedule if necessary"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Mission Page",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template (URL)"
+            },
+            {
+              "label": "Teaser"
+            },
+            {
+              "label": "— img_mobile_src"
+            },
+            {
+              "label": "— img_src"
+            },
+            {
+              "label": "— lockup_src"
+            },
+            {
+              "label": "— logo_src"
+            },
+            {
+              "label": "Challenges"
+            },
+            {
+              "label": "— allCompletedDescription"
+            },
+            {
+              "label": "— challenge_success_overlay_bg_src"
+            },
+            {
+              "label": "Challenge"
+            },
+            {
+              "label": "—  base_icon"
+            },
+            {
+              "label": "— carousel_bg"
+            },
+            {
+              "label": "— carousel_expired_bg"
+            },
+            {
+              "label": "— challenge_icon"
+            },
+            {
+              "label": "— cta_url"
+            },
+            {
+              "label": "— description"
+            },
+            {
+              "label": "— detail_bg"
+            },
+            {
+              "label": "— detail_countdownheadline"
+            },
+            {
+              "label": "— end_date"
+            },
+            {
+              "label": "— headline_1"
+            },
+            {
+              "label": "— headline_2"
+            },
+            {
+              "label": "— lockup_src"
+            },
+            {
+              "label": "— start_date"
+            },
+            {
+              "label": "Description"
+            },
+            {
+              "label": "TCs"
+            },
+            {
+              "label": "No Filter"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Mission looks good"
+            }
+          ]
+        },
+        {
+          "label": "Core Domain",
+          "checklist": [
+            {
+              "label": "Whitelabel / Nationwide / National"
+            },
+            {
+              "label": "— H2Header"
+            },
+            {
+              "label": "— Text"
+            },
+            {
+              "label": "— MetaTitle"
+            },
+            {
+              "label": "— MetaDescription"
+            },
+            {
+              "label": "Check all states if its updated and correct"
+            },
+            {
+              "label": "Convert Links to smartlinks (if link directs to BetMGM Geolocator)"
+            }
+          ]
+        },
+        {
+          "label": "Voucher",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template (URL)"
+            },
+            {
+              "label": "config"
+            },
+            {
+              "label": "— cta_login_label"
+            },
+            {
+              "label": "— end_date_utc"
+            },
+            {
+              "label": "header"
+            },
+            {
+              "label": "— Image_mobile_src "
+            },
+            {
+              "label": "— Image_src "
+            },
+            {
+              "label": "description"
+            },
+            {
+              "label": "— Title"
+            },
+            {
+              "label": "— Text"
+            },
+            {
+              "label": "steps >> step1"
+            },
+            {
+              "label": "— Title"
+            },
+            {
+              "label": "— Text"
+            },
+            {
+              "label": "— cta_label (if CTA is needed)"
+            },
+            {
+              "label": "— cta_url (if CTA is needed)"
+            },
+            {
+              "label": "terms"
+            },
+            {
+              "label": "— Text"
+            },
+            {
+              "label": "notification >> error"
+            },
+            {
+              "label": "— cta_url"
+            },
+            {
+              "label": "Clone to all states (if its on WhiteLabel)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "PAT EDS and Engagements",
+      "checklists": [
+        {
+          "label": "Rewards (Leaderboard)",
+          "checklist": [
+            {
+              "label": "TeaserImage"
+            },
+            {
+              "label": "Promotion Title"
+            },
+            {
+              "label": "Transaction Description"
+            },
+            {
+              "label": "Introduction text"
+            },
+            {
+              "label": "The \"hook\""
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Steps 1-2-3"
+            },
+            {
+              "label": "KeyTermsAndConditions"
+            },
+            {
+              "label": "FullTermsAndConditions"
+            },
+            {
+              "label": "Game tile/s (if included)"
+            },
+            {
+              "label": "Play Now URL"
+            },
+            {
+              "label": "Rewards and Results options"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "MyProgress (PlayerActivity)",
+          "checklist": [
+            {
+              "label": "TeaserImage"
+            },
+            {
+              "label": "Promotion Title"
+            },
+            {
+              "label": "Transaction Description"
+            },
+            {
+              "label": "Introduction text"
+            },
+            {
+              "label": "The \"hook\""
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Steps 1-2-3"
+            },
+            {
+              "label": "CarouselBackgroundImage"
+            },
+            {
+              "label": "FirstSlabImage"
+            },
+            {
+              "label": "SlabImage"
+            },
+            {
+              "label": "StepImage"
+            },
+            {
+              "label": "CardImage"
+            },
+            {
+              "label": "FreeCardImage"
+            },
+            {
+              "label": "KeyTermsAndConditions"
+            },
+            {
+              "label": "FullTermsAndConditions"
+            },
+            {
+              "label": "Game tile/s (if included)"
+            },
+            {
+              "label": "Play Now URL"
+            },
+            {
+              "label": "Rewards and Results options"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Spin The Wheel PAT",
+          "checklist": [
+            {
+              "label": "Description "
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Promotion Title"
+            },
+            {
+              "label": "Transaction Description"
+            },
+            {
+              "label": "Wheel Sections"
+            },
+            {
+              "label": "— AwardValue (If change request needed)"
+            },
+            {
+              "label": "— Prize Table Text"
+            },
+            {
+              "label": "— Icon (Prize & Wheel)"
+            },
+            {
+              "label": "— Overlay Description"
+            },
+            {
+              "label": "Key Terms And Conditions"
+            },
+            {
+              "label": "Terms And Conditions"
+            },
+            {
+              "label": "How It Works"
+            },
+            {
+              "label": "Criteria Overlay"
+            },
+            {
+              "label": "Page Layout Details"
+            },
+            {
+              "label": "Test Game URL "
+            },
+            {
+              "label": "All Prizes are showing and screenshotted"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Spin The Wheel Layout",
+          "checklist": [
+            {
+              "label": "Dupilicate Template"
+            },
+            {
+              "label": "Rename File"
+            },
+            {
+              "label": "BSpinBackground "
+            },
+            {
+              "label": "Marker"
+            },
+            {
+              "label": "SpinButton"
+            },
+            {
+              "label": "WheelBackground5 "
+            },
+            {
+              "label": "WheelBackground6 "
+            },
+            {
+              "label": "WheelBackground7 "
+            },
+            {
+              "label": "WheelBackground8"
+            },
+            {
+              "label": "PageAssets"
+            },
+            {
+              "label": "Content"
+            },
+            {
+              "label": "— PageHeaderText"
+            },
+            {
+              "label": "ErrorMessage"
+            },
+            {
+              "label": "— 1103"
+            },
+            {
+              "label": "— 1107"
+            },
+            {
+              "label": "PreLoginPage"
+            },
+            {
+              "label": "PostLoginErrorPage"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Pick A Box PAT",
+          "checklist": [
+            {
+              "label": "Promotion Title"
+            },
+            {
+              "label": "Transaction Description"
+            },
+            {
+              "label": "Description has empty <p> tag"
+            },
+            {
+              "label": "KeyTermsAndConditions"
+            },
+            {
+              "label": "TeaserImage"
+            },
+            {
+              "label": "TeaserClass"
+            },
+            {
+              "label": "BoxSection"
+            },
+            {
+              "label": "— AwardValue (If change request needed)"
+            },
+            {
+              "label": "— Title"
+            },
+            {
+              "label": "— Image"
+            },
+            {
+              "label": "— Description"
+            },
+            {
+              "label": "Mobile Layout Path"
+            },
+            {
+              "label": "T & C Content"
+            },
+            {
+              "label": "How It Works Content"
+            },
+            {
+              "label": "Deposit and Wager Criteria Content"
+            },
+            {
+              "label": "Key T&C Note Text has empty <p> tag"
+            },
+            {
+              "label": "Post Login Error Page Content Image"
+            },
+            {
+              "label": "Error Page Content"
+            },
+            {
+              "label": "PageTitle"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Test Game URL is working"
+            },
+            {
+              "label": "All Prizes are showing and screenshotted"
+            }
+          ]
+        },
+        {
+          "label": "Pick A Box Layout",
+          "checklist": [
+            {
+              "label": "PageHeader"
+            },
+            {
+              "label": "Error Messages"
+            },
+            {
+              "label": "Brand Logo Image"
+            },
+            {
+              "label": "Landscape View BG Image"
+            },
+            {
+              "label": "Landscape Mode Clickable Image Config"
+            },
+            {
+              "label": "Portrait View BG Image"
+            },
+            {
+              "label": "Portrait Mode Clickable Image Config"
+            },
+            {
+              "label": "Error Page"
+            },
+            {
+              "label": "Pre Login Page Content Image"
+            },
+            {
+              "label": "Pre Login Error Page Content Image"
+            },
+            {
+              "label": "Session Timeout Error Page Content"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Coin Flip PAT",
+          "checklist": [
+            {
+              "label": "Promotion Title"
+            },
+            {
+              "label": "Transaction Description"
+            },
+            {
+              "label": "TeaserImage"
+            },
+            {
+              "label": "Description "
+            },
+            {
+              "label": "TeaserClass "
+            },
+            {
+              "label": "Rewards"
+            },
+            {
+              "label": "— AwardValue (If change request needed)"
+            },
+            {
+              "label": "— Title"
+            },
+            {
+              "label": "— Image"
+            },
+            {
+              "label": "— Description"
+            },
+            {
+              "label": "KeyTermsAndConditions"
+            },
+            {
+              "label": "FullTermsAndConditions"
+            },
+            {
+              "label": "CriteriaOverlay"
+            },
+            {
+              "label": "MoreInfo"
+            },
+            {
+              "label": "— URL"
+            },
+            {
+              "label": "— Link Text"
+            },
+            {
+              "label": "PreBetText"
+            },
+            {
+              "label": "TossConfirmationText"
+            },
+            {
+              "label": "TossResultText"
+            },
+            {
+              "label": "HeadText"
+            },
+            {
+              "label": "TailText"
+            },
+            {
+              "label": "FrontImage"
+            },
+            {
+              "label": "BackImage"
+            },
+            {
+              "label": "CoinFlipLogo"
+            },
+            {
+              "label": "BackgroundImage"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Test Game URL is working"
+            },
+            {
+              "label": "All Prizes are showing and screenshotted"
+            }
+          ]
+        },
+        {
+          "label": "Coin Flip Layout",
+          "checklist": [
+            {
+              "label": "Dupilicate Template"
+            },
+            {
+              "label": "Rename File"
+            },
+            {
+              "label": "assetsandcontent"
+            },
+            {
+              "label": "— PreBetText"
+            },
+            {
+              "label": "— TossConfirmationText"
+            },
+            {
+              "label": "— TossResultText"
+            },
+            {
+              "label": "— HeadText"
+            },
+            {
+              "label": "— TailText"
+            },
+            {
+              "label": "— BackImage"
+            },
+            {
+              "label": "— CoinFlipLogo"
+            },
+            {
+              "label": "— BackgroundImage"
+            },
+            {
+              "label": "FAQs"
+            },
+            {
+              "label": "Faq1"
+            },
+            {
+              "label": "— Title"
+            },
+            {
+              "label": "— Text"
+            },
+            {
+              "label": "Faq3"
+            },
+            {
+              "label": "—Text"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Click Card",
+          "checklist": [
+            {
+              "label": "TeaserImage"
+            },
+            {
+              "label": "Promotion Title"
+            },
+            {
+              "label": "Transaction Description"
+            },
+            {
+              "label": "Introduction text"
+            },
+            {
+              "label": "The \"hook\""
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Steps 1-2-3"
+            },
+            {
+              "label": "CardImage"
+            },
+            {
+              "label": "FreeCardImage"
+            },
+            {
+              "label": "KeyTermsAndConditions"
+            },
+            {
+              "label": "FullTermsAndConditions"
+            },
+            {
+              "label": "Game tile/s (if included)"
+            },
+            {
+              "label": "Play Now URL"
+            },
+            {
+              "label": "Rewards and Results options"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
             }
           ]
         }

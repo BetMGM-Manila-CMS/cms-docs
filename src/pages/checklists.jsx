@@ -6,102 +6,6 @@ import { useState } from "react"
 
 import checklistsData from "@site/config/checklists/index.json"
 
-const sampleData = [
-    {
-        "label": "Website Development",
-        "checklist": [
-            "Design wireframes",
-            "Code HTML/CSS templates",
-            "Implement responsive design",
-            "Optimize images and assets"
-        ]
-    },
-    {
-        "label": "Mobile App Testing",
-        "checklist": [
-            "Perform unit testing",
-            "Conduct integration testing",
-            "Check UI/UX consistency",
-            "Test functionality across devices",
-            "Review performance metrics"
-        ]
-    },
-    {
-        "label": "Software Deployment",
-        "checklist": [
-            "Prepare deployment plan",
-            "Set up staging environment",
-            "Execute deployment scripts",
-            "Verify data integrity",
-            "Perform rollback tests if necessary"
-        ]
-    },
-    {
-        "label": "Product Launch",
-        "checklist": [
-            "Coordinate marketing campaigns",
-            "Prepare press releases",
-            "Train customer support teams",
-            "Monitor website traffic"
-        ]
-    },
-    {
-        "label": "Quality Assurance",
-        "checklist": [
-            "Define testing criteria",
-            "Execute test cases",
-            "Document test results",
-            "Validate bug fixes",
-            "Perform regression testing",
-            "Conduct user acceptance testing"
-        ]
-    },
-    {
-        "label": "Content Creation",
-        "checklist": [
-            "Research target audience",
-            "Develop content strategy",
-            "Write SEO-friendly content",
-            "Proofread and edit"
-        ]
-    },
-    {
-        "label": "Event Planning",
-        "checklist": [
-            "Secure venue and permits",
-            "Create event schedule",
-            "Arrange catering and vendors"
-        ]
-    },
-    {
-        "label": "Financial Audit",
-        "checklist": [
-            "Gather financial documents",
-            "Conduct risk assessment",
-            "Review accounting practices",
-            "Verify compliance with regulations"
-        ]
-    },
-    {
-        "label": "Customer Onboarding",
-        "checklist": [
-            "Create user accounts",
-            "Provide training sessions",
-            "Set up personalized profiles",
-            "Collect customer feedback"
-        ]
-    },
-    {
-        "label": "Security Assessment",
-        "checklist": [
-            "Perform vulnerability scan",
-            "Conduct penetration testing",
-            "Review access controls"
-        ]
-    }
-]
-
-
 function Checklist({ checklist }) {
     return (
         <div className="p-6 rounded-2xl bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
@@ -126,17 +30,21 @@ export default function Checklists() {
     const checklists = checklistsData.checklistGroup
     const [search, setSearch] = useState('')
 
+    
     const location = useLocation();
-
+    
     const params = location.search ? location.search.replace('?', '').split('&').reduce((params, param) => {
         const [key, value] = param.split("=")
         params[key] = value
         return params
     }, {}) : {}
+    console.log(checklists)
 
     const { group } = params
-    const checklistItems = group ? checklists.find(data => data.label.toLowerCase() === group).checklists : checklists[0].checklists
-    const checlistItemsToMap = search ? checklistItems.filter(item => item.label.toLowerCase().includes(search.toLowerCase())) : checklistItems
+    const findChecklists = (group) => checklists.find(data => data.label.toLowerCase().replaceAll(' ', '-') === group)
+    
+    const checklistItems = group && findChecklists(group) ? findChecklists(group).checklists : checklists[0].checklists
+    const checlistItemsToMap = search && checklistItems ? checklistItems.filter(item => item.label.toLowerCase().includes(search.toLowerCase())) : checklistItems
 
     const masonryColumnCount = (initialCount) => checlistItemsToMap.length < initialCount ? checlistItemsToMap.length : initialCount
 
