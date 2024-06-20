@@ -157,13 +157,8 @@ query quicklinkConnection($before: String, $after: String, $first: Float, $last:
   }
 }
 
-<<<<<<< HEAD
 query members($relativePath: String!) {
   members(relativePath: $relativePath) {
-=======
-query checklists($relativePath: String!) {
-  checklists(relativePath: $relativePath) {
->>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
     ... on Document {
       _sys {
         filename
@@ -175,21 +170,12 @@ query checklists($relativePath: String!) {
       }
       id
     }
-<<<<<<< HEAD
     ...MembersParts
   }
 }
 
 query membersConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: MembersFilter) {
   membersConnection(
-=======
-    ...ChecklistsParts
-  }
-}
-
-query checklistsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ChecklistsFilter) {
-  checklistsConnection(
->>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
     before: $before
     after: $after
     first: $first
@@ -218,7 +204,6 @@ query checklistsConnection($before: String, $after: String, $first: Float, $last
           }
           id
         }
-<<<<<<< HEAD
         ...MembersParts
       }
     }
@@ -273,9 +258,112 @@ query workSchedulesConnection($before: String, $after: String, $first: Float, $l
           id
         }
         ...WorkSchedulesParts
-=======
+      }
+    }
+  }
+}
+
+query checklists($relativePath: String!) {
+  checklists(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...ChecklistsParts
+  }
+}
+
+query checklistsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: ChecklistsFilter) {
+  checklistsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
         ...ChecklistsParts
->>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
+      }
+    }
+  }
+}
+
+query carouselAssignments($relativePath: String!) {
+  carouselAssignments(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...CarouselAssignmentsParts
+  }
+}
+
+query carouselAssignmentsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: CarouselAssignmentsFilter) {
+  carouselAssignmentsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...CarouselAssignmentsParts
       }
     }
   }

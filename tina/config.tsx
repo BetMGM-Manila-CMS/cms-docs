@@ -7,7 +7,8 @@ import {
   QuickLinkCollection, 
   MembersCollection, 
   WorkSchedulesCollection,
-  ChecklistsCollection
+  ChecklistsCollection,
+  CarouselAssignmentsCollection
  } from './collections'
 
 // Your hosting provider likely exposes this as an environment variable
@@ -48,7 +49,8 @@ export default defineConfig({
       QuickLinkCollection,
       MembersCollection,
       WorkSchedulesCollection,
-      ChecklistsCollection
+      ChecklistsCollection,
+      CarouselAssignmentsCollection
     ],
   },
 });

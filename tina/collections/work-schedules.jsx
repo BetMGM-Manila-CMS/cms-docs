@@ -1,18 +1,7 @@
-import { AgGridReact } from 'ag-grid-react'; // React Data Grid Component
-import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the grid
-import "ag-grid-community/styles/ag-theme-quartz.css"; // Optional Theme applied to the grid
 import { defineConfig, wrapFieldsWithMeta } from 'tinacms'
 import React from "react"
 import Papa from 'papaparse';
-import { displayRangeDate } from "@site/utils/date.js"
-
-/* const displayDate = (start, end) => {
-    const options = { month: 'short', day: '2-digit', year: 'numeric' };
-    const startDate = new Intl.DateTimeFormat('en-US', options).format(new Date(start)).replace(',', '');
-    const endDate = new Intl.DateTimeFormat('en-US', options).format(new Date(end)).replace(',', '')
-
-    return `${startDate} - ${endDate}`
-} */
+import { displayRangeDate } from "../../utils/date.js"
 
 const WorkScheduleField = {
     name: "workSchedule",

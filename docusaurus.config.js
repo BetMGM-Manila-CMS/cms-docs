@@ -41,10 +41,10 @@ const config = {
     cloudinaryCloudName: process.env.CLOUDINARY_CLOUD_NAME
   },
 
-  scripts: [{
+  /* scripts: [{
     src: './node_modules/flowbite/dist/flowbite.min.js',
     async: true
-  }],
+  }], */
 
   presets: [
     [

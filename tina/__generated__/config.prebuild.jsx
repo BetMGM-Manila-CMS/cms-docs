@@ -741,7 +741,6 @@ var QuickLinkCollection = {
   ]
 };
 
-<<<<<<< HEAD
 // tina/collections/members.jsx
 var MemberField = {
   name: "member",
@@ -787,57 +786,6 @@ var MembersCollection = {
   name: "members",
   label: "Members",
   path: "config/members",
-=======
-// tina/collections/checklists.jsx
-var LabelField2 = {
-  name: "label",
-  label: "Label",
-  type: "string",
-  required: true
-};
-var ChecklistField = {
-  name: "checklist",
-  label: "Checklist",
-  type: "object",
-  list: true,
-  itemProps: (item) => {
-    return { label: item ? item.label : null };
-  },
-  fields: [
-    LabelField2
-  ]
-};
-var ChecklistsField = {
-  name: "checklists",
-  label: "Checklists",
-  type: "object",
-  list: true,
-  itemProps: (item) => {
-    return { label: item ? item.label : null };
-  },
-  fields: [
-    LabelField2,
-    ChecklistField
-  ]
-};
-var ChecklistGroup = {
-  name: "checklistGroup",
-  label: "Checklist Group",
-  type: "object",
-  list: true,
-  itemProps: (item) => {
-    return { label: item ? item.label : null };
-  },
-  fields: [
-    LabelField2,
-    ChecklistsField
-  ]
-};
-var ChecklistsCollection = {
-  name: "checklists",
-  label: "Check Lists",
-  path: "config/checklists",
->>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
   format: "json",
   ui: {
     global: true,
@@ -847,31 +795,31 @@ var ChecklistsCollection = {
     }
   },
   fields: [
-<<<<<<< HEAD
     MemberField
   ]
 };
 
 // tina/collections/work-schedules.jsx
-import { AgGridReact } from "ag-grid-react";
-import "ag-grid-community/styles/ag-grid.css";
-import "ag-grid-community/styles/ag-theme-quartz.css";
 import { defineConfig, wrapFieldsWithMeta as wrapFieldsWithMeta2 } from "tinacms";
 import React4 from "react";
 import Papa from "papaparse";
-var displayDate = (start, end) => {
+
+// utils/date.js
+var displayRangeDate = (start, end) => {
   const options = { month: "short", day: "2-digit", year: "numeric" };
   const startDate = new Intl.DateTimeFormat("en-US", options).format(new Date(start)).replace(",", "");
   const endDate = new Intl.DateTimeFormat("en-US", options).format(new Date(end)).replace(",", "");
   return `${startDate} - ${endDate}`;
 };
+
+// tina/collections/work-schedules.jsx
 var WorkScheduleField = {
   name: "workSchedule",
   label: "Work Schedule",
   type: "object",
   list: true,
   itemProps: (item) => {
-    return { label: item && item.startDay && item.endDay ? displayDate(item.startDay, item.endDay) : null };
+    return { label: item && item.startDay && item.endDay ? displayRangeDate(item.startDay, item.endDay) : null };
   },
   fields: [
     {
@@ -941,9 +889,109 @@ var WorkSchedulesCollection = {
   },
   fields: [
     WorkScheduleField
-=======
+  ]
+};
+
+// tina/collections/checklists.jsx
+var LabelField2 = {
+  name: "label",
+  label: "Label",
+  type: "string",
+  required: true
+};
+var ChecklistField = {
+  name: "checklist",
+  label: "Checklist",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    LabelField2
+  ]
+};
+var ChecklistsField = {
+  name: "checklists",
+  label: "Checklists",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    LabelField2,
+    ChecklistField
+  ]
+};
+var ChecklistGroup = {
+  name: "checklistGroup",
+  label: "Checklist Group",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    LabelField2,
+    ChecklistsField
+  ]
+};
+var ChecklistsCollection = {
+  name: "checklists",
+  label: "Check Lists",
+  path: "config/checklists",
+  format: "json",
+  ui: {
+    global: true,
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  fields: [
     ChecklistGroup
->>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
+  ]
+};
+
+// tina/collections/carousel-assignments.jsx
+var CarouselAssignmentField = {
+  name: "carouselAssignment",
+  label: "Carousel Assignment",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item && item.startDay && item.endDay ? displayRangeDate(item.startDay, item.endDay) : null };
+  },
+  fields: [
+    {
+      name: "startDay",
+      label: "Start Day",
+      type: "datetime",
+      required: true
+    },
+    {
+      name: "endDay",
+      label: "End Day",
+      type: "datetime",
+      required: true
+    }
+  ]
+};
+var CarouselAssignmentsCollection = {
+  name: "carouselAssignments",
+  label: "Carousel Assignments",
+  path: "config/carousel-assignments",
+  format: "json",
+  ui: {
+    global: true,
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  fields: [
+    CarouselAssignmentField
   ]
 };
 
@@ -978,12 +1026,10 @@ var config_default = defineConfig2({
       DocCollection,
       SidebarCollection,
       QuickLinkCollection,
-<<<<<<< HEAD
       MembersCollection,
-      WorkSchedulesCollection
-=======
-      ChecklistsCollection
->>>>>>> 0f210cecdb576426a9d18011a08387f35d8864c7
+      WorkSchedulesCollection,
+      ChecklistsCollection,
+      CarouselAssignmentsCollection
     ]
   }
 });
