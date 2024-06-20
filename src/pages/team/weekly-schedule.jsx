@@ -6,8 +6,13 @@ import { workSchedule } from "@site/config/work-schedules/index.json"
 import { displayRangeDate } from "@site/utils/date.js"
 import Papa from 'papaparse';
 
+import { useLocation } from '@docusaurus/router';
+
+
 export default function () {
     const { siteConfig } = useDocusaurusContext();
+
+    const location = useLocation()
 
     const params = location.search ? location.search.replace('?', '').split('&').reduce((params, param) => {
         const [key, value] = param.split("=")
