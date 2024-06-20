@@ -723,15 +723,11 @@ type QuicklinkConnection implements Connection {
   edges: [QuicklinkConnectionEdges]
 }
 
-type MembersMember {
+type Members implements Node & Document {
   name: String!
   position: String!
   birthday: String
   hiredDate: String
-}
-
-type Members implements Node & Document {
-  member: [MembersMember]
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -745,15 +741,11 @@ input DatetimeFilter {
   in: [String]
 }
 
-input MembersMemberFilter {
+input MembersFilter {
   name: StringFilter
   position: StringFilter
   birthday: DatetimeFilter
   hiredDate: DatetimeFilter
-}
-
-input MembersFilter {
-  member: MembersMemberFilter
 }
 
 type MembersConnectionEdges {
@@ -851,9 +843,16 @@ type ChecklistsConnection implements Connection {
   edges: [ChecklistsConnectionEdges]
 }
 
+union CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJ = Members
+
+type CarouselAssignmentsCarouselAssignmentCasinoPoker {
+  betNJ: CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJ
+}
+
 type CarouselAssignmentsCarouselAssignment {
   startDay: String!
   endDay: String!
+  casinoPoker: CarouselAssignmentsCarouselAssignmentCasinoPoker
 }
 
 type CarouselAssignments implements Node & Document {
@@ -863,9 +862,18 @@ type CarouselAssignments implements Node & Document {
   _values: JSON!
 }
 
+input CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJFilter {
+  members: MembersFilter
+}
+
+input CarouselAssignmentsCarouselAssignmentCasinoPokerFilter {
+  betNJ: CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJFilter
+}
+
 input CarouselAssignmentsCarouselAssignmentFilter {
   startDay: DatetimeFilter
   endDay: DatetimeFilter
+  casinoPoker: CarouselAssignmentsCarouselAssignmentCasinoPokerFilter
 }
 
 input CarouselAssignmentsFilter {
@@ -1097,15 +1105,11 @@ input QuicklinkMutation {
   quickLinksGroup: [QuicklinkQuickLinksGroupMutation]
 }
 
-input MembersMemberMutation {
+input MembersMutation {
   name: String
   position: String
   birthday: String
   hiredDate: String
-}
-
-input MembersMutation {
-  member: [MembersMemberMutation]
 }
 
 input WorkSchedulesWorkScheduleMutation {
@@ -1136,9 +1140,14 @@ input ChecklistsMutation {
   checklistGroup: [ChecklistsChecklistGroupMutation]
 }
 
+input CarouselAssignmentsCarouselAssignmentCasinoPokerMutation {
+  betNJ: String
+}
+
 input CarouselAssignmentsCarouselAssignmentMutation {
   startDay: String
   endDay: String
+  casinoPoker: CarouselAssignmentsCarouselAssignmentCasinoPokerMutation
 }
 
 input CarouselAssignmentsMutation {

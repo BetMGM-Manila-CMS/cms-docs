@@ -742,21 +742,18 @@ var QuickLinkCollection = {
 };
 
 // tina/collections/members.jsx
-var MemberField = {
-  name: "member",
-  label: "Member",
-  type: "object",
-  list: true,
-  itemProps: (item) => {
-    return { label: item ? item.name : null };
-  },
+var MembersCollection = {
+  name: "members",
+  label: "Members",
+  path: "members",
+  format: "mdx",
   fields: [
     {
-      name: "name",
-      label: "Name",
       type: "string",
-      required: true,
-      isTitle: true
+      label: "Name",
+      name: "name",
+      isTitle: true,
+      required: true
     },
     {
       name: "position",
@@ -780,22 +777,6 @@ var MemberField = {
       label: "Hired Date",
       type: "datetime"
     }
-  ]
-};
-var MembersCollection = {
-  name: "members",
-  label: "Members",
-  path: "config/members",
-  format: "json",
-  ui: {
-    global: true,
-    allowedActions: {
-      create: false,
-      delete: false
-    }
-  },
-  fields: [
-    MemberField
   ]
 };
 
@@ -975,6 +956,19 @@ var CarouselAssignmentField = {
       label: "End Day",
       type: "datetime",
       required: true
+    },
+    {
+      name: "casinoPoker",
+      label: "Casino and Poker",
+      type: "object",
+      fields: [
+        {
+          name: "betNJ",
+          label: "BetMGM NJ",
+          type: "reference",
+          collections: ["members"]
+        }
+      ]
     }
   ]
 };

@@ -246,13 +246,10 @@ fragment QuicklinkParts on Quicklink {
 
 fragment MembersParts on Members {
   __typename
-  member {
-    __typename
-    name
-    position
-    birthday
-    hiredDate
-  }
+  name
+  position
+  birthday
+  hiredDate
 }
 
 fragment WorkSchedulesParts on WorkSchedules {
@@ -287,5 +284,28 @@ fragment CarouselAssignmentsParts on CarouselAssignments {
     __typename
     startDay
     endDay
+    casinoPoker {
+      __typename
+      betNJ {
+        ... on Members {
+          __typename
+          name
+          position
+          birthday
+          hiredDate
+        }
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+      }
+    }
   }
 }

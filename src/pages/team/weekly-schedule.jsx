@@ -2,8 +2,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 
-import CustomDocSidebar from "@site/src/components/CustomDocSidebar"
-
 import { workSchedule } from "@site/config/work-schedules/index.json"
 import { displayRangeDate } from "@site/utils/date.js"
 import Papa from 'papaparse';
