@@ -7,7 +7,9 @@ import { useState } from "react"
 import checklistsData from "@site/config/checklists/index.json"
 
 function Checklist({ checklist }) {
+    
     return (
+        <>
         <div className="p-6 rounded-2xl bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
             <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{checklist.label}</h5>
             <div className="*:mb-2">
@@ -23,6 +25,7 @@ function Checklist({ checklist }) {
                 }
             </div>
         </div>
+        </>
     )
 }
 
@@ -88,9 +91,10 @@ export default function Checklists() {
 
             </section>
 
-            <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 hidden sm:block">
                 <Masonry columns={{
-                    xs: masonryColumnCount(2),
+                    xs: masonryColumnCount(1),
+                    sm: masonryColumnCount(2),
                     md: masonryColumnCount(3),
                     lg: masonryColumnCount(4)
                 }} spacing={4}>
@@ -98,6 +102,11 @@ export default function Checklists() {
                         <Checklist checklist={checklistItem} key={index} />
                     ))}
                 </Masonry>
+            </section>
+            <section className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 flex gap-8 flex-col sm:hidden">
+            {checlistItemsToMap.map((checklistItem, index) => (
+                        <Checklist checklist={checklistItem} key={index} />
+                    ))}
             </section>
         </Layout>
     )
