@@ -10,8 +10,10 @@ function Checklist({ checklist }) {
     
     return (
         <>
-        <div className="p-6 rounded-2xl bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
-            <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{checklist.label}</h5>
+        {/* <div className="p-6 rounded-2xl bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
+            <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <input type="checkbox" className="daisy-checkbox [--chkbg:theme(colors.primary)] mr-2 align-middle" />
+            {checklist.label}</h5>
             <div className="*:mb-2">
                 {
                     checklist.checklist.map((checklistItem, index) => {
@@ -24,7 +26,51 @@ function Checklist({ checklist }) {
                     })
                 }
             </div>
+        </div> */}
+        <div className="daisy-collapse bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800">
+            <input type="checkbox" /> 
+            <div className="daisy-collapse-title">
+                <h5 className="mb-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {checklist.label}
+                </h5>
+            </div>
+            <div className="daisy-collapse-content"> 
+                <div className="*:mb-2">
+                    {
+                        checklist.checklist.map((checklistItem, index) => {
+                            return (
+                                <div className="flex items-center" key={index}>
+                                    <input type="checkbox" className="daisy-checkbox [--chkbg:theme(colors.primary)]" />
+                                    <label for="default-checkbox" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">{checklistItem.label}</label>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            </div>
         </div>
+        {/* <div tabIndex={0} className="daisy-collapse bg-base-200"> 
+            <div className="daisy-collapse-title text-xl font-medium">
+                <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <input type="checkbox" className="daisy-checkbox [--chkbg:theme(colors.primary)] mr-2 align-middle" />
+                    {checklist.label}
+                </h5>
+            </div>
+            <div className="daisy-collapse-content"> 
+                <div className="*:mb-2">
+                {
+                    checklist.checklist.map((checklistItem, index) => {
+                        return (
+                            <div className="flex items-center" key={index}>
+                                <input type="checkbox" className="daisy-checkbox [--chkbg:theme(colors.primary)]" />
+                                <label for="default-checkbox" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">{checklistItem.label}</label>
+                            </div>
+                        )
+                    })
+                }
+                </div>
+            </div>
+        </div> */}
         </>
     )
 }
@@ -72,7 +118,7 @@ export default function Checklists() {
                                     <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                                 </svg>
                             </summary>
-                            <ul className="p-2 daisy-shadow daisy-menu daisy-dropdown-content z-[1] bg-base-100 rounded-box w-52 mt-2 shadow">
+                            <ul className="p-2 daisy-shadow daisy-menu daisy-dropdown-content z-[1] bg-base-100 rounded-box w-52 mt-2 shadow max-h-56 flex-nowrap overflow-auto">
                                 {
                                     checklists.map((checklist, index) => <li className="font-normal text-white" key={index}><Link to={`/checklists?group=${checklist.label.toLowerCase().replaceAll(' ', '-')}`}>{checklist.label}</Link></li>)
                                 }
@@ -97,7 +143,7 @@ export default function Checklists() {
                     sm: masonryColumnCount(2),
                     md: masonryColumnCount(3),
                     lg: masonryColumnCount(4)
-                }} spacing={4}>
+                }} spacing={3}>
                     {checlistItemsToMap.map((checklistItem, index) => (
                         <Checklist checklist={checklistItem} key={index} />
                     ))}
