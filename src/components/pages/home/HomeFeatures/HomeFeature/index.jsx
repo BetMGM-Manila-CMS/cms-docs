@@ -1,6 +1,6 @@
 import Link from "@docusaurus/Link";
 
-export const HomeFeature = function ({ icon, label, description, url }) {
+export default function HomeFeature({ icon, label, description, url }) {
   return (
     <div className="p-6 rounded-lg bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
       {icon}

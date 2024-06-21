@@ -1,4 +1,4 @@
-import { HomeFeature } from "../HomeFeature";
+import HomeFeature from "./HomeFeature";
 import Link from "@docusaurus/Link";
 
 const FeatureList = [
@@ -101,7 +101,7 @@ const FeatureList = [
   }, */
 ];
 
-export const HomeFeatures = function () {
+export default function HomeFeatures() {
   return (
     <section className="container">
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">

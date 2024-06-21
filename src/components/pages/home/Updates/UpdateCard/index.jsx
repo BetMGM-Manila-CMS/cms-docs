@@ -1,6 +1,6 @@
 import Link from "@docusaurus/Link";
 
-export const UpdateCard = ({ update }) => {
+export default function UpdateCard({ update }) {
     const { content: { frontMatter, metadata } } = update
 
     return (
