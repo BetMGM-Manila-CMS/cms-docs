@@ -3191,6 +3191,1308 @@
           ]
         }
       ]
+    },
+    {
+      "label": "Pick A Box",
+      "checklists": [
+        {
+          "label": "Creatives",
+          "checklist": [
+            {
+              "label": "Download Creatives"
+            },
+            {
+              "label": "Ensure Every Image is <95kb"
+            },
+            {
+              "label": "Remove .DS_Store Files"
+            },
+            {
+              "label": "Rename Folder with Ticket Name"
+            },
+            {
+              "label": "ZIP Folder"
+            },
+            {
+              "label": "Upload To Sitecore (Unpack ZIP)"
+            }
+          ]
+        },
+        {
+          "label": "Carousel",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template (Desktop / Mobile)"
+            },
+            {
+              "label": "Title"
+            },
+            {
+              "label": "Subtitle"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "4 links"
+            },
+            {
+              "label": "CTA Title"
+            },
+            {
+              "label": "Check Show BG Image"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "Teaser Alignments"
+            },
+            {
+              "label": "Filters"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Pushed to LMT"
+            },
+            {
+              "label": "Preview is looking good"
+            },
+            {
+              "label": "Screenshot commented"
+            }
+          ]
+        },
+        {
+          "label": "ODR Banner",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template (w/ ODRBanner-)"
+            },
+            {
+              "label": "4 CTA links"
+            },
+            {
+              "label": "Check Show BG Image"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "Filter"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Check Never Publish"
+            }
+          ]
+        },
+        {
+          "label": "MPP",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Parent (URL)"
+            },
+            {
+              "label": "Rename Child (URL)"
+            },
+            {
+              "label": "Edit Rule to child"
+            },
+            {
+              "label": "PromotionTitle"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "ImageHeadline"
+            },
+            {
+              "label": "DetailedDescription"
+            },
+            {
+              "label": "— Promotion Description"
+            },
+            {
+              "label": "— CTAs w/ color"
+            },
+            {
+              "label": "— HIW"
+            },
+            {
+              "label": "— Game Tiles"
+            },
+            {
+              "label": "ShowTACS is checked"
+            },
+            {
+              "label": "TACTitle"
+            },
+            {
+              "label": "TnCs"
+            },
+            {
+              "label": "— No unwanted characters"
+            },
+            {
+              "label": "— Bold titles"
+            },
+            {
+              "label": "— AM/PM proper format"
+            },
+            {
+              "label": "— Proper links w/ color"
+            },
+            {
+              "label": "— Proper indents and bullets"
+            },
+            {
+              "label": "— No \"Link to\""
+            },
+            {
+              "label": "— Proper table (if included)"
+            },
+            {
+              "label": "— w/ OLG (if NJ)"
+            },
+            {
+              "label": "No Filters"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "MPP looks good"
+            }
+          ]
+        },
+        {
+          "label": "Rest ID",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template"
+            },
+            {
+              "label": "SectionSelector"
+            },
+            {
+              "label": "Campaign Common Data (if w/ Template)"
+            },
+            {
+              "label": "— CommonTitle"
+            },
+            {
+              "label": "— CommonDescription"
+            },
+            {
+              "label": "— CommonTACs"
+            },
+            {
+              "label": "— 2 Images"
+            },
+            {
+              "label": "Inbox (if included)"
+            },
+            {
+              "label": "— PreviewTitle"
+            },
+            {
+              "label": "— PreviewDescription"
+            },
+            {
+              "label": "— PreviewImage"
+            },
+            {
+              "label": "— FullViewTitle"
+            },
+            {
+              "label": "— FullViewDescription"
+            },
+            {
+              "label": "— FullViewImage"
+            },
+            {
+              "label": "— Checked ShowManualTACs"
+            },
+            {
+              "label": "— ManualTACs"
+            },
+            {
+              "label": "Overlay (if included)"
+            },
+            {
+              "label": "— Overlay Title"
+            },
+            {
+              "label": "— Overlay Description"
+            },
+            {
+              "label": "— Overlay CTA"
+            },
+            {
+              "label": "— Overlay Image"
+            },
+            {
+              "label": "— CTANative Link"
+            },
+            {
+              "label": "— CTANative Link Text"
+            },
+            {
+              "label": "Toaster (if included)"
+            },
+            {
+              "label": "— Checked Close with Timer"
+            },
+            {
+              "label": "— Toaster Title"
+            },
+            {
+              "label": "— Toaster Description"
+            },
+            {
+              "label": "— Toaster Image"
+            },
+            {
+              "label": "— Toaster CTA"
+            },
+            {
+              "label": "Pushed To Optimove"
+            },
+            {
+              "label": "Added Templates for Engagement"
+            },
+            {
+              "label": "Looks good in Rest ID Checker"
+            },
+            {
+              "label": "Properly commented on WF"
+            }
+          ]
+        },
+        {
+          "label": "Pick A Box Layout",
+          "checklist": [
+            {
+              "label": "PageHeader"
+            },
+            {
+              "label": "Error Messages"
+            },
+            {
+              "label": "Brand Logo Image"
+            },
+            {
+              "label": "Landscape View BG Image"
+            },
+            {
+              "label": "Landscape Mode Clickable Image Config"
+            },
+            {
+              "label": "Portrait View BG Image"
+            },
+            {
+              "label": "Portrait Mode Clickable Image Config"
+            },
+            {
+              "label": "Error Page"
+            },
+            {
+              "label": "Pre Login Page Content Image"
+            },
+            {
+              "label": "Pre Login Error Page Content Image"
+            },
+            {
+              "label": "Session Timeout Error Page Content"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Pick A Box PAT",
+          "checklist": [
+            {
+              "label": "Promotion Title"
+            },
+            {
+              "label": "Transaction Description"
+            },
+            {
+              "label": "Description has empty <p> tag"
+            },
+            {
+              "label": "KeyTermsAndConditions"
+            },
+            {
+              "label": "TeaserImage"
+            },
+            {
+              "label": "TeaserClass"
+            },
+            {
+              "label": "BoxSection"
+            },
+            {
+              "label": "— AwardValue (If change request needed)"
+            },
+            {
+              "label": "— Title"
+            },
+            {
+              "label": "— Image"
+            },
+            {
+              "label": "— Description"
+            },
+            {
+              "label": "Mobile Layout Path"
+            },
+            {
+              "label": "T & C Content"
+            },
+            {
+              "label": "How It Works Content"
+            },
+            {
+              "label": "Deposit and Wager Criteria Content"
+            },
+            {
+              "label": "Key T&C Note Text has empty <p> tag"
+            },
+            {
+              "label": "Post Login Error Page Content Image"
+            },
+            {
+              "label": "Error Page Content"
+            },
+            {
+              "label": "PageTitle"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Test Game URL is working"
+            },
+            {
+              "label": "All Prizes are showing and screenshotted"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Spin The Wheel",
+      "checklists": [
+        {
+          "label": "Creatives",
+          "checklist": [
+            {
+              "label": "Download Creatives"
+            },
+            {
+              "label": "Ensure Every Image is <95kb"
+            },
+            {
+              "label": "Remove .DS_Store Files"
+            },
+            {
+              "label": "Rename Folder with Ticket Name"
+            },
+            {
+              "label": "ZIP Folder"
+            },
+            {
+              "label": "Upload To Sitecore (Unpack ZIP)"
+            }
+          ]
+        },
+        {
+          "label": "Carousel",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template (Desktop / Mobile)"
+            },
+            {
+              "label": "Title"
+            },
+            {
+              "label": "Subtitle"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "4 links"
+            },
+            {
+              "label": "CTA Title"
+            },
+            {
+              "label": "Check Show BG Image"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "Teaser Alignments"
+            },
+            {
+              "label": "Filters"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Pushed to LMT"
+            },
+            {
+              "label": "Preview is looking good"
+            },
+            {
+              "label": "Screenshot commented"
+            }
+          ]
+        },
+        {
+          "label": "ODR Banner",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template (w/ ODRBanner-)"
+            },
+            {
+              "label": "4 CTA links"
+            },
+            {
+              "label": "Check Show BG Image"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "Filter"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Check Never Publish"
+            }
+          ]
+        },
+        {
+          "label": "MPP",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Parent (URL)"
+            },
+            {
+              "label": "Rename Child (URL)"
+            },
+            {
+              "label": "Edit Rule to child"
+            },
+            {
+              "label": "PromotionTitle"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "ImageHeadline"
+            },
+            {
+              "label": "DetailedDescription"
+            },
+            {
+              "label": "— Promotion Description"
+            },
+            {
+              "label": "— CTAs w/ color"
+            },
+            {
+              "label": "— HIW"
+            },
+            {
+              "label": "— Game Tiles"
+            },
+            {
+              "label": "ShowTACS is checked"
+            },
+            {
+              "label": "TACTitle"
+            },
+            {
+              "label": "TnCs"
+            },
+            {
+              "label": "— No unwanted characters"
+            },
+            {
+              "label": "— Bold titles"
+            },
+            {
+              "label": "— AM/PM proper format"
+            },
+            {
+              "label": "— Proper links w/ color"
+            },
+            {
+              "label": "— Proper indents and bullets"
+            },
+            {
+              "label": "— No \"Link to\""
+            },
+            {
+              "label": "— Proper table (if included)"
+            },
+            {
+              "label": "— w/ OLG (if NJ)"
+            },
+            {
+              "label": "No Filters"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "MPP looks good"
+            }
+          ]
+        },
+        {
+          "label": "Rest ID",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template"
+            },
+            {
+              "label": "SectionSelector"
+            },
+            {
+              "label": "Campaign Common Data (if w/ Template)"
+            },
+            {
+              "label": "— CommonTitle"
+            },
+            {
+              "label": "— CommonDescription"
+            },
+            {
+              "label": "— CommonTACs"
+            },
+            {
+              "label": "— 2 Images"
+            },
+            {
+              "label": "Inbox (if included)"
+            },
+            {
+              "label": "— PreviewTitle"
+            },
+            {
+              "label": "— PreviewDescription"
+            },
+            {
+              "label": "— PreviewImage"
+            },
+            {
+              "label": "— FullViewTitle"
+            },
+            {
+              "label": "— FullViewDescription"
+            },
+            {
+              "label": "— FullViewImage"
+            },
+            {
+              "label": "— Checked ShowManualTACs"
+            },
+            {
+              "label": "— ManualTACs"
+            },
+            {
+              "label": "Overlay (if included)"
+            },
+            {
+              "label": "— Overlay Title"
+            },
+            {
+              "label": "— Overlay Description"
+            },
+            {
+              "label": "— Overlay CTA"
+            },
+            {
+              "label": "— Overlay Image"
+            },
+            {
+              "label": "— CTANative Link"
+            },
+            {
+              "label": "— CTANative Link Text"
+            },
+            {
+              "label": "Toaster (if included)"
+            },
+            {
+              "label": "— Checked Close with Timer"
+            },
+            {
+              "label": "— Toaster Title"
+            },
+            {
+              "label": "— Toaster Description"
+            },
+            {
+              "label": "— Toaster Image"
+            },
+            {
+              "label": "— Toaster CTA"
+            },
+            {
+              "label": "Pushed To Optimove"
+            },
+            {
+              "label": "Added Templates for Engagement"
+            },
+            {
+              "label": "Looks good in Rest ID Checker"
+            },
+            {
+              "label": "Properly commented on WF"
+            }
+          ]
+        },
+        {
+          "label": "Spin The Wheel Layout",
+          "checklist": [
+            {
+              "label": "Dupilicate Template"
+            },
+            {
+              "label": "Rename File"
+            },
+            {
+              "label": "BSpinBackground "
+            },
+            {
+              "label": "Marker"
+            },
+            {
+              "label": "SpinButton"
+            },
+            {
+              "label": "WheelBackground5 "
+            },
+            {
+              "label": "WheelBackground6 "
+            },
+            {
+              "label": "WheelBackground7 "
+            },
+            {
+              "label": "WheelBackground8"
+            },
+            {
+              "label": "PageAssets"
+            },
+            {
+              "label": "Content"
+            },
+            {
+              "label": "— PageHeaderText"
+            },
+            {
+              "label": "ErrorMessage"
+            },
+            {
+              "label": "— 1103"
+            },
+            {
+              "label": "— 1107"
+            },
+            {
+              "label": "PreLoginPage"
+            },
+            {
+              "label": "PostLoginErrorPage"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Spin The Wheel PAT",
+          "checklist": [
+            {
+              "label": "Description "
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Promotion Title"
+            },
+            {
+              "label": "Transaction Description"
+            },
+            {
+              "label": "Wheel Sections"
+            },
+            {
+              "label": "— AwardValue (If change request needed)"
+            },
+            {
+              "label": "— Prize Table Text"
+            },
+            {
+              "label": "— Icon (Prize & Wheel)"
+            },
+            {
+              "label": "— Overlay Description"
+            },
+            {
+              "label": "Key Terms And Conditions"
+            },
+            {
+              "label": "Terms And Conditions"
+            },
+            {
+              "label": "How It Works"
+            },
+            {
+              "label": "Criteria Overlay"
+            },
+            {
+              "label": "Page Layout Details"
+            },
+            {
+              "label": "Test Game URL "
+            },
+            {
+              "label": "All Prizes are showing and screenshotted"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Coin Flip",
+      "checklists": [
+        {
+          "label": "Creatives",
+          "checklist": [
+            {
+              "label": "Download Creatives"
+            },
+            {
+              "label": "Ensure Every Image is <95kb"
+            },
+            {
+              "label": "Remove .DS_Store Files"
+            },
+            {
+              "label": "Rename Folder with Ticket Name"
+            },
+            {
+              "label": "ZIP Folder"
+            },
+            {
+              "label": "Upload To Sitecore (Unpack ZIP)"
+            }
+          ]
+        },
+        {
+          "label": "Carousel",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template (Desktop / Mobile)"
+            },
+            {
+              "label": "Title"
+            },
+            {
+              "label": "Subtitle"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "4 links"
+            },
+            {
+              "label": "CTA Title"
+            },
+            {
+              "label": "Check Show BG Image"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "Teaser Alignments"
+            },
+            {
+              "label": "Filters"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Pushed to LMT"
+            },
+            {
+              "label": "Preview is looking good"
+            },
+            {
+              "label": "Screenshot commented"
+            }
+          ]
+        },
+        {
+          "label": "ODR Banner",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template (w/ ODRBanner-)"
+            },
+            {
+              "label": "4 CTA links"
+            },
+            {
+              "label": "Check Show BG Image"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "Filter"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Check Never Publish"
+            }
+          ]
+        },
+        {
+          "label": "MPP",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Parent (URL)"
+            },
+            {
+              "label": "Rename Child (URL)"
+            },
+            {
+              "label": "Edit Rule to child"
+            },
+            {
+              "label": "PromotionTitle"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "ImageHeadline"
+            },
+            {
+              "label": "DetailedDescription"
+            },
+            {
+              "label": "— Promotion Description"
+            },
+            {
+              "label": "— CTAs w/ color"
+            },
+            {
+              "label": "— HIW"
+            },
+            {
+              "label": "— Game Tiles"
+            },
+            {
+              "label": "ShowTACS is checked"
+            },
+            {
+              "label": "TACTitle"
+            },
+            {
+              "label": "TnCs"
+            },
+            {
+              "label": "— No unwanted characters"
+            },
+            {
+              "label": "— Bold titles"
+            },
+            {
+              "label": "— AM/PM proper format"
+            },
+            {
+              "label": "— Proper links w/ color"
+            },
+            {
+              "label": "— Proper indents and bullets"
+            },
+            {
+              "label": "— No \"Link to\""
+            },
+            {
+              "label": "— Proper table (if included)"
+            },
+            {
+              "label": "— w/ OLG (if NJ)"
+            },
+            {
+              "label": "No Filters"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "MPP looks good"
+            }
+          ]
+        },
+        {
+          "label": "Rest ID",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template"
+            },
+            {
+              "label": "SectionSelector"
+            },
+            {
+              "label": "Campaign Common Data (if w/ Template)"
+            },
+            {
+              "label": "— CommonTitle"
+            },
+            {
+              "label": "— CommonDescription"
+            },
+            {
+              "label": "— CommonTACs"
+            },
+            {
+              "label": "— 2 Images"
+            },
+            {
+              "label": "Inbox (if included)"
+            },
+            {
+              "label": "— PreviewTitle"
+            },
+            {
+              "label": "— PreviewDescription"
+            },
+            {
+              "label": "— PreviewImage"
+            },
+            {
+              "label": "— FullViewTitle"
+            },
+            {
+              "label": "— FullViewDescription"
+            },
+            {
+              "label": "— FullViewImage"
+            },
+            {
+              "label": "— Checked ShowManualTACs"
+            },
+            {
+              "label": "— ManualTACs"
+            },
+            {
+              "label": "Overlay (if included)"
+            },
+            {
+              "label": "— Overlay Title"
+            },
+            {
+              "label": "— Overlay Description"
+            },
+            {
+              "label": "— Overlay CTA"
+            },
+            {
+              "label": "— Overlay Image"
+            },
+            {
+              "label": "— CTANative Link"
+            },
+            {
+              "label": "— CTANative Link Text"
+            },
+            {
+              "label": "Toaster (if included)"
+            },
+            {
+              "label": "— Checked Close with Timer"
+            },
+            {
+              "label": "— Toaster Title"
+            },
+            {
+              "label": "— Toaster Description"
+            },
+            {
+              "label": "— Toaster Image"
+            },
+            {
+              "label": "— Toaster CTA"
+            },
+            {
+              "label": "Pushed To Optimove"
+            },
+            {
+              "label": "Added Templates for Engagement"
+            },
+            {
+              "label": "Looks good in Rest ID Checker"
+            },
+            {
+              "label": "Properly commented on WF"
+            }
+          ]
+        },
+        {
+          "label": "Coin Flip Layout",
+          "checklist": [
+            {
+              "label": "Dupilicate Template"
+            },
+            {
+              "label": "Rename File"
+            },
+            {
+              "label": "assetsandcontent"
+            },
+            {
+              "label": "— PreBetText"
+            },
+            {
+              "label": "— TossConfirmationText"
+            },
+            {
+              "label": "— TossResultText"
+            },
+            {
+              "label": "— HeadText"
+            },
+            {
+              "label": "— TailText"
+            },
+            {
+              "label": "— BackImage"
+            },
+            {
+              "label": "— CoinFlipLogo"
+            },
+            {
+              "label": "— BackgroundImage"
+            },
+            {
+              "label": "FAQs"
+            },
+            {
+              "label": "Faq1"
+            },
+            {
+              "label": "— Title"
+            },
+            {
+              "label": "— Text"
+            },
+            {
+              "label": "Faq3"
+            },
+            {
+              "label": "—Text"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        },
+        {
+          "label": "Coin Flip PAT",
+          "checklist": [
+            {
+              "label": "Promotion Title"
+            },
+            {
+              "label": "Transaction Description"
+            },
+            {
+              "label": "TeaserImage"
+            },
+            {
+              "label": "Description "
+            },
+            {
+              "label": "TeaserClass "
+            },
+            {
+              "label": "Rewards"
+            },
+            {
+              "label": "— AwardValue (If change request needed)"
+            },
+            {
+              "label": "— Title"
+            },
+            {
+              "label": "— Image"
+            },
+            {
+              "label": "— Description"
+            },
+            {
+              "label": "KeyTermsAndConditions"
+            },
+            {
+              "label": "FullTermsAndConditions"
+            },
+            {
+              "label": "CriteriaOverlay"
+            },
+            {
+              "label": "MoreInfo"
+            },
+            {
+              "label": "— URL"
+            },
+            {
+              "label": "— Link Text"
+            },
+            {
+              "label": "PreBetText"
+            },
+            {
+              "label": "TossConfirmationText"
+            },
+            {
+              "label": "TossResultText"
+            },
+            {
+              "label": "HeadText"
+            },
+            {
+              "label": "TailText"
+            },
+            {
+              "label": "FrontImage"
+            },
+            {
+              "label": "BackImage"
+            },
+            {
+              "label": "CoinFlipLogo"
+            },
+            {
+              "label": "BackgroundImage"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Test Game URL is working"
+            },
+            {
+              "label": "All Prizes are showing and screenshotted"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
