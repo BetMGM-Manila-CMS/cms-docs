@@ -2400,7 +2400,378 @@
       ]
     },
     {
-      "label": "BetMGM Poker BAU",
+      "label": "Borgata Casino BAU",
+      "checklists": [
+        {
+          "label": "Creatives",
+          "checklist": [
+            {
+              "label": "Download Creatives"
+            },
+            {
+              "label": "Ensure Every Image is <95kb"
+            },
+            {
+              "label": "Remove .DS_Store Files"
+            },
+            {
+              "label": "Rename Folder with Ticket Name"
+            },
+            {
+              "label": "ZIP Folder"
+            },
+            {
+              "label": "Upload To Sitecore (Unpack ZIP)"
+            }
+          ]
+        },
+        {
+          "label": "Stories",
+          "checklist": [
+            {
+              "label": "Duplicate StoryContent Template"
+            },
+            {
+              "label": "Rename Template (w/ underscores)"
+            },
+            {
+              "label": "CSS backgroundImage"
+            },
+            {
+              "label": "HTML Text CTA"
+            },
+            {
+              "label": "Duplicate InstaContainer Template"
+            },
+            {
+              "label": "Rename Parent (w/ underscores)"
+            },
+            {
+              "label": "Rename Child (w/ underscores)"
+            },
+            {
+              "label": "StoryThumbnailImage"
+            },
+            {
+              "label": "Push child on Stories"
+            },
+            {
+              "label": "Title"
+            },
+            {
+              "label": "Add Filter"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "Push StoryContent in Child"
+            },
+            {
+              "label": "Push on InstaContainer"
+            },
+            {
+              "label": "Preview is looking good"
+            },
+            {
+              "label": "Screenshot commented"
+            }
+          ]
+        },
+        {
+          "label": "ODR Banner",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template (w/ ODRBanner-)"
+            },
+            {
+              "label": "4 CTA links"
+            },
+            {
+              "label": "Check Show BG Image"
+            },
+            {
+              "label": "Background Image"
+            },
+            {
+              "label": "Filter"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Check Never Publish"
+            }
+          ]
+        },
+        {
+          "label": "MPP",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Parent (URL)"
+            },
+            {
+              "label": "Rename Child (URL)"
+            },
+            {
+              "label": "Edit Rule to child"
+            },
+            {
+              "label": "PromotionTitle"
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "ImageHeadline"
+            },
+            {
+              "label": "DetailedDescription"
+            },
+            {
+              "label": "— Promotion Description"
+            },
+            {
+              "label": "— CTAs w/ color"
+            },
+            {
+              "label": "— HIW"
+            },
+            {
+              "label": "— Game Tiles"
+            },
+            {
+              "label": "ShowTACS is checked"
+            },
+            {
+              "label": "TACTitle"
+            },
+            {
+              "label": "TnCs"
+            },
+            {
+              "label": "— No unwanted characters"
+            },
+            {
+              "label": "— Bold titles"
+            },
+            {
+              "label": "— AM/PM proper format"
+            },
+            {
+              "label": "— Proper links w/ color"
+            },
+            {
+              "label": "— Proper indents and bullets"
+            },
+            {
+              "label": "— No \"Link to\""
+            },
+            {
+              "label": "— Proper table (if included)"
+            },
+            {
+              "label": "— w/ OLG (if NJ)"
+            },
+            {
+              "label": "No Filters"
+            },
+            {
+              "label": "Clear Publishing Dates"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            },
+            {
+              "label": "MPP looks good"
+            }
+          ]
+        },
+        {
+          "label": "Rest ID",
+          "checklist": [
+            {
+              "label": "Duplicate Template"
+            },
+            {
+              "label": "Rename Template"
+            },
+            {
+              "label": "SectionSelector"
+            },
+            {
+              "label": "Campaign Common Data (if w/ Template)"
+            },
+            {
+              "label": "— CommonTitle"
+            },
+            {
+              "label": "— CommonDescription"
+            },
+            {
+              "label": "— CommonTACs"
+            },
+            {
+              "label": "— 2 Images"
+            },
+            {
+              "label": "Inbox (if included)"
+            },
+            {
+              "label": "— PreviewTitle"
+            },
+            {
+              "label": "— PreviewDescription"
+            },
+            {
+              "label": "— PreviewImage"
+            },
+            {
+              "label": "— FullViewTitle"
+            },
+            {
+              "label": "— FullViewDescription"
+            },
+            {
+              "label": "— FullViewImage"
+            },
+            {
+              "label": "— Checked ShowManualTACs"
+            },
+            {
+              "label": "— ManualTACs"
+            },
+            {
+              "label": "Overlay (if included)"
+            },
+            {
+              "label": "— Overlay Title"
+            },
+            {
+              "label": "— Overlay Description"
+            },
+            {
+              "label": "— Overlay CTA"
+            },
+            {
+              "label": "— Overlay Image"
+            },
+            {
+              "label": "— CTANative Link"
+            },
+            {
+              "label": "— CTANative Link Text"
+            },
+            {
+              "label": "Toaster (if included)"
+            },
+            {
+              "label": "— Checked Close with Timer"
+            },
+            {
+              "label": "— Toaster Title"
+            },
+            {
+              "label": "— Toaster Description"
+            },
+            {
+              "label": "— Toaster Image"
+            },
+            {
+              "label": "— Toaster CTA"
+            },
+            {
+              "label": "Pushed To Optimove"
+            },
+            {
+              "label": "Added Templates for Engagement"
+            },
+            {
+              "label": "Looks good in Rest ID Checker"
+            },
+            {
+              "label": "Properly commented on WF"
+            }
+          ]
+        },
+        {
+          "label": "MyProgress (PlayerActivity)",
+          "checklist": [
+            {
+              "label": "TeaserImage"
+            },
+            {
+              "label": "Promotion Title"
+            },
+            {
+              "label": "Transaction Description"
+            },
+            {
+              "label": "Introduction text"
+            },
+            {
+              "label": "The \"hook\""
+            },
+            {
+              "label": "Image"
+            },
+            {
+              "label": "Steps 1-2-3"
+            },
+            {
+              "label": "CarouselBackgroundImage"
+            },
+            {
+              "label": "FirstSlabImage"
+            },
+            {
+              "label": "SlabImage"
+            },
+            {
+              "label": "StepImage"
+            },
+            {
+              "label": "CardImage"
+            },
+            {
+              "label": "FreeCardImage"
+            },
+            {
+              "label": "KeyTermsAndConditions"
+            },
+            {
+              "label": "FullTermsAndConditions"
+            },
+            {
+              "label": "Game tile/s (if included)"
+            },
+            {
+              "label": "Play Now URL"
+            },
+            {
+              "label": "Rewards and Results options"
+            },
+            {
+              "label": "Publishing Date is Empty"
+            },
+            {
+              "label": "Never Publish Unchecked"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Poker BAU",
       "checklists": [
         {
           "label": "Creatives",
@@ -2816,377 +3187,6 @@
             },
             {
               "label": "Screenshot commented"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Borgata Casino BAU",
-      "checklists": [
-        {
-          "label": "Creatives",
-          "checklist": [
-            {
-              "label": "Download Creatives"
-            },
-            {
-              "label": "Ensure Every Image is <95kb"
-            },
-            {
-              "label": "Remove .DS_Store Files"
-            },
-            {
-              "label": "Rename Folder with Ticket Name"
-            },
-            {
-              "label": "ZIP Folder"
-            },
-            {
-              "label": "Upload To Sitecore (Unpack ZIP)"
-            }
-          ]
-        },
-        {
-          "label": "Stories",
-          "checklist": [
-            {
-              "label": "Duplicate StoryContent Template"
-            },
-            {
-              "label": "Rename Template (w/ underscores)"
-            },
-            {
-              "label": "CSS backgroundImage"
-            },
-            {
-              "label": "HTML Text CTA"
-            },
-            {
-              "label": "Duplicate InstaContainer Template"
-            },
-            {
-              "label": "Rename Parent (w/ underscores)"
-            },
-            {
-              "label": "Rename Child (w/ underscores)"
-            },
-            {
-              "label": "StoryThumbnailImage"
-            },
-            {
-              "label": "Push child on Stories"
-            },
-            {
-              "label": "Title"
-            },
-            {
-              "label": "Add Filter"
-            },
-            {
-              "label": "Clear Publishing Dates"
-            },
-            {
-              "label": "Never Publish Unchecked"
-            },
-            {
-              "label": "Push StoryContent in Child"
-            },
-            {
-              "label": "Push on InstaContainer"
-            },
-            {
-              "label": "Preview is looking good"
-            },
-            {
-              "label": "Screenshot commented"
-            }
-          ]
-        },
-        {
-          "label": "ODR Banner",
-          "checklist": [
-            {
-              "label": "Duplicate Template"
-            },
-            {
-              "label": "Rename Template (w/ ODRBanner-)"
-            },
-            {
-              "label": "4 CTA links"
-            },
-            {
-              "label": "Check Show BG Image"
-            },
-            {
-              "label": "Background Image"
-            },
-            {
-              "label": "Filter"
-            },
-            {
-              "label": "Clear Publishing Dates"
-            },
-            {
-              "label": "Check Never Publish"
-            }
-          ]
-        },
-        {
-          "label": "MPP",
-          "checklist": [
-            {
-              "label": "Duplicate Template"
-            },
-            {
-              "label": "Rename Parent (URL)"
-            },
-            {
-              "label": "Rename Child (URL)"
-            },
-            {
-              "label": "Edit Rule to child"
-            },
-            {
-              "label": "PromotionTitle"
-            },
-            {
-              "label": "Image"
-            },
-            {
-              "label": "ImageHeadline"
-            },
-            {
-              "label": "DetailedDescription"
-            },
-            {
-              "label": "— Promotion Description"
-            },
-            {
-              "label": "— CTAs w/ color"
-            },
-            {
-              "label": "— HIW"
-            },
-            {
-              "label": "— Game Tiles"
-            },
-            {
-              "label": "ShowTACS is checked"
-            },
-            {
-              "label": "TACTitle"
-            },
-            {
-              "label": "TnCs"
-            },
-            {
-              "label": "— No unwanted characters"
-            },
-            {
-              "label": "— Bold titles"
-            },
-            {
-              "label": "— AM/PM proper format"
-            },
-            {
-              "label": "— Proper links w/ color"
-            },
-            {
-              "label": "— Proper indents and bullets"
-            },
-            {
-              "label": "— No \"Link to\""
-            },
-            {
-              "label": "— Proper table (if included)"
-            },
-            {
-              "label": "— w/ OLG (if NJ)"
-            },
-            {
-              "label": "No Filters"
-            },
-            {
-              "label": "Clear Publishing Dates"
-            },
-            {
-              "label": "Never Publish Unchecked"
-            },
-            {
-              "label": "MPP looks good"
-            }
-          ]
-        },
-        {
-          "label": "Rest ID",
-          "checklist": [
-            {
-              "label": "Duplicate Template"
-            },
-            {
-              "label": "Rename Template"
-            },
-            {
-              "label": "SectionSelector"
-            },
-            {
-              "label": "Campaign Common Data (if w/ Template)"
-            },
-            {
-              "label": "— CommonTitle"
-            },
-            {
-              "label": "— CommonDescription"
-            },
-            {
-              "label": "— CommonTACs"
-            },
-            {
-              "label": "— 2 Images"
-            },
-            {
-              "label": "Inbox (if included)"
-            },
-            {
-              "label": "— PreviewTitle"
-            },
-            {
-              "label": "— PreviewDescription"
-            },
-            {
-              "label": "— PreviewImage"
-            },
-            {
-              "label": "— FullViewTitle"
-            },
-            {
-              "label": "— FullViewDescription"
-            },
-            {
-              "label": "— FullViewImage"
-            },
-            {
-              "label": "— Checked ShowManualTACs"
-            },
-            {
-              "label": "— ManualTACs"
-            },
-            {
-              "label": "Overlay (if included)"
-            },
-            {
-              "label": "— Overlay Title"
-            },
-            {
-              "label": "— Overlay Description"
-            },
-            {
-              "label": "— Overlay CTA"
-            },
-            {
-              "label": "— Overlay Image"
-            },
-            {
-              "label": "— CTANative Link"
-            },
-            {
-              "label": "— CTANative Link Text"
-            },
-            {
-              "label": "Toaster (if included)"
-            },
-            {
-              "label": "— Checked Close with Timer"
-            },
-            {
-              "label": "— Toaster Title"
-            },
-            {
-              "label": "— Toaster Description"
-            },
-            {
-              "label": "— Toaster Image"
-            },
-            {
-              "label": "— Toaster CTA"
-            },
-            {
-              "label": "Pushed To Optimove"
-            },
-            {
-              "label": "Added Templates for Engagement"
-            },
-            {
-              "label": "Looks good in Rest ID Checker"
-            },
-            {
-              "label": "Properly commented on WF"
-            }
-          ]
-        },
-        {
-          "label": "MyProgress (PlayerActivity)",
-          "checklist": [
-            {
-              "label": "TeaserImage"
-            },
-            {
-              "label": "Promotion Title"
-            },
-            {
-              "label": "Transaction Description"
-            },
-            {
-              "label": "Introduction text"
-            },
-            {
-              "label": "The \"hook\""
-            },
-            {
-              "label": "Image"
-            },
-            {
-              "label": "Steps 1-2-3"
-            },
-            {
-              "label": "CarouselBackgroundImage"
-            },
-            {
-              "label": "FirstSlabImage"
-            },
-            {
-              "label": "SlabImage"
-            },
-            {
-              "label": "StepImage"
-            },
-            {
-              "label": "CardImage"
-            },
-            {
-              "label": "FreeCardImage"
-            },
-            {
-              "label": "KeyTermsAndConditions"
-            },
-            {
-              "label": "FullTermsAndConditions"
-            },
-            {
-              "label": "Game tile/s (if included)"
-            },
-            {
-              "label": "Play Now URL"
-            },
-            {
-              "label": "Rewards and Results options"
-            },
-            {
-              "label": "Publishing Date is Empty"
-            },
-            {
-              "label": "Never Publish Unchecked"
             }
           ]
         }
