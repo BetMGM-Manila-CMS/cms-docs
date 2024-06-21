@@ -10,23 +10,6 @@ function Checklist({ checklist }) {
     
     return (
         <>
-        {/* <div className="p-6 rounded-2xl bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800 transition">
-            <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <input type="checkbox" className="daisy-checkbox [--chkbg:theme(colors.primary)] mr-2 align-middle" />
-            {checklist.label}</h5>
-            <div className="*:mb-2">
-                {
-                    checklist.checklist.map((checklistItem, index) => {
-                        return (
-                            <div className="flex items-center" key={index}>
-                                <input type="checkbox" className="daisy-checkbox [--chkbg:theme(colors.primary)]" />
-                                <label for="default-checkbox" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">{checklistItem.label}</label>
-                            </div>
-                        )
-                    })
-                }
-            </div>
-        </div> */}
         <div className="daisy-collapse bg-white border border-gray-200  shadow dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800">
             <input type="checkbox" /> 
             <div className="daisy-collapse-title">
@@ -49,28 +32,6 @@ function Checklist({ checklist }) {
                 </div>
             </div>
         </div>
-        {/* <div tabIndex={0} className="daisy-collapse bg-base-200"> 
-            <div className="daisy-collapse-title text-xl font-medium">
-                <h5 className="mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    <input type="checkbox" className="daisy-checkbox [--chkbg:theme(colors.primary)] mr-2 align-middle" />
-                    {checklist.label}
-                </h5>
-            </div>
-            <div className="daisy-collapse-content"> 
-                <div className="*:mb-2">
-                {
-                    checklist.checklist.map((checklistItem, index) => {
-                        return (
-                            <div className="flex items-center" key={index}>
-                                <input type="checkbox" className="daisy-checkbox [--chkbg:theme(colors.primary)]" />
-                                <label for="default-checkbox" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">{checklistItem.label}</label>
-                            </div>
-                        )
-                    })
-                }
-                </div>
-            </div>
-        </div> */}
         </>
     )
 }

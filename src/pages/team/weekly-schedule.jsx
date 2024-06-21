@@ -2,7 +2,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 
-import { workSchedule } from "@site/config/work-schedules/index.json"
+import workSchedules from "@site/config/work-schedules/index.json"
 import { displayRangeDate } from "@site/utils/date.js"
 import Papa from 'papaparse';
 
@@ -21,7 +21,7 @@ export default function () {
     }, {}) : {}
     const { start, end } = params    
 
-    const sortedWorkSchedule = workSchedule.sort((a, b) => new Date(a.startDay) - new Date(b.startDay));
+    const sortedWorkSchedule = workSchedules.workSchedule.sort((a, b) => new Date(a.startDay) - new Date(b.startDay));
     const schedule = end && start ? sortedWorkSchedule.find(schedule => schedule.startDay === start && schedule.endDay === end) : sortedWorkSchedule[0]
     const tableData = schedule.schedule ? Papa.parse(schedule.schedule, { header: true, skipEmptyLines: true }).data : null
     const tableColumns = tableData ? Object.keys(tableData[0]) : null
