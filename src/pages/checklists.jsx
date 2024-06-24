@@ -49,13 +49,13 @@ export default function Checklists() {
 
   const params = location.search
     ? location.search
-        .replace("?", "")
-        .split("&")
-        .reduce((params, param) => {
-          const [key, value] = param.split("=");
-          params[key] = value;
-          return params;
-        }, {})
+      .replace("?", "")
+      .split("&")
+      .reduce((params, param) => {
+        const [key, value] = param.split("=");
+        params[key] = value;
+        return params;
+      }, {})
     : {};
 
   const { group } = params;
@@ -70,8 +70,8 @@ export default function Checklists() {
   const checlistItemsToMap =
     search && checklistItems
       ? checklistItems.filter((item) =>
-          item.label.toLowerCase().includes(search.toLowerCase())
-        )
+        item.label.toLowerCase().includes(search.toLowerCase())
+      )
       : checklistItems;
 
   const masonryColumnCount = (initialCount) =>

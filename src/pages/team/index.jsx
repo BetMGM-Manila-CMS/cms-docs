@@ -1,6 +1,8 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import CarouselSchedule from "../../components/pages/team/CarouselSchedule";
 import Gallery from "@site/src/components/pages/team/Gallery";
+import QA from "@site/src/components/pages/team/QA";
+import Members from "@site/src/components/pages/team/Members";
 import Layout from "@theme/Layout";
 import { Hero } from "@site/src/components";
 import Link from "@docusaurus/Link";
@@ -41,11 +43,9 @@ export default function () {
           alt=""
         />
       </div>
-      <section className="container relative">
-        <div className="max-w-screen-xl px-4 pb-8 mx-auto sm:pb-16 lg:px-6">
-          <Gallery />
-        </div>
-      </section>
+      <Gallery />
+      <QA />
+      <Members />
     </Layout>
   );
 }
