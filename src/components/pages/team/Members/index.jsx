@@ -10,7 +10,7 @@ export default function Member() {
             <div className="max-w-screen-xl px-4 pb-8 mx-auto sm:pb-16 lg:px-6">
                 <h2 className="text-center text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-primary ">Members</h2>
             </div>
-            <div className="grid grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
                 {
                     members.map(({ name, position, image }, index) => {
                         return (

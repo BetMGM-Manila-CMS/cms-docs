@@ -5,7 +5,7 @@ const FeatureList = [
   {
     label: "Get Building Your Builds",
     description: "Know how to create the different needs for your tickets.",
-    url: "docs/builds/assets",
+    url: "docs/builds/casino-style-guide",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719035564/stock/glenn-carstens-peters-npxXWgQ33ZQ-unsplash_zg8qvw.jpg",
   },
@@ -13,7 +13,7 @@ const FeatureList = [
     label: "Get to Know the Team",
     description:
       "Stay informed with our team structure and familiarize yourself with everyone on board.",
-    url: "/",
+    url: "/team",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719035625/team/team_s3tuzf.jpg",
   },

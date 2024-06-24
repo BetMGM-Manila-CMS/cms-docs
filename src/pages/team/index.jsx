@@ -25,24 +25,21 @@ export default function () {
       description="All things about the team, weekly schedules, monthly assignments and learn more about every one in the team."
       wrapperClassName="overflow-hidden"
     >
-      <Hero className="pb-[20vw] -mb-[32vw] relative">
+      <Hero className="pb-[20vw] -mb-[20vw] relative">
         <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-24 lg:px-12">
           <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-primary">
-            We are the
-            <br />
-            BetMGM Manila
-            <br />
+            BetMGM Manila<br />
             CMS Team
           </h1>
         </div>
       </Hero>
-      <div className="relative mt-8">
+      {/* <div className="relative mt-8">
         <img
           src="https://res.cloudinary.com/dlfu36fiw/image/upload/v1719036668/team/team-cutout-2_u3r6pt.png"
           className="w-screen -mb-[25vw]"
           alt=""
         />
-      </div>
+      </div> */}
       <Gallery />
       <QA />
       <Members />

@@ -27,21 +27,21 @@ const images = [
 export default function () {
   return (
     <section className="container relative">
-        <div className="max-w-screen-xl px-4 pb-8 mx-auto sm:pb-16 lg:px-6">
-          <div className="h-[500px] border-primary border rounded-xl overflow-hidden">
-            <Carousel leftControl={" "} rightControl={" "}>
-              {
-                images.map(({ image }, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt="..."
-                  />
-                ))
-              }
-            </Carousel>
-          </div>
+      <div className="max-w-screen-xl px-4 pb-8 mx-auto sm:pb-16 lg:px-6">
+        <div className="h-[60vw] max-h-[300px] md:h-[500px] md:max-h-[unset] border-primary border rounded-xl overflow-hidden">
+          <Carousel leftControl={" "} rightControl={" "}>
+            {
+              images.map(({ image }, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt="..."
+                />
+              ))
+            }
+          </Carousel>
         </div>
-      </section>
+      </div>
+    </section>
   );
 }

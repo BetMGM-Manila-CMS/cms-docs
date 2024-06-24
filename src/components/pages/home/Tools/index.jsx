@@ -6,37 +6,37 @@ const tools = [
     label: "Carousel Scheduler",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg",
-    url: "/",
+    url: "http://betmgm-phtools.entaingroup.corp/carousel-scheduler/",
   },
   {
     label: "Promohub Templates",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg",
-    url: "/",
+    url: "http://betmgm-phtools.entaingroup.corp/promohub-templates/",
   },
   {
     label: "PAT UAT Images",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg",
-    url: "/",
+    url: "http://betmgm-phtools.entaingroup.corp/sc-pat-images/",
   },
   {
     label: "Carousel QA",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg",
-    url: "/",
+    url: "https://kibeeen.github.io/carousel-checker-v2/",
   },
   {
     label: "HTMLTidy",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719031382/svg/tools/html-tidy_ql6f2h.png",
-    url: "/",
+    url: "https://htmltidy.net/",
   },
   {
     label: "Text Compare",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719032042/svg/tools/text-compare_qcct1r.ico",
-    url: "/",
+    url: "https://text-compare.com/",
   },
 ];
 

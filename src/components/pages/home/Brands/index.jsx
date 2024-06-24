@@ -6,31 +6,31 @@ const brands = [
     label: "BetMGM",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg",
-    url: "/",
+    url: "https://promo.nj.betmgm.com/en/promo/geolocator?orh=casino.betmgm.com",
   },
   {
     label: "Borgata",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729426/svg/brands/borgata_ms2oh6.svg",
-    url: "/",
+    url: "https://promo.borgataonline.com/en/promo/geolocator?orh=casino.borgataonline.com",
   },
   {
     label: "PartyCasino",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729430/svg/brands/partycasino_ziqhts.svg",
-    url: "/",
+    url: "https://casino.nj.partycasino.com/en/games",
   },
   {
     label: "partypoker",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729434/svg/brands/partypoker_zm9fse.svg",
-    url: "/",
+    url: "https://poker.nj.partypoker.com/",
   },
   {
     label: "Wheel Of Fortune",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729438/svg/brands/wof_zglu4s.svg",
-    url: "/",
+    url: "https://casino.wheeloffortunecasino.com/en/games",
   },
 ];
 
