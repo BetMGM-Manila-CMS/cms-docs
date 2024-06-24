@@ -189,10 +189,10 @@ const config = {
             sidebarId: "buildsSidebar",
             label: 'Announcements 📢',
           }, */
-          {
+          /* {
             type: "search",
             position: "right",
-          },
+          }, */
         ],
       },
       footer: {
@@ -206,7 +206,7 @@ const config = {
     }),
 
   plugins: [
-    require.resolve('docusaurus-lunr-search'),
+    // require.resolve('docusaurus-lunr-search'),
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",

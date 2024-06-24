@@ -79,6 +79,12 @@
               "_template": "quickLink"
             },
             {
+              "label": "BetMGM NJ Arcade",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7AD9A8AD-1AA3-412D-BBF6-A912D37FAA00}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM ON",
               "brand": "betmgm",
               "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={F75C7F42-84FF-4984-9C36-B170F814B864}&la=",
@@ -604,6 +610,12 @@
               "label": "Bet NJ - featuredfeatured",
               "brand": "betmgm",
               "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BBBC8DB5-84B4-4835-BA6F-48EBAA00FBAA}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "Bet NJ Arcade - homefeatured",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={973B3CF4-6F43-49E7-A656-4BFB3A070262}&la=",
               "_template": "quickLink"
             },
             {
