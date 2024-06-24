@@ -1,4 +1,4 @@
-import { UpdateCard } from "./UpdateCard";
+import UpdateCard from "./UpdateCard";
 
 export default function Updates({ updates }) {
   return (

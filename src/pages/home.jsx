@@ -4,6 +4,7 @@ import Updates from "@site/src/components/pages/home/Updates";
 import Brands from "@site/src/components/pages/home/Brands";
 import Tools from "@site/src/components/pages/home/Tools";
 import Features from "@site/src/components/pages/home/Features";
+import { Hero } from "@site/src/components"
 
 // import Hero from "@site/src/components/Hero";
 // import { Hero, HomeFeatures } from "@site/src/components";
