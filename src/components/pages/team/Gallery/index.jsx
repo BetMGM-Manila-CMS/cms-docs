@@ -1,4 +1,7 @@
-import { Carousel } from "flowbite-react";
+// import { Carousel } from "flowbite-react";
+
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const images = [
   {
@@ -27,20 +30,24 @@ const images = [
 export default function () {
   return (
     <section className="container relative">
-      <div className="max-w-screen-xl px-4 pb-8 mx-auto sm:pb-16 lg:px-6">
-        <div className="h-[60vw] max-h-[300px] md:h-[500px] md:max-h-[unset] border-primary border rounded-xl overflow-hidden">
-          <Carousel leftControl={" "} rightControl={" "}>
-            {
-              images.map(({ image }, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt="..."
-                />
-              ))
+      <div className="max-w-4xl mx-auto border-primary border rounded-xl overflow-hidden">
+        <Carousel infinite={true} responsive={{
+            mobile: {
+              breakpoint: { max: 4000, min: 0 },
+              items: 1
             }
-          </Carousel>
-        </div>
+          }}>
+        {
+          images.map(({ image }, index) => (
+            <div className="h-[60vw] max-h-[300px] md:h-[500px] md:max-h-[unset]" style={{
+              backgroundImage: `url(${image})`,
+              backgroundPosition: "center",
+              backgroundSize: "cover"
+            }}>
+            </div>
+          ))
+        }
+        </Carousel>
       </div>
     </section>
   );

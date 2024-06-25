@@ -33,13 +33,6 @@ export default function () {
           </h1>
         </div>
       </Hero>
-      {/* <div className="relative mt-8">
-        <img
-          src="https://res.cloudinary.com/dlfu36fiw/image/upload/v1719036668/team/team-cutout-2_u3r6pt.png"
-          className="w-screen -mb-[25vw]"
-          alt=""
-        />
-      </div> */}
       <Gallery />
       <QA />
       <Members />
