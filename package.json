@@ -28,10 +28,12 @@
     "@mdx-js/react": "^3.0.0",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.20",
+    "@mui/x-charts": "^7.7.1",
     "@tinacms/auth": "^1.0.4",
     "ag-grid-react": "^31.3.2",
     "autoprefixer": "^10.4.16",
     "axios": "^1.6.5",
+    "chart.js": "^4.4.3",
     "clsx": "^2.0.0",
     "docusaurus-lunr-search": "^3.4.0",
     "dotenv": "^16.4.5",
@@ -43,6 +45,7 @@
     "postcss": "^8.4.32",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.0.0",
     "react-dynamic-virtual-scroll": "^1.4.0",
     "react-multi-carousel": "^2.8.5",
@@ -53,6 +56,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.0.1",
     "@docusaurus/types": "3.0.1",
+    "@faker-js/faker": "^8.4.1",
     "@tinacms/cli": "^1.5.39",
     "@types/node": "^20.11.14",
     "daisyui": "^4.12.2"
