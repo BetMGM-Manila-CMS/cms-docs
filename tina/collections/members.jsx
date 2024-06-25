@@ -65,13 +65,18 @@ export const MembersCollection = {
     format: "mdx",
     fields: [
         {
+            name: "image",
+            label: "Image",
+            type: "image",
+        },
+        {
             type: 'string',
             label: 'Name',
             name: 'name',
             isTitle: true,
             required: true,
-          },
-          {
+        },
+        {
             name: "position",
             label: "Position",
             type: "string",

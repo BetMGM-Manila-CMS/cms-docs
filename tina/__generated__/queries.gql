@@ -368,3 +368,56 @@ query carouselAssignmentsConnection($before: String, $after: String, $first: Flo
     }
   }
 }
+
+query updates($relativePath: String!) {
+  updates(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...UpdatesParts
+  }
+}
+
+query updatesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: UpdatesFilter) {
+  updatesConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...UpdatesParts
+      }
+    }
+  }
+}

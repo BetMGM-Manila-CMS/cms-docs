@@ -246,6 +246,7 @@ fragment QuicklinkParts on Quicklink {
 
 fragment MembersParts on Members {
   __typename
+  image
   name
   position
   birthday
@@ -289,6 +290,7 @@ fragment CarouselAssignmentsParts on CarouselAssignments {
       betNJ {
         ... on Members {
           __typename
+          image
           name
           position
           birthday
@@ -308,4 +310,11 @@ fragment CarouselAssignmentsParts on CarouselAssignments {
       }
     }
   }
+}
+
+fragment UpdatesParts on Updates {
+  __typename
+  title
+  description
+  body
 }

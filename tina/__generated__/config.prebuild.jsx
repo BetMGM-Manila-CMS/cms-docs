@@ -749,6 +749,11 @@ var MembersCollection = {
   format: "mdx",
   fields: [
     {
+      name: "image",
+      label: "Image",
+      type: "image"
+    },
+    {
       type: "string",
       label: "Name",
       name: "name",
@@ -989,6 +994,46 @@ var CarouselAssignmentsCollection = {
   ]
 };
 
+// tina/collections/updates.jsx
+import React5 from "react";
+var UpdatesCollection = {
+  name: "updates",
+  label: "Updates",
+  path: "updates",
+  format: "mdx",
+  /* ui: {
+    router: ({ document }) => {
+      return `/docs/builds/${document._sys.filename}`
+    }
+  }, */
+  fields: [
+    {
+      type: "string",
+      label: "Title",
+      name: "title",
+      isTitle: true,
+      required: true
+    },
+    {
+      type: "string",
+      label: "Description",
+      name: "description",
+      ui: {
+        component: "textarea"
+      }
+    },
+    {
+      type: "rich-text",
+      label: "Post Body",
+      name: "body",
+      isBody: true,
+      templates: [
+        ...MDXTemplates
+      ]
+    }
+  ]
+};
+
 // tina/config.tsx
 var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
 var config_default = defineConfig2({
@@ -1023,7 +1068,8 @@ var config_default = defineConfig2({
       MembersCollection,
       WorkSchedulesCollection,
       ChecklistsCollection,
-      CarouselAssignmentsCollection
+      CarouselAssignmentsCollection,
+      UpdatesCollection
     ]
   }
 });

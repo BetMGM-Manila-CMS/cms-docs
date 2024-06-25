@@ -95,6 +95,8 @@ export type Query = {
   checklistsConnection: ChecklistsConnection;
   carouselAssignments: CarouselAssignments;
   carouselAssignmentsConnection: CarouselAssignmentsConnection;
+  updates: Updates;
+  updatesConnection: UpdatesConnection;
 };
 
 
@@ -223,6 +225,21 @@ export type QueryCarouselAssignmentsConnectionArgs = {
   filter?: InputMaybe<CarouselAssignmentsFilter>;
 };
 
+
+export type QueryUpdatesArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryUpdatesConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<UpdatesFilter>;
+};
+
 export type DocumentFilter = {
   doc?: InputMaybe<DocFilter>;
   sidebar?: InputMaybe<SidebarFilter>;
@@ -231,6 +248,7 @@ export type DocumentFilter = {
   workSchedules?: InputMaybe<WorkSchedulesFilter>;
   checklists?: InputMaybe<ChecklistsFilter>;
   carouselAssignments?: InputMaybe<CarouselAssignmentsFilter>;
+  updates?: InputMaybe<UpdatesFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -270,7 +288,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Checklists | CarouselAssignments | Folder;
+export type DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Checklists | CarouselAssignments | Updates | Folder;
 
 export type Doc = Node & Document & {
   __typename?: 'Doc';
@@ -301,7 +319,7 @@ export type DocBodyImgFilter = {
   alt?: InputMaybe<StringFilter>;
 };
 
-export type DocBodyTabsChildrenTabItemChildrenImgFilter = {
+export type UpdatesBodyTabsChildrenTabItemChildrenImgFilter = {
   className?: InputMaybe<StringFilter>;
   src?: InputMaybe<ImageFilter>;
   alt?: InputMaybe<StringFilter>;
@@ -328,45 +346,45 @@ export type NumberFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['Float']['input']>>>;
 };
 
-export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter = {
+export type UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter = {
   children?: InputMaybe<RichTextFilter>;
   rowSpan?: InputMaybe<NumberFilter>;
   colSpan?: InputMaybe<NumberFilter>;
 };
 
-export type DocBodyTinaTableChildrenTinaTableRowChildrenFilter = {
-  TinaTableCell?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
+export type UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowChildrenFilter = {
+  TinaTableCell?: InputMaybe<UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
 };
 
-export type DocBodyAdmonitionChildrenTinaTableChildrenTinaTableRowFilter = {
-  children?: InputMaybe<DocBodyTinaTableChildrenTinaTableRowChildrenFilter>;
+export type UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowFilter = {
+  children?: InputMaybe<UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowChildrenFilter>;
 };
 
-export type DocBodyTabsChildrenTabItemChildrenTinaTableChildrenFilter = {
-  TinaTableRow?: InputMaybe<DocBodyAdmonitionChildrenTinaTableChildrenTinaTableRowFilter>;
+export type UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowFilter>;
 };
 
-export type DocBodyTabsChildrenTabItemChildrenTinaTableFilter = {
+export type UpdatesBodyTabsChildrenTabItemChildrenTinaTableFilter = {
   topHeader?: InputMaybe<BooleanFilter>;
   leftHeader?: InputMaybe<BooleanFilter>;
   columnWidth?: InputMaybe<StringFilter>;
   className?: InputMaybe<StringFilter>;
-  children?: InputMaybe<DocBodyTabsChildrenTabItemChildrenTinaTableChildrenFilter>;
+  children?: InputMaybe<UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenFilter>;
 };
 
-export type DocBodyTabsChildrenTabItemChildrenFilter = {
-  img?: InputMaybe<DocBodyTabsChildrenTabItemChildrenImgFilter>;
-  TinaTable?: InputMaybe<DocBodyTabsChildrenTabItemChildrenTinaTableFilter>;
+export type UpdatesBodyTabsChildrenTabItemChildrenFilter = {
+  img?: InputMaybe<UpdatesBodyTabsChildrenTabItemChildrenImgFilter>;
+  TinaTable?: InputMaybe<UpdatesBodyTabsChildrenTabItemChildrenTinaTableFilter>;
 };
 
-export type DocBodyTabsChildrenTabItemFilter = {
+export type UpdatesBodyTabsChildrenTabItemFilter = {
   label?: InputMaybe<StringFilter>;
   value?: InputMaybe<StringFilter>;
-  children?: InputMaybe<DocBodyTabsChildrenTabItemChildrenFilter>;
+  children?: InputMaybe<UpdatesBodyTabsChildrenTabItemChildrenFilter>;
 };
 
 export type DocBodyTabsChildrenFilter = {
-  TabItem?: InputMaybe<DocBodyTabsChildrenTabItemFilter>;
+  TabItem?: InputMaybe<UpdatesBodyTabsChildrenTabItemFilter>;
 };
 
 export type DocBodyTabsFilter = {
@@ -379,22 +397,22 @@ export type DocBodyRowChildrenColChildrenAdmonitionChildrenImgFilter = {
   alt?: InputMaybe<StringFilter>;
 };
 
-export type DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter = {
+export type UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter = {
   children?: InputMaybe<RichTextFilter>;
   rowSpan?: InputMaybe<NumberFilter>;
   colSpan?: InputMaybe<NumberFilter>;
 };
 
-export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter = {
-  TinaTableCell?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
+export type UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter = {
+  TinaTableCell?: InputMaybe<UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
 };
 
-export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter = {
-  children?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter>;
+export type UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter = {
+  children?: InputMaybe<UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter>;
 };
 
-export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter = {
-  TinaTableRow?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter>;
+export type UpdatesBodyAdmonitionChildrenTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter>;
 };
 
 export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter = {
@@ -402,7 +420,7 @@ export type DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter = {
   leftHeader?: InputMaybe<BooleanFilter>;
   columnWidth?: InputMaybe<StringFilter>;
   className?: InputMaybe<StringFilter>;
-  children?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter>;
+  children?: InputMaybe<UpdatesBodyAdmonitionChildrenTinaTableChildrenFilter>;
 };
 
 export type DocBodyAdmonitionChildrenFilter = {
@@ -416,12 +434,18 @@ export type DocBodyAdmonitionFilter = {
   children?: InputMaybe<DocBodyAdmonitionChildrenFilter>;
 };
 
-export type DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter = {
-  TinaTableCell?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
+export type UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter = {
+  children?: InputMaybe<RichTextFilter>;
+  rowSpan?: InputMaybe<NumberFilter>;
+  colSpan?: InputMaybe<NumberFilter>;
+};
+
+export type UpdatesBodyTinaTableChildrenTinaTableRowChildrenFilter = {
+  TinaTableCell?: InputMaybe<UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
 };
 
 export type DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter = {
-  children?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter>;
+  children?: InputMaybe<UpdatesBodyTinaTableChildrenTinaTableRowChildrenFilter>;
 };
 
 export type DocBodyTinaTableChildrenFilter = {
@@ -441,49 +465,75 @@ export type DocBodyDetailsFilter = {
   children?: InputMaybe<RichTextFilter>;
 };
 
-export type DocBodyRowChildrenColChildrenAdmonitionChildrenFilter = {
-  img?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenImgFilter>;
-  TinaTable?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter>;
-};
-
-export type DocBodyRowChildrenColChildrenAdmonitionFilter = {
-  type?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-  children?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionChildrenFilter>;
-};
-
-export type DocBodyRowChildrenColChildrenImgFilter = {
+export type UpdatesBodyRowChildrenColChildrenAdmonitionChildrenImgFilter = {
   className?: InputMaybe<StringFilter>;
   src?: InputMaybe<ImageFilter>;
   alt?: InputMaybe<StringFilter>;
 };
 
-export type DocBodyRowChildrenColChildrenTinaTableChildrenFilter = {
-  TinaTableRow?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter>;
+export type UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter>;
 };
 
-export type DocBodyRowChildrenColChildrenTinaTableFilter = {
+export type UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter = {
   topHeader?: InputMaybe<BooleanFilter>;
   leftHeader?: InputMaybe<BooleanFilter>;
   columnWidth?: InputMaybe<StringFilter>;
   className?: InputMaybe<StringFilter>;
-  children?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableChildrenFilter>;
+  children?: InputMaybe<UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter>;
 };
 
-export type DocBodyRowChildrenColChildrenFilter = {
-  Admonition?: InputMaybe<DocBodyRowChildrenColChildrenAdmonitionFilter>;
-  img?: InputMaybe<DocBodyRowChildrenColChildrenImgFilter>;
-  TinaTable?: InputMaybe<DocBodyRowChildrenColChildrenTinaTableFilter>;
+export type UpdatesBodyRowChildrenColChildrenAdmonitionChildrenFilter = {
+  img?: InputMaybe<UpdatesBodyRowChildrenColChildrenAdmonitionChildrenImgFilter>;
+  TinaTable?: InputMaybe<UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter>;
 };
 
-export type DocBodyRowChildrenColFilter = {
+export type UpdatesBodyRowChildrenColChildrenAdmonitionFilter = {
+  type?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  children?: InputMaybe<UpdatesBodyRowChildrenColChildrenAdmonitionChildrenFilter>;
+};
+
+export type UpdatesBodyRowChildrenColChildrenImgFilter = {
+  className?: InputMaybe<StringFilter>;
+  src?: InputMaybe<ImageFilter>;
+  alt?: InputMaybe<StringFilter>;
+};
+
+export type UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter = {
+  TinaTableCell?: InputMaybe<UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter>;
+};
+
+export type UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter = {
+  children?: InputMaybe<UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter>;
+};
+
+export type UpdatesBodyRowChildrenColChildrenTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter>;
+};
+
+export type UpdatesBodyRowChildrenColChildrenTinaTableFilter = {
+  topHeader?: InputMaybe<BooleanFilter>;
+  leftHeader?: InputMaybe<BooleanFilter>;
+  columnWidth?: InputMaybe<StringFilter>;
+  className?: InputMaybe<StringFilter>;
+  children?: InputMaybe<UpdatesBodyRowChildrenColChildrenTinaTableChildrenFilter>;
+};
+
+export type UpdatesBodyRowChildrenColChildrenFilter = {
+  Admonition?: InputMaybe<UpdatesBodyRowChildrenColChildrenAdmonitionFilter>;
+  img?: InputMaybe<UpdatesBodyRowChildrenColChildrenImgFilter>;
+  TinaTable?: InputMaybe<UpdatesBodyRowChildrenColChildrenTinaTableFilter>;
+};
+
+export type UpdatesBodyRowChildrenColFilter = {
   ratio?: InputMaybe<NumberFilter>;
   sticky?: InputMaybe<BooleanFilter>;
-  children?: InputMaybe<DocBodyRowChildrenColChildrenFilter>;
+  children?: InputMaybe<UpdatesBodyRowChildrenColChildrenFilter>;
 };
 
 export type DocBodyRowChildrenFilter = {
-  Col?: InputMaybe<DocBodyRowChildrenColFilter>;
+  Col?: InputMaybe<UpdatesBodyRowChildrenColFilter>;
 };
 
 export type DocBodyRowFilter = {
@@ -923,6 +973,7 @@ export type QuicklinkConnection = Connection & {
 
 export type Members = Node & Document & {
   __typename?: 'Members';
+  image?: Maybe<Scalars['String']['output']>;
   name: Scalars['String']['output'];
   position: Scalars['String']['output'];
   birthday?: Maybe<Scalars['String']['output']>;
@@ -941,6 +992,7 @@ export type DatetimeFilter = {
 };
 
 export type MembersFilter = {
+  image?: InputMaybe<ImageFilter>;
   name?: InputMaybe<StringFilter>;
   position?: InputMaybe<StringFilter>;
   birthday?: InputMaybe<DatetimeFilter>;
@@ -1107,6 +1159,112 @@ export type CarouselAssignmentsConnection = Connection & {
   edges?: Maybe<Array<Maybe<CarouselAssignmentsConnectionEdges>>>;
 };
 
+export type Updates = Node & Document & {
+  __typename?: 'Updates';
+  title: Scalars['String']['output'];
+  description?: Maybe<Scalars['String']['output']>;
+  body?: Maybe<Scalars['JSON']['output']>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type UpdatesBodyImgFilter = {
+  className?: InputMaybe<StringFilter>;
+  src?: InputMaybe<ImageFilter>;
+  alt?: InputMaybe<StringFilter>;
+};
+
+export type UpdatesBodyTabsChildrenFilter = {
+  TabItem?: InputMaybe<UpdatesBodyTabsChildrenTabItemFilter>;
+};
+
+export type UpdatesBodyTabsFilter = {
+  children?: InputMaybe<UpdatesBodyTabsChildrenFilter>;
+};
+
+export type UpdatesBodyAdmonitionChildrenImgFilter = {
+  className?: InputMaybe<StringFilter>;
+  src?: InputMaybe<ImageFilter>;
+  alt?: InputMaybe<StringFilter>;
+};
+
+export type UpdatesBodyAdmonitionChildrenTinaTableFilter = {
+  topHeader?: InputMaybe<BooleanFilter>;
+  leftHeader?: InputMaybe<BooleanFilter>;
+  columnWidth?: InputMaybe<StringFilter>;
+  className?: InputMaybe<StringFilter>;
+  children?: InputMaybe<UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter>;
+};
+
+export type UpdatesBodyAdmonitionChildrenFilter = {
+  img?: InputMaybe<UpdatesBodyAdmonitionChildrenImgFilter>;
+  TinaTable?: InputMaybe<UpdatesBodyAdmonitionChildrenTinaTableFilter>;
+};
+
+export type UpdatesBodyAdmonitionFilter = {
+  type?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  children?: InputMaybe<UpdatesBodyAdmonitionChildrenFilter>;
+};
+
+export type UpdatesBodyTinaTableChildrenTinaTableRowFilter = {
+  children?: InputMaybe<UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter>;
+};
+
+export type UpdatesBodyTinaTableChildrenFilter = {
+  TinaTableRow?: InputMaybe<UpdatesBodyTinaTableChildrenTinaTableRowFilter>;
+};
+
+export type UpdatesBodyTinaTableFilter = {
+  topHeader?: InputMaybe<BooleanFilter>;
+  leftHeader?: InputMaybe<BooleanFilter>;
+  columnWidth?: InputMaybe<StringFilter>;
+  className?: InputMaybe<StringFilter>;
+  children?: InputMaybe<UpdatesBodyTinaTableChildrenFilter>;
+};
+
+export type UpdatesBodyDetailsFilter = {
+  summary?: InputMaybe<StringFilter>;
+  children?: InputMaybe<RichTextFilter>;
+};
+
+export type UpdatesBodyRowChildrenFilter = {
+  Col?: InputMaybe<UpdatesBodyRowChildrenColFilter>;
+};
+
+export type UpdatesBodyRowFilter = {
+  children?: InputMaybe<UpdatesBodyRowChildrenFilter>;
+};
+
+export type UpdatesBodyFilter = {
+  img?: InputMaybe<UpdatesBodyImgFilter>;
+  Tabs?: InputMaybe<UpdatesBodyTabsFilter>;
+  Admonition?: InputMaybe<UpdatesBodyAdmonitionFilter>;
+  TinaTable?: InputMaybe<UpdatesBodyTinaTableFilter>;
+  Details?: InputMaybe<UpdatesBodyDetailsFilter>;
+  Row?: InputMaybe<UpdatesBodyRowFilter>;
+};
+
+export type UpdatesFilter = {
+  title?: InputMaybe<StringFilter>;
+  description?: InputMaybe<StringFilter>;
+  body?: InputMaybe<UpdatesBodyFilter>;
+};
+
+export type UpdatesConnectionEdges = {
+  __typename?: 'UpdatesConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Updates>;
+};
+
+export type UpdatesConnection = Connection & {
+  __typename?: 'UpdatesConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<UpdatesConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -1127,6 +1285,8 @@ export type Mutation = {
   createChecklists: Checklists;
   updateCarouselAssignments: CarouselAssignments;
   createCarouselAssignments: CarouselAssignments;
+  updateUpdates: Updates;
+  createUpdates: Updates;
 };
 
 
@@ -1240,6 +1400,18 @@ export type MutationCreateCarouselAssignmentsArgs = {
   params: CarouselAssignmentsMutation;
 };
 
+
+export type MutationUpdateUpdatesArgs = {
+  relativePath: Scalars['String']['input'];
+  params: UpdatesMutation;
+};
+
+
+export type MutationCreateUpdatesArgs = {
+  relativePath: Scalars['String']['input'];
+  params: UpdatesMutation;
+};
+
 export type DocumentUpdateMutation = {
   doc?: InputMaybe<DocMutation>;
   sidebar?: InputMaybe<SidebarMutation>;
@@ -1248,6 +1420,7 @@ export type DocumentUpdateMutation = {
   workSchedules?: InputMaybe<WorkSchedulesMutation>;
   checklists?: InputMaybe<ChecklistsMutation>;
   carouselAssignments?: InputMaybe<CarouselAssignmentsMutation>;
+  updates?: InputMaybe<UpdatesMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1259,6 +1432,7 @@ export type DocumentMutation = {
   workSchedules?: InputMaybe<WorkSchedulesMutation>;
   checklists?: InputMaybe<ChecklistsMutation>;
   carouselAssignments?: InputMaybe<CarouselAssignmentsMutation>;
+  updates?: InputMaybe<UpdatesMutation>;
 };
 
 export type DocMutation = {
@@ -1434,6 +1608,7 @@ export type QuicklinkMutation = {
 };
 
 export type MembersMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
   position?: InputMaybe<Scalars['String']['input']>;
   birthday?: InputMaybe<Scalars['String']['input']>;
@@ -1482,19 +1657,27 @@ export type CarouselAssignmentsMutation = {
   carouselAssignment?: InputMaybe<Array<InputMaybe<CarouselAssignmentsCarouselAssignmentMutation>>>;
 };
 
+export type UpdatesMutation = {
+  title?: InputMaybe<Scalars['String']['input']>;
+  description?: InputMaybe<Scalars['String']['input']>;
+  body?: InputMaybe<Scalars['JSON']['input']>;
+};
+
 export type DocPartsFragment = { __typename: 'Doc', title: string, body?: any | null };
 
 export type SidebarPartsFragment = { __typename: 'Sidebar', _warning?: string | null, label: string, items?: Array<{ __typename: 'SidebarItems', label: string, items?: Array<{ __typename: 'SidebarItemsItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsLink', title: string, href: string } | { __typename: 'SidebarItemsItemsDivider', title: string } | null> | null } | null> | null };
 
 export type QuicklinkPartsFragment = { __typename: 'Quicklink', quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null };
 
-export type MembersPartsFragment = { __typename: 'Members', name: string, position: string, birthday?: string | null, hiredDate?: string | null };
+export type MembersPartsFragment = { __typename: 'Members', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null };
 
 export type WorkSchedulesPartsFragment = { __typename: 'WorkSchedules', workSchedule?: Array<{ __typename: 'WorkSchedulesWorkSchedule', startDay: string, endDay: string, schedule?: string | null } | null> | null };
 
 export type ChecklistsPartsFragment = { __typename: 'Checklists', checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string } | null> | null } | null> | null } | null> | null };
 
-export type CarouselAssignmentsPartsFragment = { __typename: 'CarouselAssignments', carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', name: string, position: string, birthday?: string | null, hiredDate?: string | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null };
+export type CarouselAssignmentsPartsFragment = { __typename: 'CarouselAssignments', carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null };
+
+export type UpdatesPartsFragment = { __typename: 'Updates', title: string, description?: string | null, body?: any | null };
 
 export type DocQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1558,7 +1741,7 @@ export type MembersQueryVariables = Exact<{
 }>;
 
 
-export type MembersQuery = { __typename?: 'Query', members: { __typename: 'Members', id: string, name: string, position: string, birthday?: string | null, hiredDate?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+export type MembersQuery = { __typename?: 'Query', members: { __typename: 'Members', id: string, image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
 
 export type MembersConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1570,7 +1753,7 @@ export type MembersConnectionQueryVariables = Exact<{
 }>;
 
 
-export type MembersConnectionQuery = { __typename?: 'Query', membersConnection: { __typename?: 'MembersConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'MembersConnectionEdges', cursor: string, node?: { __typename: 'Members', id: string, name: string, position: string, birthday?: string | null, hiredDate?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+export type MembersConnectionQuery = { __typename?: 'Query', membersConnection: { __typename?: 'MembersConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'MembersConnectionEdges', cursor: string, node?: { __typename: 'Members', id: string, image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export type WorkSchedulesQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1615,7 +1798,7 @@ export type CarouselAssignmentsQueryVariables = Exact<{
 }>;
 
 
-export type CarouselAssignmentsQuery = { __typename?: 'Query', carouselAssignments: { __typename: 'CarouselAssignments', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', name: string, position: string, birthday?: string | null, hiredDate?: string | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null } };
+export type CarouselAssignmentsQuery = { __typename?: 'Query', carouselAssignments: { __typename: 'CarouselAssignments', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null } };
 
 export type CarouselAssignmentsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1627,7 +1810,26 @@ export type CarouselAssignmentsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type CarouselAssignmentsConnectionQuery = { __typename?: 'Query', carouselAssignmentsConnection: { __typename?: 'CarouselAssignmentsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'CarouselAssignmentsConnectionEdges', cursor: string, node?: { __typename: 'CarouselAssignments', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', name: string, position: string, birthday?: string | null, hiredDate?: string | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null } | null } | null> | null } };
+export type CarouselAssignmentsConnectionQuery = { __typename?: 'Query', carouselAssignmentsConnection: { __typename?: 'CarouselAssignmentsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'CarouselAssignmentsConnectionEdges', cursor: string, node?: { __typename: 'CarouselAssignments', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null } | null } | null> | null } };
+
+export type UpdatesQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type UpdatesQuery = { __typename?: 'Query', updates: { __typename: 'Updates', id: string, title: string, description?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } };
+
+export type UpdatesConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<UpdatesFilter>;
+}>;
+
+
+export type UpdatesConnectionQuery = { __typename?: 'Query', updatesConnection: { __typename?: 'UpdatesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'UpdatesConnectionEdges', cursor: string, node?: { __typename: 'Updates', id: string, title: string, description?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
 
 export const DocPartsFragmentDoc = gql`
     fragment DocParts on Doc {
@@ -1881,6 +2083,7 @@ export const QuicklinkPartsFragmentDoc = gql`
 export const MembersPartsFragmentDoc = gql`
     fragment MembersParts on Members {
   __typename
+  image
   name
   position
   birthday
@@ -1927,6 +2130,7 @@ export const CarouselAssignmentsPartsFragmentDoc = gql`
       betNJ {
         ... on Members {
           __typename
+          image
           name
           position
           birthday
@@ -1946,6 +2150,14 @@ export const CarouselAssignmentsPartsFragmentDoc = gql`
       }
     }
   }
+}
+    `;
+export const UpdatesPartsFragmentDoc = gql`
+    fragment UpdatesParts on Updates {
+  __typename
+  title
+  description
+  body
 }
     `;
 export const DocDocument = gql`
@@ -2333,6 +2545,61 @@ export const CarouselAssignmentsConnectionDocument = gql`
   }
 }
     ${CarouselAssignmentsPartsFragmentDoc}`;
+export const UpdatesDocument = gql`
+    query updates($relativePath: String!) {
+  updates(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...UpdatesParts
+  }
+}
+    ${UpdatesPartsFragmentDoc}`;
+export const UpdatesConnectionDocument = gql`
+    query updatesConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: UpdatesFilter) {
+  updatesConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...UpdatesParts
+      }
+    }
+  }
+}
+    ${UpdatesPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -2377,6 +2644,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     carouselAssignmentsConnection(variables?: CarouselAssignmentsConnectionQueryVariables, options?: C): Promise<{data: CarouselAssignmentsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: CarouselAssignmentsConnectionQueryVariables, query: string}> {
         return requester<{data: CarouselAssignmentsConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: CarouselAssignmentsConnectionQueryVariables, query: string}, CarouselAssignmentsConnectionQueryVariables>(CarouselAssignmentsConnectionDocument, variables, options);
+      },
+    updates(variables: UpdatesQueryVariables, options?: C): Promise<{data: UpdatesQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: UpdatesQueryVariables, query: string}> {
+        return requester<{data: UpdatesQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: UpdatesQueryVariables, query: string}, UpdatesQueryVariables>(UpdatesDocument, variables, options);
+      },
+    updatesConnection(variables?: UpdatesConnectionQueryVariables, options?: C): Promise<{data: UpdatesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: UpdatesConnectionQueryVariables, query: string}> {
+        return requester<{data: UpdatesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: UpdatesConnectionQueryVariables, query: string}, UpdatesConnectionQueryVariables>(UpdatesConnectionDocument, variables, options);
       }
     };
   }

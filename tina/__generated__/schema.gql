@@ -67,6 +67,8 @@ type Query {
   checklistsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ChecklistsFilter): ChecklistsConnection!
   carouselAssignments(relativePath: String): CarouselAssignments!
   carouselAssignmentsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: CarouselAssignmentsFilter): CarouselAssignmentsConnection!
+  updates(relativePath: String): Updates!
+  updatesConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: UpdatesFilter): UpdatesConnection!
 }
 
 input DocumentFilter {
@@ -77,6 +79,7 @@ input DocumentFilter {
   workSchedules: WorkSchedulesFilter
   checklists: ChecklistsFilter
   carouselAssignments: CarouselAssignmentsFilter
+  updates: UpdatesFilter
 }
 
 type DocumentConnectionEdges {
@@ -102,7 +105,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Checklists | CarouselAssignments | Folder
+union DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Checklists | CarouselAssignments | Updates | Folder
 
 type Doc implements Node & Document {
   title: String!
@@ -132,7 +135,7 @@ input DocBodyImgFilter {
   alt: StringFilter
 }
 
-input DocBodyTabsChildrenTabItemChildrenImgFilter {
+input UpdatesBodyTabsChildrenTabItemChildrenImgFilter {
   className: StringFilter
   src: ImageFilter
   alt: StringFilter
@@ -159,45 +162,45 @@ input NumberFilter {
   in: [Float]
 }
 
-input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
+input UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
   children: RichTextFilter
   rowSpan: NumberFilter
   colSpan: NumberFilter
 }
 
-input DocBodyTinaTableChildrenTinaTableRowChildrenFilter {
-  TinaTableCell: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
+input UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowChildrenFilter {
+  TinaTableCell: UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
 }
 
-input DocBodyAdmonitionChildrenTinaTableChildrenTinaTableRowFilter {
-  children: DocBodyTinaTableChildrenTinaTableRowChildrenFilter
+input UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowFilter {
+  children: UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowChildrenFilter
 }
 
-input DocBodyTabsChildrenTabItemChildrenTinaTableChildrenFilter {
-  TinaTableRow: DocBodyAdmonitionChildrenTinaTableChildrenTinaTableRowFilter
+input UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenFilter {
+  TinaTableRow: UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenTinaTableRowFilter
 }
 
-input DocBodyTabsChildrenTabItemChildrenTinaTableFilter {
+input UpdatesBodyTabsChildrenTabItemChildrenTinaTableFilter {
   topHeader: BooleanFilter
   leftHeader: BooleanFilter
   columnWidth: StringFilter
   className: StringFilter
-  children: DocBodyTabsChildrenTabItemChildrenTinaTableChildrenFilter
+  children: UpdatesBodyTabsChildrenTabItemChildrenTinaTableChildrenFilter
 }
 
-input DocBodyTabsChildrenTabItemChildrenFilter {
-  img: DocBodyTabsChildrenTabItemChildrenImgFilter
-  TinaTable: DocBodyTabsChildrenTabItemChildrenTinaTableFilter
+input UpdatesBodyTabsChildrenTabItemChildrenFilter {
+  img: UpdatesBodyTabsChildrenTabItemChildrenImgFilter
+  TinaTable: UpdatesBodyTabsChildrenTabItemChildrenTinaTableFilter
 }
 
-input DocBodyTabsChildrenTabItemFilter {
+input UpdatesBodyTabsChildrenTabItemFilter {
   label: StringFilter
   value: StringFilter
-  children: DocBodyTabsChildrenTabItemChildrenFilter
+  children: UpdatesBodyTabsChildrenTabItemChildrenFilter
 }
 
 input DocBodyTabsChildrenFilter {
-  TabItem: DocBodyTabsChildrenTabItemFilter
+  TabItem: UpdatesBodyTabsChildrenTabItemFilter
 }
 
 input DocBodyTabsFilter {
@@ -210,22 +213,22 @@ input DocBodyRowChildrenColChildrenAdmonitionChildrenImgFilter {
   alt: StringFilter
 }
 
-input DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
+input UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
   children: RichTextFilter
   rowSpan: NumberFilter
   colSpan: NumberFilter
 }
 
-input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter {
-  TinaTableCell: DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
+input UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter {
+  TinaTableCell: UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
 }
 
-input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter {
-  children: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter
+input UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter {
+  children: UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowChildrenFilter
 }
 
-input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter {
-  TinaTableRow: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter
+input UpdatesBodyAdmonitionChildrenTinaTableChildrenFilter {
+  TinaTableRow: UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter
 }
 
 input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter {
@@ -233,7 +236,7 @@ input DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter {
   leftHeader: BooleanFilter
   columnWidth: StringFilter
   className: StringFilter
-  children: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter
+  children: UpdatesBodyAdmonitionChildrenTinaTableChildrenFilter
 }
 
 input DocBodyAdmonitionChildrenFilter {
@@ -247,12 +250,18 @@ input DocBodyAdmonitionFilter {
   children: DocBodyAdmonitionChildrenFilter
 }
 
-input DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter {
-  TinaTableCell: DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
+input UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter {
+  children: RichTextFilter
+  rowSpan: NumberFilter
+  colSpan: NumberFilter
+}
+
+input UpdatesBodyTinaTableChildrenTinaTableRowChildrenFilter {
+  TinaTableCell: UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
 }
 
 input DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter {
-  children: DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter
+  children: UpdatesBodyTinaTableChildrenTinaTableRowChildrenFilter
 }
 
 input DocBodyTinaTableChildrenFilter {
@@ -272,49 +281,75 @@ input DocBodyDetailsFilter {
   children: RichTextFilter
 }
 
-input DocBodyRowChildrenColChildrenAdmonitionChildrenFilter {
-  img: DocBodyRowChildrenColChildrenAdmonitionChildrenImgFilter
-  TinaTable: DocBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter
-}
-
-input DocBodyRowChildrenColChildrenAdmonitionFilter {
-  type: StringFilter
-  title: StringFilter
-  children: DocBodyRowChildrenColChildrenAdmonitionChildrenFilter
-}
-
-input DocBodyRowChildrenColChildrenImgFilter {
+input UpdatesBodyRowChildrenColChildrenAdmonitionChildrenImgFilter {
   className: StringFilter
   src: ImageFilter
   alt: StringFilter
 }
 
-input DocBodyRowChildrenColChildrenTinaTableChildrenFilter {
-  TinaTableRow: DocBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter
+input UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter {
+  TinaTableRow: UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenTinaTableRowFilter
 }
 
-input DocBodyRowChildrenColChildrenTinaTableFilter {
+input UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter {
   topHeader: BooleanFilter
   leftHeader: BooleanFilter
   columnWidth: StringFilter
   className: StringFilter
-  children: DocBodyRowChildrenColChildrenTinaTableChildrenFilter
+  children: UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter
 }
 
-input DocBodyRowChildrenColChildrenFilter {
-  Admonition: DocBodyRowChildrenColChildrenAdmonitionFilter
-  img: DocBodyRowChildrenColChildrenImgFilter
-  TinaTable: DocBodyRowChildrenColChildrenTinaTableFilter
+input UpdatesBodyRowChildrenColChildrenAdmonitionChildrenFilter {
+  img: UpdatesBodyRowChildrenColChildrenAdmonitionChildrenImgFilter
+  TinaTable: UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableFilter
 }
 
-input DocBodyRowChildrenColFilter {
+input UpdatesBodyRowChildrenColChildrenAdmonitionFilter {
+  type: StringFilter
+  title: StringFilter
+  children: UpdatesBodyRowChildrenColChildrenAdmonitionChildrenFilter
+}
+
+input UpdatesBodyRowChildrenColChildrenImgFilter {
+  className: StringFilter
+  src: ImageFilter
+  alt: StringFilter
+}
+
+input UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter {
+  TinaTableCell: UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenTinaTableCellFilter
+}
+
+input UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter {
+  children: UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter
+}
+
+input UpdatesBodyRowChildrenColChildrenTinaTableChildrenFilter {
+  TinaTableRow: UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowFilter
+}
+
+input UpdatesBodyRowChildrenColChildrenTinaTableFilter {
+  topHeader: BooleanFilter
+  leftHeader: BooleanFilter
+  columnWidth: StringFilter
+  className: StringFilter
+  children: UpdatesBodyRowChildrenColChildrenTinaTableChildrenFilter
+}
+
+input UpdatesBodyRowChildrenColChildrenFilter {
+  Admonition: UpdatesBodyRowChildrenColChildrenAdmonitionFilter
+  img: UpdatesBodyRowChildrenColChildrenImgFilter
+  TinaTable: UpdatesBodyRowChildrenColChildrenTinaTableFilter
+}
+
+input UpdatesBodyRowChildrenColFilter {
   ratio: NumberFilter
   sticky: BooleanFilter
-  children: DocBodyRowChildrenColChildrenFilter
+  children: UpdatesBodyRowChildrenColChildrenFilter
 }
 
 input DocBodyRowChildrenFilter {
-  Col: DocBodyRowChildrenColFilter
+  Col: UpdatesBodyRowChildrenColFilter
 }
 
 input DocBodyRowFilter {
@@ -724,6 +759,7 @@ type QuicklinkConnection implements Connection {
 }
 
 type Members implements Node & Document {
+  image: String
   name: String!
   position: String!
   birthday: String
@@ -742,6 +778,7 @@ input DatetimeFilter {
 }
 
 input MembersFilter {
+  image: ImageFilter
   name: StringFilter
   position: StringFilter
   birthday: DatetimeFilter
@@ -891,6 +928,109 @@ type CarouselAssignmentsConnection implements Connection {
   edges: [CarouselAssignmentsConnectionEdges]
 }
 
+type Updates implements Node & Document {
+  title: String!
+  description: String
+  body: JSON
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input UpdatesBodyImgFilter {
+  className: StringFilter
+  src: ImageFilter
+  alt: StringFilter
+}
+
+input UpdatesBodyTabsChildrenFilter {
+  TabItem: UpdatesBodyTabsChildrenTabItemFilter
+}
+
+input UpdatesBodyTabsFilter {
+  children: UpdatesBodyTabsChildrenFilter
+}
+
+input UpdatesBodyAdmonitionChildrenImgFilter {
+  className: StringFilter
+  src: ImageFilter
+  alt: StringFilter
+}
+
+input UpdatesBodyAdmonitionChildrenTinaTableFilter {
+  topHeader: BooleanFilter
+  leftHeader: BooleanFilter
+  columnWidth: StringFilter
+  className: StringFilter
+  children: UpdatesBodyRowChildrenColChildrenAdmonitionChildrenTinaTableChildrenFilter
+}
+
+input UpdatesBodyAdmonitionChildrenFilter {
+  img: UpdatesBodyAdmonitionChildrenImgFilter
+  TinaTable: UpdatesBodyAdmonitionChildrenTinaTableFilter
+}
+
+input UpdatesBodyAdmonitionFilter {
+  type: StringFilter
+  title: StringFilter
+  children: UpdatesBodyAdmonitionChildrenFilter
+}
+
+input UpdatesBodyTinaTableChildrenTinaTableRowFilter {
+  children: UpdatesBodyRowChildrenColChildrenTinaTableChildrenTinaTableRowChildrenFilter
+}
+
+input UpdatesBodyTinaTableChildrenFilter {
+  TinaTableRow: UpdatesBodyTinaTableChildrenTinaTableRowFilter
+}
+
+input UpdatesBodyTinaTableFilter {
+  topHeader: BooleanFilter
+  leftHeader: BooleanFilter
+  columnWidth: StringFilter
+  className: StringFilter
+  children: UpdatesBodyTinaTableChildrenFilter
+}
+
+input UpdatesBodyDetailsFilter {
+  summary: StringFilter
+  children: RichTextFilter
+}
+
+input UpdatesBodyRowChildrenFilter {
+  Col: UpdatesBodyRowChildrenColFilter
+}
+
+input UpdatesBodyRowFilter {
+  children: UpdatesBodyRowChildrenFilter
+}
+
+input UpdatesBodyFilter {
+  img: UpdatesBodyImgFilter
+  Tabs: UpdatesBodyTabsFilter
+  Admonition: UpdatesBodyAdmonitionFilter
+  TinaTable: UpdatesBodyTinaTableFilter
+  Details: UpdatesBodyDetailsFilter
+  Row: UpdatesBodyRowFilter
+}
+
+input UpdatesFilter {
+  title: StringFilter
+  description: StringFilter
+  body: UpdatesBodyFilter
+}
+
+type UpdatesConnectionEdges {
+  cursor: String!
+  node: Updates
+}
+
+type UpdatesConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [UpdatesConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -910,6 +1050,8 @@ type Mutation {
   createChecklists(relativePath: String!, params: ChecklistsMutation!): Checklists!
   updateCarouselAssignments(relativePath: String!, params: CarouselAssignmentsMutation!): CarouselAssignments!
   createCarouselAssignments(relativePath: String!, params: CarouselAssignmentsMutation!): CarouselAssignments!
+  updateUpdates(relativePath: String!, params: UpdatesMutation!): Updates!
+  createUpdates(relativePath: String!, params: UpdatesMutation!): Updates!
 }
 
 input DocumentUpdateMutation {
@@ -920,6 +1062,7 @@ input DocumentUpdateMutation {
   workSchedules: WorkSchedulesMutation
   checklists: ChecklistsMutation
   carouselAssignments: CarouselAssignmentsMutation
+  updates: UpdatesMutation
   relativePath: String
 }
 
@@ -931,6 +1074,7 @@ input DocumentMutation {
   workSchedules: WorkSchedulesMutation
   checklists: ChecklistsMutation
   carouselAssignments: CarouselAssignmentsMutation
+  updates: UpdatesMutation
 }
 
 input DocMutation {
@@ -1106,6 +1250,7 @@ input QuicklinkMutation {
 }
 
 input MembersMutation {
+  image: String
   name: String
   position: String
   birthday: String
@@ -1152,6 +1297,12 @@ input CarouselAssignmentsCarouselAssignmentMutation {
 
 input CarouselAssignmentsMutation {
   carouselAssignment: [CarouselAssignmentsCarouselAssignmentMutation]
+}
+
+input UpdatesMutation {
+  title: String
+  description: String
+  body: JSON
 }
 
 schema {
