@@ -10,7 +10,7 @@ function Checklist({ checklist }) {
   return (
     <>
       <div className="bg-white border border-gray-200 shadow daisy-collapse dark:bg-neutral-700 dark:border-gray-700 dark:hover:bg-neutral-800">
-        <input type="checkbox" />
+        <input type="checkbox" className="w-full" />
         <div className="daisy-collapse-title">
           <h5 className="mb-0 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             {checklist.label}
