@@ -1,6 +1,9 @@
 import Link from "@docusaurus/Link";
 import Brand from "./Brand";
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 const brands = [
   {
     label: "BetMGM",
@@ -39,10 +42,28 @@ export default function () {
     <section className="container">
       <div className="max-w-screen-xl px-4 pb-8 mx-auto sm:pb-16 lg:px-6">
         <h2 className="text-center md:text-start">Brands</h2>
-        <div className="w-full daisy-carousel rounded-box">
-          {brands.map(({ image, label, url }, index) => (
+          <Carousel infinite={true} responsive={{
+            superLargeDesktop: {
+              // the naming can be any, depends on you.
+              breakpoint: { max: 4000, min: 3000 },
+              items: 5
+            },
+            desktop: {
+              breakpoint: { max: 3000, min: 1024 },
+              items: 4
+            },
+            tablet: {
+              breakpoint: { max: 1024, min: 464 },
+              items: 3
+            },
+            mobile: {
+              breakpoint: { max: 464, min: 0 },
+              items: 2
+            }
+          }}>
+            {brands.map(({ image, label, url }, index) => (
             <div
-              className="md:w-64 lg:w-72 daisy-carousel-item w-60"
+              className="daisy-carousel-item"
               key={index}
             >
               <Brand
@@ -53,7 +74,7 @@ export default function () {
               />
             </div>
           ))}
-        </div>
+          </Carousel>
       </div>
     </section>
   );
