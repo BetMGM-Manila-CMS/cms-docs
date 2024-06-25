@@ -20,12 +20,12 @@ const tools = [
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg",
     url: "http://betmgm-phtools.entaingroup.corp/sc-pat-images/",
   },
-  {
+  /* {
     label: "Carousel QA",
     image:
       "https://res.cloudinary.com/dlfu36fiw/image/upload/v1717729422/svg/brands/betmgm_rjkbeg.svg",
     url: "https://kibeeen.github.io/carousel-checker-v2/",
-  },
+  }, */
   {
     label: "HTMLTidy",
     image:

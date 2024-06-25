@@ -1,13 +1,13 @@
 import ProjectCard from "./ProjectCard"
 
 const projects = [
-    {
+    /* {
         label: "Carousel QA",
         description: "A tool to check carousel elements locally before applying changes to Sitecore.",
         url: "https://kibeeen.github.io/carousel-checker-v2/",
         image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719199940/projects/carousel-qa_oye9nl.png",
         createdBy: "Kevin Chaves"
-    },
+    }, */
     {
         label: "Carousel Scheduler",
         description: "This tool helps the team to track and update future, ongoing, and past promotions with carousel components.",
