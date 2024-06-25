@@ -23,7 +23,7 @@ export default function BlogPostItemHeaderTitle({className}) {
   const TitleHeading = isBlogPostPage ? 'h1' : 'h2';
   
   return (
-    <div className="flex">
+    <div className="flex justify-between">
       <TitleHeading className={clsx(styles.title, className)} itemProp="headline">
         {isBlogPostPage ? (
           title
