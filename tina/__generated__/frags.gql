@@ -318,3 +318,12 @@ fragment UpdatesParts on Updates {
   description
   body
 }
+
+fragment TeamParts on Team {
+  __typename
+  qa {
+    __typename
+    month
+    score
+  }
+}

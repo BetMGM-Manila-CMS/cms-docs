@@ -9,7 +9,8 @@ import {
   WorkSchedulesCollection,
   ChecklistsCollection,
   CarouselAssignmentsCollection,
-  UpdatesCollection
+  UpdatesCollection,
+  TeamCollection
  } from './collections'
 
 // Your hosting provider likely exposes this as an environment variable
@@ -52,7 +53,8 @@ export default defineConfig({
       WorkSchedulesCollection,
       ChecklistsCollection,
       CarouselAssignmentsCollection,
-      UpdatesCollection
+      UpdatesCollection,
+      TeamCollection
     ],
   },
 });

@@ -69,6 +69,8 @@ type Query {
   carouselAssignmentsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: CarouselAssignmentsFilter): CarouselAssignmentsConnection!
   updates(relativePath: String): Updates!
   updatesConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: UpdatesFilter): UpdatesConnection!
+  team(relativePath: String): Team!
+  teamConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: TeamFilter): TeamConnection!
 }
 
 input DocumentFilter {
@@ -80,6 +82,7 @@ input DocumentFilter {
   checklists: ChecklistsFilter
   carouselAssignments: CarouselAssignmentsFilter
   updates: UpdatesFilter
+  team: TeamFilter
 }
 
 type DocumentConnectionEdges {
@@ -105,7 +108,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Checklists | CarouselAssignments | Updates | Folder
+union DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Checklists | CarouselAssignments | Updates | Team | Folder
 
 type Doc implements Node & Document {
   title: String!
@@ -1031,6 +1034,38 @@ type UpdatesConnection implements Connection {
   edges: [UpdatesConnectionEdges]
 }
 
+type TeamQa {
+  month: String!
+  score: Float!
+}
+
+type Team implements Node & Document {
+  qa: [TeamQa]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input TeamQaFilter {
+  month: DatetimeFilter
+  score: NumberFilter
+}
+
+input TeamFilter {
+  qa: TeamQaFilter
+}
+
+type TeamConnectionEdges {
+  cursor: String!
+  node: Team
+}
+
+type TeamConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [TeamConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -1052,6 +1087,8 @@ type Mutation {
   createCarouselAssignments(relativePath: String!, params: CarouselAssignmentsMutation!): CarouselAssignments!
   updateUpdates(relativePath: String!, params: UpdatesMutation!): Updates!
   createUpdates(relativePath: String!, params: UpdatesMutation!): Updates!
+  updateTeam(relativePath: String!, params: TeamMutation!): Team!
+  createTeam(relativePath: String!, params: TeamMutation!): Team!
 }
 
 input DocumentUpdateMutation {
@@ -1063,6 +1100,7 @@ input DocumentUpdateMutation {
   checklists: ChecklistsMutation
   carouselAssignments: CarouselAssignmentsMutation
   updates: UpdatesMutation
+  team: TeamMutation
   relativePath: String
 }
 
@@ -1075,6 +1113,7 @@ input DocumentMutation {
   checklists: ChecklistsMutation
   carouselAssignments: CarouselAssignmentsMutation
   updates: UpdatesMutation
+  team: TeamMutation
 }
 
 input DocMutation {
@@ -1303,6 +1342,15 @@ input UpdatesMutation {
   title: String
   description: String
   body: JSON
+}
+
+input TeamQaMutation {
+  month: String
+  score: Float
+}
+
+input TeamMutation {
+  qa: [TeamQaMutation]
 }
 
 schema {

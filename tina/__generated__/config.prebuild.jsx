@@ -1,5 +1,5 @@
 // tina/config.tsx
-import { defineConfig as defineConfig2 } from "tinacms";
+import { defineConfig as defineConfig3 } from "tinacms";
 
 // tina/collections/doc.jsx
 import React2 from "react";
@@ -1034,9 +1034,84 @@ var UpdatesCollection = {
   ]
 };
 
+// tina/collections/team.jsx
+import { defineConfig as defineConfig2, wrapFieldsWithMeta as wrapFieldsWithMeta3 } from "tinacms";
+import React6 from "react";
+function QAScoreLabel(dateString) {
+  const date = /* @__PURE__ */ new Date(dateString + "-01");
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+  const month = monthNames[date.getMonth()];
+  const year = date.getFullYear();
+  return `${month} ${year}`;
+}
+var QAField = {
+  name: "qa",
+  label: "QA",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item && item.month ? QAScoreLabel(item.month) : null };
+  },
+  fields: [
+    {
+      name: "month",
+      label: "Month",
+      type: "datetime",
+      required: true,
+      ui: {
+        component: wrapFieldsWithMeta3(({ field, input, meta }) => {
+          return React6.createElement("div", { class: "tina-date-field" }, React6.createElement("div", { class: "rdt" }, React6.createElement(
+            "input",
+            {
+              type: "month",
+              class: "shadow-inner focus:shadow-outline focus:border-blue-500 focus:outline-none block text-base placeholder:text-gray-300 px-3 py-2 text-gray-600 w-full bg-white border border-gray-200 transition-all ease-out duration-150 focus:text-gray-900 rounded-md",
+              ...input
+            }
+          )));
+        })
+      }
+    },
+    {
+      name: "score",
+      label: "Score",
+      type: "number",
+      required: true
+    }
+  ]
+};
+var TeamCollection = {
+  name: "team",
+  label: "Team",
+  path: "config/team",
+  format: "json",
+  ui: {
+    global: true,
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  fields: [
+    QAField
+  ]
+};
+
 // tina/config.tsx
 var branch = process.env.GITHUB_BRANCH || process.env.VERCEL_GIT_COMMIT_REF || process.env.HEAD || "main";
-var config_default = defineConfig2({
+var config_default = defineConfig3({
   // branch,
   // Get this from tina.io
   // clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
@@ -1069,7 +1144,8 @@ var config_default = defineConfig2({
       WorkSchedulesCollection,
       ChecklistsCollection,
       CarouselAssignmentsCollection,
-      UpdatesCollection
+      UpdatesCollection,
+      TeamCollection
     ]
   }
 });

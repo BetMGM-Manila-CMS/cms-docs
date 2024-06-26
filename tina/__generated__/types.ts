@@ -97,6 +97,8 @@ export type Query = {
   carouselAssignmentsConnection: CarouselAssignmentsConnection;
   updates: Updates;
   updatesConnection: UpdatesConnection;
+  team: Team;
+  teamConnection: TeamConnection;
 };
 
 
@@ -240,6 +242,21 @@ export type QueryUpdatesConnectionArgs = {
   filter?: InputMaybe<UpdatesFilter>;
 };
 
+
+export type QueryTeamArgs = {
+  relativePath?: InputMaybe<Scalars['String']['input']>;
+};
+
+
+export type QueryTeamConnectionArgs = {
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<TeamFilter>;
+};
+
 export type DocumentFilter = {
   doc?: InputMaybe<DocFilter>;
   sidebar?: InputMaybe<SidebarFilter>;
@@ -249,6 +266,7 @@ export type DocumentFilter = {
   checklists?: InputMaybe<ChecklistsFilter>;
   carouselAssignments?: InputMaybe<CarouselAssignmentsFilter>;
   updates?: InputMaybe<UpdatesFilter>;
+  team?: InputMaybe<TeamFilter>;
 };
 
 export type DocumentConnectionEdges = {
@@ -288,7 +306,7 @@ export type CollectionDocumentsArgs = {
   folder?: InputMaybe<Scalars['String']['input']>;
 };
 
-export type DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Checklists | CarouselAssignments | Updates | Folder;
+export type DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Checklists | CarouselAssignments | Updates | Team | Folder;
 
 export type Doc = Node & Document & {
   __typename?: 'Doc';
@@ -1265,6 +1283,42 @@ export type UpdatesConnection = Connection & {
   edges?: Maybe<Array<Maybe<UpdatesConnectionEdges>>>;
 };
 
+export type TeamQa = {
+  __typename?: 'TeamQa';
+  month: Scalars['String']['output'];
+  score: Scalars['Float']['output'];
+};
+
+export type Team = Node & Document & {
+  __typename?: 'Team';
+  qa?: Maybe<Array<Maybe<TeamQa>>>;
+  id: Scalars['ID']['output'];
+  _sys: SystemInfo;
+  _values: Scalars['JSON']['output'];
+};
+
+export type TeamQaFilter = {
+  month?: InputMaybe<DatetimeFilter>;
+  score?: InputMaybe<NumberFilter>;
+};
+
+export type TeamFilter = {
+  qa?: InputMaybe<TeamQaFilter>;
+};
+
+export type TeamConnectionEdges = {
+  __typename?: 'TeamConnectionEdges';
+  cursor: Scalars['String']['output'];
+  node?: Maybe<Team>;
+};
+
+export type TeamConnection = Connection & {
+  __typename?: 'TeamConnection';
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float']['output'];
+  edges?: Maybe<Array<Maybe<TeamConnectionEdges>>>;
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   addPendingDocument: DocumentNode;
@@ -1287,6 +1341,8 @@ export type Mutation = {
   createCarouselAssignments: CarouselAssignments;
   updateUpdates: Updates;
   createUpdates: Updates;
+  updateTeam: Team;
+  createTeam: Team;
 };
 
 
@@ -1412,6 +1468,18 @@ export type MutationCreateUpdatesArgs = {
   params: UpdatesMutation;
 };
 
+
+export type MutationUpdateTeamArgs = {
+  relativePath: Scalars['String']['input'];
+  params: TeamMutation;
+};
+
+
+export type MutationCreateTeamArgs = {
+  relativePath: Scalars['String']['input'];
+  params: TeamMutation;
+};
+
 export type DocumentUpdateMutation = {
   doc?: InputMaybe<DocMutation>;
   sidebar?: InputMaybe<SidebarMutation>;
@@ -1421,6 +1489,7 @@ export type DocumentUpdateMutation = {
   checklists?: InputMaybe<ChecklistsMutation>;
   carouselAssignments?: InputMaybe<CarouselAssignmentsMutation>;
   updates?: InputMaybe<UpdatesMutation>;
+  team?: InputMaybe<TeamMutation>;
   relativePath?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -1433,6 +1502,7 @@ export type DocumentMutation = {
   checklists?: InputMaybe<ChecklistsMutation>;
   carouselAssignments?: InputMaybe<CarouselAssignmentsMutation>;
   updates?: InputMaybe<UpdatesMutation>;
+  team?: InputMaybe<TeamMutation>;
 };
 
 export type DocMutation = {
@@ -1663,6 +1733,15 @@ export type UpdatesMutation = {
   body?: InputMaybe<Scalars['JSON']['input']>;
 };
 
+export type TeamQaMutation = {
+  month?: InputMaybe<Scalars['String']['input']>;
+  score?: InputMaybe<Scalars['Float']['input']>;
+};
+
+export type TeamMutation = {
+  qa?: InputMaybe<Array<InputMaybe<TeamQaMutation>>>;
+};
+
 export type DocPartsFragment = { __typename: 'Doc', title: string, body?: any | null };
 
 export type SidebarPartsFragment = { __typename: 'Sidebar', _warning?: string | null, label: string, items?: Array<{ __typename: 'SidebarItems', label: string, items?: Array<{ __typename: 'SidebarItemsItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategory', title: string, link?: string | null, docLink?: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null, items?: Array<{ __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsCategoryItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsCategoryItemsLink', title: string, href: string } | null> | null } | { __typename: 'SidebarItemsItemsDoc', label: string, document: { __typename: 'Doc', title: string, body?: any | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } } | { __typename: 'SidebarItemsItemsLink', title: string, href: string } | { __typename: 'SidebarItemsItemsDivider', title: string } | null> | null } | null> | null };
@@ -1678,6 +1757,8 @@ export type ChecklistsPartsFragment = { __typename: 'Checklists', checklistGroup
 export type CarouselAssignmentsPartsFragment = { __typename: 'CarouselAssignments', carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null };
 
 export type UpdatesPartsFragment = { __typename: 'Updates', title: string, description?: string | null, body?: any | null };
+
+export type TeamPartsFragment = { __typename: 'Team', qa?: Array<{ __typename: 'TeamQa', month: string, score: number } | null> | null };
 
 export type DocQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1830,6 +1911,25 @@ export type UpdatesConnectionQueryVariables = Exact<{
 
 
 export type UpdatesConnectionQuery = { __typename?: 'Query', updatesConnection: { __typename?: 'UpdatesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'UpdatesConnectionEdges', cursor: string, node?: { __typename: 'Updates', id: string, title: string, description?: string | null, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null> | null } };
+
+export type TeamQueryVariables = Exact<{
+  relativePath: Scalars['String']['input'];
+}>;
+
+
+export type TeamQuery = { __typename?: 'Query', team: { __typename: 'Team', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, qa?: Array<{ __typename: 'TeamQa', month: string, score: number } | null> | null } };
+
+export type TeamConnectionQueryVariables = Exact<{
+  before?: InputMaybe<Scalars['String']['input']>;
+  after?: InputMaybe<Scalars['String']['input']>;
+  first?: InputMaybe<Scalars['Float']['input']>;
+  last?: InputMaybe<Scalars['Float']['input']>;
+  sort?: InputMaybe<Scalars['String']['input']>;
+  filter?: InputMaybe<TeamFilter>;
+}>;
+
+
+export type TeamConnectionQuery = { __typename?: 'Query', teamConnection: { __typename?: 'TeamConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'TeamConnectionEdges', cursor: string, node?: { __typename: 'Team', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, qa?: Array<{ __typename: 'TeamQa', month: string, score: number } | null> | null } | null } | null> | null } };
 
 export const DocPartsFragmentDoc = gql`
     fragment DocParts on Doc {
@@ -2158,6 +2258,16 @@ export const UpdatesPartsFragmentDoc = gql`
   title
   description
   body
+}
+    `;
+export const TeamPartsFragmentDoc = gql`
+    fragment TeamParts on Team {
+  __typename
+  qa {
+    __typename
+    month
+    score
+  }
 }
     `;
 export const DocDocument = gql`
@@ -2600,6 +2710,61 @@ export const UpdatesConnectionDocument = gql`
   }
 }
     ${UpdatesPartsFragmentDoc}`;
+export const TeamDocument = gql`
+    query team($relativePath: String!) {
+  team(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...TeamParts
+  }
+}
+    ${TeamPartsFragmentDoc}`;
+export const TeamConnectionDocument = gql`
+    query teamConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: TeamFilter) {
+  teamConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...TeamParts
+      }
+    }
+  }
+}
+    ${TeamPartsFragmentDoc}`;
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
   export function getSdk<C>(requester: Requester<C>) {
     return {
@@ -2650,6 +2815,12 @@ export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) 
       },
     updatesConnection(variables?: UpdatesConnectionQueryVariables, options?: C): Promise<{data: UpdatesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: UpdatesConnectionQueryVariables, query: string}> {
         return requester<{data: UpdatesConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: UpdatesConnectionQueryVariables, query: string}, UpdatesConnectionQueryVariables>(UpdatesConnectionDocument, variables, options);
+      },
+    team(variables: TeamQueryVariables, options?: C): Promise<{data: TeamQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TeamQueryVariables, query: string}> {
+        return requester<{data: TeamQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TeamQueryVariables, query: string}, TeamQueryVariables>(TeamDocument, variables, options);
+      },
+    teamConnection(variables?: TeamConnectionQueryVariables, options?: C): Promise<{data: TeamConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TeamConnectionQueryVariables, query: string}> {
+        return requester<{data: TeamConnectionQuery, errors?: { message: string, locations: { line: number, column: number }[], path: string[] }[], variables: TeamConnectionQueryVariables, query: string}, TeamConnectionQueryVariables>(TeamConnectionDocument, variables, options);
       }
     };
   }
@@ -2692,7 +2863,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/1.4/content/7eb9602a-63c1-49ab-986c-560697edb96a/github/main",
+        url: "http://localhost:4001/graphql",
         queries,
       })
     )

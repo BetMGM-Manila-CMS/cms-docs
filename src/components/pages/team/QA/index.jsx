@@ -1,5 +1,5 @@
 // import { LineChart } from '@mui/x-charts/LineChart';
-import { Line } from 'react-chartjs-2';
+import { Line, Doughnut } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -9,8 +9,9 @@ import {
     Title,
     Tooltip,
     Legend,
-  } from 'chart.js';
-  import { faker } from '@faker-js/faker';
+    ArcElement
+} from 'chart.js';
+import { faker } from '@faker-js/faker';
 
 ChartJS.register(
     CategoryScale,
@@ -19,38 +20,47 @@ ChartJS.register(
     LineElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
+    ArcElement
   );
   
-  export const options = {
+export const lineOptions = {
     responsive: true,
-    /* plugins: {
-      legend: {
-        position: 'top' as const
-      },
-      title: {
-        display: true,
-        text: 'Chart.js Line Chart'
-      },
-    }, */
-  };
-  
-  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  
-  export const data = {
-    labels,
+    scales: {
+        y: {
+            min: 100,
+            max: 90
+        }
+    }
+};
+
+export const lineData = {
+    labels: ['January', 'February', 'March', 'April', 'May'],
+    datasets: [
+        {
+        label: 'QA Score',
+        data: [99.77, 99.80, 99.88, 99.90, 100],
+        borderColor: 'rgb(183, 162, 109)',
+        backgroundColor: 'rgba(183, 162, 109, 0.5)',
+        },
+    ],
+};
+
+const doughnutData = {
+    labels: ['QA Score'],
     datasets: [
       {
-        label: 'Dataset 1',
-        data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-        borderColor: 'rgb(255, 99, 132)',
-        backgroundColor: 'rgba(255, 99, 132, 0.5)',
-      },
-      {
-        label: 'Dataset 2',
-        data: labels.map(() => faker.datatype.number({ min: -1000, max: 1000 })),
-        borderColor: 'rgb(53, 162, 235)',
-        backgroundColor: 'rgba(53, 162, 235, 0.5)',
+        label: 'QA Score',
+        data: [99.77, 0.2300000000],
+        backgroundColor: [
+          'rgba(183, 162, 109, 0.2)', 
+          'rgba(183, 162, 109, 0)',
+        ],
+        borderColor: [
+          'rgba(183, 162, 109, 1)', 
+          'rgba(183, 162, 109, 0)',
+        ],
+        borderWidth: 1,
       },
     ],
   };
@@ -64,31 +74,14 @@ export default function QA() {
                     June
                 </div>
             </div>
-            <div className="columns-2">
-                <div className="*:!text-primary">
-                    {/* <LineChart
-                        xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
-                        series={[
-                            {
-                            data: [2, 5.5, 2, 8.5, 1.5, 5],
-                            },
-                        ]}
-                        width={500}
-                        height={300}
-                    /> */}
-                    <Line options={options} data={data} />;
+            <div className="md:columns-2">
+                <div className="flex justify-center p-4">
+                    <Line height={300} options={lineOptions} data={lineData} />
                 </div>
-                <div className="flex flex-col justify-center items-center">
-                    <div className="daisy-radial-progress text-primary" style={{ "--value": 100, "--size": "12rem" }} role="progressbar">
-                        100%
-                    </div>
+                <div className="flex justify-center p-4">
+                    <Doughnut data={doughnutData} />
                 </div>
             </div>
-            {/* <div className="flex flex-col justify-center items-center">
-                    <div className="daisy-radial-progress text-primary" style={{ "--value": 100, "--size": "12rem" }} role="progressbar">
-                        100%
-                    </div>
-                </div> */}
         </section>
     )
 }
