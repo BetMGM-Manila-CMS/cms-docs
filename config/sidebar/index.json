@@ -545,6 +545,11 @@
               "document": "docs/builds/engagements-coin.mdx",
               "label": "Coin Flip",
               "_template": "doc"
+            },
+            {
+              "document": "docs/builds/Claw-Machine.mdx",
+              "label": "Claw Machine",
+              "_template": "doc"
             }
           ],
           "_template": "category"
