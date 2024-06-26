@@ -171,8 +171,8 @@ export default function QuickLinks() {
         className="bg-white dark:bg-[#333333] bg-cover bg-blend-multiply bg-fixed"
       >
         <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
-          <h1 className="inline-flex mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-primary">
-            <details className="daisy-dropdown dropdown-start tracking-normal !inline-flex self-end mr-2 md:mr-4">
+          <div className="mb-4">
+            <details className="daisy-dropdown dropdown-start tracking-normal">
               <summary className="text-white daisy-btn daisy-btn-sm md:daisy-btn-md bg-primary hover:bg-gray-600">
                 {quickLinks[0].label[0].toUpperCase() +
                   quickLinks[0].label.slice(1)}
@@ -201,6 +201,8 @@ export default function QuickLinks() {
                 ))}
               </ul>
             </details>
+          </div>
+          <h1 className="inline-flex mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-primary">
             Quick Links
           </h1>
           <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-white">
