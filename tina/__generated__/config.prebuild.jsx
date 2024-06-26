@@ -797,6 +797,26 @@ var displayRangeDate = (start, end) => {
   const endDate = new Intl.DateTimeFormat("en-US", options).format(new Date(end)).replace(",", "");
   return `${startDate} - ${endDate}`;
 };
+var displayMonthDate = (dateString) => {
+  const date = new Date(dateString);
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ];
+  const month = monthNames[date.getUTCMonth()];
+  const year = date.getUTCFullYear();
+  return `${month} ${year}`;
+};
 
 // tina/collections/work-schedules.jsx
 var WorkScheduleField = {
@@ -1037,33 +1057,13 @@ var UpdatesCollection = {
 // tina/collections/team.jsx
 import { defineConfig as defineConfig2, wrapFieldsWithMeta as wrapFieldsWithMeta3 } from "tinacms";
 import React6 from "react";
-function QAScoreLabel(dateString) {
-  const date = /* @__PURE__ */ new Date(dateString + "-01");
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December"
-  ];
-  const month = monthNames[date.getMonth()];
-  const year = date.getFullYear();
-  return `${month} ${year}`;
-}
 var QAField = {
   name: "qa",
   label: "QA",
   type: "object",
   list: true,
   itemProps: (item) => {
-    return { label: item && item.month ? QAScoreLabel(item.month) : null };
+    return { label: item && item.month ? displayMonthDate(item.month) : null };
   },
   fields: [
     {

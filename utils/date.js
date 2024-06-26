@@ -6,6 +6,26 @@ const displayRangeDate = (start, end) => {
     return `${startDate} - ${endDate}`
 }
 
-export {
-    displayRangeDate
+const displayMonthDate = (dateString) => {
+    // Create a Date object from the input date string
+    const date = new Date(dateString);
+
+    // Array of month names
+    const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+
+    // Get the month and year
+    const month = monthNames[date.getUTCMonth()];
+    const year = date.getUTCFullYear();
+
+    // Return the formatted date
+    return `${month} ${year}`;
 }
+
+export {
+    displayRangeDate,
+    displayMonthDate
+}
+

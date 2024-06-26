@@ -1,23 +1,6 @@
 import { defineConfig, wrapFieldsWithMeta } from 'tinacms'
+import {displayMonthDate} from "../../utils/date.js"
 import React from "react"
-
-function QAScoreLabel(dateString) {
-    // Create a Date object from the input date string
-    const date = new Date(dateString + '-01');
-
-    // Array of month names
-    const monthNames = [
-        'January', 'February', 'March', 'April', 'May', 'June',
-        'July', 'August', 'September', 'October', 'November', 'December'
-    ];
-
-    // Get the month and year
-    const month = monthNames[date.getMonth()];
-    const year = date.getFullYear();
-
-    // Return the formatted date
-    return `${month} ${year}`;
-}
 
 const QAField = {
     name: "qa",
@@ -25,7 +8,7 @@ const QAField = {
     type: "object",
     list: true,
     itemProps: (item) => {
-        return { label: item && item.month ? QAScoreLabel(item.month) : null };        
+        return { label: item && item.month ? displayMonthDate(item.month) : null };        
     },
     fields: [
         {
