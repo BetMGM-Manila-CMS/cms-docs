@@ -20,3 +20,21 @@ This section is where the contents from the [Prize Tool](https://betmgm-cms-doc
 <Admonition type="note" title="Note">
   Most Engagement tool usually has a Title and Image along with the Description but in the case of Claw Machine, there's no need to add that since it has already been added in the Claw Machine Layout.
 </Admonition>
+
+1. **Description** - The `Description` column's value will be the value from the `PRIZE DESCRIPTION` column from the `Prize Tool` document, but it should be inserted in the HTML format shown below, just replace the appropriate value to be the same from your `Prize Tool` document.
+
+```html
+<div class="overlay-header">
+<h1 class="mb-1 mt-0">Congratulations!</h1>
+<h2 class="mb-2 mt-1">You've won: $1000 Online Open Hybrid Tournament Ticket</h2>
+<p class="mb-2">Register in our tournament lobby for the Online Open Hybrid Tournament</p>
+<p class="mb-2">Tickets expire after 90 days. T&amp;C's apply.</p>
+<div class="mt-2">
+<a rel="noopener noreferrer" class="btn btn-primary" href="{Reward CTA URL}">{Reward CTA Text}</a>
+</div>
+</div>
+```
+
+<Admonition type="note" title="CTA">
+  See the [CTA guide](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) to use the correct CTA for each description.
+</Admonition>
