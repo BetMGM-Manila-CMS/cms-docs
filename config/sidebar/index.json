@@ -500,11 +500,6 @@
           "docLink": "docs/builds/pat-eds.mdx",
           "items": [
             {
-              "document": "docs/builds/Claw-Machine-PAT.mdx",
-              "label": "Claw Machine",
-              "_template": "doc"
-            },
-            {
               "document": "docs/builds/Rewards.mdx",
               "label": "Rewards",
               "_template": "doc"
@@ -527,6 +522,11 @@
             {
               "document": "docs/builds/pat-eds-cc.mdx",
               "label": "Click Card",
+              "_template": "doc"
+            },
+            {
+              "document": "docs/builds/Claw-Machine-PAT.mdx",
+              "label": "Claw Machine",
               "_template": "doc"
             }
           ],
