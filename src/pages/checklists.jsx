@@ -18,7 +18,7 @@ function Checklist({ checklist }) {
         </div>
         <div className="daisy-collapse-content">
           <div className="*:mb-2">
-            {checklist.checklist.map((checklistItem, index) => {
+            {checklist.checklist && (checklist.checklist.map((checklistItem, index) => {
               return (
                 <div key={index}>
                   <div className="flex items-center" >
@@ -35,8 +35,8 @@ function Checklist({ checklist }) {
                   </div>
                   {
                     checklistItem.notes && (
-                      <div className="ml-6" key={index}>
-                        <p className="mb-0 text-sm font-medium text-gray-900 ms-2 dark:text-gray-300">Notes:</p>
+                      <div className="ml-4" key={index}>
+                        {/* <p className="mb-0 text-sm font-medium text-gray-900 ms-2 dark:text-gray-300">Notes:</p> */}
                         <ul className="text-sm font-medium text-gray-900 ms-2 dark:text-gray-300">
                           {
                             checklistItem.notes.map(({note}, index) => <li key={index}>{note}</li>)
@@ -47,7 +47,7 @@ function Checklist({ checklist }) {
                   }
                 </div>
               );
-            })}
+            }))}
           </div>
         </div>
       </div>
