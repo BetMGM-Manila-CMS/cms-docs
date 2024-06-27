@@ -833,8 +833,13 @@ type WorkSchedulesConnection implements Connection {
   edges: [WorkSchedulesConnectionEdges]
 }
 
+type ChecklistsChecklistGroupChecklistsChecklistNotes {
+  note: String!
+}
+
 type ChecklistsChecklistGroupChecklistsChecklist {
   label: String!
+  notes: [ChecklistsChecklistGroupChecklistsChecklistNotes]
 }
 
 type ChecklistsChecklistGroupChecklists {
@@ -854,8 +859,13 @@ type Checklists implements Node & Document {
   _values: JSON!
 }
 
+input ChecklistsChecklistGroupChecklistsChecklistNotesFilter {
+  note: StringFilter
+}
+
 input ChecklistsChecklistGroupChecklistsChecklistFilter {
   label: StringFilter
+  notes: ChecklistsChecklistGroupChecklistsChecklistNotesFilter
 }
 
 input ChecklistsChecklistGroupChecklistsFilter {
@@ -1306,8 +1316,13 @@ input WorkSchedulesMutation {
   workSchedule: [WorkSchedulesWorkScheduleMutation]
 }
 
+input ChecklistsChecklistGroupChecklistsChecklistNotesMutation {
+  note: String
+}
+
 input ChecklistsChecklistGroupChecklistsChecklistMutation {
   label: String
+  notes: [ChecklistsChecklistGroupChecklistsChecklistNotesMutation]
 }
 
 input ChecklistsChecklistGroupChecklistsMutation {

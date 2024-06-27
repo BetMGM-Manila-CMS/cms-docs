@@ -1,9 +1,32 @@
+
 const LabelField = {
     name: "label",
     label: "Label",
     type: "string",
     required: true,
 }
+
+
+const NoteField = {
+    name: "note",
+    label: "Note",
+    type: "string",
+    required: true,
+}
+
+const NotesField = {
+    name: "notes",
+    label: "Notes",
+    type: "object",
+    list: true,
+    itemProps: (item) => {
+        return { label: item ? item.label : null };
+    },
+    fields: [
+        NoteField
+    ]
+}
+
 
 const ChecklistField = {
     name: "checklist",
@@ -14,7 +37,8 @@ const ChecklistField = {
         return { label: item ? item.label : null };
     },
     fields: [
-        LabelField
+        LabelField,
+        NotesField   
     ]
 }
 

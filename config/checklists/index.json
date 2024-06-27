@@ -7,7 +7,12 @@
           "label": "Carousel",
           "checklist": [
             {
-              "label": "Duplicate Template"
+              "label": "Duplicate Template",
+              "notes": [
+                {
+                  "note": "test"
+                }
+              ]
             },
             {
               "label": "Rename Template (Desktop / Mobile)"

@@ -905,6 +905,24 @@ var LabelField2 = {
   type: "string",
   required: true
 };
+var NoteField = {
+  name: "note",
+  label: "Note",
+  type: "string",
+  required: true
+};
+var NotesField = {
+  name: "notes",
+  label: "Notes",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.label : null };
+  },
+  fields: [
+    NoteField
+  ]
+};
 var ChecklistField = {
   name: "checklist",
   label: "Checklist",
@@ -914,7 +932,8 @@ var ChecklistField = {
     return { label: item ? item.label : null };
   },
   fields: [
-    LabelField2
+    LabelField2,
+    NotesField
   ]
 };
 var ChecklistsField = {

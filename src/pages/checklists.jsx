@@ -20,17 +20,31 @@ function Checklist({ checklist }) {
           <div className="*:mb-2">
             {checklist.checklist.map((checklistItem, index) => {
               return (
-                <div className="flex items-center" key={index}>
-                  <input
-                    type="checkbox"
-                    className="daisy-checkbox [--chkbg:theme(colors.primary)]"
-                  />
-                  <label
-                    for="default-checkbox"
-                    className="text-sm font-medium text-gray-900 ms-2 dark:text-gray-300"
-                  >
-                    {checklistItem.label}
-                  </label>
+                <div key={index}>
+                  <div className="flex items-center" >
+                    <input
+                      type="checkbox"
+                      className="daisy-checkbox [--chkbg:theme(colors.primary)]"
+                    />
+                    <label
+                      for="default-checkbox"
+                      className="text-sm font-medium text-gray-900 ms-2 dark:text-gray-300"
+                    >
+                      {checklistItem.label}
+                    </label>
+                  </div>
+                  {
+                    checklistItem.notes && (
+                      <div className="ml-6" key={index}>
+                        <p className="mb-0 text-sm font-medium text-gray-900 ms-2 dark:text-gray-300">Notes:</p>
+                        <ul className="text-sm font-medium text-gray-900 ms-2 dark:text-gray-300">
+                          {
+                            checklistItem.notes.map(({note}, index) => <li key={index}>{note}</li>)
+                          }
+                        </ul>
+                      </div>
+                    )
+                  }
                 </div>
               );
             })}

@@ -1068,9 +1068,15 @@ export type WorkSchedulesConnection = Connection & {
   edges?: Maybe<Array<Maybe<WorkSchedulesConnectionEdges>>>;
 };
 
+export type ChecklistsChecklistGroupChecklistsChecklistNotes = {
+  __typename?: 'ChecklistsChecklistGroupChecklistsChecklistNotes';
+  note: Scalars['String']['output'];
+};
+
 export type ChecklistsChecklistGroupChecklistsChecklist = {
   __typename?: 'ChecklistsChecklistGroupChecklistsChecklist';
   label: Scalars['String']['output'];
+  notes?: Maybe<Array<Maybe<ChecklistsChecklistGroupChecklistsChecklistNotes>>>;
 };
 
 export type ChecklistsChecklistGroupChecklists = {
@@ -1093,8 +1099,13 @@ export type Checklists = Node & Document & {
   _values: Scalars['JSON']['output'];
 };
 
+export type ChecklistsChecklistGroupChecklistsChecklistNotesFilter = {
+  note?: InputMaybe<StringFilter>;
+};
+
 export type ChecklistsChecklistGroupChecklistsChecklistFilter = {
   label?: InputMaybe<StringFilter>;
+  notes?: InputMaybe<ChecklistsChecklistGroupChecklistsChecklistNotesFilter>;
 };
 
 export type ChecklistsChecklistGroupChecklistsFilter = {
@@ -1695,8 +1706,13 @@ export type WorkSchedulesMutation = {
   workSchedule?: InputMaybe<Array<InputMaybe<WorkSchedulesWorkScheduleMutation>>>;
 };
 
+export type ChecklistsChecklistGroupChecklistsChecklistNotesMutation = {
+  note?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type ChecklistsChecklistGroupChecklistsChecklistMutation = {
   label?: InputMaybe<Scalars['String']['input']>;
+  notes?: InputMaybe<Array<InputMaybe<ChecklistsChecklistGroupChecklistsChecklistNotesMutation>>>;
 };
 
 export type ChecklistsChecklistGroupChecklistsMutation = {
@@ -1752,7 +1768,7 @@ export type MembersPartsFragment = { __typename: 'Members', image?: string | nul
 
 export type WorkSchedulesPartsFragment = { __typename: 'WorkSchedules', workSchedule?: Array<{ __typename: 'WorkSchedulesWorkSchedule', startDay: string, endDay: string, schedule?: string | null } | null> | null };
 
-export type ChecklistsPartsFragment = { __typename: 'Checklists', checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string } | null> | null } | null> | null } | null> | null };
+export type ChecklistsPartsFragment = { __typename: 'Checklists', checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string, notes?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklistNotes', note: string } | null> | null } | null> | null } | null> | null } | null> | null };
 
 export type CarouselAssignmentsPartsFragment = { __typename: 'CarouselAssignments', carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null, id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null };
 
@@ -1860,7 +1876,7 @@ export type ChecklistsQueryVariables = Exact<{
 }>;
 
 
-export type ChecklistsQuery = { __typename?: 'Query', checklists: { __typename: 'Checklists', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string } | null> | null } | null> | null } | null> | null } };
+export type ChecklistsQuery = { __typename?: 'Query', checklists: { __typename: 'Checklists', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string, notes?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklistNotes', note: string } | null> | null } | null> | null } | null> | null } | null> | null } };
 
 export type ChecklistsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1872,7 +1888,7 @@ export type ChecklistsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type ChecklistsConnectionQuery = { __typename?: 'Query', checklistsConnection: { __typename?: 'ChecklistsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ChecklistsConnectionEdges', cursor: string, node?: { __typename: 'Checklists', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string } | null> | null } | null> | null } | null> | null } | null } | null> | null } };
+export type ChecklistsConnectionQuery = { __typename?: 'Query', checklistsConnection: { __typename?: 'ChecklistsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'ChecklistsConnectionEdges', cursor: string, node?: { __typename: 'Checklists', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string, notes?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklistNotes', note: string } | null> | null } | null> | null } | null> | null } | null> | null } | null } | null> | null } };
 
 export type CarouselAssignmentsQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -2213,6 +2229,10 @@ export const ChecklistsPartsFragmentDoc = gql`
       checklist {
         __typename
         label
+        notes {
+          __typename
+          note
+        }
       }
     }
   }
@@ -2863,7 +2883,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/1.4/content/7eb9602a-63c1-49ab-986c-560697edb96a/github/main",
+        url: "http://localhost:4001/graphql",
         queries,
       })
     )

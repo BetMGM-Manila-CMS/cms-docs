@@ -274,6 +274,10 @@ fragment ChecklistsParts on Checklists {
       checklist {
         __typename
         label
+        notes {
+          __typename
+          note
+        }
       }
     }
   }
