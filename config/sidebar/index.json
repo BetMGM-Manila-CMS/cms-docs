@@ -500,6 +500,12 @@
           "docLink": "docs/builds/pat-eds.mdx",
           "items": [
             {
+              "title": "Claw Machine",
+              "link": "doc",
+              "docLink": "docs/builds/Claw-Machine-PAT.mdx",
+              "_template": "category"
+            },
+            {
               "document": "docs/builds/Rewards.mdx",
               "label": "Rewards",
               "_template": "doc"
