@@ -1,6 +1,9 @@
 {
   "checklistGroup": [
     {
+      "label": "Empty"
+    },
+    {
       "label": "Creatives",
       "checklists": [
         {

@@ -78,7 +78,7 @@ export default function Checklists() {
       (data) => data.label.toLowerCase().replaceAll(" ", "-") === group
     );
   const checklist =
-    group && findChecklists(group) ? findChecklists(group) : checklists[0];
+    group && findChecklists(group) ? findChecklists(group) : checklists.find(checklist => checklist.checklists);
 
   const checklistItems = checklist.checklists;
   const checlistItemsToMap =
@@ -124,7 +124,7 @@ export default function Checklists() {
                 </svg>
               </summary>
               <ul className="p-2 daisy-shadow daisy-menu daisy-dropdown-content z-[1] bg-base-100 rounded-box w-52 mt-2 shadow max-h-56 flex-nowrap overflow-auto">
-                {checklists.map((checklist, index) => (
+                {checklists.map((checklist, index) => checklist.checklists && (
                   <li className="font-normal text-white" key={index}>
                     <Link
                       to={`/checklists?group=${checklist.label
