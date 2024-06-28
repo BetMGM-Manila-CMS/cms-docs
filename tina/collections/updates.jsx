@@ -1,4 +1,5 @@
 import React from "react";
+import members from "../../config/members/index.json"
 
 import { MDXTemplates } from "../../src/theme/template";
 
@@ -27,6 +28,93 @@ export const UpdatesCollection = {
             ui: {
                 component: "textarea"
             }
+        },
+        {
+            name: "image",
+            label: "Image",
+            type: "image",
+        },
+        {
+            type: 'object',
+            list: true,
+            label: 'Instructed By',
+            name: 'instructedBy',
+            itemProps: (item) => {
+                return { label: item ? item.member : null };
+            },
+            fields: [
+                {
+                    type: 'string',
+                    name: 'member',
+                    label: 'Member',
+                    options: members.member.map(member => member.name)
+                }
+            ]
+        },
+        {
+            type: 'object',
+            list: true,
+            label: 'Relayed By',
+            name: 'relayedBy',
+            itemProps: (item) => {
+                return { label: item ? item.member : null };
+            },
+            fields: [
+                {
+                    type: 'string',
+                    name: 'member',
+                    label: 'Member',
+                    options: members.member.map(member => member.name)
+                }
+            ]
+        },
+        {
+            type: 'string',
+            label: 'Slug',
+            name: 'slug',
+            required: true,
+        },
+        {
+            name: "source",
+            label: "Source",
+            type: "object",
+            required: true,
+            fields: [
+                {
+                    name: "platform",
+                    label: "Platform",
+                    type: "string",
+                    required: true,
+                    options: [
+                        {label:'Skype', value: 'skype'}, 
+                        {label:'Outlook', value: 'outlook'}, 
+                        {label:'Teams', value: 'teams'}
+                    ]
+                }
+            ]
+        },
+        {
+            name: "brands",
+            label: "Brands",
+            type: "object",
+            list: true,
+            required: true,
+            itemProps: (item) => {
+                return { label: item ? item.brand : null };
+            },
+            fields: [
+                {
+                    name: "brand",
+                    label: "Brand",
+                    type: "string",
+                    required: true,
+                    options: [
+                        {label:'BetMGM', value: 'betmgm'}, 
+                        {label:'Borgata', value: 'borgata'}, 
+                        {label:'PartyCasino', value: 'partycasino'}, 
+                    ]
+                }
+            ]
         },
         {
             type: 'rich-text',

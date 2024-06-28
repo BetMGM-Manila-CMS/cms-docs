@@ -1,5 +1,3 @@
-
-
 const MemberField = {
     name: "member",
     label: "Member",
@@ -9,6 +7,11 @@ const MemberField = {
         return { label: item ? item.name : null };
     },
     fields: [
+        {
+            name: "image",
+            label: "Image",
+            type: "image",
+        },
         {
             name: "name",
             label: "Name",
@@ -41,7 +44,7 @@ const MemberField = {
     ]
 }
 
-/* export const MembersCollection = {
+export const MembersCollection = {
     name: "members",
     label: "Members",
     path: "config/members",
@@ -56,13 +59,13 @@ const MemberField = {
     fields: [
         MemberField
     ]
-} */
+}
 
-export const MembersCollection = {
+/* export const MembersCollection = {
     name: "members",
     label: "Members",
     path: "members",
-    format: "mdx",
+    format: "md",
     fields: [
         {
             name: "image",
@@ -99,4 +102,4 @@ export const MembersCollection = {
             type: 'datetime'
         }
     ]
-}
+} */

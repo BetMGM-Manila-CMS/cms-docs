@@ -761,12 +761,16 @@ type QuicklinkConnection implements Connection {
   edges: [QuicklinkConnectionEdges]
 }
 
-type Members implements Node & Document {
+type MembersMember {
   image: String
   name: String!
   position: String!
   birthday: String
   hiredDate: String
+}
+
+type Members implements Node & Document {
+  member: [MembersMember]
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -780,12 +784,16 @@ input DatetimeFilter {
   in: [String]
 }
 
-input MembersFilter {
+input MembersMemberFilter {
   image: ImageFilter
   name: StringFilter
   position: StringFilter
   birthday: DatetimeFilter
   hiredDate: DatetimeFilter
+}
+
+input MembersFilter {
+  member: MembersMemberFilter
 }
 
 type MembersConnectionEdges {
@@ -941,13 +949,51 @@ type CarouselAssignmentsConnection implements Connection {
   edges: [CarouselAssignmentsConnectionEdges]
 }
 
+type UpdatesInstructedBy {
+  member: String
+}
+
+type UpdatesRelayedBy {
+  member: String
+}
+
+type UpdatesSource {
+  platform: String!
+}
+
+type UpdatesBrands {
+  brand: String!
+}
+
 type Updates implements Node & Document {
   title: String!
   description: String
+  image: String
+  instructedBy: [UpdatesInstructedBy]
+  relayedBy: [UpdatesRelayedBy]
+  slug: String!
+  source: UpdatesSource!
+  brands: [UpdatesBrands!]!
   body: JSON
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input UpdatesInstructedByFilter {
+  member: StringFilter
+}
+
+input UpdatesRelayedByFilter {
+  member: StringFilter
+}
+
+input UpdatesSourceFilter {
+  platform: StringFilter
+}
+
+input UpdatesBrandsFilter {
+  brand: StringFilter
 }
 
 input UpdatesBodyImgFilter {
@@ -1030,6 +1076,12 @@ input UpdatesBodyFilter {
 input UpdatesFilter {
   title: StringFilter
   description: StringFilter
+  image: ImageFilter
+  instructedBy: UpdatesInstructedByFilter
+  relayedBy: UpdatesRelayedByFilter
+  slug: StringFilter
+  source: UpdatesSourceFilter
+  brands: UpdatesBrandsFilter
   body: UpdatesBodyFilter
 }
 
@@ -1298,12 +1350,16 @@ input QuicklinkMutation {
   quickLinksGroup: [QuicklinkQuickLinksGroupMutation]
 }
 
-input MembersMutation {
+input MembersMemberMutation {
   image: String
   name: String
   position: String
   birthday: String
   hiredDate: String
+}
+
+input MembersMutation {
+  member: [MembersMemberMutation]
 }
 
 input WorkSchedulesWorkScheduleMutation {
@@ -1353,9 +1409,31 @@ input CarouselAssignmentsMutation {
   carouselAssignment: [CarouselAssignmentsCarouselAssignmentMutation]
 }
 
+input UpdatesInstructedByMutation {
+  member: String
+}
+
+input UpdatesRelayedByMutation {
+  member: String
+}
+
+input UpdatesSourceMutation {
+  platform: String
+}
+
+input UpdatesBrandsMutation {
+  brand: String
+}
+
 input UpdatesMutation {
   title: String
   description: String
+  image: String
+  instructedBy: [UpdatesInstructedByMutation]
+  relayedBy: [UpdatesRelayedByMutation]
+  slug: String
+  source: UpdatesSourceMutation
+  brands: [UpdatesBrandsMutation]
   body: JSON
 }
 

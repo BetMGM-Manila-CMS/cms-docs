@@ -742,11 +742,14 @@ var QuickLinkCollection = {
 };
 
 // tina/collections/members.jsx
-var MembersCollection = {
-  name: "members",
-  label: "Members",
-  path: "members",
-  format: "mdx",
+var MemberField = {
+  name: "member",
+  label: "Member",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.name : null };
+  },
   fields: [
     {
       name: "image",
@@ -754,11 +757,11 @@ var MembersCollection = {
       type: "image"
     },
     {
-      type: "string",
-      label: "Name",
       name: "name",
-      isTitle: true,
-      required: true
+      label: "Name",
+      type: "string",
+      required: true,
+      isTitle: true
     },
     {
       name: "position",
@@ -782,6 +785,22 @@ var MembersCollection = {
       label: "Hired Date",
       type: "datetime"
     }
+  ]
+};
+var MembersCollection = {
+  name: "members",
+  label: "Members",
+  path: "config/members",
+  format: "json",
+  ui: {
+    global: true,
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  fields: [
+    MemberField
   ]
 };
 
@@ -1035,6 +1054,119 @@ var CarouselAssignmentsCollection = {
 
 // tina/collections/updates.jsx
 import React5 from "react";
+
+// config/members/index.json
+var members_default = {
+  member: [
+    {
+      name: "Don John Melendez",
+      position: "CMS Team Lead",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213640/members/individual/IMG_5273_zepass.jpg"
+    },
+    {
+      name: "John Mark Antonio",
+      position: "Web Content Specialist",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213683/members/individual/IMG_5212_f4rqhz.jpg"
+    },
+    {
+      name: "Jax Javante",
+      position: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213703/members/individual/IMG_5229_hi5rs5.jpg"
+    },
+    {
+      name: "Christian Almazora",
+      position: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213627/members/individual/IMG_5264_ttoynn.jpg"
+    },
+    {
+      name: "Jeri Luther General",
+      position: "Web Content Specialist",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213698/members/individual/IMG_5223_pep5cp.jpg"
+    },
+    {
+      name: "Marc Aldous Conde",
+      position: "CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213660/members/individual/IMG_5199_fku43i.jpg"
+    },
+    {
+      name: "Alfredo Almasco",
+      position: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213615/members/individual/IMG_5256_j3cxg4.jpg"
+    },
+    {
+      name: "Emmanuel Borromeo",
+      position: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213619/members/individual/IMG_5260_jevmab.jpg"
+    },
+    {
+      name: "Kevin Chavez",
+      position: "CMS Developer",
+      image: ""
+    },
+    {
+      name: "Emmanuel Atienza",
+      position: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213633/members/individual/IMG_5266_bextpw.jpg"
+    },
+    {
+      name: "Krisha Manalo",
+      position: "Web Content Specialist",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213608/members/individual/IMG_5249_fxxvgm.jpg"
+    },
+    {
+      name: "Adam Client Mua\xF1a",
+      position: "CMS Developer",
+      image: ""
+    },
+    {
+      name: "Amancio Mulliet Jr.",
+      position: "Sr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213720/members/individual/IMG_5239_cypbxv.jpg"
+    },
+    {
+      name: "Mark Joshua Javier",
+      position: "Web Content Specialist",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213691/members/individual/IMG_5219_vuvxmc.jpg"
+    },
+    {
+      name: "Benedict Barreto",
+      position: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213710/members/individual/IMG_5231_dezwnm.jpg"
+    },
+    {
+      name: "Ralph Zamora",
+      position: "Sr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213676/members/individual/IMG_5208_ygonxf.jpg"
+    },
+    {
+      name: "Kyle Atienza",
+      position: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213652/members/individual/IMG_5548_m6usxi.jpg"
+    },
+    {
+      name: "John LLoyd Apolo",
+      position: "Jr. CMS Developer",
+      image: ""
+    },
+    {
+      name: "Seiya Gurango",
+      position: "Web Content Specialist",
+      image: ""
+    },
+    {
+      name: "CJ Alemdral",
+      position: "Web Content Specialist",
+      image: ""
+    },
+    {
+      name: "Arianne Ignacio",
+      position: "Jr. CMS Developer",
+      image: ""
+    }
+  ]
+};
+
+// tina/collections/updates.jsx
 var UpdatesCollection = {
   name: "updates",
   label: "Updates",
@@ -1060,6 +1192,93 @@ var UpdatesCollection = {
       ui: {
         component: "textarea"
       }
+    },
+    {
+      name: "image",
+      label: "Image",
+      type: "image"
+    },
+    {
+      type: "object",
+      list: true,
+      label: "Instructed By",
+      name: "instructedBy",
+      itemProps: (item) => {
+        return { label: item ? item.member : null };
+      },
+      fields: [
+        {
+          type: "string",
+          name: "member",
+          label: "Member",
+          options: members_default.member.map((member) => member.name)
+        }
+      ]
+    },
+    {
+      type: "object",
+      list: true,
+      label: "Relayed By",
+      name: "relayedBy",
+      itemProps: (item) => {
+        return { label: item ? item.member : null };
+      },
+      fields: [
+        {
+          type: "string",
+          name: "member",
+          label: "Member",
+          options: members_default.member.map((member) => member.name)
+        }
+      ]
+    },
+    {
+      type: "string",
+      label: "Slug",
+      name: "slug",
+      required: true
+    },
+    {
+      name: "source",
+      label: "Source",
+      type: "object",
+      required: true,
+      fields: [
+        {
+          name: "platform",
+          label: "Platform",
+          type: "string",
+          required: true,
+          options: [
+            { label: "Skype", value: "skype" },
+            { label: "Outlook", value: "outlook" },
+            { label: "Teams", value: "teams" }
+          ]
+        }
+      ]
+    },
+    {
+      name: "brands",
+      label: "Brands",
+      type: "object",
+      list: true,
+      required: true,
+      itemProps: (item) => {
+        return { label: item ? item.brand : null };
+      },
+      fields: [
+        {
+          name: "brand",
+          label: "Brand",
+          type: "string",
+          required: true,
+          options: [
+            { label: "BetMGM", value: "betmgm" },
+            { label: "Borgata", value: "borgata" },
+            { label: "PartyCasino", value: "partycasino" }
+          ]
+        }
+      ]
     },
     {
       type: "rich-text",

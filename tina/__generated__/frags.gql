@@ -246,11 +246,14 @@ fragment QuicklinkParts on Quicklink {
 
 fragment MembersParts on Members {
   __typename
-  image
-  name
-  position
-  birthday
-  hiredDate
+  member {
+    __typename
+    image
+    name
+    position
+    birthday
+    hiredDate
+  }
 }
 
 fragment WorkSchedulesParts on WorkSchedules {
@@ -294,11 +297,14 @@ fragment CarouselAssignmentsParts on CarouselAssignments {
       betNJ {
         ... on Members {
           __typename
-          image
-          name
-          position
-          birthday
-          hiredDate
+          member {
+            __typename
+            image
+            name
+            position
+            birthday
+            hiredDate
+          }
         }
         ... on Document {
           _sys {
@@ -320,6 +326,24 @@ fragment UpdatesParts on Updates {
   __typename
   title
   description
+  image
+  instructedBy {
+    __typename
+    member
+  }
+  relayedBy {
+    __typename
+    member
+  }
+  slug
+  source {
+    __typename
+    platform
+  }
+  brands {
+    __typename
+    brand
+  }
   body
 }
 
