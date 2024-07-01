@@ -26,7 +26,7 @@ export default function () {
       description="All things about the team, weekly schedules, monthly assignments and learn more about every one in the team."
       wrapperClassName="overflow-hidden"
     >
-      <Hero className="pb-[20vw] -mb-[20vw] relative">
+      <Hero className="pb-32 -mb-32 relative">
         <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-24 lg:px-12">
           <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-primary">
             BetMGM Manila<br />
