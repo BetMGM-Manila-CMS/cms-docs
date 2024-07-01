@@ -1,6 +1,7 @@
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import CarouselSchedule from "../../components/pages/team/CarouselSchedule";
 import Gallery from "@site/src/components/pages/team/Gallery";
+import GalleryMarquee from "@site/src/components/pages/team/GalleryMarquee";
 import QA from "@site/src/components/pages/team/QA";
 import Members from "@site/src/components/pages/team/Members";
 import Layout from "@theme/Layout";
@@ -33,7 +34,8 @@ export default function () {
           </h1>
         </div>
       </Hero>
-      <Gallery />
+      {/* <Gallery /> */}
+      <GalleryMarquee />
       <QA />
       <Members />
     </Layout>
