@@ -30,10 +30,12 @@ const images = [
 
 export default function GalleryMarquee() {
   return (
-    <Marquee>
-      {
-        images.map(({ image }, index) => (<img className="h-64 mr-6 rounded-xl" src={image} />))
-      }
-    </Marquee>
+    <div className="mb-16">
+      <Marquee>
+        {
+          images.map(({ image }, index) => (<img className="h-64 mr-6 rounded-xl" src={image} />))
+        }
+      </Marquee>
+    </div>
   );
 }
