@@ -28,7 +28,7 @@ const links = [
     },
   ];
 
-export default function Sitecore() {
+export default function QuickLinks() {
   return (
     <section className="container">
       <div className="max-w-screen-xl px-4 pb-8 mx-auto sm:pb-16 lg:px-6">
@@ -38,7 +38,7 @@ export default function Sitecore() {
         </div>
         <div className="space-y-8 md:grid md:grid-cols-3 xl:grid-cols-4 md:gap-6 md:space-y-0">
             {
-                links.map((link, index) => <CardLink {...link} />)
+                links.map((link, index) => <CardLink {...link} key={index} />)
             }
         </div>
       </div>

@@ -1,5 +1,5 @@
 import Link from "@docusaurus/Link";
-import Tool from "./Tool";
+import CardLink from "../../../CardLink"
 
 const tools = [
   {
@@ -46,9 +46,7 @@ export default function () {
       <div className="max-w-screen-xl px-4 pb-8 mx-auto sm:pb-16 lg:px-6">
         <h2 className="text-center md:text-start">Tools</h2>
         <div className="space-y-8 md:grid md:grid-cols-3 xl:grid-cols-4 md:gap-6 md:space-y-0">
-          {tools.map(({ label, url, image }, index) => (
-            <Tool label={label} url={url} image={image} key={index} />
-          ))}
+          {tools.map((tool, index) => <CardLink {...tool} key={index} />)}
         </div>
       </div>
     </section>

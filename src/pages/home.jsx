@@ -4,7 +4,7 @@ import Updates from "@site/src/components/pages/home/Updates";
 import Brands from "@site/src/components/pages/home/Brands";
 import Tools from "@site/src/components/pages/home/Tools";
 import Features from "@site/src/components/pages/home/Features";
-import Sitecore from "@site/src/components/pages/home/Sitecore";
+import QuickLinks from "@site/src/components/pages/home/QuickLinks";
 import { Hero } from "@site/src/components"
 
 // import Hero from "@site/src/components/Hero";
@@ -34,7 +34,7 @@ export default function Home({ recentPosts }) {
         </div>
       </Hero>
       <Features />
-      <Sitecore />
+      <QuickLinks />
       <Tools />
       <Brands />
       <Updates updates={recentPosts} />
