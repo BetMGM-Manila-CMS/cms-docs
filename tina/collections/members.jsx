@@ -41,7 +41,7 @@ const MemberField = {
     ]
 }
 
-/* export const MembersCollection = {
+export const MembersCollection = {
     name: "members",
     label: "Members",
     path: "config/members",
@@ -56,9 +56,9 @@ const MemberField = {
     fields: [
         MemberField
     ]
-} */
+}
 
-export const MembersCollection = {
+/* export const MembersCollection = {
     name: "members",
     label: "Members",
     path: "members",
@@ -99,4 +99,4 @@ export const MembersCollection = {
             type: 'datetime'
         }
     ]
-}
+} */

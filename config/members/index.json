@@ -67,7 +67,7 @@
       "isProbation": false
     },
     {
-      "name": "Adam Client Muaña",
+      "name": "Adam Clint Muaña",
       "position": "CMS Developer",
       "image": "",
       "isProbation": false
@@ -105,25 +105,25 @@
     {
       "name": "John LLoyd Apolo",
       "position": "Jr. CMS Developer",
-      "image": "",
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991809/members/individual/jl_btljty.png",
       "isProbation": true
     },
     {
       "name": "Seiya Gurango",
       "position": "Web Content Specialist",
-      "image": "",
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991815/members/individual/seiya_zogjhi.png",
       "isProbation": true
     },
     {
       "name": "CJ Alemdral",
       "position": "Web Content Specialist",
-      "image": "",
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991822/members/individual/cj_qv2oih.png",
       "isProbation": true
     },
     {
       "name": "Arianne Ignacio",
       "position": "Jr. CMS Developer",
-      "image": "",
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991828/members/individual/arianne_gqr3s4.png",
       "isProbation": true
     }
   ]
