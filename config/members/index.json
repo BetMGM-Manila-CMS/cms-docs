@@ -13,7 +13,7 @@
       "isProbation": false
     },
     {
-      "name": "Jax Javante",
+      "name": "Jax Javate",
       "position": "Jr. CMS Developer",
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213703/members/individual/IMG_5229_hi5rs5.jpg",
       "isProbation": false
@@ -49,12 +49,6 @@
       "isProbation": false
     },
     {
-      "name": "Kevin Chavez",
-      "position": "CMS Developer",
-      "image": "",
-      "isProbation": false
-    },
-    {
       "name": "Emmanuel Atienza",
       "position": "Jr. CMS Developer",
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213633/members/individual/IMG_5266_bextpw.jpg",
@@ -64,12 +58,6 @@
       "name": "Krisha Manalo",
       "position": "Web Content Specialist",
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213608/members/individual/IMG_5249_fxxvgm.jpg",
-      "isProbation": false
-    },
-    {
-      "name": "Adam Clint Muaña",
-      "position": "CMS Developer",
-      "image": "",
       "isProbation": false
     },
     {
@@ -103,7 +91,19 @@
       "isProbation": false
     },
     {
-      "name": "John LLoyd Apolo",
+      "name": "Adam Clint Muaña",
+      "position": "CMS Developer",
+      "image": "",
+      "isProbation": false
+    },
+    {
+      "name": "Kevin Chavez",
+      "position": "CMS Developer",
+      "image": "",
+      "isProbation": false
+    },
+    {
+      "name": "John Llyod Apolo",
       "position": "Jr. CMS Developer",
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991809/members/individual/jl_btljty.png",
       "isProbation": true
@@ -115,7 +115,7 @@
       "isProbation": true
     },
     {
-      "name": "CJ Alemdral",
+      "name": "CJ Almendral",
       "position": "Web Content Specialist",
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991822/members/individual/cj_qv2oih.png",
       "isProbation": true
