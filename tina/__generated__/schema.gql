@@ -761,12 +761,15 @@ type QuicklinkConnection implements Connection {
   edges: [QuicklinkConnectionEdges]
 }
 
-type Members implements Node & Document {
-  image: String
+type MembersMember {
   name: String!
   position: String!
   birthday: String
   hiredDate: String
+}
+
+type Members implements Node & Document {
+  member: [MembersMember]
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -780,12 +783,15 @@ input DatetimeFilter {
   in: [String]
 }
 
-input MembersFilter {
-  image: ImageFilter
+input MembersMemberFilter {
   name: StringFilter
   position: StringFilter
   birthday: DatetimeFilter
   hiredDate: DatetimeFilter
+}
+
+input MembersFilter {
+  member: MembersMemberFilter
 }
 
 type MembersConnectionEdges {
@@ -1298,12 +1304,15 @@ input QuicklinkMutation {
   quickLinksGroup: [QuicklinkQuickLinksGroupMutation]
 }
 
-input MembersMutation {
-  image: String
+input MembersMemberMutation {
   name: String
   position: String
   birthday: String
   hiredDate: String
+}
+
+input MembersMutation {
+  member: [MembersMemberMutation]
 }
 
 input WorkSchedulesWorkScheduleMutation {

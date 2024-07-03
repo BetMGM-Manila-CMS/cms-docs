@@ -246,11 +246,13 @@ fragment QuicklinkParts on Quicklink {
 
 fragment MembersParts on Members {
   __typename
-  image
-  name
-  position
-  birthday
-  hiredDate
+  member {
+    __typename
+    name
+    position
+    birthday
+    hiredDate
+  }
 }
 
 fragment WorkSchedulesParts on WorkSchedules {
@@ -294,11 +296,13 @@ fragment CarouselAssignmentsParts on CarouselAssignments {
       betNJ {
         ... on Members {
           __typename
-          image
-          name
-          position
-          birthday
-          hiredDate
+          member {
+            __typename
+            name
+            position
+            birthday
+            hiredDate
+          }
         }
         ... on Document {
           _sys {

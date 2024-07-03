@@ -742,23 +742,21 @@ var QuickLinkCollection = {
 };
 
 // tina/collections/members.jsx
-var MembersCollection = {
-  name: "members",
-  label: "Members",
-  path: "members",
-  format: "mdx",
+var MemberField = {
+  name: "member",
+  label: "Member",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.name : null };
+  },
   fields: [
     {
-      name: "image",
-      label: "Image",
-      type: "image"
-    },
-    {
-      type: "string",
-      label: "Name",
       name: "name",
-      isTitle: true,
-      required: true
+      label: "Name",
+      type: "string",
+      required: true,
+      isTitle: true
     },
     {
       name: "position",
@@ -782,6 +780,22 @@ var MembersCollection = {
       label: "Hired Date",
       type: "datetime"
     }
+  ]
+};
+var MembersCollection = {
+  name: "members",
+  label: "Members",
+  path: "config/members",
+  format: "json",
+  ui: {
+    global: true,
+    allowedActions: {
+      create: false,
+      delete: false
+    }
+  },
+  fields: [
+    MemberField
   ]
 };
 
