@@ -7,7 +7,7 @@ const FeatureList = [
     description: "Know how to create the different needs for your tickets.",
     url: "docs/builds/casino-style-guide",
     image:
-      "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719035564/stock/glenn-carstens-peters-npxXWgQ33ZQ-unsplash_zg8qvw.jpg",
+      "https://res.cloudinary.com/dlfu36fiw/image/upload/v1720065500/team/OCPhoto.741601742.958902_1_oeyih8.jpg",
   },
   {
     label: "Get to Know the Team",
