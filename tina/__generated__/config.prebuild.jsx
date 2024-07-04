@@ -752,6 +752,11 @@ var MemberField = {
   },
   fields: [
     {
+      name: "image",
+      label: "Image",
+      type: "image"
+    },
+    {
       name: "name",
       label: "Name",
       type: "string",
@@ -1055,108 +1060,164 @@ var members_default = {
   member: [
     {
       name: "Don John Melendez",
-      position: "CMS Team Lead",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213640/members/individual/IMG_5273_zepass.jpg"
+      title: "CMS Team Lead",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213640/members/individual/IMG_5273_zepass.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "John Mark Antonio",
-      position: "Web Content Specialist",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213683/members/individual/IMG_5212_f4rqhz.jpg"
+      title: "Web Content Specialist",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213683/members/individual/IMG_5212_f4rqhz.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
-      name: "Jax Javante",
-      position: "Jr. CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213703/members/individual/IMG_5229_hi5rs5.jpg"
+      name: "Jax Javate",
+      title: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213703/members/individual/IMG_5229_hi5rs5.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Christian Almazora",
-      position: "Jr. CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213627/members/individual/IMG_5264_ttoynn.jpg"
+      title: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213627/members/individual/IMG_5264_ttoynn.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Jeri Luther General",
-      position: "Web Content Specialist",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213698/members/individual/IMG_5223_pep5cp.jpg"
+      title: "Web Content Specialist",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213698/members/individual/IMG_5223_pep5cp.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Marc Aldous Conde",
-      position: "CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213660/members/individual/IMG_5199_fku43i.jpg"
+      title: "CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213660/members/individual/IMG_5199_fku43i.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Alfredo Almasco",
-      position: "Jr. CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213615/members/individual/IMG_5256_j3cxg4.jpg"
+      title: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213615/members/individual/IMG_5256_j3cxg4.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Emmanuel Borromeo",
-      position: "Jr. CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213619/members/individual/IMG_5260_jevmab.jpg"
-    },
-    {
-      name: "Kevin Chavez",
-      position: "CMS Developer",
-      image: ""
+      title: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213619/members/individual/IMG_5260_jevmab.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Emmanuel Atienza",
-      position: "Jr. CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213633/members/individual/IMG_5266_bextpw.jpg"
+      title: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213633/members/individual/IMG_5266_bextpw.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Krisha Manalo",
-      position: "Web Content Specialist",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213608/members/individual/IMG_5249_fxxvgm.jpg"
-    },
-    {
-      name: "Adam Client Mua\xF1a",
-      position: "CMS Developer",
-      image: ""
+      title: "Web Content Specialist",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213608/members/individual/IMG_5249_fxxvgm.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Amancio Mulliet Jr.",
-      position: "Sr. CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213720/members/individual/IMG_5239_cypbxv.jpg"
+      title: "Sr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213720/members/individual/IMG_5239_cypbxv.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Mark Joshua Javier",
-      position: "Web Content Specialist",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213691/members/individual/IMG_5219_vuvxmc.jpg"
+      title: "Web Content Specialist",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213691/members/individual/IMG_5219_vuvxmc.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Benedict Barreto",
-      position: "Jr. CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213710/members/individual/IMG_5231_dezwnm.jpg"
+      title: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213710/members/individual/IMG_5231_dezwnm.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Ralph Zamora",
-      position: "Sr. CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213676/members/individual/IMG_5208_ygonxf.jpg"
+      title: "Sr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213676/members/individual/IMG_5208_ygonxf.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       name: "Kyle Atienza",
-      position: "Jr. CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213652/members/individual/IMG_5548_m6usxi.jpg"
+      title: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213652/members/individual/IMG_5548_m6usxi.jpg",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
-      name: "John LLoyd Apolo",
-      position: "Jr. CMS Developer",
-      image: ""
+      name: "Adam Clint Mua\xF1a",
+      title: "CMS Developer",
+      image: "",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
-      name: "Seiya Gurango",
-      position: "Web Content Specialist",
-      image: ""
+      name: "Alyssa Casalino",
+      title: "Digital Content Manager - Gaming",
+      image: "",
+      isProbation: false,
+      officeLocation: "USA"
     },
     {
-      name: "CJ Alemdral",
-      position: "Web Content Specialist",
-      image: ""
+      name: "Vivian Zhao",
+      title: "Senior Content Management Specialist - Gaming",
+      image: "",
+      isProbation: false,
+      officeLocation: "USA"
     },
     {
       name: "Arianne Ignacio",
-      position: "Jr. CMS Developer",
-      image: ""
+      title: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991828/members/individual/arianne_gqr3s4.png",
+      isProbation: true,
+      officeLocation: "Manila"
+    },
+    {
+      name: "John Llyod Apolo",
+      title: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991809/members/individual/jl_btljty.png",
+      isProbation: true,
+      officeLocation: "Manila"
+    },
+    {
+      name: "Seiya Gurango",
+      title: "Web Content Specialist",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991815/members/individual/seiya_zogjhi.png",
+      isProbation: true,
+      officeLocation: "Manila"
+    },
+    {
+      name: "CJ Almendral",
+      title: "Web Content Specialist",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991822/members/individual/cj_qv2oih.png",
+      isProbation: true,
+      officeLocation: "Manila"
+    },
+    {
+      name: "Arianne Ignacio",
+      title: "Jr. CMS Developer",
+      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991828/members/individual/arianne_gqr3s4.png",
+      isProbation: true,
+      officeLocation: "Manila"
     }
   ]
 };
@@ -1168,10 +1229,10 @@ var UpdatesCollection = {
   path: "updates",
   format: "mdx",
   /* ui: {
-    router: ({ document }) => {
-      return `/docs/builds/${document._sys.filename}`
-    }
-  }, */
+      router: ({ document }) => {
+        return `/docs/builds/${document._sys.filename}`
+      }
+    }, */
   fields: [
     {
       type: "string",
@@ -1196,6 +1257,23 @@ var UpdatesCollection = {
     {
       type: "object",
       list: true,
+      label: "Authors",
+      name: "authors",
+      itemProps: (item) => {
+        return { label: item ? item.name : null };
+      },
+      fields: [
+        {
+          type: "string",
+          name: "name",
+          label: "Name",
+          options: members_default.member.map((member) => member.name)
+        }
+      ]
+    },
+    /* {
+      type: "object",
+      list: true,
       label: "Instructed By",
       name: "instructedBy",
       itemProps: (item) => {
@@ -1206,9 +1284,9 @@ var UpdatesCollection = {
           type: "string",
           name: "member",
           label: "Member",
-          options: members_default.member.map((member) => member.name)
-        }
-      ]
+          options: members.member.map((member) => member.name),
+        },
+      ],
     },
     {
       type: "object",
@@ -1223,10 +1301,10 @@ var UpdatesCollection = {
           type: "string",
           name: "member",
           label: "Member",
-          options: members_default.member.map((member) => member.name)
-        }
-      ]
-    },
+          options: members.member.map((member) => member.name),
+        },
+      ],
+    }, */
     {
       type: "string",
       label: "Slug",
@@ -1247,7 +1325,8 @@ var UpdatesCollection = {
           options: [
             { label: "Skype", value: "skype" },
             { label: "Outlook", value: "outlook" },
-            { label: "Teams", value: "teams" }
+            { label: "Teams", value: "teams" },
+            { label: "Sharepoint", value: "sharepoint" }
           ]
         }
       ]
@@ -1280,9 +1359,7 @@ var UpdatesCollection = {
       label: "Post Body",
       name: "body",
       isBody: true,
-      templates: [
-        ...MDXTemplates
-      ]
+      templates: [...MDXTemplates]
     }
   ]
 };

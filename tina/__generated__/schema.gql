@@ -762,6 +762,7 @@ type QuicklinkConnection implements Connection {
 }
 
 type MembersMember {
+  image: String
   name: String!
   position: String!
   birthday: String
@@ -784,6 +785,7 @@ input DatetimeFilter {
 }
 
 input MembersMemberFilter {
+  image: ImageFilter
   name: StringFilter
   position: StringFilter
   birthday: DatetimeFilter
@@ -947,12 +949,8 @@ type CarouselAssignmentsConnection implements Connection {
   edges: [CarouselAssignmentsConnectionEdges]
 }
 
-type UpdatesInstructedBy {
-  member: String
-}
-
-type UpdatesRelayedBy {
-  member: String
+type UpdatesAuthors {
+  name: String
 }
 
 type UpdatesSource {
@@ -967,8 +965,7 @@ type Updates implements Node & Document {
   title: String!
   description: String
   image: String
-  instructedBy: [UpdatesInstructedBy]
-  relayedBy: [UpdatesRelayedBy]
+  authors: [UpdatesAuthors]
   slug: String!
   source: UpdatesSource!
   brands: [UpdatesBrands!]!
@@ -978,12 +975,8 @@ type Updates implements Node & Document {
   _values: JSON!
 }
 
-input UpdatesInstructedByFilter {
-  member: StringFilter
-}
-
-input UpdatesRelayedByFilter {
-  member: StringFilter
+input UpdatesAuthorsFilter {
+  name: StringFilter
 }
 
 input UpdatesSourceFilter {
@@ -1075,8 +1068,7 @@ input UpdatesFilter {
   title: StringFilter
   description: StringFilter
   image: ImageFilter
-  instructedBy: UpdatesInstructedByFilter
-  relayedBy: UpdatesRelayedByFilter
+  authors: UpdatesAuthorsFilter
   slug: StringFilter
   source: UpdatesSourceFilter
   brands: UpdatesBrandsFilter
@@ -1349,6 +1341,7 @@ input QuicklinkMutation {
 }
 
 input MembersMemberMutation {
+  image: String
   name: String
   position: String
   birthday: String
@@ -1406,12 +1399,8 @@ input CarouselAssignmentsMutation {
   carouselAssignment: [CarouselAssignmentsCarouselAssignmentMutation]
 }
 
-input UpdatesInstructedByMutation {
-  member: String
-}
-
-input UpdatesRelayedByMutation {
-  member: String
+input UpdatesAuthorsMutation {
+  name: String
 }
 
 input UpdatesSourceMutation {
@@ -1426,8 +1415,7 @@ input UpdatesMutation {
   title: String
   description: String
   image: String
-  instructedBy: [UpdatesInstructedByMutation]
-  relayedBy: [UpdatesRelayedByMutation]
+  authors: [UpdatesAuthorsMutation]
   slug: String
   source: UpdatesSourceMutation
   brands: [UpdatesBrandsMutation]

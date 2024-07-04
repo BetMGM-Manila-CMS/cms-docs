@@ -327,13 +327,9 @@ fragment UpdatesParts on Updates {
   title
   description
   image
-  instructedBy {
+  authors {
     __typename
-    member
-  }
-  relayedBy {
-    __typename
-    member
+    name
   }
   slug
   source {
