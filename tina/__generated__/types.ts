@@ -993,9 +993,9 @@ export type MembersMember = {
   __typename?: 'MembersMember';
   image?: Maybe<Scalars['String']['output']>;
   name: Scalars['String']['output'];
-  position: Scalars['String']['output'];
-  birthday?: Maybe<Scalars['String']['output']>;
-  hiredDate?: Maybe<Scalars['String']['output']>;
+  title: Scalars['String']['output'];
+  isProbation: Scalars['Boolean']['output'];
+  officeLocation: Scalars['String']['output'];
 };
 
 export type Members = Node & Document & {
@@ -1006,20 +1006,12 @@ export type Members = Node & Document & {
   _values: Scalars['JSON']['output'];
 };
 
-export type DatetimeFilter = {
-  after?: InputMaybe<Scalars['String']['input']>;
-  before?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
 export type MembersMemberFilter = {
   image?: InputMaybe<ImageFilter>;
   name?: InputMaybe<StringFilter>;
-  position?: InputMaybe<StringFilter>;
-  birthday?: InputMaybe<DatetimeFilter>;
-  hiredDate?: InputMaybe<DatetimeFilter>;
+  title?: InputMaybe<StringFilter>;
+  isProbation?: InputMaybe<BooleanFilter>;
+  officeLocation?: InputMaybe<StringFilter>;
 };
 
 export type MembersFilter = {
@@ -1052,6 +1044,14 @@ export type WorkSchedules = Node & Document & {
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
+};
+
+export type DatetimeFilter = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
 export type WorkSchedulesWorkScheduleFilter = {
@@ -1748,9 +1748,9 @@ export type QuicklinkMutation = {
 export type MembersMemberMutation = {
   image?: InputMaybe<Scalars['String']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
-  position?: InputMaybe<Scalars['String']['input']>;
-  birthday?: InputMaybe<Scalars['String']['input']>;
-  hiredDate?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  isProbation?: InputMaybe<Scalars['Boolean']['input']>;
+  officeLocation?: InputMaybe<Scalars['String']['input']>;
 };
 
 export type MembersMutation = {
@@ -1847,13 +1847,13 @@ export type SidebarPartsFragment = { __typename: 'Sidebar', _warning?: string | 
 
 export type QuicklinkPartsFragment = { __typename: 'Quicklink', quickLinksGroup?: Array<{ __typename: 'QuicklinkQuickLinksGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | { __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroup', label: string, links?: Array<{ __typename: 'QuicklinkQuickLinksGroupLinksSubGroupLinksSubGroupLinksSubGroupLinksQuickLink', label: string, brand?: string | null, url: string } | null> | null } | null> | null } | null> | null } | null> | null } | null> | null };
 
-export type MembersPartsFragment = { __typename: 'Members', member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null };
+export type MembersPartsFragment = { __typename: 'Members', member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, title: string, isProbation: boolean, officeLocation: string } | null> | null };
 
 export type WorkSchedulesPartsFragment = { __typename: 'WorkSchedules', workSchedule?: Array<{ __typename: 'WorkSchedulesWorkSchedule', startDay: string, endDay: string, schedule?: string | null } | null> | null };
 
 export type ChecklistsPartsFragment = { __typename: 'Checklists', checklistGroup?: Array<{ __typename: 'ChecklistsChecklistGroup', label: string, checklists?: Array<{ __typename: 'ChecklistsChecklistGroupChecklists', label: string, checklist?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklist', label: string, notes?: Array<{ __typename: 'ChecklistsChecklistGroupChecklistsChecklistNotes', note: string } | null> | null } | null> | null } | null> | null } | null> | null };
 
-export type CarouselAssignmentsPartsFragment = { __typename: 'CarouselAssignments', carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', id: string, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null };
+export type CarouselAssignmentsPartsFragment = { __typename: 'CarouselAssignments', carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', id: string, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, title: string, isProbation: boolean, officeLocation: string } | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null };
 
 export type UpdatesPartsFragment = { __typename: 'Updates', title: string, description?: string | null, image?: string | null, slug: string, body?: any | null, authors?: Array<{ __typename: 'UpdatesAuthors', name?: string | null } | null> | null, editors?: Array<{ __typename: 'UpdatesEditors', name?: string | null } | null> | null, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> };
 
@@ -1921,7 +1921,7 @@ export type MembersQueryVariables = Exact<{
 }>;
 
 
-export type MembersQuery = { __typename?: 'Query', members: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null } };
+export type MembersQuery = { __typename?: 'Query', members: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, title: string, isProbation: boolean, officeLocation: string } | null> | null } };
 
 export type MembersConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1933,7 +1933,7 @@ export type MembersConnectionQueryVariables = Exact<{
 }>;
 
 
-export type MembersConnectionQuery = { __typename?: 'Query', membersConnection: { __typename?: 'MembersConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'MembersConnectionEdges', cursor: string, node?: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null } | null } | null> | null } };
+export type MembersConnectionQuery = { __typename?: 'Query', membersConnection: { __typename?: 'MembersConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'MembersConnectionEdges', cursor: string, node?: { __typename: 'Members', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, title: string, isProbation: boolean, officeLocation: string } | null> | null } | null } | null> | null } };
 
 export type WorkSchedulesQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -1978,7 +1978,7 @@ export type CarouselAssignmentsQueryVariables = Exact<{
 }>;
 
 
-export type CarouselAssignmentsQuery = { __typename?: 'Query', carouselAssignments: { __typename: 'CarouselAssignments', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', id: string, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null } };
+export type CarouselAssignmentsQuery = { __typename?: 'Query', carouselAssignments: { __typename: 'CarouselAssignments', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', id: string, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, title: string, isProbation: boolean, officeLocation: string } | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null } };
 
 export type CarouselAssignmentsConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1990,7 +1990,7 @@ export type CarouselAssignmentsConnectionQueryVariables = Exact<{
 }>;
 
 
-export type CarouselAssignmentsConnectionQuery = { __typename?: 'Query', carouselAssignmentsConnection: { __typename?: 'CarouselAssignmentsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'CarouselAssignmentsConnectionEdges', cursor: string, node?: { __typename: 'CarouselAssignments', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', id: string, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null } | null } | null> | null } };
+export type CarouselAssignmentsConnectionQuery = { __typename?: 'Query', carouselAssignmentsConnection: { __typename?: 'CarouselAssignmentsConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'CarouselAssignmentsConnectionEdges', cursor: string, node?: { __typename: 'CarouselAssignments', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', id: string, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, title: string, isProbation: boolean, officeLocation: string } | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null } | null } | null> | null } };
 
 export type UpdatesQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -2286,9 +2286,9 @@ export const MembersPartsFragmentDoc = gql`
     __typename
     image
     name
-    position
-    birthday
-    hiredDate
+    title
+    isProbation
+    officeLocation
   }
 }
     `;
@@ -2340,9 +2340,9 @@ export const CarouselAssignmentsPartsFragmentDoc = gql`
             __typename
             image
             name
-            position
-            birthday
-            hiredDate
+            title
+            isProbation
+            officeLocation
           }
         }
         ... on Document {
@@ -2990,7 +2990,7 @@ export const ExperimentalGetTinaClient = () =>
   getSdk(
     generateRequester(
       createClient({
-        url: "https://content.tinajs.io/1.4/content/7eb9602a-63c1-49ab-986c-560697edb96a/github/main",
+        url: "http://localhost:4001/graphql",
         queries,
       })
     )

@@ -250,9 +250,9 @@ fragment MembersParts on Members {
     __typename
     image
     name
-    position
-    birthday
-    hiredDate
+    title
+    isProbation
+    officeLocation
   }
 }
 
@@ -301,9 +301,9 @@ fragment CarouselAssignmentsParts on CarouselAssignments {
             __typename
             image
             name
-            position
-            birthday
-            hiredDate
+            title
+            isProbation
+            officeLocation
           }
         }
         ... on Document {

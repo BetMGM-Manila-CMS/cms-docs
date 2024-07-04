@@ -764,26 +764,32 @@ var MemberField = {
       isTitle: true
     },
     {
-      name: "position",
-      label: "Position",
+      name: "title",
+      label: "Ttile",
       type: "string",
       required: true,
       options: [
         "Web Content Specialist",
         "Jr. CMS Developer",
         "CMS Developer",
-        "Sr. CMS Developer"
+        "Sr. CMS Developer",
+        "CMS Team Lead",
+        "Digital Content Manager - Gaming",
+        "Senior Content Management Specialist - Gaming"
       ]
     },
     {
-      name: "birthday",
-      label: "Birthday",
-      type: "datetime"
+      name: "isProbation",
+      label: "Ongoing Probation",
+      type: "boolean",
+      required: true
     },
     {
-      name: "hiredDate",
-      label: "Hired Date",
-      type: "datetime"
+      name: "officeLocation",
+      label: "Office",
+      type: "string",
+      required: true,
+      options: ["Manila", "USA"]
     }
   ]
 };
@@ -799,9 +805,7 @@ var MembersCollection = {
       delete: false
     }
   },
-  fields: [
-    MemberField
-  ]
+  fields: [MemberField]
 };
 
 // tina/collections/work-schedules.jsx
@@ -844,7 +848,9 @@ var WorkScheduleField = {
   type: "object",
   list: true,
   itemProps: (item) => {
-    return { label: item && item.startDay && item.endDay ? displayRangeDate(item.startDay, item.endDay) : null };
+    return {
+      label: item && item.startDay && item.endDay ? displayRangeDate(item.startDay, item.endDay) : null
+    };
   },
   fields: [
     {
@@ -885,16 +891,29 @@ var WorkScheduleField = {
         component: wrapFieldsWithMeta2(({ field, input, meta }) => {
           const data = meta.valid ? Papa.parse(input.value, { header: true, skipEmptyLines: true }).data : null;
           const columns = data ? Object.keys(data[0]) : null;
-          console.log(data, columns);
           return React4.createElement("div", null, React4.createElement(
             "textarea",
             {
               name: "workSchedule.0.schedule",
-              className: "shadow-inner text-base px-3 py-2 text-gray-600 resize-y focus:shadow-outline focus:border-blue-500 block w-full border border-gray-200 focus:text-gray-900 rounded-md",
+              className: "block w-full px-3 py-2 text-base text-gray-600 border border-gray-200 rounded-md shadow-inner resize-y focus:shadow-outline focus:border-blue-500 focus:text-gray-900",
               ...input,
               style: { minHeight: "160px" }
             }
-          ), data && React4.createElement("div", { className: "mt-4 shadow-inner text-base p-2 text-gray-600 resize-y focus:shadow-outline focus:border-blue-500 block w-full border border-gray-200 focus:text-gray-900 rounded-md bg-white" }, React4.createElement("table", { className: "table w-full" }, React4.createElement("thead", null, React4.createElement("tr", null, columns && columns.map((col) => React4.createElement("th", { className: "p-1 border border-gray-200 text-start", key: col }, col)))), React4.createElement("tbody", null, data && data.map((row, rowIndex) => React4.createElement("tr", { key: rowIndex }, columns && columns.map((col) => React4.createElement("td", { className: "p-1 border border-gray-200", key: col }, row[col]))))))));
+          ), data && React4.createElement("div", { className: "block w-full p-2 mt-4 text-base text-gray-600 bg-white border border-gray-200 rounded-md shadow-inner resize-y focus:shadow-outline focus:border-blue-500 focus:text-gray-900" }, React4.createElement("table", { className: "table w-full" }, React4.createElement("thead", null, React4.createElement("tr", null, columns && columns.map((col) => React4.createElement(
+            "th",
+            {
+              className: "p-1 border border-gray-200 text-start",
+              key: col
+            },
+            col
+          )))), React4.createElement("tbody", null, data && data.map((row, rowIndex) => React4.createElement("tr", { key: rowIndex }, columns && columns.map((col) => React4.createElement(
+            "td",
+            {
+              className: "p-1 border border-gray-200",
+              key: col
+            },
+            row[col]
+          ))))))));
         })
       }
     }
@@ -912,9 +931,7 @@ var WorkSchedulesCollection = {
       delete: false
     }
   },
-  fields: [
-    WorkScheduleField
-  ]
+  fields: [WorkScheduleField]
 };
 
 // tina/collections/checklists.jsx

@@ -764,9 +764,9 @@ type QuicklinkConnection implements Connection {
 type MembersMember {
   image: String
   name: String!
-  position: String!
-  birthday: String
-  hiredDate: String
+  title: String!
+  isProbation: Boolean!
+  officeLocation: String!
 }
 
 type Members implements Node & Document {
@@ -776,20 +776,12 @@ type Members implements Node & Document {
   _values: JSON!
 }
 
-input DatetimeFilter {
-  after: String
-  before: String
-  eq: String
-  exists: Boolean
-  in: [String]
-}
-
 input MembersMemberFilter {
   image: ImageFilter
   name: StringFilter
-  position: StringFilter
-  birthday: DatetimeFilter
-  hiredDate: DatetimeFilter
+  title: StringFilter
+  isProbation: BooleanFilter
+  officeLocation: StringFilter
 }
 
 input MembersFilter {
@@ -818,6 +810,14 @@ type WorkSchedules implements Node & Document {
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input DatetimeFilter {
+  after: String
+  before: String
+  eq: String
+  exists: Boolean
+  in: [String]
 }
 
 input WorkSchedulesWorkScheduleFilter {
@@ -1353,9 +1353,9 @@ input QuicklinkMutation {
 input MembersMemberMutation {
   image: String
   name: String
-  position: String
-  birthday: String
-  hiredDate: String
+  title: String
+  isProbation: Boolean
+  officeLocation: String
 }
 
 input MembersMutation {
