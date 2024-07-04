@@ -6,13 +6,12 @@ import Tools from "@site/src/components/pages/home/Tools";
 import Features from "@site/src/components/pages/home/Features";
 import QuickLinks from "@site/src/components/pages/home/QuickLinks";
 import QA from "@site/src/components/pages/home/QA";
-import { Hero } from "@site/src/components"
+import { Hero } from "@site/src/components";
 
 // import Hero from "@site/src/components/Hero";
 // import { Hero, HomeFeatures } from "@site/src/components";
 
 export default function Home({ recentPosts }) {
-  console.log(recentPosts);
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout

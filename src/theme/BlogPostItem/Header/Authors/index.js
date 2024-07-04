@@ -22,8 +22,6 @@ export default function BlogPostItemHeaderAuthors({ className }) {
   }
   const imageOnly = authors.every(({ name }) => !name);
 
-  console.log(membersData);
-
   return (
     <div>
       <div>
@@ -44,7 +42,6 @@ export default function BlogPostItemHeaderAuthors({ className }) {
               (member) => member.name === author.name
             );
 
-            console.log(authorData);
             return (
               <div
                 className={clsx(
