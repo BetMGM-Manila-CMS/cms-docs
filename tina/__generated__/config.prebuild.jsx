@@ -1164,6 +1164,12 @@ var members_default = {
       officeLocation: "Manila"
     },
     {
+      name: "Kevin Chavez",
+      position: "CMS Developer",
+      image: "",
+      isProbation: false
+    },
+    {
       name: "Adam Clint Mua\xF1a",
       title: "CMS Developer",
       image: "",
@@ -1209,13 +1215,6 @@ var members_default = {
       name: "CJ Almendral",
       title: "Web Content Specialist",
       image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991822/members/individual/cj_qv2oih.png",
-      isProbation: true,
-      officeLocation: "Manila"
-    },
-    {
-      name: "Arianne Ignacio",
-      title: "Jr. CMS Developer",
-      image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991828/members/individual/arianne_gqr3s4.png",
       isProbation: true,
       officeLocation: "Manila"
     }
