@@ -950,11 +950,11 @@ type CarouselAssignmentsConnection implements Connection {
 }
 
 type UpdatesAuthors {
-  name: String
+  name: String!
 }
 
 type UpdatesEditors {
-  name: String
+  name: String!
 }
 
 type UpdatesSource {
@@ -967,14 +967,14 @@ type UpdatesBrands {
 
 type Updates implements Node & Document {
   title: String!
-  description: String
-  image: String
-  authors: [UpdatesAuthors]
-  editors: [UpdatesEditors]
+  description: String!
+  image: String!
+  authors: [UpdatesAuthors!]!
+  editors: [UpdatesEditors!]!
   slug: String!
   source: UpdatesSource!
   brands: [UpdatesBrands!]!
-  body: JSON
+  body: JSON!
   id: ID!
   _sys: SystemInfo!
   _values: JSON!

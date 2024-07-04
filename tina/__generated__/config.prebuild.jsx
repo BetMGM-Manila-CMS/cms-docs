@@ -1261,6 +1261,7 @@ var UpdatesCollection = {
       type: "string",
       label: "Description",
       name: "description",
+      required: true,
       ui: {
         component: "textarea"
       }
@@ -1268,13 +1269,15 @@ var UpdatesCollection = {
     {
       name: "image",
       label: "Image",
-      type: "image"
+      type: "image",
+      required: true
     },
     {
       type: "object",
       list: true,
       label: "Authors",
       name: "authors",
+      required: true,
       itemProps: (item) => {
         return { label: item ? item.name : null };
       },
@@ -1283,6 +1286,7 @@ var UpdatesCollection = {
           type: "string",
           name: "name",
           label: "Name",
+          required: true,
           options: members_default.member.map((member) => member.name)
         }
       ]
@@ -1292,6 +1296,7 @@ var UpdatesCollection = {
       list: true,
       label: "Editors",
       name: "editors",
+      required: true,
       itemProps: (item) => {
         return { label: item ? item.name : null };
       },
@@ -1300,6 +1305,7 @@ var UpdatesCollection = {
           type: "string",
           name: "name",
           label: "Name",
+          required: true,
           options: members_default.member.map((member) => member.name)
         }
       ]
@@ -1392,6 +1398,7 @@ var UpdatesCollection = {
       label: "Post Body",
       name: "body",
       isBody: true,
+      required: true,
       templates: [...MDXTemplates]
     }
   ]

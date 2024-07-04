@@ -25,6 +25,7 @@ export const UpdatesCollection = {
       type: "string",
       label: "Description",
       name: "description",
+      required: true,
       ui: {
         component: "textarea",
       },
@@ -33,12 +34,14 @@ export const UpdatesCollection = {
       name: "image",
       label: "Image",
       type: "image",
+      required: true,
     },
     {
       type: "object",
       list: true,
       label: "Authors",
       name: "authors",
+      required: true,
       itemProps: (item) => {
         return { label: item ? item.name : null };
       },
@@ -47,6 +50,7 @@ export const UpdatesCollection = {
           type: "string",
           name: "name",
           label: "Name",
+          required: true,
           options: members.member.map((member) => member.name),
         },
       ],
@@ -56,6 +60,7 @@ export const UpdatesCollection = {
       list: true,
       label: "Editors",
       name: "editors",
+      required: true,
       itemProps: (item) => {
         return { label: item ? item.name : null };
       },
@@ -64,6 +69,7 @@ export const UpdatesCollection = {
           type: "string",
           name: "name",
           label: "Name",
+          required: true,
           options: members.member.map((member) => member.name),
         },
       ],
@@ -156,6 +162,7 @@ export const UpdatesCollection = {
       label: "Post Body",
       name: "body",
       isBody: true,
+      required: true,
       templates: [...MDXTemplates],
     },
   ],

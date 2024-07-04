@@ -1199,12 +1199,12 @@ export type CarouselAssignmentsConnection = Connection & {
 
 export type UpdatesAuthors = {
   __typename?: 'UpdatesAuthors';
-  name?: Maybe<Scalars['String']['output']>;
+  name: Scalars['String']['output'];
 };
 
 export type UpdatesEditors = {
   __typename?: 'UpdatesEditors';
-  name?: Maybe<Scalars['String']['output']>;
+  name: Scalars['String']['output'];
 };
 
 export type UpdatesSource = {
@@ -1220,14 +1220,14 @@ export type UpdatesBrands = {
 export type Updates = Node & Document & {
   __typename?: 'Updates';
   title: Scalars['String']['output'];
-  description?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Scalars['String']['output']>;
-  authors?: Maybe<Array<Maybe<UpdatesAuthors>>>;
-  editors?: Maybe<Array<Maybe<UpdatesEditors>>>;
+  description: Scalars['String']['output'];
+  image: Scalars['String']['output'];
+  authors: Array<UpdatesAuthors>;
+  editors: Array<UpdatesEditors>;
   slug: Scalars['String']['output'];
   source: UpdatesSource;
   brands: Array<UpdatesBrands>;
-  body?: Maybe<Scalars['JSON']['output']>;
+  body: Scalars['JSON']['output'];
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -1855,7 +1855,7 @@ export type ChecklistsPartsFragment = { __typename: 'Checklists', checklistGroup
 
 export type CarouselAssignmentsPartsFragment = { __typename: 'CarouselAssignments', carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', id: string, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, title: string, isProbation: boolean, officeLocation: string } | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null };
 
-export type UpdatesPartsFragment = { __typename: 'Updates', title: string, description?: string | null, image?: string | null, slug: string, body?: any | null, authors?: Array<{ __typename: 'UpdatesAuthors', name?: string | null } | null> | null, editors?: Array<{ __typename: 'UpdatesEditors', name?: string | null } | null> | null, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> };
+export type UpdatesPartsFragment = { __typename: 'Updates', title: string, description: string, image: string, slug: string, body: any, authors: Array<{ __typename: 'UpdatesAuthors', name: string }>, editors: Array<{ __typename: 'UpdatesEditors', name: string }>, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> };
 
 export type TeamPartsFragment = { __typename: 'Team', qa?: Array<{ __typename: 'TeamQa', month: string, score: number } | null> | null };
 
@@ -1997,7 +1997,7 @@ export type UpdatesQueryVariables = Exact<{
 }>;
 
 
-export type UpdatesQuery = { __typename?: 'Query', updates: { __typename: 'Updates', id: string, title: string, description?: string | null, image?: string | null, slug: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, authors?: Array<{ __typename: 'UpdatesAuthors', name?: string | null } | null> | null, editors?: Array<{ __typename: 'UpdatesEditors', name?: string | null } | null> | null, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> } };
+export type UpdatesQuery = { __typename?: 'Query', updates: { __typename: 'Updates', id: string, title: string, description: string, image: string, slug: string, body: any, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, authors: Array<{ __typename: 'UpdatesAuthors', name: string }>, editors: Array<{ __typename: 'UpdatesEditors', name: string }>, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> } };
 
 export type UpdatesConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -2009,7 +2009,7 @@ export type UpdatesConnectionQueryVariables = Exact<{
 }>;
 
 
-export type UpdatesConnectionQuery = { __typename?: 'Query', updatesConnection: { __typename?: 'UpdatesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'UpdatesConnectionEdges', cursor: string, node?: { __typename: 'Updates', id: string, title: string, description?: string | null, image?: string | null, slug: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, authors?: Array<{ __typename: 'UpdatesAuthors', name?: string | null } | null> | null, editors?: Array<{ __typename: 'UpdatesEditors', name?: string | null } | null> | null, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> } | null } | null> | null } };
+export type UpdatesConnectionQuery = { __typename?: 'Query', updatesConnection: { __typename?: 'UpdatesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'UpdatesConnectionEdges', cursor: string, node?: { __typename: 'Updates', id: string, title: string, description: string, image: string, slug: string, body: any, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, authors: Array<{ __typename: 'UpdatesAuthors', name: string }>, editors: Array<{ __typename: 'UpdatesEditors', name: string }>, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> } | null } | null> | null } };
 
 export type TeamQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
