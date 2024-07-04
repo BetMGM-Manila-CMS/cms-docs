@@ -1202,6 +1202,11 @@ export type UpdatesAuthors = {
   name?: Maybe<Scalars['String']['output']>;
 };
 
+export type UpdatesEditors = {
+  __typename?: 'UpdatesEditors';
+  name?: Maybe<Scalars['String']['output']>;
+};
+
 export type UpdatesSource = {
   __typename?: 'UpdatesSource';
   platform: Scalars['String']['output'];
@@ -1218,6 +1223,7 @@ export type Updates = Node & Document & {
   description?: Maybe<Scalars['String']['output']>;
   image?: Maybe<Scalars['String']['output']>;
   authors?: Maybe<Array<Maybe<UpdatesAuthors>>>;
+  editors?: Maybe<Array<Maybe<UpdatesEditors>>>;
   slug: Scalars['String']['output'];
   source: UpdatesSource;
   brands: Array<UpdatesBrands>;
@@ -1228,6 +1234,10 @@ export type Updates = Node & Document & {
 };
 
 export type UpdatesAuthorsFilter = {
+  name?: InputMaybe<StringFilter>;
+};
+
+export type UpdatesEditorsFilter = {
   name?: InputMaybe<StringFilter>;
 };
 
@@ -1321,6 +1331,7 @@ export type UpdatesFilter = {
   description?: InputMaybe<StringFilter>;
   image?: InputMaybe<ImageFilter>;
   authors?: InputMaybe<UpdatesAuthorsFilter>;
+  editors?: InputMaybe<UpdatesEditorsFilter>;
   slug?: InputMaybe<StringFilter>;
   source?: InputMaybe<UpdatesSourceFilter>;
   brands?: InputMaybe<UpdatesBrandsFilter>;
@@ -1797,6 +1808,10 @@ export type UpdatesAuthorsMutation = {
   name?: InputMaybe<Scalars['String']['input']>;
 };
 
+export type UpdatesEditorsMutation = {
+  name?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type UpdatesSourceMutation = {
   platform?: InputMaybe<Scalars['String']['input']>;
 };
@@ -1810,6 +1825,7 @@ export type UpdatesMutation = {
   description?: InputMaybe<Scalars['String']['input']>;
   image?: InputMaybe<Scalars['String']['input']>;
   authors?: InputMaybe<Array<InputMaybe<UpdatesAuthorsMutation>>>;
+  editors?: InputMaybe<Array<InputMaybe<UpdatesEditorsMutation>>>;
   slug?: InputMaybe<Scalars['String']['input']>;
   source?: InputMaybe<UpdatesSourceMutation>;
   brands?: InputMaybe<Array<InputMaybe<UpdatesBrandsMutation>>>;
@@ -1839,7 +1855,7 @@ export type ChecklistsPartsFragment = { __typename: 'Checklists', checklistGroup
 
 export type CarouselAssignmentsPartsFragment = { __typename: 'CarouselAssignments', carouselAssignment?: Array<{ __typename: 'CarouselAssignmentsCarouselAssignment', startDay: string, endDay: string, casinoPoker?: { __typename: 'CarouselAssignmentsCarouselAssignmentCasinoPoker', betNJ?: { __typename: 'Members', id: string, member?: Array<{ __typename: 'MembersMember', image?: string | null, name: string, position: string, birthday?: string | null, hiredDate?: string | null } | null> | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string } } | null } | null } | null> | null };
 
-export type UpdatesPartsFragment = { __typename: 'Updates', title: string, description?: string | null, image?: string | null, slug: string, body?: any | null, authors?: Array<{ __typename: 'UpdatesAuthors', name?: string | null } | null> | null, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> };
+export type UpdatesPartsFragment = { __typename: 'Updates', title: string, description?: string | null, image?: string | null, slug: string, body?: any | null, authors?: Array<{ __typename: 'UpdatesAuthors', name?: string | null } | null> | null, editors?: Array<{ __typename: 'UpdatesEditors', name?: string | null } | null> | null, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> };
 
 export type TeamPartsFragment = { __typename: 'Team', qa?: Array<{ __typename: 'TeamQa', month: string, score: number } | null> | null };
 
@@ -1981,7 +1997,7 @@ export type UpdatesQueryVariables = Exact<{
 }>;
 
 
-export type UpdatesQuery = { __typename?: 'Query', updates: { __typename: 'Updates', id: string, title: string, description?: string | null, image?: string | null, slug: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, authors?: Array<{ __typename: 'UpdatesAuthors', name?: string | null } | null> | null, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> } };
+export type UpdatesQuery = { __typename?: 'Query', updates: { __typename: 'Updates', id: string, title: string, description?: string | null, image?: string | null, slug: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, authors?: Array<{ __typename: 'UpdatesAuthors', name?: string | null } | null> | null, editors?: Array<{ __typename: 'UpdatesEditors', name?: string | null } | null> | null, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> } };
 
 export type UpdatesConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -1993,7 +2009,7 @@ export type UpdatesConnectionQueryVariables = Exact<{
 }>;
 
 
-export type UpdatesConnectionQuery = { __typename?: 'Query', updatesConnection: { __typename?: 'UpdatesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'UpdatesConnectionEdges', cursor: string, node?: { __typename: 'Updates', id: string, title: string, description?: string | null, image?: string | null, slug: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, authors?: Array<{ __typename: 'UpdatesAuthors', name?: string | null } | null> | null, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> } | null } | null> | null } };
+export type UpdatesConnectionQuery = { __typename?: 'Query', updatesConnection: { __typename?: 'UpdatesConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'UpdatesConnectionEdges', cursor: string, node?: { __typename: 'Updates', id: string, title: string, description?: string | null, image?: string | null, slug: string, body?: any | null, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, authors?: Array<{ __typename: 'UpdatesAuthors', name?: string | null } | null> | null, editors?: Array<{ __typename: 'UpdatesEditors', name?: string | null } | null> | null, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> } | null } | null> | null } };
 
 export type TeamQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -2352,6 +2368,10 @@ export const UpdatesPartsFragmentDoc = gql`
   description
   image
   authors {
+    __typename
+    name
+  }
+  editors {
     __typename
     name
   }

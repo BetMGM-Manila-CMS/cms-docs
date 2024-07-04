@@ -14,7 +14,7 @@ export default function BlogPostItemHeaderAuthors({ className }) {
     metadata: { authors, frontMatter },
     assets,
   } = useBlogPost();
-  const { editor, instructedBy } = frontMatter;
+  const { editor, editors } = frontMatter;
   const members = membersData.member;
   const authorsCount = authors.length;
   if (authorsCount === 0) {
@@ -67,11 +67,11 @@ export default function BlogPostItemHeaderAuthors({ className }) {
           })}
         </div>
       </div>
-      {/* {instructedBy && (
+      {editors && (
         <div>
           <div className="divider">
             <span className="divider__inner">
-              {isPlural(instructedBy) ? "Instructors" : "Instructor"}
+              {isPlural(editors) ? "Editors" : "Editor"}
             </span>
           </div>
           <div
@@ -81,10 +81,10 @@ export default function BlogPostItemHeaderAuthors({ className }) {
               className
             )}
           >
-            {instructedBy &&
-              instructedBy.map(({ member }, idx) => {
-                const memberData = members.find(
-                  (memberItem) => memberItem.name === member
+            {editors &&
+              editors.map((editor, idx) => {
+                const editorData = members.find(
+                  (memberItem) => memberItem.name === editor.name
                 );
                 return (
                   <div
@@ -96,11 +96,11 @@ export default function BlogPostItemHeaderAuthors({ className }) {
                   >
                     <BlogPostItemHeaderAuthor
                       author={{
-                        ...memberData,
+                        ...editorData,
                         // Handle author images using relative paths
                         imageURL: assets.authorsImageUrls[idx]
                           ? assets.authorsImageUrls[idx]
-                          : memberData.imageURL,
+                          : editorData.imageURL,
                       }}
                     />
                   </div>
@@ -108,7 +108,7 @@ export default function BlogPostItemHeaderAuthors({ className }) {
               })}
           </div>
         </div>
-      )} */}
+      )}
     </div>
   );
 }

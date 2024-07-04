@@ -953,6 +953,10 @@ type UpdatesAuthors {
   name: String
 }
 
+type UpdatesEditors {
+  name: String
+}
+
 type UpdatesSource {
   platform: String!
 }
@@ -966,6 +970,7 @@ type Updates implements Node & Document {
   description: String
   image: String
   authors: [UpdatesAuthors]
+  editors: [UpdatesEditors]
   slug: String!
   source: UpdatesSource!
   brands: [UpdatesBrands!]!
@@ -976,6 +981,10 @@ type Updates implements Node & Document {
 }
 
 input UpdatesAuthorsFilter {
+  name: StringFilter
+}
+
+input UpdatesEditorsFilter {
   name: StringFilter
 }
 
@@ -1069,6 +1078,7 @@ input UpdatesFilter {
   description: StringFilter
   image: ImageFilter
   authors: UpdatesAuthorsFilter
+  editors: UpdatesEditorsFilter
   slug: StringFilter
   source: UpdatesSourceFilter
   brands: UpdatesBrandsFilter
@@ -1403,6 +1413,10 @@ input UpdatesAuthorsMutation {
   name: String
 }
 
+input UpdatesEditorsMutation {
+  name: String
+}
+
 input UpdatesSourceMutation {
   platform: String
 }
@@ -1416,6 +1430,7 @@ input UpdatesMutation {
   description: String
   image: String
   authors: [UpdatesAuthorsMutation]
+  editors: [UpdatesEditorsMutation]
   slug: String
   source: UpdatesSourceMutation
   brands: [UpdatesBrandsMutation]

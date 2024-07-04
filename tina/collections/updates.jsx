@@ -51,6 +51,23 @@ export const UpdatesCollection = {
         },
       ],
     },
+    {
+      type: "object",
+      list: true,
+      label: "Editors",
+      name: "editors",
+      itemProps: (item) => {
+        return { label: item ? item.name : null };
+      },
+      fields: [
+        {
+          type: "string",
+          name: "name",
+          label: "Name",
+          options: members.member.map((member) => member.name),
+        },
+      ],
+    },
     /* {
       type: "object",
       list: true,

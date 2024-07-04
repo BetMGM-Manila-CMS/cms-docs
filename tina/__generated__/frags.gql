@@ -331,6 +331,10 @@ fragment UpdatesParts on Updates {
     __typename
     name
   }
+  editors {
+    __typename
+    name
+  }
   slug
   source {
     __typename
