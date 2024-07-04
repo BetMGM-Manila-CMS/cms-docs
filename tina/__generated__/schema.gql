@@ -762,7 +762,6 @@ type QuicklinkConnection implements Connection {
 }
 
 type MembersMember {
-  image: String
   name: String!
   position: String!
   birthday: String
@@ -785,7 +784,6 @@ input DatetimeFilter {
 }
 
 input MembersMemberFilter {
-  image: ImageFilter
   name: StringFilter
   position: StringFilter
   birthday: DatetimeFilter
@@ -1351,7 +1349,6 @@ input QuicklinkMutation {
 }
 
 input MembersMemberMutation {
-  image: String
   name: String
   position: String
   birthday: String

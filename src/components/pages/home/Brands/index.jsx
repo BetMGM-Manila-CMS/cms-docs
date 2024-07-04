@@ -70,7 +70,7 @@ export default function () {
                 image={image}
                 label={label}
                 url={url}
-                className={"w-full mr-4"}
+                className={"w-full mr-6"}
               />
             </div>
           ))}

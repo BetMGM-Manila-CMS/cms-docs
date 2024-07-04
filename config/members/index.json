@@ -3,107 +3,128 @@
     {
       "name": "Don John Melendez",
       "position": "CMS Team Lead",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213640/members/individual/IMG_5273_zepass.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213640/members/individual/IMG_5273_zepass.jpg",
+      "isProbation": false
     },
     {
       "name": "John Mark Antonio",
       "position": "Web Content Specialist",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213683/members/individual/IMG_5212_f4rqhz.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213683/members/individual/IMG_5212_f4rqhz.jpg",
+      "isProbation": false
     },
     {
-      "name": "Jax Javante",
+      "name": "Jax Javate",
       "position": "Jr. CMS Developer",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213703/members/individual/IMG_5229_hi5rs5.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213703/members/individual/IMG_5229_hi5rs5.jpg",
+      "isProbation": false
     },
     {
       "name": "Christian Almazora",
       "position": "Jr. CMS Developer",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213627/members/individual/IMG_5264_ttoynn.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213627/members/individual/IMG_5264_ttoynn.jpg",
+      "isProbation": false
     },
     {
       "name": "Jeri Luther General",
       "position": "Web Content Specialist",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213698/members/individual/IMG_5223_pep5cp.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213698/members/individual/IMG_5223_pep5cp.jpg",
+      "isProbation": false
     },
     {
       "name": "Marc Aldous Conde",
       "position": "CMS Developer",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213660/members/individual/IMG_5199_fku43i.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213660/members/individual/IMG_5199_fku43i.jpg",
+      "isProbation": false
     },
     {
       "name": "Alfredo Almasco",
       "position": "Jr. CMS Developer",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213615/members/individual/IMG_5256_j3cxg4.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213615/members/individual/IMG_5256_j3cxg4.jpg",
+      "isProbation": false
     },
     {
       "name": "Emmanuel Borromeo",
       "position": "Jr. CMS Developer",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213619/members/individual/IMG_5260_jevmab.jpg"
-    },
-    {
-      "name": "Kevin Chavez",
-      "position": "CMS Developer",
-      "image": ""
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213619/members/individual/IMG_5260_jevmab.jpg",
+      "isProbation": false
     },
     {
       "name": "Emmanuel Atienza",
       "position": "Jr. CMS Developer",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213633/members/individual/IMG_5266_bextpw.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213633/members/individual/IMG_5266_bextpw.jpg",
+      "isProbation": false
     },
     {
       "name": "Krisha Manalo",
       "position": "Web Content Specialist",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213608/members/individual/IMG_5249_fxxvgm.jpg"
-    },
-    {
-      "name": "Adam Client Muaña",
-      "position": "CMS Developer",
-      "image": ""
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213608/members/individual/IMG_5249_fxxvgm.jpg",
+      "isProbation": false
     },
     {
       "name": "Amancio Mulliet Jr.",
       "position": "Sr. CMS Developer",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213720/members/individual/IMG_5239_cypbxv.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213720/members/individual/IMG_5239_cypbxv.jpg",
+      "isProbation": false
     },
     {
       "name": "Mark Joshua Javier",
       "position": "Web Content Specialist",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213691/members/individual/IMG_5219_vuvxmc.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213691/members/individual/IMG_5219_vuvxmc.jpg",
+      "isProbation": false
     },
     {
       "name": "Benedict Barreto",
       "position": "Jr. CMS Developer",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213710/members/individual/IMG_5231_dezwnm.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213710/members/individual/IMG_5231_dezwnm.jpg",
+      "isProbation": false
     },
     {
       "name": "Ralph Zamora",
       "position": "Sr. CMS Developer",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213676/members/individual/IMG_5208_ygonxf.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213676/members/individual/IMG_5208_ygonxf.jpg",
+      "isProbation": false
     },
     {
       "name": "Kyle Atienza",
       "position": "Jr. CMS Developer",
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213652/members/individual/IMG_5548_m6usxi.jpg"
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213652/members/individual/IMG_5548_m6usxi.jpg",
+      "isProbation": false
     },
     {
-      "name": "John LLoyd Apolo",
+      "name": "Adam Clint Muaña",
+      "position": "CMS Developer",
+      "image": "",
+      "isProbation": false
+    },
+    {
+      "name": "Kevin Chavez",
+      "position": "CMS Developer",
+      "image": "",
+      "isProbation": false
+    },
+    {
+      "name": "John Llyod Apolo",
       "position": "Jr. CMS Developer",
-      "image": ""
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991809/members/individual/jl_btljty.png",
+      "isProbation": true
     },
     {
       "name": "Seiya Gurango",
       "position": "Web Content Specialist",
-      "image": ""
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991815/members/individual/seiya_zogjhi.png",
+      "isProbation": true
     },
     {
-      "name": "CJ Alemdral",
+      "name": "CJ Almendral",
       "position": "Web Content Specialist",
-      "image": ""
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991822/members/individual/cj_qv2oih.png",
+      "isProbation": true
     },
     {
       "name": "Arianne Ignacio",
       "position": "Jr. CMS Developer",
-      "image": ""
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991828/members/individual/arianne_gqr3s4.png",
+      "isProbation": true
     }
   ]
 }

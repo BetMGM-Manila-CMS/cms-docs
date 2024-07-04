@@ -752,11 +752,6 @@ var MemberField = {
   },
   fields: [
     {
-      name: "image",
-      label: "Image",
-      type: "image"
-    },
-    {
       name: "name",
       label: "Name",
       type: "string",

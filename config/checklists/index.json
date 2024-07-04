@@ -1,40 +1,6 @@
 {
   "checklistGroup": [
     {
-      "label": "Empty"
-    },
-    {
-      "label": "Creatives",
-      "checklists": [
-        {
-          "label": "Common Build",
-          "checklist": [
-            {
-              "label": "Ensure that all assets are approved before proceeding with the build.",
-              "notes": [
-                {
-                  "note": "If the assets are not approved, you can proceed with the build but leave a note in the ticket email/thread that the creative is not yet approved."
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "label": "Dont Create Below This",
-      "checklists": [
-        {
-          "label": "sample",
-          "checklist": [
-            {
-              "label": "sample"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "label": "Casino",
       "checklists": [
         {

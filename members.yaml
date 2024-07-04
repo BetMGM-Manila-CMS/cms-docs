@@ -1,0 +1,50 @@
+authors:
+  - name: John Smith
+    position: Web Content Specialist
+    birthday: 1975-04-15
+    hiredDate: 2000-06-20
+
+  - name: Maria Garcia
+    position: Jr. CMS Developer
+    birthday: 1982-09-03
+    hiredDate: 2005-08-15
+
+  - name: Hiroshi Tanaka
+    position: CMS Developer
+    birthday: 1968-11-22
+    hiredDate: 1998-04-12
+
+  - name: Alice Johnson
+    position: Sr. CMS Developer
+    birthday: 1990-05-30
+    hiredDate: 2015-03-18
+
+  - name: Ahmed Khan
+    position: Web Content Specialist
+    birthday: 1972-01-18
+    hiredDate: 1999-09-10
+
+  - name: Olga Petrov
+    position: Jr. CMS Developer
+    birthday: 1985-07-10
+    hiredDate: 2010-11-05
+
+  - name: Michael Brown
+    position: CMS Developer
+    birthday: 1960-03-25
+    hiredDate: 1985-02-20
+
+  - name: Li Wei
+    position: Sr. CMS Developer
+    birthday: 1979-12-09
+    hiredDate: 2004-07-14
+
+  - name: Emma Thompson
+    position: Web Content Specialist
+    birthday: 1993-08-14
+    hiredDate: 2017-05-22
+
+  - name: Raj Patel
+    position: Jr. CMS Developer
+    birthday: 1987-06-05
+    hiredDate: 2012-01-30
