@@ -25,8 +25,6 @@ export default function BlogPostItemHeaderTitle({ className }) {
   const { permalink, title } = metadata;
   const TitleHeading = isBlogPostPage ? "h1" : "h2";
 
-  console.log(sourceData[source.platform].iconUrl);
-
   return (
     <div className="flex justify-between">
       <TitleHeading
@@ -45,14 +43,14 @@ export default function BlogPostItemHeaderTitle({ className }) {
         (source.url ? (
           <a href={source.url} className="pl-4">
             <img
-              src={sourceData[source.platform].iconUrl}
+              src={sourceData[source.platform]?.iconUrl}
               className="min-w-[40px] md:min-w-[60px] h-[40px] md:h-[60px]"
             />
           </a>
         ) : (
           <div className="pl-4">
             <img
-              src={sourceData[source.platform].iconUrl}
+              src={sourceData[source.platform]?.iconUrl}
               className="min-w-[40px] md:min-w-[60px] h-[40px] md:h-[60px]"
             />
           </div>

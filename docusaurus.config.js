@@ -4,15 +4,14 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import 'dotenv/config';
+import "dotenv/config";
 
 import { themes as prismThemes } from "prism-react-renderer";
-import quickLinksData from "./config/quicklink/index.json"
+import quickLinksData from "./config/quicklink/index.json";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title:
-    "BetMGM Creatives Manila CMS Team Hub",
+  title: "BetMGM Creatives Manila CMS Team Hub",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -38,7 +37,7 @@ const config = {
   },
 
   customFields: {
-    cloudinaryCloudName: process.env.CLOUDINARY_CLOUD_NAME
+    cloudinaryCloudName: process.env.CLOUDINARY_CLOUD_NAME,
   },
 
   /* scripts: [{
@@ -75,7 +74,6 @@ const config = {
             "./src/css/tailwind/preflight.css",
             "./src/css/custom.css",
           ],
-
         },
       }),
     ],
@@ -104,28 +102,28 @@ const config = {
         },
         items: [
           {
-            position: 'left',
+            position: "left",
             type: "docSidebar",
             sidebarId: "casinoSidebar",
-            label: 'Casino',
+            label: "Casino",
           },
           {
-            position: 'left',
+            position: "left",
             type: "docSidebar",
             sidebarId: "pokerSidebar",
-            label: 'Poker',
+            label: "Poker",
           },
           {
-            position: 'left',
+            position: "left",
             type: "docSidebar",
             sidebarId: "sportsSidebar",
-            label: 'Sports',
+            label: "Sports",
           },
           {
-            position: 'left',
+            position: "left",
             type: "docSidebar",
             sidebarId: "guidesSidebar",
-            label: 'Guides',
+            label: "Guides",
           },
           /* {
             position: 'left',
@@ -161,16 +159,16 @@ const config = {
             position: "left",
             items: [
               {
-                to: '/checklists',
-                label: 'Checklists',
+                to: "/checklists",
+                label: "Checklists",
               },
               { to: "/quick-links", label: "Quick Links" },
               { to: "/projects", label: "Projects" },
               {
-                href: 'https://coralracing-my.sharepoint.com/:x:/r/personal/emma_bulos_entaingroup_com/_layouts/15/Doc.aspx?sourcedoc=%7B287DEB61-B6DE-43C4-A5BC-620460666F3D%7D&file=Test%20Account%20Usernames.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1',
-                label: 'Test Accounts',
+                href: "https://coralracing-my.sharepoint.com/:x:/r/personal/emma_bulos_entaingroup_com/_layouts/15/Doc.aspx?sourcedoc=%7B287DEB61-B6DE-43C4-A5BC-620460666F3D%7D&file=Test%20Account%20Usernames.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1",
+                label: "Test Accounts",
               },
-            ]
+            ],
           },
           /* { 
             type: "dropdown", 
@@ -207,7 +205,7 @@ const config = {
     }),
 
   plugins: [
-    require.resolve('docusaurus-lunr-search'),
+    require.resolve("docusaurus-lunr-search"),
     async function myPlugin(context, options) {
       return {
         name: "docusaurus-tailwindcss",
@@ -220,7 +218,7 @@ const config = {
       };
     },
     [
-      '@docusaurus/plugin-ideal-image',
+      "@docusaurus/plugin-ideal-image",
       {
         quality: 70,
         max: 1030, // max resized image's size.
@@ -231,21 +229,13 @@ const config = {
     ],
     [
       // '@docusaurus/plugin-content-blog',
-      './plugins/blog-plugin',
+      "./plugins/blog-plugin",
       {
-        id: 'updates',
-        routeBasePath: 'updates',
-        path: './updates',
+        id: "updates",
+        routeBasePath: "updates",
+        path: "./updates",
         blogSidebarCount: 10,
-        blogSidebarTitle: 'Recent Updates',
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-blog',
-      {
-        id: 'schedule',
-        routeBasePath: 'schedule',
-        path: './schedule',
+        blogSidebarTitle: "Recent Updates",
       },
     ],
   ],

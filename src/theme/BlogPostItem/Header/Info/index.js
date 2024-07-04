@@ -65,10 +65,10 @@ export default function BlogPostItemHeaderInfo({ className }) {
                   >
                     <img
                       className="w-5 h-5 p-0 m-0"
-                      src={brandsData[brand].iconUrl}
+                      src={brandsData[brand]?.iconUrl}
                     />
                     <p className="m-0 overflow-hidden text-sm font-normal ps-3 text-ellipsis line-clamp-2">
-                      {brandsData[brand].label}
+                      {brandsData[brand]?.label}
                     </p>
                   </div>
                 </div>
