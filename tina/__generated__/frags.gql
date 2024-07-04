@@ -248,6 +248,7 @@ fragment MembersParts on Members {
   __typename
   member {
     __typename
+    image
     name
     position
     birthday
@@ -298,6 +299,7 @@ fragment CarouselAssignmentsParts on CarouselAssignments {
           __typename
           member {
             __typename
+            image
             name
             position
             birthday
@@ -324,6 +326,24 @@ fragment UpdatesParts on Updates {
   __typename
   title
   description
+  image
+  authors {
+    __typename
+    name
+  }
+  editors {
+    __typename
+    name
+  }
+  slug
+  source {
+    __typename
+    platform
+  }
+  brands {
+    __typename
+    brand
+  }
   body
 }
 

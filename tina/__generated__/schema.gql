@@ -762,6 +762,7 @@ type QuicklinkConnection implements Connection {
 }
 
 type MembersMember {
+  image: String
   name: String!
   position: String!
   birthday: String
@@ -784,6 +785,7 @@ input DatetimeFilter {
 }
 
 input MembersMemberFilter {
+  image: ImageFilter
   name: StringFilter
   position: StringFilter
   birthday: DatetimeFilter
@@ -947,13 +949,51 @@ type CarouselAssignmentsConnection implements Connection {
   edges: [CarouselAssignmentsConnectionEdges]
 }
 
+type UpdatesAuthors {
+  name: String
+}
+
+type UpdatesEditors {
+  name: String
+}
+
+type UpdatesSource {
+  platform: String!
+}
+
+type UpdatesBrands {
+  brand: String!
+}
+
 type Updates implements Node & Document {
   title: String!
   description: String
+  image: String
+  authors: [UpdatesAuthors]
+  editors: [UpdatesEditors]
+  slug: String!
+  source: UpdatesSource!
+  brands: [UpdatesBrands!]!
   body: JSON
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
+}
+
+input UpdatesAuthorsFilter {
+  name: StringFilter
+}
+
+input UpdatesEditorsFilter {
+  name: StringFilter
+}
+
+input UpdatesSourceFilter {
+  platform: StringFilter
+}
+
+input UpdatesBrandsFilter {
+  brand: StringFilter
 }
 
 input UpdatesBodyImgFilter {
@@ -1036,6 +1076,12 @@ input UpdatesBodyFilter {
 input UpdatesFilter {
   title: StringFilter
   description: StringFilter
+  image: ImageFilter
+  authors: UpdatesAuthorsFilter
+  editors: UpdatesEditorsFilter
+  slug: StringFilter
+  source: UpdatesSourceFilter
+  brands: UpdatesBrandsFilter
   body: UpdatesBodyFilter
 }
 
@@ -1305,6 +1351,7 @@ input QuicklinkMutation {
 }
 
 input MembersMemberMutation {
+  image: String
   name: String
   position: String
   birthday: String
@@ -1362,9 +1409,31 @@ input CarouselAssignmentsMutation {
   carouselAssignment: [CarouselAssignmentsCarouselAssignmentMutation]
 }
 
+input UpdatesAuthorsMutation {
+  name: String
+}
+
+input UpdatesEditorsMutation {
+  name: String
+}
+
+input UpdatesSourceMutation {
+  platform: String
+}
+
+input UpdatesBrandsMutation {
+  brand: String
+}
+
 input UpdatesMutation {
   title: String
   description: String
+  image: String
+  authors: [UpdatesAuthorsMutation]
+  editors: [UpdatesEditorsMutation]
+  slug: String
+  source: UpdatesSourceMutation
+  brands: [UpdatesBrandsMutation]
   body: JSON
 }
 
