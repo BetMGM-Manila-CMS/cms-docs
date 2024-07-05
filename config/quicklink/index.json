@@ -130,6 +130,18 @@
           "_template": "subGroup"
         },
         {
+          "label": "ODR Banner",
+          "links": [
+            {
+              "label": "BetMGM MI",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={CBF205BE-74B2-4984-8213-D545F7B9EC8F}&la=",
+              "_template": "quickLink"
+            }
+          ],
+          "_template": "subGroup"
+        },
+        {
           "label": "MPP",
           "links": [
             {
