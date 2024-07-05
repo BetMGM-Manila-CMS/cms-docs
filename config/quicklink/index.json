@@ -556,9 +556,9 @@
               "label": "Claw Machine",
               "links": [
                 {
-                  "label": "Borgata PA",
-                  "brand": "borgata",
-                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F7742D68-CE1E-4E4E-A333-20DE50D4C3B2}&la=",
+                  "label": "Wheel Of Fortune",
+                  "brand": "wof",
+                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={6A8FEBF9-0331-4CD5-8EAE-32760ACE6037}&la=",
                   "_template": "quickLink"
                 },
                 {
@@ -595,6 +595,18 @@
                   "label": "Borgata NJ",
                   "brand": "borgata",
                   "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={5CE155E2-6AC7-4A2F-8D4A-BE33DA6D9B6B}&la=",
+                  "_template": "quickLink"
+                },
+                {
+                  "label": "Borgata PA",
+                  "brand": "borgata",
+                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F7742D68-CE1E-4E4E-A333-20DE50D4C3B2}&la=",
+                  "_template": "quickLink"
+                },
+                {
+                  "label": "Party Casino",
+                  "brand": "partycasino",
+                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={30520E45-5844-4D39-9632-51F889DD92D7}&la=",
                   "_template": "quickLink"
                 }
               ],
