@@ -556,9 +556,9 @@
               "label": "Claw Machine",
               "links": [
                 {
-                  "label": "Borgata NJ",
+                  "label": "Borgata PA",
                   "brand": "borgata",
-                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={5CE155E2-6AC7-4A2F-8D4A-BE33DA6D9B6B}&la=",
+                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F7742D68-CE1E-4E4E-A333-20DE50D4C3B2}&la=",
                   "_template": "quickLink"
                 },
                 {
@@ -589,6 +589,12 @@
                   "label": "BetMGM WV",
                   "brand": "betmgm",
                   "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={DA7DA9DF-8D27-4E07-B1F8-13140F5BBE1C}&la=",
+                  "_template": "quickLink"
+                },
+                {
+                  "label": "Borgata NJ",
+                  "brand": "borgata",
+                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={5CE155E2-6AC7-4A2F-8D4A-BE33DA6D9B6B}&la=",
                   "_template": "quickLink"
                 }
               ],
