@@ -1,16 +1,16 @@
 ---
-title: Landing Page
 last_update:
   date: 1/15/2024
   author: Emmanuel Borromeo
   description: Added Motion LP Details
-authors: Kyle Atienza, Emmanuel Borromeo
+authors: 'Kyle Atienza, Emmanuel Borromeo'
+title: Landing Page
 ---
 
 # Landing Page
 
 <Admonition type="info" title="Sitecore Path">
-Content > Vanilla.Mobile > state/brand > Promo > casino or sports or poker
+  Content > Vanilla.Mobile > state/brand > Promo > casino or sports or poker
 </Admonition>
 
 There are two (2) types of Landing Page: Static Landing Page, and Motion Landing Page. The Latter requires video assets which needs to be uploaded in vimeo, as sitecore only needs the URL of the motion asset.
@@ -20,122 +20,147 @@ There are two (2) types of Landing Page: Static Landing Page, and Motion Landing
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887534/builds/landing-page/zmvzeek8wbgopsgotmci.png)
 
 ### Sample Motion Landing Page
+
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887534/builds/landing-page/eaaa4ouvvq0gnshgiuuv.png)
 
-
 ## Start Building...
-To Build a Landing Page, go to its respective path as seen in the beginning of the page. And duplicate the PromoSimpleContent (file) you need. For Static LP, look for PromoSimpleContent that has this content (refer to image below):  
+
+To Build a Landing Page, go to its respective path as seen in the beginning of the page. And duplicate the PromoSimpleContent (file) you need. For Static LP, look for PromoSimpleContent that has this content (refer to image below):
 
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887534/builds/landing-page/vfysiuxmuagb5704l4hl.png)
 
-For the Motion LP, look for this:  
+For the Motion LP, look for this:
 
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887533/builds/landing-page/cinekmhpbkcwyla6zugu.png)
 
-As there are a different Code for these LP, as seen below:  
+As there are a different Code for these LP, as seen below:
 
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887468/builds/landing-page/vxja8fzrdivjecnpxaui.png)
 
+### CTA
+
+This section is where you can see how to update the CTA in the Landing Page.
+
+Under the `Content` Section **click Edit HTML**![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1720080827/builds/landing-page/landing-page-update_pbrpxz.jpg)
+
+In the `HTML Editor` edit the `href` in the `<a>` tag with the appropriate Smartlink for the CTA and CTA Text.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1720082748/builds/landing-page/Screenshot_1_oche85.jpg)![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1720082752/builds/landing-page/Screenshot_2_h7l8ep.jpg)
+
+<Admonition type="note" title="Note">
+  There is an update of using 'REGISTER' or 'SIGN UP NOW' as the CTA Text for Landing Pages, which should be replaced with 'SIGN UP' when creating new Landing Pages.
+</Admonition>
+
 ### Hero
 
-In this section, you'll edit all images the Landing Page requires. First, you'll need the image URL.  
+In this section, you'll edit all images the Landing Page requires. First, you'll need the image URL.
 
 #### Static LP Hero
 
 <TinaTable>
-<TinaTableRow>
-<TinaTableCell>
-Key
-</TinaTableCell>
-<TinaTableCell>
-Description
-</TinaTableCell>
-</TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      Key
+    </TinaTableCell>
 
-<TinaTableRow>
-<TinaTableCell>
-bg
-</TinaTableCell>
-<TinaTableCell>
-asset with **2048x800** size
-</TinaTableCell>
-</TinaTableRow>
+    <TinaTableCell>
+      Description
+    </TinaTableCell>
+  </TinaTableRow>
 
-<TinaTableRow>
-<TinaTableCell>
-img
-</TinaTableCell>
-<TinaTableCell>
-asset with **1080x515** size, or the **PNG image that includes the brand logo, promo image, and promo details**
-</TinaTableCell>
-</TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      bg
+    </TinaTableCell>
 
-<TinaTableRow>
-<TinaTableCell>
-img-alt
-</TinaTableCell>
-<TinaTableCell>
-You can use the **H1 & H2** from the Copy
-</TinaTableCell>
-</TinaTableRow>
+    <TinaTableCell>
+      asset with **2048x800** size
+    </TinaTableCell>
+  </TinaTableRow>
 
-<TinaTableRow>
-<TinaTableCell>
-mobile-bg
-</TinaTableCell>
-<TinaTableCell>
-asset with **1080x1080** size
-</TinaTableCell>
-</TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      img
+    </TinaTableCell>
+
+    <TinaTableCell>
+      asset with **1080x515** size, or the **PNG image that includes the brand logo, promo image, and promo details**
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      img-alt
+    </TinaTableCell>
+
+    <TinaTableCell>
+      You can use the **H1 & H2** from the Copy
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      mobile-bg
+    </TinaTableCell>
+
+    <TinaTableCell>
+      asset with **1080x1080** size
+    </TinaTableCell>
+  </TinaTableRow>
 </TinaTable>
 
 #### Motion LP Hero
 
 <TinaTable>
-<TinaTableRow>
-<TinaTableCell>
-Key
-</TinaTableCell>
-<TinaTableCell>
-Description
-</TinaTableCell>
-</TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      Key
+    </TinaTableCell>
 
-<TinaTableRow>
-<TinaTableCell>
-bg
-</TinaTableCell>
-<TinaTableCell>
-still image with **2228x720** size, with promo details (as seen in the sample).
-</TinaTableCell>
-</TinaTableRow>
+    <TinaTableCell>
+      Description
+    </TinaTableCell>
+  </TinaTableRow>
 
-<TinaTableRow>
-<TinaTableCell>
-mobile-bg
-</TinaTableCell>
-<TinaTableCell>
-still image with **1080x1080** size, with promo details (as seen in the sample)
-</TinaTableCell>
-</TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      bg
+    </TinaTableCell>
 
-<TinaTableRow>
-<TinaTableCell>
-video-bg
-</TinaTableCell>
-<TinaTableCell>
-vimeo link with size **2228x720** then add `?autoplay=1&amp;loop=1&amp;background=1` at the end of the link
-</TinaTableCell>
-</TinaTableRow>
+    <TinaTableCell>
+      still image with **2228x720** size, with promo details (as seen in the sample).
+    </TinaTableCell>
+  </TinaTableRow>
 
-<TinaTableRow>
-<TinaTableCell>
-video-bg-mobile
-</TinaTableCell>
-<TinaTableCell>
-vimeo link with size **1080x1080** then add `?autoplay=1&amp;loop=1&amp;background=1` at the end of the link
-</TinaTableCell>
-</TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      mobile-bg
+    </TinaTableCell>
+
+    <TinaTableCell>
+      still image with **1080x1080** size, with promo details (as seen in the sample)
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      video-bg
+    </TinaTableCell>
+
+    <TinaTableCell>
+      vimeo link with size **2228x720** then add `?autoplay=1&amp;loop=1&amp;background=1` at the end of the link
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      video-bg-mobile
+    </TinaTableCell>
+
+    <TinaTableCell>
+      vimeo link with size **1080x1080** then add `?autoplay=1&amp;loop=1&amp;background=1` at the end of the link
+    </TinaTableCell>
+  </TinaTableRow>
 </TinaTable>
 
 To get the image URL go to your creatives, **click the asset** you need, then go to media and **click Open**. It will open a new tab showing the asset **copy the URL of the image** (refer to image below). As for the vimeo link, it is usually given on your Task on Monday else get it from your sub-lead.
@@ -145,10 +170,12 @@ To get the image URL go to your creatives, **click the asset** you need, then go
 Then you'll paste the URL on its respective key:
 
 #### Static LP Hero
+
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887467/builds/landing-page/w15pt1pcks7pkkiyte8q.png)
 
 #### Motion LP Hero
-In case the video-bg, video-bg-mobile are not in the Hero. You can manually add it by **Clicking the Configure Keys** then add these missing keys.  
+
+In case the video-bg, video-bg-mobile are not in the Hero. You can manually add it by **Clicking the Configure Keys** then add these missing keys.
 
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887533/builds/landing-page/wnuyfxajwvvjvj8yrz8x.png)
 
@@ -156,11 +183,11 @@ For the Next Steps (Steps, and Terms) both Static and Motion have the same forma
 
 ### Steps
 
-Here, you'll insert the Steps [ACQ 1-2-3] from the Copy.
+Here, you'll insert the Steps \[ACQ 1-2-3] from the Copy.
 
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887469/builds/landing-page/qb5tp8rtha94eesucn77.png)
 
-> :warning:**Take Note:** Steps should not have any punctation marks at the end, **except Exclamation Point**.
+> \:warning:**Take Note:** Steps should not have any punctation marks at the end, **except Exclamation Point**.
 
 ### Terms
 

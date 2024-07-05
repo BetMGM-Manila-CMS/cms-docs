@@ -1,6 +1,7 @@
 ---
 title: partypoker Carousel
 ---
+
 # partypoker Carousel
 
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/c_scale,w_0.5/builds/poker-carousel/partypoker-caro_ng7ghg.png "default")
@@ -14,139 +15,186 @@ For partypoker's carousel, it is structured differently, the layout is different
 ## Creating Your Carousel
 
 <Row>
-    <Col ratio={2} sticky={true}>
-        Duplicate the template named `manila-carousel-template`.
-    </Col>
-    <Col ratio={1} sticky={false}>
-        ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715567179/builds/poker-carousel/partypoker-template_ljrjau.png)
-    </Col>
+  <Col ratio={2} sticky={true}>
+    Duplicate the template named `manila-carousel-template`.
+  </Col>
+
+  <Col ratio={1} sticky={false}>
+    ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715567179/builds/poker-carousel/partypoker-template_ljrjau.png)
+  </Col>
 </Row>
 
 ### Required Fields
 
 <Row>
-    <Col ratio={2} sticky={true}>
-        <table>
-            <thead>
-                <tr>
-                    <th>
-                        Field
-                    </th>
-                    <th className="w-full">
-                        Value
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colSpan="2" className="text-center">
-                        Data
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Text
-                    </td>
-                    <td>
-                        There are options:
+  <Col ratio={2} sticky={true}>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Field
+          </th>
 
-                        1. Carousel H1 + Carousel H2
-                        2. But if option 1 is long we can also use `Promohub Key Terms Subtitle`
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Image
-                    </td>
-                    <td>
-                        Side Carousel-600x223
-                    </td>
-                </tr>
-                <tr id="imagelink-url">
-                    <td>
-                        ImageLink URL
-                    </td>
-                    <td>
-                        See [CTA](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) Guide
-                    </td>
-                </tr>
-                <tr id="imagelink-linktext">
-                    <td>
-                        ImageLink Link Text
-                    </td>
-                    <td>
-                        If the text value is "Learn More" paste this value:
-                        <p>
-                        ```
-                        ${dic:DAB94F34-5069-4A44-A924-DFDD6714CECA/Button-Learn-more}
-                        ```
-                        </p>
-                        But if not replace it with the appropriate text
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Title
-                    </td>
-                    <td>
-                        Promohub Key Terms Title
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        TitleLink URL
-                    </td>
-                    <td>
-                        Should be the same as [ImageLink URL](#imagelink-url)
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        TitleLink URL
-                    </td>
-                    <td>
-                        Should be the same as [ImageLink Link Text](#imagelink-linktext).
-                        
-                        But if the text is "Learn More" no need to apply custom value.
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </Col>
-    <Col ratio={3} sticky={true}>
-        <div className="*:mb-0">
-            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715569448/builds/poker-carousel/partypoker-data_srawnk.jpg) 
-        </div>
-    </Col>
+          <th className="w-full">
+            Value
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td colSpan="2" className="text-center">
+            Data
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Text
+          </td>
+
+          <td>
+            There are options:
+
+            1. Carousel H1 + Carousel H2
+            2. But if option 1 is long we can also use `Promohub Key Terms Subtitle`
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Image
+          </td>
+
+          <td>
+            Side Carousel-600x223
+          </td>
+        </tr>
+
+        <tr id="imagelink-url">
+          <td>
+            ImageLink URL
+          </td>
+
+          <td>
+            See [CTA](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) Guide
+          </td>
+        </tr>
+
+        <tr id="imagelink-linktext">
+          <td>
+            ImageLink Link Text
+          </td>
+
+          <td>
+            If the text value is "Learn More" paste this value:
+
+            <p>
+              ```
+              ${dic:DAB94F34-5069-4A44-A924-DFDD6714CECA/Button-Learn-more}
+              ```
+            </p>
+
+            But if not replace it with the appropriate text
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Title
+          </td>
+
+          <td>
+            Promohub Key Terms Title
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            TitleLink URL
+          </td>
+
+          <td>
+            Should be the same as [ImageLink URL](#imagelink-url)
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            TitleLink URL
+          </td>
+
+          <td>
+            Should be the same as [ImageLink Link Text](#imagelink-linktext).
+
+            But if the text is "Learn More" no need to apply custom value.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </Col>
+
+  <Col ratio={3} sticky={true}>
+    <div className="*:mb-0">
+      ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715569448/builds/poker-carousel/partypoker-data_srawnk.jpg)
+    </div>
+  </Col>
 </Row>
 
 <Row>
-    <Col ratio={2} sticky={true}>
-        <table >
-            <tbody>
-                <tr>
-                    <td colSpan="2" className="text-center">
-                        PC Banner Usage
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Image Overlay
-                    </td>
-                    <td className="w-full">
-                        Main Carousel-780x460
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </Col>
-    <Col ratio={3} sticky={true}>
-        <div className="*:mb-0">
-            ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715569454/builds/poker-carousel/partypoker-pcbannerusage_oouqbl.jpg) 
-        </div>
-    </Col>
+  <Col ratio={2} sticky={true}>
+    <table>
+      <tbody>
+        <tr>
+          <td colSpan="2" className="text-center">
+            PC Banner Usage
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Image Overlay
+          </td>
+
+          <td className="w-full">
+            Main Carousel-780x460
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </Col>
+
+  <Col ratio={3} sticky={true}>
+    <div className="*:mb-0">
+      ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1715569454/builds/poker-carousel/partypoker-pcbannerusage_oouqbl.jpg)
+    </div>
+  </Col>
 </Row>
 
 ### Filter New builds
 
 Like the default poker carousel, add a filter as stated in this [section](./poker-carousel#step-3-filter).
+
+### Pushing The Carousel
+
+There is a different way when pushing the carousel in partypoker.
+
+Navigate to this directory
+
+<Admonition type="info" title="Sitecore Path">
+  Content > Vanilla.Mobile > m2.nj.partypoker.com > MobilePoker-v1.0 > index > slides
+</Admonition>
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1720084207/builds/poker-carousel/Screenshot_3_ngzw4e.jpg)Under Values click Configure Keys
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1720084833/builds/poker-carousel/Screenshot_4_dkgz3j.jpg)Upon clicking Configure Keys this window will pop up. Click New Key to add a new row, add the URL of your partypoker carousel and click OK.
+
+## Previewing The Carousel
+
+To preview your Carousel go to your `Product and State Website` and then add your `filter`.
+
+See example below:
+
+```
+https://poker.nj.partypoker.com/?qa=manila
+```
