@@ -24,15 +24,6 @@ const MemberField = {
       label: "Ttile",
       type: "string",
       required: true,
-      options: [
-        "Web Content Specialist",
-        "Jr. CMS Developer",
-        "CMS Developer",
-        "Sr. CMS Developer",
-        "CMS Team Lead",
-        "Digital Content Manager - Gaming",
-        "Senior Content Management Specialist - Gaming",
-      ],
     },
     {
       name: "isProbation",
