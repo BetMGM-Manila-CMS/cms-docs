@@ -1373,6 +1373,18 @@
           "label": "Layout",
           "links": [
             {
+              "label": "Claw Machine",
+              "links": [
+                {
+                  "label": "partypoker",
+                  "brand": "partypoker",
+                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={85938E0C-11E8-44A8-A452-68DC36AB81FD}&la=",
+                  "_template": "quickLink"
+                }
+              ],
+              "_template": "subGroup"
+            },
+            {
               "label": "Spin The Wheel",
               "links": [
                 {
