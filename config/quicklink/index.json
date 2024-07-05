@@ -1373,18 +1373,6 @@
           "label": "Layout",
           "links": [
             {
-              "label": "Claw Machine",
-              "links": [
-                {
-                  "label": "partypoker",
-                  "brand": "partypoker",
-                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={85938E0C-11E8-44A8-A452-68DC36AB81FD}&la=",
-                  "_template": "quickLink"
-                }
-              ],
-              "_template": "subGroup"
-            },
-            {
               "label": "Spin The Wheel",
               "links": [
                 {
@@ -1415,6 +1403,18 @@
                   "label": "partypoker",
                   "brand": "partypoker",
                   "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A2F1A522-7017-4253-BFC4-6D60A1C5098D}&la=",
+                  "_template": "quickLink"
+                }
+              ],
+              "_template": "subGroup"
+            },
+            {
+              "label": "Claw Machine",
+              "links": [
+                {
+                  "label": "partypoker",
+                  "brand": "partypoker",
+                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={85938E0C-11E8-44A8-A452-68DC36AB81FD}&la=",
                   "_template": "quickLink"
                 }
               ],
