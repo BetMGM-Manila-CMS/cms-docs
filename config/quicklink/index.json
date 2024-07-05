@@ -133,6 +133,12 @@
           "label": "ODR Banner",
           "links": [
             {
+              "label": "Wheel Of Fortune",
+              "brand": "wof",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={AB9F95F5-E64A-4A95-B72A-3893D3769BDB}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM MI",
               "brand": "betmgm",
               "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={CBF205BE-74B2-4984-8213-D545F7B9EC8F}&la=",
