@@ -133,6 +133,12 @@
           "label": "ODR Banner",
           "links": [
             {
+              "label": "BetMGM NJ",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={C3FFBA8E-BDA1-44DB-B400-22A1F8DEDBB0}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM MI",
               "brand": "betmgm",
               "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={CBF205BE-74B2-4984-8213-D545F7B9EC8F}&la=",
