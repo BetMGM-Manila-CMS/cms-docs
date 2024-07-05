@@ -133,15 +133,45 @@
           "label": "ODR Banner",
           "links": [
             {
+              "label": "BetMGM MI",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={CBF205BE-74B2-4984-8213-D545F7B9EC8F}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM NJ",
               "brand": "betmgm",
               "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={C3FFBA8E-BDA1-44DB-B400-22A1F8DEDBB0}&la=",
               "_template": "quickLink"
             },
             {
-              "label": "BetMGM MI",
+              "label": "BetMGM ON",
               "brand": "betmgm",
-              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={CBF205BE-74B2-4984-8213-D545F7B9EC8F}&la=",
+              "url": "https://cms.prod.env.works/sitecore/DirectLink.aspx?fo={14A79487-2047-4B2D-8D2B-0EBC5812457D}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "BetMGM PA",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={CD7FAC11-1599-4EC0-A9E6-D5323AB09F76}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "BetMGM WV",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7255AA3A-9970-4278-95D4-5AF0D7048707}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "Borgata NJ",
+              "brand": "borgata",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={5245B9E0-4836-4D8C-88A4-F20B554810F2}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "Borgata PA",
+              "brand": "borgata",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={36B379B5-5DB1-47D4-9FD0-FE722FCABA97}&la=",
               "_template": "quickLink"
             }
           ],
