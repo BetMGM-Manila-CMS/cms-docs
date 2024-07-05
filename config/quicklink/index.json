@@ -556,12 +556,6 @@
               "label": "Claw Machine",
               "links": [
                 {
-                  "label": "Wheel Of Fortune",
-                  "brand": "wof",
-                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={6A8FEBF9-0331-4CD5-8EAE-32760ACE6037}&la=",
-                  "_template": "quickLink"
-                },
-                {
                   "label": "BetMGM MI",
                   "brand": "betmgm",
                   "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={3A62EEB3-E124-418B-A41B-526212318848}&la=",
@@ -607,6 +601,12 @@
                   "label": "Party Casino",
                   "brand": "partycasino",
                   "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={30520E45-5844-4D39-9632-51F889DD92D7}&la=",
+                  "_template": "quickLink"
+                },
+                {
+                  "label": "Wheel Of Fortune",
+                  "brand": "wof",
+                  "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={6A8FEBF9-0331-4CD5-8EAE-32760ACE6037}&la=",
                   "_template": "quickLink"
                 }
               ],
