@@ -544,7 +544,7 @@
                   "_template": "quickLink"
                 },
                 {
-                  "label": "WOF",
+                  "label": "Wheel Of Fortune",
                   "brand": "wof",
                   "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={20E00BB9-83F6-417A-9A1C-E4335A7DC38A}&la=",
                   "_template": "quickLink"
