@@ -4,16 +4,16 @@ import { BrowserWindow } from "../BrowserWindow"
 
 import { useState } from "react"
 
-export const ColorTable = ({styles}) => {
+export const ColorTable = ({ styles }) => {
     return (
-        <table style={{width: "100%"}}>
+        <table style={{ width: "100%" }}>
             <thead>
                 <tr>
                     <th></th>
                     {
                         styles.map((style, index) => {
                             return (
-                                <th 
+                                <th
                                     key={index}
                                     style={{
                                         backgroundColor: style.backgroundColor,
@@ -35,7 +35,7 @@ export const ColorTable = ({styles}) => {
                             return (
                                 <td key={index}>
                                     <CodeBlock>
-                                        {style.backgroundColor}    
+                                        {style.backgroundColor}
                                     </CodeBlock>
                                 </td>
                             )
@@ -49,7 +49,7 @@ export const ColorTable = ({styles}) => {
                             return (
                                 <td key={index}>
                                     <CodeBlock>
-                                        {style.color}    
+                                        {style.color}
                                     </CodeBlock>
                                 </td>
                             )
@@ -61,12 +61,12 @@ export const ColorTable = ({styles}) => {
     )
 }
 
-export const StyleGuide = ({styles}) => {
+export const StyleGuide = ({ styles }) => {
     const [selectedStyle, setSelectedStyle] = useState(styles[0])
 
     return (
         <div class="style-guide">
-            <select 
+            <select
                 className="daisy-select daisy-select-bordered w-full max-w-xs"
                 onChange={e => setSelectedStyle(styles.find(style => style.name === e.target.value))}
             >
@@ -78,8 +78,8 @@ export const StyleGuide = ({styles}) => {
                 <div className="p-4 rounded border-[1px] border-gray-600">
                     <h3>Links</h3>
                     <BrowserWindow>
-                        <a 
-                            style={{color: selectedStyle.backgroundColor}} 
+                        <a
+                            style={{ color: selectedStyle.backgroundColor }}
                             href="https://help.nj.betmgm.com/en/general-information/howto/bonus/opt-out"
                         >
                             General Terms and Conditions
@@ -94,13 +94,13 @@ export const StyleGuide = ({styles}) => {
                 <div className="p-4 rounded border-[1px] border-gray-600">
                     <h3>CTAs/Button</h3>
                     <BrowserWindow>
-                        <a 
-                            class="btn" 
-                            style={{color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor}} 
+                        <a
+                            class="btn"
+                            style={{ color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor }}
                             href="#"
                         >
                             Spin Now
-                        </a>  
+                        </a>
                     </BrowserWindow>
                     <CodeBlock language="html">
                         {`<a class="btn" style="color: ${selectedStyle.color}; background-color: ${selectedStyle.backgroundColor}"href="#" >
@@ -111,24 +111,24 @@ export const StyleGuide = ({styles}) => {
                 <div className="p-4 rounded border-[1px] border-gray-600 col-span-1 lg:col-span-2">
                     <h3>Tables</h3>
                     <BrowserWindow>
-                        <table class="table table-striped table-bordered" >
+                        <table className="table table-striped table-bordered" >
                             <thead>
                                 <tr>
-                                    <th 
+                                    <th
                                         colspan="2"
-                                        style={{color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor}}                                 
+                                        style={{ color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor }}
                                     >
                                         $50K Leaderboard
                                     </th>
                                 </tr>
                                 <tr>
-                                    <th 
-                                        style={{color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor}}
+                                    <th
+                                        style={{ color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor }}
                                     >
                                         Position
                                     </th>
-                                    <th 
-                                        style={{color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor}}
+                                    <th
+                                        style={{ color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor }}
                                     >
                                         Reward
                                     </th>
@@ -147,7 +147,7 @@ export const StyleGuide = ({styles}) => {
                         </table>
                     </BrowserWindow>
                     <CodeBlock language="html">
-                        {`<table className="table table-striped table-bordered" style="text-align: center; background-color: #fff;">
+                        {`<table class="table table-striped table-bordered" style="text-align: center; background-color: #fff;">
   <thead>
     <tr>
       <th style="color: ${selectedStyle.color}; background-color: ${selectedStyle.backgroundColor};" colspan="2">
@@ -175,7 +175,7 @@ export const StyleGuide = ({styles}) => {
   </tbody>
 </table>`}
                     </CodeBlock>
-                </div>    
+                </div>
             </div>
         </div>
     )
