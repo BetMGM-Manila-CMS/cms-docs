@@ -1267,7 +1267,7 @@
             {
               "label": "Borgata PA",
               "brand": "borgata",
-              "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={1BE7622B-38BC-4DEB-8F2A-ECFBAB8D4E74}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={ED235B5B-F730-43C9-B0DE-CE29A744EA9A}&la=",
               "_template": "quickLink"
             },
             {
