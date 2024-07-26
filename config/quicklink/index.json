@@ -1261,7 +1261,7 @@
             {
               "label": "Borgata NJ",
               "brand": "borgata",
-              "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={B03EF7A6-C062-4E63-91C7-ACAC7CDA049E}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={58E9F440-8599-45C3-BAD5-C67E1BA03B5C}&la=",
               "_template": "quickLink"
             },
             {
