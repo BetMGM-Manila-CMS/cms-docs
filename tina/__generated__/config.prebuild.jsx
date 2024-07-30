@@ -969,20 +969,20 @@ var CarouselAssignmentField = {
       label: "End Day",
       type: "datetime",
       required: true
-    },
-    {
-      name: "casinoPoker",
-      label: "Casino and Poker",
-      type: "object",
-      fields: [
-        {
-          name: "betNJ",
-          label: "BetMGM NJ",
-          type: "reference",
-          collections: ["members"]
-        }
-      ]
     }
+    /* {
+        name: 'casinoPoker',
+        label: 'Casino and Poker',
+        type: 'object',
+        fields: [
+            {
+                name: 'betNJ',
+                label: 'BetMGM NJ',
+                type: "reference",
+                collections: ["members"],
+            }
+        ]
+    } */
   ]
 };
 var CarouselAssignmentsCollection = {

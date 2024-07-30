@@ -6,7 +6,7 @@ const CarouselAssignmentField = {
     type: "object",
     list: true,
     itemProps: (item) => {
-        return { label: item && item.startDay && item.endDay ? displayRangeDate(item.startDay, item.endDay) : null };        
+        return { label: item && item.startDay && item.endDay ? displayRangeDate(item.startDay, item.endDay) : null };
     },
     fields: [
         {
@@ -21,7 +21,7 @@ const CarouselAssignmentField = {
             type: 'datetime',
             required: true,
         },
-        {
+        /* {
             name: 'casinoPoker',
             label: 'Casino and Poker',
             type: 'object',
@@ -33,7 +33,7 @@ const CarouselAssignmentField = {
                     collections: ["members"],
                 }
             ]
-        }
+        } */
     ]
 }
 

@@ -59,8 +59,6 @@ type Query {
   sidebarConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SidebarFilter): SidebarConnection!
   quicklink(relativePath: String): Quicklink!
   quicklinkConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: QuicklinkFilter): QuicklinkConnection!
-  members(relativePath: String): Members!
-  membersConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: MembersFilter): MembersConnection!
   workSchedules(relativePath: String): WorkSchedules!
   workSchedulesConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: WorkSchedulesFilter): WorkSchedulesConnection!
   checklists(relativePath: String): Checklists!
@@ -77,7 +75,6 @@ input DocumentFilter {
   doc: DocFilter
   sidebar: SidebarFilter
   quicklink: QuicklinkFilter
-  members: MembersFilter
   workSchedules: WorkSchedulesFilter
   checklists: ChecklistsFilter
   carouselAssignments: CarouselAssignmentsFilter
@@ -108,7 +105,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Doc | Sidebar | Quicklink | Members | WorkSchedules | Checklists | CarouselAssignments | Updates | Team | Folder
+union DocumentNode = Doc | Sidebar | Quicklink | WorkSchedules | Checklists | CarouselAssignments | Updates | Team | Folder
 
 type Doc implements Node & Document {
   title: String!
@@ -761,44 +758,6 @@ type QuicklinkConnection implements Connection {
   edges: [QuicklinkConnectionEdges]
 }
 
-type MembersMember {
-  image: String
-  name: String!
-  title: String!
-  isProbation: Boolean!
-  officeLocation: String!
-}
-
-type Members implements Node & Document {
-  member: [MembersMember]
-  id: ID!
-  _sys: SystemInfo!
-  _values: JSON!
-}
-
-input MembersMemberFilter {
-  image: ImageFilter
-  name: StringFilter
-  title: StringFilter
-  isProbation: BooleanFilter
-  officeLocation: StringFilter
-}
-
-input MembersFilter {
-  member: MembersMemberFilter
-}
-
-type MembersConnectionEdges {
-  cursor: String!
-  node: Members
-}
-
-type MembersConnection implements Connection {
-  pageInfo: PageInfo!
-  totalCount: Float!
-  edges: [MembersConnectionEdges]
-}
-
 type WorkSchedulesWorkSchedule {
   startDay: String!
   endDay: String!
@@ -901,16 +860,9 @@ type ChecklistsConnection implements Connection {
   edges: [ChecklistsConnectionEdges]
 }
 
-union CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJ = Members
-
-type CarouselAssignmentsCarouselAssignmentCasinoPoker {
-  betNJ: CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJ
-}
-
 type CarouselAssignmentsCarouselAssignment {
   startDay: String!
   endDay: String!
-  casinoPoker: CarouselAssignmentsCarouselAssignmentCasinoPoker
 }
 
 type CarouselAssignments implements Node & Document {
@@ -920,18 +872,9 @@ type CarouselAssignments implements Node & Document {
   _values: JSON!
 }
 
-input CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJFilter {
-  members: MembersFilter
-}
-
-input CarouselAssignmentsCarouselAssignmentCasinoPokerFilter {
-  betNJ: CarouselAssignmentsCarouselAssignmentCasinoPokerBetNJFilter
-}
-
 input CarouselAssignmentsCarouselAssignmentFilter {
   startDay: DatetimeFilter
   endDay: DatetimeFilter
-  casinoPoker: CarouselAssignmentsCarouselAssignmentCasinoPokerFilter
 }
 
 input CarouselAssignmentsFilter {
@@ -1167,8 +1110,6 @@ type Mutation {
   createSidebar(relativePath: String!, params: SidebarMutation!): Sidebar!
   updateQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
   createQuicklink(relativePath: String!, params: QuicklinkMutation!): Quicklink!
-  updateMembers(relativePath: String!, params: MembersMutation!): Members!
-  createMembers(relativePath: String!, params: MembersMutation!): Members!
   updateWorkSchedules(relativePath: String!, params: WorkSchedulesMutation!): WorkSchedules!
   createWorkSchedules(relativePath: String!, params: WorkSchedulesMutation!): WorkSchedules!
   updateChecklists(relativePath: String!, params: ChecklistsMutation!): Checklists!
@@ -1185,7 +1126,6 @@ input DocumentUpdateMutation {
   doc: DocMutation
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
-  members: MembersMutation
   workSchedules: WorkSchedulesMutation
   checklists: ChecklistsMutation
   carouselAssignments: CarouselAssignmentsMutation
@@ -1198,7 +1138,6 @@ input DocumentMutation {
   doc: DocMutation
   sidebar: SidebarMutation
   quicklink: QuicklinkMutation
-  members: MembersMutation
   workSchedules: WorkSchedulesMutation
   checklists: ChecklistsMutation
   carouselAssignments: CarouselAssignmentsMutation
@@ -1378,18 +1317,6 @@ input QuicklinkMutation {
   quickLinksGroup: [QuicklinkQuickLinksGroupMutation]
 }
 
-input MembersMemberMutation {
-  image: String
-  name: String
-  title: String
-  isProbation: Boolean
-  officeLocation: String
-}
-
-input MembersMutation {
-  member: [MembersMemberMutation]
-}
-
 input WorkSchedulesWorkScheduleMutation {
   startDay: String
   endDay: String
@@ -1423,14 +1350,9 @@ input ChecklistsMutation {
   checklistGroup: [ChecklistsChecklistGroupMutation]
 }
 
-input CarouselAssignmentsCarouselAssignmentCasinoPokerMutation {
-  betNJ: String
-}
-
 input CarouselAssignmentsCarouselAssignmentMutation {
   startDay: String
   endDay: String
-  casinoPoker: CarouselAssignmentsCarouselAssignmentCasinoPokerMutation
 }
 
 input CarouselAssignmentsMutation {
