@@ -1,4 +1,5 @@
 import Marquee from "react-fast-marquee";
+import teamData from "@site/config/team"
 
 const images = [
     {
@@ -22,6 +23,10 @@ const images = [
 ]
 
 export default function QA() {
+    console.log(teamData.qa.sort((a, b) => new Date(b.month) - new Date(a.month)))
+
+    const currentQA = teamData.qa.sort((a, b) => new Date(b.month) - new Date(a.month))[0]
+
     return (
         <div className=" pb-10">
             <div className="h-56 bg-primary flex flex-col justify-center relative">
@@ -30,12 +35,12 @@ export default function QA() {
                     style={{ background: "linear-gradient(270deg, rgba(183, 162, 109, 0) 0%, rgba(183, 162, 109, 0.7) 30%, rgba(183, 162, 109, 0.7) 70%, rgba(183, 162, 109, 0) 100%)" }}
                 >
                     <h3 class="text-lg font-normal dark:text-white mb-2">June QA Score</h3>
-                    <h2 class="text-6xl font-extrabold leading-none tracking-tight dark:text-white mb-0">99%</h2>
+                    <h2 class="text-6xl font-extrabold leading-none tracking-tight dark:text-white mb-0">{currentQA.score}%</h2>
                 </div>
                 <div className="absolute top-0 left-0 w-full h-full">
                     <Marquee>
                         {
-                            images.map(({ image }, index) => (<img className="h-56 opacity-50 hover:opacity-100 transition-opacity duration-500" src={image} />))
+                            currentQA.images.map(({ image }, index) => (<img className="h-56 opacity-50 hover:opacity-100 transition-opacity duration-500" key={index} src={image} />))
                         }
                     </Marquee>
                 </div>

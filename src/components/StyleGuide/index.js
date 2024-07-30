@@ -176,6 +176,167 @@ export const StyleGuide = ({ styles }) => {
 </table>`}
                     </CodeBlock>
                 </div>
+                <div className="p-4 rounded border-[1px] border-gray-600 col-span-1 lg:col-span-2">
+                    <h3>Tables</h3>
+                    <BrowserWindow>
+                        <div className="poker-table">
+                            <details>
+                                <summary style={{ color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor }}>Summer Classic Tournament Series</summary>
+                                <div class="tablescroll-accord">
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr style={{ color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor }}>
+                                                <th>Time</th>
+                                                <th>Date</th>
+                                                <th>Day</th>
+                                                <th>#</th>
+                                                <th>Prefix</th>
+                                                <th>Tournament</th>
+                                                <th>Baseball Name</th>
+                                                <th>Jersey</th>
+                                                <th>BI</th>
+                                                <th>NJ GTD</th>
+                                                <th>PA GTD</th>
+                                                <th>MI GTD</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody align="center">
+                                            <tr>
+                                                <td>5:00 PM</td>
+                                                <td>July 14</td>
+                                                <td>Sunday</td>
+                                                <td>1</td>
+                                                <td>SUMMER CLASSIC #1:</td>
+                                                <td>$250 NLH</td>
+                                                <td>$250 FIRST PITCH</td>
+                                                <td>Y</td>
+                                                <td>$250.00</td>
+                                                <td>$30,000.00</td>
+                                                <td>$25,000.00</td>
+                                                <td>$25,000.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5:00 PM</td>
+                                                <td>July 14</td>
+                                                <td>Sunday</td>
+                                                <td>1</td>
+                                                <td>SUMMER CLASSIC #1:</td>
+                                                <td>$250 NLH</td>
+                                                <td>$250 FIRST PITCH</td>
+                                                <td>Y</td>
+                                                <td>$250.00</td>
+                                                <td>$30,000.00</td>
+                                                <td>$25,000.00</td>
+                                                <td>$25,000.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </details>
+                        </div>
+                    </BrowserWindow>
+                    <CodeBlock language="html">
+                        {`<style>
+.table tbody th,
+.table tbody tr td,
+.table thead th {
+    vertical-align: middle;
+}
+.tablescroll {
+    overflow: auto;
+    max-height: 20em;
+}
+.tablescroll th {
+    position: sticky;
+    top: 0;
+    z-index: 2
+}
+details {
+    border: 1px solid #d4d4d4;
+    padding: .75em .75em 0;
+    margin-top: 10px;
+    box-shadow: 0 0 20px #d4d4d4;
+}
+summary {
+    font-weight: bold;
+    margin: -.75em -.75em 0;
+    padding: .75em;
+    background-color: ${selectedStyle.backgroundColor};
+    color: #fff;
+}
+details[open] {
+    padding: .75em;
+    border-bottom: 1px solid #d4d4d4;
+}
+details[open] summary {
+    border-bottom: 1px solid #d4d4d4;
+    margin-bottom: 10px;
+}
+.tablescroll-accord {
+    overflow: auto;
+}
+.tablescroll-accord th {
+    position: sticky;
+    top: 0;
+    z-index: 2
+}
+</style>
+
+<details>
+    <summary>Summer Classic Tournament Series</summary>
+    <div class="tablescroll-accord">
+        <table class="table table-bordered table-striped" style="text-align: center;">
+            <thead>
+                <tr style="color: #ffffff; background-color: ${selectedStyle.backgroundColor};">
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Day</th>
+                    <th>#</th>
+                    <th>Prefix</th>
+                    <th>Tournament</th>
+                    <th>Baseball Name</th>
+                    <th>Jersey</th>
+                    <th>BI</th>
+                    <th>NJ GTD</th>
+                    <th>PA GTD</th>
+                    <th>MI GTD</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <tr>
+                    <td>5:00 PM</td>
+                    <td>July 14</td>
+                    <td>Sunday</td>
+                    <td>1</td>
+                    <td>SUMMER CLASSIC #1:</td>
+                    <td>$250 NLH</td>
+                    <td>$250 FIRST PITCH</td>
+                    <td>Y</td>
+                    <td>$250.00</td>
+                    <td>$30,000.00</td>
+                    <td>$25,000.00</td>
+                    <td>$25,000.00</td>
+                </tr>
+                <tr>
+                    <td>5:00 PM</td>
+                    <td>July 14</td>
+                    <td>Sunday</td>
+                    <td>1</td>
+                    <td>SUMMER CLASSIC #1:</td>
+                    <td>$250 NLH</td>
+                    <td>$250 FIRST PITCH</td>
+                    <td>Y</td>
+                    <td>$250.00</td>
+                    <td>$30,000.00</td>
+                    <td>$25,000.00</td>
+                    <td>$25,000.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</details>`}
+                    </CodeBlock>
+                </div>
             </div>
         </div>
     )

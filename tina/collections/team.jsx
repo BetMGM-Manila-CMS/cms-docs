@@ -1,5 +1,5 @@
 import { defineConfig, wrapFieldsWithMeta } from 'tinacms'
-import {displayMonthDate} from "../../utils/date.js"
+import { displayMonthDate } from "../../utils/date.js"
 import React from "react"
 
 const QAField = {
@@ -8,7 +8,7 @@ const QAField = {
     type: "object",
     list: true,
     itemProps: (item) => {
-        return { label: item && item.month ? displayMonthDate(item.month) : null };        
+        return { label: item && item.month ? displayMonthDate(item.month) : null };
     },
     fields: [
         {
@@ -17,12 +17,12 @@ const QAField = {
             type: 'datetime',
             required: true,
             ui: {
-                component: wrapFieldsWithMeta(({field, input, meta}) => {
+                component: wrapFieldsWithMeta(({ field, input, meta }) => {
                     return (
                         <div class="tina-date-field">
                             <div class="rdt">
                                 <input type="month" class="shadow-inner focus:shadow-outline focus:border-blue-500 focus:outline-none block text-base placeholder:text-gray-300 px-3 py-2 text-gray-600 w-full bg-white border border-gray-200 transition-all ease-out duration-150 focus:text-gray-900 rounded-md"
-                                {...input} />
+                                    {...input} />
                             </div>
                         </div>
                     )
@@ -34,7 +34,21 @@ const QAField = {
             label: 'Score',
             type: 'number',
             required: true,
-        }
+        },
+        {
+            name: 'images',
+            label: 'Images',
+            type: 'object',
+            list: true,
+            required: true,
+            fields: [
+                {
+                    name: "image",
+                    label: "Image",
+                    type: "image",
+                },
+            ]
+        },
     ]
 }
 

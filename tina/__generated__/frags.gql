@@ -353,5 +353,9 @@ fragment TeamParts on Team {
     __typename
     month
     score
+    images {
+      __typename
+      image
+    }
   }
 }

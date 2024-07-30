@@ -1435,6 +1435,20 @@ var QAField = {
       label: "Score",
       type: "number",
       required: true
+    },
+    {
+      name: "images",
+      label: "Images",
+      type: "object",
+      list: true,
+      required: true,
+      fields: [
+        {
+          name: "image",
+          label: "Image",
+          type: "image"
+        }
+      ]
     }
   ]
 };
