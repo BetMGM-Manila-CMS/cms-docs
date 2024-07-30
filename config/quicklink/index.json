@@ -1237,43 +1237,43 @@
             {
               "label": "BetMGM MI",
               "brand": "betmgm",
-              "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={0FBC6BD2-1107-430A-913F-4349446A9B58}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={6BEC5A9A-C6A1-423A-8CB8-733EFBEB1F7F}&la=",
               "_template": "quickLink"
             },
             {
               "label": "BetMGM NJ",
               "brand": "betmgm",
-              "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={8A9907DE-F390-40B3-B0F0-8AA9BEDB11F0}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={D0556CA0-9F6F-4D2E-A6E5-5A1110F6ACA4}&la=",
               "_template": "quickLink"
             },
             {
               "label": "BetMGM ON",
               "brand": "betmgm",
-              "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={52AE2EB8-359D-48ED-83ED-523DE03B8F04}&la=",
+              "url": "https://cms.prod.env.works/sitecore/DirectLink.aspx?fo={3F05E06D-9B90-4990-9B5F-18AD945F4C2E}&la=",
               "_template": "quickLink"
             },
             {
               "label": "BetMGM PA",
               "brand": "betmgm",
-              "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={76B796F0-9A6F-4EB3-8FEF-0668223E224C}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A25E15A0-17C5-4919-ACD8-37E73F4E0AF4}&la=",
               "_template": "quickLink"
             },
             {
               "label": "Borgata NJ",
               "brand": "borgata",
-              "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={B03EF7A6-C062-4E63-91C7-ACAC7CDA049E}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={58E9F440-8599-45C3-BAD5-C67E1BA03B5C}&la=",
               "_template": "quickLink"
             },
             {
               "label": "Borgata PA",
               "brand": "borgata",
-              "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={1BE7622B-38BC-4DEB-8F2A-ECFBAB8D4E74}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={ED235B5B-F730-43C9-B0DE-CE29A744EA9A}&la=",
               "_template": "quickLink"
             },
             {
               "label": "partypoker",
               "brand": "partypoker",
-              "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={21A9EDFD-16C0-4914-8F0D-821F58B2629A}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7E6FFF0D-D814-45AC-8B75-E53C1A009EE7}&la=",
               "_template": "quickLink"
             }
           ],

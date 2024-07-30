@@ -23,6 +23,120 @@ Duplicate the `mpp-template-manila` and then rename it to your `url`. Also renam
 
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887475/builds/mpp/x67k1mpo40skfgod9scc.png)
 
+<Admonition type="note" title="Leaderboard and Sweepstakes CTA Update">
+  For Leaderboards and Sweepstakes that have only One Promotional Period:
+
+  <TinaTable topHeader={true}>
+    <TinaTableRow>
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        Label
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        CTA
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        Smartlink
+      </TinaTableCell>
+    </TinaTableRow>
+
+    <TinaTableRow>
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        BetMGM
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        See Rankings
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        !!M2.Promo/lb/PAT ID #
+      </TinaTableCell>
+    </TinaTableRow>
+
+    <TinaTableRow>
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        Other Labels
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        SEE RANKINGS
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        !!M2.Promo/lb/PAT ID #
+      </TinaTableCell>
+    </TinaTableRow>
+  </TinaTable>
+
+  For Leaderboards and Sweepstakes that have Multiple Promotional Periods:
+
+  <TinaTable topHeader={true}>
+    <TinaTableRow>
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        Label
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        CTA
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        Smartlink
+      </TinaTableCell>
+    </TinaTableRow>
+
+    <TinaTableRow>
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        BetMGM
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        See Rankings
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        !!M2.Promo/offers/grouped?filter=cp
+      </TinaTableCell>
+    </TinaTableRow>
+
+    <TinaTableRow>
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        Other Labels
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        SEE RANKINGS
+      </TinaTableCell>
+
+      <TinaTableCell rowSpan={0} colSpan={0}>
+        !!M2.Promo/offers/grouped?filter=cp
+      </TinaTableCell>
+    </TinaTableRow>
+  </TinaTable>
+</Admonition>
+
+<Admonition type="note" title="tiered naming conventions.">
+  For Tiered Promotions don't use URLs with "high core", " low core" "VIP core" etc. Instead, use numbers
+
+  **For Example:**
+
+  * Low Core = 1
+  * Mid Core = 2
+  * High Core = 3
+  * Low VIP = 4
+  * High VIP = 5
+
+  **URL:**
+
+  * roar-to-riches-casino-challenge-low-core  ---->  roar-to-riches-casino-challenge-1
+  * roar-to-riches-casino-challenge-mid-core  ---->  roar-to-riches-casino-challenge-2
+  * roar-to-riches-casino-challenge-high-core  ---->  roar-to-riches-casino-challenge-3
+  * roar-to-riches-casino-challenge-low-vip  ---->  roar-to-riches-casino-challenge-4
+  * roar-to-riches-casino-challenge-high-vip  ---->  roar-to-riches-casino-challenge-5
+</Admonition>
+
 ## Parent MPP
 
 Click on "Edit rule", it opens the "Create Rule" box. Click on the highlighted text and it will open another box. Browse to your MPP's child and select it, then press OK. And Save.
@@ -101,10 +215,48 @@ Click the "Edit HTML" to open the HTML Editor.
 
 First `<p>` tag, replace the text with the `Promotion Description`.
 
-Second `<p>` tag, [CTA](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) will depend on the ticket.
+Second `<p>` tag, [CTA](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) will depend on the ticket.
+
+For tickets that require an Opt-In CTA here is a sample of the updated CTA format to use.
+
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>
+      Brand & Product
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Format
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      BetMGM Casino, Party Casino & WoF
+    </TinaTableCell>
+
+    <TinaTableCell>
+      ```html
+        <p><a class="btn btn-primary" data-offer-id="PAT ID" data-offer-message-error="Technical Error" data-offer-message-expired="Expired" data-offer-message-invalid="Invalid" data-offer-message-not-offered="Not Offered" data-offer-message-offered="Opt In" data-offer-message-opted-in="Opted In" data-offer-message-opted-out="Opted Out" data-offer-type="promos">Opt In</a> <a class="btn btn-primary" href="!!M2.Promo/offers/grouped?filter=cp">See My Progress</a></p>
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      Borgata Casino
+    </TinaTableCell>
+
+    <TinaTableCell>
+      ```html
+      <p><a class="btn" style="background-color: #d21c5d; border-color: #d21c5d; color: #ffffff;" data-offer-id="PAT ID" data-offer-message-error="TECHNICAL ERROR" data-offer-message-expired="EXPIRED" data-offer-message-invalid="INVALID" data-offer-message-not-offered="NOT OFFERED" data-offer-message-offered="OPT IN" data-offer-message-opted-in="OPTED IN" data-offer-message-opted-out="OPTED OUT" data-offer-type="promos">OPT IN</a> <a class="btn" style="background-color: #d21c5d; color: #ffffff;" href="!!M2.Promo/lb/">SEE RANKINGS</a></p>
+      ```
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
 
 <Admonition type="info" title="CTA">
-  Check [CTA Docs Page](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for an exhaustive list of options.
+  Check [CTA Docs Page](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA) for an exhaustive list of options.
 </Admonition>
 
 #### How It Works
