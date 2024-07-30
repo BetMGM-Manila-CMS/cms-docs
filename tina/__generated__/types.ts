@@ -1363,9 +1363,19 @@ export type TeamQa = {
   images: Array<TeamQaImages>;
 };
 
+export type TeamMembers = {
+  __typename?: 'TeamMembers';
+  image?: Maybe<Scalars['String']['output']>;
+  name: Scalars['String']['output'];
+  title: Scalars['String']['output'];
+  isProbation: Scalars['Boolean']['output'];
+  officeLocation: Scalars['String']['output'];
+};
+
 export type Team = Node & Document & {
   __typename?: 'Team';
   qa?: Maybe<Array<Maybe<TeamQa>>>;
+  members?: Maybe<Array<Maybe<TeamMembers>>>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -1381,8 +1391,17 @@ export type TeamQaFilter = {
   images?: InputMaybe<TeamQaImagesFilter>;
 };
 
+export type TeamMembersFilter = {
+  image?: InputMaybe<ImageFilter>;
+  name?: InputMaybe<StringFilter>;
+  title?: InputMaybe<StringFilter>;
+  isProbation?: InputMaybe<BooleanFilter>;
+  officeLocation?: InputMaybe<StringFilter>;
+};
+
 export type TeamFilter = {
   qa?: InputMaybe<TeamQaFilter>;
+  members?: InputMaybe<TeamMembersFilter>;
 };
 
 export type TeamConnectionEdges = {
@@ -1853,8 +1872,17 @@ export type TeamQaMutation = {
   images?: InputMaybe<Array<InputMaybe<TeamQaImagesMutation>>>;
 };
 
+export type TeamMembersMutation = {
+  image?: InputMaybe<Scalars['String']['input']>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  title?: InputMaybe<Scalars['String']['input']>;
+  isProbation?: InputMaybe<Scalars['Boolean']['input']>;
+  officeLocation?: InputMaybe<Scalars['String']['input']>;
+};
+
 export type TeamMutation = {
   qa?: InputMaybe<Array<InputMaybe<TeamQaMutation>>>;
+  members?: InputMaybe<Array<InputMaybe<TeamMembersMutation>>>;
 };
 
 export type DocPartsFragment = { __typename: 'Doc', title: string, body?: any | null };
@@ -1873,7 +1901,7 @@ export type CarouselAssignmentsPartsFragment = { __typename: 'CarouselAssignment
 
 export type UpdatesPartsFragment = { __typename: 'Updates', title: string, description: string, image: string, slug: string, body: any, authors: Array<{ __typename: 'UpdatesAuthors', name: string }>, editors: Array<{ __typename: 'UpdatesEditors', name: string }>, source: { __typename: 'UpdatesSource', platform: string }, brands: Array<{ __typename: 'UpdatesBrands', brand: string }> };
 
-export type TeamPartsFragment = { __typename: 'Team', qa?: Array<{ __typename: 'TeamQa', month: string, score: number, images: Array<{ __typename: 'TeamQaImages', image?: string | null }> } | null> | null };
+export type TeamPartsFragment = { __typename: 'Team', qa?: Array<{ __typename: 'TeamQa', month: string, score: number, images: Array<{ __typename: 'TeamQaImages', image?: string | null }> } | null> | null, members?: Array<{ __typename: 'TeamMembers', image?: string | null, name: string, title: string, isProbation: boolean, officeLocation: string } | null> | null };
 
 export type DocQueryVariables = Exact<{
   relativePath: Scalars['String']['input'];
@@ -2032,7 +2060,7 @@ export type TeamQueryVariables = Exact<{
 }>;
 
 
-export type TeamQuery = { __typename?: 'Query', team: { __typename: 'Team', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, qa?: Array<{ __typename: 'TeamQa', month: string, score: number, images: Array<{ __typename: 'TeamQaImages', image?: string | null }> } | null> | null } };
+export type TeamQuery = { __typename?: 'Query', team: { __typename: 'Team', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, qa?: Array<{ __typename: 'TeamQa', month: string, score: number, images: Array<{ __typename: 'TeamQaImages', image?: string | null }> } | null> | null, members?: Array<{ __typename: 'TeamMembers', image?: string | null, name: string, title: string, isProbation: boolean, officeLocation: string } | null> | null } };
 
 export type TeamConnectionQueryVariables = Exact<{
   before?: InputMaybe<Scalars['String']['input']>;
@@ -2044,7 +2072,7 @@ export type TeamConnectionQueryVariables = Exact<{
 }>;
 
 
-export type TeamConnectionQuery = { __typename?: 'Query', teamConnection: { __typename?: 'TeamConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'TeamConnectionEdges', cursor: string, node?: { __typename: 'Team', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, qa?: Array<{ __typename: 'TeamQa', month: string, score: number, images: Array<{ __typename: 'TeamQaImages', image?: string | null }> } | null> | null } | null } | null> | null } };
+export type TeamConnectionQuery = { __typename?: 'Query', teamConnection: { __typename?: 'TeamConnection', totalCount: number, pageInfo: { __typename?: 'PageInfo', hasPreviousPage: boolean, hasNextPage: boolean, startCursor: string, endCursor: string }, edges?: Array<{ __typename?: 'TeamConnectionEdges', cursor: string, node?: { __typename: 'Team', id: string, _sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, qa?: Array<{ __typename: 'TeamQa', month: string, score: number, images: Array<{ __typename: 'TeamQaImages', image?: string | null }> } | null> | null, members?: Array<{ __typename: 'TeamMembers', image?: string | null, name: string, title: string, isProbation: boolean, officeLocation: string } | null> | null } | null } | null> | null } };
 
 export const DocPartsFragmentDoc = gql`
     fragment DocParts on Doc {
@@ -2414,6 +2442,14 @@ export const TeamPartsFragmentDoc = gql`
       __typename
       image
     }
+  }
+  members {
+    __typename
+    image
+    name
+    title
+    isProbation
+    officeLocation
   }
 }
     `;

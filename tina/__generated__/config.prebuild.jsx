@@ -741,64 +741,6 @@ var QuickLinkCollection = {
   ]
 };
 
-// tina/collections/members.jsx
-var MemberField = {
-  name: "member",
-  label: "Member",
-  type: "object",
-  list: true,
-  itemProps: (item) => {
-    return { label: item ? item.name : null };
-  },
-  fields: [
-    {
-      name: "image",
-      label: "Image",
-      type: "image"
-    },
-    {
-      name: "name",
-      label: "Name",
-      type: "string",
-      required: true,
-      isTitle: true
-    },
-    {
-      name: "title",
-      label: "Ttile",
-      type: "string",
-      required: true
-    },
-    {
-      name: "isProbation",
-      label: "Ongoing Probation",
-      type: "boolean",
-      required: true
-    },
-    {
-      name: "officeLocation",
-      label: "Office",
-      type: "string",
-      required: true,
-      options: ["Manila", "USA"]
-    }
-  ]
-};
-var MembersCollection = {
-  name: "members",
-  label: "Members",
-  path: "config/members",
-  format: "json",
-  ui: {
-    global: true,
-    allowedActions: {
-      create: false,
-      delete: false
-    }
-  },
-  fields: [MemberField]
-};
-
 // tina/collections/work-schedules.jsx
 import { defineConfig, wrapFieldsWithMeta as wrapFieldsWithMeta2 } from "tinacms";
 import React4 from "react";
@@ -1452,6 +1394,48 @@ var QAField = {
     }
   ]
 };
+var MemberField = {
+  name: "members",
+  label: "Members",
+  type: "object",
+  list: true,
+  itemProps: (item) => {
+    return { label: item ? item.name : null };
+  },
+  fields: [
+    {
+      name: "image",
+      label: "Image",
+      type: "image"
+    },
+    {
+      name: "name",
+      label: "Name",
+      type: "string",
+      required: true,
+      isTitle: true
+    },
+    {
+      name: "title",
+      label: "Ttile",
+      type: "string",
+      required: true
+    },
+    {
+      name: "isProbation",
+      label: "Ongoing Probation",
+      type: "boolean",
+      required: true
+    },
+    {
+      name: "officeLocation",
+      label: "Office",
+      type: "string",
+      required: true,
+      options: ["Manila", "USA"]
+    }
+  ]
+};
 var TeamCollection = {
   name: "team",
   label: "Team",
@@ -1465,7 +1449,8 @@ var TeamCollection = {
     }
   },
   fields: [
-    QAField
+    QAField,
+    MemberField
   ]
 };
 
@@ -1500,7 +1485,6 @@ var config_default = defineConfig3({
       DocCollection,
       SidebarCollection,
       QuickLinkCollection,
-      MembersCollection,
       WorkSchedulesCollection,
       ChecklistsCollection,
       CarouselAssignmentsCollection,

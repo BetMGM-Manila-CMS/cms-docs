@@ -4,7 +4,7 @@ import { useBlogPost } from "@docusaurus/theme-common/internal";
 import BlogPostItemHeaderAuthor from "@theme/BlogPostItem/Header/Author";
 import styles from "./styles.module.css";
 import authorsData from "@site/config/authors";
-import membersData from "@site/config/members";
+import teamData from "@site/config/team";
 
 const isPlural = (array) => array.length > 1;
 
@@ -15,7 +15,7 @@ export default function BlogPostItemHeaderAuthors({ className }) {
     assets,
   } = useBlogPost();
   const { editor, editors } = frontMatter;
-  const members = membersData.member;
+  const members = teamData.members;
   const authorsCount = authors.length;
   if (authorsCount === 0) {
     return null;

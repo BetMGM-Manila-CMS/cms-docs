@@ -1,7 +1,7 @@
-import memberList from "@site/config/members/index.json";
+import teamData from "@site/config/team";
 
 export default function Member() {
-  const members = memberList.member;
+  const members = teamData.members
 
   return (
     <section className="container relative mb-8 lg:mb-16">

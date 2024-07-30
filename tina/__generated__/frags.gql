@@ -358,4 +358,12 @@ fragment TeamParts on Team {
       image
     }
   }
+  members {
+    __typename
+    image
+    name
+    title
+    isProbation
+    officeLocation
+  }
 }

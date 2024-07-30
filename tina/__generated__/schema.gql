@@ -1106,8 +1106,17 @@ type TeamQa {
   images: [TeamQaImages!]!
 }
 
+type TeamMembers {
+  image: String
+  name: String!
+  title: String!
+  isProbation: Boolean!
+  officeLocation: String!
+}
+
 type Team implements Node & Document {
   qa: [TeamQa]
+  members: [TeamMembers]
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -1123,8 +1132,17 @@ input TeamQaFilter {
   images: TeamQaImagesFilter
 }
 
+input TeamMembersFilter {
+  image: ImageFilter
+  name: StringFilter
+  title: StringFilter
+  isProbation: BooleanFilter
+  officeLocation: StringFilter
+}
+
 input TeamFilter {
   qa: TeamQaFilter
+  members: TeamMembersFilter
 }
 
 type TeamConnectionEdges {
@@ -1457,8 +1475,17 @@ input TeamQaMutation {
   images: [TeamQaImagesMutation]
 }
 
+input TeamMembersMutation {
+  image: String
+  name: String
+  title: String
+  isProbation: Boolean
+  officeLocation: String
+}
+
 input TeamMutation {
   qa: [TeamQaMutation]
+  members: [TeamMembersMutation]
 }
 
 schema {

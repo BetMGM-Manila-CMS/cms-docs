@@ -53,5 +53,172 @@
       "month": "2024-01-01T00:00:00.000Z",
       "score": 99.77
     }
+  ],
+  "members": [
+    {
+      "name": "Mike David",
+      "title": "Traffic Coordinator - Gaming",
+      "isProbation": false,
+      "officeLocation": "USA"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213640/members/individual/IMG_5273_zepass.jpg",
+      "name": "Don John Melendez",
+      "title": "CMS Team Lead",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213683/members/individual/IMG_5212_f4rqhz.jpg",
+      "name": "John Mark Antonio",
+      "title": "Web Content Specialist",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213703/members/individual/IMG_5229_hi5rs5.jpg",
+      "name": "Jax Javate",
+      "title": "Jr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213627/members/individual/IMG_5264_ttoynn.jpg",
+      "name": "Christian Almazora",
+      "title": "Jr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213698/members/individual/IMG_5223_pep5cp.jpg",
+      "name": "Jeri Luther General",
+      "title": "Web Content Specialist",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213660/members/individual/IMG_5199_fku43i.jpg",
+      "name": "Marc Aldous Conde",
+      "title": "CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213615/members/individual/IMG_5256_j3cxg4.jpg",
+      "name": "Alfredo Almasco",
+      "title": "Jr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213619/members/individual/IMG_5260_jevmab.jpg",
+      "name": "Emmanuel Borromeo",
+      "title": "Jr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213633/members/individual/IMG_5266_bextpw.jpg",
+      "name": "Emmanuel Atienza",
+      "title": "Jr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213608/members/individual/IMG_5249_fxxvgm.jpg",
+      "name": "Krisha Manalo",
+      "title": "Web Content Specialist",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213720/members/individual/IMG_5239_cypbxv.jpg",
+      "name": "Amancio Mulliet Jr.",
+      "title": "Sr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213691/members/individual/IMG_5219_vuvxmc.jpg",
+      "name": "Mark Joshua Javier",
+      "title": "Web Content Specialist",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213710/members/individual/IMG_5231_dezwnm.jpg",
+      "name": "Benedict Barreto",
+      "title": "Jr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213676/members/individual/IMG_5208_ygonxf.jpg",
+      "name": "Ralph Zamora",
+      "title": "Sr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213652/members/individual/IMG_5548_m6usxi.jpg",
+      "name": "Kyle Atienza",
+      "title": "Jr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "",
+      "name": "Kevin Chavez",
+      "isProbation": false
+    },
+    {
+      "image": "",
+      "name": "Adam Clint Muaña",
+      "title": "CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "",
+      "name": "Alyssa Casalino",
+      "title": "Digital Content Manager - Gaming",
+      "isProbation": false,
+      "officeLocation": "USA"
+    },
+    {
+      "image": "",
+      "name": "Vivian Zhao",
+      "title": "Senior Content Management Specialist - Gaming",
+      "isProbation": false,
+      "officeLocation": "USA"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991828/members/individual/arianne_gqr3s4.png",
+      "name": "Arianne Ignacio",
+      "title": "Jr. CMS Developer",
+      "isProbation": true,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991809/members/individual/jl_btljty.png",
+      "name": "John Llyod Apolo",
+      "title": "Jr. CMS Developer",
+      "isProbation": true,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991815/members/individual/seiya_zogjhi.png",
+      "name": "Seiya Gurango",
+      "title": "Web Content Specialist",
+      "isProbation": true,
+      "officeLocation": "Manila"
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991822/members/individual/cj_qv2oih.png",
+      "name": "CJ Almendral",
+      "title": "Web Content Specialist",
+      "isProbation": true,
+      "officeLocation": "Manila"
+    }
   ]
 }

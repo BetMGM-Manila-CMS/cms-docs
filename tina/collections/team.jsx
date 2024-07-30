@@ -52,6 +52,49 @@ const QAField = {
     ]
 }
 
+const MemberField = {
+    name: "members",
+    label: "Members",
+    type: "object",
+    list: true,
+    itemProps: (item) => {
+        return { label: item ? item.name : null };
+    },
+    fields: [
+        {
+            name: "image",
+            label: "Image",
+            type: "image",
+        },
+        {
+            name: "name",
+            label: "Name",
+            type: "string",
+            required: true,
+            isTitle: true,
+        },
+        {
+            name: "title",
+            label: "Ttile",
+            type: "string",
+            required: true,
+        },
+        {
+            name: "isProbation",
+            label: "Ongoing Probation",
+            type: "boolean",
+            required: true,
+        },
+        {
+            name: "officeLocation",
+            label: "Office",
+            type: "string",
+            required: true,
+            options: ["Manila", "USA"],
+        },
+    ],
+};
+
 export const TeamCollection = {
     name: "team",
     label: "Team",
@@ -65,6 +108,7 @@ export const TeamCollection = {
         },
     },
     fields: [
-        QAField
+        QAField,
+        MemberField
     ]
 }
