@@ -1,5 +1,6 @@
 import React from "react";
-import members from "../../config/members/index.json";
+// import members from "../../config/members/index.json";
+import teamData from "../../config/team"
 
 import { MDXTemplates } from "../../src/theme/template";
 
@@ -51,7 +52,7 @@ export const UpdatesCollection = {
           name: "name",
           label: "Name",
           required: true,
-          options: members.member.map((member) => member.name),
+          options: teamData.members.map((member) => member.name),
         },
       ],
     },
@@ -70,7 +71,7 @@ export const UpdatesCollection = {
           name: "name",
           label: "Name",
           required: true,
-          options: members.member.map((member) => member.name),
+          options: teamData.members.map((member) => member.name),
         },
       ],
     },

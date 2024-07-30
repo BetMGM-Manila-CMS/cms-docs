@@ -1005,9 +1005,100 @@ var CarouselAssignmentsCollection = {
 // tina/collections/updates.jsx
 import React5 from "react";
 
-// config/members/index.json
-var members_default = {
-  member: [
+// config/team/index.json
+var team_default = {
+  qa: [
+    {
+      month: "2024-06-01T00:00:00.000Z",
+      score: 99,
+      images: [
+        {
+          image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719805938/lions-awards/june/Free_pins_vyl6n1.jpg"
+        },
+        {
+          image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719805933/lions-awards/june/Final_Poster_Portrait_1_qcsfp0.jpg"
+        },
+        {
+          image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719805933/lions-awards/june/Final_Poster_Portrait_1_qcsfp0.jpg"
+        },
+        {
+          image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719805938/lions-awards/june/Free_pins_vyl6n1.jpg"
+        },
+        {
+          image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719805924/lions-awards/june/Pride_Wall_2_kjn603.jpg"
+        },
+        {
+          image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719805919/lions-awards/june/media_20240628_171228_2149623393448567948_pxknmy.jpg"
+        },
+        {
+          image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719805933/lions-awards/june/Final_Poster_Portrait_1_qcsfp0.jpg"
+        },
+        {
+          image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719805912/lions-awards/june/ImportedPhoto_1719566393582_ejxmjw.jpg"
+        },
+        {
+          image: "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719805933/lions-awards/june/Final_Poster_Portrait_1_qcsfp0.jpg"
+        }
+      ]
+    },
+    {
+      month: "2024-05-01T00:00:00.000Z",
+      score: 100
+    },
+    {
+      month: "2024-04-01T00:00:00.000Z",
+      score: 99.9
+    },
+    {
+      month: "2024-03-01T00:00:00.000Z",
+      score: 99.88
+    },
+    {
+      month: "2024-02-01T00:00:00.000Z",
+      score: 99.8
+    },
+    {
+      month: "2024-01-01T00:00:00.000Z",
+      score: 99.77
+    }
+  ],
+  members: [
+    {
+      name: "Shaina Earle",
+      title: "Content Mgmt Specialist",
+      isProbation: false,
+      officeLocation: "USA"
+    },
+    {
+      name: " Ruben Chavez",
+      title: "Jr. Web Developer",
+      isProbation: false,
+      officeLocation: "USA"
+    },
+    {
+      name: "Rebecca Munn",
+      title: "Content Mgmt Specialist",
+      isProbation: false,
+      officeLocation: "USA"
+    },
+    {
+      name: " Laura Hasbrouck",
+      title: "Sr. Manager, Digital Content",
+      isProbation: false,
+      officeLocation: "USA"
+    },
+    {
+      name: "Jhera Claire Oneill",
+      title: "Content Mgmt Specialist",
+      isProbation: false,
+      officeLocation: "USA"
+    },
+    {
+      name: "Toni Marielle Bechayda",
+      title: "Jr. CMS Developer",
+      isProbation: true,
+      officeLocation: "Manila"
+    },
     {
       name: "Mike David",
       title: "Traffic Coordinator - Gaming",
@@ -1122,7 +1213,9 @@ var members_default = {
     {
       image: "",
       name: "Kevin Chavez",
-      isProbation: false
+      title: "CMS Developer",
+      isProbation: false,
+      officeLocation: "Manila"
     },
     {
       image: "",
@@ -1225,7 +1318,7 @@ var UpdatesCollection = {
           name: "name",
           label: "Name",
           required: true,
-          options: members_default.member.map((member) => member.name)
+          options: team_default.members.map((member) => member.name)
         }
       ]
     },
@@ -1244,7 +1337,7 @@ var UpdatesCollection = {
           name: "name",
           label: "Name",
           required: true,
-          options: members_default.member.map((member) => member.name)
+          options: team_default.members.map((member) => member.name)
         }
       ]
     },
