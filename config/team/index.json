@@ -56,6 +56,42 @@
   ],
   "members": [
     {
+      "name": "Shaina Earle",
+      "title": "Content Mgmt Specialist",
+      "isProbation": false,
+      "officeLocation": "USA"
+    },
+    {
+      "name": " Ruben Chavez",
+      "title": "Jr. Web Developer",
+      "isProbation": false,
+      "officeLocation": "USA"
+    },
+    {
+      "name": "Rebecca Munn",
+      "title": "Content Mgmt Specialist",
+      "isProbation": false,
+      "officeLocation": "USA"
+    },
+    {
+      "name": " Laura Hasbrouck",
+      "title": "Sr. Manager, Digital Content",
+      "isProbation": false,
+      "officeLocation": "USA"
+    },
+    {
+      "name": "Jhera Claire Oneill",
+      "title": "Content Mgmt Specialist",
+      "isProbation": false,
+      "officeLocation": "USA"
+    },
+    {
+      "name": "Toni Marielle Bechayda",
+      "title": "Jr. CMS Developer",
+      "isProbation": true,
+      "officeLocation": "Manila"
+    },
+    {
       "name": "Mike David",
       "title": "Traffic Coordinator - Gaming",
       "isProbation": false,
@@ -169,7 +205,9 @@
     {
       "image": "",
       "name": "Kevin Chavez",
-      "isProbation": false
+      "title": "CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
     },
     {
       "image": "",
