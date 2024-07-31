@@ -19,8 +19,9 @@ import {
   Col,
   Row,
   BrowserWindow,
-  StyleGuide,
-  ColorTable
+  ColorTable,
+  ComponentExamples,
+  // StyleGuide,
 } from "@site/src/components"
 
 export default {
@@ -43,6 +44,7 @@ export default {
   Col: Col,
   Row: Row,
   BrowserWindow: BrowserWindow,
-  StyleGuide: StyleGuide,
-  ColorTable: ColorTable
+  // StyleGuide: StyleGuide,
+  ColorTable: ColorTable,
+  ComponentExamples: ComponentExamples
 };

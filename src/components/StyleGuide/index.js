@@ -1,4 +1,4 @@
-import "./styles.css"
+/* import "./styles.css"
 import CodeBlock from '@theme/CodeBlock';
 import { BrowserWindow } from "../BrowserWindow"
 
@@ -340,4 +340,4 @@ details[open] summary {
             </div>
         </div>
     )
-}
+} */

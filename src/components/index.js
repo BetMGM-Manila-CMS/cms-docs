@@ -10,3 +10,5 @@ export * from "./TinaTabs";
 export * from "./Row";
 export * from "./BrowserWindow";
 export * from "./StyleGuide";
+export * from "./StyleGuide/ColorTable";
+export * from "./StyleGuide/ComponentExamples";
