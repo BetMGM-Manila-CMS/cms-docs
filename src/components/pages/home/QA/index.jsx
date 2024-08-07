@@ -23,9 +23,22 @@ const images = [
 ]
 
 export default function QA() {
-    console.log(teamData.qa.sort((a, b) => new Date(b.month) - new Date(a.month)))
-
     const currentQA = teamData.qa.sort((a, b) => new Date(b.month) - new Date(a.month))[0]
+
+    const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ]
 
     return (
         <div className=" pb-10">
@@ -34,7 +47,7 @@ export default function QA() {
                     className="w-[300px] md:w-[500px] pt-4 pb-6 px-4 mx-auto lg:px-6 text-center relative z-10 h-full flex flex-col justify-center"
                     style={{ background: "linear-gradient(270deg, rgba(183, 162, 109, 0) 0%, rgba(183, 162, 109, 0.7) 30%, rgba(183, 162, 109, 0.7) 70%, rgba(183, 162, 109, 0) 100%)" }}
                 >
-                    <h3 class="text-lg font-normal dark:text-white mb-2">June QA Score</h3>
+                    <h3 class="text-lg font-normal dark:text-white mb-2">{months[new Date(currentQA.month).getMonth()]} QA Score</h3>
                     <h2 class="text-6xl font-extrabold leading-none tracking-tight dark:text-white mb-0">{currentQA.score}%</h2>
                 </div>
                 <div className="absolute top-0 left-0 w-full h-full">
