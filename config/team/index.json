@@ -1,6 +1,15 @@
 {
   "qa": [
     {
+      "month": "2024-07-01T00:00:00.000Z",
+      "score": 100,
+      "images": [
+        {
+          "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723043659/lions-awards/july/Image_1_ms7zcd.jpg"
+        }
+      ]
+    },
+    {
       "month": "2024-06-01T00:00:00.000Z",
       "score": 99.93,
       "images": [
