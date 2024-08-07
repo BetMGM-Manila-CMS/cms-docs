@@ -89,6 +89,7 @@
       "officeLocation": "USA"
     },
     {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723043910/members/individual/ruben_pic_swaemk.jpg",
       "name": " Ruben Chavez",
       "title": "Jr. Web Developer",
       "isProbation": false,
@@ -107,6 +108,7 @@
       "officeLocation": "USA"
     },
     {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044015/members/individual/Jhera_icmstm.jpg",
       "name": "Jhera Claire Oneill",
       "title": "Content Mgmt Specialist",
       "isProbation": false,
@@ -119,6 +121,7 @@
       "officeLocation": "Manila"
     },
     {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044096/members/individual/Mike_snc9t4.jpg",
       "name": "Mike David",
       "title": "Traffic Coordinator - Gaming",
       "isProbation": false,
@@ -244,14 +247,14 @@
       "officeLocation": "Manila"
     },
     {
-      "image": "",
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044117/members/individual/casalino_vfkjts.jpg",
       "name": "Alyssa Casalino",
       "title": "Digital Content Manager - Gaming",
       "isProbation": false,
       "officeLocation": "USA"
     },
     {
-      "image": "",
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044149/members/individual/Vivian_gvzckz.jpg",
       "name": "Vivian Zhao",
       "title": "Senior Content Management Specialist - Gaming",
       "isProbation": false,
