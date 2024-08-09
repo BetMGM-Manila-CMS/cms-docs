@@ -15,110 +15,117 @@ All of the media folders will be found in `Media Library > Vanilla.Mobile > Bran
 After going inside through the appropriate Brand State Domain there are specific folder to place your assets depending on the brand on you ticket, see guide below:
 
 <TinaTable topHeader={true} leftHeader={true}>
-<TinaTableRow>
-<TinaTableCell>
+  <TinaTableRow>
+    <TinaTableCell />
 
-</TinaTableCell>
-<TinaTableCell>
-BetMGM
-</TinaTableCell>
-<TinaTableCell>
-Borgata
-</TinaTableCell>
-<TinaTableCell>
-PartyCasino
-</TinaTableCell>
-<TinaTableCell>
-partypoker
-</TinaTableCell>
-</TinaTableRow>
+    <TinaTableCell>
+      BetMGM
+    </TinaTableCell>
 
-<TinaTableRow>
-<TinaTableCell>
-Casino
-</TinaTableCell>
-<TinaTableCell>
-`Year > Month`
-</TinaTableCell>
-<TinaTableCell>
-`Year > Month`
-</TinaTableCell>
-<TinaTableCell>
-`Year > Month`
-</TinaTableCell>
-<TinaTableCell>
+    <TinaTableCell>
+      Borgata
+    </TinaTableCell>
 
-</TinaTableCell>
-</TinaTableRow>
+    <TinaTableCell>
+      PartyCasino
+    </TinaTableCell>
 
-<TinaTableRow>
-<TinaTableCell>
-Poker
-</TinaTableCell>
-<TinaTableCell>
-`BetMGM-Poker > Year > Month`
-</TinaTableCell>
-<TinaTableCell>
-`BorgataPoker > Year > Month`
-</TinaTableCell>
-<TinaTableCell>
-</TinaTableCell>
-<TinaTableCell>
-`Year > Month`
-</TinaTableCell>
-</TinaTableRow>
+    <TinaTableCell>
+      partypoker
+    </TinaTableCell>
+  </TinaTableRow>
 
-<TinaTableRow>
-<TinaTableCell>
-Sports
-</TinaTableCell>
-<TinaTableCell>
-`BetMGM-Sports > Year > Month`
-</TinaTableCell>
-<TinaTableCell>
-`BorgataSports > Year > Month`
-</TinaTableCell>
-<TinaTableCell>
-</TinaTableCell>
-<TinaTableCell>
-</TinaTableCell>
-</TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>
+      Casino
+    </TinaTableCell>
 
+    <TinaTableCell>
+      `Year > Month`
+    </TinaTableCell>
+
+    <TinaTableCell>
+      `Year > Month`
+    </TinaTableCell>
+
+    <TinaTableCell>
+      `Year > Month`
+    </TinaTableCell>
+
+    <TinaTableCell />
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      Poker
+    </TinaTableCell>
+
+    <TinaTableCell>
+      `BetMGM-Poker > Year > Month`
+    </TinaTableCell>
+
+    <TinaTableCell>
+      `BorgataPoker > Year > Month`
+    </TinaTableCell>
+
+    <TinaTableCell />
+
+    <TinaTableCell>
+      `Year > Month`
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      Sports
+    </TinaTableCell>
+
+    <TinaTableCell>
+      `BetMGM-Sports > Year > Month`
+    </TinaTableCell>
+
+    <TinaTableCell>
+      `BorgataSports > Year > Month`
+    </TinaTableCell>
+
+    <TinaTableCell />
+
+    <TinaTableCell />
+  </TinaTableRow>
 </TinaTable>
 
 ## Uploading the Folder
 
 <Admonition type="note" title="Renaming your folder">
-Please rename the folder containing your assets with the name of your ticket. Additionally, ensure that you remove any unwanted characters from both the folder names and their subfolders.
+  Please rename the folder containing your assets with the name of your ticket. Additionally, ensure that you remove any unwanted characters from both the folder names and their subfolders.
 
-<Details summary="List of Unwanted Characters">
-```
-/ (Forward slash)
-\ (Backward slash)
-: (Colon)
-(Asterisk)
-? (Question mark)
-" (Double quote)
-< (Less than)
-> (Greater than)
-| (Pipe)
-% (Percent)
-& (Ampersand)
-{ (Left curly brace)
-} (Right curly brace)
-\ (Backslash)
-@ (At symbol)
-$ (Dollar sign)
-! (Exclamation mark)
-' (Single quote)
-` (Backtick)
-= (Equal sign)
-(Plus sign)
-[ (Left square bracket)
-] (Right square bracket)
-```
-</Details>
-
+  <Details summary="List of Unwanted Characters">
+    ```
+    / (Forward slash)
+    \ (Backward slash)
+    : (Colon)
+    (Asterisk)
+    ? (Question mark)
+    " (Double quote)
+    < (Less than)
+    > (Greater than)
+    | (Pipe)
+    % (Percent)
+    & (Ampersand)
+    { (Left curly brace)
+    } (Right curly brace)
+    \ (Backslash)
+    @ (At symbol)
+    $ (Dollar sign)
+    ! (Exclamation mark)
+    ' (Single quote)
+    ` (Backtick)
+    = (Equal sign)
+    (Plus sign)
+    [ (Left square bracket)
+    ] (Right square bracket)
+    ```
+  </Details>
 </Admonition>
 
 <Admonition type="warning" title="Note">
@@ -166,3 +173,27 @@ Another popup will open that allows you to upload the other asset that will be u
 It will display a new item as a child but the parent's direct link can be used for the shared PAT. It will automatically change the asset depending on which state it is being viewed on.
 
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887526/builds/assets/mofz8289rzl8r0imjhhq.png)
+
+## Uploading mp4 file for Video Banner
+
+There is a new update in building Video Banner tickets wherein we will not use third-party video hosting in creating these tickets instead we will now upload them in Sitecore.
+
+Here are the steps on how to upload mp4 files in Sitecore.
+
+First, you need to download the mp4 file for the Video Banner you can see this in the Updates tab of the Parent ticket. If it's not there you can check the Project Details or in the Documents . ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1723184827/updates/video-banner-mp4-upload/linkimg_tcpv3v.jpg)After clicking the link you'll be prompted in an Outlook folder, where you can download the mp4 file for the Video Banner. If the mp4 file is in the Document tab it will automatically download the file when the link is clicked.![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1723185095/updates/video-banner-mp4-upload/mp4download_acqj5x.jpg)
+
+After downloading the mp4 file you can upload this into Sitecore by going into this Sitecore Path
+
+<Admonition type="note" title="Sitecore Path">
+  Media Library > Videos > US > Casino Video Banner > Folder that starts with your Ticket
+</Admonition>
+
+Unlike the normal way of uploading assets in Sitecore, uploading mp4 files is slightly different.
+
+Start with creating a Media Folder and rename it to the title of the Video Banner![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1723186099/updates/video-banner-mp4-upload/step1_n87qhz.jpg)![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1723186310/updates/video-banner-mp4-upload/step1.1_ykb5kl.jpg)
+
+<Admonition type="note" title="Note">
+  Create your `Media Folder` in the folder that starts with the first letter of the Video Banner
+</Admonition>
+
+After Creating the folder browse through the already-created Video Banners and Duplicate the file that has this icon and rename it. ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1723186755/updates/video-banner-mp4-upload/musicnoteicon_d0nwgc.jpg)![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1723186573/updates/video-banner-mp4-upload/step2_ok0nmg.jpg)![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1723186575/updates/video-banner-mp4-upload/step2.1_hbworf.jpg)After that 
