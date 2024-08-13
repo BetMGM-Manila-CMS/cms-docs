@@ -7,11 +7,6 @@
           "label": "Media Library",
           "links": [
             {
-              "label": "Video Banner",
-              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={16253F30-BACB-4222-81AD-528C4F98C822}&la=",
-              "_template": "quickLink"
-            },
-            {
               "label": "BetMGM MI",
               "brand": "betmgm",
               "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={ED2BE8BB-0233-4699-A4BB-26214952030C}&la=",
@@ -63,6 +58,11 @@
               "label": "Wheel Of Fortune",
               "brand": "wof",
               "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={CD4F904B-2974-45EA-B0BB-646EE9F10C5E}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "Video Banner",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={16253F30-BACB-4222-81AD-528C4F98C822}&la=",
               "_template": "quickLink"
             }
           ],
