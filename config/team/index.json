@@ -83,6 +83,12 @@
   ],
   "members": [
     {
+      "name": "Sean Evans",
+      "title": "Manager, Product Operations",
+      "isProbation": false,
+      "officeLocation": "USA"
+    },
+    {
       "name": "Shaina Earle",
       "title": "Content Mgmt Specialist",
       "isProbation": false,
