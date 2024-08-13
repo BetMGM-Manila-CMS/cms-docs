@@ -537,6 +537,11 @@
           "link": "generated",
           "items": [
             {
+              "document": "docs/builds/Pinball-Layout.mdx",
+              "label": "Pinball",
+              "_template": "doc"
+            },
+            {
               "document": "docs/builds/engagements-stw.mdx",
               "label": "Spin The Wheel",
               "_template": "doc"
@@ -555,11 +560,6 @@
               "document": "docs/builds/Claw-Machine.mdx",
               "label": "Claw Machine",
               "_template": "doc"
-            },
-            {
-              "title": "Pinball",
-              "href": "https://betmgm-cms-docs.netlify.app/docs/builds/Pinball-Layout",
-              "_template": "link"
             }
           ],
           "_template": "category"
