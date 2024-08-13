@@ -555,6 +555,11 @@
               "document": "docs/builds/Claw-Machine.mdx",
               "label": "Claw Machine",
               "_template": "doc"
+            },
+            {
+              "title": "Pinball",
+              "href": "https://betmgm-cms-docs.netlify.app/docs/builds/Pinball-Layout",
+              "_template": "link"
             }
           ],
           "_template": "category"
