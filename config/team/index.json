@@ -176,13 +176,6 @@
       "officeLocation": "Manila"
     },
     {
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213615/members/individual/IMG_5256_j3cxg4.jpg",
-      "name": "Alfredo Almasco",
-      "title": "Jr. CMS Developer",
-      "isProbation": false,
-      "officeLocation": "Manila"
-    },
-    {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213619/members/individual/IMG_5260_jevmab.jpg",
       "name": "Emmanuel Borromeo",
       "title": "Jr. CMS Developer",
@@ -192,7 +185,7 @@
     {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213633/members/individual/IMG_5266_bextpw.jpg",
       "name": "Emmanuel Atienza",
-      "title": "Jr. CMS Developer",
+      "title": "Mid Weight CMS Developer",
       "isProbation": false,
       "officeLocation": "Manila"
     },
@@ -220,7 +213,7 @@
     {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213710/members/individual/IMG_5231_dezwnm.jpg",
       "name": "Benedict Barreto",
-      "title": "Jr. CMS Developer",
+      "title": "Mid Weight CMS Developer",
       "isProbation": false,
       "officeLocation": "Manila"
     },
