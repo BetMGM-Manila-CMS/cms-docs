@@ -1,25 +1,25 @@
 ---
-title: Static Tile
 last_update:
   date: 1/25/2023
   author: Kyle Atienza
   description: Add section creating and commenting
 authors: Kyle Atienza
+title: Static Tile
 ---
-
 
 # Static Tile
 
 <Admonition type="info" title="Sitecore Path">
-    Content > Vanilla.Mobile > state/brand > Promo > PromoHub > OfferTeasers > SpecialOffers > Active > Active > *Casino or Poker or Sports*
+  Content > Vanilla.Mobile > state/brand > Promo > PromoHub > OfferTeasers > SpecialOffers > Active > Active > *Casino or Poker or Sports*
 </Admonition>
 
 The **Static Tile** contains Promohub Tile asset, Promo Title, Promo Description, and CTA/s. Static Tiles are can be found in this URL `https://promo.nj.betmgm.com/en/promo/offers` for BetMGM NJ. Each promo can have its own static tile as seen in the sample below. The highlighted static tile is for Piggy Blitz Bet & Get Promo.
 
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887573/builds/static-tile/s2sqc97k0dr9tusudp1r.png)
 
+The are two template we currently use in building the Static Tile, the **EDS Opt In Template** and the Public Holiday or **Event Bonus Drop Template**.
 
-To build a **Static Tile** you'll need the following:  
+To build a **Static Tile** you'll need the following:
 
 1. Promo Hub Key Terms (From the copy) H1
 2. Promo Hub Key Terms (From the copy) Short Summary
@@ -28,86 +28,100 @@ To build a **Static Tile** you'll need the following:
 5. Offer Badge
 6. Filter
 
-Once, you're in the Sitecore Path for builng Static Tile. Do the 
+Once, you're in the Sitecore Path for builng Static Tile. Do the
 following:
 
 <TinaTable topHeader={true}>
-    <TinaTableRow>
-        <TinaTableCell>Label</TinaTableCell>
-        <TinaTableCell>Desciption</TinaTableCell>
-        <TinaTableCell>Sample</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>1. Duplicate OffersTeaser</TinaTableCell>
-        <TinaTableCell>Duplicate any existing OffersTeaser file, and rename it to your Ticket Name.</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887572/builds/static-tile/tcc8acz5gtk8niwemh9x.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>2. EligibilityCriteriaInfo</TinaTableCell>
-        <TinaTableCell>Paste this on the HTML `EligibilityCriteriaInfo`</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887568/builds/static-tile/vjfkczxmtnfjbelo4iaz.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>3. Title</TinaTableCell>
-        <TinaTableCell>Insert the Promo Hub Key Terms H1</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887569/builds/static-tile/k7ysidyuxixs3kg1xefx.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>4. KeyTermsAndConditions</TinaTableCell>
-        <TinaTableCell>Insert here the Promo Hub Key Terms Short Summary</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887569/builds/static-tile/ezzdsodi6l4l3j5fxy1a.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>5. TeaserImage</TinaTableCell>
-        <TinaTableCell>Insert the Promohub Tiles-800x360 asset uploaded in your Creatives DL</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887569/builds/static-tile/pfyhqrlqp2cxyecd9ykr.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>6. Produt</TinaTableCell>
-        <TinaTableCell>Make sure the right category is selected if your Tile is under Casino - Casino should be selected. And, IsHighPriority is Ticked ✅</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887569/builds/static-tile/qzbmpciswdyhn8kmgsui.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>7. TeaserClass</TinaTableCell>
-        <TinaTableCell>Input `make-me-look-awesome`</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887505/builds/static-tile/yv9v65pbdotsprrzvagd.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>8. CTAs</TinaTableCell>
-        <TinaTableCell>In the PrimaryCTA, put the CTA if it is **Opt In**, otherwise put in the MoreInfoCTA like Learn More, Play Now, Claim Now. For the Target, if its opening a different site other than BetMGM choose _blank, else leave it blank.</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887505/builds/static-tile/ygie47skim6ngc3lzp8l.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>9. ManualTermsAndCondition</TinaTableCell>
-        <TinaTableCell>Should only contain `
-<p>Manual Terms and Conditions....</p>
-            `</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887505/builds/static-tile/plcm99adtopkp1w8xvcd.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>10. Order &amp; OfferBadge</TinaTableCell>
-        <TinaTableCell>Order, simple type 0. For the OfferBadge, this Depends on your Promo Type. If its about Deposit Match then the OfferBadge will be **Deposit Match**</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887503/builds/static-tile/eteanfknwugcyrnstj8u.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>11. Filter  Condition</TinaTableCell>
-        <TinaTableCell>Make sure to put your filter for newly build Static Tile. Sample Filter: `QueryString.Get('qa') = 'manila'`</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887504/builds/static-tile/xmhmdlkefug7gjjnb16d.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>12. Publishing Section</TinaTableCell>
-        <TinaTableCell>Clear the Publishing Date, and make sure the **Never Publish** is unticked.</TinaTableCell>
-        <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887506/builds/static-tile/az0b6ot1jpsjgry3vy7i.png)</TinaTableCell>
-    </TinaTableRow>
-    <TinaTableRow>
-        <TinaTableCell>13. Screenshot Output</TinaTableCell>
-        <TinaTableCell>To check your output go to your State's Promotion Page and insert `qa=manila` at the end of the URL. Sample: `https://promo.nj.betmgm.com/en/promo/offers?qa=manila`</TinaTableCell>
-        <TinaTableCell>![Screenshot](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887504/builds/static-tile/bbg4pvpxhj0dto7b2cik.png)</TinaTableCell>
-    </TinaTableRow>
+  <TinaTableRow>
+    <TinaTableCell>Label</TinaTableCell>
+    <TinaTableCell>Desciption</TinaTableCell>
+    <TinaTableCell>Sample</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>1. Duplicate OffersTeaser</TinaTableCell>
+    <TinaTableCell>Duplicate any existing OffersTeaser file, and rename it to your Ticket Name.</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887572/builds/static-tile/tcc8acz5gtk8niwemh9x.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>2. EligibilityCriteriaInfo</TinaTableCell>
+    <TinaTableCell>Paste this on the HTML `EligibilityCriteriaInfo`</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887568/builds/static-tile/vjfkczxmtnfjbelo4iaz.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>3. Title</TinaTableCell>
+    <TinaTableCell>Insert the Promo Hub Key Terms H1</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887569/builds/static-tile/k7ysidyuxixs3kg1xefx.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>4. KeyTermsAndConditions</TinaTableCell>
+    <TinaTableCell>Insert here the Promo Hub Key Terms Short Summary</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887569/builds/static-tile/ezzdsodi6l4l3j5fxy1a.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>5. TeaserImage</TinaTableCell>
+    <TinaTableCell>Insert the Promohub Tiles-800x360 asset uploaded in your Creatives DL</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887569/builds/static-tile/pfyhqrlqp2cxyecd9ykr.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>6. Produt</TinaTableCell>
+    <TinaTableCell>Make sure the right category is selected if your Tile is under Casino - Casino should be selected. And, IsHighPriority is Ticked ✅</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887569/builds/static-tile/qzbmpciswdyhn8kmgsui.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>7. TeaserClass</TinaTableCell>
+    <TinaTableCell>Input `make-me-look-awesome`</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887505/builds/static-tile/yv9v65pbdotsprrzvagd.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>8. CTAs</TinaTableCell>
+    <TinaTableCell>In the PrimaryCTA, put the CTA if it is **Opt In**, otherwise put in the MoreInfoCTA like Learn More, Play Now, Claim Now. For the Target, if its opening a different site other than BetMGM choose \_blank, else leave it blank.</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1727762103/builds/static-tile/image_2024_09_30T02_39_04_888Z_lzk6nb.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>8.5. data-offer-id</TinaTableCell>
+    <TinaTableCell>If the promotion would run through EDS you need to change the data-offer-id to the EDS ID of the promotion and to do that you need to click the dropdown in the Primary CTA and change the data-offer-id with the EDS ID of your promotion.</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887505/builds/static-tile/ygie47skim6ngc3lzp8l.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>9. ManualTermsAndCondition</TinaTableCell>
+    <TinaTableCell>Should only contain `<p>Manual Terms and Conditions....</p>
+                           `</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887505/builds/static-tile/plcm99adtopkp1w8xvcd.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>10. Order & OfferBadge</TinaTableCell>
+    <TinaTableCell>Order, simple type 0. For the OfferBadge, this Depends on your Promo Type. If its about Deposit Match then the OfferBadge will be **Deposit Match**</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887503/builds/static-tile/eteanfknwugcyrnstj8u.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>11. Filter  Condition</TinaTableCell>
+    <TinaTableCell>Make sure to put your filter for newly build Static Tile. Sample Filter: `QueryString.Get('qa') = 'manila'`</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887504/builds/static-tile/xmhmdlkefug7gjjnb16d.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>12. Publishing Section</TinaTableCell>
+    <TinaTableCell>Clear the Publishing Date, and make sure the **Never Publish** is unticked.</TinaTableCell>
+    <TinaTableCell>![Alt text](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887506/builds/static-tile/az0b6ot1jpsjgry3vy7i.png)</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>13. Screenshot Output</TinaTableCell>
+    <TinaTableCell>To check your output go to your State's Promotion Page and insert `qa=manila` at the end of the URL. Sample: `https://promo.nj.betmgm.com/en/promo/offers?qa=manila`</TinaTableCell>
+    <TinaTableCell>![Screenshot](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887504/builds/static-tile/bbg4pvpxhj0dto7b2cik.png)</TinaTableCell>
+  </TinaTableRow>
 </TinaTable>
 
-Then you're done. Get your Build's Direct Link and Paste it on Monday. 
-
-
-
-
+Then you're done. Get your Build's Direct Link and Paste it on Monday.
