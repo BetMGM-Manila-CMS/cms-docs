@@ -51,6 +51,19 @@ In the `HTML Editor` edit the `href` in the `<a>` tag with the appropriate Smart
   There is an update of using 'REGISTER' or 'SIGN UP NOW' as the CTA Text for Landing Pages, which should be replaced with 'SIGN UP' when creating new Landing Pages.
 </Admonition>
 
+### Script Footer
+
+Add this script at the ScriptFooter field inside the parent component of the landing page.
+
+```javascript
+<script>
+(self.dataLayer || (window.dataLayer = [])).push({
+  event: 'pageView',
+  'page.name': self.location.pathname.replace(/^\/([a-zA-z\-]+)\/promo\//, '')
+});
+</script>
+```
+
 ### Hero
 
 In this section, you'll edit all images the Landing Page requires. First, you'll need the image URL.
