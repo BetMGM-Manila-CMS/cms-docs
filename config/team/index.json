@@ -263,28 +263,28 @@
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991828/members/individual/arianne_gqr3s4.png",
       "name": "Arianne Ignacio",
       "title": "Jr. CMS Developer",
-      "isProbation": true,
+      "isProbation": false,
       "officeLocation": "Manila"
     },
     {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991809/members/individual/jl_btljty.png",
       "name": "John Llyod Apolo",
       "title": "Jr. CMS Developer",
-      "isProbation": true,
+      "isProbation": false,
       "officeLocation": "Manila"
     },
     {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991815/members/individual/seiya_zogjhi.png",
       "name": "Seiya Gurango",
       "title": "Web Content Specialist",
-      "isProbation": true,
+      "isProbation": false,
       "officeLocation": "Manila"
     },
     {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991822/members/individual/cj_qv2oih.png",
       "name": "CJ Almendral",
       "title": "Web Content Specialist",
-      "isProbation": true,
+      "isProbation": false,
       "officeLocation": "Manila"
     }
   ]
