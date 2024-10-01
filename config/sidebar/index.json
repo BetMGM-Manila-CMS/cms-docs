@@ -503,31 +503,6 @@
               "document": "docs/builds/Rewards.mdx",
               "label": "Rewards",
               "_template": "doc"
-            },
-            {
-              "document": "docs/builds/pat-eds-stw.mdx",
-              "label": "Spin The Wheel",
-              "_template": "doc"
-            },
-            {
-              "document": "docs/builds/pat-eds-pab.mdx",
-              "label": "Pick A Box",
-              "_template": "doc"
-            },
-            {
-              "document": "docs/builds/pat-eds-coin.mdx",
-              "label": "Coin Flip",
-              "_template": "doc"
-            },
-            {
-              "document": "docs/builds/pat-eds-cc.mdx",
-              "label": "Click Card",
-              "_template": "doc"
-            },
-            {
-              "document": "docs/builds/Claw-Machine-PAT.mdx",
-              "label": "Claw Machine",
-              "_template": "doc"
             }
           ],
           "_template": "category"
