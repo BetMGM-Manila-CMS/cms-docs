@@ -1784,6 +1784,12 @@
               "_template": "quickLink"
             },
             {
+              "label": "BetMGM ON",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={48548FDA-C780-4358-A7CD-785642FEC57F}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM PA",
               "brand": "betmgm",
               "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={05EA680F-AA57-40F4-A1AE-325BE20C5F74}&la=",
