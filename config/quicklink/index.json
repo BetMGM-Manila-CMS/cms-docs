@@ -1631,7 +1631,7 @@
             {
               "label": "BetMGM ON",
               "brand": "betmgm",
-              "url": "http://cms.prod.env.works/sitecore/DirectLink.aspx?fo={8DDE48E1-B758-41BA-BA4C-DD24E2EE267A}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={8DDE48E1-B758-41BA-BA4C-DD24E2EE267A}&la=",
               "_template": "quickLink"
             },
             {
