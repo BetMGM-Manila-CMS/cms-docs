@@ -17,6 +17,14 @@ The ODR banner is usually (but not always) needed for casino builds that include
 
 ## How to build
 
+### Title
+
+Add a space on the Title field. This is required in order display the banner.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1728005065/builds/odr-banner/odr-title_ojbfy6.png)
+
+### Links
+
 ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887479/builds/odr-banner/f6kav9s5gtkjplnrroql.png)
 
 1. Go to the Sitecore path for your respective state and label.
@@ -31,4 +39,8 @@ The ODR banner is usually (but not always) needed for casino builds that include
 
 <Admonition type="note" title="Note">
   Make sure TeaserProperties > IsEmbeddedTeaser is **NOT** checked! This is only used for *embedded* ODR banners.
+</Admonition>
+
+<Admonition type="caution" title="No Need to Add Filter">
+  For a while ODR Banners are added a filter of `Device.IsIOS AND NativeApplication.IsNative`. For future build there is **no need** to to add this.
 </Admonition>
