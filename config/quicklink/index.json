@@ -262,6 +262,12 @@
               "brand": "wof",
               "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={95FEE45C-2A63-49B9-B94C-B1DAC6A070C1}&la=",
               "_template": "quickLink"
+            },
+            {
+              "label": "ON Wheel Of Fortune",
+              "brand": "wof",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F0F7ECF5-D285-40AB-9A48-0378CEB3369D}&la=",
+              "_template": "quickLink"
             }
           ],
           "_template": "subGroup"
