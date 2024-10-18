@@ -150,6 +150,12 @@
           "label": "ODR Banner",
           "links": [
             {
+              "label": "PartyCasino",
+              "brand": "partycasino",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={4822D826-67EC-4FE0-943D-E0D79D06D734}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM MI",
               "brand": "betmgm",
               "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={CBF205BE-74B2-4984-8213-D545F7B9EC8F}&la=",
