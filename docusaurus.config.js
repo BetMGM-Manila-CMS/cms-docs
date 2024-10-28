@@ -11,13 +11,10 @@ import quickLinksData from "./config/quicklink/index.json";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  // Site metadata
   title: "BetMGM Creatives Manila CMS Team Hub",
   favicon: "img/favicon.ico",
-
-  // Set the production url of your site here
-  url: "http://localhost:3000",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: "https://betmgm-manila-cms-docs.netlify.app",
   baseUrl: "/",
 
   // GitHub pages deployment config.
@@ -82,8 +79,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: 'img/social-card.png',
       colorMode: {
         defaultMode: "dark",
         disableSwitch: false,
