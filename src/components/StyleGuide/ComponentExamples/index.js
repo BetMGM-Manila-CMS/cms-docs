@@ -25,7 +25,7 @@ General Terms and Conditions
 
 const CTAB = (selectedStyle) => ({
     component: <a
-        class="btn"
+        className="btn"
         style={{ color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor }}
         href="#"
     >
@@ -41,7 +41,7 @@ const CasinoTable = (selectedStyle) => ({
         <thead>
             <tr>
                 <th
-                    colspan="2"
+                    colSpan="2"
                     style={{ color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor }}
                 >
                     $50K Leaderboard
@@ -104,8 +104,8 @@ const PokerTable = (selectedStyle) => ({
     component: <div className="poker-table">
         <details>
             <summary style={{ color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor }}>Summer Classic Tournament Series</summary>
-            <div class="tablescroll-accord">
-                <table class="table table-bordered table-striped">
+            <div className="tablescroll-accord">
+                <table className="table table-bordered table-striped">
                     <thead>
                         <tr style={{ color: selectedStyle.color, backgroundColor: selectedStyle.backgroundColor }}>
                             <th>Time</th>
@@ -261,7 +261,7 @@ export const ComponentExamples = ({ styles, label = "casino" }) => {
     const [selectedStyle, setSelectedStyle] = useState(styles[0])
 
     return (
-        <div class="style-guide">
+        <div className="style-guide">
             <select
                 className="daisy-select daisy-select-bordered w-full max-w-xs"
                 onChange={e => setSelectedStyle(styles.find(style => style.name === e.target.value))}
