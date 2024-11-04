@@ -321,6 +321,11 @@
           "document": "docs/builds/casino-stories.mdx",
           "label": "Stories",
           "_template": "doc"
+        },
+        {
+          "document": "docs/builds/Optimized-Teaser.mdx",
+          "label": "Optimized Teaser",
+          "_template": "doc"
         }
       ]
     },
