@@ -4,42 +4,6 @@
       "label": "Casino",
       "links": [
         {
-          "label": "Optimized Teasers",
-          "links": [
-            {
-              "label": "BetMGM MI",
-              "brand": "betmgm",
-              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F00B74FD-7D11-4002-8110-0567C0F242D8}&la=",
-              "_template": "quickLink"
-            },
-            {
-              "label": "BetMGM NJ",
-              "brand": "betmgm",
-              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={45D35F25-131B-4AA6-B900-ABEA48394957}&la=",
-              "_template": "quickLink"
-            },
-            {
-              "label": "BetMGM ON",
-              "brand": "betmgm",
-              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={ED5091CA-E1E6-49BF-ADAB-23B3F325B65C}&la=",
-              "_template": "quickLink"
-            },
-            {
-              "label": "BetMGM PA",
-              "brand": "betmgm",
-              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7AADDEB8-6EDD-495C-AE3D-CC0107B01464}&la=",
-              "_template": "quickLink"
-            },
-            {
-              "label": "BetMGM WV",
-              "brand": "betmgm",
-              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={8F0BABA6-6B02-4158-B81B-27D335E0E9D3}&la=",
-              "_template": "quickLink"
-            }
-          ],
-          "_template": "subGroup"
-        },
-        {
           "label": "Media Library",
           "links": [
             {
@@ -177,6 +141,42 @@
               "label": "ON Wheel Of Fortune",
               "brand": "wof",
               "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={8BCB5D50-55AE-4436-A4CB-46A9F8EE293F}&la=",
+              "_template": "quickLink"
+            }
+          ],
+          "_template": "subGroup"
+        },
+        {
+          "label": "Optimized Teasers",
+          "links": [
+            {
+              "label": "BetMGM MI",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F00B74FD-7D11-4002-8110-0567C0F242D8}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "BetMGM NJ",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={45D35F25-131B-4AA6-B900-ABEA48394957}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "BetMGM ON",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={ED5091CA-E1E6-49BF-ADAB-23B3F325B65C}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "BetMGM PA",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7AADDEB8-6EDD-495C-AE3D-CC0107B01464}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "BetMGM WV",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={8F0BABA6-6B02-4158-B81B-27D335E0E9D3}&la=",
               "_template": "quickLink"
             }
           ],
