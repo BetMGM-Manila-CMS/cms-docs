@@ -12,3 +12,40 @@ brands:
   - brand: betmgm
 ---
 
+## tl;dr
+
+The tournament page CTAs for Poker Welcome Offers should follow the following templates to improve consistency across the BetMGM and Borgata sites.
+
+* **Sign Up CTA**, Filtered for not *registered* players
+* **Log In CTA**, Filtered for *registered and not logged-in* players
+* **Deposit Funds CTA**, **See Bonus CTA**, and **See Tickets CTA**, Filtered for *registered and logged-in* players
+
+**For BetMGM:**
+
+```html
+<p>
+  <a data-content-filter="NOT User.IsKnown" class="btn" style="background-color: #00a35b; color: #ffffff;" href="!!M2.Portal/mobileportal/register">Sign Up</a>
+  <a data-content-filter="User.IsKnown AND NOT User.LoggedIn" class="btn" style="background-color: #00a35b; color: #ffffff;" href="!!M2.Portal/labelhost/login">Log In</a>
+  <a data-content-filter="(User.IsKnown AND User.LoggedIn) AND NOT User.IsRealPlayer" class="btn" style="background-color: #00a35b; color: #ffffff;" href="!!M2.Portal/mobileportal/cashier/deposit">Deposit Funds</a>
+  <a data-content-filter="(User.IsKnown AND User.LoggedIn) AND NOT User.IsRealPlayer" class="btn" style="background-color: #00a35b; color: #ffffff;" href="!!M2.Promo/offers/grouped?filter=pb">See Bonus</a>
+  <a data-content-filter="(User.IsKnown AND User.LoggedIn) AND NOT User.IsRealPlayer" class="btn" style="background-color: #00a35b; color: #ffffff;" href="!!Poker.Launcher">See Tickets</a>
+</p>
+```
+
+**For Borgata Online:**
+
+```html
+<p>
+  <a data-content-filter="NOT User.IsKnown" class="btn btn-primary" href="!!M2.Portal/mobileportal/register">SIGN UP</a>
+  <a data-content-filter="User.IsKnown AND NOT User.LoggedIn" class="btn btn-primary" href="!!M2.Portal/labelhost/login">LOG IN</a>
+  <a data-content-filter="(User.IsKnown AND User.LoggedIn) AND NOT User.IsRealPlayer" class="btn btn-primary" href="!!M2.Portal/mobileportal/cashier/deposit">DEPOSIT FUNDS</a>
+  <a data-content-filter="(User.IsKnown AND User.LoggedIn) AND NOT User.IsRealPlayer" class="btn btn-primary" href="!!M2.Promo/offers/grouped?filter=pb">SEE BONUS</a>
+  <a data-content-filter="(User.IsKnown AND User.LoggedIn) AND NOT User.IsRealPlayer" class="btn btn-primary" href="!!Poker.Launcher">SEE TICKETS</a>
+</p>
+```
+
+## Context:
+
+* On 11/19/24, Alyssa asked the Poker team if they had a preference for the CTA for Poker welcome offers. The reason is that they are inconsistent, with some pages that say DEPOSIT NOW bringing users to a login page, and others that say REGISTER NOW bringing users to registration.
+* Vivian clarified where the discrepancy was observed and that Alyssa was referring to Tournament Pages. She also suggested a set of filtered CTAs for different sets of users (not registered, not logged in, etc.)
+* Will O'Connor gave confirmation to use the CTAs suggested by Vivian.
