@@ -19,9 +19,9 @@ const QAField = {
             ui: {
                 component: wrapFieldsWithMeta(({ field, input, meta }) => {
                     return (
-                        <div class="tina-date-field">
-                            <div class="rdt">
-                                <input type="month" class="shadow-inner focus:shadow-outline focus:border-blue-500 focus:outline-none block text-base placeholder:text-gray-300 px-3 py-2 text-gray-600 w-full bg-white border border-gray-200 transition-all ease-out duration-150 focus:text-gray-900 rounded-md"
+                        <div className="tina-date-field">
+                            <div className="rdt">
+                                <input type="month" className="shadow-inner focus:shadow-outline focus:border-blue-500 focus:outline-none block text-base placeholder:text-gray-300 px-3 py-2 text-gray-600 w-full bg-white border border-gray-200 transition-all ease-out duration-150 focus:text-gray-900 rounded-md"
                                     {...input} />
                             </div>
                         </div>
