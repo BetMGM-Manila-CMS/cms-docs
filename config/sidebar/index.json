@@ -553,6 +553,11 @@
           "link": "generated",
           "items": [
             {
+              "document": "docs/builds/Snow-Globe.mdx",
+              "label": "Snow Globe",
+              "_template": "doc"
+            },
+            {
               "document": "docs/builds/Pinball-Layout.mdx",
               "label": "Pinball",
               "_template": "doc"
