@@ -1,0 +1,56 @@
+---
+title: Snow Globe
+---
+
+# Snow Globe
+
+Snow Globe is an Engagement tool for players to play and win prizes.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1734660318/builds/snow-globe/headerimg_rvissr.png)
+
+## Assets
+
+<Admonition type="info" title="Required Assets">
+  In order to properly build this component, make sure that the Box link contains a directory for the Snow Globe assets. These should be included inside:
+
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1734660557/builds/snow-globe/snow-globe-assets_zrwr8m.png)
+</Admonition>
+
+## Building the component
+
+<Admonition type="info" title="SiteCore Path">
+  **Layout:**
+  Content > Vanilla.Mobile > State/Brand > Promo > casino
+  *This promotion is built in the Casino Landing Page Sitecore Path*
+</Admonition>
+
+Duplicate or copy any Snow Globe promotion in the Casino Landing Page such as this one.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1734661800/builds/snow-globe/duplication_tdm9vb.png)
+
+### Content
+
+#### Edit HTML
+
+Go to Content and click `Edit HTML`.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1734661960/builds/snow-globe/content_kpzix8.png)
+
+Edit the Terms And Condition.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1734662528/builds/snow-globe/content-edithtml_lnlgpq.png)
+
+1. If needed, you can change the Terms And Conditions text however you like.
+2. In order to change the TnC of your build you need to get the `Rest ID` of the `terms` under your File and paste it here. Do not forget to add the .Text in the last part since that is where it will grab the value of the Terms and Condition in that Rest ID.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1734662968/builds/snow-globe/content-TnCrestID_nfsoxi.png)
+
+#### HTMLHead
+
+Scroll Down to `HTMLHead` and change the targetid to either lowercase `core` or lowercase `vip` depending if the promotion is public or VIP respectively.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1734663405/builds/snow-globe/content-htmlhead-targetid_em6xnu.png)
+
+#### StyleHeader
+
+Change the text-color of the .content\_sugg
