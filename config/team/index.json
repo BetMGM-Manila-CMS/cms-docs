@@ -186,12 +186,6 @@
       "officeLocation": "USA"
     },
     {
-      "name": " Laura Hasbrouck",
-      "title": "Sr. Manager, Digital Content",
-      "isProbation": false,
-      "officeLocation": "USA"
-    },
-    {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044015/members/individual/Jhera_icmstm.jpg",
       "name": "Jhera Claire Oneill",
       "title": "Content Mgmt Specialist",
@@ -201,7 +195,7 @@
     {
       "name": "Toni Marielle Bechayda",
       "title": "Jr. CMS Developer",
-      "isProbation": true,
+      "isProbation": false,
       "officeLocation": "Manila"
     },
     {
@@ -355,13 +349,6 @@
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991822/members/individual/cj_qv2oih.png",
       "name": "CJ Almendral",
       "title": "Web Content Specialist",
-      "isProbation": false,
-      "officeLocation": "Manila"
-    },
-    {
-      "image": "",
-      "name": "Toni Bechayda",
-      "title": "Jr. CMS Developer",
       "isProbation": false,
       "officeLocation": "Manila"
     }
