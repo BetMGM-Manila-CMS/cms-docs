@@ -193,12 +193,6 @@
       "officeLocation": "USA"
     },
     {
-      "name": "Toni Marielle Bechayda",
-      "title": "Jr. CMS Developer",
-      "isProbation": false,
-      "officeLocation": "Manila"
-    },
-    {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044096/members/individual/Mike_snc9t4.jpg",
       "name": "Mike David",
       "title": "Traffic Coordinator - Gaming",
@@ -349,6 +343,12 @@
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991822/members/individual/cj_qv2oih.png",
       "name": "CJ Almendral",
       "title": "Web Content Specialist",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
+      "name": "Toni Marielle Bechayda",
+      "title": "Jr. CMS Developer",
       "isProbation": false,
       "officeLocation": "Manila"
     }
