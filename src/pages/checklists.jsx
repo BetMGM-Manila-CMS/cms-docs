@@ -117,7 +117,7 @@ export default function Checklists() {
                   width="16"
                   height="16"
                   fill="currentColor"
-                  class="bi bi-caret-down-fill"
+                  className="bi bi-caret-down-fill"
                   viewBox="0 0 16 16"
                 >
                   <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
@@ -145,7 +145,7 @@ export default function Checklists() {
             Checklists for each component ensuring consistent, high-quality
             construction standards across the team.
           </p>
-          <label class="daisy-input daisy-input-bordered flex items-center gap-2 max-w-xs mx-auto">
+          <label className="daisy-input daisy-input-bordered flex items-center gap-2 max-w-xs mx-auto">
             <input
               type="text"
               className="p-0 border-none grow focus:ring-0"
@@ -157,7 +157,7 @@ export default function Checklists() {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              class="w-4 h-4 opacity-70"
+              className="w-4 h-4 opacity-70"
             >
               <path
                 fill-rule="evenodd"
