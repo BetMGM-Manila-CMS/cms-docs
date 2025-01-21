@@ -1,6 +1,7 @@
 {
   "qa": [
     {
+      "month": "2024-09-01T00:00:00.000Z",
       "score": 99.24,
       "images": [
         {
@@ -185,11 +186,23 @@
       "officeLocation": "USA"
     },
     {
+      "name": " Laura Hasbrouck",
+      "title": "Sr. Manager, Digital Content",
+      "isProbation": false,
+      "officeLocation": "USA"
+    },
+    {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044015/members/individual/Jhera_icmstm.jpg",
       "name": "Jhera Claire Oneill",
       "title": "Content Mgmt Specialist",
       "isProbation": false,
       "officeLocation": "USA"
+    },
+    {
+      "name": "Toni Marielle Bechayda",
+      "title": "Jr. CMS Developer",
+      "isProbation": true,
+      "officeLocation": "Manila"
     },
     {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044096/members/individual/Mike_snc9t4.jpg",
@@ -290,6 +303,13 @@
       "officeLocation": "Manila"
     },
     {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213652/members/individual/IMG_5548_m6usxi.jpg",
+      "name": "Kyle Atienza",
+      "title": "Jr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila"
+    },
+    {
       "image": "",
       "name": "Kevin Chavez",
       "title": "CMS Developer",
@@ -342,13 +362,6 @@
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991822/members/individual/cj_qv2oih.png",
       "name": "CJ Almendral",
       "title": "Web Content Specialist",
-      "isProbation": false,
-      "officeLocation": "Manila"
-    },
-    {
-      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1736933531/members/individual/Toni_Bechayda_ctgpu8.png",
-      "name": "Toni Marielle Bechayda",
-      "title": "Jr. CMS Developer",
       "isProbation": false,
       "officeLocation": "Manila"
     }
