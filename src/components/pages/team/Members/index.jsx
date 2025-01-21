@@ -1,21 +1,26 @@
 import teamData from "@site/config/team";
 
-export default function Member() {
+export default function Members() {
   const members = teamData.members
-  const [manilaMembers, usMembers] = members.reduce((sortedMembers, member) => {
-    if (member.isProbation) {
-      return sortedMembers
-    }
+    // Filter out members who have already left the team
+    .filter((m) => m.active)
+    // Sort members by office location and probation status
+    .reduce(
+      (sorted, member) => {
+        if (member.isProbation) {
+          sorted.probationaries.push(member);
+          return sorted;
+        }
 
-    if (member.officeLocation === "Manila") {
-      sortedMembers[0].push(member)
-    } else {
-      sortedMembers[1].push(member)
-    }
-    return sortedMembers
-  }, [[], []])
-
-  console.log(manilaMembers, usMembers)
+        if ("Manila" === member.officeLocation) {
+          sorted.manilaTeam.push(member);
+        } else if ("USA" === member.officeLocation) {
+          sorted.usTeam.push(member);
+        }
+        return sorted;
+      },
+      { probationaries: [], usTeam: [], manilaTeam: [] }
+    );
 
   return (
     <section className="container relative mb-8 lg:mb-16">
@@ -24,80 +29,76 @@ export default function Member() {
           Members
         </h2>
         <div className="grid grid-cols-2 gap-6 mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-          {manilaMembers
-            .map(({ name, title, image }, index) => {
-              return (
-                <div className="group">
-                  <div className="mb-2 overflow-hidden bg-white rounded-lg aspect-square">
-                    {image && (
-                      <img
-                        src={image}
-                        alt=""
-                        className="object-cover w-full h-full duration-500 group-hover:scale-110"
-                      />
-                    )}
-                  </div>
-                  <p className="mb-2 font-extrabold leading-none tracking-tight text-white text-gray-900 text-md md:text-lg lg:text-xl">
-                    {name}
-                  </p>
-                  <p className="text-sm leading-none tracking-tight text-white text-gray-900 md:text-lg">
-                    {title}
-                  </p>
+          {members.manilaTeam.map(({ name, title, image }, index) => {
+            return (
+              <div className="group">
+                <div className="mb-2 overflow-hidden bg-white rounded-lg aspect-square">
+                  {image && (
+                    <img
+                      src={image}
+                      alt=""
+                      className="object-cover w-full h-full duration-500 group-hover:scale-110"
+                    />
+                  )}
                 </div>
-              );
-            })}
+                <p className="mb-2 font-extrabold leading-none tracking-tight text-white text-gray-900 text-md md:text-lg lg:text-xl">
+                  {name}
+                </p>
+                <p className="text-sm leading-none tracking-tight text-white text-gray-900 md:text-lg">
+                  {title}
+                </p>
+              </div>
+            );
+          })}
         </div>
         <div className="grid grid-cols-2 gap-6 mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-          {usMembers
-            .map(({ name, title, image }, index) => {
-              return (
-                <div className="group">
-                  <div className="mb-2 overflow-hidden bg-white rounded-lg aspect-square">
-                    {image && (
-                      <img
-                        src={image}
-                        alt=""
-                        className="object-cover w-full h-full duration-500 group-hover:scale-110"
-                      />
-                    )}
-                  </div>
-                  <p className="mb-2 font-extrabold leading-none tracking-tight text-white text-gray-900 text-md md:text-lg lg:text-xl">
-                    {name}
-                  </p>
-                  <p className="text-sm leading-none tracking-tight text-white text-gray-900 md:text-lg">
-                    {title}
-                  </p>
+          {members.usTeam.map(({ name, title, image }, index) => {
+            return (
+              <div className="group">
+                <div className="mb-2 overflow-hidden bg-white rounded-lg aspect-square">
+                  {image && (
+                    <img
+                      src={image}
+                      alt=""
+                      className="object-cover w-full h-full duration-500 group-hover:scale-110"
+                    />
+                  )}
                 </div>
-              );
-            })}
+                <p className="mb-2 font-extrabold leading-none tracking-tight text-white text-gray-900 text-md md:text-lg lg:text-xl">
+                  {name}
+                </p>
+                <p className="text-sm leading-none tracking-tight text-white text-gray-900 md:text-lg">
+                  {title}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="max-w-screen-xl px-4 pb-8 mx-auto sm:pb-16 lg:px-6">
         <h2 className="text-center">New Roarers</h2>
         <div className="grid grid-cols-2 gap-6 mt-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-          {members
-            .filter((member) => member.isProbation)
-            .map(({ name, title, image }, index) => {
-              return (
-                <div className="group">
-                  <div className="mb-2 overflow-hidden bg-white rounded-lg aspect-square">
-                    {image && (
-                      <img
-                        src={image}
-                        alt=""
-                        className="object-cover w-full h-full duration-500 group-hover:scale-110"
-                      />
-                    )}
-                  </div>
-                  <p className="mb-2 font-extrabold leading-none tracking-tight text-white text-gray-900 text-md md:text-lg lg:text-xl">
-                    {name}
-                  </p>
-                  <p className="text-sm leading-none tracking-tight text-white text-gray-900 md:text-lg">
-                    {title}
-                  </p>
+          {members.probationaries.map(({ name, title, image }, index) => {
+            return (
+              <div className="group">
+                <div className="mb-2 overflow-hidden bg-white rounded-lg aspect-square">
+                  {image && (
+                    <img
+                      src={image}
+                      alt=""
+                      className="object-cover w-full h-full duration-500 group-hover:scale-110"
+                    />
+                  )}
                 </div>
-              );
-            })}
+                <p className="mb-2 font-extrabold leading-none tracking-tight text-white text-gray-900 text-md md:text-lg lg:text-xl">
+                  {name}
+                </p>
+                <p className="text-sm leading-none tracking-tight text-white text-gray-900 md:text-lg">
+                  {title}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
