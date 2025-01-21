@@ -199,9 +199,10 @@
       "officeLocation": "USA"
     },
     {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1736933531/members/individual/Toni_Bechayda_ctgpu8.png",
       "name": "Toni Marielle Bechayda",
       "title": "Jr. CMS Developer",
-      "isProbation": true,
+      "isProbation": false,
       "officeLocation": "Manila"
     },
     {
