@@ -190,6 +190,13 @@
       "active": true
     },
     {
+      "name": " Laura Hasbrouck",
+      "title": "Sr. Manager, Digital Content",
+      "isProbation": false,
+      "officeLocation": "USA",
+      "active": false
+    },
+    {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044015/members/individual/Jhera_icmstm.jpg",
       "name": "Jhera Claire Oneill",
       "title": "Content Mgmt Specialist",
@@ -308,6 +315,14 @@
       "isProbation": false,
       "officeLocation": "Manila",
       "active": true
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213652/members/individual/IMG_5548_m6usxi.jpg",
+      "name": "Kyle Atienza",
+      "title": "Jr. CMS Developer",
+      "isProbation": false,
+      "officeLocation": "Manila",
+      "active": false
     },
     {
       "image": "",
