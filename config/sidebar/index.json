@@ -508,6 +508,11 @@
               "document": "docs/builds/Rewards.mdx",
               "label": "Rewards",
               "_template": "doc"
+            },
+            {
+              "document": "docs/builds/SHARED-Leaderboard.mdx",
+              "label": "SHARED Leaderboard",
+              "_template": "doc"
             }
           ],
           "_template": "category"
