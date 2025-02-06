@@ -1,0 +1,106 @@
+---
+title: SHARED Leaderboard
+---
+
+# SHARE Leaderboard
+
+SHARED Leaderboard PAT ID differ slightly than the regular PAT IDs since this type of promotion is shared between different Labels and States.
+
+The main difference are the required inputs and assets in the `Overview` section and `How It Works` section.
+
+## Overview
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1738732957/builds/pat-eds/newhookplacement_jyrawm.png)
+
+<h3>Required Fields</h3>
+
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>Field</TinaTableCell>
+    <TinaTableCell>Value</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>Introduction Text</TinaTableCell>
+    <TinaTableCell>`Promo Teaser Section`</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>Preface to the “hook”</TinaTableCell>
+    <TinaTableCell>`Prize Message`</TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
+
+<h3>Optional Fields</h3>
+
+There are 2 reserved text fields if there are any more copy provided after the Prize Message content in the copy, put the line on the Extra text for marketing message 2 text field if there is any.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1738733155/builds/pat-eds/exrtamsg_a0uplo.png)
+
+<h3>Image</h3>
+
+The Image the will be placed in this part may vary depending on the Promotion Type and Brand Label. Please refer to the guide below:
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1738735639/builds/pat-eds/overviewimg2_ifaedq.png)
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1738735636/builds/pat-eds/overviewimg_zeu8gq.png)
+
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell />
+
+    <TinaTableCell>Leaderboards & Sweepstakes</TinaTableCell>
+    <TinaTableCell>Bet & Get</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>BetMGM</TinaTableCell>
+    <TinaTableCell>Promohub Tiles-800x360</TinaTableCell>
+    <TinaTableCell>PAT-440x600</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>Other Labels</TinaTableCell>
+    <TinaTableCell>PAT-440x600</TinaTableCell>
+    <TinaTableCell>PAT-440x600</TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
+
+<Admonition type="note" title="Note">
+  If the Promotion is a SHARED Leaderboard make sure to check the `Is SiteMedia Item` checkbox and add the required asset for the Promotion. Please see guide [here](https://betmgm-manila-cms-docs.netlify.app/docs/builds/assets-uploading#shared-assets).
+
+  Here is a reference on what assets are required to share. [click here](https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={14D5EDF9-606A-4613-A984-76D53DE951F4}\&la=).
+
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1738737683/builds/pat-eds/assetshare_pzksat.png)
+</Admonition>
+
+## HowItWorks
+
+If the ticket is a SHARED Leaderboard Promotion, there is a slight change in the inputs in the `How It Works Tab`. Instead of the bolded text for the title, it will be replaced with dictionary items. Below is the sample Leaderboard PAT promotion.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1738733450/builds/pat-eds/hiw_b9jz79.png)
+
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>Steps</TinaTableCell>
+    <TinaTableCell>Image</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>Step 1 title</TinaTableCell>
+
+    <TinaTableCell>`${dic:dc6752ca-ec1e-4c76-9c68-3c0a34b4c5be/Step1title}`</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>Step 2 title</TinaTableCell>
+
+    <TinaTableCell>`${dic:2475addd-a361-4371-87a8-52c407e03292/Step2title}`</TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>Step 3 title</TinaTableCell>
+
+    <TinaTableCell>`${dic:14b0d634-1f85-4676-873b-36272874ecfc/Step3title}`</TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
