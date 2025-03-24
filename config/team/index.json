@@ -194,7 +194,7 @@
       "title": "Sr. Manager, Digital Content",
       "isProbation": false,
       "officeLocation": "USA",
-      "active": false
+      "active": true
     },
     {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044015/members/individual/Jhera_icmstm.jpg",
@@ -393,6 +393,21 @@
       "name": "Toni Marielle Bechayda",
       "title": "Jr. CMS Developer",
       "isProbation": false,
+      "officeLocation": "Manila",
+      "active": true
+    },
+    {
+      "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1742819530/members/individual/Media_cldvau.jpg",
+      "name": "Mark Henri Barrameda",
+      "title": "Jr. CMS Developer",
+      "isProbation": true,
+      "officeLocation": "Manila",
+      "active": true
+    },
+    {
+      "name": "James William Sorima",
+      "title": "Jr. CMS Developer",
+      "isProbation": true,
       "officeLocation": "Manila",
       "active": true
     }
