@@ -326,6 +326,11 @@
           "document": "docs/builds/Optimized-Teaser.mdx",
           "label": "Optimized Teaser",
           "_template": "doc"
+        },
+        {
+          "document": "docs/builds/Game-Premiere-Overlay.mdx",
+          "label": "Game Premiere Overlay",
+          "_template": "doc"
         }
       ]
     },
