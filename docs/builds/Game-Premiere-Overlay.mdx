@@ -1,0 +1,187 @@
+---
+title: Game Premiere Overlay
+---
+
+# Game Premiere Overlay
+
+A Game Premiere Overlay is a component on the casino homepage of a product, that plays once after you login your account in BetMGM.
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1746682222/builds/game-premiere-overlay/GamePremiere_Image1_nwgneb.png)
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1746683926/builds/game-premiere-overlay/GamePremiere_Image3_a4zg1i.png)
+
+It is the same as the Video Banner which gets updated from time to time instead of creating a new component each promotion. To update the Game Premiere here is the Sitecore Path
+
+<Admonition type="info" title="SiteCore Path">
+  Content > Vanilla.Mobile > State/Brand > MobileCasino-v1.0 > GamePremiere > GamePremiereOverlay
+</Admonition>
+
+<Admonition type="info" title="Note">
+  Item name must be kept as 'GamePremiereOverlay' in Sitecore because ODR and non-ODR are configured to follow the same path, and if item is renamed, overlay will not display for ODR.
+</Admonition>
+
+## Assets
+
+The uploading of assets is the same as the one we do in the Netflix Video Banners. See this guide [here](https://betmgm-manila-cms-docs.netlify.app/docs/builds/assets-uploading/#uploading-mp4-file-for-video-banner "here").
+
+## Building the Component
+
+### header
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1746683922/builds/game-premiere-overlay/GamePremiere_Image2_nmekwi.png)
+
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>
+      Field
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      headerText
+    </TinaTableCell>
+
+    <TinaTableCell>
+      PROMOHUB KEY TERMS H1
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      closeCTA
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Close
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      sticker
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Depends on the Promotion (i.e Leaderboard, Sweepstakes, Bonus Drops etc.).
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
+
+### ImagesAndText
+
+<TinaTable topHeader={true}>
+  <TinaTableRow>
+    <TinaTableCell>
+      Field
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Value
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      overlayAnimationImage
+    </TinaTableCell>
+
+    <TinaTableCell>
+      360x640.gif
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      desktopGameImage
+    </TinaTableCell>
+
+    <TinaTableCell>
+      To-the-side-Image-1280x720
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      promoVideo
+    </TinaTableCell>
+
+    <TinaTableCell>
+      mp4 Asset
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      subTitle1
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Carousel H1
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      subTitle2
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Carousel H2
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      mainTitle
+    </TinaTableCell>
+
+    <TinaTableCell>
+      PROMOHUB KEY TERMS H1
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      mobileSubTitle1
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Carousel H1
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      mobileSubTitle2
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Carousel H2
+    </TinaTableCell>
+  </TinaTableRow>
+
+  <TinaTableRow>
+    <TinaTableCell>
+      mobileGameImage
+    </TinaTableCell>
+
+    <TinaTableCell>
+      Centered-Image-1280x720
+    </TinaTableCell>
+  </TinaTableRow>
+</TinaTable>
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1746683934/builds/game-premiere-overlay/GamePremiere_overlayanimationimage_ohs9ke.png)
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1746683937/builds/game-premiere-overlay/GamePremiere_desktopgameimage_ddyxmj.png)
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1746684873/builds/game-premiere-overlay/GamePremiere_prmovideo_honzoq.png)
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1746684870/builds/game-premiere-overlay/GamePremiere_maintitle_hokwaw.png)
+
+![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1746683930/builds/game-premiere-overlay/GamePremiere_mobilegameimage_eot9g8.png)
