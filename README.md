@@ -85,3 +85,7 @@ $ git push origin HEAD
 - `updates` - is a custom folder that contains the content for the updates section of the page. This is configured iside `plugins/blog-plugin.js`.
 - `utils` - contains some utility functions.
 - `docusaurus.config.js` - contains configurations for your site some of are basic config such website name, and favicon, navigation links, registering plugins, and many more.
+
+## Analytics
+
+Site analytics is implemented with a single script tag from [GoatCounter](https://www.goatcounter.com/), which is integrated on the site via [Netlify snippet injection](https://docs.netlify.com/site-deploys/post-processing/snippet-injection/). This is mainly for tracking pageviews which can be used to improve user experience and the site's information architecture.
