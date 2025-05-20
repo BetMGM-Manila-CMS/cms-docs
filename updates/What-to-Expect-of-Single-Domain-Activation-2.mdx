@@ -1,0 +1,56 @@
+---
+title: What to Expect of Single Domain Activation 2
+description: There is an update regarding the Single Domain Activation
+image: >-
+  https://res.cloudinary.com/dlfu36fiw/image/upload/v1745893516/updates/single-domain-activation-wv/singledomainact_headerimg_zrrbue.png
+authors:
+  - name: Vivian Zhao
+editors:
+  - name: Christian Almazora
+slug: single-domain-activation2
+source:
+  platform: outlook
+brands:
+  - brand: partycasino
+---
+
+Hello everyone,
+
+I have the following updates to share:
+
+Single Domain Activations are also live on: 
+
+1. NJ PartyCasino on April 29th 
+2. Wheel of Fortune Casino ON on May 12th 
+
+**Desktop and Mobile Versions Launch Game SmartLink has changed:**
+
+* `!!M2.Promo/launchmgc?gd=netenteusmd\&gm=netenttoucheusmdmobile` > `!!M2.Engage/pub/launchmgc?gd=netenteusmd\&gm=netenttoucheusmdmobile`
+  * Please note that the gd and gm games above are not real, but examples to note that NetEnt (netent...) and DGC (eusmd...) game suppliers are the only two (2) to offer both Desktop and Mobile Versions of their games
+    * For gd, netent... may end with ...html, usually for older games
+    * For gm, netent... may end with ...touch and eusmd... may end with ...mobile
+
+.../mobileportal/... has sunsetted:
+
+**Deposit SmartLink has changed:**
+
+* `!!M2.Portal/mobileportal/cashier/deposit` > `!!M2.Portal/cashier/deposit`
+
+**MPPV1 Final URL and SmartLink have changed, but directory did not change as well:**
+
+* Final URL: [https://www.wv.betmgm.com/en/mobileportal/promotions/casino/welcome-offer-2025](https://www.wv.betmgm.com/en/mobileportal/promotions/casino/welcome-offer-2025) > [https://www.wv.betmgm.com/en/myaccount/promotions/casino/welcome-offer-2025](https://www.wv.betmgm.com/en/myaccount/promotions/casino/welcome-offer-2025)
+  * Redirects, but we should be referencing the updated Final URL instead to build a good habit, anticipating that the redirection may no longer be supported and work one day
+    * Redirection causes a slight delay in loading content
+* SmartLink: `!!M2.Portal/mobileportal/promotions/casino/welcome-offer-2025` > `!!M2.Portal/myaccount/promotions/casino/welcome-offer-2025`
+  * Redirects, but we should be sourcing the updated SmartLink instead to build a good habit, anticipating that the redirection may no longer be supported and work one day
+    * Redirection causes a slight delay in loading content
+* Directory: `https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={49035430-022A-4985-B513-D0A57E3382F8}\&la=`
+
+**Outdated Casino Home SmartLink no longer works as well:**
+
+* `!!M2.Casino` > `!!M2.CasinoHome`
+  * `!!M2.Casino` used to work as well as `!!M2.CasinoHome`, but does not redirect, leading to a soft error page now
+
+This is all I have to share at the moment that we or I have discovered regarding this topic, but if I have any additional update to share, then I will follow-up via email by Replying All again.
+
+If you have any question and/or concern at all, please do not hesitate and feel free to message me. Thank you as always for your attention, understanding, assistance, and time.
