@@ -470,7 +470,7 @@
             {
               "label": "BetMGM PA",
               "brand": "betmgm",
-              "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={A2F37970-16A7-40E1-A8CA-A54ECB080135}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={0D50C90A-3A6E-4CBA-9177-945BF084CFE5}&la=",
               "_template": "quickLink"
             },
             {
