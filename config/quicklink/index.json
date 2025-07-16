@@ -494,7 +494,7 @@
             {
               "label": "PartyCasino",
               "brand": "partycasino",
-              "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={2E7C0DE4-B96C-4F66-A5F7-0F8C3CCC00DA}&la=",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={D70D36AC-F895-4A6A-A874-8890EA409347}&la=",
               "_template": "quickLink"
             },
             {
