@@ -1,6 +1,46 @@
 {
   "qa": [
     {
+      "month": "2025-09-01T00:00:00.000Z",
+      "score": 98.96,
+      "images": [
+        {
+          "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1759910186/lions-awards/september-2025/Image_7_opvlvd.jpg"
+        },
+        {
+          "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1759910096/lions-awards/september-2025/Media_zy3ee6.jpg"
+        },
+        {
+          "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1759910189/lions-awards/september-2025/Image_6_dkagol.jpg"
+        },
+        {
+          "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1759910193/lions-awards/september-2025/Image_5_fjtxon.jpg"
+        },
+        {
+          "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1759910200/lions-awards/september-2025/Image_2_tqybrg.jpg"
+        },
+        {
+          "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1759910196/lions-awards/september-2025/Image_4_jxu9kh.jpg"
+        }
+      ]
+    },
+    {
+      "month": "2025-08-01T00:00:00.000Z",
+      "score": 99.19
+    },
+    {
+      "month": "2025-07-01T00:00:00.000Z",
+      "score": 99.2
+    },
+    {
+      "month": "2025-06-01T00:00:00.000Z",
+      "score": 98.73
+    },
+    {
+      "month": "2025-05-01T00:00:00.000Z",
+      "score": 99.6
+    },
+    {
       "month": "2024-09-01T00:00:00.000Z",
       "score": 99.24,
       "images": [
