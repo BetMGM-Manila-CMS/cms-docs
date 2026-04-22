@@ -2,13 +2,13 @@
 title: TnC Styles for Ontario State
 ---
 
-## Canada T\&Cs – Default Open Requirement
+# Canada T\&Cs – Default Open Requirement
 
 This document outlines CSS solutions to ensure Terms & Conditions (T\&Cs) are expanded by default for pre-login experiences. These implementations address compliance requirements by eliminating the need for user to click twice before viewing the T\&Cs.
 
-### Primary Scope: Pre-Login Components
+## Primary Scope: Pre-Login Components
 
-#### MPP (Promotion Landing Page – v1)
+### MPP (Promotion Landing Page – v1)
 
 ```html
 <style> 
@@ -23,7 +23,7 @@ This document outlines CSS solutions to ensure Terms & Conditions (T\&Cs) are ex
 </style> 
 ```
 
-#### MPPV2 (Promotion Landing Page – v2)
+### MPPV2 (Promotion Landing Page – v2)
 
 ```html
 <style> 
@@ -37,5 +37,74 @@ This document outlines CSS solutions to ensure Terms & Conditions (T\&Cs) are ex
   overflow: visible !important; 
 } 
 </style> 
+```
 
+### Acquisition Landing Page (BetMGM – Ontario)
+
+```html
+<style> 
+#lp-tyc, 
+#lp-tyc .tyc-container, 
+#lp-tyc .tyc-content, 
+.tyc-container, 
+.tyc-content { 
+  display: block !important; 
+  visibility: visible !important; 
+  height: auto !important; 
+  max-height: none !important; 
+  opacity: 1 !important; 
+  overflow: visible !important; 
+} 
+</style>
+```
+
+### Acquisition Landing Page (Wheel of Fortune – Ontario)
+
+```html
+<style> 
+section.tyc, 
+.tyc-container, 
+.tyc-content { 
+  display: block !important; 
+  visibility: visible !important; 
+  height: auto !important; 
+  max-height: none !important; 
+  opacity: 1 !important; 
+  overflow: visible !important; 
+} 
+</style>
+```
+
+## Secondary / Optional Components (Post-Login)
+
+The following implementations are not currently required for compliance, but are documented for reference if needed.
+
+### Inbox / Rest ID
+
+```html
+<style> 
+.player-inbox-item-tnc-details[hidden], 
+.player-inbox-item-tnc-details { 
+  display: block !important; 
+  visibility: visible !important; 
+  height: auto !important; 
+  max-height: none !important; 
+  opacity: 1 !important; 
+} 
+</style>
+```
+
+### PAT (Post-Opt-In / Player Activity Page)
+
+```html
+<style> 
+#terms-and-conditions__body, 
+.collapsible__body.terms-and-conditions { 
+  display: block !important; 
+  visibility: visible !important; 
+  height: auto !important; 
+  max-height: none !important; 
+  opacity: 1 !important; 
+} 
+</style>
 ```
