@@ -1,0 +1,41 @@
+---
+title: TnC Styles for Ontario State
+---
+
+## Canada T\&Cs – Default Open Requirement
+
+This document outlines CSS solutions to ensure Terms & Conditions (T\&Cs) are expanded by default for pre-login experiences. These implementations address compliance requirements by eliminating the need for user to click twice before viewing the T\&Cs.
+
+### Primary Scope: Pre-Login Components
+
+#### MPP (Promotion Landing Page – v1)
+
+```html
+<style> 
+.promotion-tac-body[hidden], 
+.promotion-container .promotion-tac-body { 
+  display: block !important; 
+  visibility: visible !important; 
+  height: auto !important; 
+  max-height: none !important; 
+  opacity: 1 !important; 
+} 
+</style> 
+```
+
+#### MPPV2 (Promotion Landing Page – v2)
+
+```html
+<style> 
+.pc-toggle-txt, 
+.pc-toggle-txt[hidden] { 
+  display: block !important; 
+  visibility: visible !important; 
+  height: auto !important; 
+  max-height: none !important; 
+  opacity: 1 !important; 
+  overflow: visible !important; 
+} 
+</style> 
+
+```
