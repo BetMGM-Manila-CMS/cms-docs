@@ -623,6 +623,11 @@
           "document": "docs/builds/seoboxes.mdx",
           "label": "SEOBoxes",
           "_template": "doc"
+        },
+        {
+          "document": "docs/builds/TnC-Styles-for-Ontario-State.mdx",
+          "label": "Canada TnC Styles",
+          "_template": "doc"
         }
       ]
     },
