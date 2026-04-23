@@ -11,10 +11,32 @@ I wanted to share an update regarding Terms and Condition across our Canada prod
 
 Moving forward, Terms and Conditions need to be visible Open by default on all MPPs, MPPV2s and ACQ LPs (no click to open up Terms and Conditions required). When building, make sure you’re applying the correct CSS inside the HTML section where we input the Terms and Conditions.
 
-[Canada\_Terms\_Conditions\_CSS\_Guide.docx](https://coralracing-my.sharepoint.com/\:w:/g/personal/ruben_chavez_betmgm_com/IQA76fqKxzp0RJQvr2ia06uWAemosMAd3zsLENoLB_mwu24?xsdata=MDV8MDJ8Q2hyaXN0aWFuLkFsbWF6b3JhQEVudGFpbkdyb3VwLmNvbXw5ZWYzMGVhNjgyNTc0MDIwY2JiMTA4ZGU5ZmU4ZmI2N3w2MGM0M2MwYTY0YWM0MDUwYmYzZTMxZTFjZGZmZmRlYnwwfDB8NjM5MTI0MDIwMTk0NzU5MjM3fFVua25vd258VFdGcGJHWnNiM2Q4ZXlKRmJYQjBlVTFoY0draU9uUnlkV1VzSWxZaU9pSXdMakF1TURBd01DSXNJbEFpT2lKWGFXNHpNaUlzSWtGT0lqb2lUV0ZwYkNJc0lsZFVJam95ZlE9PXwwfHx8\&sdata=c3Ara2tkVm1reGZZMURYL3lFelNoR05MN2Z4L3lGY3JOOU1rNmJKRnMvUT0%3d)​.
+[Canada\_Terms\_Conditions\_CSS\_Guide.docx](https://coralracing-my.sharepoint.com/\:w:/g/personal/ruben_chavez_betmgm_com/IQA76fqKxzp0RJQvr2ia06uWAemosMAd3zsLENoLB_mwu24?xsdata=MDV8MDJ8Q2hyaXN0aWFuLkFsbWF6b3JhQEVudGFpbkdyb3VwLmNvbXw5ZWYzMGVhNjgyNTc0MDIwY2JiMTA4ZGU5ZmU4ZmI2N3w2MGM0M2MwYTY0YWM0MDUwYmYzZTMxZTFjZGZmZmRlYnwwfDB8NjM5MTI0MDIwMTk0NzU5MjM3fFVua25vd258VFdGcGJHWnNiM2Q4ZXlKRmJYQjBlVTFoY0draU9uUnlkV1VzSWxZaU9pSXdMakF1TURBd01DSXNJbEFpT2lKWGFXNHpNaUlzSWtGT0lqb2lUV0ZwYkNJc0lsZFVJam95ZlE9PXwwfHx8\&sdata=c3Ara2tkVm1reGZZMURYL3lFelNoR05MN2Z4L3lGY3JOOU1rNmJKRnMvUT0%3d).
 
 I put together a quick reference doc with the exact snippets for each.
 
 Nothing too complicated, just something to keep in mind as part of the standard build process going forward.
 
 Let me know if you run into anything.
+
+Follow up from Vivian
+
+Hello everyone,
+
+Thanks to Ruben, I was able to create a shortcut of his code by building a Dictionary Item for each common, before Log In, Terms and Conditions expansion, so please copy-and-paste the following before inputting the actual Terms and Conditions via its container, Edit HTML:
+
+1. MPPV1: `${dic:7BC317EA-A048-486F-9984-45559DFF2CAF/ExpandMPPV1TermsandConditions}`
+2. MPPV2: `${dic:1743B9D3-9254-4DAF-BEAF-35C286C69D82/ExpandMPPV2TermsandConditions}`
+3. ACQ LP: `${dic\:CD4E73BD-EED3-40EA-97C4-B63283422FA1/ExpandACQLPTermsandConditions}`
+
+This is similar to the idea of always starting with the Poker Terms and Conditions Dictionary Item in both the Poker Tournament and Promotion Pages, Terms container, Edit HTML before inputting the actual Terms and Conditions, except these Dictionary Items above actually expand the Terms and Conditions whereas the Poker Terms and Conditions Dictionary Item just simply displays the text, Terms and Conditions.
+We prefer the usage of these Dictionary Items above, because:
+
+1. They are neater and it is easier to copy-and-paste one line compared to a block of code with the possibility of miscopying when doing so, into each respective Terms and Conditions via its container, Edit HTML
+2. But most importantly, if Ruben were to update his code, he can simply visit the respective Dictionary Item to do so, which will apply to all respective Terms and Conditions referencing that respective Dictionary Item via its container, Edit HTML, without him having to update each and every affected and respective Terms and Conditions that uses his block of code instead of these Dictionary Items via its container, Edit HTML
+
+We look forward to seeing these Dictionary Items in all future Ontario province label site Builds from here on out and are still discovering ways to simplify and meet this Ontarian regulatory requirement, which we will update you on whenever we can.
+
+Please do not hesitate and feel free to let Ruben know if you have any question about his code and me if you have any question about Dictionary Items.
+
+Thank you for your attention, understanding, assistance, and time!
