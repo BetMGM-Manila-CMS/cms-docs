@@ -1,21 +1,17 @@
 ---
-title: Spin The Wheel PAT
 last_update:
-  date: 2024-01-23
+  date: '2024-01-23T00:00:00.000Z'
   author: Josh Javier
   description: Initial content
 authors: Josh Javier
+title: Spin The Wheel PAT
 ---
-
-import CodeBlock from '@theme/CodeBlock'
 
 # Spin The Wheel
 
 <Admonition type="info" title="Copy and assets needed">
-
-- **Prize Tool** - You'll find this in the Documents section of your ticket's Workfront.
-- **Wheel Image and Icons** - Look for the `STW Assets` folder in the ticket's creatives.
-
+  * **Prize Tool** - You'll find this in the Documents section of your ticket's Workfront.
+  * **Wheel Image and Icons** - Look for the `STW Assets` folder in the ticket's creatives.
 </Admonition>
 
 Unlike BAU PATs, STW PATs have no *Overview*, *MyProgress*, and *Rewards* sections. The dedicated *HowItWorks* section is also moved as a single text input field under the *Terms* section. Last but not least is the *WheelsSection* which is unique to STW PATs.
@@ -28,7 +24,7 @@ The *Teaser* section in BAU PATs is replaced by the *Promo Hub Tile* section in 
 
 <details>
   <summary>Sitecore Preview</summary>
-  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887490/builds/pat-eds-engagement/ip0grykcq5byxpoaktjn.png)  
+  ![](https://res.cloudinary.com/dlfu36fiw/image/upload/v1709887490/builds/pat-eds-engagement/ip0grykcq5byxpoaktjn.png)
 </details>
 
 ### WheelSections
@@ -61,11 +57,11 @@ To edit the *Overlay Description*, follow these steps:
 
 1. Click on the cell you want to edit, then click **Show Editor**.
 2. In the editor that appears, switch to the HTML view by clicking on the HTML tab at the bottom.
-3. Copy the following template below and update the highlighted lines with the copy from the Prize Tool.
+3. Copy the following template below and update the highlighted lines with the copy from the Prize Tool.\\
 
-   <CodeBlock language="html" showLineNumbers className="my-4">
-     {
-      `<div class="overlay-header">
+```
+
+      <div class="overlay-header">
    // highlight-start
    <h1 class="mb-1 mt-0">Congratulations!</h1>
    <h2 class="mb-2 mt-1">You've won a $1,000 Championship Event Ticket!</h2>
@@ -76,16 +72,17 @@ To edit the *Overlay Description*, follow these steps:
    // highlight-next-line
    <a rel="noopener noreferrer" class="btn btn-primary" href="!!M2.Promo/offers/p/poker">Claim Now</a>
    </div>
-   </div>`
-     }
-   </CodeBlock>
+   </div>
+     
 
    Make sure to retain the CSS classes and maintain this structure:
    - There should be one container div with the `overlay-header` class.
    - There should be one `<h1>` and `<h2>` tags, followed by one or more `<p>` tags.
    - The last element should be an `<a>` tag (the CTA button).
 
-4. For the CTA, see the [CTA guide](https://coralracing-my.sharepoint.com/:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA).
+```
+
+1. For the CTA, see the [CTA guide](https://coralracing-my.sharepoint.com/\:x:/g/personal/krisha_manalo_entaingroup_com/EfvRGdc4sN5MiwcmKjBu55wBGvjTEIDYp-1XEU-iLJkGXA).
 
 #### Adding the Wheel Icons (column 2)
 
@@ -105,11 +102,11 @@ To update the *Icon* column:
 
 ### Terms
 
-- **Key Terms And Conditions:** Use the **Promo Hub Key Terms > Summary**. Wrap in `<p></p>` tags.
-- **Terms And Conditions:** Copy the full [Terms and Conditions](documents#terms-and-conditions).
-- **How It Works:** Copy the template below and update the highlighted lines with the **How It Works** copy for that ticket.
+* **Key Terms And Conditions:** Use the **Promo Hub Key Terms > Summary**. Wrap in `<p></p>` tags.
+* **Terms And Conditions:** Copy the full [Terms and Conditions](documents#terms-and-conditions).
+* **How It Works:** Copy the template below and update the highlighted lines with the **How It Works** copy for that ticket.
 
-```html {8-13} showLineNumbers
+```html
 <section class="custom-tnc-hiw sk-bingo-container">
 <article>
 <div class="c-how-to-component">
@@ -132,7 +129,7 @@ To update the *Icon* column:
 </section>
 ```
 
-- **Criteria Overlay:** Copy the template below:
+* **Criteria Overlay:** Copy the template below:
 
 ```html
 <div class="overlay-header">
