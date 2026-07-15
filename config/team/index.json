@@ -474,6 +474,12 @@
       "officeLocation": "Manila",
       "active": true
     },
-    {}
+    {
+      "name": "Yuukichi Acosta",
+      "title": "Jr CMS Developer",
+      "isProbation": true,
+      "officeLocation": "Manila",
+      "active": true
+    }
   ]
 }
