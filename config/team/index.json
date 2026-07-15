@@ -466,6 +466,14 @@
       "isProbation": true,
       "officeLocation": "Manila",
       "active": true
-    }
+    },
+    {
+      "name": "Christopher Penticostes",
+      "title": "Jr CMS Developer",
+      "isProbation": true,
+      "officeLocation": "Manila",
+      "active": true
+    },
+    {}
   ]
 }
