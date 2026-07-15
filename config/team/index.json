@@ -456,7 +456,7 @@
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1742819530/members/individual/Media_cldvau.jpg",
       "name": "Mark Henri Barrameda",
       "title": "Jr. CMS Developer",
-      "isProbation": true,
+      "isProbation": false,
       "officeLocation": "Manila",
       "active": true
     },
