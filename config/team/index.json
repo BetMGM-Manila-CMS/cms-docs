@@ -354,7 +354,7 @@
       "title": "Web Content Specialist",
       "isProbation": false,
       "officeLocation": "Manila",
-      "active": true
+      "active": false
     },
     {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719213710/members/individual/IMG_5231_dezwnm.jpg",
@@ -394,7 +394,7 @@
       "title": "CMS Developer",
       "isProbation": false,
       "officeLocation": "Manila",
-      "active": true
+      "active": false
     },
     {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1723044117/members/individual/casalino_vfkjts.jpg",
@@ -418,7 +418,7 @@
       "title": "Jr. CMS Developer",
       "isProbation": false,
       "officeLocation": "Manila",
-      "active": true
+      "active": false
     },
     {
       "image": "https://res.cloudinary.com/dlfu36fiw/image/upload/v1719991809/members/individual/jl_btljty.png",
