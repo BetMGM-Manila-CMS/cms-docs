@@ -276,6 +276,12 @@
           "label": "MPP",
           "links": [
             {
+              "label": "BetMGM AB",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={FEF05D2B-1936-44E4-AC53-67EE2DF06848}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM MI",
               "brand": "betmgm",
               "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={B0304D5D-AC1E-42D6-ADF4-2E1E963EE054}&la=",
