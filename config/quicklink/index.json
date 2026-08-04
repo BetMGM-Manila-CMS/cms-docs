@@ -348,6 +348,12 @@
           "label": "Rest ID",
           "links": [
             {
+              "label": "BetMGM AB",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={7D33729B-8E46-42CE-9A8D-3AF935F3F7BF}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM MI",
               "brand": "betmgm",
               "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={3E249C2F-BE85-4645-B398-72D34D67A138}&la=",
