@@ -150,6 +150,24 @@
           "label": "Optimized Teasers",
           "links": [
             {
+              "label": "Borgata NJ",
+              "brand": "borgata",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={30DC1622-09C5-4423-97CC-D7BD1A1E2BF5}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "Borgata PA",
+              "brand": "borgata",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={DA5F5839-2B8C-4EF4-A446-226217AE956E}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "BetMGM AB",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={CB7B5878-B172-481F-875C-6EA44EE053E0}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM MI",
               "brand": "betmgm",
               "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={F00B74FD-7D11-4002-8110-0567C0F242D8}&la=",
