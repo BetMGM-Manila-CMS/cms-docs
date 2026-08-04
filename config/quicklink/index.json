@@ -486,6 +486,12 @@
           "label": "Landing Page",
           "links": [
             {
+              "label": "BetMGM AB",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={3C04409E-B9BC-4D68-B960-4CED88F8E759}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM MI",
               "brand": "betmgm",
               "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={4905D4E5-8975-421D-88B0-F1AD53D30C7A}&la=",
