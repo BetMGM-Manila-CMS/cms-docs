@@ -7,6 +7,12 @@
           "label": "Media Library",
           "links": [
             {
+              "label": "BetMGM AB",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={BC8D9BDC-598B-4DC5-BD6A-D72A35B1331E}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM MI",
               "brand": "betmgm",
               "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={ED2BE8BB-0233-4699-A4BB-26214952030C}&la=",
