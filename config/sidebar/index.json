@@ -331,6 +331,11 @@
           "document": "docs/builds/Game-Premiere-Overlay.mdx",
           "label": "Game Premiere Overlay",
           "_template": "doc"
+        },
+        {
+          "document": "docs/builds/Casino-Module.mdx",
+          "label": "Casino Module",
+          "_template": "doc"
         }
       ]
     },
