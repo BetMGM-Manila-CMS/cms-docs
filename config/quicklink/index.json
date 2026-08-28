@@ -202,6 +202,12 @@
               "brand": "betmgm",
               "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={8F0BABA6-6B02-4158-B81B-27D335E0E9D3}&la=",
               "_template": "quickLink"
+            },
+            {
+              "label": "WOF NJ",
+              "brand": "wof",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={05C78D5B-E33D-48C6-B3B1-730E7444762D}&la=",
+              "_template": "quickLink"
             }
           ],
           "_template": "subGroup"
