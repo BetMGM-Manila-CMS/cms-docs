@@ -2282,6 +2282,18 @@
           "label": "Marquee",
           "links": [
             {
+              "label": "Whitelabel - MultiProductState",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={C60EBE57-5E45-485C-BBA7-5550E1DE25D9}&la=",
+              "_template": "quickLink"
+            },
+            {
+              "label": "WhiteLabel - SportsOnlyState",
+              "brand": "betmgm",
+              "url": "https://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={50894931-A394-4E7B-AFFE-2E155A84A44F}&la=",
+              "_template": "quickLink"
+            },
+            {
               "label": "BetMGM AZ",
               "brand": "betmgm",
               "url": "http://cms-us.prod.env.works/sitecore/DirectLink.aspx?fo={88981420-DBE8-4A06-96D5-524C9CB9E2DB}&la=",
